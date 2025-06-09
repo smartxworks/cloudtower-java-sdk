@@ -1,21 +1,13 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
-import com.smartx.tower.model.CommonHeader;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetSecurityPoliciesConnectionRequestBody;
 import com.smartx.tower.model.GetSecurityPoliciesRequestBody;
 import com.smartx.tower.model.SecurityPolicy;
@@ -25,7 +17,6 @@ import com.smartx.tower.model.SecurityPolicyDeleteParams;
 import com.smartx.tower.model.SecurityPolicyUpdateBody;
 import com.smartx.tower.model.WithTaskDeleteSecurityPolicy;
 import com.smartx.tower.model.WithTaskSecurityPolicy;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,29 +62,32 @@ public class SecurityPolicyApi {
 
     /**
      * Build call for createSecurityPolicy
-     * @param securityPolicyCreateParams  (required)
+     *
+     * @param securityPolicyCreateParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createSecurityPolicyCall(SecurityPolicyCreateParams securityPolicyCreateParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createSecurityPolicyCall(
+            SecurityPolicyCreateParams securityPolicyCreateParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -110,129 +104,149 @@ public class SecurityPolicyApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createSecurityPolicyValidateBeforeCall(SecurityPolicyCreateParams securityPolicyCreateParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call createSecurityPolicyValidateBeforeCall(
+            SecurityPolicyCreateParams securityPolicyCreateParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'securityPolicyCreateParams' is set
         if (securityPolicyCreateParams == null) {
-            throw new ApiException("Missing the required parameter 'securityPolicyCreateParams' when calling createSecurityPolicy(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'securityPolicyCreateParams' when calling"
+                            + " createSecurityPolicy(Async)");
         }
-        
 
         okhttp3.Call localVarCall = createSecurityPolicyCall(securityPolicyCreateParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param securityPolicyCreateParams  (required)
+     * @param securityPolicyCreateParams (required)
      * @return WithTaskSecurityPolicy
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public WithTaskSecurityPolicy createSecurityPolicy(SecurityPolicyCreateParams securityPolicyCreateParams) throws ApiException {
-        ApiResponse<WithTaskSecurityPolicy> localVarResp = createSecurityPolicyWithHttpInfo(securityPolicyCreateParams);
+    public WithTaskSecurityPolicy createSecurityPolicy(
+            SecurityPolicyCreateParams securityPolicyCreateParams) throws ApiException {
+        ApiResponse<WithTaskSecurityPolicy> localVarResp =
+                createSecurityPolicyWithHttpInfo(securityPolicyCreateParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param securityPolicyCreateParams  (required)
+     * @param securityPolicyCreateParams (required)
      * @return ApiResponse&lt;WithTaskSecurityPolicy&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<WithTaskSecurityPolicy> createSecurityPolicyWithHttpInfo(SecurityPolicyCreateParams securityPolicyCreateParams) throws ApiException {
-        okhttp3.Call localVarCall = createSecurityPolicyValidateBeforeCall(securityPolicyCreateParams, null);
-        Type localVarReturnType = new TypeToken<WithTaskSecurityPolicy>(){}.getType();
+    public ApiResponse<WithTaskSecurityPolicy> createSecurityPolicyWithHttpInfo(
+            SecurityPolicyCreateParams securityPolicyCreateParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                createSecurityPolicyValidateBeforeCall(securityPolicyCreateParams, null);
+        Type localVarReturnType = new TypeToken<WithTaskSecurityPolicy>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param securityPolicyCreateParams  (required)
+     * (asynchronously)
+     *
+     * @param securityPolicyCreateParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createSecurityPolicyAsync(SecurityPolicyCreateParams securityPolicyCreateParams, final ApiCallback<WithTaskSecurityPolicy> _callback) throws ApiException {
+    public okhttp3.Call createSecurityPolicyAsync(
+            SecurityPolicyCreateParams securityPolicyCreateParams,
+            final ApiCallback<WithTaskSecurityPolicy> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = createSecurityPolicyValidateBeforeCall(securityPolicyCreateParams, _callback);
-        Type localVarReturnType = new TypeToken<WithTaskSecurityPolicy>(){}.getType();
+        okhttp3.Call localVarCall =
+                createSecurityPolicyValidateBeforeCall(securityPolicyCreateParams, _callback);
+        Type localVarReturnType = new TypeToken<WithTaskSecurityPolicy>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteSecurityPolicy
-     * @param securityPolicyDeleteParams  (required)
+     *
+     * @param securityPolicyDeleteParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteSecurityPolicyCall(SecurityPolicyDeleteParams securityPolicyDeleteParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteSecurityPolicyCall(
+            SecurityPolicyDeleteParams securityPolicyDeleteParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -249,129 +263,150 @@ public class SecurityPolicyApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteSecurityPolicyValidateBeforeCall(SecurityPolicyDeleteParams securityPolicyDeleteParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call deleteSecurityPolicyValidateBeforeCall(
+            SecurityPolicyDeleteParams securityPolicyDeleteParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'securityPolicyDeleteParams' is set
         if (securityPolicyDeleteParams == null) {
-            throw new ApiException("Missing the required parameter 'securityPolicyDeleteParams' when calling deleteSecurityPolicy(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'securityPolicyDeleteParams' when calling"
+                            + " deleteSecurityPolicy(Async)");
         }
-        
 
         okhttp3.Call localVarCall = deleteSecurityPolicyCall(securityPolicyDeleteParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param securityPolicyDeleteParams  (required)
+     * @param securityPolicyDeleteParams (required)
      * @return List&lt;WithTaskDeleteSecurityPolicy&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskDeleteSecurityPolicy> deleteSecurityPolicy(SecurityPolicyDeleteParams securityPolicyDeleteParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteSecurityPolicy>> localVarResp = deleteSecurityPolicyWithHttpInfo(securityPolicyDeleteParams);
+    public List<WithTaskDeleteSecurityPolicy> deleteSecurityPolicy(
+            SecurityPolicyDeleteParams securityPolicyDeleteParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteSecurityPolicy>> localVarResp =
+                deleteSecurityPolicyWithHttpInfo(securityPolicyDeleteParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param securityPolicyDeleteParams  (required)
+     * @param securityPolicyDeleteParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteSecurityPolicy&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskDeleteSecurityPolicy>> deleteSecurityPolicyWithHttpInfo(SecurityPolicyDeleteParams securityPolicyDeleteParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteSecurityPolicyValidateBeforeCall(securityPolicyDeleteParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteSecurityPolicy>>(){}.getType();
+    public ApiResponse<List<WithTaskDeleteSecurityPolicy>> deleteSecurityPolicyWithHttpInfo(
+            SecurityPolicyDeleteParams securityPolicyDeleteParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                deleteSecurityPolicyValidateBeforeCall(securityPolicyDeleteParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteSecurityPolicy>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param securityPolicyDeleteParams  (required)
+     * (asynchronously)
+     *
+     * @param securityPolicyDeleteParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteSecurityPolicyAsync(SecurityPolicyDeleteParams securityPolicyDeleteParams, final ApiCallback<List<WithTaskDeleteSecurityPolicy>> _callback) throws ApiException {
+    public okhttp3.Call deleteSecurityPolicyAsync(
+            SecurityPolicyDeleteParams securityPolicyDeleteParams,
+            final ApiCallback<List<WithTaskDeleteSecurityPolicy>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = deleteSecurityPolicyValidateBeforeCall(securityPolicyDeleteParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteSecurityPolicy>>(){}.getType();
+        okhttp3.Call localVarCall =
+                deleteSecurityPolicyValidateBeforeCall(securityPolicyDeleteParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteSecurityPolicy>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getSecurityPolicies
-     * @param getSecurityPoliciesRequestBody  (required)
+     *
+     * @param getSecurityPoliciesRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getSecurityPoliciesCall(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSecurityPoliciesCall(
+            GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -388,129 +423,152 @@ public class SecurityPolicyApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSecurityPoliciesValidateBeforeCall(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getSecurityPoliciesValidateBeforeCall(
+            GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getSecurityPoliciesRequestBody' is set
         if (getSecurityPoliciesRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getSecurityPoliciesRequestBody' when calling getSecurityPolicies(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getSecurityPoliciesRequestBody' when calling"
+                            + " getSecurityPolicies(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getSecurityPoliciesCall(getSecurityPoliciesRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getSecurityPoliciesCall(getSecurityPoliciesRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getSecurityPoliciesRequestBody  (required)
+     * @param getSecurityPoliciesRequestBody (required)
      * @return List&lt;SecurityPolicy&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<SecurityPolicy> getSecurityPolicies(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody) throws ApiException {
-        ApiResponse<List<SecurityPolicy>> localVarResp = getSecurityPoliciesWithHttpInfo(getSecurityPoliciesRequestBody);
+    public List<SecurityPolicy> getSecurityPolicies(
+            GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody) throws ApiException {
+        ApiResponse<List<SecurityPolicy>> localVarResp =
+                getSecurityPoliciesWithHttpInfo(getSecurityPoliciesRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getSecurityPoliciesRequestBody  (required)
+     * @param getSecurityPoliciesRequestBody (required)
      * @return ApiResponse&lt;List&lt;SecurityPolicy&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<SecurityPolicy>> getSecurityPoliciesWithHttpInfo(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSecurityPoliciesValidateBeforeCall(getSecurityPoliciesRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<SecurityPolicy>>(){}.getType();
+    public ApiResponse<List<SecurityPolicy>> getSecurityPoliciesWithHttpInfo(
+            GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall =
+                getSecurityPoliciesValidateBeforeCall(getSecurityPoliciesRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<SecurityPolicy>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getSecurityPoliciesRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getSecurityPoliciesRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getSecurityPoliciesAsync(GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody, final ApiCallback<List<SecurityPolicy>> _callback) throws ApiException {
+    public okhttp3.Call getSecurityPoliciesAsync(
+            GetSecurityPoliciesRequestBody getSecurityPoliciesRequestBody,
+            final ApiCallback<List<SecurityPolicy>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getSecurityPoliciesValidateBeforeCall(getSecurityPoliciesRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<SecurityPolicy>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getSecurityPoliciesValidateBeforeCall(getSecurityPoliciesRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<SecurityPolicy>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getSecurityPoliciesConnection
-     * @param getSecurityPoliciesConnectionRequestBody  (required)
+     *
+     * @param getSecurityPoliciesConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getSecurityPoliciesConnectionCall(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getSecurityPoliciesConnectionCall(
+            GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -527,129 +585,156 @@ public class SecurityPolicyApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getSecurityPoliciesConnectionValidateBeforeCall(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getSecurityPoliciesConnectionValidateBeforeCall(
+            GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getSecurityPoliciesConnectionRequestBody' is set
         if (getSecurityPoliciesConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getSecurityPoliciesConnectionRequestBody' when calling getSecurityPoliciesConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getSecurityPoliciesConnectionRequestBody'"
+                            + " when calling getSecurityPoliciesConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getSecurityPoliciesConnectionCall(getSecurityPoliciesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getSecurityPoliciesConnectionCall(
+                        getSecurityPoliciesConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getSecurityPoliciesConnectionRequestBody  (required)
+     * @param getSecurityPoliciesConnectionRequestBody (required)
      * @return SecurityPolicyConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public SecurityPolicyConnection getSecurityPoliciesConnection(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody) throws ApiException {
-        ApiResponse<SecurityPolicyConnection> localVarResp = getSecurityPoliciesConnectionWithHttpInfo(getSecurityPoliciesConnectionRequestBody);
+    public SecurityPolicyConnection getSecurityPoliciesConnection(
+            GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<SecurityPolicyConnection> localVarResp =
+                getSecurityPoliciesConnectionWithHttpInfo(getSecurityPoliciesConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getSecurityPoliciesConnectionRequestBody  (required)
+     * @param getSecurityPoliciesConnectionRequestBody (required)
      * @return ApiResponse&lt;SecurityPolicyConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<SecurityPolicyConnection> getSecurityPoliciesConnectionWithHttpInfo(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getSecurityPoliciesConnectionValidateBeforeCall(getSecurityPoliciesConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<SecurityPolicyConnection>(){}.getType();
+    public ApiResponse<SecurityPolicyConnection> getSecurityPoliciesConnectionWithHttpInfo(
+            GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getSecurityPoliciesConnectionValidateBeforeCall(
+                        getSecurityPoliciesConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<SecurityPolicyConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getSecurityPoliciesConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getSecurityPoliciesConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getSecurityPoliciesConnectionAsync(GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody, final ApiCallback<SecurityPolicyConnection> _callback) throws ApiException {
+    public okhttp3.Call getSecurityPoliciesConnectionAsync(
+            GetSecurityPoliciesConnectionRequestBody getSecurityPoliciesConnectionRequestBody,
+            final ApiCallback<SecurityPolicyConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getSecurityPoliciesConnectionValidateBeforeCall(getSecurityPoliciesConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<SecurityPolicyConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getSecurityPoliciesConnectionValidateBeforeCall(
+                        getSecurityPoliciesConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<SecurityPolicyConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateSecurityPolicy
-     * @param securityPolicyUpdateBody  (required)
+     *
+     * @param securityPolicyUpdateBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateSecurityPolicyCall(SecurityPolicyUpdateBody securityPolicyUpdateBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateSecurityPolicyCall(
+            SecurityPolicyUpdateBody securityPolicyUpdateBody, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -666,101 +751,118 @@ public class SecurityPolicyApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateSecurityPolicyValidateBeforeCall(SecurityPolicyUpdateBody securityPolicyUpdateBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call updateSecurityPolicyValidateBeforeCall(
+            SecurityPolicyUpdateBody securityPolicyUpdateBody, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'securityPolicyUpdateBody' is set
         if (securityPolicyUpdateBody == null) {
-            throw new ApiException("Missing the required parameter 'securityPolicyUpdateBody' when calling updateSecurityPolicy(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'securityPolicyUpdateBody' when calling"
+                            + " updateSecurityPolicy(Async)");
         }
-        
 
         okhttp3.Call localVarCall = updateSecurityPolicyCall(securityPolicyUpdateBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param securityPolicyUpdateBody  (required)
+     * @param securityPolicyUpdateBody (required)
      * @return List&lt;WithTaskSecurityPolicy&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskSecurityPolicy> updateSecurityPolicy(SecurityPolicyUpdateBody securityPolicyUpdateBody) throws ApiException {
-        ApiResponse<List<WithTaskSecurityPolicy>> localVarResp = updateSecurityPolicyWithHttpInfo(securityPolicyUpdateBody);
+    public List<WithTaskSecurityPolicy> updateSecurityPolicy(
+            SecurityPolicyUpdateBody securityPolicyUpdateBody) throws ApiException {
+        ApiResponse<List<WithTaskSecurityPolicy>> localVarResp =
+                updateSecurityPolicyWithHttpInfo(securityPolicyUpdateBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param securityPolicyUpdateBody  (required)
+     * @param securityPolicyUpdateBody (required)
      * @return ApiResponse&lt;List&lt;WithTaskSecurityPolicy&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskSecurityPolicy>> updateSecurityPolicyWithHttpInfo(SecurityPolicyUpdateBody securityPolicyUpdateBody) throws ApiException {
-        okhttp3.Call localVarCall = updateSecurityPolicyValidateBeforeCall(securityPolicyUpdateBody, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskSecurityPolicy>>(){}.getType();
+    public ApiResponse<List<WithTaskSecurityPolicy>> updateSecurityPolicyWithHttpInfo(
+            SecurityPolicyUpdateBody securityPolicyUpdateBody) throws ApiException {
+        okhttp3.Call localVarCall =
+                updateSecurityPolicyValidateBeforeCall(securityPolicyUpdateBody, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskSecurityPolicy>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param securityPolicyUpdateBody  (required)
+     * (asynchronously)
+     *
+     * @param securityPolicyUpdateBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateSecurityPolicyAsync(SecurityPolicyUpdateBody securityPolicyUpdateBody, final ApiCallback<List<WithTaskSecurityPolicy>> _callback) throws ApiException {
+    public okhttp3.Call updateSecurityPolicyAsync(
+            SecurityPolicyUpdateBody securityPolicyUpdateBody,
+            final ApiCallback<List<WithTaskSecurityPolicy>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = updateSecurityPolicyValidateBeforeCall(securityPolicyUpdateBody, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskSecurityPolicy>>(){}.getType();
+        okhttp3.Call localVarCall =
+                updateSecurityPolicyValidateBeforeCall(securityPolicyUpdateBody, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskSecurityPolicy>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

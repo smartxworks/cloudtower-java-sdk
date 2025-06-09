@@ -1,275 +1,417 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.IscsiLunOrderByInput;
-import com.smartx.tower.model.IscsiLunWhereInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Arrays;
+import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
-/**
- * GetIscsiLunsConnectionRequestBody
- */
+/** GetIscsiLunsConnectionRequestBody */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class GetIscsiLunsConnectionRequestBody {
-  public static final String SERIALIZED_NAME_AFTER = "after";
-  @SerializedName(SERIALIZED_NAME_AFTER)
-  private String after;
+public class GetIscsiLunsConnectionRequestBody
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_AFTER = "after";
 
-  public static final String SERIALIZED_NAME_BEFORE = "before";
-  @SerializedName(SERIALIZED_NAME_BEFORE)
-  private String before;
+    @SerializedName(SERIALIZED_NAME_AFTER)
+    private String after;
 
-  public static final String SERIALIZED_NAME_FIRST = "first";
-  @SerializedName(SERIALIZED_NAME_FIRST)
-  private Integer first;
+    public static final String SERIALIZED_NAME_BEFORE = "before";
 
-  public static final String SERIALIZED_NAME_LAST = "last";
-  @SerializedName(SERIALIZED_NAME_LAST)
-  private Integer last;
+    @SerializedName(SERIALIZED_NAME_BEFORE)
+    private String before;
 
-  public static final String SERIALIZED_NAME_ORDER_BY = "orderBy";
-  @SerializedName(SERIALIZED_NAME_ORDER_BY)
-  private IscsiLunOrderByInput orderBy;
+    public static final String SERIALIZED_NAME_FIRST = "first";
 
-  public static final String SERIALIZED_NAME_SKIP = "skip";
-  @SerializedName(SERIALIZED_NAME_SKIP)
-  private Integer skip;
+    @SerializedName(SERIALIZED_NAME_FIRST)
+    private Integer first;
 
-  public static final String SERIALIZED_NAME_WHERE = "where";
-  @SerializedName(SERIALIZED_NAME_WHERE)
-  private IscsiLunWhereInput where;
+    public static final String SERIALIZED_NAME_LAST = "last";
 
-  public GetIscsiLunsConnectionRequestBody() { 
-  }
+    @SerializedName(SERIALIZED_NAME_LAST)
+    private Integer last;
 
-  public GetIscsiLunsConnectionRequestBody after(String after) {
-    
-    this.after = after;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_ORDER_BY = "orderBy";
 
-   /**
-   * Get after
-   * @return after
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_ORDER_BY)
+    private IscsiLunOrderByInput orderBy;
 
-  public String getAfter() {
-    return after;
-  }
+    public static final String SERIALIZED_NAME_SKIP = "skip";
 
+    @SerializedName(SERIALIZED_NAME_SKIP)
+    private Integer skip;
 
-  public void setAfter(String after) {
-    this.after = after;
-  }
+    public static final String SERIALIZED_NAME_WHERE = "where";
 
+    @SerializedName(SERIALIZED_NAME_WHERE)
+    private IscsiLunWhereInput where;
 
-  public GetIscsiLunsConnectionRequestBody before(String before) {
-    
-    this.before = before;
-    return this;
-  }
+    public GetIscsiLunsConnectionRequestBody() {}
 
-   /**
-   * Get before
-   * @return before
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public GetIscsiLunsConnectionRequestBody after(String after) {
 
-  public String getBefore() {
-    return before;
-  }
-
-
-  public void setBefore(String before) {
-    this.before = before;
-  }
-
-
-  public GetIscsiLunsConnectionRequestBody first(Integer first) {
-    
-    this.first = first;
-    return this;
-  }
-
-   /**
-   * Get first
-   * @return first
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getFirst() {
-    return first;
-  }
-
-
-  public void setFirst(Integer first) {
-    this.first = first;
-  }
-
-
-  public GetIscsiLunsConnectionRequestBody last(Integer last) {
-    
-    this.last = last;
-    return this;
-  }
-
-   /**
-   * Get last
-   * @return last
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getLast() {
-    return last;
-  }
-
-
-  public void setLast(Integer last) {
-    this.last = last;
-  }
-
-
-  public GetIscsiLunsConnectionRequestBody orderBy(IscsiLunOrderByInput orderBy) {
-    
-    this.orderBy = orderBy;
-    return this;
-  }
-
-   /**
-   * Get orderBy
-   * @return orderBy
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public IscsiLunOrderByInput getOrderBy() {
-    return orderBy;
-  }
-
-
-  public void setOrderBy(IscsiLunOrderByInput orderBy) {
-    this.orderBy = orderBy;
-  }
-
-
-  public GetIscsiLunsConnectionRequestBody skip(Integer skip) {
-    
-    this.skip = skip;
-    return this;
-  }
-
-   /**
-   * Get skip
-   * @return skip
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getSkip() {
-    return skip;
-  }
-
-
-  public void setSkip(Integer skip) {
-    this.skip = skip;
-  }
-
-
-  public GetIscsiLunsConnectionRequestBody where(IscsiLunWhereInput where) {
-    
-    this.where = where;
-    return this;
-  }
-
-   /**
-   * Get where
-   * @return where
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public IscsiLunWhereInput getWhere() {
-    return where;
-  }
-
-
-  public void setWhere(IscsiLunWhereInput where) {
-    this.where = where;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.after = after;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get after
+     *
+     * @return after
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getAfter() {
+        return after;
     }
-    GetIscsiLunsConnectionRequestBody getIscsiLunsConnectionRequestBody = (GetIscsiLunsConnectionRequestBody) o;
-    return Objects.equals(this.after, getIscsiLunsConnectionRequestBody.after) &&
-        Objects.equals(this.before, getIscsiLunsConnectionRequestBody.before) &&
-        Objects.equals(this.first, getIscsiLunsConnectionRequestBody.first) &&
-        Objects.equals(this.last, getIscsiLunsConnectionRequestBody.last) &&
-        Objects.equals(this.orderBy, getIscsiLunsConnectionRequestBody.orderBy) &&
-        Objects.equals(this.skip, getIscsiLunsConnectionRequestBody.skip) &&
-        Objects.equals(this.where, getIscsiLunsConnectionRequestBody.where);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(after, before, first, last, orderBy, skip, where);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    public void setAfter(String after) {
+        this.after = after;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GetIscsiLunsConnectionRequestBody {\n");
-    sb.append("    after: ").append(toIndentedString(after)).append("\n");
-    sb.append("    before: ").append(toIndentedString(before)).append("\n");
-    sb.append("    first: ").append(toIndentedString(first)).append("\n");
-    sb.append("    last: ").append(toIndentedString(last)).append("\n");
-    sb.append("    orderBy: ").append(toIndentedString(orderBy)).append("\n");
-    sb.append("    skip: ").append(toIndentedString(skip)).append("\n");
-    sb.append("    where: ").append(toIndentedString(where)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public GetIscsiLunsConnectionRequestBody after_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_AFTER);
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public GetIscsiLunsConnectionRequestBody after_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_AFTER);
+        return this;
+    }
+
+    public void setAfter_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_AFTER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_AFTER);
+        }
+    }
+
+    public boolean getAfter_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_AFTER);
+    }
+
+    public GetIscsiLunsConnectionRequestBody before(String before) {
+
+        this.before = before;
+        return this;
+    }
+
+    /**
+     * Get before
+     *
+     * @return before
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBefore() {
+        return before;
+    }
+
+    public void setBefore(String before) {
+        this.before = before;
+    }
+
+    public GetIscsiLunsConnectionRequestBody before_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BEFORE);
+        return this;
+    }
+
+    public GetIscsiLunsConnectionRequestBody before_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BEFORE);
+        return this;
+    }
+
+    public void setBefore_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BEFORE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BEFORE);
+        }
+    }
+
+    public boolean getBefore_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BEFORE);
+    }
+
+    public GetIscsiLunsConnectionRequestBody first(Integer first) {
+
+        this.first = first;
+        return this;
+    }
+
+    /**
+     * Get first
+     *
+     * @return first
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getFirst() {
+        return first;
+    }
+
+    public void setFirst(Integer first) {
+        this.first = first;
+    }
+
+    public GetIscsiLunsConnectionRequestBody first_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FIRST);
+        return this;
+    }
+
+    public GetIscsiLunsConnectionRequestBody first_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FIRST);
+        return this;
+    }
+
+    public void setFirst_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FIRST);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FIRST);
+        }
+    }
+
+    public boolean getFirst_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FIRST);
+    }
+
+    public GetIscsiLunsConnectionRequestBody last(Integer last) {
+
+        this.last = last;
+        return this;
+    }
+
+    /**
+     * Get last
+     *
+     * @return last
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getLast() {
+        return last;
+    }
+
+    public void setLast(Integer last) {
+        this.last = last;
+    }
+
+    public GetIscsiLunsConnectionRequestBody last_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST);
+        return this;
+    }
+
+    public GetIscsiLunsConnectionRequestBody last_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST);
+        return this;
+    }
+
+    public void setLast_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST);
+        }
+    }
+
+    public boolean getLast_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST);
+    }
+
+    public GetIscsiLunsConnectionRequestBody orderBy(IscsiLunOrderByInput orderBy) {
+
+        this.orderBy = orderBy;
+        return this;
+    }
+
+    /**
+     * Get orderBy
+     *
+     * @return orderBy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IscsiLunOrderByInput getOrderBy() {
+        return orderBy;
+    }
+
+    public void setOrderBy(IscsiLunOrderByInput orderBy) {
+        this.orderBy = orderBy;
+    }
+
+    public GetIscsiLunsConnectionRequestBody orderBy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ORDER_BY);
+        return this;
+    }
+
+    public GetIscsiLunsConnectionRequestBody orderBy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ORDER_BY);
+        return this;
+    }
+
+    public void setOrderBy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ORDER_BY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ORDER_BY);
+        }
+    }
+
+    public boolean getOrderBy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ORDER_BY);
+    }
+
+    public GetIscsiLunsConnectionRequestBody skip(Integer skip) {
+
+        this.skip = skip;
+        return this;
+    }
+
+    /**
+     * Get skip
+     *
+     * @return skip
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getSkip() {
+        return skip;
+    }
+
+    public void setSkip(Integer skip) {
+        this.skip = skip;
+    }
+
+    public GetIscsiLunsConnectionRequestBody skip_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SKIP);
+        return this;
+    }
+
+    public GetIscsiLunsConnectionRequestBody skip_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SKIP);
+        return this;
+    }
+
+    public void setSkip_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SKIP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SKIP);
+        }
+    }
+
+    public boolean getSkip_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SKIP);
+    }
+
+    public GetIscsiLunsConnectionRequestBody where(IscsiLunWhereInput where) {
+
+        this.where = where;
+        return this;
+    }
+
+    /**
+     * Get where
+     *
+     * @return where
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IscsiLunWhereInput getWhere() {
+        return where;
+    }
+
+    public void setWhere(IscsiLunWhereInput where) {
+        this.where = where;
+    }
+
+    public GetIscsiLunsConnectionRequestBody where_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public GetIscsiLunsConnectionRequestBody where_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public void setWhere_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        }
+    }
+
+    public boolean getWhere_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_WHERE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GetIscsiLunsConnectionRequestBody getIscsiLunsConnectionRequestBody =
+                (GetIscsiLunsConnectionRequestBody) o;
+        return Objects.equals(this.after, getIscsiLunsConnectionRequestBody.after)
+                && Objects.equals(this.before, getIscsiLunsConnectionRequestBody.before)
+                && Objects.equals(this.first, getIscsiLunsConnectionRequestBody.first)
+                && Objects.equals(this.last, getIscsiLunsConnectionRequestBody.last)
+                && Objects.equals(this.orderBy, getIscsiLunsConnectionRequestBody.orderBy)
+                && Objects.equals(this.skip, getIscsiLunsConnectionRequestBody.skip)
+                && Objects.equals(this.where, getIscsiLunsConnectionRequestBody.where);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(after, before, first, last, orderBy, skip, where);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GetIscsiLunsConnectionRequestBody {\n");
+        sb.append("    after: ").append(toIndentedString(after)).append("\n");
+        sb.append("    before: ").append(toIndentedString(before)).append("\n");
+        sb.append("    first: ").append(toIndentedString(first)).append("\n");
+        sb.append("    last: ").append(toIndentedString(last)).append("\n");
+        sb.append("    orderBy: ").append(toIndentedString(orderBy)).append("\n");
+        sb.append("    skip: ").append(toIndentedString(skip)).append("\n");
+        sb.append("    where: ").append(toIndentedString(where)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

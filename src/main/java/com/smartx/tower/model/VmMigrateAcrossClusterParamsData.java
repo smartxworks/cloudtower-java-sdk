@@ -1,146 +1,199 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.MigrateVmConfig;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * VmMigrateAcrossClusterParamsData
- */
+/** VmMigrateAcrossClusterParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmMigrateAcrossClusterParamsData {
-  public static final String SERIALIZED_NAME_VM_CONFIG = "vm_config";
-  @SerializedName(SERIALIZED_NAME_VM_CONFIG)
-  private MigrateVmConfig vmConfig;
+public class VmMigrateAcrossClusterParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_VM_CONFIG = "vm_config";
 
-  public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
-  @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
-  private String clusterId;
+    @SerializedName(SERIALIZED_NAME_VM_CONFIG)
+    private MigrateVmConfig vmConfig;
 
-  public static final String SERIALIZED_NAME_HOST_ID = "host_id";
-  @SerializedName(SERIALIZED_NAME_HOST_ID)
-  private String hostId;
+    public static final String SERIALIZED_NAME_CLUSTER_ID = "cluster_id";
 
-  public VmMigrateAcrossClusterParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_CLUSTER_ID)
+    private String clusterId;
 
-  public VmMigrateAcrossClusterParamsData vmConfig(MigrateVmConfig vmConfig) {
-    
-    this.vmConfig = vmConfig;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_HOST_ID = "host_id";
 
-   /**
-   * Get vmConfig
-   * @return vmConfig
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    @SerializedName(SERIALIZED_NAME_HOST_ID)
+    private String hostId;
 
-  public MigrateVmConfig getVmConfig() {
-    return vmConfig;
-  }
+    public VmMigrateAcrossClusterParamsData() {}
 
+    public VmMigrateAcrossClusterParamsData vmConfig(MigrateVmConfig vmConfig) {
 
-  public void setVmConfig(MigrateVmConfig vmConfig) {
-    this.vmConfig = vmConfig;
-  }
-
-
-  public VmMigrateAcrossClusterParamsData clusterId(String clusterId) {
-    
-    this.clusterId = clusterId;
-    return this;
-  }
-
-   /**
-   * Get clusterId
-   * @return clusterId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getClusterId() {
-    return clusterId;
-  }
-
-
-  public void setClusterId(String clusterId) {
-    this.clusterId = clusterId;
-  }
-
-
-  public VmMigrateAcrossClusterParamsData hostId(String hostId) {
-    
-    this.hostId = hostId;
-    return this;
-  }
-
-   /**
-   * Get hostId
-   * @return hostId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getHostId() {
-    return hostId;
-  }
-
-
-  public void setHostId(String hostId) {
-    this.hostId = hostId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.vmConfig = vmConfig;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get vmConfig
+     *
+     * @return vmConfig
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public MigrateVmConfig getVmConfig() {
+        return vmConfig;
     }
-    VmMigrateAcrossClusterParamsData vmMigrateAcrossClusterParamsData = (VmMigrateAcrossClusterParamsData) o;
-    return Objects.equals(this.vmConfig, vmMigrateAcrossClusterParamsData.vmConfig) &&
-        Objects.equals(this.clusterId, vmMigrateAcrossClusterParamsData.clusterId) &&
-        Objects.equals(this.hostId, vmMigrateAcrossClusterParamsData.hostId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(vmConfig, clusterId, hostId);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VmMigrateAcrossClusterParamsData {\n");
-    sb.append("    vmConfig: ").append(toIndentedString(vmConfig)).append("\n");
-    sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
-    sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setVmConfig(MigrateVmConfig vmConfig) {
+        this.vmConfig = vmConfig;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public VmMigrateAcrossClusterParamsData vmConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM_CONFIG);
+        return this;
+    }
+
+    public VmMigrateAcrossClusterParamsData vmConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM_CONFIG);
+        return this;
+    }
+
+    public void setVmConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM_CONFIG);
+        }
+    }
+
+    public boolean getVmConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM_CONFIG);
+    }
+
+    public VmMigrateAcrossClusterParamsData clusterId(String clusterId) {
+
+        this.clusterId = clusterId;
+        return this;
+    }
+
+    /**
+     * Get clusterId
+     *
+     * @return clusterId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getClusterId() {
+        return clusterId;
+    }
+
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+    }
+
+    public VmMigrateAcrossClusterParamsData clusterId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CLUSTER_ID);
+        return this;
+    }
+
+    public VmMigrateAcrossClusterParamsData clusterId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CLUSTER_ID);
+        return this;
+    }
+
+    public void setClusterId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CLUSTER_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CLUSTER_ID);
+        }
+    }
+
+    public boolean getClusterId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER_ID);
+    }
+
+    public VmMigrateAcrossClusterParamsData hostId(String hostId) {
+
+        this.hostId = hostId;
+        return this;
+    }
+
+    /**
+     * Get hostId
+     *
+     * @return hostId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getHostId() {
+        return hostId;
+    }
+
+    public void setHostId(String hostId) {
+        this.hostId = hostId;
+    }
+
+    public VmMigrateAcrossClusterParamsData hostId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public VmMigrateAcrossClusterParamsData hostId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public void setHostId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        }
+    }
+
+    public boolean getHostId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HOST_ID);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmMigrateAcrossClusterParamsData vmMigrateAcrossClusterParamsData =
+                (VmMigrateAcrossClusterParamsData) o;
+        return Objects.equals(this.vmConfig, vmMigrateAcrossClusterParamsData.vmConfig)
+                && Objects.equals(this.clusterId, vmMigrateAcrossClusterParamsData.clusterId)
+                && Objects.equals(this.hostId, vmMigrateAcrossClusterParamsData.hostId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vmConfig, clusterId, hostId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmMigrateAcrossClusterParamsData {\n");
+        sb.append("    vmConfig: ").append(toIndentedString(vmConfig)).append("\n");
+        sb.append("    clusterId: ").append(toIndentedString(clusterId)).append("\n");
+        sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

@@ -1,784 +1,1323 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.BPSUnit;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * NvmfNamespaceCommonParams
- */
+/** NvmfNamespaceCommonParams */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NvmfNamespaceCommonParams {
-  public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH = "bps_wr_max_length";
-  @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
-  private Long bpsWrMaxLength;
+public class NvmfNamespaceCommonParams
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH = "bps_wr_max_length";
 
-  public static final String SERIALIZED_NAME_BPS_WR_MAX_UNIT = "bps_wr_max_unit";
-  @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_UNIT)
-  private BPSUnit bpsWrMaxUnit;
-
-  public static final String SERIALIZED_NAME_BPS_WR_MAX = "bps_wr_max";
-  @SerializedName(SERIALIZED_NAME_BPS_WR_MAX)
-  private Long bpsWrMax;
-
-  public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH = "bps_rd_max_length";
-  @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH)
-  private Long bpsRdMaxLength;
-
-  public static final String SERIALIZED_NAME_BPS_RD_MAX_UNIT = "bps_rd_max_unit";
-  @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_UNIT)
-  private BPSUnit bpsRdMaxUnit;
-
-  public static final String SERIALIZED_NAME_BPS_RD_MAX = "bps_rd_max";
-  @SerializedName(SERIALIZED_NAME_BPS_RD_MAX)
-  private Long bpsRdMax;
-
-  public static final String SERIALIZED_NAME_BPS_MAX_LENGTH = "bps_max_length";
-  @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH)
-  private Long bpsMaxLength;
+    @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
+    private Long bpsWrMaxLength;
 
-  public static final String SERIALIZED_NAME_BPS_MAX_UNIT = "bps_max_unit";
-  @SerializedName(SERIALIZED_NAME_BPS_MAX_UNIT)
-  private BPSUnit bpsMaxUnit;
-
-  public static final String SERIALIZED_NAME_BPS_MAX = "bps_max";
-  @SerializedName(SERIALIZED_NAME_BPS_MAX)
-  private Long bpsMax;
-
-  public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH = "iops_wr_max_length";
-  @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH)
-  private Long iopsWrMaxLength;
-
-  public static final String SERIALIZED_NAME_IOPS_WR_MAX = "iops_wr_max";
-  @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX)
-  private Long iopsWrMax;
-
-  public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH = "iops_rd_max_length";
-  @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH)
-  private Long iopsRdMaxLength;
-
-  public static final String SERIALIZED_NAME_IOPS_RD_MAX = "iops_rd_max";
-  @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX)
-  private Long iopsRdMax;
+    public static final String SERIALIZED_NAME_BPS_WR_MAX_UNIT = "bps_wr_max_unit";
 
-  public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH = "iops_max_length";
-  @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH)
-  private Long iopsMaxLength;
+    @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_UNIT)
+    private BPSUnit bpsWrMaxUnit;
 
-  public static final String SERIALIZED_NAME_IOPS_MAX = "iops_max";
-  @SerializedName(SERIALIZED_NAME_IOPS_MAX)
-  private Long iopsMax;
-
-  public static final String SERIALIZED_NAME_BPS_WR_UNIT = "bps_wr_unit";
-  @SerializedName(SERIALIZED_NAME_BPS_WR_UNIT)
-  private BPSUnit bpsWrUnit;
-
-  public static final String SERIALIZED_NAME_BPS_WR = "bps_wr";
-  @SerializedName(SERIALIZED_NAME_BPS_WR)
-  private Long bpsWr;
+    public static final String SERIALIZED_NAME_BPS_WR_MAX = "bps_wr_max";
 
-  public static final String SERIALIZED_NAME_BPS_RD_UNIT = "bps_rd_unit";
-  @SerializedName(SERIALIZED_NAME_BPS_RD_UNIT)
-  private BPSUnit bpsRdUnit;
+    @SerializedName(SERIALIZED_NAME_BPS_WR_MAX)
+    private Long bpsWrMax;
 
-  public static final String SERIALIZED_NAME_BPS_RD = "bps_rd";
-  @SerializedName(SERIALIZED_NAME_BPS_RD)
-  private Long bpsRd;
+    public static final String SERIALIZED_NAME_BPS_RD_MAX_LENGTH = "bps_rd_max_length";
 
-  public static final String SERIALIZED_NAME_BPS_UNIT = "bps_unit";
-  @SerializedName(SERIALIZED_NAME_BPS_UNIT)
-  private BPSUnit bpsUnit;
+    @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_LENGTH)
+    private Long bpsRdMaxLength;
 
-  public static final String SERIALIZED_NAME_BPS = "bps";
-  @SerializedName(SERIALIZED_NAME_BPS)
-  private Long bps;
-
-  public static final String SERIALIZED_NAME_IOPS_WR = "iops_wr";
-  @SerializedName(SERIALIZED_NAME_IOPS_WR)
-  private Long iopsWr;
-
-  public static final String SERIALIZED_NAME_IOPS_RD = "iops_rd";
-  @SerializedName(SERIALIZED_NAME_IOPS_RD)
-  private Long iopsRd;
+    public static final String SERIALIZED_NAME_BPS_RD_MAX_UNIT = "bps_rd_max_unit";
 
-  public static final String SERIALIZED_NAME_IOPS = "iops";
-  @SerializedName(SERIALIZED_NAME_IOPS)
-  private Long iops;
+    @SerializedName(SERIALIZED_NAME_BPS_RD_MAX_UNIT)
+    private BPSUnit bpsRdMaxUnit;
 
-  public static final String SERIALIZED_NAME_NQN_WHITELIST = "nqn_whitelist";
-  @SerializedName(SERIALIZED_NAME_NQN_WHITELIST)
-  private String nqnWhitelist;
+    public static final String SERIALIZED_NAME_BPS_RD_MAX = "bps_rd_max";
 
-  public NvmfNamespaceCommonParams() { 
-  }
+    @SerializedName(SERIALIZED_NAME_BPS_RD_MAX)
+    private Long bpsRdMax;
 
-  public NvmfNamespaceCommonParams bpsWrMaxLength(Long bpsWrMaxLength) {
-    
-    this.bpsWrMaxLength = bpsWrMaxLength;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_BPS_MAX_LENGTH = "bps_max_length";
 
-   /**
-   * Get bpsWrMaxLength
-   * @return bpsWrMaxLength
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_BPS_MAX_LENGTH)
+    private Long bpsMaxLength;
 
-  public Long getBpsWrMaxLength() {
-    return bpsWrMaxLength;
-  }
+    public static final String SERIALIZED_NAME_BPS_MAX_UNIT = "bps_max_unit";
 
+    @SerializedName(SERIALIZED_NAME_BPS_MAX_UNIT)
+    private BPSUnit bpsMaxUnit;
 
-  public void setBpsWrMaxLength(Long bpsWrMaxLength) {
-    this.bpsWrMaxLength = bpsWrMaxLength;
-  }
+    public static final String SERIALIZED_NAME_BPS_MAX = "bps_max";
 
+    @SerializedName(SERIALIZED_NAME_BPS_MAX)
+    private Long bpsMax;
 
-  public NvmfNamespaceCommonParams bpsWrMaxUnit(BPSUnit bpsWrMaxUnit) {
-    
-    this.bpsWrMaxUnit = bpsWrMaxUnit;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_IOPS_WR_MAX_LENGTH = "iops_wr_max_length";
 
-   /**
-   * Get bpsWrMaxUnit
-   * @return bpsWrMaxUnit
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH)
+    private Long iopsWrMaxLength;
 
-  public BPSUnit getBpsWrMaxUnit() {
-    return bpsWrMaxUnit;
-  }
+    public static final String SERIALIZED_NAME_IOPS_WR_MAX = "iops_wr_max";
 
+    @SerializedName(SERIALIZED_NAME_IOPS_WR_MAX)
+    private Long iopsWrMax;
 
-  public void setBpsWrMaxUnit(BPSUnit bpsWrMaxUnit) {
-    this.bpsWrMaxUnit = bpsWrMaxUnit;
-  }
+    public static final String SERIALIZED_NAME_IOPS_RD_MAX_LENGTH = "iops_rd_max_length";
 
+    @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH)
+    private Long iopsRdMaxLength;
 
-  public NvmfNamespaceCommonParams bpsWrMax(Long bpsWrMax) {
-    
-    this.bpsWrMax = bpsWrMax;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_IOPS_RD_MAX = "iops_rd_max";
 
-   /**
-   * Get bpsWrMax
-   * @return bpsWrMax
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_IOPS_RD_MAX)
+    private Long iopsRdMax;
 
-  public Long getBpsWrMax() {
-    return bpsWrMax;
-  }
+    public static final String SERIALIZED_NAME_IOPS_MAX_LENGTH = "iops_max_length";
 
+    @SerializedName(SERIALIZED_NAME_IOPS_MAX_LENGTH)
+    private Long iopsMaxLength;
 
-  public void setBpsWrMax(Long bpsWrMax) {
-    this.bpsWrMax = bpsWrMax;
-  }
+    public static final String SERIALIZED_NAME_IOPS_MAX = "iops_max";
 
+    @SerializedName(SERIALIZED_NAME_IOPS_MAX)
+    private Long iopsMax;
 
-  public NvmfNamespaceCommonParams bpsRdMaxLength(Long bpsRdMaxLength) {
-    
-    this.bpsRdMaxLength = bpsRdMaxLength;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_BPS_WR_UNIT = "bps_wr_unit";
 
-   /**
-   * Get bpsRdMaxLength
-   * @return bpsRdMaxLength
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_BPS_WR_UNIT)
+    private BPSUnit bpsWrUnit;
 
-  public Long getBpsRdMaxLength() {
-    return bpsRdMaxLength;
-  }
+    public static final String SERIALIZED_NAME_BPS_WR = "bps_wr";
 
+    @SerializedName(SERIALIZED_NAME_BPS_WR)
+    private Long bpsWr;
 
-  public void setBpsRdMaxLength(Long bpsRdMaxLength) {
-    this.bpsRdMaxLength = bpsRdMaxLength;
-  }
+    public static final String SERIALIZED_NAME_BPS_RD_UNIT = "bps_rd_unit";
 
+    @SerializedName(SERIALIZED_NAME_BPS_RD_UNIT)
+    private BPSUnit bpsRdUnit;
 
-  public NvmfNamespaceCommonParams bpsRdMaxUnit(BPSUnit bpsRdMaxUnit) {
-    
-    this.bpsRdMaxUnit = bpsRdMaxUnit;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_BPS_RD = "bps_rd";
 
-   /**
-   * Get bpsRdMaxUnit
-   * @return bpsRdMaxUnit
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_BPS_RD)
+    private Long bpsRd;
 
-  public BPSUnit getBpsRdMaxUnit() {
-    return bpsRdMaxUnit;
-  }
+    public static final String SERIALIZED_NAME_BPS_UNIT = "bps_unit";
 
+    @SerializedName(SERIALIZED_NAME_BPS_UNIT)
+    private BPSUnit bpsUnit;
 
-  public void setBpsRdMaxUnit(BPSUnit bpsRdMaxUnit) {
-    this.bpsRdMaxUnit = bpsRdMaxUnit;
-  }
+    public static final String SERIALIZED_NAME_BPS = "bps";
 
+    @SerializedName(SERIALIZED_NAME_BPS)
+    private Long bps;
 
-  public NvmfNamespaceCommonParams bpsRdMax(Long bpsRdMax) {
-    
-    this.bpsRdMax = bpsRdMax;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_IOPS_WR = "iops_wr";
 
-   /**
-   * Get bpsRdMax
-   * @return bpsRdMax
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_IOPS_WR)
+    private Long iopsWr;
 
-  public Long getBpsRdMax() {
-    return bpsRdMax;
-  }
+    public static final String SERIALIZED_NAME_IOPS_RD = "iops_rd";
 
+    @SerializedName(SERIALIZED_NAME_IOPS_RD)
+    private Long iopsRd;
 
-  public void setBpsRdMax(Long bpsRdMax) {
-    this.bpsRdMax = bpsRdMax;
-  }
+    public static final String SERIALIZED_NAME_IOPS = "iops";
 
+    @SerializedName(SERIALIZED_NAME_IOPS)
+    private Long iops;
 
-  public NvmfNamespaceCommonParams bpsMaxLength(Long bpsMaxLength) {
-    
-    this.bpsMaxLength = bpsMaxLength;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_NQN_WHITELIST = "nqn_whitelist";
 
-   /**
-   * Get bpsMaxLength
-   * @return bpsMaxLength
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_NQN_WHITELIST)
+    private String nqnWhitelist;
 
-  public Long getBpsMaxLength() {
-    return bpsMaxLength;
-  }
+    public NvmfNamespaceCommonParams() {}
 
+    public NvmfNamespaceCommonParams bpsWrMaxLength(Long bpsWrMaxLength) {
 
-  public void setBpsMaxLength(Long bpsMaxLength) {
-    this.bpsMaxLength = bpsMaxLength;
-  }
-
-
-  public NvmfNamespaceCommonParams bpsMaxUnit(BPSUnit bpsMaxUnit) {
-    
-    this.bpsMaxUnit = bpsMaxUnit;
-    return this;
-  }
-
-   /**
-   * Get bpsMaxUnit
-   * @return bpsMaxUnit
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public BPSUnit getBpsMaxUnit() {
-    return bpsMaxUnit;
-  }
-
-
-  public void setBpsMaxUnit(BPSUnit bpsMaxUnit) {
-    this.bpsMaxUnit = bpsMaxUnit;
-  }
-
-
-  public NvmfNamespaceCommonParams bpsMax(Long bpsMax) {
-    
-    this.bpsMax = bpsMax;
-    return this;
-  }
-
-   /**
-   * Get bpsMax
-   * @return bpsMax
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getBpsMax() {
-    return bpsMax;
-  }
-
-
-  public void setBpsMax(Long bpsMax) {
-    this.bpsMax = bpsMax;
-  }
-
-
-  public NvmfNamespaceCommonParams iopsWrMaxLength(Long iopsWrMaxLength) {
-    
-    this.iopsWrMaxLength = iopsWrMaxLength;
-    return this;
-  }
-
-   /**
-   * Get iopsWrMaxLength
-   * @return iopsWrMaxLength
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getIopsWrMaxLength() {
-    return iopsWrMaxLength;
-  }
-
-
-  public void setIopsWrMaxLength(Long iopsWrMaxLength) {
-    this.iopsWrMaxLength = iopsWrMaxLength;
-  }
-
-
-  public NvmfNamespaceCommonParams iopsWrMax(Long iopsWrMax) {
-    
-    this.iopsWrMax = iopsWrMax;
-    return this;
-  }
-
-   /**
-   * Get iopsWrMax
-   * @return iopsWrMax
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getIopsWrMax() {
-    return iopsWrMax;
-  }
-
-
-  public void setIopsWrMax(Long iopsWrMax) {
-    this.iopsWrMax = iopsWrMax;
-  }
-
-
-  public NvmfNamespaceCommonParams iopsRdMaxLength(Long iopsRdMaxLength) {
-    
-    this.iopsRdMaxLength = iopsRdMaxLength;
-    return this;
-  }
-
-   /**
-   * Get iopsRdMaxLength
-   * @return iopsRdMaxLength
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getIopsRdMaxLength() {
-    return iopsRdMaxLength;
-  }
-
-
-  public void setIopsRdMaxLength(Long iopsRdMaxLength) {
-    this.iopsRdMaxLength = iopsRdMaxLength;
-  }
-
-
-  public NvmfNamespaceCommonParams iopsRdMax(Long iopsRdMax) {
-    
-    this.iopsRdMax = iopsRdMax;
-    return this;
-  }
-
-   /**
-   * Get iopsRdMax
-   * @return iopsRdMax
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getIopsRdMax() {
-    return iopsRdMax;
-  }
-
-
-  public void setIopsRdMax(Long iopsRdMax) {
-    this.iopsRdMax = iopsRdMax;
-  }
-
-
-  public NvmfNamespaceCommonParams iopsMaxLength(Long iopsMaxLength) {
-    
-    this.iopsMaxLength = iopsMaxLength;
-    return this;
-  }
-
-   /**
-   * Get iopsMaxLength
-   * @return iopsMaxLength
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getIopsMaxLength() {
-    return iopsMaxLength;
-  }
-
-
-  public void setIopsMaxLength(Long iopsMaxLength) {
-    this.iopsMaxLength = iopsMaxLength;
-  }
-
-
-  public NvmfNamespaceCommonParams iopsMax(Long iopsMax) {
-    
-    this.iopsMax = iopsMax;
-    return this;
-  }
-
-   /**
-   * Get iopsMax
-   * @return iopsMax
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getIopsMax() {
-    return iopsMax;
-  }
-
-
-  public void setIopsMax(Long iopsMax) {
-    this.iopsMax = iopsMax;
-  }
-
-
-  public NvmfNamespaceCommonParams bpsWrUnit(BPSUnit bpsWrUnit) {
-    
-    this.bpsWrUnit = bpsWrUnit;
-    return this;
-  }
-
-   /**
-   * Get bpsWrUnit
-   * @return bpsWrUnit
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public BPSUnit getBpsWrUnit() {
-    return bpsWrUnit;
-  }
-
-
-  public void setBpsWrUnit(BPSUnit bpsWrUnit) {
-    this.bpsWrUnit = bpsWrUnit;
-  }
-
-
-  public NvmfNamespaceCommonParams bpsWr(Long bpsWr) {
-    
-    this.bpsWr = bpsWr;
-    return this;
-  }
-
-   /**
-   * Get bpsWr
-   * @return bpsWr
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getBpsWr() {
-    return bpsWr;
-  }
-
-
-  public void setBpsWr(Long bpsWr) {
-    this.bpsWr = bpsWr;
-  }
-
-
-  public NvmfNamespaceCommonParams bpsRdUnit(BPSUnit bpsRdUnit) {
-    
-    this.bpsRdUnit = bpsRdUnit;
-    return this;
-  }
-
-   /**
-   * Get bpsRdUnit
-   * @return bpsRdUnit
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public BPSUnit getBpsRdUnit() {
-    return bpsRdUnit;
-  }
-
-
-  public void setBpsRdUnit(BPSUnit bpsRdUnit) {
-    this.bpsRdUnit = bpsRdUnit;
-  }
-
-
-  public NvmfNamespaceCommonParams bpsRd(Long bpsRd) {
-    
-    this.bpsRd = bpsRd;
-    return this;
-  }
-
-   /**
-   * Get bpsRd
-   * @return bpsRd
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getBpsRd() {
-    return bpsRd;
-  }
-
-
-  public void setBpsRd(Long bpsRd) {
-    this.bpsRd = bpsRd;
-  }
-
-
-  public NvmfNamespaceCommonParams bpsUnit(BPSUnit bpsUnit) {
-    
-    this.bpsUnit = bpsUnit;
-    return this;
-  }
-
-   /**
-   * Get bpsUnit
-   * @return bpsUnit
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public BPSUnit getBpsUnit() {
-    return bpsUnit;
-  }
-
-
-  public void setBpsUnit(BPSUnit bpsUnit) {
-    this.bpsUnit = bpsUnit;
-  }
-
-
-  public NvmfNamespaceCommonParams bps(Long bps) {
-    
-    this.bps = bps;
-    return this;
-  }
-
-   /**
-   * Get bps
-   * @return bps
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getBps() {
-    return bps;
-  }
-
-
-  public void setBps(Long bps) {
-    this.bps = bps;
-  }
-
-
-  public NvmfNamespaceCommonParams iopsWr(Long iopsWr) {
-    
-    this.iopsWr = iopsWr;
-    return this;
-  }
-
-   /**
-   * Get iopsWr
-   * @return iopsWr
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getIopsWr() {
-    return iopsWr;
-  }
-
-
-  public void setIopsWr(Long iopsWr) {
-    this.iopsWr = iopsWr;
-  }
-
-
-  public NvmfNamespaceCommonParams iopsRd(Long iopsRd) {
-    
-    this.iopsRd = iopsRd;
-    return this;
-  }
-
-   /**
-   * Get iopsRd
-   * @return iopsRd
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getIopsRd() {
-    return iopsRd;
-  }
-
-
-  public void setIopsRd(Long iopsRd) {
-    this.iopsRd = iopsRd;
-  }
-
-
-  public NvmfNamespaceCommonParams iops(Long iops) {
-    
-    this.iops = iops;
-    return this;
-  }
-
-   /**
-   * Get iops
-   * @return iops
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Long getIops() {
-    return iops;
-  }
-
-
-  public void setIops(Long iops) {
-    this.iops = iops;
-  }
-
-
-  public NvmfNamespaceCommonParams nqnWhitelist(String nqnWhitelist) {
-    
-    this.nqnWhitelist = nqnWhitelist;
-    return this;
-  }
-
-   /**
-   * Get nqnWhitelist
-   * @return nqnWhitelist
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getNqnWhitelist() {
-    return nqnWhitelist;
-  }
-
-
-  public void setNqnWhitelist(String nqnWhitelist) {
-    this.nqnWhitelist = nqnWhitelist;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.bpsWrMaxLength = bpsWrMaxLength;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get bpsWrMaxLength
+     *
+     * @return bpsWrMaxLength
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getBpsWrMaxLength() {
+        return bpsWrMaxLength;
     }
-    NvmfNamespaceCommonParams nvmfNamespaceCommonParams = (NvmfNamespaceCommonParams) o;
-    return Objects.equals(this.bpsWrMaxLength, nvmfNamespaceCommonParams.bpsWrMaxLength) &&
-        Objects.equals(this.bpsWrMaxUnit, nvmfNamespaceCommonParams.bpsWrMaxUnit) &&
-        Objects.equals(this.bpsWrMax, nvmfNamespaceCommonParams.bpsWrMax) &&
-        Objects.equals(this.bpsRdMaxLength, nvmfNamespaceCommonParams.bpsRdMaxLength) &&
-        Objects.equals(this.bpsRdMaxUnit, nvmfNamespaceCommonParams.bpsRdMaxUnit) &&
-        Objects.equals(this.bpsRdMax, nvmfNamespaceCommonParams.bpsRdMax) &&
-        Objects.equals(this.bpsMaxLength, nvmfNamespaceCommonParams.bpsMaxLength) &&
-        Objects.equals(this.bpsMaxUnit, nvmfNamespaceCommonParams.bpsMaxUnit) &&
-        Objects.equals(this.bpsMax, nvmfNamespaceCommonParams.bpsMax) &&
-        Objects.equals(this.iopsWrMaxLength, nvmfNamespaceCommonParams.iopsWrMaxLength) &&
-        Objects.equals(this.iopsWrMax, nvmfNamespaceCommonParams.iopsWrMax) &&
-        Objects.equals(this.iopsRdMaxLength, nvmfNamespaceCommonParams.iopsRdMaxLength) &&
-        Objects.equals(this.iopsRdMax, nvmfNamespaceCommonParams.iopsRdMax) &&
-        Objects.equals(this.iopsMaxLength, nvmfNamespaceCommonParams.iopsMaxLength) &&
-        Objects.equals(this.iopsMax, nvmfNamespaceCommonParams.iopsMax) &&
-        Objects.equals(this.bpsWrUnit, nvmfNamespaceCommonParams.bpsWrUnit) &&
-        Objects.equals(this.bpsWr, nvmfNamespaceCommonParams.bpsWr) &&
-        Objects.equals(this.bpsRdUnit, nvmfNamespaceCommonParams.bpsRdUnit) &&
-        Objects.equals(this.bpsRd, nvmfNamespaceCommonParams.bpsRd) &&
-        Objects.equals(this.bpsUnit, nvmfNamespaceCommonParams.bpsUnit) &&
-        Objects.equals(this.bps, nvmfNamespaceCommonParams.bps) &&
-        Objects.equals(this.iopsWr, nvmfNamespaceCommonParams.iopsWr) &&
-        Objects.equals(this.iopsRd, nvmfNamespaceCommonParams.iopsRd) &&
-        Objects.equals(this.iops, nvmfNamespaceCommonParams.iops) &&
-        Objects.equals(this.nqnWhitelist, nvmfNamespaceCommonParams.nqnWhitelist);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(bpsWrMaxLength, bpsWrMaxUnit, bpsWrMax, bpsRdMaxLength, bpsRdMaxUnit, bpsRdMax, bpsMaxLength, bpsMaxUnit, bpsMax, iopsWrMaxLength, iopsWrMax, iopsRdMaxLength, iopsRdMax, iopsMaxLength, iopsMax, bpsWrUnit, bpsWr, bpsRdUnit, bpsRd, bpsUnit, bps, iopsWr, iopsRd, iops, nqnWhitelist);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NvmfNamespaceCommonParams {\n");
-    sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
-    sb.append("    bpsWrMaxUnit: ").append(toIndentedString(bpsWrMaxUnit)).append("\n");
-    sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
-    sb.append("    bpsRdMaxLength: ").append(toIndentedString(bpsRdMaxLength)).append("\n");
-    sb.append("    bpsRdMaxUnit: ").append(toIndentedString(bpsRdMaxUnit)).append("\n");
-    sb.append("    bpsRdMax: ").append(toIndentedString(bpsRdMax)).append("\n");
-    sb.append("    bpsMaxLength: ").append(toIndentedString(bpsMaxLength)).append("\n");
-    sb.append("    bpsMaxUnit: ").append(toIndentedString(bpsMaxUnit)).append("\n");
-    sb.append("    bpsMax: ").append(toIndentedString(bpsMax)).append("\n");
-    sb.append("    iopsWrMaxLength: ").append(toIndentedString(iopsWrMaxLength)).append("\n");
-    sb.append("    iopsWrMax: ").append(toIndentedString(iopsWrMax)).append("\n");
-    sb.append("    iopsRdMaxLength: ").append(toIndentedString(iopsRdMaxLength)).append("\n");
-    sb.append("    iopsRdMax: ").append(toIndentedString(iopsRdMax)).append("\n");
-    sb.append("    iopsMaxLength: ").append(toIndentedString(iopsMaxLength)).append("\n");
-    sb.append("    iopsMax: ").append(toIndentedString(iopsMax)).append("\n");
-    sb.append("    bpsWrUnit: ").append(toIndentedString(bpsWrUnit)).append("\n");
-    sb.append("    bpsWr: ").append(toIndentedString(bpsWr)).append("\n");
-    sb.append("    bpsRdUnit: ").append(toIndentedString(bpsRdUnit)).append("\n");
-    sb.append("    bpsRd: ").append(toIndentedString(bpsRd)).append("\n");
-    sb.append("    bpsUnit: ").append(toIndentedString(bpsUnit)).append("\n");
-    sb.append("    bps: ").append(toIndentedString(bps)).append("\n");
-    sb.append("    iopsWr: ").append(toIndentedString(iopsWr)).append("\n");
-    sb.append("    iopsRd: ").append(toIndentedString(iopsRd)).append("\n");
-    sb.append("    iops: ").append(toIndentedString(iops)).append("\n");
-    sb.append("    nqnWhitelist: ").append(toIndentedString(nqnWhitelist)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setBpsWrMaxLength(Long bpsWrMaxLength) {
+        this.bpsWrMaxLength = bpsWrMaxLength;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public NvmfNamespaceCommonParams bpsWrMaxLength_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_WR_MAX_LENGTH);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsWrMaxLength_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_WR_MAX_LENGTH);
+        return this;
+    }
+
+    public void setBpsWrMaxLength_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_WR_MAX_LENGTH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_WR_MAX_LENGTH);
+        }
+    }
+
+    public boolean getBpsWrMaxLength_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_MAX_LENGTH);
+    }
+
+    public NvmfNamespaceCommonParams bpsWrMaxUnit(BPSUnit bpsWrMaxUnit) {
+
+        this.bpsWrMaxUnit = bpsWrMaxUnit;
+        return this;
+    }
+
+    /**
+     * Get bpsWrMaxUnit
+     *
+     * @return bpsWrMaxUnit
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BPSUnit getBpsWrMaxUnit() {
+        return bpsWrMaxUnit;
+    }
+
+    public void setBpsWrMaxUnit(BPSUnit bpsWrMaxUnit) {
+        this.bpsWrMaxUnit = bpsWrMaxUnit;
+    }
+
+    public NvmfNamespaceCommonParams bpsWrMaxUnit_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_WR_MAX_UNIT);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsWrMaxUnit_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_WR_MAX_UNIT);
+        return this;
+    }
+
+    public void setBpsWrMaxUnit_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_WR_MAX_UNIT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_WR_MAX_UNIT);
+        }
+    }
+
+    public boolean getBpsWrMaxUnit_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_MAX_UNIT);
+    }
+
+    public NvmfNamespaceCommonParams bpsWrMax(Long bpsWrMax) {
+
+        this.bpsWrMax = bpsWrMax;
+        return this;
+    }
+
+    /**
+     * Get bpsWrMax
+     *
+     * @return bpsWrMax
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getBpsWrMax() {
+        return bpsWrMax;
+    }
+
+    public void setBpsWrMax(Long bpsWrMax) {
+        this.bpsWrMax = bpsWrMax;
+    }
+
+    public NvmfNamespaceCommonParams bpsWrMax_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_WR_MAX);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsWrMax_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_WR_MAX);
+        return this;
+    }
+
+    public void setBpsWrMax_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_WR_MAX);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_WR_MAX);
+        }
+    }
+
+    public boolean getBpsWrMax_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_MAX);
+    }
+
+    public NvmfNamespaceCommonParams bpsRdMaxLength(Long bpsRdMaxLength) {
+
+        this.bpsRdMaxLength = bpsRdMaxLength;
+        return this;
+    }
+
+    /**
+     * Get bpsRdMaxLength
+     *
+     * @return bpsRdMaxLength
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getBpsRdMaxLength() {
+        return bpsRdMaxLength;
+    }
+
+    public void setBpsRdMaxLength(Long bpsRdMaxLength) {
+        this.bpsRdMaxLength = bpsRdMaxLength;
+    }
+
+    public NvmfNamespaceCommonParams bpsRdMaxLength_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_RD_MAX_LENGTH);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsRdMaxLength_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_RD_MAX_LENGTH);
+        return this;
+    }
+
+    public void setBpsRdMaxLength_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_RD_MAX_LENGTH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_RD_MAX_LENGTH);
+        }
+    }
+
+    public boolean getBpsRdMaxLength_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_RD_MAX_LENGTH);
+    }
+
+    public NvmfNamespaceCommonParams bpsRdMaxUnit(BPSUnit bpsRdMaxUnit) {
+
+        this.bpsRdMaxUnit = bpsRdMaxUnit;
+        return this;
+    }
+
+    /**
+     * Get bpsRdMaxUnit
+     *
+     * @return bpsRdMaxUnit
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BPSUnit getBpsRdMaxUnit() {
+        return bpsRdMaxUnit;
+    }
+
+    public void setBpsRdMaxUnit(BPSUnit bpsRdMaxUnit) {
+        this.bpsRdMaxUnit = bpsRdMaxUnit;
+    }
+
+    public NvmfNamespaceCommonParams bpsRdMaxUnit_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_RD_MAX_UNIT);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsRdMaxUnit_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_RD_MAX_UNIT);
+        return this;
+    }
+
+    public void setBpsRdMaxUnit_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_RD_MAX_UNIT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_RD_MAX_UNIT);
+        }
+    }
+
+    public boolean getBpsRdMaxUnit_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_RD_MAX_UNIT);
+    }
+
+    public NvmfNamespaceCommonParams bpsRdMax(Long bpsRdMax) {
+
+        this.bpsRdMax = bpsRdMax;
+        return this;
+    }
+
+    /**
+     * Get bpsRdMax
+     *
+     * @return bpsRdMax
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getBpsRdMax() {
+        return bpsRdMax;
+    }
+
+    public void setBpsRdMax(Long bpsRdMax) {
+        this.bpsRdMax = bpsRdMax;
+    }
+
+    public NvmfNamespaceCommonParams bpsRdMax_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_RD_MAX);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsRdMax_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_RD_MAX);
+        return this;
+    }
+
+    public void setBpsRdMax_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_RD_MAX);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_RD_MAX);
+        }
+    }
+
+    public boolean getBpsRdMax_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_RD_MAX);
+    }
+
+    public NvmfNamespaceCommonParams bpsMaxLength(Long bpsMaxLength) {
+
+        this.bpsMaxLength = bpsMaxLength;
+        return this;
+    }
+
+    /**
+     * Get bpsMaxLength
+     *
+     * @return bpsMaxLength
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getBpsMaxLength() {
+        return bpsMaxLength;
+    }
+
+    public void setBpsMaxLength(Long bpsMaxLength) {
+        this.bpsMaxLength = bpsMaxLength;
+    }
+
+    public NvmfNamespaceCommonParams bpsMaxLength_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_MAX_LENGTH);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsMaxLength_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_MAX_LENGTH);
+        return this;
+    }
+
+    public void setBpsMaxLength_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_MAX_LENGTH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_MAX_LENGTH);
+        }
+    }
+
+    public boolean getBpsMaxLength_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_MAX_LENGTH);
+    }
+
+    public NvmfNamespaceCommonParams bpsMaxUnit(BPSUnit bpsMaxUnit) {
+
+        this.bpsMaxUnit = bpsMaxUnit;
+        return this;
+    }
+
+    /**
+     * Get bpsMaxUnit
+     *
+     * @return bpsMaxUnit
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BPSUnit getBpsMaxUnit() {
+        return bpsMaxUnit;
+    }
+
+    public void setBpsMaxUnit(BPSUnit bpsMaxUnit) {
+        this.bpsMaxUnit = bpsMaxUnit;
+    }
+
+    public NvmfNamespaceCommonParams bpsMaxUnit_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_MAX_UNIT);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsMaxUnit_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_MAX_UNIT);
+        return this;
+    }
+
+    public void setBpsMaxUnit_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_MAX_UNIT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_MAX_UNIT);
+        }
+    }
+
+    public boolean getBpsMaxUnit_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_MAX_UNIT);
+    }
+
+    public NvmfNamespaceCommonParams bpsMax(Long bpsMax) {
+
+        this.bpsMax = bpsMax;
+        return this;
+    }
+
+    /**
+     * Get bpsMax
+     *
+     * @return bpsMax
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getBpsMax() {
+        return bpsMax;
+    }
+
+    public void setBpsMax(Long bpsMax) {
+        this.bpsMax = bpsMax;
+    }
+
+    public NvmfNamespaceCommonParams bpsMax_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_MAX);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsMax_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_MAX);
+        return this;
+    }
+
+    public void setBpsMax_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_MAX);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_MAX);
+        }
+    }
+
+    public boolean getBpsMax_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_MAX);
+    }
+
+    public NvmfNamespaceCommonParams iopsWrMaxLength(Long iopsWrMaxLength) {
+
+        this.iopsWrMaxLength = iopsWrMaxLength;
+        return this;
+    }
+
+    /**
+     * Get iopsWrMaxLength
+     *
+     * @return iopsWrMaxLength
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getIopsWrMaxLength() {
+        return iopsWrMaxLength;
+    }
+
+    public void setIopsWrMaxLength(Long iopsWrMaxLength) {
+        this.iopsWrMaxLength = iopsWrMaxLength;
+    }
+
+    public NvmfNamespaceCommonParams iopsWrMaxLength_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams iopsWrMaxLength_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH);
+        return this;
+    }
+
+    public void setIopsWrMaxLength_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH);
+        }
+    }
+
+    public boolean getIopsWrMaxLength_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IOPS_WR_MAX_LENGTH);
+    }
+
+    public NvmfNamespaceCommonParams iopsWrMax(Long iopsWrMax) {
+
+        this.iopsWrMax = iopsWrMax;
+        return this;
+    }
+
+    /**
+     * Get iopsWrMax
+     *
+     * @return iopsWrMax
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getIopsWrMax() {
+        return iopsWrMax;
+    }
+
+    public void setIopsWrMax(Long iopsWrMax) {
+        this.iopsWrMax = iopsWrMax;
+    }
+
+    public NvmfNamespaceCommonParams iopsWrMax_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IOPS_WR_MAX);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams iopsWrMax_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IOPS_WR_MAX);
+        return this;
+    }
+
+    public void setIopsWrMax_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IOPS_WR_MAX);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IOPS_WR_MAX);
+        }
+    }
+
+    public boolean getIopsWrMax_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IOPS_WR_MAX);
+    }
+
+    public NvmfNamespaceCommonParams iopsRdMaxLength(Long iopsRdMaxLength) {
+
+        this.iopsRdMaxLength = iopsRdMaxLength;
+        return this;
+    }
+
+    /**
+     * Get iopsRdMaxLength
+     *
+     * @return iopsRdMaxLength
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getIopsRdMaxLength() {
+        return iopsRdMaxLength;
+    }
+
+    public void setIopsRdMaxLength(Long iopsRdMaxLength) {
+        this.iopsRdMaxLength = iopsRdMaxLength;
+    }
+
+    public NvmfNamespaceCommonParams iopsRdMaxLength_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams iopsRdMaxLength_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH);
+        return this;
+    }
+
+    public void setIopsRdMaxLength_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH);
+        }
+    }
+
+    public boolean getIopsRdMaxLength_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IOPS_RD_MAX_LENGTH);
+    }
+
+    public NvmfNamespaceCommonParams iopsRdMax(Long iopsRdMax) {
+
+        this.iopsRdMax = iopsRdMax;
+        return this;
+    }
+
+    /**
+     * Get iopsRdMax
+     *
+     * @return iopsRdMax
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getIopsRdMax() {
+        return iopsRdMax;
+    }
+
+    public void setIopsRdMax(Long iopsRdMax) {
+        this.iopsRdMax = iopsRdMax;
+    }
+
+    public NvmfNamespaceCommonParams iopsRdMax_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IOPS_RD_MAX);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams iopsRdMax_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IOPS_RD_MAX);
+        return this;
+    }
+
+    public void setIopsRdMax_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IOPS_RD_MAX);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IOPS_RD_MAX);
+        }
+    }
+
+    public boolean getIopsRdMax_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IOPS_RD_MAX);
+    }
+
+    public NvmfNamespaceCommonParams iopsMaxLength(Long iopsMaxLength) {
+
+        this.iopsMaxLength = iopsMaxLength;
+        return this;
+    }
+
+    /**
+     * Get iopsMaxLength
+     *
+     * @return iopsMaxLength
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getIopsMaxLength() {
+        return iopsMaxLength;
+    }
+
+    public void setIopsMaxLength(Long iopsMaxLength) {
+        this.iopsMaxLength = iopsMaxLength;
+    }
+
+    public NvmfNamespaceCommonParams iopsMaxLength_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IOPS_MAX_LENGTH);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams iopsMaxLength_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IOPS_MAX_LENGTH);
+        return this;
+    }
+
+    public void setIopsMaxLength_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IOPS_MAX_LENGTH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IOPS_MAX_LENGTH);
+        }
+    }
+
+    public boolean getIopsMaxLength_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IOPS_MAX_LENGTH);
+    }
+
+    public NvmfNamespaceCommonParams iopsMax(Long iopsMax) {
+
+        this.iopsMax = iopsMax;
+        return this;
+    }
+
+    /**
+     * Get iopsMax
+     *
+     * @return iopsMax
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getIopsMax() {
+        return iopsMax;
+    }
+
+    public void setIopsMax(Long iopsMax) {
+        this.iopsMax = iopsMax;
+    }
+
+    public NvmfNamespaceCommonParams iopsMax_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IOPS_MAX);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams iopsMax_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IOPS_MAX);
+        return this;
+    }
+
+    public void setIopsMax_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IOPS_MAX);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IOPS_MAX);
+        }
+    }
+
+    public boolean getIopsMax_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IOPS_MAX);
+    }
+
+    public NvmfNamespaceCommonParams bpsWrUnit(BPSUnit bpsWrUnit) {
+
+        this.bpsWrUnit = bpsWrUnit;
+        return this;
+    }
+
+    /**
+     * Get bpsWrUnit
+     *
+     * @return bpsWrUnit
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BPSUnit getBpsWrUnit() {
+        return bpsWrUnit;
+    }
+
+    public void setBpsWrUnit(BPSUnit bpsWrUnit) {
+        this.bpsWrUnit = bpsWrUnit;
+    }
+
+    public NvmfNamespaceCommonParams bpsWrUnit_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_WR_UNIT);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsWrUnit_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_WR_UNIT);
+        return this;
+    }
+
+    public void setBpsWrUnit_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_WR_UNIT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_WR_UNIT);
+        }
+    }
+
+    public boolean getBpsWrUnit_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_UNIT);
+    }
+
+    public NvmfNamespaceCommonParams bpsWr(Long bpsWr) {
+
+        this.bpsWr = bpsWr;
+        return this;
+    }
+
+    /**
+     * Get bpsWr
+     *
+     * @return bpsWr
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getBpsWr() {
+        return bpsWr;
+    }
+
+    public void setBpsWr(Long bpsWr) {
+        this.bpsWr = bpsWr;
+    }
+
+    public NvmfNamespaceCommonParams bpsWr_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_WR);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsWr_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_WR);
+        return this;
+    }
+
+    public void setBpsWr_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_WR);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_WR);
+        }
+    }
+
+    public boolean getBpsWr_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR);
+    }
+
+    public NvmfNamespaceCommonParams bpsRdUnit(BPSUnit bpsRdUnit) {
+
+        this.bpsRdUnit = bpsRdUnit;
+        return this;
+    }
+
+    /**
+     * Get bpsRdUnit
+     *
+     * @return bpsRdUnit
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BPSUnit getBpsRdUnit() {
+        return bpsRdUnit;
+    }
+
+    public void setBpsRdUnit(BPSUnit bpsRdUnit) {
+        this.bpsRdUnit = bpsRdUnit;
+    }
+
+    public NvmfNamespaceCommonParams bpsRdUnit_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_RD_UNIT);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsRdUnit_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_RD_UNIT);
+        return this;
+    }
+
+    public void setBpsRdUnit_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_RD_UNIT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_RD_UNIT);
+        }
+    }
+
+    public boolean getBpsRdUnit_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_RD_UNIT);
+    }
+
+    public NvmfNamespaceCommonParams bpsRd(Long bpsRd) {
+
+        this.bpsRd = bpsRd;
+        return this;
+    }
+
+    /**
+     * Get bpsRd
+     *
+     * @return bpsRd
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getBpsRd() {
+        return bpsRd;
+    }
+
+    public void setBpsRd(Long bpsRd) {
+        this.bpsRd = bpsRd;
+    }
+
+    public NvmfNamespaceCommonParams bpsRd_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_RD);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsRd_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_RD);
+        return this;
+    }
+
+    public void setBpsRd_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_RD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_RD);
+        }
+    }
+
+    public boolean getBpsRd_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_RD);
+    }
+
+    public NvmfNamespaceCommonParams bpsUnit(BPSUnit bpsUnit) {
+
+        this.bpsUnit = bpsUnit;
+        return this;
+    }
+
+    /**
+     * Get bpsUnit
+     *
+     * @return bpsUnit
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BPSUnit getBpsUnit() {
+        return bpsUnit;
+    }
+
+    public void setBpsUnit(BPSUnit bpsUnit) {
+        this.bpsUnit = bpsUnit;
+    }
+
+    public NvmfNamespaceCommonParams bpsUnit_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS_UNIT);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bpsUnit_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS_UNIT);
+        return this;
+    }
+
+    public void setBpsUnit_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS_UNIT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS_UNIT);
+        }
+    }
+
+    public boolean getBpsUnit_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS_UNIT);
+    }
+
+    public NvmfNamespaceCommonParams bps(Long bps) {
+
+        this.bps = bps;
+        return this;
+    }
+
+    /**
+     * Get bps
+     *
+     * @return bps
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getBps() {
+        return bps;
+    }
+
+    public void setBps(Long bps) {
+        this.bps = bps;
+    }
+
+    public NvmfNamespaceCommonParams bps_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BPS);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams bps_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BPS);
+        return this;
+    }
+
+    public void setBps_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BPS);
+        }
+    }
+
+    public boolean getBps_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BPS);
+    }
+
+    public NvmfNamespaceCommonParams iopsWr(Long iopsWr) {
+
+        this.iopsWr = iopsWr;
+        return this;
+    }
+
+    /**
+     * Get iopsWr
+     *
+     * @return iopsWr
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getIopsWr() {
+        return iopsWr;
+    }
+
+    public void setIopsWr(Long iopsWr) {
+        this.iopsWr = iopsWr;
+    }
+
+    public NvmfNamespaceCommonParams iopsWr_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IOPS_WR);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams iopsWr_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IOPS_WR);
+        return this;
+    }
+
+    public void setIopsWr_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IOPS_WR);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IOPS_WR);
+        }
+    }
+
+    public boolean getIopsWr_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IOPS_WR);
+    }
+
+    public NvmfNamespaceCommonParams iopsRd(Long iopsRd) {
+
+        this.iopsRd = iopsRd;
+        return this;
+    }
+
+    /**
+     * Get iopsRd
+     *
+     * @return iopsRd
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getIopsRd() {
+        return iopsRd;
+    }
+
+    public void setIopsRd(Long iopsRd) {
+        this.iopsRd = iopsRd;
+    }
+
+    public NvmfNamespaceCommonParams iopsRd_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IOPS_RD);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams iopsRd_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IOPS_RD);
+        return this;
+    }
+
+    public void setIopsRd_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IOPS_RD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IOPS_RD);
+        }
+    }
+
+    public boolean getIopsRd_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IOPS_RD);
+    }
+
+    public NvmfNamespaceCommonParams iops(Long iops) {
+
+        this.iops = iops;
+        return this;
+    }
+
+    /**
+     * Get iops
+     *
+     * @return iops
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getIops() {
+        return iops;
+    }
+
+    public void setIops(Long iops) {
+        this.iops = iops;
+    }
+
+    public NvmfNamespaceCommonParams iops_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IOPS);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams iops_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IOPS);
+        return this;
+    }
+
+    public void setIops_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IOPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IOPS);
+        }
+    }
+
+    public boolean getIops_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IOPS);
+    }
+
+    public NvmfNamespaceCommonParams nqnWhitelist(String nqnWhitelist) {
+
+        this.nqnWhitelist = nqnWhitelist;
+        return this;
+    }
+
+    /**
+     * Get nqnWhitelist
+     *
+     * @return nqnWhitelist
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getNqnWhitelist() {
+        return nqnWhitelist;
+    }
+
+    public void setNqnWhitelist(String nqnWhitelist) {
+        this.nqnWhitelist = nqnWhitelist;
+    }
+
+    public NvmfNamespaceCommonParams nqnWhitelist_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NQN_WHITELIST);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams nqnWhitelist_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NQN_WHITELIST);
+        return this;
+    }
+
+    public void setNqnWhitelist_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NQN_WHITELIST);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NQN_WHITELIST);
+        }
+    }
+
+    public boolean getNqnWhitelist_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NQN_WHITELIST);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NvmfNamespaceCommonParams nvmfNamespaceCommonParams = (NvmfNamespaceCommonParams) o;
+        return Objects.equals(this.bpsWrMaxLength, nvmfNamespaceCommonParams.bpsWrMaxLength)
+                && Objects.equals(this.bpsWrMaxUnit, nvmfNamespaceCommonParams.bpsWrMaxUnit)
+                && Objects.equals(this.bpsWrMax, nvmfNamespaceCommonParams.bpsWrMax)
+                && Objects.equals(this.bpsRdMaxLength, nvmfNamespaceCommonParams.bpsRdMaxLength)
+                && Objects.equals(this.bpsRdMaxUnit, nvmfNamespaceCommonParams.bpsRdMaxUnit)
+                && Objects.equals(this.bpsRdMax, nvmfNamespaceCommonParams.bpsRdMax)
+                && Objects.equals(this.bpsMaxLength, nvmfNamespaceCommonParams.bpsMaxLength)
+                && Objects.equals(this.bpsMaxUnit, nvmfNamespaceCommonParams.bpsMaxUnit)
+                && Objects.equals(this.bpsMax, nvmfNamespaceCommonParams.bpsMax)
+                && Objects.equals(this.iopsWrMaxLength, nvmfNamespaceCommonParams.iopsWrMaxLength)
+                && Objects.equals(this.iopsWrMax, nvmfNamespaceCommonParams.iopsWrMax)
+                && Objects.equals(this.iopsRdMaxLength, nvmfNamespaceCommonParams.iopsRdMaxLength)
+                && Objects.equals(this.iopsRdMax, nvmfNamespaceCommonParams.iopsRdMax)
+                && Objects.equals(this.iopsMaxLength, nvmfNamespaceCommonParams.iopsMaxLength)
+                && Objects.equals(this.iopsMax, nvmfNamespaceCommonParams.iopsMax)
+                && Objects.equals(this.bpsWrUnit, nvmfNamespaceCommonParams.bpsWrUnit)
+                && Objects.equals(this.bpsWr, nvmfNamespaceCommonParams.bpsWr)
+                && Objects.equals(this.bpsRdUnit, nvmfNamespaceCommonParams.bpsRdUnit)
+                && Objects.equals(this.bpsRd, nvmfNamespaceCommonParams.bpsRd)
+                && Objects.equals(this.bpsUnit, nvmfNamespaceCommonParams.bpsUnit)
+                && Objects.equals(this.bps, nvmfNamespaceCommonParams.bps)
+                && Objects.equals(this.iopsWr, nvmfNamespaceCommonParams.iopsWr)
+                && Objects.equals(this.iopsRd, nvmfNamespaceCommonParams.iopsRd)
+                && Objects.equals(this.iops, nvmfNamespaceCommonParams.iops)
+                && Objects.equals(this.nqnWhitelist, nvmfNamespaceCommonParams.nqnWhitelist);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(
+                bpsWrMaxLength,
+                bpsWrMaxUnit,
+                bpsWrMax,
+                bpsRdMaxLength,
+                bpsRdMaxUnit,
+                bpsRdMax,
+                bpsMaxLength,
+                bpsMaxUnit,
+                bpsMax,
+                iopsWrMaxLength,
+                iopsWrMax,
+                iopsRdMaxLength,
+                iopsRdMax,
+                iopsMaxLength,
+                iopsMax,
+                bpsWrUnit,
+                bpsWr,
+                bpsRdUnit,
+                bpsRd,
+                bpsUnit,
+                bps,
+                iopsWr,
+                iopsRd,
+                iops,
+                nqnWhitelist);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NvmfNamespaceCommonParams {\n");
+        sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
+        sb.append("    bpsWrMaxUnit: ").append(toIndentedString(bpsWrMaxUnit)).append("\n");
+        sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
+        sb.append("    bpsRdMaxLength: ").append(toIndentedString(bpsRdMaxLength)).append("\n");
+        sb.append("    bpsRdMaxUnit: ").append(toIndentedString(bpsRdMaxUnit)).append("\n");
+        sb.append("    bpsRdMax: ").append(toIndentedString(bpsRdMax)).append("\n");
+        sb.append("    bpsMaxLength: ").append(toIndentedString(bpsMaxLength)).append("\n");
+        sb.append("    bpsMaxUnit: ").append(toIndentedString(bpsMaxUnit)).append("\n");
+        sb.append("    bpsMax: ").append(toIndentedString(bpsMax)).append("\n");
+        sb.append("    iopsWrMaxLength: ").append(toIndentedString(iopsWrMaxLength)).append("\n");
+        sb.append("    iopsWrMax: ").append(toIndentedString(iopsWrMax)).append("\n");
+        sb.append("    iopsRdMaxLength: ").append(toIndentedString(iopsRdMaxLength)).append("\n");
+        sb.append("    iopsRdMax: ").append(toIndentedString(iopsRdMax)).append("\n");
+        sb.append("    iopsMaxLength: ").append(toIndentedString(iopsMaxLength)).append("\n");
+        sb.append("    iopsMax: ").append(toIndentedString(iopsMax)).append("\n");
+        sb.append("    bpsWrUnit: ").append(toIndentedString(bpsWrUnit)).append("\n");
+        sb.append("    bpsWr: ").append(toIndentedString(bpsWr)).append("\n");
+        sb.append("    bpsRdUnit: ").append(toIndentedString(bpsRdUnit)).append("\n");
+        sb.append("    bpsRd: ").append(toIndentedString(bpsRd)).append("\n");
+        sb.append("    bpsUnit: ").append(toIndentedString(bpsUnit)).append("\n");
+        sb.append("    bps: ").append(toIndentedString(bps)).append("\n");
+        sb.append("    iopsWr: ").append(toIndentedString(iopsWr)).append("\n");
+        sb.append("    iopsRd: ").append(toIndentedString(iopsRd)).append("\n");
+        sb.append("    iops: ").append(toIndentedString(iops)).append("\n");
+        sb.append("    nqnWhitelist: ").append(toIndentedString(nqnWhitelist)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

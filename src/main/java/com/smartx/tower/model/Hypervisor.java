@@ -1,65 +1,59 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets Hypervisor
- */
+/** Gets or Sets Hypervisor */
 @JsonAdapter(Hypervisor.Adapter.class)
 public enum Hypervisor {
-  
-  BLUESHARK("BLUESHARK"),
-  
-  ELF("ELF"),
-  
-  VMWARE("VMWARE"),
-  
-  XENSERVER("XENSERVER"),
-  
-  HYPERVISOR_UNSUPPORTED_ENUM("HYPERVISOR_UNSUPPORTED_ENUM");
-  private String value;
+    BLUESHARK("BLUESHARK"),
 
-  Hypervisor(String value) {
-    this.value = value;
-  }
+    ELF("ELF"),
 
-  public String getValue() {
-    return value;
-  }
+    VMWARE("VMWARE"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    XENSERVER("XENSERVER"),
 
-  public static Hypervisor fromValue(String value) {
-    for (Hypervisor b : Hypervisor.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    HYPERVISOR_UNSUPPORTED_ENUM("HYPERVISOR_UNSUPPORTED_ENUM");
+    private String value;
+
+    Hypervisor(String value) {
+        this.value = value;
     }
-    return Hypervisor.HYPERVISOR_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<Hypervisor> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final Hypervisor enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public Hypervisor read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return Hypervisor.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static Hypervisor fromValue(String value) {
+        for (Hypervisor b : Hypervisor.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return Hypervisor.HYPERVISOR_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<Hypervisor> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final Hypervisor enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public Hypervisor read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return Hypervisor.fromValue(value);
+        }
+    }
 }
-

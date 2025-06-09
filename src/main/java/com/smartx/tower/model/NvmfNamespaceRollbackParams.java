@@ -1,116 +1,148 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * NvmfNamespaceRollbackParams
- */
+/** NvmfNamespaceRollbackParams */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NvmfNamespaceRollbackParams {
-  public static final String SERIALIZED_NAME_NAMESPACE_ID = "namespace_id";
-  @SerializedName(SERIALIZED_NAME_NAMESPACE_ID)
-  private String namespaceId;
+public class NvmfNamespaceRollbackParams
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_NAMESPACE_ID = "namespace_id";
 
-  public static final String SERIALIZED_NAME_SNAPSHOT_ID = "snapshot_id";
-  @SerializedName(SERIALIZED_NAME_SNAPSHOT_ID)
-  private String snapshotId;
+    @SerializedName(SERIALIZED_NAME_NAMESPACE_ID)
+    private String namespaceId;
 
-  public NvmfNamespaceRollbackParams() { 
-  }
+    public static final String SERIALIZED_NAME_SNAPSHOT_ID = "snapshot_id";
 
-  public NvmfNamespaceRollbackParams namespaceId(String namespaceId) {
-    
-    this.namespaceId = namespaceId;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_ID)
+    private String snapshotId;
 
-   /**
-   * Get namespaceId
-   * @return namespaceId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public NvmfNamespaceRollbackParams() {}
 
-  public String getNamespaceId() {
-    return namespaceId;
-  }
+    public NvmfNamespaceRollbackParams namespaceId(String namespaceId) {
 
-
-  public void setNamespaceId(String namespaceId) {
-    this.namespaceId = namespaceId;
-  }
-
-
-  public NvmfNamespaceRollbackParams snapshotId(String snapshotId) {
-    
-    this.snapshotId = snapshotId;
-    return this;
-  }
-
-   /**
-   * Get snapshotId
-   * @return snapshotId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getSnapshotId() {
-    return snapshotId;
-  }
-
-
-  public void setSnapshotId(String snapshotId) {
-    this.snapshotId = snapshotId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.namespaceId = namespaceId;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get namespaceId
+     *
+     * @return namespaceId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getNamespaceId() {
+        return namespaceId;
     }
-    NvmfNamespaceRollbackParams nvmfNamespaceRollbackParams = (NvmfNamespaceRollbackParams) o;
-    return Objects.equals(this.namespaceId, nvmfNamespaceRollbackParams.namespaceId) &&
-        Objects.equals(this.snapshotId, nvmfNamespaceRollbackParams.snapshotId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(namespaceId, snapshotId);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NvmfNamespaceRollbackParams {\n");
-    sb.append("    namespaceId: ").append(toIndentedString(namespaceId)).append("\n");
-    sb.append("    snapshotId: ").append(toIndentedString(snapshotId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public NvmfNamespaceRollbackParams namespaceId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NAMESPACE_ID);
+        return this;
+    }
+
+    public NvmfNamespaceRollbackParams namespaceId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NAMESPACE_ID);
+        return this;
+    }
+
+    public void setNamespaceId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NAMESPACE_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NAMESPACE_ID);
+        }
+    }
+
+    public boolean getNamespaceId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NAMESPACE_ID);
+    }
+
+    public NvmfNamespaceRollbackParams snapshotId(String snapshotId) {
+
+        this.snapshotId = snapshotId;
+        return this;
+    }
+
+    /**
+     * Get snapshotId
+     *
+     * @return snapshotId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getSnapshotId() {
+        return snapshotId;
+    }
+
+    public void setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+    }
+
+    public NvmfNamespaceRollbackParams snapshotId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_ID);
+        return this;
+    }
+
+    public NvmfNamespaceRollbackParams snapshotId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_ID);
+        return this;
+    }
+
+    public void setSnapshotId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_ID);
+        }
+    }
+
+    public boolean getSnapshotId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_ID);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NvmfNamespaceRollbackParams nvmfNamespaceRollbackParams = (NvmfNamespaceRollbackParams) o;
+        return Objects.equals(this.namespaceId, nvmfNamespaceRollbackParams.namespaceId)
+                && Objects.equals(this.snapshotId, nvmfNamespaceRollbackParams.snapshotId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(namespaceId, snapshotId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NvmfNamespaceRollbackParams {\n");
+        sb.append("    namespaceId: ").append(toIndentedString(namespaceId)).append("\n");
+        sb.append("    snapshotId: ").append(toIndentedString(snapshotId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

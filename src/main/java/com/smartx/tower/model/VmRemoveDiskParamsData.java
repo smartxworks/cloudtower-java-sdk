@@ -1,94 +1,105 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-/**
- * VmRemoveDiskParamsData
- */
+/** VmRemoveDiskParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmRemoveDiskParamsData {
-  public static final String SERIALIZED_NAME_DISK_IDS = "disk_ids";
-  @SerializedName(SERIALIZED_NAME_DISK_IDS)
-  private List<String> diskIds = new ArrayList<String>();
+public class VmRemoveDiskParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_DISK_IDS = "disk_ids";
 
-  public VmRemoveDiskParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_DISK_IDS)
+    private List<String> diskIds = new ArrayList<String>();
 
-  public VmRemoveDiskParamsData diskIds(List<String> diskIds) {
-    
-    this.diskIds = diskIds;
-    return this;
-  }
+    public VmRemoveDiskParamsData() {}
 
-  public VmRemoveDiskParamsData addDiskIdsItem(String diskIdsItem) {
-    this.diskIds.add(diskIdsItem);
-    return this;
-  }
+    public VmRemoveDiskParamsData diskIds(List<String> diskIds) {
 
-   /**
-   * Get diskIds
-   * @return diskIds
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public List<String> getDiskIds() {
-    return diskIds;
-  }
-
-
-  public void setDiskIds(List<String> diskIds) {
-    this.diskIds = diskIds;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.diskIds = diskIds;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public VmRemoveDiskParamsData addDiskIdsItem(String diskIdsItem) {
+        this.diskIds.add(diskIdsItem);
+        return this;
     }
-    VmRemoveDiskParamsData vmRemoveDiskParamsData = (VmRemoveDiskParamsData) o;
-    return Objects.equals(this.diskIds, vmRemoveDiskParamsData.diskIds);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(diskIds);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VmRemoveDiskParamsData {\n");
-    sb.append("    diskIds: ").append(toIndentedString(diskIds)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get diskIds
+     *
+     * @return diskIds
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public List<String> getDiskIds() {
+        return diskIds;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setDiskIds(List<String> diskIds) {
+        this.diskIds = diskIds;
+    }
+
+    public VmRemoveDiskParamsData diskIds_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISK_IDS);
+        return this;
+    }
+
+    public VmRemoveDiskParamsData diskIds_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISK_IDS);
+        return this;
+    }
+
+    public void setDiskIds_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISK_IDS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISK_IDS);
+        }
+    }
+
+    public boolean getDiskIds_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISK_IDS);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmRemoveDiskParamsData vmRemoveDiskParamsData = (VmRemoveDiskParamsData) o;
+        return Objects.equals(this.diskIds, vmRemoveDiskParamsData.diskIds);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(diskIds);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmRemoveDiskParamsData {\n");
+        sb.append("    diskIds: ").append(toIndentedString(diskIds)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

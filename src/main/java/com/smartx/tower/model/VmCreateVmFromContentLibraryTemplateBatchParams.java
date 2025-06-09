@@ -1,124 +1,162 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.VmCreateVmFromContentLibraryTemplateBatchVmParams;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-/**
- * VmCreateVmFromContentLibraryTemplateBatchParams
- */
+/** VmCreateVmFromContentLibraryTemplateBatchParams */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class VmCreateVmFromContentLibraryTemplateBatchParams {
-  public static final String SERIALIZED_NAME_VMS = "vms";
-  @SerializedName(SERIALIZED_NAME_VMS)
-  private List<VmCreateVmFromContentLibraryTemplateBatchVmParams> vms = new ArrayList<VmCreateVmFromContentLibraryTemplateBatchVmParams>();
+public class VmCreateVmFromContentLibraryTemplateBatchParams
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_VMS = "vms";
 
-  public static final String SERIALIZED_NAME_TEMPLATE_ID = "template_id";
-  @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
-  private String templateId;
+    @SerializedName(SERIALIZED_NAME_VMS)
+    private List<VmCreateVmFromContentLibraryTemplateBatchVmParams> vms =
+            new ArrayList<VmCreateVmFromContentLibraryTemplateBatchVmParams>();
 
-  public VmCreateVmFromContentLibraryTemplateBatchParams() { 
-  }
+    public static final String SERIALIZED_NAME_TEMPLATE_ID = "template_id";
 
-  public VmCreateVmFromContentLibraryTemplateBatchParams vms(List<VmCreateVmFromContentLibraryTemplateBatchVmParams> vms) {
-    
-    this.vms = vms;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_TEMPLATE_ID)
+    private String templateId;
 
-  public VmCreateVmFromContentLibraryTemplateBatchParams addVmsItem(VmCreateVmFromContentLibraryTemplateBatchVmParams vmsItem) {
-    this.vms.add(vmsItem);
-    return this;
-  }
+    public VmCreateVmFromContentLibraryTemplateBatchParams() {}
 
-   /**
-   * Get vms
-   * @return vms
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public VmCreateVmFromContentLibraryTemplateBatchParams vms(
+            List<VmCreateVmFromContentLibraryTemplateBatchVmParams> vms) {
 
-  public List<VmCreateVmFromContentLibraryTemplateBatchVmParams> getVms() {
-    return vms;
-  }
-
-
-  public void setVms(List<VmCreateVmFromContentLibraryTemplateBatchVmParams> vms) {
-    this.vms = vms;
-  }
-
-
-  public VmCreateVmFromContentLibraryTemplateBatchParams templateId(String templateId) {
-    
-    this.templateId = templateId;
-    return this;
-  }
-
-   /**
-   * Get templateId
-   * @return templateId
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getTemplateId() {
-    return templateId;
-  }
-
-
-  public void setTemplateId(String templateId) {
-    this.templateId = templateId;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.vms = vms;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public VmCreateVmFromContentLibraryTemplateBatchParams addVmsItem(
+            VmCreateVmFromContentLibraryTemplateBatchVmParams vmsItem) {
+        this.vms.add(vmsItem);
+        return this;
     }
-    VmCreateVmFromContentLibraryTemplateBatchParams vmCreateVmFromContentLibraryTemplateBatchParams = (VmCreateVmFromContentLibraryTemplateBatchParams) o;
-    return Objects.equals(this.vms, vmCreateVmFromContentLibraryTemplateBatchParams.vms) &&
-        Objects.equals(this.templateId, vmCreateVmFromContentLibraryTemplateBatchParams.templateId);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(vms, templateId);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class VmCreateVmFromContentLibraryTemplateBatchParams {\n");
-    sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
-    sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    /**
+     * Get vms
+     *
+     * @return vms
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public List<VmCreateVmFromContentLibraryTemplateBatchVmParams> getVms() {
+        return vms;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setVms(List<VmCreateVmFromContentLibraryTemplateBatchVmParams> vms) {
+        this.vms = vms;
+    }
+
+    public VmCreateVmFromContentLibraryTemplateBatchParams vms_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VMS);
+        return this;
+    }
+
+    public VmCreateVmFromContentLibraryTemplateBatchParams vms_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VMS);
+        return this;
+    }
+
+    public void setVms_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VMS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VMS);
+        }
+    }
+
+    public boolean getVms_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VMS);
+    }
+
+    public VmCreateVmFromContentLibraryTemplateBatchParams templateId(String templateId) {
+
+        this.templateId = templateId;
+        return this;
+    }
+
+    /**
+     * Get templateId
+     *
+     * @return templateId
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getTemplateId() {
+        return templateId;
+    }
+
+    public void setTemplateId(String templateId) {
+        this.templateId = templateId;
+    }
+
+    public VmCreateVmFromContentLibraryTemplateBatchParams templateId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TEMPLATE_ID);
+        return this;
+    }
+
+    public VmCreateVmFromContentLibraryTemplateBatchParams templateId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TEMPLATE_ID);
+        return this;
+    }
+
+    public void setTemplateId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TEMPLATE_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TEMPLATE_ID);
+        }
+    }
+
+    public boolean getTemplateId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TEMPLATE_ID);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        VmCreateVmFromContentLibraryTemplateBatchParams
+                vmCreateVmFromContentLibraryTemplateBatchParams =
+                        (VmCreateVmFromContentLibraryTemplateBatchParams) o;
+        return Objects.equals(this.vms, vmCreateVmFromContentLibraryTemplateBatchParams.vms)
+                && Objects.equals(
+                        this.templateId,
+                        vmCreateVmFromContentLibraryTemplateBatchParams.templateId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vms, templateId);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class VmCreateVmFromContentLibraryTemplateBatchParams {\n");
+        sb.append("    vms: ").append(toIndentedString(vms)).append("\n");
+        sb.append("    templateId: ").append(toIndentedString(templateId)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

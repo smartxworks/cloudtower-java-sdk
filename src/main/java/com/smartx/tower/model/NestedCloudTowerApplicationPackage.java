@@ -1,116 +1,149 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * NestedCloudTowerApplicationPackage
- */
+/** NestedCloudTowerApplicationPackage */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NestedCloudTowerApplicationPackage {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
+public class NestedCloudTowerApplicationPackage
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_ID = "id";
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+    @SerializedName(SERIALIZED_NAME_ID)
+    private String id;
 
-  public NestedCloudTowerApplicationPackage() { 
-  }
+    public static final String SERIALIZED_NAME_NAME = "name";
 
-  public NestedCloudTowerApplicationPackage id(String id) {
-    
-    this.id = id;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_NAME)
+    private String name;
 
-   /**
-   * Get id
-   * @return id
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public NestedCloudTowerApplicationPackage() {}
 
-  public String getId() {
-    return id;
-  }
+    public NestedCloudTowerApplicationPackage id(String id) {
 
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-  public NestedCloudTowerApplicationPackage name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.id = id;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get id
+     *
+     * @return id
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getId() {
+        return id;
     }
-    NestedCloudTowerApplicationPackage nestedCloudTowerApplicationPackage = (NestedCloudTowerApplicationPackage) o;
-    return Objects.equals(this.id, nestedCloudTowerApplicationPackage.id) &&
-        Objects.equals(this.name, nestedCloudTowerApplicationPackage.name);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(id, name);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NestedCloudTowerApplicationPackage {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setId(String id) {
+        this.id = id;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public NestedCloudTowerApplicationPackage id_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ID);
+        return this;
+    }
+
+    public NestedCloudTowerApplicationPackage id_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ID);
+        return this;
+    }
+
+    public void setId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ID);
+        }
+    }
+
+    public boolean getId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ID);
+    }
+
+    public NestedCloudTowerApplicationPackage name(String name) {
+
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return name
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public NestedCloudTowerApplicationPackage name_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public NestedCloudTowerApplicationPackage name_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        return this;
+    }
+
+    public void setName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NAME);
+        }
+    }
+
+    public boolean getName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NestedCloudTowerApplicationPackage nestedCloudTowerApplicationPackage =
+                (NestedCloudTowerApplicationPackage) o;
+        return Objects.equals(this.id, nestedCloudTowerApplicationPackage.id)
+                && Objects.equals(this.name, nestedCloudTowerApplicationPackage.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NestedCloudTowerApplicationPackage {\n");
+        sb.append("    id: ").append(toIndentedString(id)).append("\n");
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

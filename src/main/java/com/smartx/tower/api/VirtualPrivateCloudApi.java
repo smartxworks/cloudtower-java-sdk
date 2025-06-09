@@ -1,21 +1,13 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
-import com.smartx.tower.model.CommonHeader;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetVirtualPrivateCloudsConnectionRequestBody;
 import com.smartx.tower.model.GetVirtualPrivateCloudsRequestBody;
 import com.smartx.tower.model.VirtualPrivateCloud;
@@ -25,7 +17,6 @@ import com.smartx.tower.model.VirtualPrivateCloudDeletionParams;
 import com.smartx.tower.model.VirtualPrivateCloudUpdationParams;
 import com.smartx.tower.model.WithTaskDeleteVirtualPrivateCloud;
 import com.smartx.tower.model.WithTaskVirtualPrivateCloud;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,29 +62,33 @@ public class VirtualPrivateCloudApi {
 
     /**
      * Build call for createVirtualPrivateCloud
-     * @param virtualPrivateCloudCreationParams  (required)
+     *
+     * @param virtualPrivateCloudCreationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createVirtualPrivateCloudCall(List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createVirtualPrivateCloudCall(
+            List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -110,129 +105,156 @@ public class VirtualPrivateCloudApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createVirtualPrivateCloudValidateBeforeCall(List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call createVirtualPrivateCloudValidateBeforeCall(
+            List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'virtualPrivateCloudCreationParams' is set
         if (virtualPrivateCloudCreationParams == null) {
-            throw new ApiException("Missing the required parameter 'virtualPrivateCloudCreationParams' when calling createVirtualPrivateCloud(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'virtualPrivateCloudCreationParams' when"
+                            + " calling createVirtualPrivateCloud(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = createVirtualPrivateCloudCall(virtualPrivateCloudCreationParams, _callback);
+        okhttp3.Call localVarCall =
+                createVirtualPrivateCloudCall(virtualPrivateCloudCreationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param virtualPrivateCloudCreationParams  (required)
+     * @param virtualPrivateCloudCreationParams (required)
      * @return List&lt;WithTaskVirtualPrivateCloud&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskVirtualPrivateCloud> createVirtualPrivateCloud(List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskVirtualPrivateCloud>> localVarResp = createVirtualPrivateCloudWithHttpInfo(virtualPrivateCloudCreationParams);
+    public List<WithTaskVirtualPrivateCloud> createVirtualPrivateCloud(
+            List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams)
+            throws ApiException {
+        ApiResponse<List<WithTaskVirtualPrivateCloud>> localVarResp =
+                createVirtualPrivateCloudWithHttpInfo(virtualPrivateCloudCreationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param virtualPrivateCloudCreationParams  (required)
+     * @param virtualPrivateCloudCreationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskVirtualPrivateCloud&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskVirtualPrivateCloud>> createVirtualPrivateCloudWithHttpInfo(List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createVirtualPrivateCloudValidateBeforeCall(virtualPrivateCloudCreationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskVirtualPrivateCloud>>(){}.getType();
+    public ApiResponse<List<WithTaskVirtualPrivateCloud>> createVirtualPrivateCloudWithHttpInfo(
+            List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                createVirtualPrivateCloudValidateBeforeCall(
+                        virtualPrivateCloudCreationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVirtualPrivateCloud>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param virtualPrivateCloudCreationParams  (required)
+     * (asynchronously)
+     *
+     * @param virtualPrivateCloudCreationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createVirtualPrivateCloudAsync(List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams, final ApiCallback<List<WithTaskVirtualPrivateCloud>> _callback) throws ApiException {
+    public okhttp3.Call createVirtualPrivateCloudAsync(
+            List<VirtualPrivateCloudCreationParams> virtualPrivateCloudCreationParams,
+            final ApiCallback<List<WithTaskVirtualPrivateCloud>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = createVirtualPrivateCloudValidateBeforeCall(virtualPrivateCloudCreationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskVirtualPrivateCloud>>(){}.getType();
+        okhttp3.Call localVarCall =
+                createVirtualPrivateCloudValidateBeforeCall(
+                        virtualPrivateCloudCreationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVirtualPrivateCloud>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteVirtualPrivateCloud
-     * @param virtualPrivateCloudDeletionParams  (required)
+     *
+     * @param virtualPrivateCloudDeletionParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteVirtualPrivateCloudCall(VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteVirtualPrivateCloudCall(
+            VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -249,129 +271,159 @@ public class VirtualPrivateCloudApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteVirtualPrivateCloudValidateBeforeCall(VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call deleteVirtualPrivateCloudValidateBeforeCall(
+            VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'virtualPrivateCloudDeletionParams' is set
         if (virtualPrivateCloudDeletionParams == null) {
-            throw new ApiException("Missing the required parameter 'virtualPrivateCloudDeletionParams' when calling deleteVirtualPrivateCloud(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'virtualPrivateCloudDeletionParams' when"
+                            + " calling deleteVirtualPrivateCloud(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = deleteVirtualPrivateCloudCall(virtualPrivateCloudDeletionParams, _callback);
+        okhttp3.Call localVarCall =
+                deleteVirtualPrivateCloudCall(virtualPrivateCloudDeletionParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param virtualPrivateCloudDeletionParams  (required)
+     * @param virtualPrivateCloudDeletionParams (required)
      * @return List&lt;WithTaskDeleteVirtualPrivateCloud&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskDeleteVirtualPrivateCloud> deleteVirtualPrivateCloud(VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteVirtualPrivateCloud>> localVarResp = deleteVirtualPrivateCloudWithHttpInfo(virtualPrivateCloudDeletionParams);
+    public List<WithTaskDeleteVirtualPrivateCloud> deleteVirtualPrivateCloud(
+            VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams)
+            throws ApiException {
+        ApiResponse<List<WithTaskDeleteVirtualPrivateCloud>> localVarResp =
+                deleteVirtualPrivateCloudWithHttpInfo(virtualPrivateCloudDeletionParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param virtualPrivateCloudDeletionParams  (required)
+     * @param virtualPrivateCloudDeletionParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteVirtualPrivateCloud&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskDeleteVirtualPrivateCloud>> deleteVirtualPrivateCloudWithHttpInfo(VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteVirtualPrivateCloudValidateBeforeCall(virtualPrivateCloudDeletionParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVirtualPrivateCloud>>(){}.getType();
+    public ApiResponse<List<WithTaskDeleteVirtualPrivateCloud>>
+            deleteVirtualPrivateCloudWithHttpInfo(
+                    VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams)
+                    throws ApiException {
+        okhttp3.Call localVarCall =
+                deleteVirtualPrivateCloudValidateBeforeCall(
+                        virtualPrivateCloudDeletionParams, null);
+        Type localVarReturnType =
+                new TypeToken<List<WithTaskDeleteVirtualPrivateCloud>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param virtualPrivateCloudDeletionParams  (required)
+     * (asynchronously)
+     *
+     * @param virtualPrivateCloudDeletionParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteVirtualPrivateCloudAsync(VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams, final ApiCallback<List<WithTaskDeleteVirtualPrivateCloud>> _callback) throws ApiException {
+    public okhttp3.Call deleteVirtualPrivateCloudAsync(
+            VirtualPrivateCloudDeletionParams virtualPrivateCloudDeletionParams,
+            final ApiCallback<List<WithTaskDeleteVirtualPrivateCloud>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = deleteVirtualPrivateCloudValidateBeforeCall(virtualPrivateCloudDeletionParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteVirtualPrivateCloud>>(){}.getType();
+        okhttp3.Call localVarCall =
+                deleteVirtualPrivateCloudValidateBeforeCall(
+                        virtualPrivateCloudDeletionParams, _callback);
+        Type localVarReturnType =
+                new TypeToken<List<WithTaskDeleteVirtualPrivateCloud>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVirtualPrivateClouds
-     * @param getVirtualPrivateCloudsRequestBody  (required)
+     *
+     * @param getVirtualPrivateCloudsRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getVirtualPrivateCloudsCall(GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVirtualPrivateCloudsCall(
+            GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -388,129 +440,156 @@ public class VirtualPrivateCloudApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVirtualPrivateCloudsValidateBeforeCall(GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getVirtualPrivateCloudsValidateBeforeCall(
+            GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getVirtualPrivateCloudsRequestBody' is set
         if (getVirtualPrivateCloudsRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getVirtualPrivateCloudsRequestBody' when calling getVirtualPrivateClouds(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getVirtualPrivateCloudsRequestBody' when"
+                            + " calling getVirtualPrivateClouds(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getVirtualPrivateCloudsCall(getVirtualPrivateCloudsRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getVirtualPrivateCloudsCall(getVirtualPrivateCloudsRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getVirtualPrivateCloudsRequestBody  (required)
+     * @param getVirtualPrivateCloudsRequestBody (required)
      * @return List&lt;VirtualPrivateCloud&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<VirtualPrivateCloud> getVirtualPrivateClouds(GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody) throws ApiException {
-        ApiResponse<List<VirtualPrivateCloud>> localVarResp = getVirtualPrivateCloudsWithHttpInfo(getVirtualPrivateCloudsRequestBody);
+    public List<VirtualPrivateCloud> getVirtualPrivateClouds(
+            GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody)
+            throws ApiException {
+        ApiResponse<List<VirtualPrivateCloud>> localVarResp =
+                getVirtualPrivateCloudsWithHttpInfo(getVirtualPrivateCloudsRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getVirtualPrivateCloudsRequestBody  (required)
+     * @param getVirtualPrivateCloudsRequestBody (required)
      * @return ApiResponse&lt;List&lt;VirtualPrivateCloud&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<VirtualPrivateCloud>> getVirtualPrivateCloudsWithHttpInfo(GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVirtualPrivateCloudsValidateBeforeCall(getVirtualPrivateCloudsRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<VirtualPrivateCloud>>(){}.getType();
+    public ApiResponse<List<VirtualPrivateCloud>> getVirtualPrivateCloudsWithHttpInfo(
+            GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getVirtualPrivateCloudsValidateBeforeCall(getVirtualPrivateCloudsRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<VirtualPrivateCloud>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getVirtualPrivateCloudsRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getVirtualPrivateCloudsRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getVirtualPrivateCloudsAsync(GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody, final ApiCallback<List<VirtualPrivateCloud>> _callback) throws ApiException {
+    public okhttp3.Call getVirtualPrivateCloudsAsync(
+            GetVirtualPrivateCloudsRequestBody getVirtualPrivateCloudsRequestBody,
+            final ApiCallback<List<VirtualPrivateCloud>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getVirtualPrivateCloudsValidateBeforeCall(getVirtualPrivateCloudsRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<VirtualPrivateCloud>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getVirtualPrivateCloudsValidateBeforeCall(
+                        getVirtualPrivateCloudsRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<VirtualPrivateCloud>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getVirtualPrivateCloudsConnection
-     * @param getVirtualPrivateCloudsConnectionRequestBody  (required)
+     *
+     * @param getVirtualPrivateCloudsConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getVirtualPrivateCloudsConnectionCall(GetVirtualPrivateCloudsConnectionRequestBody getVirtualPrivateCloudsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getVirtualPrivateCloudsConnectionCall(
+            GetVirtualPrivateCloudsConnectionRequestBody
+                    getVirtualPrivateCloudsConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -527,129 +606,162 @@ public class VirtualPrivateCloudApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getVirtualPrivateCloudsConnectionValidateBeforeCall(GetVirtualPrivateCloudsConnectionRequestBody getVirtualPrivateCloudsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getVirtualPrivateCloudsConnectionValidateBeforeCall(
+            GetVirtualPrivateCloudsConnectionRequestBody
+                    getVirtualPrivateCloudsConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getVirtualPrivateCloudsConnectionRequestBody' is set
         if (getVirtualPrivateCloudsConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getVirtualPrivateCloudsConnectionRequestBody' when calling getVirtualPrivateCloudsConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getVirtualPrivateCloudsConnectionRequestBody'"
+                            + " when calling getVirtualPrivateCloudsConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getVirtualPrivateCloudsConnectionCall(getVirtualPrivateCloudsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getVirtualPrivateCloudsConnectionCall(
+                        getVirtualPrivateCloudsConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getVirtualPrivateCloudsConnectionRequestBody  (required)
+     * @param getVirtualPrivateCloudsConnectionRequestBody (required)
      * @return VirtualPrivateCloudConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public VirtualPrivateCloudConnection getVirtualPrivateCloudsConnection(GetVirtualPrivateCloudsConnectionRequestBody getVirtualPrivateCloudsConnectionRequestBody) throws ApiException {
-        ApiResponse<VirtualPrivateCloudConnection> localVarResp = getVirtualPrivateCloudsConnectionWithHttpInfo(getVirtualPrivateCloudsConnectionRequestBody);
+    public VirtualPrivateCloudConnection getVirtualPrivateCloudsConnection(
+            GetVirtualPrivateCloudsConnectionRequestBody
+                    getVirtualPrivateCloudsConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<VirtualPrivateCloudConnection> localVarResp =
+                getVirtualPrivateCloudsConnectionWithHttpInfo(
+                        getVirtualPrivateCloudsConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getVirtualPrivateCloudsConnectionRequestBody  (required)
+     * @param getVirtualPrivateCloudsConnectionRequestBody (required)
      * @return ApiResponse&lt;VirtualPrivateCloudConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<VirtualPrivateCloudConnection> getVirtualPrivateCloudsConnectionWithHttpInfo(GetVirtualPrivateCloudsConnectionRequestBody getVirtualPrivateCloudsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getVirtualPrivateCloudsConnectionValidateBeforeCall(getVirtualPrivateCloudsConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<VirtualPrivateCloudConnection>(){}.getType();
+    public ApiResponse<VirtualPrivateCloudConnection> getVirtualPrivateCloudsConnectionWithHttpInfo(
+            GetVirtualPrivateCloudsConnectionRequestBody
+                    getVirtualPrivateCloudsConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getVirtualPrivateCloudsConnectionValidateBeforeCall(
+                        getVirtualPrivateCloudsConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<VirtualPrivateCloudConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getVirtualPrivateCloudsConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getVirtualPrivateCloudsConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getVirtualPrivateCloudsConnectionAsync(GetVirtualPrivateCloudsConnectionRequestBody getVirtualPrivateCloudsConnectionRequestBody, final ApiCallback<VirtualPrivateCloudConnection> _callback) throws ApiException {
+    public okhttp3.Call getVirtualPrivateCloudsConnectionAsync(
+            GetVirtualPrivateCloudsConnectionRequestBody
+                    getVirtualPrivateCloudsConnectionRequestBody,
+            final ApiCallback<VirtualPrivateCloudConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getVirtualPrivateCloudsConnectionValidateBeforeCall(getVirtualPrivateCloudsConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<VirtualPrivateCloudConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getVirtualPrivateCloudsConnectionValidateBeforeCall(
+                        getVirtualPrivateCloudsConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<VirtualPrivateCloudConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateVirtualPrivateCloud
-     * @param virtualPrivateCloudUpdationParams  (required)
+     *
+     * @param virtualPrivateCloudUpdationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateVirtualPrivateCloudCall(VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateVirtualPrivateCloudCall(
+            VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -666,101 +778,124 @@ public class VirtualPrivateCloudApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateVirtualPrivateCloudValidateBeforeCall(VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call updateVirtualPrivateCloudValidateBeforeCall(
+            VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'virtualPrivateCloudUpdationParams' is set
         if (virtualPrivateCloudUpdationParams == null) {
-            throw new ApiException("Missing the required parameter 'virtualPrivateCloudUpdationParams' when calling updateVirtualPrivateCloud(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'virtualPrivateCloudUpdationParams' when"
+                            + " calling updateVirtualPrivateCloud(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateVirtualPrivateCloudCall(virtualPrivateCloudUpdationParams, _callback);
+        okhttp3.Call localVarCall =
+                updateVirtualPrivateCloudCall(virtualPrivateCloudUpdationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param virtualPrivateCloudUpdationParams  (required)
+     * @param virtualPrivateCloudUpdationParams (required)
      * @return List&lt;WithTaskVirtualPrivateCloud&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskVirtualPrivateCloud> updateVirtualPrivateCloud(VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskVirtualPrivateCloud>> localVarResp = updateVirtualPrivateCloudWithHttpInfo(virtualPrivateCloudUpdationParams);
+    public List<WithTaskVirtualPrivateCloud> updateVirtualPrivateCloud(
+            VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams)
+            throws ApiException {
+        ApiResponse<List<WithTaskVirtualPrivateCloud>> localVarResp =
+                updateVirtualPrivateCloudWithHttpInfo(virtualPrivateCloudUpdationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param virtualPrivateCloudUpdationParams  (required)
+     * @param virtualPrivateCloudUpdationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskVirtualPrivateCloud&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskVirtualPrivateCloud>> updateVirtualPrivateCloudWithHttpInfo(VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateVirtualPrivateCloudValidateBeforeCall(virtualPrivateCloudUpdationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskVirtualPrivateCloud>>(){}.getType();
+    public ApiResponse<List<WithTaskVirtualPrivateCloud>> updateVirtualPrivateCloudWithHttpInfo(
+            VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                updateVirtualPrivateCloudValidateBeforeCall(
+                        virtualPrivateCloudUpdationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVirtualPrivateCloud>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param virtualPrivateCloudUpdationParams  (required)
+     * (asynchronously)
+     *
+     * @param virtualPrivateCloudUpdationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateVirtualPrivateCloudAsync(VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams, final ApiCallback<List<WithTaskVirtualPrivateCloud>> _callback) throws ApiException {
+    public okhttp3.Call updateVirtualPrivateCloudAsync(
+            VirtualPrivateCloudUpdationParams virtualPrivateCloudUpdationParams,
+            final ApiCallback<List<WithTaskVirtualPrivateCloud>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = updateVirtualPrivateCloudValidateBeforeCall(virtualPrivateCloudUpdationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskVirtualPrivateCloud>>(){}.getType();
+        okhttp3.Call localVarCall =
+                updateVirtualPrivateCloudValidateBeforeCall(
+                        virtualPrivateCloudUpdationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVirtualPrivateCloud>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

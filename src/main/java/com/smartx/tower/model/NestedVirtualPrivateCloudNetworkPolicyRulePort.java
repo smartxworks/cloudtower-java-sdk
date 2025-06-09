@@ -1,129 +1,170 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.VirtualPrivateCloudNetworkPolicyRulePortProtocol;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Arrays;
+import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
-/**
- * NestedVirtualPrivateCloudNetworkPolicyRulePort
- */
+/** NestedVirtualPrivateCloudNetworkPolicyRulePort */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class NestedVirtualPrivateCloudNetworkPolicyRulePort {
-  public static final String SERIALIZED_NAME_PORT = "port";
-  @SerializedName(SERIALIZED_NAME_PORT)
-  private String port;
+public class NestedVirtualPrivateCloudNetworkPolicyRulePort
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_PORT = "port";
 
-  public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
-  @SerializedName(SERIALIZED_NAME_PROTOCOL)
-  private VirtualPrivateCloudNetworkPolicyRulePortProtocol protocol;
+    @SerializedName(SERIALIZED_NAME_PORT)
+    private String port;
 
-  public NestedVirtualPrivateCloudNetworkPolicyRulePort() { 
-  }
+    public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
 
-  public NestedVirtualPrivateCloudNetworkPolicyRulePort port(String port) {
-    
-    this.port = port;
-    return this;
-  }
+    @SerializedName(SERIALIZED_NAME_PROTOCOL)
+    private VirtualPrivateCloudNetworkPolicyRulePortProtocol protocol;
 
-   /**
-   * Get port
-   * @return port
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public NestedVirtualPrivateCloudNetworkPolicyRulePort() {}
 
-  public String getPort() {
-    return port;
-  }
+    public NestedVirtualPrivateCloudNetworkPolicyRulePort port(String port) {
 
-
-  public void setPort(String port) {
-    this.port = port;
-  }
-
-
-  public NestedVirtualPrivateCloudNetworkPolicyRulePort protocol(VirtualPrivateCloudNetworkPolicyRulePortProtocol protocol) {
-    
-    this.protocol = protocol;
-    return this;
-  }
-
-   /**
-   * Get protocol
-   * @return protocol
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public VirtualPrivateCloudNetworkPolicyRulePortProtocol getProtocol() {
-    return protocol;
-  }
-
-
-  public void setProtocol(VirtualPrivateCloudNetworkPolicyRulePortProtocol protocol) {
-    this.protocol = protocol;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.port = port;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get port
+     *
+     * @return port
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getPort() {
+        return port;
     }
-    NestedVirtualPrivateCloudNetworkPolicyRulePort nestedVirtualPrivateCloudNetworkPolicyRulePort = (NestedVirtualPrivateCloudNetworkPolicyRulePort) o;
-    return Objects.equals(this.port, nestedVirtualPrivateCloudNetworkPolicyRulePort.port) &&
-        Objects.equals(this.protocol, nestedVirtualPrivateCloudNetworkPolicyRulePort.protocol);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(port, protocol);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    public void setPort(String port) {
+        this.port = port;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class NestedVirtualPrivateCloudNetworkPolicyRulePort {\n");
-    sb.append("    port: ").append(toIndentedString(port)).append("\n");
-    sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public NestedVirtualPrivateCloudNetworkPolicyRulePort port_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PORT);
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public NestedVirtualPrivateCloudNetworkPolicyRulePort port_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PORT);
+        return this;
+    }
+
+    public void setPort_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PORT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PORT);
+        }
+    }
+
+    public boolean getPort_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PORT);
+    }
+
+    public NestedVirtualPrivateCloudNetworkPolicyRulePort protocol(
+            VirtualPrivateCloudNetworkPolicyRulePortProtocol protocol) {
+
+        this.protocol = protocol;
+        return this;
+    }
+
+    /**
+     * Get protocol
+     *
+     * @return protocol
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public VirtualPrivateCloudNetworkPolicyRulePortProtocol getProtocol() {
+        return protocol;
+    }
+
+    public void setProtocol(VirtualPrivateCloudNetworkPolicyRulePortProtocol protocol) {
+        this.protocol = protocol;
+    }
+
+    public NestedVirtualPrivateCloudNetworkPolicyRulePort protocol_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROTOCOL);
+        return this;
+    }
+
+    public NestedVirtualPrivateCloudNetworkPolicyRulePort protocol_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROTOCOL);
+        return this;
+    }
+
+    public void setProtocol_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROTOCOL);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROTOCOL);
+        }
+    }
+
+    public boolean getProtocol_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROTOCOL);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        NestedVirtualPrivateCloudNetworkPolicyRulePort
+                nestedVirtualPrivateCloudNetworkPolicyRulePort =
+                        (NestedVirtualPrivateCloudNetworkPolicyRulePort) o;
+        return Objects.equals(this.port, nestedVirtualPrivateCloudNetworkPolicyRulePort.port)
+                && Objects.equals(
+                        this.protocol, nestedVirtualPrivateCloudNetworkPolicyRulePort.protocol);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(port, protocol);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class NestedVirtualPrivateCloudNetworkPolicyRulePort {\n");
+        sb.append("    port: ").append(toIndentedString(port)).append("\n");
+        sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

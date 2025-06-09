@@ -1,166 +1,215 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.VmDiskParams;
-import com.smartx.tower.model.VmdkCdromModify;
-import com.smartx.tower.model.VmdkDiskModify;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-/**
- * OvfDiskOperate
- */
+/** OvfDiskOperate */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class OvfDiskOperate {
-  public static final String SERIALIZED_NAME_NEW_DISKS = "new_disks";
-  @SerializedName(SERIALIZED_NAME_NEW_DISKS)
-  private VmDiskParams newDisks;
+public class OvfDiskOperate extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_NEW_DISKS = "new_disks";
 
-  public static final String SERIALIZED_NAME_MODIFY_CD_ROMS = "modify_cd_roms";
-  @SerializedName(SERIALIZED_NAME_MODIFY_CD_ROMS)
-  private List<VmdkCdromModify> modifyCdRoms = null;
+    @SerializedName(SERIALIZED_NAME_NEW_DISKS)
+    private VmDiskParams newDisks;
 
-  public static final String SERIALIZED_NAME_MODIFY_VMDK_DISKS = "modify_vmdk_disks";
-  @SerializedName(SERIALIZED_NAME_MODIFY_VMDK_DISKS)
-  private List<VmdkDiskModify> modifyVmdkDisks = null;
+    public static final String SERIALIZED_NAME_MODIFY_CD_ROMS = "modify_cd_roms";
 
-  public OvfDiskOperate() { 
-  }
+    @SerializedName(SERIALIZED_NAME_MODIFY_CD_ROMS)
+    private List<VmdkCdromModify> modifyCdRoms = null;
 
-  public OvfDiskOperate newDisks(VmDiskParams newDisks) {
-    
-    this.newDisks = newDisks;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_MODIFY_VMDK_DISKS = "modify_vmdk_disks";
 
-   /**
-   * Get newDisks
-   * @return newDisks
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_MODIFY_VMDK_DISKS)
+    private List<VmdkDiskModify> modifyVmdkDisks = null;
 
-  public VmDiskParams getNewDisks() {
-    return newDisks;
-  }
+    public OvfDiskOperate() {}
 
+    public OvfDiskOperate newDisks(VmDiskParams newDisks) {
 
-  public void setNewDisks(VmDiskParams newDisks) {
-    this.newDisks = newDisks;
-  }
-
-
-  public OvfDiskOperate modifyCdRoms(List<VmdkCdromModify> modifyCdRoms) {
-    
-    this.modifyCdRoms = modifyCdRoms;
-    return this;
-  }
-
-  public OvfDiskOperate addModifyCdRomsItem(VmdkCdromModify modifyCdRomsItem) {
-    if (this.modifyCdRoms == null) {
-      this.modifyCdRoms = new ArrayList<VmdkCdromModify>();
+        this.newDisks = newDisks;
+        return this;
     }
-    this.modifyCdRoms.add(modifyCdRomsItem);
-    return this;
-  }
 
-   /**
-   * Get modifyCdRoms
-   * @return modifyCdRoms
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmdkCdromModify> getModifyCdRoms() {
-    return modifyCdRoms;
-  }
-
-
-  public void setModifyCdRoms(List<VmdkCdromModify> modifyCdRoms) {
-    this.modifyCdRoms = modifyCdRoms;
-  }
-
-
-  public OvfDiskOperate modifyVmdkDisks(List<VmdkDiskModify> modifyVmdkDisks) {
-    
-    this.modifyVmdkDisks = modifyVmdkDisks;
-    return this;
-  }
-
-  public OvfDiskOperate addModifyVmdkDisksItem(VmdkDiskModify modifyVmdkDisksItem) {
-    if (this.modifyVmdkDisks == null) {
-      this.modifyVmdkDisks = new ArrayList<VmdkDiskModify>();
+    /**
+     * Get newDisks
+     *
+     * @return newDisks
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmDiskParams getNewDisks() {
+        return newDisks;
     }
-    this.modifyVmdkDisks.add(modifyVmdkDisksItem);
-    return this;
-  }
 
-   /**
-   * Get modifyVmdkDisks
-   * @return modifyVmdkDisks
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<VmdkDiskModify> getModifyVmdkDisks() {
-    return modifyVmdkDisks;
-  }
-
-
-  public void setModifyVmdkDisks(List<VmdkDiskModify> modifyVmdkDisks) {
-    this.modifyVmdkDisks = modifyVmdkDisks;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    public void setNewDisks(VmDiskParams newDisks) {
+        this.newDisks = newDisks;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    public OvfDiskOperate newDisks_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NEW_DISKS);
+        return this;
     }
-    OvfDiskOperate ovfDiskOperate = (OvfDiskOperate) o;
-    return Objects.equals(this.newDisks, ovfDiskOperate.newDisks) &&
-        Objects.equals(this.modifyCdRoms, ovfDiskOperate.modifyCdRoms) &&
-        Objects.equals(this.modifyVmdkDisks, ovfDiskOperate.modifyVmdkDisks);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(newDisks, modifyCdRoms, modifyVmdkDisks);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class OvfDiskOperate {\n");
-    sb.append("    newDisks: ").append(toIndentedString(newDisks)).append("\n");
-    sb.append("    modifyCdRoms: ").append(toIndentedString(modifyCdRoms)).append("\n");
-    sb.append("    modifyVmdkDisks: ").append(toIndentedString(modifyVmdkDisks)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public OvfDiskOperate newDisks_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NEW_DISKS);
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public void setNewDisks_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NEW_DISKS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NEW_DISKS);
+        }
+    }
+
+    public boolean getNewDisks_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NEW_DISKS);
+    }
+
+    public OvfDiskOperate modifyCdRoms(List<VmdkCdromModify> modifyCdRoms) {
+
+        this.modifyCdRoms = modifyCdRoms;
+        return this;
+    }
+
+    public OvfDiskOperate addModifyCdRomsItem(VmdkCdromModify modifyCdRomsItem) {
+        if (this.modifyCdRoms == null) {
+            this.modifyCdRoms = new ArrayList<VmdkCdromModify>();
+        }
+        this.modifyCdRoms.add(modifyCdRomsItem);
+        return this;
+    }
+
+    /**
+     * Get modifyCdRoms
+     *
+     * @return modifyCdRoms
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VmdkCdromModify> getModifyCdRoms() {
+        return modifyCdRoms;
+    }
+
+    public void setModifyCdRoms(List<VmdkCdromModify> modifyCdRoms) {
+        this.modifyCdRoms = modifyCdRoms;
+    }
+
+    public OvfDiskOperate modifyCdRoms_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MODIFY_CD_ROMS);
+        return this;
+    }
+
+    public OvfDiskOperate modifyCdRoms_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MODIFY_CD_ROMS);
+        return this;
+    }
+
+    public void setModifyCdRoms_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MODIFY_CD_ROMS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MODIFY_CD_ROMS);
+        }
+    }
+
+    public boolean getModifyCdRoms_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MODIFY_CD_ROMS);
+    }
+
+    public OvfDiskOperate modifyVmdkDisks(List<VmdkDiskModify> modifyVmdkDisks) {
+
+        this.modifyVmdkDisks = modifyVmdkDisks;
+        return this;
+    }
+
+    public OvfDiskOperate addModifyVmdkDisksItem(VmdkDiskModify modifyVmdkDisksItem) {
+        if (this.modifyVmdkDisks == null) {
+            this.modifyVmdkDisks = new ArrayList<VmdkDiskModify>();
+        }
+        this.modifyVmdkDisks.add(modifyVmdkDisksItem);
+        return this;
+    }
+
+    /**
+     * Get modifyVmdkDisks
+     *
+     * @return modifyVmdkDisks
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VmdkDiskModify> getModifyVmdkDisks() {
+        return modifyVmdkDisks;
+    }
+
+    public void setModifyVmdkDisks(List<VmdkDiskModify> modifyVmdkDisks) {
+        this.modifyVmdkDisks = modifyVmdkDisks;
+    }
+
+    public OvfDiskOperate modifyVmdkDisks_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MODIFY_VMDK_DISKS);
+        return this;
+    }
+
+    public OvfDiskOperate modifyVmdkDisks_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MODIFY_VMDK_DISKS);
+        return this;
+    }
+
+    public void setModifyVmdkDisks_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MODIFY_VMDK_DISKS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MODIFY_VMDK_DISKS);
+        }
+    }
+
+    public boolean getModifyVmdkDisks_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MODIFY_VMDK_DISKS);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        OvfDiskOperate ovfDiskOperate = (OvfDiskOperate) o;
+        return Objects.equals(this.newDisks, ovfDiskOperate.newDisks)
+                && Objects.equals(this.modifyCdRoms, ovfDiskOperate.modifyCdRoms)
+                && Objects.equals(this.modifyVmdkDisks, ovfDiskOperate.modifyVmdkDisks);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(newDisks, modifyCdRoms, modifyVmdkDisks);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class OvfDiskOperate {\n");
+        sb.append("    newDisks: ").append(toIndentedString(newDisks)).append("\n");
+        sb.append("    modifyCdRoms: ").append(toIndentedString(modifyCdRoms)).append("\n");
+        sb.append("    modifyVmdkDisks: ").append(toIndentedString(modifyVmdkDisks)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-
