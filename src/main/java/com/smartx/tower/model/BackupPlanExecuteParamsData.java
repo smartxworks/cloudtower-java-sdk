@@ -1,88 +1,98 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.BackupExecutionType;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * BackupPlanExecuteParamsData
- */
+/** BackupPlanExecuteParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class BackupPlanExecuteParamsData {
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private BackupExecutionType type;
+public class BackupPlanExecuteParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_TYPE = "type";
 
-  public BackupPlanExecuteParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_TYPE)
+    private BackupExecutionType type;
 
-  public BackupPlanExecuteParamsData type(BackupExecutionType type) {
-    
-    this.type = type;
-    return this;
-  }
+    public BackupPlanExecuteParamsData() {}
 
-   /**
-   * Get type
-   * @return type
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public BackupPlanExecuteParamsData type(BackupExecutionType type) {
 
-  public BackupExecutionType getType() {
-    return type;
-  }
-
-
-  public void setType(BackupExecutionType type) {
-    this.type = type;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.type = type;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get type
+     *
+     * @return type
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public BackupExecutionType getType() {
+        return type;
     }
-    BackupPlanExecuteParamsData backupPlanExecuteParamsData = (BackupPlanExecuteParamsData) o;
-    return Objects.equals(this.type, backupPlanExecuteParamsData.type);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(type);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class BackupPlanExecuteParamsData {\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setType(BackupExecutionType type) {
+        this.type = type;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public BackupPlanExecuteParamsData type_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TYPE);
+        return this;
+    }
+
+    public BackupPlanExecuteParamsData type_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TYPE);
+        return this;
+    }
+
+    public void setType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TYPE);
+        }
+    }
+
+    public boolean getType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TYPE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        BackupPlanExecuteParamsData backupPlanExecuteParamsData = (BackupPlanExecuteParamsData) o;
+        return Objects.equals(this.type, backupPlanExecuteParamsData.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(type);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class BackupPlanExecuteParamsData {\n");
+        sb.append("    type: ").append(toIndentedString(type)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

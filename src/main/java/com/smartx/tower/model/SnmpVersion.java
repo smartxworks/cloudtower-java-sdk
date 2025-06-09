@@ -1,61 +1,55 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets SnmpVersion
- */
+/** Gets or Sets SnmpVersion */
 @JsonAdapter(SnmpVersion.Adapter.class)
 public enum SnmpVersion {
-  
-  V2C("V2C"),
-  
-  V3("V3"),
-  
-  SNMPVERSION_UNSUPPORTED_ENUM("SNMPVERSION_UNSUPPORTED_ENUM");
-  private String value;
+    V2C("V2C"),
 
-  SnmpVersion(String value) {
-    this.value = value;
-  }
+    V3("V3"),
 
-  public String getValue() {
-    return value;
-  }
+    SNMPVERSION_UNSUPPORTED_ENUM("SNMPVERSION_UNSUPPORTED_ENUM");
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static SnmpVersion fromValue(String value) {
-    for (SnmpVersion b : SnmpVersion.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    SnmpVersion(String value) {
+        this.value = value;
     }
-    return SnmpVersion.SNMPVERSION_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<SnmpVersion> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final SnmpVersion enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public SnmpVersion read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return SnmpVersion.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static SnmpVersion fromValue(String value) {
+        for (SnmpVersion b : SnmpVersion.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return SnmpVersion.SNMPVERSION_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<SnmpVersion> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final SnmpVersion enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public SnmpVersion read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return SnmpVersion.fromValue(value);
+        }
+    }
 }
-

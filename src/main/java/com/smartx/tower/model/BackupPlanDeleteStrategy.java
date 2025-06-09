@@ -1,61 +1,55 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets BackupPlanDeleteStrategy
- */
+/** Gets or Sets BackupPlanDeleteStrategy */
 @JsonAdapter(BackupPlanDeleteStrategy.Adapter.class)
 public enum BackupPlanDeleteStrategy {
-  
-  DELETE_RESTORE_POINT("DELETE_RESTORE_POINT"),
-  
-  KEEP_RESTORE_POINT("KEEP_RESTORE_POINT"),
-  
-  BACKUPPLANDELETESTRATEGY_UNSUPPORTED_ENUM("BACKUPPLANDELETESTRATEGY_UNSUPPORTED_ENUM");
-  private String value;
+    DELETE_RESTORE_POINT("DELETE_RESTORE_POINT"),
 
-  BackupPlanDeleteStrategy(String value) {
-    this.value = value;
-  }
+    KEEP_RESTORE_POINT("KEEP_RESTORE_POINT"),
 
-  public String getValue() {
-    return value;
-  }
+    BACKUPPLANDELETESTRATEGY_UNSUPPORTED_ENUM("BACKUPPLANDELETESTRATEGY_UNSUPPORTED_ENUM");
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static BackupPlanDeleteStrategy fromValue(String value) {
-    for (BackupPlanDeleteStrategy b : BackupPlanDeleteStrategy.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    BackupPlanDeleteStrategy(String value) {
+        this.value = value;
     }
-    return BackupPlanDeleteStrategy.BACKUPPLANDELETESTRATEGY_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<BackupPlanDeleteStrategy> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final BackupPlanDeleteStrategy enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public BackupPlanDeleteStrategy read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return BackupPlanDeleteStrategy.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static BackupPlanDeleteStrategy fromValue(String value) {
+        for (BackupPlanDeleteStrategy b : BackupPlanDeleteStrategy.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return BackupPlanDeleteStrategy.BACKUPPLANDELETESTRATEGY_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<BackupPlanDeleteStrategy> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final BackupPlanDeleteStrategy enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public BackupPlanDeleteStrategy read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return BackupPlanDeleteStrategy.fromValue(value);
+        }
+    }
 }
-

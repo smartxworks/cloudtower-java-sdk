@@ -1,21 +1,13 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
-import com.smartx.tower.model.CommonHeader;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetOrganizationsConnectionRequestBody;
 import com.smartx.tower.model.GetOrganizationsRequestBody;
 import com.smartx.tower.model.Organization;
@@ -25,7 +17,6 @@ import com.smartx.tower.model.OrganizationDeletionParams;
 import com.smartx.tower.model.OrganizationUpdationParams;
 import com.smartx.tower.model.WithTaskDeleteOrganization;
 import com.smartx.tower.model.WithTaskOrganization;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -71,29 +62,33 @@ public class OrganizationApi {
 
     /**
      * Build call for createOrganization
-     * @param organizationCreationParams  (required)
+     *
+     * @param organizationCreationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createOrganizationCall(List<OrganizationCreationParams> organizationCreationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call createOrganizationCall(
+            List<OrganizationCreationParams> organizationCreationParams,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -110,129 +105,150 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call createOrganizationValidateBeforeCall(List<OrganizationCreationParams> organizationCreationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call createOrganizationValidateBeforeCall(
+            List<OrganizationCreationParams> organizationCreationParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'organizationCreationParams' is set
         if (organizationCreationParams == null) {
-            throw new ApiException("Missing the required parameter 'organizationCreationParams' when calling createOrganization(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'organizationCreationParams' when calling"
+                            + " createOrganization(Async)");
         }
-        
 
         okhttp3.Call localVarCall = createOrganizationCall(organizationCreationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param organizationCreationParams  (required)
+     * @param organizationCreationParams (required)
      * @return List&lt;WithTaskOrganization&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskOrganization> createOrganization(List<OrganizationCreationParams> organizationCreationParams) throws ApiException {
-        ApiResponse<List<WithTaskOrganization>> localVarResp = createOrganizationWithHttpInfo(organizationCreationParams);
+    public List<WithTaskOrganization> createOrganization(
+            List<OrganizationCreationParams> organizationCreationParams) throws ApiException {
+        ApiResponse<List<WithTaskOrganization>> localVarResp =
+                createOrganizationWithHttpInfo(organizationCreationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param organizationCreationParams  (required)
+     * @param organizationCreationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskOrganization&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskOrganization>> createOrganizationWithHttpInfo(List<OrganizationCreationParams> organizationCreationParams) throws ApiException {
-        okhttp3.Call localVarCall = createOrganizationValidateBeforeCall(organizationCreationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>(){}.getType();
+    public ApiResponse<List<WithTaskOrganization>> createOrganizationWithHttpInfo(
+            List<OrganizationCreationParams> organizationCreationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                createOrganizationValidateBeforeCall(organizationCreationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param organizationCreationParams  (required)
+     * (asynchronously)
+     *
+     * @param organizationCreationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call createOrganizationAsync(List<OrganizationCreationParams> organizationCreationParams, final ApiCallback<List<WithTaskOrganization>> _callback) throws ApiException {
+    public okhttp3.Call createOrganizationAsync(
+            List<OrganizationCreationParams> organizationCreationParams,
+            final ApiCallback<List<WithTaskOrganization>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = createOrganizationValidateBeforeCall(organizationCreationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>(){}.getType();
+        okhttp3.Call localVarCall =
+                createOrganizationValidateBeforeCall(organizationCreationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for deleteOrganization
-     * @param organizationDeletionParams  (required)
+     *
+     * @param organizationDeletionParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteOrganizationCall(OrganizationDeletionParams organizationDeletionParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call deleteOrganizationCall(
+            OrganizationDeletionParams organizationDeletionParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -249,129 +265,149 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call deleteOrganizationValidateBeforeCall(OrganizationDeletionParams organizationDeletionParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call deleteOrganizationValidateBeforeCall(
+            OrganizationDeletionParams organizationDeletionParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'organizationDeletionParams' is set
         if (organizationDeletionParams == null) {
-            throw new ApiException("Missing the required parameter 'organizationDeletionParams' when calling deleteOrganization(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'organizationDeletionParams' when calling"
+                            + " deleteOrganization(Async)");
         }
-        
 
         okhttp3.Call localVarCall = deleteOrganizationCall(organizationDeletionParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param organizationDeletionParams  (required)
+     * @param organizationDeletionParams (required)
      * @return List&lt;WithTaskDeleteOrganization&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskDeleteOrganization> deleteOrganization(OrganizationDeletionParams organizationDeletionParams) throws ApiException {
-        ApiResponse<List<WithTaskDeleteOrganization>> localVarResp = deleteOrganizationWithHttpInfo(organizationDeletionParams);
+    public List<WithTaskDeleteOrganization> deleteOrganization(
+            OrganizationDeletionParams organizationDeletionParams) throws ApiException {
+        ApiResponse<List<WithTaskDeleteOrganization>> localVarResp =
+                deleteOrganizationWithHttpInfo(organizationDeletionParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param organizationDeletionParams  (required)
+     * @param organizationDeletionParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskDeleteOrganization&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskDeleteOrganization>> deleteOrganizationWithHttpInfo(OrganizationDeletionParams organizationDeletionParams) throws ApiException {
-        okhttp3.Call localVarCall = deleteOrganizationValidateBeforeCall(organizationDeletionParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteOrganization>>(){}.getType();
+    public ApiResponse<List<WithTaskDeleteOrganization>> deleteOrganizationWithHttpInfo(
+            OrganizationDeletionParams organizationDeletionParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                deleteOrganizationValidateBeforeCall(organizationDeletionParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteOrganization>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param organizationDeletionParams  (required)
+     * (asynchronously)
+     *
+     * @param organizationDeletionParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call deleteOrganizationAsync(OrganizationDeletionParams organizationDeletionParams, final ApiCallback<List<WithTaskDeleteOrganization>> _callback) throws ApiException {
+    public okhttp3.Call deleteOrganizationAsync(
+            OrganizationDeletionParams organizationDeletionParams,
+            final ApiCallback<List<WithTaskDeleteOrganization>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = deleteOrganizationValidateBeforeCall(organizationDeletionParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskDeleteOrganization>>(){}.getType();
+        okhttp3.Call localVarCall =
+                deleteOrganizationValidateBeforeCall(organizationDeletionParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskDeleteOrganization>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getOrganizations
-     * @param getOrganizationsRequestBody  (required)
+     *
+     * @param getOrganizationsRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getOrganizationsCall(GetOrganizationsRequestBody getOrganizationsRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOrganizationsCall(
+            GetOrganizationsRequestBody getOrganizationsRequestBody, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -388,129 +424,150 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOrganizationsValidateBeforeCall(GetOrganizationsRequestBody getOrganizationsRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getOrganizationsValidateBeforeCall(
+            GetOrganizationsRequestBody getOrganizationsRequestBody, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getOrganizationsRequestBody' is set
         if (getOrganizationsRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getOrganizationsRequestBody' when calling getOrganizations(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getOrganizationsRequestBody' when calling"
+                            + " getOrganizations(Async)");
         }
-        
 
         okhttp3.Call localVarCall = getOrganizationsCall(getOrganizationsRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getOrganizationsRequestBody  (required)
+     * @param getOrganizationsRequestBody (required)
      * @return List&lt;Organization&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<Organization> getOrganizations(GetOrganizationsRequestBody getOrganizationsRequestBody) throws ApiException {
-        ApiResponse<List<Organization>> localVarResp = getOrganizationsWithHttpInfo(getOrganizationsRequestBody);
+    public List<Organization> getOrganizations(
+            GetOrganizationsRequestBody getOrganizationsRequestBody) throws ApiException {
+        ApiResponse<List<Organization>> localVarResp =
+                getOrganizationsWithHttpInfo(getOrganizationsRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getOrganizationsRequestBody  (required)
+     * @param getOrganizationsRequestBody (required)
      * @return ApiResponse&lt;List&lt;Organization&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<Organization>> getOrganizationsWithHttpInfo(GetOrganizationsRequestBody getOrganizationsRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getOrganizationsValidateBeforeCall(getOrganizationsRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<Organization>>(){}.getType();
+    public ApiResponse<List<Organization>> getOrganizationsWithHttpInfo(
+            GetOrganizationsRequestBody getOrganizationsRequestBody) throws ApiException {
+        okhttp3.Call localVarCall =
+                getOrganizationsValidateBeforeCall(getOrganizationsRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<Organization>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getOrganizationsRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getOrganizationsRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getOrganizationsAsync(GetOrganizationsRequestBody getOrganizationsRequestBody, final ApiCallback<List<Organization>> _callback) throws ApiException {
+    public okhttp3.Call getOrganizationsAsync(
+            GetOrganizationsRequestBody getOrganizationsRequestBody,
+            final ApiCallback<List<Organization>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getOrganizationsValidateBeforeCall(getOrganizationsRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<Organization>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getOrganizationsValidateBeforeCall(getOrganizationsRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<Organization>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getOrganizationsConnection
-     * @param getOrganizationsConnectionRequestBody  (required)
+     *
+     * @param getOrganizationsConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getOrganizationsConnectionCall(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOrganizationsConnectionCall(
+            GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -527,129 +584,155 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOrganizationsConnectionValidateBeforeCall(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getOrganizationsConnectionValidateBeforeCall(
+            GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getOrganizationsConnectionRequestBody' is set
         if (getOrganizationsConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getOrganizationsConnectionRequestBody' when calling getOrganizationsConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getOrganizationsConnectionRequestBody' when"
+                            + " calling getOrganizationsConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getOrganizationsConnectionCall(getOrganizationsConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getOrganizationsConnectionCall(getOrganizationsConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getOrganizationsConnectionRequestBody  (required)
+     * @param getOrganizationsConnectionRequestBody (required)
      * @return OrganizationConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public OrganizationConnection getOrganizationsConnection(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody) throws ApiException {
-        ApiResponse<OrganizationConnection> localVarResp = getOrganizationsConnectionWithHttpInfo(getOrganizationsConnectionRequestBody);
+    public OrganizationConnection getOrganizationsConnection(
+            GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<OrganizationConnection> localVarResp =
+                getOrganizationsConnectionWithHttpInfo(getOrganizationsConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getOrganizationsConnectionRequestBody  (required)
+     * @param getOrganizationsConnectionRequestBody (required)
      * @return ApiResponse&lt;OrganizationConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<OrganizationConnection> getOrganizationsConnectionWithHttpInfo(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getOrganizationsConnectionValidateBeforeCall(getOrganizationsConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<OrganizationConnection>(){}.getType();
+    public ApiResponse<OrganizationConnection> getOrganizationsConnectionWithHttpInfo(
+            GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getOrganizationsConnectionValidateBeforeCall(
+                        getOrganizationsConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<OrganizationConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getOrganizationsConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getOrganizationsConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getOrganizationsConnectionAsync(GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody, final ApiCallback<OrganizationConnection> _callback) throws ApiException {
+    public okhttp3.Call getOrganizationsConnectionAsync(
+            GetOrganizationsConnectionRequestBody getOrganizationsConnectionRequestBody,
+            final ApiCallback<OrganizationConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getOrganizationsConnectionValidateBeforeCall(getOrganizationsConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<OrganizationConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getOrganizationsConnectionValidateBeforeCall(
+                        getOrganizationsConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<OrganizationConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateOrganization
-     * @param organizationUpdationParams  (required)
+     *
+     * @param organizationUpdationParams (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateOrganizationCall(OrganizationUpdationParams organizationUpdationParams, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateOrganizationCall(
+            OrganizationUpdationParams organizationUpdationParams, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -666,101 +749,118 @@ public class OrganizationApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateOrganizationValidateBeforeCall(OrganizationUpdationParams organizationUpdationParams, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call updateOrganizationValidateBeforeCall(
+            OrganizationUpdationParams organizationUpdationParams, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'organizationUpdationParams' is set
         if (organizationUpdationParams == null) {
-            throw new ApiException("Missing the required parameter 'organizationUpdationParams' when calling updateOrganization(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'organizationUpdationParams' when calling"
+                            + " updateOrganization(Async)");
         }
-        
 
         okhttp3.Call localVarCall = updateOrganizationCall(organizationUpdationParams, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param organizationUpdationParams  (required)
+     * @param organizationUpdationParams (required)
      * @return List&lt;WithTaskOrganization&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<WithTaskOrganization> updateOrganization(OrganizationUpdationParams organizationUpdationParams) throws ApiException {
-        ApiResponse<List<WithTaskOrganization>> localVarResp = updateOrganizationWithHttpInfo(organizationUpdationParams);
+    public List<WithTaskOrganization> updateOrganization(
+            OrganizationUpdationParams organizationUpdationParams) throws ApiException {
+        ApiResponse<List<WithTaskOrganization>> localVarResp =
+                updateOrganizationWithHttpInfo(organizationUpdationParams);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param organizationUpdationParams  (required)
+     * @param organizationUpdationParams (required)
      * @return ApiResponse&lt;List&lt;WithTaskOrganization&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<WithTaskOrganization>> updateOrganizationWithHttpInfo(OrganizationUpdationParams organizationUpdationParams) throws ApiException {
-        okhttp3.Call localVarCall = updateOrganizationValidateBeforeCall(organizationUpdationParams, null);
-        Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>(){}.getType();
+    public ApiResponse<List<WithTaskOrganization>> updateOrganizationWithHttpInfo(
+            OrganizationUpdationParams organizationUpdationParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                updateOrganizationValidateBeforeCall(organizationUpdationParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param organizationUpdationParams  (required)
+     * (asynchronously)
+     *
+     * @param organizationUpdationParams (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call updateOrganizationAsync(OrganizationUpdationParams organizationUpdationParams, final ApiCallback<List<WithTaskOrganization>> _callback) throws ApiException {
+    public okhttp3.Call updateOrganizationAsync(
+            OrganizationUpdationParams organizationUpdationParams,
+            final ApiCallback<List<WithTaskOrganization>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = updateOrganizationValidateBeforeCall(organizationUpdationParams, _callback);
-        Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>(){}.getType();
+        okhttp3.Call localVarCall =
+                updateOrganizationValidateBeforeCall(organizationUpdationParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskOrganization>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

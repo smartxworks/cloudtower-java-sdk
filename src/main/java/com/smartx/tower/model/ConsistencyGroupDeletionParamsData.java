@@ -1,87 +1,102 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * ConsistencyGroupDeletionParamsData
- */
+/** ConsistencyGroupDeletionParamsData */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class ConsistencyGroupDeletionParamsData {
-  public static final String SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT = "remain_volume_snapshot";
-  @SerializedName(SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT)
-  private Boolean remainVolumeSnapshot;
+public class ConsistencyGroupDeletionParamsData
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT = "remain_volume_snapshot";
 
-  public ConsistencyGroupDeletionParamsData() { 
-  }
+    @SerializedName(SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT)
+    private Boolean remainVolumeSnapshot;
 
-  public ConsistencyGroupDeletionParamsData remainVolumeSnapshot(Boolean remainVolumeSnapshot) {
-    
-    this.remainVolumeSnapshot = remainVolumeSnapshot;
-    return this;
-  }
+    public ConsistencyGroupDeletionParamsData() {}
 
-   /**
-   * Get remainVolumeSnapshot
-   * @return remainVolumeSnapshot
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public ConsistencyGroupDeletionParamsData remainVolumeSnapshot(Boolean remainVolumeSnapshot) {
 
-  public Boolean getRemainVolumeSnapshot() {
-    return remainVolumeSnapshot;
-  }
-
-
-  public void setRemainVolumeSnapshot(Boolean remainVolumeSnapshot) {
-    this.remainVolumeSnapshot = remainVolumeSnapshot;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.remainVolumeSnapshot = remainVolumeSnapshot;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get remainVolumeSnapshot
+     *
+     * @return remainVolumeSnapshot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getRemainVolumeSnapshot() {
+        return remainVolumeSnapshot;
     }
-    ConsistencyGroupDeletionParamsData consistencyGroupDeletionParamsData = (ConsistencyGroupDeletionParamsData) o;
-    return Objects.equals(this.remainVolumeSnapshot, consistencyGroupDeletionParamsData.remainVolumeSnapshot);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(remainVolumeSnapshot);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class ConsistencyGroupDeletionParamsData {\n");
-    sb.append("    remainVolumeSnapshot: ").append(toIndentedString(remainVolumeSnapshot)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setRemainVolumeSnapshot(Boolean remainVolumeSnapshot) {
+        this.remainVolumeSnapshot = remainVolumeSnapshot;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public ConsistencyGroupDeletionParamsData remainVolumeSnapshot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT);
+        return this;
+    }
+
+    public ConsistencyGroupDeletionParamsData remainVolumeSnapshot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT);
+        return this;
+    }
+
+    public void setRemainVolumeSnapshot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT);
+        }
+    }
+
+    public boolean getRemainVolumeSnapshot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REMAIN_VOLUME_SNAPSHOT);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ConsistencyGroupDeletionParamsData consistencyGroupDeletionParamsData =
+                (ConsistencyGroupDeletionParamsData) o;
+        return Objects.equals(
+                this.remainVolumeSnapshot, consistencyGroupDeletionParamsData.remainVolumeSnapshot);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(remainVolumeSnapshot);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class ConsistencyGroupDeletionParamsData {\n");
+        sb.append("    remainVolumeSnapshot: ")
+                .append(toIndentedString(remainVolumeSnapshot))
+                .append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

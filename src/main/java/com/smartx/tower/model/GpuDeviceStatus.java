@@ -1,63 +1,57 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets GpuDeviceStatus
- */
+/** Gets or Sets GpuDeviceStatus */
 @JsonAdapter(GpuDeviceStatus.Adapter.class)
 public enum GpuDeviceStatus {
-  
-  NEED_REBOOT("NEED_REBOOT"),
-  
-  NOT_READY("NOT_READY"),
-  
-  READY("READY"),
-  
-  GPUDEVICESTATUS_UNSUPPORTED_ENUM("GPUDEVICESTATUS_UNSUPPORTED_ENUM");
-  private String value;
+    NEED_REBOOT("NEED_REBOOT"),
 
-  GpuDeviceStatus(String value) {
-    this.value = value;
-  }
+    NOT_READY("NOT_READY"),
 
-  public String getValue() {
-    return value;
-  }
+    READY("READY"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    GPUDEVICESTATUS_UNSUPPORTED_ENUM("GPUDEVICESTATUS_UNSUPPORTED_ENUM");
+    private String value;
 
-  public static GpuDeviceStatus fromValue(String value) {
-    for (GpuDeviceStatus b : GpuDeviceStatus.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    GpuDeviceStatus(String value) {
+        this.value = value;
     }
-    return GpuDeviceStatus.GPUDEVICESTATUS_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<GpuDeviceStatus> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final GpuDeviceStatus enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public GpuDeviceStatus read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return GpuDeviceStatus.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static GpuDeviceStatus fromValue(String value) {
+        for (GpuDeviceStatus b : GpuDeviceStatus.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return GpuDeviceStatus.GPUDEVICESTATUS_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<GpuDeviceStatus> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final GpuDeviceStatus enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public GpuDeviceStatus read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return GpuDeviceStatus.fromValue(value);
+        }
+    }
 }
-

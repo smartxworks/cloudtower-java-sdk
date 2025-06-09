@@ -1,26 +1,17 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
 import com.smartx.tower.model.ClusterTopo;
 import com.smartx.tower.model.ClusterTopoConnection;
-import com.smartx.tower.model.CommonHeader;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.GetClusterTopoesConnectionRequestBody;
 import com.smartx.tower.model.GetClusterTopoesRequestBody;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -66,29 +57,32 @@ public class ClusterTopoApi {
 
     /**
      * Build call for getClusterTopoes
-     * @param getClusterTopoesRequestBody  (required)
+     *
+     * @param getClusterTopoesRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getClusterTopoesCall(GetClusterTopoesRequestBody getClusterTopoesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterTopoesCall(
+            GetClusterTopoesRequestBody getClusterTopoesRequestBody, final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -105,129 +99,150 @@ public class ClusterTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterTopoesValidateBeforeCall(GetClusterTopoesRequestBody getClusterTopoesRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getClusterTopoesValidateBeforeCall(
+            GetClusterTopoesRequestBody getClusterTopoesRequestBody, final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getClusterTopoesRequestBody' is set
         if (getClusterTopoesRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getClusterTopoesRequestBody' when calling getClusterTopoes(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getClusterTopoesRequestBody' when calling"
+                            + " getClusterTopoes(Async)");
         }
-        
 
         okhttp3.Call localVarCall = getClusterTopoesCall(getClusterTopoesRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getClusterTopoesRequestBody  (required)
+     * @param getClusterTopoesRequestBody (required)
      * @return List&lt;ClusterTopo&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<ClusterTopo> getClusterTopoes(GetClusterTopoesRequestBody getClusterTopoesRequestBody) throws ApiException {
-        ApiResponse<List<ClusterTopo>> localVarResp = getClusterTopoesWithHttpInfo(getClusterTopoesRequestBody);
+    public List<ClusterTopo> getClusterTopoes(
+            GetClusterTopoesRequestBody getClusterTopoesRequestBody) throws ApiException {
+        ApiResponse<List<ClusterTopo>> localVarResp =
+                getClusterTopoesWithHttpInfo(getClusterTopoesRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getClusterTopoesRequestBody  (required)
+     * @param getClusterTopoesRequestBody (required)
      * @return ApiResponse&lt;List&lt;ClusterTopo&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<ClusterTopo>> getClusterTopoesWithHttpInfo(GetClusterTopoesRequestBody getClusterTopoesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getClusterTopoesValidateBeforeCall(getClusterTopoesRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<ClusterTopo>>(){}.getType();
+    public ApiResponse<List<ClusterTopo>> getClusterTopoesWithHttpInfo(
+            GetClusterTopoesRequestBody getClusterTopoesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall =
+                getClusterTopoesValidateBeforeCall(getClusterTopoesRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<ClusterTopo>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getClusterTopoesRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getClusterTopoesRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getClusterTopoesAsync(GetClusterTopoesRequestBody getClusterTopoesRequestBody, final ApiCallback<List<ClusterTopo>> _callback) throws ApiException {
+    public okhttp3.Call getClusterTopoesAsync(
+            GetClusterTopoesRequestBody getClusterTopoesRequestBody,
+            final ApiCallback<List<ClusterTopo>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterTopoesValidateBeforeCall(getClusterTopoesRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<ClusterTopo>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getClusterTopoesValidateBeforeCall(getClusterTopoesRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<ClusterTopo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getClusterTopoesConnection
-     * @param getClusterTopoesConnectionRequestBody  (required)
+     *
+     * @param getClusterTopoesConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getClusterTopoesConnectionCall(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getClusterTopoesConnectionCall(
+            GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -244,101 +259,124 @@ public class ClusterTopoApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getClusterTopoesConnectionValidateBeforeCall(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getClusterTopoesConnectionValidateBeforeCall(
+            GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getClusterTopoesConnectionRequestBody' is set
         if (getClusterTopoesConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getClusterTopoesConnectionRequestBody' when calling getClusterTopoesConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getClusterTopoesConnectionRequestBody' when"
+                            + " calling getClusterTopoesConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getClusterTopoesConnectionCall(getClusterTopoesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getClusterTopoesConnectionCall(getClusterTopoesConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getClusterTopoesConnectionRequestBody  (required)
+     * @param getClusterTopoesConnectionRequestBody (required)
      * @return ClusterTopoConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ClusterTopoConnection getClusterTopoesConnection(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody) throws ApiException {
-        ApiResponse<ClusterTopoConnection> localVarResp = getClusterTopoesConnectionWithHttpInfo(getClusterTopoesConnectionRequestBody);
+    public ClusterTopoConnection getClusterTopoesConnection(
+            GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<ClusterTopoConnection> localVarResp =
+                getClusterTopoesConnectionWithHttpInfo(getClusterTopoesConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getClusterTopoesConnectionRequestBody  (required)
+     * @param getClusterTopoesConnectionRequestBody (required)
      * @return ApiResponse&lt;ClusterTopoConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<ClusterTopoConnection> getClusterTopoesConnectionWithHttpInfo(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getClusterTopoesConnectionValidateBeforeCall(getClusterTopoesConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<ClusterTopoConnection>(){}.getType();
+    public ApiResponse<ClusterTopoConnection> getClusterTopoesConnectionWithHttpInfo(
+            GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getClusterTopoesConnectionValidateBeforeCall(
+                        getClusterTopoesConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<ClusterTopoConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getClusterTopoesConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getClusterTopoesConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getClusterTopoesConnectionAsync(GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody, final ApiCallback<ClusterTopoConnection> _callback) throws ApiException {
+    public okhttp3.Call getClusterTopoesConnectionAsync(
+            GetClusterTopoesConnectionRequestBody getClusterTopoesConnectionRequestBody,
+            final ApiCallback<ClusterTopoConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getClusterTopoesConnectionValidateBeforeCall(getClusterTopoesConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<ClusterTopoConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getClusterTopoesConnectionValidateBeforeCall(
+                        getClusterTopoesConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<ClusterTopoConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -1,88 +1,99 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.NestedAggregateBackupPlanExecution;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Objects;
 
-/**
- * BackupPlanExecutionConnection
- */
+/** BackupPlanExecutionConnection */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class BackupPlanExecutionConnection {
-  public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
-  @SerializedName(SERIALIZED_NAME_AGGREGATE)
-  private NestedAggregateBackupPlanExecution aggregate;
+public class BackupPlanExecutionConnection
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_AGGREGATE = "aggregate";
 
-  public BackupPlanExecutionConnection() { 
-  }
+    @SerializedName(SERIALIZED_NAME_AGGREGATE)
+    private NestedAggregateBackupPlanExecution aggregate;
 
-  public BackupPlanExecutionConnection aggregate(NestedAggregateBackupPlanExecution aggregate) {
-    
-    this.aggregate = aggregate;
-    return this;
-  }
+    public BackupPlanExecutionConnection() {}
 
-   /**
-   * Get aggregate
-   * @return aggregate
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+    public BackupPlanExecutionConnection aggregate(NestedAggregateBackupPlanExecution aggregate) {
 
-  public NestedAggregateBackupPlanExecution getAggregate() {
-    return aggregate;
-  }
-
-
-  public void setAggregate(NestedAggregateBackupPlanExecution aggregate) {
-    this.aggregate = aggregate;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.aggregate = aggregate;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get aggregate
+     *
+     * @return aggregate
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public NestedAggregateBackupPlanExecution getAggregate() {
+        return aggregate;
     }
-    BackupPlanExecutionConnection backupPlanExecutionConnection = (BackupPlanExecutionConnection) o;
-    return Objects.equals(this.aggregate, backupPlanExecutionConnection.aggregate);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(aggregate);
-  }
-
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class BackupPlanExecutionConnection {\n");
-    sb.append("    aggregate: ").append(toIndentedString(aggregate)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public void setAggregate(NestedAggregateBackupPlanExecution aggregate) {
+        this.aggregate = aggregate;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public BackupPlanExecutionConnection aggregate_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_AGGREGATE);
+        return this;
+    }
+
+    public BackupPlanExecutionConnection aggregate_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_AGGREGATE);
+        return this;
+    }
+
+    public void setAggregate_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_AGGREGATE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_AGGREGATE);
+        }
+    }
+
+    public boolean getAggregate_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_AGGREGATE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        BackupPlanExecutionConnection backupPlanExecutionConnection =
+                (BackupPlanExecutionConnection) o;
+        return Objects.equals(this.aggregate, backupPlanExecutionConnection.aggregate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(aggregate);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class BackupPlanExecutionConnection {\n");
+        sb.append("    aggregate: ").append(toIndentedString(aggregate)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

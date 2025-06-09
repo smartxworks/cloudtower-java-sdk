@@ -1,26 +1,17 @@
 package com.smartx.tower.api;
 
+
+import com.google.gson.reflect.TypeToken;
 import com.smartx.tower.ApiCallback;
 import com.smartx.tower.ApiClient;
 import com.smartx.tower.ApiException;
 import com.smartx.tower.ApiResponse;
 import com.smartx.tower.Configuration;
 import com.smartx.tower.Pair;
-import com.smartx.tower.ProgressRequestBody;
-import com.smartx.tower.ProgressResponseBody;
-
-import com.google.gson.reflect.TypeToken;
-
-import java.io.IOException;
-
-
-import com.smartx.tower.model.CommonHeader;
-import com.smartx.tower.model.ErrorBody;
 import com.smartx.tower.model.EverouteLicense;
 import com.smartx.tower.model.EverouteLicenseConnection;
 import com.smartx.tower.model.GetEverouteLicensesConnectionRequestBody;
 import com.smartx.tower.model.GetEverouteLicensesRequestBody;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -66,29 +57,33 @@ public class EverouteLicenseApi {
 
     /**
      * Build call for getEverouteLicenses
-     * @param getEverouteLicensesRequestBody  (required)
+     *
+     * @param getEverouteLicensesRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getEverouteLicensesCall(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEverouteLicensesCall(
+            GetEverouteLicensesRequestBody getEverouteLicensesRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -105,129 +100,152 @@ public class EverouteLicenseApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEverouteLicensesValidateBeforeCall(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getEverouteLicensesValidateBeforeCall(
+            GetEverouteLicensesRequestBody getEverouteLicensesRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getEverouteLicensesRequestBody' is set
         if (getEverouteLicensesRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getEverouteLicensesRequestBody' when calling getEverouteLicenses(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getEverouteLicensesRequestBody' when calling"
+                            + " getEverouteLicenses(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getEverouteLicensesCall(getEverouteLicensesRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getEverouteLicensesCall(getEverouteLicensesRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getEverouteLicensesRequestBody  (required)
+     * @param getEverouteLicensesRequestBody (required)
      * @return List&lt;EverouteLicense&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public List<EverouteLicense> getEverouteLicenses(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody) throws ApiException {
-        ApiResponse<List<EverouteLicense>> localVarResp = getEverouteLicensesWithHttpInfo(getEverouteLicensesRequestBody);
+    public List<EverouteLicense> getEverouteLicenses(
+            GetEverouteLicensesRequestBody getEverouteLicensesRequestBody) throws ApiException {
+        ApiResponse<List<EverouteLicense>> localVarResp =
+                getEverouteLicensesWithHttpInfo(getEverouteLicensesRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getEverouteLicensesRequestBody  (required)
+     * @param getEverouteLicensesRequestBody (required)
      * @return ApiResponse&lt;List&lt;EverouteLicense&gt;&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<List<EverouteLicense>> getEverouteLicensesWithHttpInfo(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getEverouteLicensesValidateBeforeCall(getEverouteLicensesRequestBody, null);
-        Type localVarReturnType = new TypeToken<List<EverouteLicense>>(){}.getType();
+    public ApiResponse<List<EverouteLicense>> getEverouteLicensesWithHttpInfo(
+            GetEverouteLicensesRequestBody getEverouteLicensesRequestBody) throws ApiException {
+        okhttp3.Call localVarCall =
+                getEverouteLicensesValidateBeforeCall(getEverouteLicensesRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<EverouteLicense>>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getEverouteLicensesRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getEverouteLicensesRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getEverouteLicensesAsync(GetEverouteLicensesRequestBody getEverouteLicensesRequestBody, final ApiCallback<List<EverouteLicense>> _callback) throws ApiException {
+    public okhttp3.Call getEverouteLicensesAsync(
+            GetEverouteLicensesRequestBody getEverouteLicensesRequestBody,
+            final ApiCallback<List<EverouteLicense>> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getEverouteLicensesValidateBeforeCall(getEverouteLicensesRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<List<EverouteLicense>>(){}.getType();
+        okhttp3.Call localVarCall =
+                getEverouteLicensesValidateBeforeCall(getEverouteLicensesRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<EverouteLicense>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for getEverouteLicensesConnection
-     * @param getEverouteLicensesConnectionRequestBody  (required)
+     *
+     * @param getEverouteLicensesConnectionRequestBody (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getEverouteLicensesConnectionCall(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEverouteLicensesConnectionCall(
+            GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
         String basePath = null;
 
         // Operation Servers
-        String[] localBasePaths = new String[] {  };
+        String[] localBasePaths = new String[] {};
 
         // Determine Base Path to Use
-        if (localCustomBaseUrl != null){
+        if (localCustomBaseUrl != null) {
             basePath = localCustomBaseUrl;
-        } else if ( localBasePaths.length > 0 ) {
+        } else if (localBasePaths.length > 0) {
             basePath = localBasePaths[localHostIndex];
         } else {
             basePath = null;
@@ -244,101 +262,125 @@ public class EverouteLicenseApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-        final String[] localVarAccepts = {
-            "application/json"
-        };
+        final String[] localVarAccepts = {"application/json"};
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
             localVarHeaderParams.put("Accept", localVarAccept);
         }
 
-        final String[] localVarContentTypes = {
-            "application/json"
-        };
-        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "Authorization" };
-        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEverouteLicensesConnectionValidateBeforeCall(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, final ApiCallback _callback) throws ApiException {
-        
+    private okhttp3.Call getEverouteLicensesConnectionValidateBeforeCall(
+            GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
         // verify the required parameter 'getEverouteLicensesConnectionRequestBody' is set
         if (getEverouteLicensesConnectionRequestBody == null) {
-            throw new ApiException("Missing the required parameter 'getEverouteLicensesConnectionRequestBody' when calling getEverouteLicensesConnection(Async)");
+            throw new ApiException(
+                    "Missing the required parameter 'getEverouteLicensesConnectionRequestBody'"
+                            + " when calling getEverouteLicensesConnection(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = getEverouteLicensesConnectionCall(getEverouteLicensesConnectionRequestBody, _callback);
+        okhttp3.Call localVarCall =
+                getEverouteLicensesConnectionCall(
+                        getEverouteLicensesConnectionRequestBody, _callback);
         return localVarCall;
-
     }
 
     /**
-     * 
-     * 
-     * @param getEverouteLicensesConnectionRequestBody  (required)
+     * @param getEverouteLicensesConnectionRequestBody (required)
      * @return EverouteLicenseConnection
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public EverouteLicenseConnection getEverouteLicensesConnection(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody) throws ApiException {
-        ApiResponse<EverouteLicenseConnection> localVarResp = getEverouteLicensesConnectionWithHttpInfo(getEverouteLicensesConnectionRequestBody);
+    public EverouteLicenseConnection getEverouteLicensesConnection(
+            GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody)
+            throws ApiException {
+        ApiResponse<EverouteLicenseConnection> localVarResp =
+                getEverouteLicensesConnectionWithHttpInfo(getEverouteLicensesConnectionRequestBody);
         return localVarResp.getData();
     }
 
     /**
-     * 
-     * 
-     * @param getEverouteLicensesConnectionRequestBody  (required)
+     * @param getEverouteLicensesConnectionRequestBody (required)
      * @return ApiResponse&lt;EverouteLicenseConnection&gt;
-     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public ApiResponse<EverouteLicenseConnection> getEverouteLicensesConnectionWithHttpInfo(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody) throws ApiException {
-        okhttp3.Call localVarCall = getEverouteLicensesConnectionValidateBeforeCall(getEverouteLicensesConnectionRequestBody, null);
-        Type localVarReturnType = new TypeToken<EverouteLicenseConnection>(){}.getType();
+    public ApiResponse<EverouteLicenseConnection> getEverouteLicensesConnectionWithHttpInfo(
+            GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody)
+            throws ApiException {
+        okhttp3.Call localVarCall =
+                getEverouteLicensesConnectionValidateBeforeCall(
+                        getEverouteLicensesConnectionRequestBody, null);
+        Type localVarReturnType = new TypeToken<EverouteLicenseConnection>() {}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     *  (asynchronously)
-     * 
-     * @param getEverouteLicensesConnectionRequestBody  (required)
+     * (asynchronously)
+     *
+     * @param getEverouteLicensesConnectionRequestBody (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
-     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
      * @http.response.details
-     <table summary="Response Details" border="1">
-        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
-        <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
-        <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
-     </table>
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * x-tower-request-id -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
      */
-    public okhttp3.Call getEverouteLicensesConnectionAsync(GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody, final ApiCallback<EverouteLicenseConnection> _callback) throws ApiException {
+    public okhttp3.Call getEverouteLicensesConnectionAsync(
+            GetEverouteLicensesConnectionRequestBody getEverouteLicensesConnectionRequestBody,
+            final ApiCallback<EverouteLicenseConnection> _callback)
+            throws ApiException {
 
-        okhttp3.Call localVarCall = getEverouteLicensesConnectionValidateBeforeCall(getEverouteLicensesConnectionRequestBody, _callback);
-        Type localVarReturnType = new TypeToken<EverouteLicenseConnection>(){}.getType();
+        okhttp3.Call localVarCall =
+                getEverouteLicensesConnectionValidateBeforeCall(
+                        getEverouteLicensesConnectionRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<EverouteLicenseConnection>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

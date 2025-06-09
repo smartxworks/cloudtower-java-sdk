@@ -1,65 +1,63 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets VirtualPrivateCloudRouteNextHopType
- */
+/** Gets or Sets VirtualPrivateCloudRouteNextHopType */
 @JsonAdapter(VirtualPrivateCloudRouteNextHopType.Adapter.class)
 public enum VirtualPrivateCloudRouteNextHopType {
-  
-  NAT_GATEWAY("NAT_GATEWAY"),
-  
-  ROUTER_GATEWAY("ROUTER_GATEWAY"),
-  
-  UNKNOWN("UNKNOWN"),
-  
-  VPC_PEERING("VPC_PEERING"),
-  
-  VIRTUALPRIVATECLOUDROUTENEXTHOPTYPE_UNSUPPORTED_ENUM("VIRTUALPRIVATECLOUDROUTENEXTHOPTYPE_UNSUPPORTED_ENUM");
-  private String value;
+    NAT_GATEWAY("NAT_GATEWAY"),
 
-  VirtualPrivateCloudRouteNextHopType(String value) {
-    this.value = value;
-  }
+    ROUTER_GATEWAY("ROUTER_GATEWAY"),
 
-  public String getValue() {
-    return value;
-  }
+    UNKNOWN("UNKNOWN"),
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
+    VPC_PEERING("VPC_PEERING"),
 
-  public static VirtualPrivateCloudRouteNextHopType fromValue(String value) {
-    for (VirtualPrivateCloudRouteNextHopType b : VirtualPrivateCloudRouteNextHopType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    VIRTUALPRIVATECLOUDROUTENEXTHOPTYPE_UNSUPPORTED_ENUM(
+            "VIRTUALPRIVATECLOUDROUTENEXTHOPTYPE_UNSUPPORTED_ENUM");
+    private String value;
+
+    VirtualPrivateCloudRouteNextHopType(String value) {
+        this.value = value;
     }
-    return VirtualPrivateCloudRouteNextHopType.VIRTUALPRIVATECLOUDROUTENEXTHOPTYPE_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<VirtualPrivateCloudRouteNextHopType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final VirtualPrivateCloudRouteNextHopType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public VirtualPrivateCloudRouteNextHopType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return VirtualPrivateCloudRouteNextHopType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static VirtualPrivateCloudRouteNextHopType fromValue(String value) {
+        for (VirtualPrivateCloudRouteNextHopType b : VirtualPrivateCloudRouteNextHopType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return VirtualPrivateCloudRouteNextHopType
+                .VIRTUALPRIVATECLOUDROUTENEXTHOPTYPE_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<VirtualPrivateCloudRouteNextHopType> {
+        @Override
+        public void write(
+                final JsonWriter jsonWriter, final VirtualPrivateCloudRouteNextHopType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public VirtualPrivateCloudRouteNextHopType read(final JsonReader jsonReader)
+                throws IOException {
+            String value = jsonReader.nextString();
+            return VirtualPrivateCloudRouteNextHopType.fromValue(value);
+        }
+    }
 }
-

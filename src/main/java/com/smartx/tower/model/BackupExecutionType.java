@@ -1,61 +1,55 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.annotations.SerializedName;
 
-import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-/**
- * Gets or Sets BackupExecutionType
- */
+/** Gets or Sets BackupExecutionType */
 @JsonAdapter(BackupExecutionType.Adapter.class)
 public enum BackupExecutionType {
-  
-  FULL("FULL"),
-  
-  INCREMENTAL("INCREMENTAL"),
-  
-  BACKUPEXECUTIONTYPE_UNSUPPORTED_ENUM("BACKUPEXECUTIONTYPE_UNSUPPORTED_ENUM");
-  private String value;
+    FULL("FULL"),
 
-  BackupExecutionType(String value) {
-    this.value = value;
-  }
+    INCREMENTAL("INCREMENTAL"),
 
-  public String getValue() {
-    return value;
-  }
+    BACKUPEXECUTIONTYPE_UNSUPPORTED_ENUM("BACKUPEXECUTIONTYPE_UNSUPPORTED_ENUM");
+    private String value;
 
-  @Override
-  public String toString() {
-    return String.valueOf(value);
-  }
-
-  public static BackupExecutionType fromValue(String value) {
-    for (BackupExecutionType b : BackupExecutionType.values()) {
-      if (b.value.equals(value)) {
-        return b;
-      }
+    BackupExecutionType(String value) {
+        this.value = value;
     }
-    return BackupExecutionType.BACKUPEXECUTIONTYPE_UNSUPPORTED_ENUM;
-  }
 
-  public static class Adapter extends TypeAdapter<BackupExecutionType> {
-    @Override
-    public void write(final JsonWriter jsonWriter, final BackupExecutionType enumeration) throws IOException {
-      jsonWriter.value(enumeration.getValue());
+    public String getValue() {
+        return value;
     }
 
     @Override
-    public BackupExecutionType read(final JsonReader jsonReader) throws IOException {
-      String value = jsonReader.nextString();
-      return BackupExecutionType.fromValue(value);
+    public String toString() {
+        return String.valueOf(value);
     }
-  }
+
+    public static BackupExecutionType fromValue(String value) {
+        for (BackupExecutionType b : BackupExecutionType.values()) {
+            if (b.value.equals(value)) {
+                return b;
+            }
+        }
+        return BackupExecutionType.BACKUPEXECUTIONTYPE_UNSUPPORTED_ENUM;
+    }
+
+    public static class Adapter extends TypeAdapter<BackupExecutionType> {
+        @Override
+        public void write(final JsonWriter jsonWriter, final BackupExecutionType enumeration)
+                throws IOException {
+            jsonWriter.value(enumeration.getValue());
+        }
+
+        @Override
+        public BackupExecutionType read(final JsonReader jsonReader) throws IOException {
+            String value = jsonReader.nextString();
+            return BackupExecutionType.fromValue(value);
+        }
+    }
 }
-

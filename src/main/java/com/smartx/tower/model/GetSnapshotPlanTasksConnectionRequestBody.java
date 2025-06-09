@@ -1,275 +1,417 @@
 package com.smartx.tower.model;
 
-import java.util.Objects;
-import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
+
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import com.smartx.tower.model.SnapshotPlanTaskOrderByInput;
-import com.smartx.tower.model.SnapshotPlanTaskWhereInput;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
+import java.util.Arrays;
+import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
-/**
- * GetSnapshotPlanTasksConnectionRequestBody
- */
+/** GetSnapshotPlanTasksConnectionRequestBody */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class GetSnapshotPlanTasksConnectionRequestBody {
-  public static final String SERIALIZED_NAME_AFTER = "after";
-  @SerializedName(SERIALIZED_NAME_AFTER)
-  private String after;
+public class GetSnapshotPlanTasksConnectionRequestBody
+        extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_AFTER = "after";
 
-  public static final String SERIALIZED_NAME_BEFORE = "before";
-  @SerializedName(SERIALIZED_NAME_BEFORE)
-  private String before;
+    @SerializedName(SERIALIZED_NAME_AFTER)
+    private String after;
 
-  public static final String SERIALIZED_NAME_FIRST = "first";
-  @SerializedName(SERIALIZED_NAME_FIRST)
-  private Integer first;
+    public static final String SERIALIZED_NAME_BEFORE = "before";
 
-  public static final String SERIALIZED_NAME_LAST = "last";
-  @SerializedName(SERIALIZED_NAME_LAST)
-  private Integer last;
+    @SerializedName(SERIALIZED_NAME_BEFORE)
+    private String before;
 
-  public static final String SERIALIZED_NAME_ORDER_BY = "orderBy";
-  @SerializedName(SERIALIZED_NAME_ORDER_BY)
-  private SnapshotPlanTaskOrderByInput orderBy;
+    public static final String SERIALIZED_NAME_FIRST = "first";
 
-  public static final String SERIALIZED_NAME_SKIP = "skip";
-  @SerializedName(SERIALIZED_NAME_SKIP)
-  private Integer skip;
+    @SerializedName(SERIALIZED_NAME_FIRST)
+    private Integer first;
 
-  public static final String SERIALIZED_NAME_WHERE = "where";
-  @SerializedName(SERIALIZED_NAME_WHERE)
-  private SnapshotPlanTaskWhereInput where;
+    public static final String SERIALIZED_NAME_LAST = "last";
 
-  public GetSnapshotPlanTasksConnectionRequestBody() { 
-  }
+    @SerializedName(SERIALIZED_NAME_LAST)
+    private Integer last;
 
-  public GetSnapshotPlanTasksConnectionRequestBody after(String after) {
-    
-    this.after = after;
-    return this;
-  }
+    public static final String SERIALIZED_NAME_ORDER_BY = "orderBy";
 
-   /**
-   * Get after
-   * @return after
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    @SerializedName(SERIALIZED_NAME_ORDER_BY)
+    private SnapshotPlanTaskOrderByInput orderBy;
 
-  public String getAfter() {
-    return after;
-  }
+    public static final String SERIALIZED_NAME_SKIP = "skip";
 
+    @SerializedName(SERIALIZED_NAME_SKIP)
+    private Integer skip;
 
-  public void setAfter(String after) {
-    this.after = after;
-  }
+    public static final String SERIALIZED_NAME_WHERE = "where";
 
+    @SerializedName(SERIALIZED_NAME_WHERE)
+    private SnapshotPlanTaskWhereInput where;
 
-  public GetSnapshotPlanTasksConnectionRequestBody before(String before) {
-    
-    this.before = before;
-    return this;
-  }
+    public GetSnapshotPlanTasksConnectionRequestBody() {}
 
-   /**
-   * Get before
-   * @return before
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+    public GetSnapshotPlanTasksConnectionRequestBody after(String after) {
 
-  public String getBefore() {
-    return before;
-  }
-
-
-  public void setBefore(String before) {
-    this.before = before;
-  }
-
-
-  public GetSnapshotPlanTasksConnectionRequestBody first(Integer first) {
-    
-    this.first = first;
-    return this;
-  }
-
-   /**
-   * Get first
-   * @return first
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getFirst() {
-    return first;
-  }
-
-
-  public void setFirst(Integer first) {
-    this.first = first;
-  }
-
-
-  public GetSnapshotPlanTasksConnectionRequestBody last(Integer last) {
-    
-    this.last = last;
-    return this;
-  }
-
-   /**
-   * Get last
-   * @return last
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getLast() {
-    return last;
-  }
-
-
-  public void setLast(Integer last) {
-    this.last = last;
-  }
-
-
-  public GetSnapshotPlanTasksConnectionRequestBody orderBy(SnapshotPlanTaskOrderByInput orderBy) {
-    
-    this.orderBy = orderBy;
-    return this;
-  }
-
-   /**
-   * Get orderBy
-   * @return orderBy
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public SnapshotPlanTaskOrderByInput getOrderBy() {
-    return orderBy;
-  }
-
-
-  public void setOrderBy(SnapshotPlanTaskOrderByInput orderBy) {
-    this.orderBy = orderBy;
-  }
-
-
-  public GetSnapshotPlanTasksConnectionRequestBody skip(Integer skip) {
-    
-    this.skip = skip;
-    return this;
-  }
-
-   /**
-   * Get skip
-   * @return skip
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Integer getSkip() {
-    return skip;
-  }
-
-
-  public void setSkip(Integer skip) {
-    this.skip = skip;
-  }
-
-
-  public GetSnapshotPlanTasksConnectionRequestBody where(SnapshotPlanTaskWhereInput where) {
-    
-    this.where = where;
-    return this;
-  }
-
-   /**
-   * Get where
-   * @return where
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public SnapshotPlanTaskWhereInput getWhere() {
-    return where;
-  }
-
-
-  public void setWhere(SnapshotPlanTaskWhereInput where) {
-    this.where = where;
-  }
-
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+        this.after = after;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+     * Get after
+     *
+     * @return after
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getAfter() {
+        return after;
     }
-    GetSnapshotPlanTasksConnectionRequestBody getSnapshotPlanTasksConnectionRequestBody = (GetSnapshotPlanTasksConnectionRequestBody) o;
-    return Objects.equals(this.after, getSnapshotPlanTasksConnectionRequestBody.after) &&
-        Objects.equals(this.before, getSnapshotPlanTasksConnectionRequestBody.before) &&
-        Objects.equals(this.first, getSnapshotPlanTasksConnectionRequestBody.first) &&
-        Objects.equals(this.last, getSnapshotPlanTasksConnectionRequestBody.last) &&
-        Objects.equals(this.orderBy, getSnapshotPlanTasksConnectionRequestBody.orderBy) &&
-        Objects.equals(this.skip, getSnapshotPlanTasksConnectionRequestBody.skip) &&
-        Objects.equals(this.where, getSnapshotPlanTasksConnectionRequestBody.where);
-  }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(after, before, first, last, orderBy, skip, where);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
+    public void setAfter(String after) {
+        this.after = after;
     }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
-  }
 
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class GetSnapshotPlanTasksConnectionRequestBody {\n");
-    sb.append("    after: ").append(toIndentedString(after)).append("\n");
-    sb.append("    before: ").append(toIndentedString(before)).append("\n");
-    sb.append("    first: ").append(toIndentedString(first)).append("\n");
-    sb.append("    last: ").append(toIndentedString(last)).append("\n");
-    sb.append("    orderBy: ").append(toIndentedString(orderBy)).append("\n");
-    sb.append("    skip: ").append(toIndentedString(skip)).append("\n");
-    sb.append("    where: ").append(toIndentedString(where)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
+    public GetSnapshotPlanTasksConnectionRequestBody after_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_AFTER);
+        return this;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
 
+    public GetSnapshotPlanTasksConnectionRequestBody after_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_AFTER);
+        return this;
+    }
+
+    public void setAfter_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_AFTER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_AFTER);
+        }
+    }
+
+    public boolean getAfter_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_AFTER);
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody before(String before) {
+
+        this.before = before;
+        return this;
+    }
+
+    /**
+     * Get before
+     *
+     * @return before
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBefore() {
+        return before;
+    }
+
+    public void setBefore(String before) {
+        this.before = before;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody before_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BEFORE);
+        return this;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody before_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BEFORE);
+        return this;
+    }
+
+    public void setBefore_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BEFORE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BEFORE);
+        }
+    }
+
+    public boolean getBefore_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BEFORE);
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody first(Integer first) {
+
+        this.first = first;
+        return this;
+    }
+
+    /**
+     * Get first
+     *
+     * @return first
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getFirst() {
+        return first;
+    }
+
+    public void setFirst(Integer first) {
+        this.first = first;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody first_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FIRST);
+        return this;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody first_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FIRST);
+        return this;
+    }
+
+    public void setFirst_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FIRST);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FIRST);
+        }
+    }
+
+    public boolean getFirst_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FIRST);
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody last(Integer last) {
+
+        this.last = last;
+        return this;
+    }
+
+    /**
+     * Get last
+     *
+     * @return last
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getLast() {
+        return last;
+    }
+
+    public void setLast(Integer last) {
+        this.last = last;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody last_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST);
+        return this;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody last_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST);
+        return this;
+    }
+
+    public void setLast_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST);
+        }
+    }
+
+    public boolean getLast_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST);
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody orderBy(SnapshotPlanTaskOrderByInput orderBy) {
+
+        this.orderBy = orderBy;
+        return this;
+    }
+
+    /**
+     * Get orderBy
+     *
+     * @return orderBy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SnapshotPlanTaskOrderByInput getOrderBy() {
+        return orderBy;
+    }
+
+    public void setOrderBy(SnapshotPlanTaskOrderByInput orderBy) {
+        this.orderBy = orderBy;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody orderBy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ORDER_BY);
+        return this;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody orderBy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ORDER_BY);
+        return this;
+    }
+
+    public void setOrderBy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ORDER_BY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ORDER_BY);
+        }
+    }
+
+    public boolean getOrderBy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ORDER_BY);
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody skip(Integer skip) {
+
+        this.skip = skip;
+        return this;
+    }
+
+    /**
+     * Get skip
+     *
+     * @return skip
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getSkip() {
+        return skip;
+    }
+
+    public void setSkip(Integer skip) {
+        this.skip = skip;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody skip_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SKIP);
+        return this;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody skip_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SKIP);
+        return this;
+    }
+
+    public void setSkip_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SKIP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SKIP);
+        }
+    }
+
+    public boolean getSkip_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SKIP);
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody where(SnapshotPlanTaskWhereInput where) {
+
+        this.where = where;
+        return this;
+    }
+
+    /**
+     * Get where
+     *
+     * @return where
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SnapshotPlanTaskWhereInput getWhere() {
+        return where;
+    }
+
+    public void setWhere(SnapshotPlanTaskWhereInput where) {
+        this.where = where;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody where_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public GetSnapshotPlanTasksConnectionRequestBody where_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        return this;
+    }
+
+    public void setWhere_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_WHERE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_WHERE);
+        }
+    }
+
+    public boolean getWhere_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_WHERE);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        GetSnapshotPlanTasksConnectionRequestBody getSnapshotPlanTasksConnectionRequestBody =
+                (GetSnapshotPlanTasksConnectionRequestBody) o;
+        return Objects.equals(this.after, getSnapshotPlanTasksConnectionRequestBody.after)
+                && Objects.equals(this.before, getSnapshotPlanTasksConnectionRequestBody.before)
+                && Objects.equals(this.first, getSnapshotPlanTasksConnectionRequestBody.first)
+                && Objects.equals(this.last, getSnapshotPlanTasksConnectionRequestBody.last)
+                && Objects.equals(this.orderBy, getSnapshotPlanTasksConnectionRequestBody.orderBy)
+                && Objects.equals(this.skip, getSnapshotPlanTasksConnectionRequestBody.skip)
+                && Objects.equals(this.where, getSnapshotPlanTasksConnectionRequestBody.where);
+    }
+
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(after, before, first, last, orderBy, skip, where);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class GetSnapshotPlanTasksConnectionRequestBody {\n");
+        sb.append("    after: ").append(toIndentedString(after)).append("\n");
+        sb.append("    before: ").append(toIndentedString(before)).append("\n");
+        sb.append("    first: ").append(toIndentedString(first)).append("\n");
+        sb.append("    last: ").append(toIndentedString(last)).append("\n");
+        sb.append("    orderBy: ").append(toIndentedString(orderBy)).append("\n");
+        sb.append("    skip: ").append(toIndentedString(skip)).append("\n");
+        sb.append("    where: ").append(toIndentedString(where)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convert the given object to string with each line indented by 4 spaces (except the first
+     * line).
+     */
+    private String toIndentedString(Object o) {
+        if (o == null) {
+            return "null";
+        }
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-
