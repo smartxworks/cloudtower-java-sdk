@@ -25,6 +25,30 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
     @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY)
     private VmVolumeElfStoragePolicyType defaultStoragePolicy;
 
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_K =
+            "default_storage_policy_ec_k";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_K)
+    private Integer defaultStoragePolicyEcK;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_M =
+            "default_storage_policy_ec_m";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_M)
+    private Integer defaultStoragePolicyEcM;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM =
+            "default_storage_policy_replica_num";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM)
+    private Integer defaultStoragePolicyReplicaNum;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_THIN_PROVISION =
+            "default_storage_policy_thin_provision";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_THIN_PROVISION)
+    private Boolean defaultStoragePolicyThinProvision;
+
     public static final String SERIALIZED_NAME_ENABLED_ISCSI = "enabled_iscsi";
 
     @SerializedName(SERIALIZED_NAME_ENABLED_ISCSI)
@@ -171,6 +195,179 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
         return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY);
     }
 
+    public ClusterSettings defaultStoragePolicyEcK(Integer defaultStoragePolicyEcK) {
+
+        this.defaultStoragePolicyEcK = defaultStoragePolicyEcK;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyEcK
+     *
+     * @return defaultStoragePolicyEcK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getDefaultStoragePolicyEcK() {
+        return defaultStoragePolicyEcK;
+    }
+
+    public void setDefaultStoragePolicyEcK(Integer defaultStoragePolicyEcK) {
+        this.defaultStoragePolicyEcK = defaultStoragePolicyEcK;
+    }
+
+    public ClusterSettings defaultStoragePolicyEcK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_K);
+        return this;
+    }
+
+    public ClusterSettings defaultStoragePolicyEcK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_K);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_K);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_K);
+    }
+
+    public ClusterSettings defaultStoragePolicyEcM(Integer defaultStoragePolicyEcM) {
+
+        this.defaultStoragePolicyEcM = defaultStoragePolicyEcM;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyEcM
+     *
+     * @return defaultStoragePolicyEcM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getDefaultStoragePolicyEcM() {
+        return defaultStoragePolicyEcM;
+    }
+
+    public void setDefaultStoragePolicyEcM(Integer defaultStoragePolicyEcM) {
+        this.defaultStoragePolicyEcM = defaultStoragePolicyEcM;
+    }
+
+    public ClusterSettings defaultStoragePolicyEcM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_M);
+        return this;
+    }
+
+    public ClusterSettings defaultStoragePolicyEcM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_M);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_M);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_EC_M);
+    }
+
+    public ClusterSettings defaultStoragePolicyReplicaNum(Integer defaultStoragePolicyReplicaNum) {
+
+        this.defaultStoragePolicyReplicaNum = defaultStoragePolicyReplicaNum;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyReplicaNum
+     *
+     * @return defaultStoragePolicyReplicaNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getDefaultStoragePolicyReplicaNum() {
+        return defaultStoragePolicyReplicaNum;
+    }
+
+    public void setDefaultStoragePolicyReplicaNum(Integer defaultStoragePolicyReplicaNum) {
+        this.defaultStoragePolicyReplicaNum = defaultStoragePolicyReplicaNum;
+    }
+
+    public ClusterSettings defaultStoragePolicyReplicaNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM);
+        return this;
+    }
+
+    public ClusterSettings defaultStoragePolicyReplicaNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyReplicaNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyReplicaNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM);
+    }
+
+    public ClusterSettings defaultStoragePolicyThinProvision(
+            Boolean defaultStoragePolicyThinProvision) {
+
+        this.defaultStoragePolicyThinProvision = defaultStoragePolicyThinProvision;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyThinProvision
+     *
+     * @return defaultStoragePolicyThinProvision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getDefaultStoragePolicyThinProvision() {
+        return defaultStoragePolicyThinProvision;
+    }
+
+    public void setDefaultStoragePolicyThinProvision(Boolean defaultStoragePolicyThinProvision) {
+        this.defaultStoragePolicyThinProvision = defaultStoragePolicyThinProvision;
+    }
+
+    public ClusterSettings defaultStoragePolicyThinProvision_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_THIN_PROVISION);
+        return this;
+    }
+
+    public ClusterSettings defaultStoragePolicyThinProvision_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_THIN_PROVISION);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyThinProvision_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_THIN_PROVISION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_THIN_PROVISION);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyThinProvision_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_THIN_PROVISION);
+    }
+
     public ClusterSettings enabledIscsi(Boolean enabledIscsi) {
 
         this.enabledIscsi = enabledIscsi;
@@ -312,6 +509,16 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
         return Objects.equals(this.cluster, clusterSettings.cluster)
                 && Objects.equals(this.defaultHa, clusterSettings.defaultHa)
                 && Objects.equals(this.defaultStoragePolicy, clusterSettings.defaultStoragePolicy)
+                && Objects.equals(
+                        this.defaultStoragePolicyEcK, clusterSettings.defaultStoragePolicyEcK)
+                && Objects.equals(
+                        this.defaultStoragePolicyEcM, clusterSettings.defaultStoragePolicyEcM)
+                && Objects.equals(
+                        this.defaultStoragePolicyReplicaNum,
+                        clusterSettings.defaultStoragePolicyReplicaNum)
+                && Objects.equals(
+                        this.defaultStoragePolicyThinProvision,
+                        clusterSettings.defaultStoragePolicyThinProvision)
                 && Objects.equals(this.enabledIscsi, clusterSettings.enabledIscsi)
                 && Objects.equals(this.id, clusterSettings.id)
                 && Objects.equals(this.vmRecycleBin, clusterSettings.vmRecycleBin);
@@ -329,7 +536,16 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
     @Override
     public int hashCode() {
         return Objects.hash(
-                cluster, defaultHa, defaultStoragePolicy, enabledIscsi, id, vmRecycleBin);
+                cluster,
+                defaultHa,
+                defaultStoragePolicy,
+                defaultStoragePolicyEcK,
+                defaultStoragePolicyEcM,
+                defaultStoragePolicyReplicaNum,
+                defaultStoragePolicyThinProvision,
+                enabledIscsi,
+                id,
+                vmRecycleBin);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -347,6 +563,18 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
         sb.append("    defaultHa: ").append(toIndentedString(defaultHa)).append("\n");
         sb.append("    defaultStoragePolicy: ")
                 .append(toIndentedString(defaultStoragePolicy))
+                .append("\n");
+        sb.append("    defaultStoragePolicyEcK: ")
+                .append(toIndentedString(defaultStoragePolicyEcK))
+                .append("\n");
+        sb.append("    defaultStoragePolicyEcM: ")
+                .append(toIndentedString(defaultStoragePolicyEcM))
+                .append("\n");
+        sb.append("    defaultStoragePolicyReplicaNum: ")
+                .append(toIndentedString(defaultStoragePolicyReplicaNum))
+                .append("\n");
+        sb.append("    defaultStoragePolicyThinProvision: ")
+                .append(toIndentedString(defaultStoragePolicyThinProvision))
                 .append("\n");
         sb.append("    enabledIscsi: ").append(toIndentedString(enabledIscsi)).append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");

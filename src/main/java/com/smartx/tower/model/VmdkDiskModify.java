@@ -8,6 +8,17 @@ import java.util.Objects;
 /** VmdkDiskModify */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class VmdkDiskModify extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_ELF_EC_STORAGE_POLICY = "elf_ec_storage_policy";
+
+    @SerializedName(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY)
+    private MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy elfEcStoragePolicy;
+
+    public static final String SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY =
+            "elf_replica_storage_policy";
+
+    @SerializedName(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY)
+    private VmVolumeElfStoragePolicyType elfReplicaStoragePolicy;
+
     public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY = "elf_storage_policy";
 
     @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY)
@@ -34,6 +45,95 @@ public class VmdkDiskModify extends com.smartx.tower.ConditionalNullable.Conditi
     private String vmdkName;
 
     public VmdkDiskModify() {}
+
+    public VmdkDiskModify elfEcStoragePolicy(
+            MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy elfEcStoragePolicy) {
+
+        this.elfEcStoragePolicy = elfEcStoragePolicy;
+        return this;
+    }
+
+    /**
+     * Get elfEcStoragePolicy
+     *
+     * @return elfEcStoragePolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy getElfEcStoragePolicy() {
+        return elfEcStoragePolicy;
+    }
+
+    public void setElfEcStoragePolicy(
+            MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy elfEcStoragePolicy) {
+        this.elfEcStoragePolicy = elfEcStoragePolicy;
+    }
+
+    public VmdkDiskModify elfEcStoragePolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+        return this;
+    }
+
+    public VmdkDiskModify elfEcStoragePolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+        return this;
+    }
+
+    public void setElfEcStoragePolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+        }
+    }
+
+    public boolean getElfEcStoragePolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+    }
+
+    public VmdkDiskModify elfReplicaStoragePolicy(
+            VmVolumeElfStoragePolicyType elfReplicaStoragePolicy) {
+
+        this.elfReplicaStoragePolicy = elfReplicaStoragePolicy;
+        return this;
+    }
+
+    /**
+     * Get elfReplicaStoragePolicy
+     *
+     * @return elfReplicaStoragePolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmVolumeElfStoragePolicyType getElfReplicaStoragePolicy() {
+        return elfReplicaStoragePolicy;
+    }
+
+    public void setElfReplicaStoragePolicy(VmVolumeElfStoragePolicyType elfReplicaStoragePolicy) {
+        this.elfReplicaStoragePolicy = elfReplicaStoragePolicy;
+    }
+
+    public VmdkDiskModify elfReplicaStoragePolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+        return this;
+    }
+
+    public VmdkDiskModify elfReplicaStoragePolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+        return this;
+    }
+
+    public void setElfReplicaStoragePolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+        }
+    }
+
+    public boolean getElfReplicaStoragePolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+    }
 
     public VmdkDiskModify elfStoragePolicy(VmVolumeElfStoragePolicyType elfStoragePolicy) {
 
@@ -259,7 +359,10 @@ public class VmdkDiskModify extends com.smartx.tower.ConditionalNullable.Conditi
             return false;
         }
         VmdkDiskModify vmdkDiskModify = (VmdkDiskModify) o;
-        return Objects.equals(this.elfStoragePolicy, vmdkDiskModify.elfStoragePolicy)
+        return Objects.equals(this.elfEcStoragePolicy, vmdkDiskModify.elfEcStoragePolicy)
+                && Objects.equals(
+                        this.elfReplicaStoragePolicy, vmdkDiskModify.elfReplicaStoragePolicy)
+                && Objects.equals(this.elfStoragePolicy, vmdkDiskModify.elfStoragePolicy)
                 && Objects.equals(this.bus, vmdkDiskModify.bus)
                 && Objects.equals(this.volumeName, vmdkDiskModify.volumeName)
                 && Objects.equals(this.boot, vmdkDiskModify.boot)
@@ -268,13 +371,26 @@ public class VmdkDiskModify extends com.smartx.tower.ConditionalNullable.Conditi
 
     @Override
     public int hashCode() {
-        return Objects.hash(elfStoragePolicy, bus, volumeName, boot, vmdkName);
+        return Objects.hash(
+                elfEcStoragePolicy,
+                elfReplicaStoragePolicy,
+                elfStoragePolicy,
+                bus,
+                volumeName,
+                boot,
+                vmdkName);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class VmdkDiskModify {\n");
+        sb.append("    elfEcStoragePolicy: ")
+                .append(toIndentedString(elfEcStoragePolicy))
+                .append("\n");
+        sb.append("    elfReplicaStoragePolicy: ")
+                .append(toIndentedString(elfReplicaStoragePolicy))
+                .append("\n");
         sb.append("    elfStoragePolicy: ").append(toIndentedString(elfStoragePolicy)).append("\n");
         sb.append("    bus: ").append(toIndentedString(bus)).append("\n");
         sb.append("    volumeName: ").append(toIndentedString(volumeName)).append("\n");

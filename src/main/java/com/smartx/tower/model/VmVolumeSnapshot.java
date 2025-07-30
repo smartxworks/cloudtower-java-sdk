@@ -32,6 +32,28 @@ public class VmVolumeSnapshot extends com.smartx.tower.ConditionalNullable.Condi
     @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY)
     private VmVolumeElfStoragePolicyType elfStoragePolicy;
 
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K = "elf_storage_policy_ec_k";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K)
+    private Integer elfStoragePolicyEcK;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M = "elf_storage_policy_ec_m";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M)
+    private Integer elfStoragePolicyEcM;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM =
+            "elf_storage_policy_replica_num";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM)
+    private Integer elfStoragePolicyReplicaNum;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION =
+            "elf_storage_policy_thin_provision";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION)
+    private Boolean elfStoragePolicyThinProvision;
+
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -61,6 +83,11 @@ public class VmVolumeSnapshot extends com.smartx.tower.ConditionalNullable.Condi
 
     @SerializedName(SERIALIZED_NAME_NAME)
     private String name;
+
+    public static final String SERIALIZED_NAME_RESIDENT_IN_CACHE = "resident_in_cache";
+
+    @SerializedName(SERIALIZED_NAME_RESIDENT_IN_CACHE)
+    private Boolean residentInCache;
 
     public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
 
@@ -274,6 +301,178 @@ public class VmVolumeSnapshot extends com.smartx.tower.ConditionalNullable.Condi
 
     public boolean getElfStoragePolicy_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY);
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyEcK(Integer elfStoragePolicyEcK) {
+
+        this.elfStoragePolicyEcK = elfStoragePolicyEcK;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcK
+     *
+     * @return elfStoragePolicyEcK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcK() {
+        return elfStoragePolicyEcK;
+    }
+
+    public void setElfStoragePolicyEcK(Integer elfStoragePolicyEcK) {
+        this.elfStoragePolicyEcK = elfStoragePolicyEcK;
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyEcK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        return this;
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyEcK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyEcM(Integer elfStoragePolicyEcM) {
+
+        this.elfStoragePolicyEcM = elfStoragePolicyEcM;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcM
+     *
+     * @return elfStoragePolicyEcM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcM() {
+        return elfStoragePolicyEcM;
+    }
+
+    public void setElfStoragePolicyEcM(Integer elfStoragePolicyEcM) {
+        this.elfStoragePolicyEcM = elfStoragePolicyEcM;
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyEcM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        return this;
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyEcM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyReplicaNum(Integer elfStoragePolicyReplicaNum) {
+
+        this.elfStoragePolicyReplicaNum = elfStoragePolicyReplicaNum;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNum
+     *
+     * @return elfStoragePolicyReplicaNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyReplicaNum() {
+        return elfStoragePolicyReplicaNum;
+    }
+
+    public void setElfStoragePolicyReplicaNum(Integer elfStoragePolicyReplicaNum) {
+        this.elfStoragePolicyReplicaNum = elfStoragePolicyReplicaNum;
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyReplicaNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        return this;
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyReplicaNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyThinProvision(Boolean elfStoragePolicyThinProvision) {
+
+        this.elfStoragePolicyThinProvision = elfStoragePolicyThinProvision;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyThinProvision
+     *
+     * @return elfStoragePolicyThinProvision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getElfStoragePolicyThinProvision() {
+        return elfStoragePolicyThinProvision;
+    }
+
+    public void setElfStoragePolicyThinProvision(Boolean elfStoragePolicyThinProvision) {
+        this.elfStoragePolicyThinProvision = elfStoragePolicyThinProvision;
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyThinProvision_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        return this;
+    }
+
+    public VmVolumeSnapshot elfStoragePolicyThinProvision_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        return this;
+    }
+
+    public void setElfStoragePolicyThinProvision_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        }
+    }
+
+    public boolean getElfStoragePolicyThinProvision_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
     }
 
     public VmVolumeSnapshot entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -540,6 +739,49 @@ public class VmVolumeSnapshot extends com.smartx.tower.ConditionalNullable.Condi
 
     public boolean getName_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    public VmVolumeSnapshot residentInCache(Boolean residentInCache) {
+
+        this.residentInCache = residentInCache;
+        return this;
+    }
+
+    /**
+     * Get residentInCache
+     *
+     * @return residentInCache
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getResidentInCache() {
+        return residentInCache;
+    }
+
+    public void setResidentInCache(Boolean residentInCache) {
+        this.residentInCache = residentInCache;
+    }
+
+    public VmVolumeSnapshot residentInCache_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        return this;
+    }
+
+    public VmVolumeSnapshot residentInCache_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        return this;
+    }
+
+    public void setResidentInCache_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        }
+    }
+
+    public boolean getResidentInCache_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESIDENT_IN_CACHE);
     }
 
     public VmVolumeSnapshot sharedSize(Double sharedSize) {
@@ -899,12 +1141,21 @@ public class VmVolumeSnapshot extends com.smartx.tower.ConditionalNullable.Condi
                 && Objects.equals(this.createAt, vmVolumeSnapshot.createAt)
                 && Objects.equals(this.description, vmVolumeSnapshot.description)
                 && Objects.equals(this.elfStoragePolicy, vmVolumeSnapshot.elfStoragePolicy)
+                && Objects.equals(this.elfStoragePolicyEcK, vmVolumeSnapshot.elfStoragePolicyEcK)
+                && Objects.equals(this.elfStoragePolicyEcM, vmVolumeSnapshot.elfStoragePolicyEcM)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNum,
+                        vmVolumeSnapshot.elfStoragePolicyReplicaNum)
+                && Objects.equals(
+                        this.elfStoragePolicyThinProvision,
+                        vmVolumeSnapshot.elfStoragePolicyThinProvision)
                 && Objects.equals(this.entityAsyncStatus, vmVolumeSnapshot.entityAsyncStatus)
                 && Objects.equals(this.id, vmVolumeSnapshot.id)
                 && Objects.equals(this.labels, vmVolumeSnapshot.labels)
                 && Objects.equals(this.localCreatedAt, vmVolumeSnapshot.localCreatedAt)
                 && Objects.equals(this.localId, vmVolumeSnapshot.localId)
                 && Objects.equals(this.name, vmVolumeSnapshot.name)
+                && Objects.equals(this.residentInCache, vmVolumeSnapshot.residentInCache)
                 && Objects.equals(this.sharedSize, vmVolumeSnapshot.sharedSize)
                 && Objects.equals(this.size, vmVolumeSnapshot.size)
                 && Objects.equals(this.type, vmVolumeSnapshot.type)
@@ -931,12 +1182,17 @@ public class VmVolumeSnapshot extends com.smartx.tower.ConditionalNullable.Condi
                 createAt,
                 description,
                 elfStoragePolicy,
+                elfStoragePolicyEcK,
+                elfStoragePolicyEcM,
+                elfStoragePolicyReplicaNum,
+                elfStoragePolicyThinProvision,
                 entityAsyncStatus,
                 id,
                 labels,
                 localCreatedAt,
                 localId,
                 name,
+                residentInCache,
                 sharedSize,
                 size,
                 type,
@@ -962,6 +1218,18 @@ public class VmVolumeSnapshot extends com.smartx.tower.ConditionalNullable.Condi
         sb.append("    createAt: ").append(toIndentedString(createAt)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    elfStoragePolicy: ").append(toIndentedString(elfStoragePolicy)).append("\n");
+        sb.append("    elfStoragePolicyEcK: ")
+                .append(toIndentedString(elfStoragePolicyEcK))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcM: ")
+                .append(toIndentedString(elfStoragePolicyEcM))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNum: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNum))
+                .append("\n");
+        sb.append("    elfStoragePolicyThinProvision: ")
+                .append(toIndentedString(elfStoragePolicyThinProvision))
+                .append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -970,6 +1238,7 @@ public class VmVolumeSnapshot extends com.smartx.tower.ConditionalNullable.Condi
         sb.append("    localCreatedAt: ").append(toIndentedString(localCreatedAt)).append("\n");
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    residentInCache: ").append(toIndentedString(residentInCache)).append("\n");
         sb.append("    sharedSize: ").append(toIndentedString(sharedSize)).append("\n");
         sb.append("    size: ").append(toIndentedString(size)).append("\n");
         sb.append("    type: ").append(toIndentedString(type)).append("\n");

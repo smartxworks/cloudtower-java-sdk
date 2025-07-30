@@ -18,6 +18,22 @@ public enum ClusterSettingsOrderByInput {
 
     DEFAULT_STORAGE_POLICY_DESC("default_storage_policy_DESC"),
 
+    DEFAULT_STORAGE_POLICY_EC_K_ASC("default_storage_policy_ec_k_ASC"),
+
+    DEFAULT_STORAGE_POLICY_EC_K_DESC("default_storage_policy_ec_k_DESC"),
+
+    DEFAULT_STORAGE_POLICY_EC_M_ASC("default_storage_policy_ec_m_ASC"),
+
+    DEFAULT_STORAGE_POLICY_EC_M_DESC("default_storage_policy_ec_m_DESC"),
+
+    DEFAULT_STORAGE_POLICY_REPLICA_NUM_ASC("default_storage_policy_replica_num_ASC"),
+
+    DEFAULT_STORAGE_POLICY_REPLICA_NUM_DESC("default_storage_policy_replica_num_DESC"),
+
+    DEFAULT_STORAGE_POLICY_THIN_PROVISION_ASC("default_storage_policy_thin_provision_ASC"),
+
+    DEFAULT_STORAGE_POLICY_THIN_PROVISION_DESC("default_storage_policy_thin_provision_DESC"),
+
     ENABLED_ISCSI_ASC("enabled_iscsi_ASC"),
 
     ENABLED_ISCSI_DESC("enabled_iscsi_DESC"),

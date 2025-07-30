@@ -963,6 +963,7 @@ src/main/java/com/smartx/tower/model/MigrationVlanUpdationParams.java
 src/main/java/com/smartx/tower/model/MountDisksParams.java
 src/main/java/com/smartx/tower/model/MountNewCreateDisksParams.java
 src/main/java/com/smartx/tower/model/MountNewCreateDisksParamsVmVolume.java
+src/main/java/com/smartx/tower/model/MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy.java
 src/main/java/com/smartx/tower/model/NamespaceGroup.java
 src/main/java/com/smartx/tower/model/NamespaceGroupConnection.java
 src/main/java/com/smartx/tower/model/NamespaceGroupCreationParams.java
@@ -1429,6 +1430,7 @@ src/main/java/com/smartx/tower/model/SecurityGroup.java
 src/main/java/com/smartx/tower/model/SecurityGroupConnection.java
 src/main/java/com/smartx/tower/model/SecurityGroupCreateParams.java
 src/main/java/com/smartx/tower/model/SecurityGroupDeleteParams.java
+src/main/java/com/smartx/tower/model/SecurityGroupMemberType.java
 src/main/java/com/smartx/tower/model/SecurityGroupOrderByInput.java
 src/main/java/com/smartx/tower/model/SecurityGroupUpdateBody.java
 src/main/java/com/smartx/tower/model/SecurityGroupUpdateParams.java
@@ -1535,8 +1537,6 @@ src/main/java/com/smartx/tower/model/TimeUnit.java
 src/main/java/com/smartx/tower/model/TriggerDiskBlinkParams.java
 src/main/java/com/smartx/tower/model/UninstallCloudTowerApplicationParams.java
 src/main/java/com/smartx/tower/model/UpdateAccessRestrictionParams.java
-src/main/java/com/smartx/tower/model/UpdateCloudTowerApplicationVmSpecParams.java
-src/main/java/com/smartx/tower/model/UpdateCloudTowerApplicationVmSpecParamsData.java
 src/main/java/com/smartx/tower/model/UpdatePassrodSecurityParams.java
 src/main/java/com/smartx/tower/model/UpdateSessionTimeoutParams.java
 src/main/java/com/smartx/tower/model/UpdateVcenterAccountParams.java
@@ -1831,6 +1831,7 @@ src/main/java/com/smartx/tower/model/VmResetGuestOsPasswordParamsData.java
 src/main/java/com/smartx/tower/model/VmRestrictIoParamsData.java
 src/main/java/com/smartx/tower/model/VmRollbackParams.java
 src/main/java/com/smartx/tower/model/VmRollbackParamsData.java
+src/main/java/com/smartx/tower/model/VmSetVmDiskResidentInCacheParams.java
 src/main/java/com/smartx/tower/model/VmSnapshot.java
 src/main/java/com/smartx/tower/model/VmSnapshotConnection.java
 src/main/java/com/smartx/tower/model/VmSnapshotCreationParams.java

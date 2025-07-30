@@ -76,6 +76,11 @@ public class NestedFrozenDisks
     @SerializedName(SERIALIZED_NAME_PATH)
     private String path;
 
+    public static final String SERIALIZED_NAME_RESIDENT_IN_CACHE = "resident_in_cache";
+
+    @SerializedName(SERIALIZED_NAME_RESIDENT_IN_CACHE)
+    private Boolean residentInCache;
+
     public static final String SERIALIZED_NAME_SIZE = "size";
 
     @SerializedName(SERIALIZED_NAME_SIZE)
@@ -677,6 +682,49 @@ public class NestedFrozenDisks
         return this._isPresent_.contains(SERIALIZED_NAME_PATH);
     }
 
+    public NestedFrozenDisks residentInCache(Boolean residentInCache) {
+
+        this.residentInCache = residentInCache;
+        return this;
+    }
+
+    /**
+     * Get residentInCache
+     *
+     * @return residentInCache
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getResidentInCache() {
+        return residentInCache;
+    }
+
+    public void setResidentInCache(Boolean residentInCache) {
+        this.residentInCache = residentInCache;
+    }
+
+    public NestedFrozenDisks residentInCache_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        return this;
+    }
+
+    public NestedFrozenDisks residentInCache_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        return this;
+    }
+
+    public void setResidentInCache_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        }
+    }
+
+    public boolean getResidentInCache_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+    }
+
     public NestedFrozenDisks size(Long size) {
 
         this.size = size;
@@ -1043,6 +1091,7 @@ public class NestedFrozenDisks
                 && Objects.equals(this.maxIops, nestedFrozenDisks.maxIops)
                 && Objects.equals(this.maxIopsPolicy, nestedFrozenDisks.maxIopsPolicy)
                 && Objects.equals(this.path, nestedFrozenDisks.path)
+                && Objects.equals(this.residentInCache, nestedFrozenDisks.residentInCache)
                 && Objects.equals(this.size, nestedFrozenDisks.size)
                 && Objects.equals(this.snapshotLocalId, nestedFrozenDisks.snapshotLocalId)
                 && Objects.equals(this.storagePolicyUuid, nestedFrozenDisks.storagePolicyUuid)
@@ -1079,6 +1128,7 @@ public class NestedFrozenDisks
                 maxIops,
                 maxIopsPolicy,
                 path,
+                residentInCache,
                 size,
                 snapshotLocalId,
                 storagePolicyUuid,
@@ -1115,6 +1165,7 @@ public class NestedFrozenDisks
         sb.append("    maxIops: ").append(toIndentedString(maxIops)).append("\n");
         sb.append("    maxIopsPolicy: ").append(toIndentedString(maxIopsPolicy)).append("\n");
         sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("    residentInCache: ").append(toIndentedString(residentInCache)).append("\n");
         sb.append("    size: ").append(toIndentedString(size)).append("\n");
         sb.append("    snapshotLocalId: ").append(toIndentedString(snapshotLocalId)).append("\n");
         sb.append("    storagePolicyUuid: ")
