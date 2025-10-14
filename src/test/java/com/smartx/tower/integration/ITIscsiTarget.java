@@ -66,7 +66,7 @@ public class ITIscsiTarget extends ITBase {
             IscsiTargetUpdationParams updateParams =
                     new IscsiTargetUpdationParams()
                             .where(new IscsiTargetWhereInput().id(target.getId()))
-                            .data(new IscsiTargetCommonParams().iops(target.getIops()));
+                            .data(new IscsiTargetUpdationParamsData().iops(target.getIops()));
             List<WithTaskIscsiTarget> updateResult = api.updateIscsiTarget(updateParams);
             waitForTaskSucceed(updateResult.get(0).getTaskId());
             assertThat(updateResult).as("check result of updateIscsiTarget").isNotNull();

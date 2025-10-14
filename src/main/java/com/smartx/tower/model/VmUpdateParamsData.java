@@ -14,6 +14,11 @@ public class VmUpdateParamsData
     @SerializedName(SERIALIZED_NAME_VCPU)
     private Integer vcpu;
 
+    public static final String SERIALIZED_NAME_HA_PRIORITY = "ha_priority";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY)
+    private VmHaPriority haPriority;
+
     public static final String SERIALIZED_NAME_HA = "ha";
 
     @SerializedName(SERIALIZED_NAME_HA)
@@ -92,6 +97,49 @@ public class VmUpdateParamsData
 
     public boolean getVcpu_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_VCPU);
+    }
+
+    public VmUpdateParamsData haPriority(VmHaPriority haPriority) {
+
+        this.haPriority = haPriority;
+        return this;
+    }
+
+    /**
+     * Get haPriority
+     *
+     * @return haPriority
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmHaPriority getHaPriority() {
+        return haPriority;
+    }
+
+    public void setHaPriority(VmHaPriority haPriority) {
+        this.haPriority = haPriority;
+    }
+
+    public VmUpdateParamsData haPriority_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public VmUpdateParamsData haPriority_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public void setHaPriority_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        }
+    }
+
+    public boolean getHaPriority_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY);
     }
 
     public VmUpdateParamsData ha(Boolean ha) {
@@ -405,6 +453,7 @@ public class VmUpdateParamsData
         }
         VmUpdateParamsData vmUpdateParamsData = (VmUpdateParamsData) o;
         return Objects.equals(this.vcpu, vmUpdateParamsData.vcpu)
+                && Objects.equals(this.haPriority, vmUpdateParamsData.haPriority)
                 && Objects.equals(this.ha, vmUpdateParamsData.ha)
                 && Objects.equals(this.memoryUnit, vmUpdateParamsData.memoryUnit)
                 && Objects.equals(this.memory, vmUpdateParamsData.memory)
@@ -416,7 +465,8 @@ public class VmUpdateParamsData
 
     @Override
     public int hashCode() {
-        return Objects.hash(vcpu, ha, memoryUnit, memory, cpuCores, cpuSockets, description, name);
+        return Objects.hash(
+                vcpu, haPriority, ha, memoryUnit, memory, cpuCores, cpuSockets, description, name);
     }
 
     @Override
@@ -424,6 +474,7 @@ public class VmUpdateParamsData
         StringBuilder sb = new StringBuilder();
         sb.append("class VmUpdateParamsData {\n");
         sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
+        sb.append("    haPriority: ").append(toIndentedString(haPriority)).append("\n");
         sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
         sb.append("    memoryUnit: ").append(toIndentedString(memoryUnit)).append("\n");
         sb.append("    memory: ").append(toIndentedString(memory)).append("\n");

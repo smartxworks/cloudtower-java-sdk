@@ -5,68 +5,66 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** UpdateCloudTowerApplicationVmSpecParams */
+/** ClusterEnablePinInPerformanceDiskPoolType */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
-public class UpdateCloudTowerApplicationVmSpecParams
+public class ClusterEnablePinInPerformanceDiskPoolType
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
-    public static final String SERIALIZED_NAME_DATA = "data";
+    public static final String SERIALIZED_NAME_PERCENTAGE = "percentage";
 
-    @SerializedName(SERIALIZED_NAME_DATA)
-    private UpdateCloudTowerApplicationVmSpecParamsData data;
+    @SerializedName(SERIALIZED_NAME_PERCENTAGE)
+    private Double percentage;
 
     public static final String SERIALIZED_NAME_WHERE = "where";
 
     @SerializedName(SERIALIZED_NAME_WHERE)
-    private CloudTowerApplicationWhereUniqueInput where;
+    private DiskPoolWhereUniqueInput where;
 
-    public UpdateCloudTowerApplicationVmSpecParams() {}
+    public ClusterEnablePinInPerformanceDiskPoolType() {}
 
-    public UpdateCloudTowerApplicationVmSpecParams data(
-            UpdateCloudTowerApplicationVmSpecParamsData data) {
+    public ClusterEnablePinInPerformanceDiskPoolType percentage(Double percentage) {
 
-        this.data = data;
+        this.percentage = percentage;
         return this;
     }
 
     /**
-     * Get data
+     * Get percentage
      *
-     * @return data
+     * @return percentage
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(required = true, value = "")
-    public UpdateCloudTowerApplicationVmSpecParamsData getData() {
-        return data;
+    public Double getPercentage() {
+        return percentage;
     }
 
-    public void setData(UpdateCloudTowerApplicationVmSpecParamsData data) {
-        this.data = data;
+    public void setPercentage(Double percentage) {
+        this.percentage = percentage;
     }
 
-    public UpdateCloudTowerApplicationVmSpecParams data_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_DATA);
+    public ClusterEnablePinInPerformanceDiskPoolType percentage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERCENTAGE);
         return this;
     }
 
-    public UpdateCloudTowerApplicationVmSpecParams data_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_DATA);
+    public ClusterEnablePinInPerformanceDiskPoolType percentage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERCENTAGE);
         return this;
     }
 
-    public void setData_IsExplictlyNull(boolean isExplictlyNull) {
+    public void setPercentage_IsExplictlyNull(boolean isExplictlyNull) {
         if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_DATA);
+            this._isPresent_.add(SERIALIZED_NAME_PERCENTAGE);
         } else {
-            this._isPresent_.remove(SERIALIZED_NAME_DATA);
+            this._isPresent_.remove(SERIALIZED_NAME_PERCENTAGE);
         }
     }
 
-    public boolean getData_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_DATA);
+    public boolean getPercentage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERCENTAGE);
     }
 
-    public UpdateCloudTowerApplicationVmSpecParams where(
-            CloudTowerApplicationWhereUniqueInput where) {
+    public ClusterEnablePinInPerformanceDiskPoolType where(DiskPoolWhereUniqueInput where) {
 
         this.where = where;
         return this;
@@ -79,20 +77,20 @@ public class UpdateCloudTowerApplicationVmSpecParams
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(required = true, value = "")
-    public CloudTowerApplicationWhereUniqueInput getWhere() {
+    public DiskPoolWhereUniqueInput getWhere() {
         return where;
     }
 
-    public void setWhere(CloudTowerApplicationWhereUniqueInput where) {
+    public void setWhere(DiskPoolWhereUniqueInput where) {
         this.where = where;
     }
 
-    public UpdateCloudTowerApplicationVmSpecParams where_ExplictlyNull() {
+    public ClusterEnablePinInPerformanceDiskPoolType where_ExplictlyNull() {
         this._isPresent_.add(SERIALIZED_NAME_WHERE);
         return this;
     }
 
-    public UpdateCloudTowerApplicationVmSpecParams where_ExplictlyNonNull() {
+    public ClusterEnablePinInPerformanceDiskPoolType where_ExplictlyNonNull() {
         this._isPresent_.remove(SERIALIZED_NAME_WHERE);
         return this;
     }
@@ -117,22 +115,22 @@ public class UpdateCloudTowerApplicationVmSpecParams
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        UpdateCloudTowerApplicationVmSpecParams updateCloudTowerApplicationVmSpecParams =
-                (UpdateCloudTowerApplicationVmSpecParams) o;
-        return Objects.equals(this.data, updateCloudTowerApplicationVmSpecParams.data)
-                && Objects.equals(this.where, updateCloudTowerApplicationVmSpecParams.where);
+        ClusterEnablePinInPerformanceDiskPoolType clusterEnablePinInPerformanceDiskPoolType =
+                (ClusterEnablePinInPerformanceDiskPoolType) o;
+        return Objects.equals(this.percentage, clusterEnablePinInPerformanceDiskPoolType.percentage)
+                && Objects.equals(this.where, clusterEnablePinInPerformanceDiskPoolType.where);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(data, where);
+        return Objects.hash(percentage, where);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class UpdateCloudTowerApplicationVmSpecParams {\n");
-        sb.append("    data: ").append(toIndentedString(data)).append("\n");
+        sb.append("class ClusterEnablePinInPerformanceDiskPoolType {\n");
+        sb.append("    percentage: ").append(toIndentedString(percentage)).append("\n");
         sb.append("    where: ").append(toIndentedString(where)).append("\n");
         sb.append("}");
         return sb.toString();

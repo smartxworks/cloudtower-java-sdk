@@ -194,6 +194,102 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_NOT_IN)
     private List<Long> allocatableMemoryBytesNotIn = null;
 
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE =
+            "allocated_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE)
+    private Long allocatedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT =
+            "allocated_prioritized_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT)
+    private Long allocatedPrioritizedSpaceGt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE =
+            "allocated_prioritized_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE)
+    private Long allocatedPrioritizedSpaceGte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN =
+            "allocated_prioritized_space_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN)
+    private List<Long> allocatedPrioritizedSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT =
+            "allocated_prioritized_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT)
+    private Long allocatedPrioritizedSpaceLt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE =
+            "allocated_prioritized_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE)
+    private Long allocatedPrioritizedSpaceLte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT =
+            "allocated_prioritized_space_not";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT)
+    private Long allocatedPrioritizedSpaceNot;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN =
+            "allocated_prioritized_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN)
+    private List<Long> allocatedPrioritizedSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE =
+            "allocated_prioritized_space_usage";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE)
+    private Double allocatedPrioritizedSpaceUsage;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT =
+            "allocated_prioritized_space_usage_gt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT)
+    private Double allocatedPrioritizedSpaceUsageGt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE =
+            "allocated_prioritized_space_usage_gte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE)
+    private Double allocatedPrioritizedSpaceUsageGte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN =
+            "allocated_prioritized_space_usage_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN)
+    private List<Double> allocatedPrioritizedSpaceUsageIn = null;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT =
+            "allocated_prioritized_space_usage_lt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT)
+    private Double allocatedPrioritizedSpaceUsageLt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE =
+            "allocated_prioritized_space_usage_lte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE)
+    private Double allocatedPrioritizedSpaceUsageLte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT =
+            "allocated_prioritized_space_usage_not";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT)
+    private Double allocatedPrioritizedSpaceUsageNot;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN =
+            "allocated_prioritized_space_usage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN)
+    private List<Double> allocatedPrioritizedSpaceUsageNotIn = null;
+
     public static final String SERIALIZED_NAME_CHUNK_ID = "chunk_id";
 
     @SerializedName(SERIALIZED_NAME_CHUNK_ID)
@@ -269,6 +365,73 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     @SerializedName(SERIALIZED_NAME_CLUSTER)
     private ClusterWhereInput cluster;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES = "commited_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES)
+    private Long commitedMemoryBytes;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT =
+            "commited_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT)
+    private Long commitedMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE =
+            "commited_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE)
+    private Long commitedMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN =
+            "commited_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN)
+    private List<Long> commitedMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT =
+            "commited_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT)
+    private Long commitedMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE =
+            "commited_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE)
+    private Long commitedMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT =
+            "commited_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT)
+    private Long commitedMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN =
+            "commited_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN)
+    private List<Long> commitedMemoryBytesNotIn = null;
+
+    public static final String SERIALIZED_NAME_CONNECT_STATUS = "connect_status";
+
+    @SerializedName(SERIALIZED_NAME_CONNECT_STATUS)
+    private HostConnectStatus connectStatus;
+
+    public static final String SERIALIZED_NAME_CONNECT_STATUS_IN = "connect_status_in";
+
+    @SerializedName(SERIALIZED_NAME_CONNECT_STATUS_IN)
+    private List<HostConnectStatus> connectStatusIn = null;
+
+    public static final String SERIALIZED_NAME_CONNECT_STATUS_NOT = "connect_status_not";
+
+    @SerializedName(SERIALIZED_NAME_CONNECT_STATUS_NOT)
+    private HostConnectStatus connectStatusNot;
+
+    public static final String SERIALIZED_NAME_CONNECT_STATUS_NOT_IN = "connect_status_not_in";
+
+    @SerializedName(SERIALIZED_NAME_CONNECT_STATUS_NOT_IN)
+    private List<HostConnectStatus> connectStatusNotIn = null;
 
     public static final String SERIALIZED_NAME_CPU_BRAND = "cpu_brand";
 
@@ -615,6 +778,21 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_DATA_IP_STARTS_WITH)
     private String dataIpStartsWith;
 
+    public static final String SERIALIZED_NAME_DISK_POOLS_EVERY = "disk_pools_every";
+
+    @SerializedName(SERIALIZED_NAME_DISK_POOLS_EVERY)
+    private DiskPoolWhereInput diskPoolsEvery;
+
+    public static final String SERIALIZED_NAME_DISK_POOLS_NONE = "disk_pools_none";
+
+    @SerializedName(SERIALIZED_NAME_DISK_POOLS_NONE)
+    private DiskPoolWhereInput diskPoolsNone;
+
+    public static final String SERIALIZED_NAME_DISK_POOLS_SOME = "disk_pools_some";
+
+    @SerializedName(SERIALIZED_NAME_DISK_POOLS_SOME)
+    private DiskPoolWhereInput diskPoolsSome;
+
     public static final String SERIALIZED_NAME_DISKS_EVERY = "disks_every";
 
     @SerializedName(SERIALIZED_NAME_DISKS_EVERY)
@@ -629,6 +807,54 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     @SerializedName(SERIALIZED_NAME_DISKS_SOME)
     private DiskWhereInput disksSome;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE =
+            "downgraded_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE)
+    private Long downgradedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT =
+            "downgraded_prioritized_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT)
+    private Long downgradedPrioritizedSpaceGt;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE =
+            "downgraded_prioritized_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE)
+    private Long downgradedPrioritizedSpaceGte;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN =
+            "downgraded_prioritized_space_in";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN)
+    private List<Long> downgradedPrioritizedSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT =
+            "downgraded_prioritized_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT)
+    private Long downgradedPrioritizedSpaceLt;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE =
+            "downgraded_prioritized_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE)
+    private Long downgradedPrioritizedSpaceLte;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT =
+            "downgraded_prioritized_space_not";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT)
+    private Long downgradedPrioritizedSpaceNot;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN =
+            "downgraded_prioritized_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN)
+    private List<Long> downgradedPrioritizedSpaceNotIn = null;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -1139,6 +1365,26 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_MANAGEMENT_IP_STARTS_WITH)
     private String managementIpStartsWith;
 
+    public static final String SERIALIZED_NAME_MERGED_STATUS = "merged_status";
+
+    @SerializedName(SERIALIZED_NAME_MERGED_STATUS)
+    private HostMergedStatus mergedStatus;
+
+    public static final String SERIALIZED_NAME_MERGED_STATUS_IN = "merged_status_in";
+
+    @SerializedName(SERIALIZED_NAME_MERGED_STATUS_IN)
+    private List<HostMergedStatus> mergedStatusIn = null;
+
+    public static final String SERIALIZED_NAME_MERGED_STATUS_NOT = "merged_status_not";
+
+    @SerializedName(SERIALIZED_NAME_MERGED_STATUS_NOT)
+    private HostMergedStatus mergedStatusNot;
+
+    public static final String SERIALIZED_NAME_MERGED_STATUS_NOT_IN = "merged_status_not_in";
+
+    @SerializedName(SERIALIZED_NAME_MERGED_STATUS_NOT_IN)
+    private List<HostMergedStatus> mergedStatusNotIn = null;
+
     public static final String SERIALIZED_NAME_MODEL = "model";
 
     @SerializedName(SERIALIZED_NAME_MODEL)
@@ -1534,6 +1780,288 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_OS_VERSION_STARTS_WITH)
     private String osVersionStartsWith;
 
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE =
+            "perf_allocated_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE)
+    private Long perfAllocatedDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT =
+            "perf_allocated_data_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT)
+    private Long perfAllocatedDataSpaceGt;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE =
+            "perf_allocated_data_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE)
+    private Long perfAllocatedDataSpaceGte;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN =
+            "perf_allocated_data_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN)
+    private List<Long> perfAllocatedDataSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT =
+            "perf_allocated_data_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT)
+    private Long perfAllocatedDataSpaceLt;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE =
+            "perf_allocated_data_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE)
+    private Long perfAllocatedDataSpaceLte;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT =
+            "perf_allocated_data_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT)
+    private Long perfAllocatedDataSpaceNot;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN =
+            "perf_allocated_data_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN)
+    private List<Long> perfAllocatedDataSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE = "perf_failure_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE)
+    private Long perfFailureDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT =
+            "perf_failure_data_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT)
+    private Long perfFailureDataSpaceGt;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE =
+            "perf_failure_data_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE)
+    private Long perfFailureDataSpaceGte;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN =
+            "perf_failure_data_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN)
+    private List<Long> perfFailureDataSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT =
+            "perf_failure_data_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT)
+    private Long perfFailureDataSpaceLt;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE =
+            "perf_failure_data_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE)
+    private Long perfFailureDataSpaceLte;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT =
+            "perf_failure_data_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT)
+    private Long perfFailureDataSpaceNot;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN =
+            "perf_failure_data_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN)
+    private List<Long> perfFailureDataSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY =
+            "perf_total_data_capacity";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY)
+    private Long perfTotalDataCapacity;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT =
+            "perf_total_data_capacity_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT)
+    private Long perfTotalDataCapacityGt;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE =
+            "perf_total_data_capacity_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE)
+    private Long perfTotalDataCapacityGte;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN =
+            "perf_total_data_capacity_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN)
+    private List<Long> perfTotalDataCapacityIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT =
+            "perf_total_data_capacity_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT)
+    private Long perfTotalDataCapacityLt;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE =
+            "perf_total_data_capacity_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE)
+    private Long perfTotalDataCapacityLte;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT =
+            "perf_total_data_capacity_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT)
+    private Long perfTotalDataCapacityNot;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN =
+            "perf_total_data_capacity_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN)
+    private List<Long> perfTotalDataCapacityNotIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE = "perf_used_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE)
+    private Long perfUsedDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT = "perf_used_data_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT)
+    private Long perfUsedDataSpaceGt;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE =
+            "perf_used_data_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE)
+    private Long perfUsedDataSpaceGte;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN = "perf_used_data_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN)
+    private List<Long> perfUsedDataSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT = "perf_used_data_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT)
+    private Long perfUsedDataSpaceLt;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE =
+            "perf_used_data_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE)
+    private Long perfUsedDataSpaceLte;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT =
+            "perf_used_data_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT)
+    private Long perfUsedDataSpaceNot;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN =
+            "perf_used_data_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN)
+    private List<Long> perfUsedDataSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE = "perf_valid_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE)
+    private Long perfValidDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT =
+            "perf_valid_data_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT)
+    private Long perfValidDataSpaceGt;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE =
+            "perf_valid_data_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE)
+    private Long perfValidDataSpaceGte;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN =
+            "perf_valid_data_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN)
+    private List<Long> perfValidDataSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT =
+            "perf_valid_data_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT)
+    private Long perfValidDataSpaceLt;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE =
+            "perf_valid_data_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE)
+    private Long perfValidDataSpaceLte;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT =
+            "perf_valid_data_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT)
+    private Long perfValidDataSpaceNot;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN =
+            "perf_valid_data_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN)
+    private List<Long> perfValidDataSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE =
+            "planned_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE)
+    private Long plannedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT =
+            "planned_prioritized_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT)
+    private Long plannedPrioritizedSpaceGt;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE =
+            "planned_prioritized_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE)
+    private Long plannedPrioritizedSpaceGte;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN =
+            "planned_prioritized_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN)
+    private List<Long> plannedPrioritizedSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT =
+            "planned_prioritized_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT)
+    private Long plannedPrioritizedSpaceLt;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE =
+            "planned_prioritized_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE)
+    private Long plannedPrioritizedSpaceLte;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT =
+            "planned_prioritized_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT)
+    private Long plannedPrioritizedSpaceNot;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN =
+            "planned_prioritized_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN)
+    private List<Long> plannedPrioritizedSpaceNotIn = null;
+
     public static final String SERIALIZED_NAME_PMEM_DIMM_CAPACITY = "pmem_dimm_capacity";
 
     @SerializedName(SERIALIZED_NAME_PMEM_DIMM_CAPACITY)
@@ -1669,6 +2197,53 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     @SerializedName(SERIALIZED_NAME_PMEM_DISK_COUNT_NOT_IN)
     private List<Integer> pmemDiskCountNotIn = null;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE = "prio_space_percentage";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE)
+    private Double prioSpacePercentage;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT =
+            "prio_space_percentage_gt";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT)
+    private Double prioSpacePercentageGt;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE =
+            "prio_space_percentage_gte";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE)
+    private Double prioSpacePercentageGte;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN =
+            "prio_space_percentage_in";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN)
+    private List<Double> prioSpacePercentageIn = null;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT =
+            "prio_space_percentage_lt";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT)
+    private Double prioSpacePercentageLt;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE =
+            "prio_space_percentage_lte";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE)
+    private Double prioSpacePercentageLte;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT =
+            "prio_space_percentage_not";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT)
+    private Double prioSpacePercentageNot;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN =
+            "prio_space_percentage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN)
+    private List<Double> prioSpacePercentageNotIn = null;
 
     public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES = "provisioned_cpu_cores";
 
@@ -2537,6 +3112,46 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_USB_DEVICES_SOME)
     private UsbDeviceWhereInput usbDevicesSome;
 
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE = "used_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE)
+    private Long usedCacheSpace;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_GT = "used_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_GT)
+    private Long usedCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_GTE = "used_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_GTE)
+    private Long usedCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_IN = "used_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_IN)
+    private List<Long> usedCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_LT = "used_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_LT)
+    private Long usedCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_LTE = "used_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_LTE)
+    private Long usedCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_NOT = "used_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_NOT)
+    private Long usedCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN = "used_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN)
+    private List<Long> usedCacheSpaceNotIn = null;
+
     public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
 
     @SerializedName(SERIALIZED_NAME_USED_CPU_HZ)
@@ -2657,6 +3272,94 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN)
     private List<Double> usedMemoryBytesNotIn = null;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE = "valid_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE)
+    private Long validCacheSpace;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_GT = "valid_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_GT)
+    private Long validCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_GTE = "valid_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE)
+    private Long validCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_IN = "valid_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_IN)
+    private List<Long> validCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_LT = "valid_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_LT)
+    private Long validCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_LTE = "valid_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE)
+    private Long validCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_NOT = "valid_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT)
+    private Long validCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN =
+            "valid_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN)
+    private List<Long> validCacheSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_VALID_FREE_CACHE_SPACE = "valid_free_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE)
+    private Long validFreeCacheSpace;
+
+    public static final String SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GT =
+            "valid_free_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GT)
+    private Long validFreeCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GTE =
+            "valid_free_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GTE)
+    private Long validFreeCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_IN =
+            "valid_free_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_IN)
+    private List<Long> validFreeCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LT =
+            "valid_free_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LT)
+    private Long validFreeCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LTE =
+            "valid_free_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LTE)
+    private Long validFreeCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT =
+            "valid_free_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT)
+    private Long validFreeCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT_IN =
+            "valid_free_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT_IN)
+    private List<Long> validFreeCacheSpaceNotIn = null;
 
     public static final String SERIALIZED_NAME_VM_NUM = "vm_num";
 
@@ -4312,6 +5015,738 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATABLE_MEMORY_BYTES_NOT_IN);
     }
 
+    public HostWhereInput allocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
+
+        this.allocatedPrioritizedSpace = allocatedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpace
+     *
+     * @return allocatedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpace() {
+        return allocatedPrioritizedSpace;
+    }
+
+    public void setAllocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
+        this.allocatedPrioritizedSpace = allocatedPrioritizedSpace;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceGt(Long allocatedPrioritizedSpaceGt) {
+
+        this.allocatedPrioritizedSpaceGt = allocatedPrioritizedSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceGt
+     *
+     * @return allocatedPrioritizedSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceGt() {
+        return allocatedPrioritizedSpaceGt;
+    }
+
+    public void setAllocatedPrioritizedSpaceGt(Long allocatedPrioritizedSpaceGt) {
+        this.allocatedPrioritizedSpaceGt = allocatedPrioritizedSpaceGt;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceGte(Long allocatedPrioritizedSpaceGte) {
+
+        this.allocatedPrioritizedSpaceGte = allocatedPrioritizedSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceGte
+     *
+     * @return allocatedPrioritizedSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceGte() {
+        return allocatedPrioritizedSpaceGte;
+    }
+
+    public void setAllocatedPrioritizedSpaceGte(Long allocatedPrioritizedSpaceGte) {
+        this.allocatedPrioritizedSpaceGte = allocatedPrioritizedSpaceGte;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceIn(List<Long> allocatedPrioritizedSpaceIn) {
+
+        this.allocatedPrioritizedSpaceIn = allocatedPrioritizedSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addAllocatedPrioritizedSpaceInItem(Long allocatedPrioritizedSpaceInItem) {
+        if (this.allocatedPrioritizedSpaceIn == null) {
+            this.allocatedPrioritizedSpaceIn = new ArrayList<Long>();
+        }
+        this.allocatedPrioritizedSpaceIn.add(allocatedPrioritizedSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceIn
+     *
+     * @return allocatedPrioritizedSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getAllocatedPrioritizedSpaceIn() {
+        return allocatedPrioritizedSpaceIn;
+    }
+
+    public void setAllocatedPrioritizedSpaceIn(List<Long> allocatedPrioritizedSpaceIn) {
+        this.allocatedPrioritizedSpaceIn = allocatedPrioritizedSpaceIn;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceLt(Long allocatedPrioritizedSpaceLt) {
+
+        this.allocatedPrioritizedSpaceLt = allocatedPrioritizedSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceLt
+     *
+     * @return allocatedPrioritizedSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceLt() {
+        return allocatedPrioritizedSpaceLt;
+    }
+
+    public void setAllocatedPrioritizedSpaceLt(Long allocatedPrioritizedSpaceLt) {
+        this.allocatedPrioritizedSpaceLt = allocatedPrioritizedSpaceLt;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceLte(Long allocatedPrioritizedSpaceLte) {
+
+        this.allocatedPrioritizedSpaceLte = allocatedPrioritizedSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceLte
+     *
+     * @return allocatedPrioritizedSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceLte() {
+        return allocatedPrioritizedSpaceLte;
+    }
+
+    public void setAllocatedPrioritizedSpaceLte(Long allocatedPrioritizedSpaceLte) {
+        this.allocatedPrioritizedSpaceLte = allocatedPrioritizedSpaceLte;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceNot(Long allocatedPrioritizedSpaceNot) {
+
+        this.allocatedPrioritizedSpaceNot = allocatedPrioritizedSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceNot
+     *
+     * @return allocatedPrioritizedSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceNot() {
+        return allocatedPrioritizedSpaceNot;
+    }
+
+    public void setAllocatedPrioritizedSpaceNot(Long allocatedPrioritizedSpaceNot) {
+        this.allocatedPrioritizedSpaceNot = allocatedPrioritizedSpaceNot;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceNotIn(
+            List<Long> allocatedPrioritizedSpaceNotIn) {
+
+        this.allocatedPrioritizedSpaceNotIn = allocatedPrioritizedSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addAllocatedPrioritizedSpaceNotInItem(
+            Long allocatedPrioritizedSpaceNotInItem) {
+        if (this.allocatedPrioritizedSpaceNotIn == null) {
+            this.allocatedPrioritizedSpaceNotIn = new ArrayList<Long>();
+        }
+        this.allocatedPrioritizedSpaceNotIn.add(allocatedPrioritizedSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceNotIn
+     *
+     * @return allocatedPrioritizedSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getAllocatedPrioritizedSpaceNotIn() {
+        return allocatedPrioritizedSpaceNotIn;
+    }
+
+    public void setAllocatedPrioritizedSpaceNotIn(List<Long> allocatedPrioritizedSpaceNotIn) {
+        this.allocatedPrioritizedSpaceNotIn = allocatedPrioritizedSpaceNotIn;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsage(Double allocatedPrioritizedSpaceUsage) {
+
+        this.allocatedPrioritizedSpaceUsage = allocatedPrioritizedSpaceUsage;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsage
+     *
+     * @return allocatedPrioritizedSpaceUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsage() {
+        return allocatedPrioritizedSpaceUsage;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsage(Double allocatedPrioritizedSpaceUsage) {
+        this.allocatedPrioritizedSpaceUsage = allocatedPrioritizedSpaceUsage;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageGt(
+            Double allocatedPrioritizedSpaceUsageGt) {
+
+        this.allocatedPrioritizedSpaceUsageGt = allocatedPrioritizedSpaceUsageGt;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageGt
+     *
+     * @return allocatedPrioritizedSpaceUsageGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageGt() {
+        return allocatedPrioritizedSpaceUsageGt;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageGt(Double allocatedPrioritizedSpaceUsageGt) {
+        this.allocatedPrioritizedSpaceUsageGt = allocatedPrioritizedSpaceUsageGt;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageGte(
+            Double allocatedPrioritizedSpaceUsageGte) {
+
+        this.allocatedPrioritizedSpaceUsageGte = allocatedPrioritizedSpaceUsageGte;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageGte
+     *
+     * @return allocatedPrioritizedSpaceUsageGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageGte() {
+        return allocatedPrioritizedSpaceUsageGte;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageGte(Double allocatedPrioritizedSpaceUsageGte) {
+        this.allocatedPrioritizedSpaceUsageGte = allocatedPrioritizedSpaceUsageGte;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageIn(
+            List<Double> allocatedPrioritizedSpaceUsageIn) {
+
+        this.allocatedPrioritizedSpaceUsageIn = allocatedPrioritizedSpaceUsageIn;
+        return this;
+    }
+
+    public HostWhereInput addAllocatedPrioritizedSpaceUsageInItem(
+            Double allocatedPrioritizedSpaceUsageInItem) {
+        if (this.allocatedPrioritizedSpaceUsageIn == null) {
+            this.allocatedPrioritizedSpaceUsageIn = new ArrayList<Double>();
+        }
+        this.allocatedPrioritizedSpaceUsageIn.add(allocatedPrioritizedSpaceUsageInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageIn
+     *
+     * @return allocatedPrioritizedSpaceUsageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getAllocatedPrioritizedSpaceUsageIn() {
+        return allocatedPrioritizedSpaceUsageIn;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageIn(List<Double> allocatedPrioritizedSpaceUsageIn) {
+        this.allocatedPrioritizedSpaceUsageIn = allocatedPrioritizedSpaceUsageIn;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageLt(
+            Double allocatedPrioritizedSpaceUsageLt) {
+
+        this.allocatedPrioritizedSpaceUsageLt = allocatedPrioritizedSpaceUsageLt;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageLt
+     *
+     * @return allocatedPrioritizedSpaceUsageLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageLt() {
+        return allocatedPrioritizedSpaceUsageLt;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageLt(Double allocatedPrioritizedSpaceUsageLt) {
+        this.allocatedPrioritizedSpaceUsageLt = allocatedPrioritizedSpaceUsageLt;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageLte(
+            Double allocatedPrioritizedSpaceUsageLte) {
+
+        this.allocatedPrioritizedSpaceUsageLte = allocatedPrioritizedSpaceUsageLte;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageLte
+     *
+     * @return allocatedPrioritizedSpaceUsageLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageLte() {
+        return allocatedPrioritizedSpaceUsageLte;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageLte(Double allocatedPrioritizedSpaceUsageLte) {
+        this.allocatedPrioritizedSpaceUsageLte = allocatedPrioritizedSpaceUsageLte;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageNot(
+            Double allocatedPrioritizedSpaceUsageNot) {
+
+        this.allocatedPrioritizedSpaceUsageNot = allocatedPrioritizedSpaceUsageNot;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageNot
+     *
+     * @return allocatedPrioritizedSpaceUsageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageNot() {
+        return allocatedPrioritizedSpaceUsageNot;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageNot(Double allocatedPrioritizedSpaceUsageNot) {
+        this.allocatedPrioritizedSpaceUsageNot = allocatedPrioritizedSpaceUsageNot;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageNotIn(
+            List<Double> allocatedPrioritizedSpaceUsageNotIn) {
+
+        this.allocatedPrioritizedSpaceUsageNotIn = allocatedPrioritizedSpaceUsageNotIn;
+        return this;
+    }
+
+    public HostWhereInput addAllocatedPrioritizedSpaceUsageNotInItem(
+            Double allocatedPrioritizedSpaceUsageNotInItem) {
+        if (this.allocatedPrioritizedSpaceUsageNotIn == null) {
+            this.allocatedPrioritizedSpaceUsageNotIn = new ArrayList<Double>();
+        }
+        this.allocatedPrioritizedSpaceUsageNotIn.add(allocatedPrioritizedSpaceUsageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageNotIn
+     *
+     * @return allocatedPrioritizedSpaceUsageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getAllocatedPrioritizedSpaceUsageNotIn() {
+        return allocatedPrioritizedSpaceUsageNotIn;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageNotIn(
+            List<Double> allocatedPrioritizedSpaceUsageNotIn) {
+        this.allocatedPrioritizedSpaceUsageNotIn = allocatedPrioritizedSpaceUsageNotIn;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput allocatedPrioritizedSpaceUsageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
+    }
+
     public HostWhereInput chunkId(String chunkId) {
 
         this.chunkId = chunkId;
@@ -4971,6 +6406,554 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     public boolean getCluster_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER);
+    }
+
+    public HostWhereInput commitedMemoryBytes(Long commitedMemoryBytes) {
+
+        this.commitedMemoryBytes = commitedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytes
+     *
+     * @return commitedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytes() {
+        return commitedMemoryBytes;
+    }
+
+    public void setCommitedMemoryBytes(Long commitedMemoryBytes) {
+        this.commitedMemoryBytes = commitedMemoryBytes;
+    }
+
+    public HostWhereInput commitedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        return this;
+    }
+
+    public HostWhereInput commitedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setCommitedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getCommitedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+    }
+
+    public HostWhereInput commitedMemoryBytesGt(Long commitedMemoryBytesGt) {
+
+        this.commitedMemoryBytesGt = commitedMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesGt
+     *
+     * @return commitedMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesGt() {
+        return commitedMemoryBytesGt;
+    }
+
+    public void setCommitedMemoryBytesGt(Long commitedMemoryBytesGt) {
+        this.commitedMemoryBytesGt = commitedMemoryBytesGt;
+    }
+
+    public HostWhereInput commitedMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public HostWhereInput commitedMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+    }
+
+    public HostWhereInput commitedMemoryBytesGte(Long commitedMemoryBytesGte) {
+
+        this.commitedMemoryBytesGte = commitedMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesGte
+     *
+     * @return commitedMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesGte() {
+        return commitedMemoryBytesGte;
+    }
+
+    public void setCommitedMemoryBytesGte(Long commitedMemoryBytesGte) {
+        this.commitedMemoryBytesGte = commitedMemoryBytesGte;
+    }
+
+    public HostWhereInput commitedMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public HostWhereInput commitedMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+    }
+
+    public HostWhereInput commitedMemoryBytesIn(List<Long> commitedMemoryBytesIn) {
+
+        this.commitedMemoryBytesIn = commitedMemoryBytesIn;
+        return this;
+    }
+
+    public HostWhereInput addCommitedMemoryBytesInItem(Long commitedMemoryBytesInItem) {
+        if (this.commitedMemoryBytesIn == null) {
+            this.commitedMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.commitedMemoryBytesIn.add(commitedMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesIn
+     *
+     * @return commitedMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getCommitedMemoryBytesIn() {
+        return commitedMemoryBytesIn;
+    }
+
+    public void setCommitedMemoryBytesIn(List<Long> commitedMemoryBytesIn) {
+        this.commitedMemoryBytesIn = commitedMemoryBytesIn;
+    }
+
+    public HostWhereInput commitedMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public HostWhereInput commitedMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+    }
+
+    public HostWhereInput commitedMemoryBytesLt(Long commitedMemoryBytesLt) {
+
+        this.commitedMemoryBytesLt = commitedMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesLt
+     *
+     * @return commitedMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesLt() {
+        return commitedMemoryBytesLt;
+    }
+
+    public void setCommitedMemoryBytesLt(Long commitedMemoryBytesLt) {
+        this.commitedMemoryBytesLt = commitedMemoryBytesLt;
+    }
+
+    public HostWhereInput commitedMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public HostWhereInput commitedMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+    }
+
+    public HostWhereInput commitedMemoryBytesLte(Long commitedMemoryBytesLte) {
+
+        this.commitedMemoryBytesLte = commitedMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesLte
+     *
+     * @return commitedMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesLte() {
+        return commitedMemoryBytesLte;
+    }
+
+    public void setCommitedMemoryBytesLte(Long commitedMemoryBytesLte) {
+        this.commitedMemoryBytesLte = commitedMemoryBytesLte;
+    }
+
+    public HostWhereInput commitedMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public HostWhereInput commitedMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+    }
+
+    public HostWhereInput commitedMemoryBytesNot(Long commitedMemoryBytesNot) {
+
+        this.commitedMemoryBytesNot = commitedMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesNot
+     *
+     * @return commitedMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesNot() {
+        return commitedMemoryBytesNot;
+    }
+
+    public void setCommitedMemoryBytesNot(Long commitedMemoryBytesNot) {
+        this.commitedMemoryBytesNot = commitedMemoryBytesNot;
+    }
+
+    public HostWhereInput commitedMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public HostWhereInput commitedMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+    }
+
+    public HostWhereInput commitedMemoryBytesNotIn(List<Long> commitedMemoryBytesNotIn) {
+
+        this.commitedMemoryBytesNotIn = commitedMemoryBytesNotIn;
+        return this;
+    }
+
+    public HostWhereInput addCommitedMemoryBytesNotInItem(Long commitedMemoryBytesNotInItem) {
+        if (this.commitedMemoryBytesNotIn == null) {
+            this.commitedMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.commitedMemoryBytesNotIn.add(commitedMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesNotIn
+     *
+     * @return commitedMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getCommitedMemoryBytesNotIn() {
+        return commitedMemoryBytesNotIn;
+    }
+
+    public void setCommitedMemoryBytesNotIn(List<Long> commitedMemoryBytesNotIn) {
+        this.commitedMemoryBytesNotIn = commitedMemoryBytesNotIn;
+    }
+
+    public HostWhereInput commitedMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput commitedMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+    }
+
+    public HostWhereInput connectStatus(HostConnectStatus connectStatus) {
+
+        this.connectStatus = connectStatus;
+        return this;
+    }
+
+    /**
+     * Get connectStatus
+     *
+     * @return connectStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public HostConnectStatus getConnectStatus() {
+        return connectStatus;
+    }
+
+    public void setConnectStatus(HostConnectStatus connectStatus) {
+        this.connectStatus = connectStatus;
+    }
+
+    public HostWhereInput connectStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONNECT_STATUS);
+        return this;
+    }
+
+    public HostWhereInput connectStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONNECT_STATUS);
+        return this;
+    }
+
+    public void setConnectStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONNECT_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONNECT_STATUS);
+        }
+    }
+
+    public boolean getConnectStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONNECT_STATUS);
+    }
+
+    public HostWhereInput connectStatusIn(List<HostConnectStatus> connectStatusIn) {
+
+        this.connectStatusIn = connectStatusIn;
+        return this;
+    }
+
+    public HostWhereInput addConnectStatusInItem(HostConnectStatus connectStatusInItem) {
+        if (this.connectStatusIn == null) {
+            this.connectStatusIn = new ArrayList<HostConnectStatus>();
+        }
+        this.connectStatusIn.add(connectStatusInItem);
+        return this;
+    }
+
+    /**
+     * Get connectStatusIn
+     *
+     * @return connectStatusIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<HostConnectStatus> getConnectStatusIn() {
+        return connectStatusIn;
+    }
+
+    public void setConnectStatusIn(List<HostConnectStatus> connectStatusIn) {
+        this.connectStatusIn = connectStatusIn;
+    }
+
+    public HostWhereInput connectStatusIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONNECT_STATUS_IN);
+        return this;
+    }
+
+    public HostWhereInput connectStatusIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONNECT_STATUS_IN);
+        return this;
+    }
+
+    public void setConnectStatusIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONNECT_STATUS_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONNECT_STATUS_IN);
+        }
+    }
+
+    public boolean getConnectStatusIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONNECT_STATUS_IN);
+    }
+
+    public HostWhereInput connectStatusNot(HostConnectStatus connectStatusNot) {
+
+        this.connectStatusNot = connectStatusNot;
+        return this;
+    }
+
+    /**
+     * Get connectStatusNot
+     *
+     * @return connectStatusNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public HostConnectStatus getConnectStatusNot() {
+        return connectStatusNot;
+    }
+
+    public void setConnectStatusNot(HostConnectStatus connectStatusNot) {
+        this.connectStatusNot = connectStatusNot;
+    }
+
+    public HostWhereInput connectStatusNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONNECT_STATUS_NOT);
+        return this;
+    }
+
+    public HostWhereInput connectStatusNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONNECT_STATUS_NOT);
+        return this;
+    }
+
+    public void setConnectStatusNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONNECT_STATUS_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONNECT_STATUS_NOT);
+        }
+    }
+
+    public boolean getConnectStatusNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONNECT_STATUS_NOT);
+    }
+
+    public HostWhereInput connectStatusNotIn(List<HostConnectStatus> connectStatusNotIn) {
+
+        this.connectStatusNotIn = connectStatusNotIn;
+        return this;
+    }
+
+    public HostWhereInput addConnectStatusNotInItem(HostConnectStatus connectStatusNotInItem) {
+        if (this.connectStatusNotIn == null) {
+            this.connectStatusNotIn = new ArrayList<HostConnectStatus>();
+        }
+        this.connectStatusNotIn.add(connectStatusNotInItem);
+        return this;
+    }
+
+    /**
+     * Get connectStatusNotIn
+     *
+     * @return connectStatusNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<HostConnectStatus> getConnectStatusNotIn() {
+        return connectStatusNotIn;
+    }
+
+    public void setConnectStatusNotIn(List<HostConnectStatus> connectStatusNotIn) {
+        this.connectStatusNotIn = connectStatusNotIn;
+    }
+
+    public HostWhereInput connectStatusNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONNECT_STATUS_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput connectStatusNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONNECT_STATUS_NOT_IN);
+        return this;
+    }
+
+    public void setConnectStatusNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONNECT_STATUS_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONNECT_STATUS_NOT_IN);
+        }
+    }
+
+    public boolean getConnectStatusNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONNECT_STATUS_NOT_IN);
     }
 
     public HostWhereInput cpuBrand(String cpuBrand) {
@@ -7993,6 +9976,135 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         return this._isPresent_.contains(SERIALIZED_NAME_DATA_IP_STARTS_WITH);
     }
 
+    public HostWhereInput diskPoolsEvery(DiskPoolWhereInput diskPoolsEvery) {
+
+        this.diskPoolsEvery = diskPoolsEvery;
+        return this;
+    }
+
+    /**
+     * Get diskPoolsEvery
+     *
+     * @return diskPoolsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DiskPoolWhereInput getDiskPoolsEvery() {
+        return diskPoolsEvery;
+    }
+
+    public void setDiskPoolsEvery(DiskPoolWhereInput diskPoolsEvery) {
+        this.diskPoolsEvery = diskPoolsEvery;
+    }
+
+    public HostWhereInput diskPoolsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISK_POOLS_EVERY);
+        return this;
+    }
+
+    public HostWhereInput diskPoolsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISK_POOLS_EVERY);
+        return this;
+    }
+
+    public void setDiskPoolsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISK_POOLS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISK_POOLS_EVERY);
+        }
+    }
+
+    public boolean getDiskPoolsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISK_POOLS_EVERY);
+    }
+
+    public HostWhereInput diskPoolsNone(DiskPoolWhereInput diskPoolsNone) {
+
+        this.diskPoolsNone = diskPoolsNone;
+        return this;
+    }
+
+    /**
+     * Get diskPoolsNone
+     *
+     * @return diskPoolsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DiskPoolWhereInput getDiskPoolsNone() {
+        return diskPoolsNone;
+    }
+
+    public void setDiskPoolsNone(DiskPoolWhereInput diskPoolsNone) {
+        this.diskPoolsNone = diskPoolsNone;
+    }
+
+    public HostWhereInput diskPoolsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISK_POOLS_NONE);
+        return this;
+    }
+
+    public HostWhereInput diskPoolsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISK_POOLS_NONE);
+        return this;
+    }
+
+    public void setDiskPoolsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISK_POOLS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISK_POOLS_NONE);
+        }
+    }
+
+    public boolean getDiskPoolsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISK_POOLS_NONE);
+    }
+
+    public HostWhereInput diskPoolsSome(DiskPoolWhereInput diskPoolsSome) {
+
+        this.diskPoolsSome = diskPoolsSome;
+        return this;
+    }
+
+    /**
+     * Get diskPoolsSome
+     *
+     * @return diskPoolsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DiskPoolWhereInput getDiskPoolsSome() {
+        return diskPoolsSome;
+    }
+
+    public void setDiskPoolsSome(DiskPoolWhereInput diskPoolsSome) {
+        this.diskPoolsSome = diskPoolsSome;
+    }
+
+    public HostWhereInput diskPoolsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DISK_POOLS_SOME);
+        return this;
+    }
+
+    public HostWhereInput diskPoolsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DISK_POOLS_SOME);
+        return this;
+    }
+
+    public void setDiskPoolsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DISK_POOLS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DISK_POOLS_SOME);
+        }
+    }
+
+    public boolean getDiskPoolsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DISK_POOLS_SOME);
+    }
+
     public HostWhereInput disksEvery(DiskWhereInput disksEvery) {
 
         this.disksEvery = disksEvery;
@@ -8120,6 +10232,369 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     public boolean getDisksSome_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DISKS_SOME);
+    }
+
+    public HostWhereInput downgradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpace
+     *
+     * @return downgradedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpace() {
+        return downgradedPrioritizedSpace;
+    }
+
+    public void setDowngradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceGt(Long downgradedPrioritizedSpaceGt) {
+
+        this.downgradedPrioritizedSpaceGt = downgradedPrioritizedSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceGt
+     *
+     * @return downgradedPrioritizedSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceGt() {
+        return downgradedPrioritizedSpaceGt;
+    }
+
+    public void setDowngradedPrioritizedSpaceGt(Long downgradedPrioritizedSpaceGt) {
+        this.downgradedPrioritizedSpaceGt = downgradedPrioritizedSpaceGt;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceGte(Long downgradedPrioritizedSpaceGte) {
+
+        this.downgradedPrioritizedSpaceGte = downgradedPrioritizedSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceGte
+     *
+     * @return downgradedPrioritizedSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceGte() {
+        return downgradedPrioritizedSpaceGte;
+    }
+
+    public void setDowngradedPrioritizedSpaceGte(Long downgradedPrioritizedSpaceGte) {
+        this.downgradedPrioritizedSpaceGte = downgradedPrioritizedSpaceGte;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceIn(List<Long> downgradedPrioritizedSpaceIn) {
+
+        this.downgradedPrioritizedSpaceIn = downgradedPrioritizedSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addDowngradedPrioritizedSpaceInItem(
+            Long downgradedPrioritizedSpaceInItem) {
+        if (this.downgradedPrioritizedSpaceIn == null) {
+            this.downgradedPrioritizedSpaceIn = new ArrayList<Long>();
+        }
+        this.downgradedPrioritizedSpaceIn.add(downgradedPrioritizedSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceIn
+     *
+     * @return downgradedPrioritizedSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDowngradedPrioritizedSpaceIn() {
+        return downgradedPrioritizedSpaceIn;
+    }
+
+    public void setDowngradedPrioritizedSpaceIn(List<Long> downgradedPrioritizedSpaceIn) {
+        this.downgradedPrioritizedSpaceIn = downgradedPrioritizedSpaceIn;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceLt(Long downgradedPrioritizedSpaceLt) {
+
+        this.downgradedPrioritizedSpaceLt = downgradedPrioritizedSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceLt
+     *
+     * @return downgradedPrioritizedSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceLt() {
+        return downgradedPrioritizedSpaceLt;
+    }
+
+    public void setDowngradedPrioritizedSpaceLt(Long downgradedPrioritizedSpaceLt) {
+        this.downgradedPrioritizedSpaceLt = downgradedPrioritizedSpaceLt;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceLte(Long downgradedPrioritizedSpaceLte) {
+
+        this.downgradedPrioritizedSpaceLte = downgradedPrioritizedSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceLte
+     *
+     * @return downgradedPrioritizedSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceLte() {
+        return downgradedPrioritizedSpaceLte;
+    }
+
+    public void setDowngradedPrioritizedSpaceLte(Long downgradedPrioritizedSpaceLte) {
+        this.downgradedPrioritizedSpaceLte = downgradedPrioritizedSpaceLte;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceNot(Long downgradedPrioritizedSpaceNot) {
+
+        this.downgradedPrioritizedSpaceNot = downgradedPrioritizedSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceNot
+     *
+     * @return downgradedPrioritizedSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceNot() {
+        return downgradedPrioritizedSpaceNot;
+    }
+
+    public void setDowngradedPrioritizedSpaceNot(Long downgradedPrioritizedSpaceNot) {
+        this.downgradedPrioritizedSpaceNot = downgradedPrioritizedSpaceNot;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceNotIn(
+            List<Long> downgradedPrioritizedSpaceNotIn) {
+
+        this.downgradedPrioritizedSpaceNotIn = downgradedPrioritizedSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addDowngradedPrioritizedSpaceNotInItem(
+            Long downgradedPrioritizedSpaceNotInItem) {
+        if (this.downgradedPrioritizedSpaceNotIn == null) {
+            this.downgradedPrioritizedSpaceNotIn = new ArrayList<Long>();
+        }
+        this.downgradedPrioritizedSpaceNotIn.add(downgradedPrioritizedSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceNotIn
+     *
+     * @return downgradedPrioritizedSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDowngradedPrioritizedSpaceNotIn() {
+        return downgradedPrioritizedSpaceNotIn;
+    }
+
+    public void setDowngradedPrioritizedSpaceNotIn(List<Long> downgradedPrioritizedSpaceNotIn) {
+        this.downgradedPrioritizedSpaceNotIn = downgradedPrioritizedSpaceNotIn;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput downgradedPrioritizedSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
     }
 
     public HostWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -12524,6 +14999,194 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         return this._isPresent_.contains(SERIALIZED_NAME_MANAGEMENT_IP_STARTS_WITH);
     }
 
+    public HostWhereInput mergedStatus(HostMergedStatus mergedStatus) {
+
+        this.mergedStatus = mergedStatus;
+        return this;
+    }
+
+    /**
+     * Get mergedStatus
+     *
+     * @return mergedStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public HostMergedStatus getMergedStatus() {
+        return mergedStatus;
+    }
+
+    public void setMergedStatus(HostMergedStatus mergedStatus) {
+        this.mergedStatus = mergedStatus;
+    }
+
+    public HostWhereInput mergedStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MERGED_STATUS);
+        return this;
+    }
+
+    public HostWhereInput mergedStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MERGED_STATUS);
+        return this;
+    }
+
+    public void setMergedStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MERGED_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MERGED_STATUS);
+        }
+    }
+
+    public boolean getMergedStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MERGED_STATUS);
+    }
+
+    public HostWhereInput mergedStatusIn(List<HostMergedStatus> mergedStatusIn) {
+
+        this.mergedStatusIn = mergedStatusIn;
+        return this;
+    }
+
+    public HostWhereInput addMergedStatusInItem(HostMergedStatus mergedStatusInItem) {
+        if (this.mergedStatusIn == null) {
+            this.mergedStatusIn = new ArrayList<HostMergedStatus>();
+        }
+        this.mergedStatusIn.add(mergedStatusInItem);
+        return this;
+    }
+
+    /**
+     * Get mergedStatusIn
+     *
+     * @return mergedStatusIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<HostMergedStatus> getMergedStatusIn() {
+        return mergedStatusIn;
+    }
+
+    public void setMergedStatusIn(List<HostMergedStatus> mergedStatusIn) {
+        this.mergedStatusIn = mergedStatusIn;
+    }
+
+    public HostWhereInput mergedStatusIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MERGED_STATUS_IN);
+        return this;
+    }
+
+    public HostWhereInput mergedStatusIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MERGED_STATUS_IN);
+        return this;
+    }
+
+    public void setMergedStatusIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MERGED_STATUS_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MERGED_STATUS_IN);
+        }
+    }
+
+    public boolean getMergedStatusIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MERGED_STATUS_IN);
+    }
+
+    public HostWhereInput mergedStatusNot(HostMergedStatus mergedStatusNot) {
+
+        this.mergedStatusNot = mergedStatusNot;
+        return this;
+    }
+
+    /**
+     * Get mergedStatusNot
+     *
+     * @return mergedStatusNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public HostMergedStatus getMergedStatusNot() {
+        return mergedStatusNot;
+    }
+
+    public void setMergedStatusNot(HostMergedStatus mergedStatusNot) {
+        this.mergedStatusNot = mergedStatusNot;
+    }
+
+    public HostWhereInput mergedStatusNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MERGED_STATUS_NOT);
+        return this;
+    }
+
+    public HostWhereInput mergedStatusNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MERGED_STATUS_NOT);
+        return this;
+    }
+
+    public void setMergedStatusNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MERGED_STATUS_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MERGED_STATUS_NOT);
+        }
+    }
+
+    public boolean getMergedStatusNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MERGED_STATUS_NOT);
+    }
+
+    public HostWhereInput mergedStatusNotIn(List<HostMergedStatus> mergedStatusNotIn) {
+
+        this.mergedStatusNotIn = mergedStatusNotIn;
+        return this;
+    }
+
+    public HostWhereInput addMergedStatusNotInItem(HostMergedStatus mergedStatusNotInItem) {
+        if (this.mergedStatusNotIn == null) {
+            this.mergedStatusNotIn = new ArrayList<HostMergedStatus>();
+        }
+        this.mergedStatusNotIn.add(mergedStatusNotInItem);
+        return this;
+    }
+
+    /**
+     * Get mergedStatusNotIn
+     *
+     * @return mergedStatusNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<HostMergedStatus> getMergedStatusNotIn() {
+        return mergedStatusNotIn;
+    }
+
+    public void setMergedStatusNotIn(List<HostMergedStatus> mergedStatusNotIn) {
+        this.mergedStatusNotIn = mergedStatusNotIn;
+    }
+
+    public HostWhereInput mergedStatusNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MERGED_STATUS_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput mergedStatusNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MERGED_STATUS_NOT_IN);
+        return this;
+    }
+
+    public void setMergedStatusNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MERGED_STATUS_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MERGED_STATUS_NOT_IN);
+        }
+    }
+
+    public boolean getMergedStatusNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MERGED_STATUS_NOT_IN);
+    }
+
     public HostWhereInput model(String model) {
 
         this.model = model;
@@ -15931,6 +18594,2167 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         return this._isPresent_.contains(SERIALIZED_NAME_OS_VERSION_STARTS_WITH);
     }
 
+    public HostWhereInput perfAllocatedDataSpace(Long perfAllocatedDataSpace) {
+
+        this.perfAllocatedDataSpace = perfAllocatedDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpace
+     *
+     * @return perfAllocatedDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpace() {
+        return perfAllocatedDataSpace;
+    }
+
+    public void setPerfAllocatedDataSpace(Long perfAllocatedDataSpace) {
+        this.perfAllocatedDataSpace = perfAllocatedDataSpace;
+    }
+
+    public HostWhereInput perfAllocatedDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        return this;
+    }
+
+    public HostWhereInput perfAllocatedDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceGt(Long perfAllocatedDataSpaceGt) {
+
+        this.perfAllocatedDataSpaceGt = perfAllocatedDataSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceGt
+     *
+     * @return perfAllocatedDataSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceGt() {
+        return perfAllocatedDataSpaceGt;
+    }
+
+    public void setPerfAllocatedDataSpaceGt(Long perfAllocatedDataSpaceGt) {
+        this.perfAllocatedDataSpaceGt = perfAllocatedDataSpaceGt;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceGte(Long perfAllocatedDataSpaceGte) {
+
+        this.perfAllocatedDataSpaceGte = perfAllocatedDataSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceGte
+     *
+     * @return perfAllocatedDataSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceGte() {
+        return perfAllocatedDataSpaceGte;
+    }
+
+    public void setPerfAllocatedDataSpaceGte(Long perfAllocatedDataSpaceGte) {
+        this.perfAllocatedDataSpaceGte = perfAllocatedDataSpaceGte;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceIn(List<Long> perfAllocatedDataSpaceIn) {
+
+        this.perfAllocatedDataSpaceIn = perfAllocatedDataSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfAllocatedDataSpaceInItem(Long perfAllocatedDataSpaceInItem) {
+        if (this.perfAllocatedDataSpaceIn == null) {
+            this.perfAllocatedDataSpaceIn = new ArrayList<Long>();
+        }
+        this.perfAllocatedDataSpaceIn.add(perfAllocatedDataSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceIn
+     *
+     * @return perfAllocatedDataSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfAllocatedDataSpaceIn() {
+        return perfAllocatedDataSpaceIn;
+    }
+
+    public void setPerfAllocatedDataSpaceIn(List<Long> perfAllocatedDataSpaceIn) {
+        this.perfAllocatedDataSpaceIn = perfAllocatedDataSpaceIn;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceLt(Long perfAllocatedDataSpaceLt) {
+
+        this.perfAllocatedDataSpaceLt = perfAllocatedDataSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceLt
+     *
+     * @return perfAllocatedDataSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceLt() {
+        return perfAllocatedDataSpaceLt;
+    }
+
+    public void setPerfAllocatedDataSpaceLt(Long perfAllocatedDataSpaceLt) {
+        this.perfAllocatedDataSpaceLt = perfAllocatedDataSpaceLt;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceLte(Long perfAllocatedDataSpaceLte) {
+
+        this.perfAllocatedDataSpaceLte = perfAllocatedDataSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceLte
+     *
+     * @return perfAllocatedDataSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceLte() {
+        return perfAllocatedDataSpaceLte;
+    }
+
+    public void setPerfAllocatedDataSpaceLte(Long perfAllocatedDataSpaceLte) {
+        this.perfAllocatedDataSpaceLte = perfAllocatedDataSpaceLte;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceNot(Long perfAllocatedDataSpaceNot) {
+
+        this.perfAllocatedDataSpaceNot = perfAllocatedDataSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceNot
+     *
+     * @return perfAllocatedDataSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceNot() {
+        return perfAllocatedDataSpaceNot;
+    }
+
+    public void setPerfAllocatedDataSpaceNot(Long perfAllocatedDataSpaceNot) {
+        this.perfAllocatedDataSpaceNot = perfAllocatedDataSpaceNot;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceNotIn(List<Long> perfAllocatedDataSpaceNotIn) {
+
+        this.perfAllocatedDataSpaceNotIn = perfAllocatedDataSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfAllocatedDataSpaceNotInItem(Long perfAllocatedDataSpaceNotInItem) {
+        if (this.perfAllocatedDataSpaceNotIn == null) {
+            this.perfAllocatedDataSpaceNotIn = new ArrayList<Long>();
+        }
+        this.perfAllocatedDataSpaceNotIn.add(perfAllocatedDataSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceNotIn
+     *
+     * @return perfAllocatedDataSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfAllocatedDataSpaceNotIn() {
+        return perfAllocatedDataSpaceNotIn;
+    }
+
+    public void setPerfAllocatedDataSpaceNotIn(List<Long> perfAllocatedDataSpaceNotIn) {
+        this.perfAllocatedDataSpaceNotIn = perfAllocatedDataSpaceNotIn;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput perfAllocatedDataSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+    }
+
+    public HostWhereInput perfFailureDataSpace(Long perfFailureDataSpace) {
+
+        this.perfFailureDataSpace = perfFailureDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpace
+     *
+     * @return perfFailureDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpace() {
+        return perfFailureDataSpace;
+    }
+
+    public void setPerfFailureDataSpace(Long perfFailureDataSpace) {
+        this.perfFailureDataSpace = perfFailureDataSpace;
+    }
+
+    public HostWhereInput perfFailureDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        return this;
+    }
+
+    public HostWhereInput perfFailureDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfFailureDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfFailureDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+    }
+
+    public HostWhereInput perfFailureDataSpaceGt(Long perfFailureDataSpaceGt) {
+
+        this.perfFailureDataSpaceGt = perfFailureDataSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceGt
+     *
+     * @return perfFailureDataSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceGt() {
+        return perfFailureDataSpaceGt;
+    }
+
+    public void setPerfFailureDataSpaceGt(Long perfFailureDataSpaceGt) {
+        this.perfFailureDataSpaceGt = perfFailureDataSpaceGt;
+    }
+
+    public HostWhereInput perfFailureDataSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput perfFailureDataSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+    }
+
+    public HostWhereInput perfFailureDataSpaceGte(Long perfFailureDataSpaceGte) {
+
+        this.perfFailureDataSpaceGte = perfFailureDataSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceGte
+     *
+     * @return perfFailureDataSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceGte() {
+        return perfFailureDataSpaceGte;
+    }
+
+    public void setPerfFailureDataSpaceGte(Long perfFailureDataSpaceGte) {
+        this.perfFailureDataSpaceGte = perfFailureDataSpaceGte;
+    }
+
+    public HostWhereInput perfFailureDataSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput perfFailureDataSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+    }
+
+    public HostWhereInput perfFailureDataSpaceIn(List<Long> perfFailureDataSpaceIn) {
+
+        this.perfFailureDataSpaceIn = perfFailureDataSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfFailureDataSpaceInItem(Long perfFailureDataSpaceInItem) {
+        if (this.perfFailureDataSpaceIn == null) {
+            this.perfFailureDataSpaceIn = new ArrayList<Long>();
+        }
+        this.perfFailureDataSpaceIn.add(perfFailureDataSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceIn
+     *
+     * @return perfFailureDataSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfFailureDataSpaceIn() {
+        return perfFailureDataSpaceIn;
+    }
+
+    public void setPerfFailureDataSpaceIn(List<Long> perfFailureDataSpaceIn) {
+        this.perfFailureDataSpaceIn = perfFailureDataSpaceIn;
+    }
+
+    public HostWhereInput perfFailureDataSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput perfFailureDataSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+    }
+
+    public HostWhereInput perfFailureDataSpaceLt(Long perfFailureDataSpaceLt) {
+
+        this.perfFailureDataSpaceLt = perfFailureDataSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceLt
+     *
+     * @return perfFailureDataSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceLt() {
+        return perfFailureDataSpaceLt;
+    }
+
+    public void setPerfFailureDataSpaceLt(Long perfFailureDataSpaceLt) {
+        this.perfFailureDataSpaceLt = perfFailureDataSpaceLt;
+    }
+
+    public HostWhereInput perfFailureDataSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput perfFailureDataSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+    }
+
+    public HostWhereInput perfFailureDataSpaceLte(Long perfFailureDataSpaceLte) {
+
+        this.perfFailureDataSpaceLte = perfFailureDataSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceLte
+     *
+     * @return perfFailureDataSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceLte() {
+        return perfFailureDataSpaceLte;
+    }
+
+    public void setPerfFailureDataSpaceLte(Long perfFailureDataSpaceLte) {
+        this.perfFailureDataSpaceLte = perfFailureDataSpaceLte;
+    }
+
+    public HostWhereInput perfFailureDataSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput perfFailureDataSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+    }
+
+    public HostWhereInput perfFailureDataSpaceNot(Long perfFailureDataSpaceNot) {
+
+        this.perfFailureDataSpaceNot = perfFailureDataSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceNot
+     *
+     * @return perfFailureDataSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceNot() {
+        return perfFailureDataSpaceNot;
+    }
+
+    public void setPerfFailureDataSpaceNot(Long perfFailureDataSpaceNot) {
+        this.perfFailureDataSpaceNot = perfFailureDataSpaceNot;
+    }
+
+    public HostWhereInput perfFailureDataSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput perfFailureDataSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+    }
+
+    public HostWhereInput perfFailureDataSpaceNotIn(List<Long> perfFailureDataSpaceNotIn) {
+
+        this.perfFailureDataSpaceNotIn = perfFailureDataSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfFailureDataSpaceNotInItem(Long perfFailureDataSpaceNotInItem) {
+        if (this.perfFailureDataSpaceNotIn == null) {
+            this.perfFailureDataSpaceNotIn = new ArrayList<Long>();
+        }
+        this.perfFailureDataSpaceNotIn.add(perfFailureDataSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceNotIn
+     *
+     * @return perfFailureDataSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfFailureDataSpaceNotIn() {
+        return perfFailureDataSpaceNotIn;
+    }
+
+    public void setPerfFailureDataSpaceNotIn(List<Long> perfFailureDataSpaceNotIn) {
+        this.perfFailureDataSpaceNotIn = perfFailureDataSpaceNotIn;
+    }
+
+    public HostWhereInput perfFailureDataSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput perfFailureDataSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+    }
+
+    public HostWhereInput perfTotalDataCapacity(Long perfTotalDataCapacity) {
+
+        this.perfTotalDataCapacity = perfTotalDataCapacity;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacity
+     *
+     * @return perfTotalDataCapacity
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacity() {
+        return perfTotalDataCapacity;
+    }
+
+    public void setPerfTotalDataCapacity(Long perfTotalDataCapacity) {
+        this.perfTotalDataCapacity = perfTotalDataCapacity;
+    }
+
+    public HostWhereInput perfTotalDataCapacity_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        return this;
+    }
+
+    public HostWhereInput perfTotalDataCapacity_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacity_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacity_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+    }
+
+    public HostWhereInput perfTotalDataCapacityGt(Long perfTotalDataCapacityGt) {
+
+        this.perfTotalDataCapacityGt = perfTotalDataCapacityGt;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityGt
+     *
+     * @return perfTotalDataCapacityGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityGt() {
+        return perfTotalDataCapacityGt;
+    }
+
+    public void setPerfTotalDataCapacityGt(Long perfTotalDataCapacityGt) {
+        this.perfTotalDataCapacityGt = perfTotalDataCapacityGt;
+    }
+
+    public HostWhereInput perfTotalDataCapacityGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+        return this;
+    }
+
+    public HostWhereInput perfTotalDataCapacityGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+    }
+
+    public HostWhereInput perfTotalDataCapacityGte(Long perfTotalDataCapacityGte) {
+
+        this.perfTotalDataCapacityGte = perfTotalDataCapacityGte;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityGte
+     *
+     * @return perfTotalDataCapacityGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityGte() {
+        return perfTotalDataCapacityGte;
+    }
+
+    public void setPerfTotalDataCapacityGte(Long perfTotalDataCapacityGte) {
+        this.perfTotalDataCapacityGte = perfTotalDataCapacityGte;
+    }
+
+    public HostWhereInput perfTotalDataCapacityGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+        return this;
+    }
+
+    public HostWhereInput perfTotalDataCapacityGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+    }
+
+    public HostWhereInput perfTotalDataCapacityIn(List<Long> perfTotalDataCapacityIn) {
+
+        this.perfTotalDataCapacityIn = perfTotalDataCapacityIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfTotalDataCapacityInItem(Long perfTotalDataCapacityInItem) {
+        if (this.perfTotalDataCapacityIn == null) {
+            this.perfTotalDataCapacityIn = new ArrayList<Long>();
+        }
+        this.perfTotalDataCapacityIn.add(perfTotalDataCapacityInItem);
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityIn
+     *
+     * @return perfTotalDataCapacityIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfTotalDataCapacityIn() {
+        return perfTotalDataCapacityIn;
+    }
+
+    public void setPerfTotalDataCapacityIn(List<Long> perfTotalDataCapacityIn) {
+        this.perfTotalDataCapacityIn = perfTotalDataCapacityIn;
+    }
+
+    public HostWhereInput perfTotalDataCapacityIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+        return this;
+    }
+
+    public HostWhereInput perfTotalDataCapacityIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+    }
+
+    public HostWhereInput perfTotalDataCapacityLt(Long perfTotalDataCapacityLt) {
+
+        this.perfTotalDataCapacityLt = perfTotalDataCapacityLt;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityLt
+     *
+     * @return perfTotalDataCapacityLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityLt() {
+        return perfTotalDataCapacityLt;
+    }
+
+    public void setPerfTotalDataCapacityLt(Long perfTotalDataCapacityLt) {
+        this.perfTotalDataCapacityLt = perfTotalDataCapacityLt;
+    }
+
+    public HostWhereInput perfTotalDataCapacityLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+        return this;
+    }
+
+    public HostWhereInput perfTotalDataCapacityLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+    }
+
+    public HostWhereInput perfTotalDataCapacityLte(Long perfTotalDataCapacityLte) {
+
+        this.perfTotalDataCapacityLte = perfTotalDataCapacityLte;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityLte
+     *
+     * @return perfTotalDataCapacityLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityLte() {
+        return perfTotalDataCapacityLte;
+    }
+
+    public void setPerfTotalDataCapacityLte(Long perfTotalDataCapacityLte) {
+        this.perfTotalDataCapacityLte = perfTotalDataCapacityLte;
+    }
+
+    public HostWhereInput perfTotalDataCapacityLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+        return this;
+    }
+
+    public HostWhereInput perfTotalDataCapacityLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+    }
+
+    public HostWhereInput perfTotalDataCapacityNot(Long perfTotalDataCapacityNot) {
+
+        this.perfTotalDataCapacityNot = perfTotalDataCapacityNot;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityNot
+     *
+     * @return perfTotalDataCapacityNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityNot() {
+        return perfTotalDataCapacityNot;
+    }
+
+    public void setPerfTotalDataCapacityNot(Long perfTotalDataCapacityNot) {
+        this.perfTotalDataCapacityNot = perfTotalDataCapacityNot;
+    }
+
+    public HostWhereInput perfTotalDataCapacityNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+        return this;
+    }
+
+    public HostWhereInput perfTotalDataCapacityNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+    }
+
+    public HostWhereInput perfTotalDataCapacityNotIn(List<Long> perfTotalDataCapacityNotIn) {
+
+        this.perfTotalDataCapacityNotIn = perfTotalDataCapacityNotIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfTotalDataCapacityNotInItem(Long perfTotalDataCapacityNotInItem) {
+        if (this.perfTotalDataCapacityNotIn == null) {
+            this.perfTotalDataCapacityNotIn = new ArrayList<Long>();
+        }
+        this.perfTotalDataCapacityNotIn.add(perfTotalDataCapacityNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityNotIn
+     *
+     * @return perfTotalDataCapacityNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfTotalDataCapacityNotIn() {
+        return perfTotalDataCapacityNotIn;
+    }
+
+    public void setPerfTotalDataCapacityNotIn(List<Long> perfTotalDataCapacityNotIn) {
+        this.perfTotalDataCapacityNotIn = perfTotalDataCapacityNotIn;
+    }
+
+    public HostWhereInput perfTotalDataCapacityNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput perfTotalDataCapacityNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+    }
+
+    public HostWhereInput perfUsedDataSpace(Long perfUsedDataSpace) {
+
+        this.perfUsedDataSpace = perfUsedDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpace
+     *
+     * @return perfUsedDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpace() {
+        return perfUsedDataSpace;
+    }
+
+    public void setPerfUsedDataSpace(Long perfUsedDataSpace) {
+        this.perfUsedDataSpace = perfUsedDataSpace;
+    }
+
+    public HostWhereInput perfUsedDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        return this;
+    }
+
+    public HostWhereInput perfUsedDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfUsedDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfUsedDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+    }
+
+    public HostWhereInput perfUsedDataSpaceGt(Long perfUsedDataSpaceGt) {
+
+        this.perfUsedDataSpaceGt = perfUsedDataSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceGt
+     *
+     * @return perfUsedDataSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceGt() {
+        return perfUsedDataSpaceGt;
+    }
+
+    public void setPerfUsedDataSpaceGt(Long perfUsedDataSpaceGt) {
+        this.perfUsedDataSpaceGt = perfUsedDataSpaceGt;
+    }
+
+    public HostWhereInput perfUsedDataSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput perfUsedDataSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+    }
+
+    public HostWhereInput perfUsedDataSpaceGte(Long perfUsedDataSpaceGte) {
+
+        this.perfUsedDataSpaceGte = perfUsedDataSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceGte
+     *
+     * @return perfUsedDataSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceGte() {
+        return perfUsedDataSpaceGte;
+    }
+
+    public void setPerfUsedDataSpaceGte(Long perfUsedDataSpaceGte) {
+        this.perfUsedDataSpaceGte = perfUsedDataSpaceGte;
+    }
+
+    public HostWhereInput perfUsedDataSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput perfUsedDataSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+    }
+
+    public HostWhereInput perfUsedDataSpaceIn(List<Long> perfUsedDataSpaceIn) {
+
+        this.perfUsedDataSpaceIn = perfUsedDataSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfUsedDataSpaceInItem(Long perfUsedDataSpaceInItem) {
+        if (this.perfUsedDataSpaceIn == null) {
+            this.perfUsedDataSpaceIn = new ArrayList<Long>();
+        }
+        this.perfUsedDataSpaceIn.add(perfUsedDataSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceIn
+     *
+     * @return perfUsedDataSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfUsedDataSpaceIn() {
+        return perfUsedDataSpaceIn;
+    }
+
+    public void setPerfUsedDataSpaceIn(List<Long> perfUsedDataSpaceIn) {
+        this.perfUsedDataSpaceIn = perfUsedDataSpaceIn;
+    }
+
+    public HostWhereInput perfUsedDataSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput perfUsedDataSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+    }
+
+    public HostWhereInput perfUsedDataSpaceLt(Long perfUsedDataSpaceLt) {
+
+        this.perfUsedDataSpaceLt = perfUsedDataSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceLt
+     *
+     * @return perfUsedDataSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceLt() {
+        return perfUsedDataSpaceLt;
+    }
+
+    public void setPerfUsedDataSpaceLt(Long perfUsedDataSpaceLt) {
+        this.perfUsedDataSpaceLt = perfUsedDataSpaceLt;
+    }
+
+    public HostWhereInput perfUsedDataSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput perfUsedDataSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+    }
+
+    public HostWhereInput perfUsedDataSpaceLte(Long perfUsedDataSpaceLte) {
+
+        this.perfUsedDataSpaceLte = perfUsedDataSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceLte
+     *
+     * @return perfUsedDataSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceLte() {
+        return perfUsedDataSpaceLte;
+    }
+
+    public void setPerfUsedDataSpaceLte(Long perfUsedDataSpaceLte) {
+        this.perfUsedDataSpaceLte = perfUsedDataSpaceLte;
+    }
+
+    public HostWhereInput perfUsedDataSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput perfUsedDataSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+    }
+
+    public HostWhereInput perfUsedDataSpaceNot(Long perfUsedDataSpaceNot) {
+
+        this.perfUsedDataSpaceNot = perfUsedDataSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceNot
+     *
+     * @return perfUsedDataSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceNot() {
+        return perfUsedDataSpaceNot;
+    }
+
+    public void setPerfUsedDataSpaceNot(Long perfUsedDataSpaceNot) {
+        this.perfUsedDataSpaceNot = perfUsedDataSpaceNot;
+    }
+
+    public HostWhereInput perfUsedDataSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput perfUsedDataSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+    }
+
+    public HostWhereInput perfUsedDataSpaceNotIn(List<Long> perfUsedDataSpaceNotIn) {
+
+        this.perfUsedDataSpaceNotIn = perfUsedDataSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfUsedDataSpaceNotInItem(Long perfUsedDataSpaceNotInItem) {
+        if (this.perfUsedDataSpaceNotIn == null) {
+            this.perfUsedDataSpaceNotIn = new ArrayList<Long>();
+        }
+        this.perfUsedDataSpaceNotIn.add(perfUsedDataSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceNotIn
+     *
+     * @return perfUsedDataSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfUsedDataSpaceNotIn() {
+        return perfUsedDataSpaceNotIn;
+    }
+
+    public void setPerfUsedDataSpaceNotIn(List<Long> perfUsedDataSpaceNotIn) {
+        this.perfUsedDataSpaceNotIn = perfUsedDataSpaceNotIn;
+    }
+
+    public HostWhereInput perfUsedDataSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput perfUsedDataSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+    }
+
+    public HostWhereInput perfValidDataSpace(Long perfValidDataSpace) {
+
+        this.perfValidDataSpace = perfValidDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpace
+     *
+     * @return perfValidDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpace() {
+        return perfValidDataSpace;
+    }
+
+    public void setPerfValidDataSpace(Long perfValidDataSpace) {
+        this.perfValidDataSpace = perfValidDataSpace;
+    }
+
+    public HostWhereInput perfValidDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        return this;
+    }
+
+    public HostWhereInput perfValidDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfValidDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfValidDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+    }
+
+    public HostWhereInput perfValidDataSpaceGt(Long perfValidDataSpaceGt) {
+
+        this.perfValidDataSpaceGt = perfValidDataSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceGt
+     *
+     * @return perfValidDataSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceGt() {
+        return perfValidDataSpaceGt;
+    }
+
+    public void setPerfValidDataSpaceGt(Long perfValidDataSpaceGt) {
+        this.perfValidDataSpaceGt = perfValidDataSpaceGt;
+    }
+
+    public HostWhereInput perfValidDataSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput perfValidDataSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+    }
+
+    public HostWhereInput perfValidDataSpaceGte(Long perfValidDataSpaceGte) {
+
+        this.perfValidDataSpaceGte = perfValidDataSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceGte
+     *
+     * @return perfValidDataSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceGte() {
+        return perfValidDataSpaceGte;
+    }
+
+    public void setPerfValidDataSpaceGte(Long perfValidDataSpaceGte) {
+        this.perfValidDataSpaceGte = perfValidDataSpaceGte;
+    }
+
+    public HostWhereInput perfValidDataSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput perfValidDataSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+    }
+
+    public HostWhereInput perfValidDataSpaceIn(List<Long> perfValidDataSpaceIn) {
+
+        this.perfValidDataSpaceIn = perfValidDataSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfValidDataSpaceInItem(Long perfValidDataSpaceInItem) {
+        if (this.perfValidDataSpaceIn == null) {
+            this.perfValidDataSpaceIn = new ArrayList<Long>();
+        }
+        this.perfValidDataSpaceIn.add(perfValidDataSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceIn
+     *
+     * @return perfValidDataSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfValidDataSpaceIn() {
+        return perfValidDataSpaceIn;
+    }
+
+    public void setPerfValidDataSpaceIn(List<Long> perfValidDataSpaceIn) {
+        this.perfValidDataSpaceIn = perfValidDataSpaceIn;
+    }
+
+    public HostWhereInput perfValidDataSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput perfValidDataSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+    }
+
+    public HostWhereInput perfValidDataSpaceLt(Long perfValidDataSpaceLt) {
+
+        this.perfValidDataSpaceLt = perfValidDataSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceLt
+     *
+     * @return perfValidDataSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceLt() {
+        return perfValidDataSpaceLt;
+    }
+
+    public void setPerfValidDataSpaceLt(Long perfValidDataSpaceLt) {
+        this.perfValidDataSpaceLt = perfValidDataSpaceLt;
+    }
+
+    public HostWhereInput perfValidDataSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput perfValidDataSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+    }
+
+    public HostWhereInput perfValidDataSpaceLte(Long perfValidDataSpaceLte) {
+
+        this.perfValidDataSpaceLte = perfValidDataSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceLte
+     *
+     * @return perfValidDataSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceLte() {
+        return perfValidDataSpaceLte;
+    }
+
+    public void setPerfValidDataSpaceLte(Long perfValidDataSpaceLte) {
+        this.perfValidDataSpaceLte = perfValidDataSpaceLte;
+    }
+
+    public HostWhereInput perfValidDataSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput perfValidDataSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+    }
+
+    public HostWhereInput perfValidDataSpaceNot(Long perfValidDataSpaceNot) {
+
+        this.perfValidDataSpaceNot = perfValidDataSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceNot
+     *
+     * @return perfValidDataSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceNot() {
+        return perfValidDataSpaceNot;
+    }
+
+    public void setPerfValidDataSpaceNot(Long perfValidDataSpaceNot) {
+        this.perfValidDataSpaceNot = perfValidDataSpaceNot;
+    }
+
+    public HostWhereInput perfValidDataSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput perfValidDataSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+    }
+
+    public HostWhereInput perfValidDataSpaceNotIn(List<Long> perfValidDataSpaceNotIn) {
+
+        this.perfValidDataSpaceNotIn = perfValidDataSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addPerfValidDataSpaceNotInItem(Long perfValidDataSpaceNotInItem) {
+        if (this.perfValidDataSpaceNotIn == null) {
+            this.perfValidDataSpaceNotIn = new ArrayList<Long>();
+        }
+        this.perfValidDataSpaceNotIn.add(perfValidDataSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceNotIn
+     *
+     * @return perfValidDataSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfValidDataSpaceNotIn() {
+        return perfValidDataSpaceNotIn;
+    }
+
+    public void setPerfValidDataSpaceNotIn(List<Long> perfValidDataSpaceNotIn) {
+        this.perfValidDataSpaceNotIn = perfValidDataSpaceNotIn;
+    }
+
+    public HostWhereInput perfValidDataSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput perfValidDataSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+    }
+
+    public HostWhereInput plannedPrioritizedSpace(Long plannedPrioritizedSpace) {
+
+        this.plannedPrioritizedSpace = plannedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpace
+     *
+     * @return plannedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpace() {
+        return plannedPrioritizedSpace;
+    }
+
+    public void setPlannedPrioritizedSpace(Long plannedPrioritizedSpace) {
+        this.plannedPrioritizedSpace = plannedPrioritizedSpace;
+    }
+
+    public HostWhereInput plannedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public HostWhereInput plannedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceGt(Long plannedPrioritizedSpaceGt) {
+
+        this.plannedPrioritizedSpaceGt = plannedPrioritizedSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceGt
+     *
+     * @return plannedPrioritizedSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceGt() {
+        return plannedPrioritizedSpaceGt;
+    }
+
+    public void setPlannedPrioritizedSpaceGt(Long plannedPrioritizedSpaceGt) {
+        this.plannedPrioritizedSpaceGt = plannedPrioritizedSpaceGt;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceGte(Long plannedPrioritizedSpaceGte) {
+
+        this.plannedPrioritizedSpaceGte = plannedPrioritizedSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceGte
+     *
+     * @return plannedPrioritizedSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceGte() {
+        return plannedPrioritizedSpaceGte;
+    }
+
+    public void setPlannedPrioritizedSpaceGte(Long plannedPrioritizedSpaceGte) {
+        this.plannedPrioritizedSpaceGte = plannedPrioritizedSpaceGte;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceIn(List<Long> plannedPrioritizedSpaceIn) {
+
+        this.plannedPrioritizedSpaceIn = plannedPrioritizedSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addPlannedPrioritizedSpaceInItem(Long plannedPrioritizedSpaceInItem) {
+        if (this.plannedPrioritizedSpaceIn == null) {
+            this.plannedPrioritizedSpaceIn = new ArrayList<Long>();
+        }
+        this.plannedPrioritizedSpaceIn.add(plannedPrioritizedSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceIn
+     *
+     * @return plannedPrioritizedSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPlannedPrioritizedSpaceIn() {
+        return plannedPrioritizedSpaceIn;
+    }
+
+    public void setPlannedPrioritizedSpaceIn(List<Long> plannedPrioritizedSpaceIn) {
+        this.plannedPrioritizedSpaceIn = plannedPrioritizedSpaceIn;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceLt(Long plannedPrioritizedSpaceLt) {
+
+        this.plannedPrioritizedSpaceLt = plannedPrioritizedSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceLt
+     *
+     * @return plannedPrioritizedSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceLt() {
+        return plannedPrioritizedSpaceLt;
+    }
+
+    public void setPlannedPrioritizedSpaceLt(Long plannedPrioritizedSpaceLt) {
+        this.plannedPrioritizedSpaceLt = plannedPrioritizedSpaceLt;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceLte(Long plannedPrioritizedSpaceLte) {
+
+        this.plannedPrioritizedSpaceLte = plannedPrioritizedSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceLte
+     *
+     * @return plannedPrioritizedSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceLte() {
+        return plannedPrioritizedSpaceLte;
+    }
+
+    public void setPlannedPrioritizedSpaceLte(Long plannedPrioritizedSpaceLte) {
+        this.plannedPrioritizedSpaceLte = plannedPrioritizedSpaceLte;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceNot(Long plannedPrioritizedSpaceNot) {
+
+        this.plannedPrioritizedSpaceNot = plannedPrioritizedSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceNot
+     *
+     * @return plannedPrioritizedSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceNot() {
+        return plannedPrioritizedSpaceNot;
+    }
+
+    public void setPlannedPrioritizedSpaceNot(Long plannedPrioritizedSpaceNot) {
+        this.plannedPrioritizedSpaceNot = plannedPrioritizedSpaceNot;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceNotIn(List<Long> plannedPrioritizedSpaceNotIn) {
+
+        this.plannedPrioritizedSpaceNotIn = plannedPrioritizedSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addPlannedPrioritizedSpaceNotInItem(
+            Long plannedPrioritizedSpaceNotInItem) {
+        if (this.plannedPrioritizedSpaceNotIn == null) {
+            this.plannedPrioritizedSpaceNotIn = new ArrayList<Long>();
+        }
+        this.plannedPrioritizedSpaceNotIn.add(plannedPrioritizedSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceNotIn
+     *
+     * @return plannedPrioritizedSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPlannedPrioritizedSpaceNotIn() {
+        return plannedPrioritizedSpaceNotIn;
+    }
+
+    public void setPlannedPrioritizedSpaceNotIn(List<Long> plannedPrioritizedSpaceNotIn) {
+        this.plannedPrioritizedSpaceNotIn = plannedPrioritizedSpaceNotIn;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput plannedPrioritizedSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+    }
+
     public HostWhereInput pmemDimmCapacity(Long pmemDimmCapacity) {
 
         this.pmemDimmCapacity = pmemDimmCapacity;
@@ -17138,6 +21962,366 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     public boolean getPmemDiskCountNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_PMEM_DISK_COUNT_NOT_IN);
+    }
+
+    public HostWhereInput prioSpacePercentage(Double prioSpacePercentage) {
+
+        this.prioSpacePercentage = prioSpacePercentage;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentage
+     *
+     * @return prioSpacePercentage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentage() {
+        return prioSpacePercentage;
+    }
+
+    public void setPrioSpacePercentage(Double prioSpacePercentage) {
+        this.prioSpacePercentage = prioSpacePercentage;
+    }
+
+    public HostWhereInput prioSpacePercentage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        return this;
+    }
+
+    public HostWhereInput prioSpacePercentage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        return this;
+    }
+
+    public void setPrioSpacePercentage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        }
+    }
+
+    public boolean getPrioSpacePercentage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+    }
+
+    public HostWhereInput prioSpacePercentageGt(Double prioSpacePercentageGt) {
+
+        this.prioSpacePercentageGt = prioSpacePercentageGt;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageGt
+     *
+     * @return prioSpacePercentageGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageGt() {
+        return prioSpacePercentageGt;
+    }
+
+    public void setPrioSpacePercentageGt(Double prioSpacePercentageGt) {
+        this.prioSpacePercentageGt = prioSpacePercentageGt;
+    }
+
+    public HostWhereInput prioSpacePercentageGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+        return this;
+    }
+
+    public HostWhereInput prioSpacePercentageGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+        return this;
+    }
+
+    public void setPrioSpacePercentageGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+        }
+    }
+
+    public boolean getPrioSpacePercentageGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+    }
+
+    public HostWhereInput prioSpacePercentageGte(Double prioSpacePercentageGte) {
+
+        this.prioSpacePercentageGte = prioSpacePercentageGte;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageGte
+     *
+     * @return prioSpacePercentageGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageGte() {
+        return prioSpacePercentageGte;
+    }
+
+    public void setPrioSpacePercentageGte(Double prioSpacePercentageGte) {
+        this.prioSpacePercentageGte = prioSpacePercentageGte;
+    }
+
+    public HostWhereInput prioSpacePercentageGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+        return this;
+    }
+
+    public HostWhereInput prioSpacePercentageGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+        return this;
+    }
+
+    public void setPrioSpacePercentageGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+        }
+    }
+
+    public boolean getPrioSpacePercentageGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+    }
+
+    public HostWhereInput prioSpacePercentageIn(List<Double> prioSpacePercentageIn) {
+
+        this.prioSpacePercentageIn = prioSpacePercentageIn;
+        return this;
+    }
+
+    public HostWhereInput addPrioSpacePercentageInItem(Double prioSpacePercentageInItem) {
+        if (this.prioSpacePercentageIn == null) {
+            this.prioSpacePercentageIn = new ArrayList<Double>();
+        }
+        this.prioSpacePercentageIn.add(prioSpacePercentageInItem);
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageIn
+     *
+     * @return prioSpacePercentageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getPrioSpacePercentageIn() {
+        return prioSpacePercentageIn;
+    }
+
+    public void setPrioSpacePercentageIn(List<Double> prioSpacePercentageIn) {
+        this.prioSpacePercentageIn = prioSpacePercentageIn;
+    }
+
+    public HostWhereInput prioSpacePercentageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+        return this;
+    }
+
+    public HostWhereInput prioSpacePercentageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+        return this;
+    }
+
+    public void setPrioSpacePercentageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+        }
+    }
+
+    public boolean getPrioSpacePercentageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+    }
+
+    public HostWhereInput prioSpacePercentageLt(Double prioSpacePercentageLt) {
+
+        this.prioSpacePercentageLt = prioSpacePercentageLt;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageLt
+     *
+     * @return prioSpacePercentageLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageLt() {
+        return prioSpacePercentageLt;
+    }
+
+    public void setPrioSpacePercentageLt(Double prioSpacePercentageLt) {
+        this.prioSpacePercentageLt = prioSpacePercentageLt;
+    }
+
+    public HostWhereInput prioSpacePercentageLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+        return this;
+    }
+
+    public HostWhereInput prioSpacePercentageLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+        return this;
+    }
+
+    public void setPrioSpacePercentageLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+        }
+    }
+
+    public boolean getPrioSpacePercentageLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+    }
+
+    public HostWhereInput prioSpacePercentageLte(Double prioSpacePercentageLte) {
+
+        this.prioSpacePercentageLte = prioSpacePercentageLte;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageLte
+     *
+     * @return prioSpacePercentageLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageLte() {
+        return prioSpacePercentageLte;
+    }
+
+    public void setPrioSpacePercentageLte(Double prioSpacePercentageLte) {
+        this.prioSpacePercentageLte = prioSpacePercentageLte;
+    }
+
+    public HostWhereInput prioSpacePercentageLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+        return this;
+    }
+
+    public HostWhereInput prioSpacePercentageLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+        return this;
+    }
+
+    public void setPrioSpacePercentageLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+        }
+    }
+
+    public boolean getPrioSpacePercentageLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+    }
+
+    public HostWhereInput prioSpacePercentageNot(Double prioSpacePercentageNot) {
+
+        this.prioSpacePercentageNot = prioSpacePercentageNot;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageNot
+     *
+     * @return prioSpacePercentageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageNot() {
+        return prioSpacePercentageNot;
+    }
+
+    public void setPrioSpacePercentageNot(Double prioSpacePercentageNot) {
+        this.prioSpacePercentageNot = prioSpacePercentageNot;
+    }
+
+    public HostWhereInput prioSpacePercentageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+        return this;
+    }
+
+    public HostWhereInput prioSpacePercentageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+        return this;
+    }
+
+    public void setPrioSpacePercentageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+        }
+    }
+
+    public boolean getPrioSpacePercentageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+    }
+
+    public HostWhereInput prioSpacePercentageNotIn(List<Double> prioSpacePercentageNotIn) {
+
+        this.prioSpacePercentageNotIn = prioSpacePercentageNotIn;
+        return this;
+    }
+
+    public HostWhereInput addPrioSpacePercentageNotInItem(Double prioSpacePercentageNotInItem) {
+        if (this.prioSpacePercentageNotIn == null) {
+            this.prioSpacePercentageNotIn = new ArrayList<Double>();
+        }
+        this.prioSpacePercentageNotIn.add(prioSpacePercentageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageNotIn
+     *
+     * @return prioSpacePercentageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getPrioSpacePercentageNotIn() {
+        return prioSpacePercentageNotIn;
+    }
+
+    public void setPrioSpacePercentageNotIn(List<Double> prioSpacePercentageNotIn) {
+        this.prioSpacePercentageNotIn = prioSpacePercentageNotIn;
+    }
+
+    public HostWhereInput prioSpacePercentageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput prioSpacePercentageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
+        return this;
+    }
+
+    public void setPrioSpacePercentageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
+        }
+    }
+
+    public boolean getPrioSpacePercentageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
     }
 
     public HostWhereInput provisionedCpuCores(Integer provisionedCpuCores) {
@@ -24643,6 +29827,366 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         return this._isPresent_.contains(SERIALIZED_NAME_USB_DEVICES_SOME);
     }
 
+    public HostWhereInput usedCacheSpace(Long usedCacheSpace) {
+
+        this.usedCacheSpace = usedCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpace
+     *
+     * @return usedCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpace() {
+        return usedCacheSpace;
+    }
+
+    public void setUsedCacheSpace(Long usedCacheSpace) {
+        this.usedCacheSpace = usedCacheSpace;
+    }
+
+    public HostWhereInput usedCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE);
+        return this;
+    }
+
+    public HostWhereInput usedCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE);
+        return this;
+    }
+
+    public void setUsedCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE);
+        }
+    }
+
+    public boolean getUsedCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE);
+    }
+
+    public HostWhereInput usedCacheSpaceGt(Long usedCacheSpaceGt) {
+
+        this.usedCacheSpaceGt = usedCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceGt
+     *
+     * @return usedCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceGt() {
+        return usedCacheSpaceGt;
+    }
+
+    public void setUsedCacheSpaceGt(Long usedCacheSpaceGt) {
+        this.usedCacheSpaceGt = usedCacheSpaceGt;
+    }
+
+    public HostWhereInput usedCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput usedCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setUsedCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getUsedCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+    }
+
+    public HostWhereInput usedCacheSpaceGte(Long usedCacheSpaceGte) {
+
+        this.usedCacheSpaceGte = usedCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceGte
+     *
+     * @return usedCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceGte() {
+        return usedCacheSpaceGte;
+    }
+
+    public void setUsedCacheSpaceGte(Long usedCacheSpaceGte) {
+        this.usedCacheSpaceGte = usedCacheSpaceGte;
+    }
+
+    public HostWhereInput usedCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput usedCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setUsedCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getUsedCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+    }
+
+    public HostWhereInput usedCacheSpaceIn(List<Long> usedCacheSpaceIn) {
+
+        this.usedCacheSpaceIn = usedCacheSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addUsedCacheSpaceInItem(Long usedCacheSpaceInItem) {
+        if (this.usedCacheSpaceIn == null) {
+            this.usedCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.usedCacheSpaceIn.add(usedCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceIn
+     *
+     * @return usedCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getUsedCacheSpaceIn() {
+        return usedCacheSpaceIn;
+    }
+
+    public void setUsedCacheSpaceIn(List<Long> usedCacheSpaceIn) {
+        this.usedCacheSpaceIn = usedCacheSpaceIn;
+    }
+
+    public HostWhereInput usedCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput usedCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setUsedCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getUsedCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+    }
+
+    public HostWhereInput usedCacheSpaceLt(Long usedCacheSpaceLt) {
+
+        this.usedCacheSpaceLt = usedCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceLt
+     *
+     * @return usedCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceLt() {
+        return usedCacheSpaceLt;
+    }
+
+    public void setUsedCacheSpaceLt(Long usedCacheSpaceLt) {
+        this.usedCacheSpaceLt = usedCacheSpaceLt;
+    }
+
+    public HostWhereInput usedCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput usedCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setUsedCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getUsedCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+    }
+
+    public HostWhereInput usedCacheSpaceLte(Long usedCacheSpaceLte) {
+
+        this.usedCacheSpaceLte = usedCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceLte
+     *
+     * @return usedCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceLte() {
+        return usedCacheSpaceLte;
+    }
+
+    public void setUsedCacheSpaceLte(Long usedCacheSpaceLte) {
+        this.usedCacheSpaceLte = usedCacheSpaceLte;
+    }
+
+    public HostWhereInput usedCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput usedCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setUsedCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getUsedCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+    }
+
+    public HostWhereInput usedCacheSpaceNot(Long usedCacheSpaceNot) {
+
+        this.usedCacheSpaceNot = usedCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceNot
+     *
+     * @return usedCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceNot() {
+        return usedCacheSpaceNot;
+    }
+
+    public void setUsedCacheSpaceNot(Long usedCacheSpaceNot) {
+        this.usedCacheSpaceNot = usedCacheSpaceNot;
+    }
+
+    public HostWhereInput usedCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput usedCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setUsedCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getUsedCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+    }
+
+    public HostWhereInput usedCacheSpaceNotIn(List<Long> usedCacheSpaceNotIn) {
+
+        this.usedCacheSpaceNotIn = usedCacheSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addUsedCacheSpaceNotInItem(Long usedCacheSpaceNotInItem) {
+        if (this.usedCacheSpaceNotIn == null) {
+            this.usedCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.usedCacheSpaceNotIn.add(usedCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceNotIn
+     *
+     * @return usedCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getUsedCacheSpaceNotIn() {
+        return usedCacheSpaceNotIn;
+    }
+
+    public void setUsedCacheSpaceNotIn(List<Long> usedCacheSpaceNotIn) {
+        this.usedCacheSpaceNotIn = usedCacheSpaceNotIn;
+    }
+
+    public HostWhereInput usedCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput usedCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setUsedCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getUsedCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
+    }
+
     public HostWhereInput usedCpuHz(Double usedCpuHz) {
 
         this.usedCpuHz = usedCpuHz;
@@ -25721,6 +31265,726 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     public boolean getUsedMemoryBytesNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN);
+    }
+
+    public HostWhereInput validCacheSpace(Long validCacheSpace) {
+
+        this.validCacheSpace = validCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpace
+     *
+     * @return validCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpace() {
+        return validCacheSpace;
+    }
+
+    public void setValidCacheSpace(Long validCacheSpace) {
+        this.validCacheSpace = validCacheSpace;
+    }
+
+    public HostWhereInput validCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        return this;
+    }
+
+    public HostWhereInput validCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        return this;
+    }
+
+    public void setValidCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        }
+    }
+
+    public boolean getValidCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE);
+    }
+
+    public HostWhereInput validCacheSpaceGt(Long validCacheSpaceGt) {
+
+        this.validCacheSpaceGt = validCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceGt
+     *
+     * @return validCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceGt() {
+        return validCacheSpaceGt;
+    }
+
+    public void setValidCacheSpaceGt(Long validCacheSpaceGt) {
+        this.validCacheSpaceGt = validCacheSpaceGt;
+    }
+
+    public HostWhereInput validCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput validCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setValidCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getValidCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+    }
+
+    public HostWhereInput validCacheSpaceGte(Long validCacheSpaceGte) {
+
+        this.validCacheSpaceGte = validCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceGte
+     *
+     * @return validCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceGte() {
+        return validCacheSpaceGte;
+    }
+
+    public void setValidCacheSpaceGte(Long validCacheSpaceGte) {
+        this.validCacheSpaceGte = validCacheSpaceGte;
+    }
+
+    public HostWhereInput validCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput validCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setValidCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getValidCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+    }
+
+    public HostWhereInput validCacheSpaceIn(List<Long> validCacheSpaceIn) {
+
+        this.validCacheSpaceIn = validCacheSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addValidCacheSpaceInItem(Long validCacheSpaceInItem) {
+        if (this.validCacheSpaceIn == null) {
+            this.validCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.validCacheSpaceIn.add(validCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceIn
+     *
+     * @return validCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getValidCacheSpaceIn() {
+        return validCacheSpaceIn;
+    }
+
+    public void setValidCacheSpaceIn(List<Long> validCacheSpaceIn) {
+        this.validCacheSpaceIn = validCacheSpaceIn;
+    }
+
+    public HostWhereInput validCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput validCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setValidCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getValidCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+    }
+
+    public HostWhereInput validCacheSpaceLt(Long validCacheSpaceLt) {
+
+        this.validCacheSpaceLt = validCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceLt
+     *
+     * @return validCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceLt() {
+        return validCacheSpaceLt;
+    }
+
+    public void setValidCacheSpaceLt(Long validCacheSpaceLt) {
+        this.validCacheSpaceLt = validCacheSpaceLt;
+    }
+
+    public HostWhereInput validCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput validCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setValidCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getValidCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+    }
+
+    public HostWhereInput validCacheSpaceLte(Long validCacheSpaceLte) {
+
+        this.validCacheSpaceLte = validCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceLte
+     *
+     * @return validCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceLte() {
+        return validCacheSpaceLte;
+    }
+
+    public void setValidCacheSpaceLte(Long validCacheSpaceLte) {
+        this.validCacheSpaceLte = validCacheSpaceLte;
+    }
+
+    public HostWhereInput validCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput validCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setValidCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getValidCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+    }
+
+    public HostWhereInput validCacheSpaceNot(Long validCacheSpaceNot) {
+
+        this.validCacheSpaceNot = validCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceNot
+     *
+     * @return validCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceNot() {
+        return validCacheSpaceNot;
+    }
+
+    public void setValidCacheSpaceNot(Long validCacheSpaceNot) {
+        this.validCacheSpaceNot = validCacheSpaceNot;
+    }
+
+    public HostWhereInput validCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput validCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setValidCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getValidCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+    }
+
+    public HostWhereInput validCacheSpaceNotIn(List<Long> validCacheSpaceNotIn) {
+
+        this.validCacheSpaceNotIn = validCacheSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addValidCacheSpaceNotInItem(Long validCacheSpaceNotInItem) {
+        if (this.validCacheSpaceNotIn == null) {
+            this.validCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.validCacheSpaceNotIn.add(validCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceNotIn
+     *
+     * @return validCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getValidCacheSpaceNotIn() {
+        return validCacheSpaceNotIn;
+    }
+
+    public void setValidCacheSpaceNotIn(List<Long> validCacheSpaceNotIn) {
+        this.validCacheSpaceNotIn = validCacheSpaceNotIn;
+    }
+
+    public HostWhereInput validCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput validCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setValidCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getValidCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
+    }
+
+    public HostWhereInput validFreeCacheSpace(Long validFreeCacheSpace) {
+
+        this.validFreeCacheSpace = validFreeCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get validFreeCacheSpace
+     *
+     * @return validFreeCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidFreeCacheSpace() {
+        return validFreeCacheSpace;
+    }
+
+    public void setValidFreeCacheSpace(Long validFreeCacheSpace) {
+        this.validFreeCacheSpace = validFreeCacheSpace;
+    }
+
+    public HostWhereInput validFreeCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE);
+        return this;
+    }
+
+    public HostWhereInput validFreeCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE);
+        return this;
+    }
+
+    public void setValidFreeCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE);
+        }
+    }
+
+    public boolean getValidFreeCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE);
+    }
+
+    public HostWhereInput validFreeCacheSpaceGt(Long validFreeCacheSpaceGt) {
+
+        this.validFreeCacheSpaceGt = validFreeCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get validFreeCacheSpaceGt
+     *
+     * @return validFreeCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidFreeCacheSpaceGt() {
+        return validFreeCacheSpaceGt;
+    }
+
+    public void setValidFreeCacheSpaceGt(Long validFreeCacheSpaceGt) {
+        this.validFreeCacheSpaceGt = validFreeCacheSpaceGt;
+    }
+
+    public HostWhereInput validFreeCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput validFreeCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setValidFreeCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getValidFreeCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GT);
+    }
+
+    public HostWhereInput validFreeCacheSpaceGte(Long validFreeCacheSpaceGte) {
+
+        this.validFreeCacheSpaceGte = validFreeCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get validFreeCacheSpaceGte
+     *
+     * @return validFreeCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidFreeCacheSpaceGte() {
+        return validFreeCacheSpaceGte;
+    }
+
+    public void setValidFreeCacheSpaceGte(Long validFreeCacheSpaceGte) {
+        this.validFreeCacheSpaceGte = validFreeCacheSpaceGte;
+    }
+
+    public HostWhereInput validFreeCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput validFreeCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setValidFreeCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getValidFreeCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_GTE);
+    }
+
+    public HostWhereInput validFreeCacheSpaceIn(List<Long> validFreeCacheSpaceIn) {
+
+        this.validFreeCacheSpaceIn = validFreeCacheSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addValidFreeCacheSpaceInItem(Long validFreeCacheSpaceInItem) {
+        if (this.validFreeCacheSpaceIn == null) {
+            this.validFreeCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.validFreeCacheSpaceIn.add(validFreeCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get validFreeCacheSpaceIn
+     *
+     * @return validFreeCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getValidFreeCacheSpaceIn() {
+        return validFreeCacheSpaceIn;
+    }
+
+    public void setValidFreeCacheSpaceIn(List<Long> validFreeCacheSpaceIn) {
+        this.validFreeCacheSpaceIn = validFreeCacheSpaceIn;
+    }
+
+    public HostWhereInput validFreeCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput validFreeCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setValidFreeCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getValidFreeCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_IN);
+    }
+
+    public HostWhereInput validFreeCacheSpaceLt(Long validFreeCacheSpaceLt) {
+
+        this.validFreeCacheSpaceLt = validFreeCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get validFreeCacheSpaceLt
+     *
+     * @return validFreeCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidFreeCacheSpaceLt() {
+        return validFreeCacheSpaceLt;
+    }
+
+    public void setValidFreeCacheSpaceLt(Long validFreeCacheSpaceLt) {
+        this.validFreeCacheSpaceLt = validFreeCacheSpaceLt;
+    }
+
+    public HostWhereInput validFreeCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput validFreeCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setValidFreeCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getValidFreeCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LT);
+    }
+
+    public HostWhereInput validFreeCacheSpaceLte(Long validFreeCacheSpaceLte) {
+
+        this.validFreeCacheSpaceLte = validFreeCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get validFreeCacheSpaceLte
+     *
+     * @return validFreeCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidFreeCacheSpaceLte() {
+        return validFreeCacheSpaceLte;
+    }
+
+    public void setValidFreeCacheSpaceLte(Long validFreeCacheSpaceLte) {
+        this.validFreeCacheSpaceLte = validFreeCacheSpaceLte;
+    }
+
+    public HostWhereInput validFreeCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput validFreeCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setValidFreeCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getValidFreeCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_LTE);
+    }
+
+    public HostWhereInput validFreeCacheSpaceNot(Long validFreeCacheSpaceNot) {
+
+        this.validFreeCacheSpaceNot = validFreeCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get validFreeCacheSpaceNot
+     *
+     * @return validFreeCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidFreeCacheSpaceNot() {
+        return validFreeCacheSpaceNot;
+    }
+
+    public void setValidFreeCacheSpaceNot(Long validFreeCacheSpaceNot) {
+        this.validFreeCacheSpaceNot = validFreeCacheSpaceNot;
+    }
+
+    public HostWhereInput validFreeCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput validFreeCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setValidFreeCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getValidFreeCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT);
+    }
+
+    public HostWhereInput validFreeCacheSpaceNotIn(List<Long> validFreeCacheSpaceNotIn) {
+
+        this.validFreeCacheSpaceNotIn = validFreeCacheSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addValidFreeCacheSpaceNotInItem(Long validFreeCacheSpaceNotInItem) {
+        if (this.validFreeCacheSpaceNotIn == null) {
+            this.validFreeCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.validFreeCacheSpaceNotIn.add(validFreeCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get validFreeCacheSpaceNotIn
+     *
+     * @return validFreeCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getValidFreeCacheSpaceNotIn() {
+        return validFreeCacheSpaceNotIn;
+    }
+
+    public void setValidFreeCacheSpaceNotIn(List<Long> validFreeCacheSpaceNotIn) {
+        this.validFreeCacheSpaceNotIn = validFreeCacheSpaceNotIn;
+    }
+
+    public HostWhereInput validFreeCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput validFreeCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setValidFreeCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getValidFreeCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_FREE_CACHE_SPACE_NOT_IN);
     }
 
     public HostWhereInput vmNum(Integer vmNum) {
@@ -27069,6 +33333,53 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(
                         this.allocatableMemoryBytesNotIn,
                         hostWhereInput.allocatableMemoryBytesNotIn)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpace, hostWhereInput.allocatedPrioritizedSpace)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceGt,
+                        hostWhereInput.allocatedPrioritizedSpaceGt)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceGte,
+                        hostWhereInput.allocatedPrioritizedSpaceGte)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceIn,
+                        hostWhereInput.allocatedPrioritizedSpaceIn)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceLt,
+                        hostWhereInput.allocatedPrioritizedSpaceLt)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceLte,
+                        hostWhereInput.allocatedPrioritizedSpaceLte)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceNot,
+                        hostWhereInput.allocatedPrioritizedSpaceNot)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceNotIn,
+                        hostWhereInput.allocatedPrioritizedSpaceNotIn)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsage,
+                        hostWhereInput.allocatedPrioritizedSpaceUsage)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageGt,
+                        hostWhereInput.allocatedPrioritizedSpaceUsageGt)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageGte,
+                        hostWhereInput.allocatedPrioritizedSpaceUsageGte)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageIn,
+                        hostWhereInput.allocatedPrioritizedSpaceUsageIn)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageLt,
+                        hostWhereInput.allocatedPrioritizedSpaceUsageLt)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageLte,
+                        hostWhereInput.allocatedPrioritizedSpaceUsageLte)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageNot,
+                        hostWhereInput.allocatedPrioritizedSpaceUsageNot)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageNotIn,
+                        hostWhereInput.allocatedPrioritizedSpaceUsageNotIn)
                 && Objects.equals(this.chunkId, hostWhereInput.chunkId)
                 && Objects.equals(this.chunkIdContains, hostWhereInput.chunkIdContains)
                 && Objects.equals(this.chunkIdEndsWith, hostWhereInput.chunkIdEndsWith)
@@ -27084,6 +33395,22 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(this.chunkIdNotStartsWith, hostWhereInput.chunkIdNotStartsWith)
                 && Objects.equals(this.chunkIdStartsWith, hostWhereInput.chunkIdStartsWith)
                 && Objects.equals(this.cluster, hostWhereInput.cluster)
+                && Objects.equals(this.commitedMemoryBytes, hostWhereInput.commitedMemoryBytes)
+                && Objects.equals(this.commitedMemoryBytesGt, hostWhereInput.commitedMemoryBytesGt)
+                && Objects.equals(
+                        this.commitedMemoryBytesGte, hostWhereInput.commitedMemoryBytesGte)
+                && Objects.equals(this.commitedMemoryBytesIn, hostWhereInput.commitedMemoryBytesIn)
+                && Objects.equals(this.commitedMemoryBytesLt, hostWhereInput.commitedMemoryBytesLt)
+                && Objects.equals(
+                        this.commitedMemoryBytesLte, hostWhereInput.commitedMemoryBytesLte)
+                && Objects.equals(
+                        this.commitedMemoryBytesNot, hostWhereInput.commitedMemoryBytesNot)
+                && Objects.equals(
+                        this.commitedMemoryBytesNotIn, hostWhereInput.commitedMemoryBytesNotIn)
+                && Objects.equals(this.connectStatus, hostWhereInput.connectStatus)
+                && Objects.equals(this.connectStatusIn, hostWhereInput.connectStatusIn)
+                && Objects.equals(this.connectStatusNot, hostWhereInput.connectStatusNot)
+                && Objects.equals(this.connectStatusNotIn, hostWhereInput.connectStatusNotIn)
                 && Objects.equals(this.cpuBrand, hostWhereInput.cpuBrand)
                 && Objects.equals(this.cpuBrandContains, hostWhereInput.cpuBrandContains)
                 && Objects.equals(this.cpuBrandEndsWith, hostWhereInput.cpuBrandEndsWith)
@@ -27153,9 +33480,35 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(this.dataIpNotIn, hostWhereInput.dataIpNotIn)
                 && Objects.equals(this.dataIpNotStartsWith, hostWhereInput.dataIpNotStartsWith)
                 && Objects.equals(this.dataIpStartsWith, hostWhereInput.dataIpStartsWith)
+                && Objects.equals(this.diskPoolsEvery, hostWhereInput.diskPoolsEvery)
+                && Objects.equals(this.diskPoolsNone, hostWhereInput.diskPoolsNone)
+                && Objects.equals(this.diskPoolsSome, hostWhereInput.diskPoolsSome)
                 && Objects.equals(this.disksEvery, hostWhereInput.disksEvery)
                 && Objects.equals(this.disksNone, hostWhereInput.disksNone)
                 && Objects.equals(this.disksSome, hostWhereInput.disksSome)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpace, hostWhereInput.downgradedPrioritizedSpace)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceGt,
+                        hostWhereInput.downgradedPrioritizedSpaceGt)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceGte,
+                        hostWhereInput.downgradedPrioritizedSpaceGte)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceIn,
+                        hostWhereInput.downgradedPrioritizedSpaceIn)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceLt,
+                        hostWhereInput.downgradedPrioritizedSpaceLt)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceLte,
+                        hostWhereInput.downgradedPrioritizedSpaceLte)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceNot,
+                        hostWhereInput.downgradedPrioritizedSpaceNot)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceNotIn,
+                        hostWhereInput.downgradedPrioritizedSpaceNotIn)
                 && Objects.equals(this.entityAsyncStatus, hostWhereInput.entityAsyncStatus)
                 && Objects.equals(this.entityAsyncStatusIn, hostWhereInput.entityAsyncStatusIn)
                 && Objects.equals(this.entityAsyncStatusNot, hostWhereInput.entityAsyncStatusNot)
@@ -27265,6 +33618,10 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                         this.managementIpNotStartsWith, hostWhereInput.managementIpNotStartsWith)
                 && Objects.equals(
                         this.managementIpStartsWith, hostWhereInput.managementIpStartsWith)
+                && Objects.equals(this.mergedStatus, hostWhereInput.mergedStatus)
+                && Objects.equals(this.mergedStatusIn, hostWhereInput.mergedStatusIn)
+                && Objects.equals(this.mergedStatusNot, hostWhereInput.mergedStatusNot)
+                && Objects.equals(this.mergedStatusNotIn, hostWhereInput.mergedStatusNotIn)
                 && Objects.equals(this.model, hostWhereInput.model)
                 && Objects.equals(this.modelContains, hostWhereInput.modelContains)
                 && Objects.equals(this.modelEndsWith, hostWhereInput.modelEndsWith)
@@ -27351,6 +33708,88 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(
                         this.osVersionNotStartsWith, hostWhereInput.osVersionNotStartsWith)
                 && Objects.equals(this.osVersionStartsWith, hostWhereInput.osVersionStartsWith)
+                && Objects.equals(
+                        this.perfAllocatedDataSpace, hostWhereInput.perfAllocatedDataSpace)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceGt, hostWhereInput.perfAllocatedDataSpaceGt)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceGte, hostWhereInput.perfAllocatedDataSpaceGte)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceIn, hostWhereInput.perfAllocatedDataSpaceIn)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceLt, hostWhereInput.perfAllocatedDataSpaceLt)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceLte, hostWhereInput.perfAllocatedDataSpaceLte)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceNot, hostWhereInput.perfAllocatedDataSpaceNot)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceNotIn,
+                        hostWhereInput.perfAllocatedDataSpaceNotIn)
+                && Objects.equals(this.perfFailureDataSpace, hostWhereInput.perfFailureDataSpace)
+                && Objects.equals(
+                        this.perfFailureDataSpaceGt, hostWhereInput.perfFailureDataSpaceGt)
+                && Objects.equals(
+                        this.perfFailureDataSpaceGte, hostWhereInput.perfFailureDataSpaceGte)
+                && Objects.equals(
+                        this.perfFailureDataSpaceIn, hostWhereInput.perfFailureDataSpaceIn)
+                && Objects.equals(
+                        this.perfFailureDataSpaceLt, hostWhereInput.perfFailureDataSpaceLt)
+                && Objects.equals(
+                        this.perfFailureDataSpaceLte, hostWhereInput.perfFailureDataSpaceLte)
+                && Objects.equals(
+                        this.perfFailureDataSpaceNot, hostWhereInput.perfFailureDataSpaceNot)
+                && Objects.equals(
+                        this.perfFailureDataSpaceNotIn, hostWhereInput.perfFailureDataSpaceNotIn)
+                && Objects.equals(this.perfTotalDataCapacity, hostWhereInput.perfTotalDataCapacity)
+                && Objects.equals(
+                        this.perfTotalDataCapacityGt, hostWhereInput.perfTotalDataCapacityGt)
+                && Objects.equals(
+                        this.perfTotalDataCapacityGte, hostWhereInput.perfTotalDataCapacityGte)
+                && Objects.equals(
+                        this.perfTotalDataCapacityIn, hostWhereInput.perfTotalDataCapacityIn)
+                && Objects.equals(
+                        this.perfTotalDataCapacityLt, hostWhereInput.perfTotalDataCapacityLt)
+                && Objects.equals(
+                        this.perfTotalDataCapacityLte, hostWhereInput.perfTotalDataCapacityLte)
+                && Objects.equals(
+                        this.perfTotalDataCapacityNot, hostWhereInput.perfTotalDataCapacityNot)
+                && Objects.equals(
+                        this.perfTotalDataCapacityNotIn, hostWhereInput.perfTotalDataCapacityNotIn)
+                && Objects.equals(this.perfUsedDataSpace, hostWhereInput.perfUsedDataSpace)
+                && Objects.equals(this.perfUsedDataSpaceGt, hostWhereInput.perfUsedDataSpaceGt)
+                && Objects.equals(this.perfUsedDataSpaceGte, hostWhereInput.perfUsedDataSpaceGte)
+                && Objects.equals(this.perfUsedDataSpaceIn, hostWhereInput.perfUsedDataSpaceIn)
+                && Objects.equals(this.perfUsedDataSpaceLt, hostWhereInput.perfUsedDataSpaceLt)
+                && Objects.equals(this.perfUsedDataSpaceLte, hostWhereInput.perfUsedDataSpaceLte)
+                && Objects.equals(this.perfUsedDataSpaceNot, hostWhereInput.perfUsedDataSpaceNot)
+                && Objects.equals(
+                        this.perfUsedDataSpaceNotIn, hostWhereInput.perfUsedDataSpaceNotIn)
+                && Objects.equals(this.perfValidDataSpace, hostWhereInput.perfValidDataSpace)
+                && Objects.equals(this.perfValidDataSpaceGt, hostWhereInput.perfValidDataSpaceGt)
+                && Objects.equals(this.perfValidDataSpaceGte, hostWhereInput.perfValidDataSpaceGte)
+                && Objects.equals(this.perfValidDataSpaceIn, hostWhereInput.perfValidDataSpaceIn)
+                && Objects.equals(this.perfValidDataSpaceLt, hostWhereInput.perfValidDataSpaceLt)
+                && Objects.equals(this.perfValidDataSpaceLte, hostWhereInput.perfValidDataSpaceLte)
+                && Objects.equals(this.perfValidDataSpaceNot, hostWhereInput.perfValidDataSpaceNot)
+                && Objects.equals(
+                        this.perfValidDataSpaceNotIn, hostWhereInput.perfValidDataSpaceNotIn)
+                && Objects.equals(
+                        this.plannedPrioritizedSpace, hostWhereInput.plannedPrioritizedSpace)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceGt, hostWhereInput.plannedPrioritizedSpaceGt)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceGte, hostWhereInput.plannedPrioritizedSpaceGte)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceIn, hostWhereInput.plannedPrioritizedSpaceIn)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceLt, hostWhereInput.plannedPrioritizedSpaceLt)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceLte, hostWhereInput.plannedPrioritizedSpaceLte)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceNot, hostWhereInput.plannedPrioritizedSpaceNot)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceNotIn,
+                        hostWhereInput.plannedPrioritizedSpaceNotIn)
                 && Objects.equals(this.pmemDimmCapacity, hostWhereInput.pmemDimmCapacity)
                 && Objects.equals(this.pmemDimmCapacityGt, hostWhereInput.pmemDimmCapacityGt)
                 && Objects.equals(this.pmemDimmCapacityGte, hostWhereInput.pmemDimmCapacityGte)
@@ -27378,6 +33817,18 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(this.pmemDiskCountLte, hostWhereInput.pmemDiskCountLte)
                 && Objects.equals(this.pmemDiskCountNot, hostWhereInput.pmemDiskCountNot)
                 && Objects.equals(this.pmemDiskCountNotIn, hostWhereInput.pmemDiskCountNotIn)
+                && Objects.equals(this.prioSpacePercentage, hostWhereInput.prioSpacePercentage)
+                && Objects.equals(this.prioSpacePercentageGt, hostWhereInput.prioSpacePercentageGt)
+                && Objects.equals(
+                        this.prioSpacePercentageGte, hostWhereInput.prioSpacePercentageGte)
+                && Objects.equals(this.prioSpacePercentageIn, hostWhereInput.prioSpacePercentageIn)
+                && Objects.equals(this.prioSpacePercentageLt, hostWhereInput.prioSpacePercentageLt)
+                && Objects.equals(
+                        this.prioSpacePercentageLte, hostWhereInput.prioSpacePercentageLte)
+                && Objects.equals(
+                        this.prioSpacePercentageNot, hostWhereInput.prioSpacePercentageNot)
+                && Objects.equals(
+                        this.prioSpacePercentageNotIn, hostWhereInput.prioSpacePercentageNotIn)
                 && Objects.equals(this.provisionedCpuCores, hostWhereInput.provisionedCpuCores)
                 && Objects.equals(this.provisionedCpuCoresGt, hostWhereInput.provisionedCpuCoresGt)
                 && Objects.equals(
@@ -27575,6 +34026,14 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(this.usbDevicesEvery, hostWhereInput.usbDevicesEvery)
                 && Objects.equals(this.usbDevicesNone, hostWhereInput.usbDevicesNone)
                 && Objects.equals(this.usbDevicesSome, hostWhereInput.usbDevicesSome)
+                && Objects.equals(this.usedCacheSpace, hostWhereInput.usedCacheSpace)
+                && Objects.equals(this.usedCacheSpaceGt, hostWhereInput.usedCacheSpaceGt)
+                && Objects.equals(this.usedCacheSpaceGte, hostWhereInput.usedCacheSpaceGte)
+                && Objects.equals(this.usedCacheSpaceIn, hostWhereInput.usedCacheSpaceIn)
+                && Objects.equals(this.usedCacheSpaceLt, hostWhereInput.usedCacheSpaceLt)
+                && Objects.equals(this.usedCacheSpaceLte, hostWhereInput.usedCacheSpaceLte)
+                && Objects.equals(this.usedCacheSpaceNot, hostWhereInput.usedCacheSpaceNot)
+                && Objects.equals(this.usedCacheSpaceNotIn, hostWhereInput.usedCacheSpaceNotIn)
                 && Objects.equals(this.usedCpuHz, hostWhereInput.usedCpuHz)
                 && Objects.equals(this.usedCpuHzGt, hostWhereInput.usedCpuHzGt)
                 && Objects.equals(this.usedCpuHzGte, hostWhereInput.usedCpuHzGte)
@@ -27599,6 +34058,26 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(this.usedMemoryBytesLte, hostWhereInput.usedMemoryBytesLte)
                 && Objects.equals(this.usedMemoryBytesNot, hostWhereInput.usedMemoryBytesNot)
                 && Objects.equals(this.usedMemoryBytesNotIn, hostWhereInput.usedMemoryBytesNotIn)
+                && Objects.equals(this.validCacheSpace, hostWhereInput.validCacheSpace)
+                && Objects.equals(this.validCacheSpaceGt, hostWhereInput.validCacheSpaceGt)
+                && Objects.equals(this.validCacheSpaceGte, hostWhereInput.validCacheSpaceGte)
+                && Objects.equals(this.validCacheSpaceIn, hostWhereInput.validCacheSpaceIn)
+                && Objects.equals(this.validCacheSpaceLt, hostWhereInput.validCacheSpaceLt)
+                && Objects.equals(this.validCacheSpaceLte, hostWhereInput.validCacheSpaceLte)
+                && Objects.equals(this.validCacheSpaceNot, hostWhereInput.validCacheSpaceNot)
+                && Objects.equals(this.validCacheSpaceNotIn, hostWhereInput.validCacheSpaceNotIn)
+                && Objects.equals(this.validFreeCacheSpace, hostWhereInput.validFreeCacheSpace)
+                && Objects.equals(this.validFreeCacheSpaceGt, hostWhereInput.validFreeCacheSpaceGt)
+                && Objects.equals(
+                        this.validFreeCacheSpaceGte, hostWhereInput.validFreeCacheSpaceGte)
+                && Objects.equals(this.validFreeCacheSpaceIn, hostWhereInput.validFreeCacheSpaceIn)
+                && Objects.equals(this.validFreeCacheSpaceLt, hostWhereInput.validFreeCacheSpaceLt)
+                && Objects.equals(
+                        this.validFreeCacheSpaceLte, hostWhereInput.validFreeCacheSpaceLte)
+                && Objects.equals(
+                        this.validFreeCacheSpaceNot, hostWhereInput.validFreeCacheSpaceNot)
+                && Objects.equals(
+                        this.validFreeCacheSpaceNotIn, hostWhereInput.validFreeCacheSpaceNotIn)
                 && Objects.equals(this.vmNum, hostWhereInput.vmNum)
                 && Objects.equals(this.vmNumGt, hostWhereInput.vmNumGt)
                 && Objects.equals(this.vmNumGte, hostWhereInput.vmNumGte)
@@ -27677,6 +34156,22 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 allocatableMemoryBytesLte,
                 allocatableMemoryBytesNot,
                 allocatableMemoryBytesNotIn,
+                allocatedPrioritizedSpace,
+                allocatedPrioritizedSpaceGt,
+                allocatedPrioritizedSpaceGte,
+                allocatedPrioritizedSpaceIn,
+                allocatedPrioritizedSpaceLt,
+                allocatedPrioritizedSpaceLte,
+                allocatedPrioritizedSpaceNot,
+                allocatedPrioritizedSpaceNotIn,
+                allocatedPrioritizedSpaceUsage,
+                allocatedPrioritizedSpaceUsageGt,
+                allocatedPrioritizedSpaceUsageGte,
+                allocatedPrioritizedSpaceUsageIn,
+                allocatedPrioritizedSpaceUsageLt,
+                allocatedPrioritizedSpaceUsageLte,
+                allocatedPrioritizedSpaceUsageNot,
+                allocatedPrioritizedSpaceUsageNotIn,
                 chunkId,
                 chunkIdContains,
                 chunkIdEndsWith,
@@ -27692,6 +34187,18 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 chunkIdNotStartsWith,
                 chunkIdStartsWith,
                 cluster,
+                commitedMemoryBytes,
+                commitedMemoryBytesGt,
+                commitedMemoryBytesGte,
+                commitedMemoryBytesIn,
+                commitedMemoryBytesLt,
+                commitedMemoryBytesLte,
+                commitedMemoryBytesNot,
+                commitedMemoryBytesNotIn,
+                connectStatus,
+                connectStatusIn,
+                connectStatusNot,
+                connectStatusNotIn,
                 cpuBrand,
                 cpuBrandContains,
                 cpuBrandEndsWith,
@@ -27760,9 +34267,20 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 dataIpNotIn,
                 dataIpNotStartsWith,
                 dataIpStartsWith,
+                diskPoolsEvery,
+                diskPoolsNone,
+                diskPoolsSome,
                 disksEvery,
                 disksNone,
                 disksSome,
+                downgradedPrioritizedSpace,
+                downgradedPrioritizedSpaceGt,
+                downgradedPrioritizedSpaceGte,
+                downgradedPrioritizedSpaceIn,
+                downgradedPrioritizedSpaceLt,
+                downgradedPrioritizedSpaceLte,
+                downgradedPrioritizedSpaceNot,
+                downgradedPrioritizedSpaceNotIn,
                 entityAsyncStatus,
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
@@ -27862,6 +34380,10 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 managementIpNotIn,
                 managementIpNotStartsWith,
                 managementIpStartsWith,
+                mergedStatus,
+                mergedStatusIn,
+                mergedStatusNot,
+                mergedStatusNotIn,
                 model,
                 modelContains,
                 modelEndsWith,
@@ -27939,6 +34461,54 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 osVersionNotIn,
                 osVersionNotStartsWith,
                 osVersionStartsWith,
+                perfAllocatedDataSpace,
+                perfAllocatedDataSpaceGt,
+                perfAllocatedDataSpaceGte,
+                perfAllocatedDataSpaceIn,
+                perfAllocatedDataSpaceLt,
+                perfAllocatedDataSpaceLte,
+                perfAllocatedDataSpaceNot,
+                perfAllocatedDataSpaceNotIn,
+                perfFailureDataSpace,
+                perfFailureDataSpaceGt,
+                perfFailureDataSpaceGte,
+                perfFailureDataSpaceIn,
+                perfFailureDataSpaceLt,
+                perfFailureDataSpaceLte,
+                perfFailureDataSpaceNot,
+                perfFailureDataSpaceNotIn,
+                perfTotalDataCapacity,
+                perfTotalDataCapacityGt,
+                perfTotalDataCapacityGte,
+                perfTotalDataCapacityIn,
+                perfTotalDataCapacityLt,
+                perfTotalDataCapacityLte,
+                perfTotalDataCapacityNot,
+                perfTotalDataCapacityNotIn,
+                perfUsedDataSpace,
+                perfUsedDataSpaceGt,
+                perfUsedDataSpaceGte,
+                perfUsedDataSpaceIn,
+                perfUsedDataSpaceLt,
+                perfUsedDataSpaceLte,
+                perfUsedDataSpaceNot,
+                perfUsedDataSpaceNotIn,
+                perfValidDataSpace,
+                perfValidDataSpaceGt,
+                perfValidDataSpaceGte,
+                perfValidDataSpaceIn,
+                perfValidDataSpaceLt,
+                perfValidDataSpaceLte,
+                perfValidDataSpaceNot,
+                perfValidDataSpaceNotIn,
+                plannedPrioritizedSpace,
+                plannedPrioritizedSpaceGt,
+                plannedPrioritizedSpaceGte,
+                plannedPrioritizedSpaceIn,
+                plannedPrioritizedSpaceLt,
+                plannedPrioritizedSpaceLte,
+                plannedPrioritizedSpaceNot,
+                plannedPrioritizedSpaceNotIn,
                 pmemDimmCapacity,
                 pmemDimmCapacityGt,
                 pmemDimmCapacityGte,
@@ -27966,6 +34536,14 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 pmemDiskCountLte,
                 pmemDiskCountNot,
                 pmemDiskCountNotIn,
+                prioSpacePercentage,
+                prioSpacePercentageGt,
+                prioSpacePercentageGte,
+                prioSpacePercentageIn,
+                prioSpacePercentageLt,
+                prioSpacePercentageLte,
+                prioSpacePercentageNot,
+                prioSpacePercentageNotIn,
                 provisionedCpuCores,
                 provisionedCpuCoresGt,
                 provisionedCpuCoresGte,
@@ -28133,6 +34711,14 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 usbDevicesEvery,
                 usbDevicesNone,
                 usbDevicesSome,
+                usedCacheSpace,
+                usedCacheSpaceGt,
+                usedCacheSpaceGte,
+                usedCacheSpaceIn,
+                usedCacheSpaceLt,
+                usedCacheSpaceLte,
+                usedCacheSpaceNot,
+                usedCacheSpaceNotIn,
                 usedCpuHz,
                 usedCpuHzGt,
                 usedCpuHzGte,
@@ -28157,6 +34743,22 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 usedMemoryBytesLte,
                 usedMemoryBytesNot,
                 usedMemoryBytesNotIn,
+                validCacheSpace,
+                validCacheSpaceGt,
+                validCacheSpaceGte,
+                validCacheSpaceIn,
+                validCacheSpaceLt,
+                validCacheSpaceLte,
+                validCacheSpaceNot,
+                validCacheSpaceNotIn,
+                validFreeCacheSpace,
+                validFreeCacheSpaceGt,
+                validFreeCacheSpaceGte,
+                validFreeCacheSpaceIn,
+                validFreeCacheSpaceLt,
+                validFreeCacheSpaceLte,
+                validFreeCacheSpaceNot,
+                validFreeCacheSpaceNotIn,
                 vmNum,
                 vmNumGt,
                 vmNumGte,
@@ -28272,6 +34874,54 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         sb.append("    allocatableMemoryBytesNotIn: ")
                 .append(toIndentedString(allocatableMemoryBytesNotIn))
                 .append("\n");
+        sb.append("    allocatedPrioritizedSpace: ")
+                .append(toIndentedString(allocatedPrioritizedSpace))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceGt: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceGt))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceGte: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceGte))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceIn: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceIn))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceLt: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceLt))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceLte: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceLte))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceNot: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceNot))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceNotIn: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceNotIn))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsage: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsage))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageGt: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageGt))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageGte: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageGte))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageIn: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageIn))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageLt: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageLt))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageLte: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageLte))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageNot: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageNot))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageNotIn: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageNotIn))
+                .append("\n");
         sb.append("    chunkId: ").append(toIndentedString(chunkId)).append("\n");
         sb.append("    chunkIdContains: ").append(toIndentedString(chunkIdContains)).append("\n");
         sb.append("    chunkIdEndsWith: ").append(toIndentedString(chunkIdEndsWith)).append("\n");
@@ -28295,6 +34945,36 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 .append(toIndentedString(chunkIdStartsWith))
                 .append("\n");
         sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
+        sb.append("    commitedMemoryBytes: ")
+                .append(toIndentedString(commitedMemoryBytes))
+                .append("\n");
+        sb.append("    commitedMemoryBytesGt: ")
+                .append(toIndentedString(commitedMemoryBytesGt))
+                .append("\n");
+        sb.append("    commitedMemoryBytesGte: ")
+                .append(toIndentedString(commitedMemoryBytesGte))
+                .append("\n");
+        sb.append("    commitedMemoryBytesIn: ")
+                .append(toIndentedString(commitedMemoryBytesIn))
+                .append("\n");
+        sb.append("    commitedMemoryBytesLt: ")
+                .append(toIndentedString(commitedMemoryBytesLt))
+                .append("\n");
+        sb.append("    commitedMemoryBytesLte: ")
+                .append(toIndentedString(commitedMemoryBytesLte))
+                .append("\n");
+        sb.append("    commitedMemoryBytesNot: ")
+                .append(toIndentedString(commitedMemoryBytesNot))
+                .append("\n");
+        sb.append("    commitedMemoryBytesNotIn: ")
+                .append(toIndentedString(commitedMemoryBytesNotIn))
+                .append("\n");
+        sb.append("    connectStatus: ").append(toIndentedString(connectStatus)).append("\n");
+        sb.append("    connectStatusIn: ").append(toIndentedString(connectStatusIn)).append("\n");
+        sb.append("    connectStatusNot: ").append(toIndentedString(connectStatusNot)).append("\n");
+        sb.append("    connectStatusNotIn: ")
+                .append(toIndentedString(connectStatusNotIn))
+                .append("\n");
         sb.append("    cpuBrand: ").append(toIndentedString(cpuBrand)).append("\n");
         sb.append("    cpuBrandContains: ").append(toIndentedString(cpuBrandContains)).append("\n");
         sb.append("    cpuBrandEndsWith: ").append(toIndentedString(cpuBrandEndsWith)).append("\n");
@@ -28405,9 +35085,36 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 .append(toIndentedString(dataIpNotStartsWith))
                 .append("\n");
         sb.append("    dataIpStartsWith: ").append(toIndentedString(dataIpStartsWith)).append("\n");
+        sb.append("    diskPoolsEvery: ").append(toIndentedString(diskPoolsEvery)).append("\n");
+        sb.append("    diskPoolsNone: ").append(toIndentedString(diskPoolsNone)).append("\n");
+        sb.append("    diskPoolsSome: ").append(toIndentedString(diskPoolsSome)).append("\n");
         sb.append("    disksEvery: ").append(toIndentedString(disksEvery)).append("\n");
         sb.append("    disksNone: ").append(toIndentedString(disksNone)).append("\n");
         sb.append("    disksSome: ").append(toIndentedString(disksSome)).append("\n");
+        sb.append("    downgradedPrioritizedSpace: ")
+                .append(toIndentedString(downgradedPrioritizedSpace))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceGt: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceGt))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceGte: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceGte))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceIn: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceIn))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceLt: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceLt))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceLte: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceLte))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceNot: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceNot))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceNotIn: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceNotIn))
+                .append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -28585,6 +35292,12 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         sb.append("    managementIpStartsWith: ")
                 .append(toIndentedString(managementIpStartsWith))
                 .append("\n");
+        sb.append("    mergedStatus: ").append(toIndentedString(mergedStatus)).append("\n");
+        sb.append("    mergedStatusIn: ").append(toIndentedString(mergedStatusIn)).append("\n");
+        sb.append("    mergedStatusNot: ").append(toIndentedString(mergedStatusNot)).append("\n");
+        sb.append("    mergedStatusNotIn: ")
+                .append(toIndentedString(mergedStatusNotIn))
+                .append("\n");
         sb.append("    model: ").append(toIndentedString(model)).append("\n");
         sb.append("    modelContains: ").append(toIndentedString(modelContains)).append("\n");
         sb.append("    modelEndsWith: ").append(toIndentedString(modelEndsWith)).append("\n");
@@ -28710,6 +35423,150 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         sb.append("    osVersionStartsWith: ")
                 .append(toIndentedString(osVersionStartsWith))
                 .append("\n");
+        sb.append("    perfAllocatedDataSpace: ")
+                .append(toIndentedString(perfAllocatedDataSpace))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceGt: ")
+                .append(toIndentedString(perfAllocatedDataSpaceGt))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceGte: ")
+                .append(toIndentedString(perfAllocatedDataSpaceGte))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceIn: ")
+                .append(toIndentedString(perfAllocatedDataSpaceIn))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceLt: ")
+                .append(toIndentedString(perfAllocatedDataSpaceLt))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceLte: ")
+                .append(toIndentedString(perfAllocatedDataSpaceLte))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceNot: ")
+                .append(toIndentedString(perfAllocatedDataSpaceNot))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceNotIn: ")
+                .append(toIndentedString(perfAllocatedDataSpaceNotIn))
+                .append("\n");
+        sb.append("    perfFailureDataSpace: ")
+                .append(toIndentedString(perfFailureDataSpace))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceGt: ")
+                .append(toIndentedString(perfFailureDataSpaceGt))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceGte: ")
+                .append(toIndentedString(perfFailureDataSpaceGte))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceIn: ")
+                .append(toIndentedString(perfFailureDataSpaceIn))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceLt: ")
+                .append(toIndentedString(perfFailureDataSpaceLt))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceLte: ")
+                .append(toIndentedString(perfFailureDataSpaceLte))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceNot: ")
+                .append(toIndentedString(perfFailureDataSpaceNot))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceNotIn: ")
+                .append(toIndentedString(perfFailureDataSpaceNotIn))
+                .append("\n");
+        sb.append("    perfTotalDataCapacity: ")
+                .append(toIndentedString(perfTotalDataCapacity))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityGt: ")
+                .append(toIndentedString(perfTotalDataCapacityGt))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityGte: ")
+                .append(toIndentedString(perfTotalDataCapacityGte))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityIn: ")
+                .append(toIndentedString(perfTotalDataCapacityIn))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityLt: ")
+                .append(toIndentedString(perfTotalDataCapacityLt))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityLte: ")
+                .append(toIndentedString(perfTotalDataCapacityLte))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityNot: ")
+                .append(toIndentedString(perfTotalDataCapacityNot))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityNotIn: ")
+                .append(toIndentedString(perfTotalDataCapacityNotIn))
+                .append("\n");
+        sb.append("    perfUsedDataSpace: ")
+                .append(toIndentedString(perfUsedDataSpace))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceGt: ")
+                .append(toIndentedString(perfUsedDataSpaceGt))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceGte: ")
+                .append(toIndentedString(perfUsedDataSpaceGte))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceIn: ")
+                .append(toIndentedString(perfUsedDataSpaceIn))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceLt: ")
+                .append(toIndentedString(perfUsedDataSpaceLt))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceLte: ")
+                .append(toIndentedString(perfUsedDataSpaceLte))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceNot: ")
+                .append(toIndentedString(perfUsedDataSpaceNot))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceNotIn: ")
+                .append(toIndentedString(perfUsedDataSpaceNotIn))
+                .append("\n");
+        sb.append("    perfValidDataSpace: ")
+                .append(toIndentedString(perfValidDataSpace))
+                .append("\n");
+        sb.append("    perfValidDataSpaceGt: ")
+                .append(toIndentedString(perfValidDataSpaceGt))
+                .append("\n");
+        sb.append("    perfValidDataSpaceGte: ")
+                .append(toIndentedString(perfValidDataSpaceGte))
+                .append("\n");
+        sb.append("    perfValidDataSpaceIn: ")
+                .append(toIndentedString(perfValidDataSpaceIn))
+                .append("\n");
+        sb.append("    perfValidDataSpaceLt: ")
+                .append(toIndentedString(perfValidDataSpaceLt))
+                .append("\n");
+        sb.append("    perfValidDataSpaceLte: ")
+                .append(toIndentedString(perfValidDataSpaceLte))
+                .append("\n");
+        sb.append("    perfValidDataSpaceNot: ")
+                .append(toIndentedString(perfValidDataSpaceNot))
+                .append("\n");
+        sb.append("    perfValidDataSpaceNotIn: ")
+                .append(toIndentedString(perfValidDataSpaceNotIn))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpace: ")
+                .append(toIndentedString(plannedPrioritizedSpace))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceGt: ")
+                .append(toIndentedString(plannedPrioritizedSpaceGt))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceGte: ")
+                .append(toIndentedString(plannedPrioritizedSpaceGte))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceIn: ")
+                .append(toIndentedString(plannedPrioritizedSpaceIn))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceLt: ")
+                .append(toIndentedString(plannedPrioritizedSpaceLt))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceLte: ")
+                .append(toIndentedString(plannedPrioritizedSpaceLte))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceNot: ")
+                .append(toIndentedString(plannedPrioritizedSpaceNot))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceNotIn: ")
+                .append(toIndentedString(plannedPrioritizedSpaceNotIn))
+                .append("\n");
         sb.append("    pmemDimmCapacity: ").append(toIndentedString(pmemDimmCapacity)).append("\n");
         sb.append("    pmemDimmCapacityGt: ")
                 .append(toIndentedString(pmemDimmCapacityGt))
@@ -28754,6 +35611,30 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         sb.append("    pmemDiskCountNot: ").append(toIndentedString(pmemDiskCountNot)).append("\n");
         sb.append("    pmemDiskCountNotIn: ")
                 .append(toIndentedString(pmemDiskCountNotIn))
+                .append("\n");
+        sb.append("    prioSpacePercentage: ")
+                .append(toIndentedString(prioSpacePercentage))
+                .append("\n");
+        sb.append("    prioSpacePercentageGt: ")
+                .append(toIndentedString(prioSpacePercentageGt))
+                .append("\n");
+        sb.append("    prioSpacePercentageGte: ")
+                .append(toIndentedString(prioSpacePercentageGte))
+                .append("\n");
+        sb.append("    prioSpacePercentageIn: ")
+                .append(toIndentedString(prioSpacePercentageIn))
+                .append("\n");
+        sb.append("    prioSpacePercentageLt: ")
+                .append(toIndentedString(prioSpacePercentageLt))
+                .append("\n");
+        sb.append("    prioSpacePercentageLte: ")
+                .append(toIndentedString(prioSpacePercentageLte))
+                .append("\n");
+        sb.append("    prioSpacePercentageNot: ")
+                .append(toIndentedString(prioSpacePercentageNot))
+                .append("\n");
+        sb.append("    prioSpacePercentageNotIn: ")
+                .append(toIndentedString(prioSpacePercentageNotIn))
                 .append("\n");
         sb.append("    provisionedCpuCores: ")
                 .append(toIndentedString(provisionedCpuCores))
@@ -29074,6 +35955,22 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         sb.append("    usbDevicesEvery: ").append(toIndentedString(usbDevicesEvery)).append("\n");
         sb.append("    usbDevicesNone: ").append(toIndentedString(usbDevicesNone)).append("\n");
         sb.append("    usbDevicesSome: ").append(toIndentedString(usbDevicesSome)).append("\n");
+        sb.append("    usedCacheSpace: ").append(toIndentedString(usedCacheSpace)).append("\n");
+        sb.append("    usedCacheSpaceGt: ").append(toIndentedString(usedCacheSpaceGt)).append("\n");
+        sb.append("    usedCacheSpaceGte: ")
+                .append(toIndentedString(usedCacheSpaceGte))
+                .append("\n");
+        sb.append("    usedCacheSpaceIn: ").append(toIndentedString(usedCacheSpaceIn)).append("\n");
+        sb.append("    usedCacheSpaceLt: ").append(toIndentedString(usedCacheSpaceLt)).append("\n");
+        sb.append("    usedCacheSpaceLte: ")
+                .append(toIndentedString(usedCacheSpaceLte))
+                .append("\n");
+        sb.append("    usedCacheSpaceNot: ")
+                .append(toIndentedString(usedCacheSpaceNot))
+                .append("\n");
+        sb.append("    usedCacheSpaceNotIn: ")
+                .append(toIndentedString(usedCacheSpaceNotIn))
+                .append("\n");
         sb.append("    usedCpuHz: ").append(toIndentedString(usedCpuHz)).append("\n");
         sb.append("    usedCpuHzGt: ").append(toIndentedString(usedCpuHzGt)).append("\n");
         sb.append("    usedCpuHzGte: ").append(toIndentedString(usedCpuHzGte)).append("\n");
@@ -29113,6 +36010,52 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 .append("\n");
         sb.append("    usedMemoryBytesNotIn: ")
                 .append(toIndentedString(usedMemoryBytesNotIn))
+                .append("\n");
+        sb.append("    validCacheSpace: ").append(toIndentedString(validCacheSpace)).append("\n");
+        sb.append("    validCacheSpaceGt: ")
+                .append(toIndentedString(validCacheSpaceGt))
+                .append("\n");
+        sb.append("    validCacheSpaceGte: ")
+                .append(toIndentedString(validCacheSpaceGte))
+                .append("\n");
+        sb.append("    validCacheSpaceIn: ")
+                .append(toIndentedString(validCacheSpaceIn))
+                .append("\n");
+        sb.append("    validCacheSpaceLt: ")
+                .append(toIndentedString(validCacheSpaceLt))
+                .append("\n");
+        sb.append("    validCacheSpaceLte: ")
+                .append(toIndentedString(validCacheSpaceLte))
+                .append("\n");
+        sb.append("    validCacheSpaceNot: ")
+                .append(toIndentedString(validCacheSpaceNot))
+                .append("\n");
+        sb.append("    validCacheSpaceNotIn: ")
+                .append(toIndentedString(validCacheSpaceNotIn))
+                .append("\n");
+        sb.append("    validFreeCacheSpace: ")
+                .append(toIndentedString(validFreeCacheSpace))
+                .append("\n");
+        sb.append("    validFreeCacheSpaceGt: ")
+                .append(toIndentedString(validFreeCacheSpaceGt))
+                .append("\n");
+        sb.append("    validFreeCacheSpaceGte: ")
+                .append(toIndentedString(validFreeCacheSpaceGte))
+                .append("\n");
+        sb.append("    validFreeCacheSpaceIn: ")
+                .append(toIndentedString(validFreeCacheSpaceIn))
+                .append("\n");
+        sb.append("    validFreeCacheSpaceLt: ")
+                .append(toIndentedString(validFreeCacheSpaceLt))
+                .append("\n");
+        sb.append("    validFreeCacheSpaceLte: ")
+                .append(toIndentedString(validFreeCacheSpaceLte))
+                .append("\n");
+        sb.append("    validFreeCacheSpaceNot: ")
+                .append(toIndentedString(validFreeCacheSpaceNot))
+                .append("\n");
+        sb.append("    validFreeCacheSpaceNotIn: ")
+                .append(toIndentedString(validFreeCacheSpaceNotIn))
                 .append("\n");
         sb.append("    vmNum: ").append(toIndentedString(vmNum)).append("\n");
         sb.append("    vmNumGt: ").append(toIndentedString(vmNumGt)).append("\n");

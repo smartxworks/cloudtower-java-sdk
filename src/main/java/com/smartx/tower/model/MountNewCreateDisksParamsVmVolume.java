@@ -9,6 +9,22 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class MountNewCreateDisksParamsVmVolume
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_RESIDENT_IN_CACHE = "resident_in_cache";
+
+    @SerializedName(SERIALIZED_NAME_RESIDENT_IN_CACHE)
+    private Boolean residentInCache;
+
+    public static final String SERIALIZED_NAME_ELF_EC_STORAGE_POLICY = "elf_ec_storage_policy";
+
+    @SerializedName(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY)
+    private MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy elfEcStoragePolicy;
+
+    public static final String SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY =
+            "elf_replica_storage_policy";
+
+    @SerializedName(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY)
+    private VmVolumeElfStoragePolicyType elfReplicaStoragePolicy;
+
     public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY = "elf_storage_policy";
 
     @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY)
@@ -36,6 +52,138 @@ public class MountNewCreateDisksParamsVmVolume
 
     public MountNewCreateDisksParamsVmVolume() {}
 
+    public MountNewCreateDisksParamsVmVolume residentInCache(Boolean residentInCache) {
+
+        this.residentInCache = residentInCache;
+        return this;
+    }
+
+    /**
+     * Get residentInCache
+     *
+     * @return residentInCache
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getResidentInCache() {
+        return residentInCache;
+    }
+
+    public void setResidentInCache(Boolean residentInCache) {
+        this.residentInCache = residentInCache;
+    }
+
+    public MountNewCreateDisksParamsVmVolume residentInCache_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        return this;
+    }
+
+    public MountNewCreateDisksParamsVmVolume residentInCache_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        return this;
+    }
+
+    public void setResidentInCache_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        }
+    }
+
+    public boolean getResidentInCache_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+    }
+
+    public MountNewCreateDisksParamsVmVolume elfEcStoragePolicy(
+            MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy elfEcStoragePolicy) {
+
+        this.elfEcStoragePolicy = elfEcStoragePolicy;
+        return this;
+    }
+
+    /**
+     * Get elfEcStoragePolicy
+     *
+     * @return elfEcStoragePolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy getElfEcStoragePolicy() {
+        return elfEcStoragePolicy;
+    }
+
+    public void setElfEcStoragePolicy(
+            MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy elfEcStoragePolicy) {
+        this.elfEcStoragePolicy = elfEcStoragePolicy;
+    }
+
+    public MountNewCreateDisksParamsVmVolume elfEcStoragePolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+        return this;
+    }
+
+    public MountNewCreateDisksParamsVmVolume elfEcStoragePolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+        return this;
+    }
+
+    public void setElfEcStoragePolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+        }
+    }
+
+    public boolean getElfEcStoragePolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_EC_STORAGE_POLICY);
+    }
+
+    public MountNewCreateDisksParamsVmVolume elfReplicaStoragePolicy(
+            VmVolumeElfStoragePolicyType elfReplicaStoragePolicy) {
+
+        this.elfReplicaStoragePolicy = elfReplicaStoragePolicy;
+        return this;
+    }
+
+    /**
+     * Get elfReplicaStoragePolicy
+     *
+     * @return elfReplicaStoragePolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmVolumeElfStoragePolicyType getElfReplicaStoragePolicy() {
+        return elfReplicaStoragePolicy;
+    }
+
+    public void setElfReplicaStoragePolicy(VmVolumeElfStoragePolicyType elfReplicaStoragePolicy) {
+        this.elfReplicaStoragePolicy = elfReplicaStoragePolicy;
+    }
+
+    public MountNewCreateDisksParamsVmVolume elfReplicaStoragePolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+        return this;
+    }
+
+    public MountNewCreateDisksParamsVmVolume elfReplicaStoragePolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+        return this;
+    }
+
+    public void setElfReplicaStoragePolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+        }
+    }
+
+    public boolean getElfReplicaStoragePolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_REPLICA_STORAGE_POLICY);
+    }
+
     public MountNewCreateDisksParamsVmVolume elfStoragePolicy(
             VmVolumeElfStoragePolicyType elfStoragePolicy) {
 
@@ -48,8 +196,8 @@ public class MountNewCreateDisksParamsVmVolume
      *
      * @return elfStoragePolicy
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public VmVolumeElfStoragePolicyType getElfStoragePolicy() {
         return elfStoragePolicy;
     }
@@ -263,6 +411,14 @@ public class MountNewCreateDisksParamsVmVolume
         MountNewCreateDisksParamsVmVolume mountNewCreateDisksParamsVmVolume =
                 (MountNewCreateDisksParamsVmVolume) o;
         return Objects.equals(
+                        this.residentInCache, mountNewCreateDisksParamsVmVolume.residentInCache)
+                && Objects.equals(
+                        this.elfEcStoragePolicy,
+                        mountNewCreateDisksParamsVmVolume.elfEcStoragePolicy)
+                && Objects.equals(
+                        this.elfReplicaStoragePolicy,
+                        mountNewCreateDisksParamsVmVolume.elfReplicaStoragePolicy)
+                && Objects.equals(
                         this.elfStoragePolicy, mountNewCreateDisksParamsVmVolume.elfStoragePolicy)
                 && Objects.equals(this.path, mountNewCreateDisksParamsVmVolume.path)
                 && Objects.equals(this.sizeUnit, mountNewCreateDisksParamsVmVolume.sizeUnit)
@@ -272,13 +428,28 @@ public class MountNewCreateDisksParamsVmVolume
 
     @Override
     public int hashCode() {
-        return Objects.hash(elfStoragePolicy, path, sizeUnit, size, name);
+        return Objects.hash(
+                residentInCache,
+                elfEcStoragePolicy,
+                elfReplicaStoragePolicy,
+                elfStoragePolicy,
+                path,
+                sizeUnit,
+                size,
+                name);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class MountNewCreateDisksParamsVmVolume {\n");
+        sb.append("    residentInCache: ").append(toIndentedString(residentInCache)).append("\n");
+        sb.append("    elfEcStoragePolicy: ")
+                .append(toIndentedString(elfEcStoragePolicy))
+                .append("\n");
+        sb.append("    elfReplicaStoragePolicy: ")
+                .append(toIndentedString(elfReplicaStoragePolicy))
+                .append("\n");
         sb.append("    elfStoragePolicy: ").append(toIndentedString(elfStoragePolicy)).append("\n");
         sb.append("    path: ").append(toIndentedString(path)).append("\n");
         sb.append("    sizeUnit: ").append(toIndentedString(sizeUnit)).append("\n");

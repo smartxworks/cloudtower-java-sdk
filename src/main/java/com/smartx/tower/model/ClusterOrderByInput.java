@@ -10,6 +10,18 @@ import java.io.IOException;
 /** Gets or Sets ClusterOrderByInput */
 @JsonAdapter(ClusterOrderByInput.Adapter.class)
 public enum ClusterOrderByInput {
+    ACCESS_WRITE_COMPRESS_ENABLED_ASC("access_write_compress_enabled_ASC"),
+
+    ACCESS_WRITE_COMPRESS_ENABLED_DESC("access_write_compress_enabled_DESC"),
+
+    ALLOCATED_PRIORITIZED_SPACE_ASC("allocated_prioritized_space_ASC"),
+
+    ALLOCATED_PRIORITIZED_SPACE_DESC("allocated_prioritized_space_DESC"),
+
+    ALLOCATED_PRIORITIZED_SPACE_USAGE_ASC("allocated_prioritized_space_usage_ASC"),
+
+    ALLOCATED_PRIORITIZED_SPACE_USAGE_DESC("allocated_prioritized_space_usage_DESC"),
+
     APPLICATION_HIGHEST_VERSION_ASC("application_highest_version_ASC"),
 
     APPLICATION_HIGHEST_VERSION_DESC("application_highest_version_DESC"),
@@ -22,6 +34,10 @@ public enum ClusterOrderByInput {
 
     AUTO_CONVERGE_DESC("auto_converge_DESC"),
 
+    COMMITED_MEMORY_BYTES_ASC("commited_memory_bytes_ASC"),
+
+    COMMITED_MEMORY_BYTES_DESC("commited_memory_bytes_DESC"),
+
     CONNECT_STATE_ASC("connect_state_ASC"),
 
     CONNECT_STATE_DESC("connect_state_DESC"),
@@ -30,6 +46,14 @@ public enum ClusterOrderByInput {
 
     CURRENT_CPU_MODEL_DESC("current_cpu_model_DESC"),
 
+    DATA_REDUCTION_RATIO_ASC("data_reduction_ratio_ASC"),
+
+    DATA_REDUCTION_RATIO_DESC("data_reduction_ratio_DESC"),
+
+    DATA_REDUCTION_SAVING_ASC("data_reduction_saving_ASC"),
+
+    DATA_REDUCTION_SAVING_DESC("data_reduction_saving_DESC"),
+
     DISCONNECTED_DATE_ASC("disconnected_date_ASC"),
 
     DISCONNECTED_DATE_DESC("disconnected_date_DESC"),
@@ -37,6 +61,14 @@ public enum ClusterOrderByInput {
     DISCONNECTED_REASON_ASC("disconnected_reason_ASC"),
 
     DISCONNECTED_REASON_DESC("disconnected_reason_DESC"),
+
+    DOWNGRADED_PRIORITIZED_SPACE_ASC("downgraded_prioritized_space_ASC"),
+
+    DOWNGRADED_PRIORITIZED_SPACE_DESC("downgraded_prioritized_space_DESC"),
+
+    ENABLE_TIERING_ASC("enable_tiering_ASC"),
+
+    ENABLE_TIERING_DESC("enable_tiering_DESC"),
 
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
@@ -94,6 +126,10 @@ public enum ClusterOrderByInput {
 
     LOCAL_ID_DESC("local_id_DESC"),
 
+    LOGICAL_USED_DATA_SPACE_ASC("logical_used_data_space_ASC"),
+
+    LOGICAL_USED_DATA_SPACE_DESC("logical_used_data_space_DESC"),
+
     MAINTENANCE_END_DATE_ASC("maintenance_end_date_ASC"),
 
     MAINTENANCE_END_DATE_DESC("maintenance_end_date_DESC"),
@@ -142,6 +178,10 @@ public enum ClusterOrderByInput {
 
     NAME_DESC("name_DESC"),
 
+    NO_PERFORMANCE_LAYER_ASC("no_performance_layer_ASC"),
+
+    NO_PERFORMANCE_LAYER_DESC("no_performance_layer_DESC"),
+
     NTP_MODE_ASC("ntp_mode_ASC"),
 
     NTP_MODE_DESC("ntp_mode_DESC"),
@@ -158,9 +198,41 @@ public enum ClusterOrderByInput {
 
     NVMF_ENABLED_DESC("nvmf_enabled_DESC"),
 
+    OVERALL_EFFICIENCY_ASC("overall_efficiency_ASC"),
+
+    OVERALL_EFFICIENCY_DESC("overall_efficiency_DESC"),
+
+    PERF_ALLOCATED_DATA_SPACE_ASC("perf_allocated_data_space_ASC"),
+
+    PERF_ALLOCATED_DATA_SPACE_DESC("perf_allocated_data_space_DESC"),
+
+    PERF_FAILURE_DATA_SPACE_ASC("perf_failure_data_space_ASC"),
+
+    PERF_FAILURE_DATA_SPACE_DESC("perf_failure_data_space_DESC"),
+
+    PERF_TOTAL_DATA_CAPACITY_ASC("perf_total_data_capacity_ASC"),
+
+    PERF_TOTAL_DATA_CAPACITY_DESC("perf_total_data_capacity_DESC"),
+
+    PERF_USED_DATA_SPACE_ASC("perf_used_data_space_ASC"),
+
+    PERF_USED_DATA_SPACE_DESC("perf_used_data_space_DESC"),
+
+    PERF_VALID_DATA_SPACE_ASC("perf_valid_data_space_ASC"),
+
+    PERF_VALID_DATA_SPACE_DESC("perf_valid_data_space_DESC"),
+
+    PLANNED_PRIORITIZED_SPACE_ASC("planned_prioritized_space_ASC"),
+
+    PLANNED_PRIORITIZED_SPACE_DESC("planned_prioritized_space_DESC"),
+
     PMEM_ENABLED_ASC("pmem_enabled_ASC"),
 
     PMEM_ENABLED_DESC("pmem_enabled_DESC"),
+
+    PRIO_SPACE_PERCENTAGE_ASC("prio_space_percentage_ASC"),
+
+    PRIO_SPACE_PERCENTAGE_DESC("prio_space_percentage_DESC"),
 
     PROVISIONED_CPU_CORES_ASC("provisioned_cpu_cores_ASC"),
 
@@ -193,6 +265,10 @@ public enum ClusterOrderByInput {
     RECOVER_SPEED_ASC("recover_speed_ASC"),
 
     RECOVER_SPEED_DESC("recover_speed_DESC"),
+
+    REPLICA_CAPACITY_ONLY_ASC("replica_capacity_only_ASC"),
+
+    REPLICA_CAPACITY_ONLY_DESC("replica_capacity_only_DESC"),
 
     RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE_ASC("reserved_cpu_cores_for_system_service_ASC"),
 
@@ -242,13 +318,29 @@ public enum ClusterOrderByInput {
 
     TOTAL_MEMORY_BYTES_DESC("total_memory_bytes_DESC"),
 
+    TOTAL_PRIO_VOLUME_SIZE_ASC("total_prio_volume_size_ASC"),
+
+    TOTAL_PRIO_VOLUME_SIZE_DESC("total_prio_volume_size_DESC"),
+
+    TOTAL_PRIO_VOLUME_SIZE_USAGE_ASC("total_prio_volume_size_usage_ASC"),
+
+    TOTAL_PRIO_VOLUME_SIZE_USAGE_DESC("total_prio_volume_size_usage_DESC"),
+
     TYPE_ASC("type_ASC"),
 
     TYPE_DESC("type_DESC"),
 
+    UPGRADE_FOR_TIERING_ASC("upgrade_for_tiering_ASC"),
+
+    UPGRADE_FOR_TIERING_DESC("upgrade_for_tiering_DESC"),
+
     UPGRADE_TOOL_VERSION_ASC("upgrade_tool_version_ASC"),
 
     UPGRADE_TOOL_VERSION_DESC("upgrade_tool_version_DESC"),
+
+    USED_CACHE_SPACE_ASC("used_cache_space_ASC"),
+
+    USED_CACHE_SPACE_DESC("used_cache_space_DESC"),
 
     USED_CPU_HZ_ASC("used_cpu_hz_ASC"),
 
@@ -261,6 +353,10 @@ public enum ClusterOrderByInput {
     USED_MEMORY_BYTES_ASC("used_memory_bytes_ASC"),
 
     USED_MEMORY_BYTES_DESC("used_memory_bytes_DESC"),
+
+    VALID_CACHE_SPACE_ASC("valid_cache_space_ASC"),
+
+    VALID_CACHE_SPACE_DESC("valid_cache_space_DESC"),
 
     VALID_DATA_SPACE_ASC("valid_data_space_ASC"),
 

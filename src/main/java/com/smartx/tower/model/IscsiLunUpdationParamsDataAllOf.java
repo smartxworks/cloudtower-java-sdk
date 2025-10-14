@@ -9,6 +9,16 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class IscsiLunUpdationParamsDataAllOf
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
+
+    @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
+    private Integer replicaNum;
+
+    public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
+
+    @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
+    private Boolean thinProvision;
+
     public static final String SERIALIZED_NAME_ASSIGNED_SIZE_UNIT = "assigned_size_unit";
 
     @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE_UNIT)
@@ -25,6 +35,92 @@ public class IscsiLunUpdationParamsDataAllOf
     private String name;
 
     public IscsiLunUpdationParamsDataAllOf() {}
+
+    public IscsiLunUpdationParamsDataAllOf replicaNum(Integer replicaNum) {
+
+        this.replicaNum = replicaNum;
+        return this;
+    }
+
+    /**
+     * Get replicaNum
+     *
+     * @return replicaNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getReplicaNum() {
+        return replicaNum;
+    }
+
+    public void setReplicaNum(Integer replicaNum) {
+        this.replicaNum = replicaNum;
+    }
+
+    public IscsiLunUpdationParamsDataAllOf replicaNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICA_NUM);
+        return this;
+    }
+
+    public IscsiLunUpdationParamsDataAllOf replicaNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICA_NUM);
+        return this;
+    }
+
+    public void setReplicaNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICA_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICA_NUM);
+        }
+    }
+
+    public boolean getReplicaNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_NUM);
+    }
+
+    public IscsiLunUpdationParamsDataAllOf thinProvision(Boolean thinProvision) {
+
+        this.thinProvision = thinProvision;
+        return this;
+    }
+
+    /**
+     * Get thinProvision
+     *
+     * @return thinProvision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getThinProvision() {
+        return thinProvision;
+    }
+
+    public void setThinProvision(Boolean thinProvision) {
+        this.thinProvision = thinProvision;
+    }
+
+    public IscsiLunUpdationParamsDataAllOf thinProvision_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_THIN_PROVISION);
+        return this;
+    }
+
+    public IscsiLunUpdationParamsDataAllOf thinProvision_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_THIN_PROVISION);
+        return this;
+    }
+
+    public void setThinProvision_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_THIN_PROVISION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_THIN_PROVISION);
+        }
+    }
+
+    public boolean getThinProvision_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_THIN_PROVISION);
+    }
 
     public IscsiLunUpdationParamsDataAllOf assignedSizeUnit(ByteUnit assignedSizeUnit) {
 
@@ -165,7 +261,9 @@ public class IscsiLunUpdationParamsDataAllOf
         }
         IscsiLunUpdationParamsDataAllOf iscsiLunUpdationParamsDataAllOf =
                 (IscsiLunUpdationParamsDataAllOf) o;
-        return Objects.equals(
+        return Objects.equals(this.replicaNum, iscsiLunUpdationParamsDataAllOf.replicaNum)
+                && Objects.equals(this.thinProvision, iscsiLunUpdationParamsDataAllOf.thinProvision)
+                && Objects.equals(
                         this.assignedSizeUnit, iscsiLunUpdationParamsDataAllOf.assignedSizeUnit)
                 && Objects.equals(this.assignedSize, iscsiLunUpdationParamsDataAllOf.assignedSize)
                 && Objects.equals(this.name, iscsiLunUpdationParamsDataAllOf.name);
@@ -173,13 +271,15 @@ public class IscsiLunUpdationParamsDataAllOf
 
     @Override
     public int hashCode() {
-        return Objects.hash(assignedSizeUnit, assignedSize, name);
+        return Objects.hash(replicaNum, thinProvision, assignedSizeUnit, assignedSize, name);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class IscsiLunUpdationParamsDataAllOf {\n");
+        sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
+        sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");
         sb.append("    assignedSizeUnit: ").append(toIndentedString(assignedSizeUnit)).append("\n");
         sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");

@@ -151,6 +151,100 @@ public class VmVolumeSnapshotWhereInput
     @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY)
     private VmVolumeElfStoragePolicyType elfStoragePolicy;
 
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K = "elf_storage_policy_ec_k";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K)
+    private Integer elfStoragePolicyEcK;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GT =
+            "elf_storage_policy_ec_k_gt";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GT)
+    private Integer elfStoragePolicyEcKGt;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GTE =
+            "elf_storage_policy_ec_k_gte";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GTE)
+    private Integer elfStoragePolicyEcKGte;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_IN =
+            "elf_storage_policy_ec_k_in";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_IN)
+    private List<Integer> elfStoragePolicyEcKIn = null;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LT =
+            "elf_storage_policy_ec_k_lt";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LT)
+    private Integer elfStoragePolicyEcKLt;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LTE =
+            "elf_storage_policy_ec_k_lte";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LTE)
+    private Integer elfStoragePolicyEcKLte;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT =
+            "elf_storage_policy_ec_k_not";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT)
+    private Integer elfStoragePolicyEcKNot;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT_IN =
+            "elf_storage_policy_ec_k_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT_IN)
+    private List<Integer> elfStoragePolicyEcKNotIn = null;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M = "elf_storage_policy_ec_m";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M)
+    private Integer elfStoragePolicyEcM;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GT =
+            "elf_storage_policy_ec_m_gt";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GT)
+    private Integer elfStoragePolicyEcMGt;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GTE =
+            "elf_storage_policy_ec_m_gte";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GTE)
+    private Integer elfStoragePolicyEcMGte;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_IN =
+            "elf_storage_policy_ec_m_in";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_IN)
+    private List<Integer> elfStoragePolicyEcMIn = null;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LT =
+            "elf_storage_policy_ec_m_lt";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LT)
+    private Integer elfStoragePolicyEcMLt;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LTE =
+            "elf_storage_policy_ec_m_lte";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LTE)
+    private Integer elfStoragePolicyEcMLte;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT =
+            "elf_storage_policy_ec_m_not";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT)
+    private Integer elfStoragePolicyEcMNot;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT_IN =
+            "elf_storage_policy_ec_m_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT_IN)
+    private List<Integer> elfStoragePolicyEcMNotIn = null;
+
     public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_IN = "elf_storage_policy_in";
 
     @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_IN)
@@ -166,6 +260,66 @@ public class VmVolumeSnapshotWhereInput
 
     @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_NOT_IN)
     private List<VmVolumeElfStoragePolicyType> elfStoragePolicyNotIn = null;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM =
+            "elf_storage_policy_replica_num";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM)
+    private Integer elfStoragePolicyReplicaNum;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GT =
+            "elf_storage_policy_replica_num_gt";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GT)
+    private Integer elfStoragePolicyReplicaNumGt;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GTE =
+            "elf_storage_policy_replica_num_gte";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GTE)
+    private Integer elfStoragePolicyReplicaNumGte;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_IN =
+            "elf_storage_policy_replica_num_in";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_IN)
+    private List<Integer> elfStoragePolicyReplicaNumIn = null;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LT =
+            "elf_storage_policy_replica_num_lt";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LT)
+    private Integer elfStoragePolicyReplicaNumLt;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LTE =
+            "elf_storage_policy_replica_num_lte";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LTE)
+    private Integer elfStoragePolicyReplicaNumLte;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT =
+            "elf_storage_policy_replica_num_not";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT)
+    private Integer elfStoragePolicyReplicaNumNot;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT_IN =
+            "elf_storage_policy_replica_num_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT_IN)
+    private List<Integer> elfStoragePolicyReplicaNumNotIn = null;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION =
+            "elf_storage_policy_thin_provision";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION)
+    private Boolean elfStoragePolicyThinProvision;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION_NOT =
+            "elf_storage_policy_thin_provision_not";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION_NOT)
+    private Boolean elfStoragePolicyThinProvisionNot;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -453,6 +607,16 @@ public class VmVolumeSnapshotWhereInput
 
     @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
     private String nameStartsWith;
+
+    public static final String SERIALIZED_NAME_RESIDENT_IN_CACHE = "resident_in_cache";
+
+    @SerializedName(SERIALIZED_NAME_RESIDENT_IN_CACHE)
+    private Boolean residentInCache;
+
+    public static final String SERIALIZED_NAME_RESIDENT_IN_CACHE_NOT = "resident_in_cache_not";
+
+    @SerializedName(SERIALIZED_NAME_RESIDENT_IN_CACHE_NOT)
+    private Boolean residentInCacheNot;
 
     public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
 
@@ -1946,6 +2110,732 @@ public class VmVolumeSnapshotWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY);
     }
 
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcK(Integer elfStoragePolicyEcK) {
+
+        this.elfStoragePolicyEcK = elfStoragePolicyEcK;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcK
+     *
+     * @return elfStoragePolicyEcK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcK() {
+        return elfStoragePolicyEcK;
+    }
+
+    public void setElfStoragePolicyEcK(Integer elfStoragePolicyEcK) {
+        this.elfStoragePolicyEcK = elfStoragePolicyEcK;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKGt(Integer elfStoragePolicyEcKGt) {
+
+        this.elfStoragePolicyEcKGt = elfStoragePolicyEcKGt;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcKGt
+     *
+     * @return elfStoragePolicyEcKGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcKGt() {
+        return elfStoragePolicyEcKGt;
+    }
+
+    public void setElfStoragePolicyEcKGt(Integer elfStoragePolicyEcKGt) {
+        this.elfStoragePolicyEcKGt = elfStoragePolicyEcKGt;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GT);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcKGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GT);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcKGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKGte(Integer elfStoragePolicyEcKGte) {
+
+        this.elfStoragePolicyEcKGte = elfStoragePolicyEcKGte;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcKGte
+     *
+     * @return elfStoragePolicyEcKGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcKGte() {
+        return elfStoragePolicyEcKGte;
+    }
+
+    public void setElfStoragePolicyEcKGte(Integer elfStoragePolicyEcKGte) {
+        this.elfStoragePolicyEcKGte = elfStoragePolicyEcKGte;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GTE);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcKGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GTE);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcKGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_GTE);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKIn(List<Integer> elfStoragePolicyEcKIn) {
+
+        this.elfStoragePolicyEcKIn = elfStoragePolicyEcKIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addElfStoragePolicyEcKInItem(
+            Integer elfStoragePolicyEcKInItem) {
+        if (this.elfStoragePolicyEcKIn == null) {
+            this.elfStoragePolicyEcKIn = new ArrayList<Integer>();
+        }
+        this.elfStoragePolicyEcKIn.add(elfStoragePolicyEcKInItem);
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcKIn
+     *
+     * @return elfStoragePolicyEcKIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getElfStoragePolicyEcKIn() {
+        return elfStoragePolicyEcKIn;
+    }
+
+    public void setElfStoragePolicyEcKIn(List<Integer> elfStoragePolicyEcKIn) {
+        this.elfStoragePolicyEcKIn = elfStoragePolicyEcKIn;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_IN);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcKIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_IN);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcKIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_IN);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKLt(Integer elfStoragePolicyEcKLt) {
+
+        this.elfStoragePolicyEcKLt = elfStoragePolicyEcKLt;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcKLt
+     *
+     * @return elfStoragePolicyEcKLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcKLt() {
+        return elfStoragePolicyEcKLt;
+    }
+
+    public void setElfStoragePolicyEcKLt(Integer elfStoragePolicyEcKLt) {
+        this.elfStoragePolicyEcKLt = elfStoragePolicyEcKLt;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LT);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcKLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LT);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcKLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKLte(Integer elfStoragePolicyEcKLte) {
+
+        this.elfStoragePolicyEcKLte = elfStoragePolicyEcKLte;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcKLte
+     *
+     * @return elfStoragePolicyEcKLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcKLte() {
+        return elfStoragePolicyEcKLte;
+    }
+
+    public void setElfStoragePolicyEcKLte(Integer elfStoragePolicyEcKLte) {
+        this.elfStoragePolicyEcKLte = elfStoragePolicyEcKLte;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LTE);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcKLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LTE);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcKLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_LTE);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKNot(Integer elfStoragePolicyEcKNot) {
+
+        this.elfStoragePolicyEcKNot = elfStoragePolicyEcKNot;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcKNot
+     *
+     * @return elfStoragePolicyEcKNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcKNot() {
+        return elfStoragePolicyEcKNot;
+    }
+
+    public void setElfStoragePolicyEcKNot(Integer elfStoragePolicyEcKNot) {
+        this.elfStoragePolicyEcKNot = elfStoragePolicyEcKNot;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcKNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcKNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKNotIn(
+            List<Integer> elfStoragePolicyEcKNotIn) {
+
+        this.elfStoragePolicyEcKNotIn = elfStoragePolicyEcKNotIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addElfStoragePolicyEcKNotInItem(
+            Integer elfStoragePolicyEcKNotInItem) {
+        if (this.elfStoragePolicyEcKNotIn == null) {
+            this.elfStoragePolicyEcKNotIn = new ArrayList<Integer>();
+        }
+        this.elfStoragePolicyEcKNotIn.add(elfStoragePolicyEcKNotInItem);
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcKNotIn
+     *
+     * @return elfStoragePolicyEcKNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getElfStoragePolicyEcKNotIn() {
+        return elfStoragePolicyEcKNotIn;
+    }
+
+    public void setElfStoragePolicyEcKNotIn(List<Integer> elfStoragePolicyEcKNotIn) {
+        this.elfStoragePolicyEcKNotIn = elfStoragePolicyEcKNotIn;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcKNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT_IN);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcKNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT_IN);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcKNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K_NOT_IN);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcM(Integer elfStoragePolicyEcM) {
+
+        this.elfStoragePolicyEcM = elfStoragePolicyEcM;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcM
+     *
+     * @return elfStoragePolicyEcM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcM() {
+        return elfStoragePolicyEcM;
+    }
+
+    public void setElfStoragePolicyEcM(Integer elfStoragePolicyEcM) {
+        this.elfStoragePolicyEcM = elfStoragePolicyEcM;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMGt(Integer elfStoragePolicyEcMGt) {
+
+        this.elfStoragePolicyEcMGt = elfStoragePolicyEcMGt;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcMGt
+     *
+     * @return elfStoragePolicyEcMGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcMGt() {
+        return elfStoragePolicyEcMGt;
+    }
+
+    public void setElfStoragePolicyEcMGt(Integer elfStoragePolicyEcMGt) {
+        this.elfStoragePolicyEcMGt = elfStoragePolicyEcMGt;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GT);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcMGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GT);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcMGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMGte(Integer elfStoragePolicyEcMGte) {
+
+        this.elfStoragePolicyEcMGte = elfStoragePolicyEcMGte;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcMGte
+     *
+     * @return elfStoragePolicyEcMGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcMGte() {
+        return elfStoragePolicyEcMGte;
+    }
+
+    public void setElfStoragePolicyEcMGte(Integer elfStoragePolicyEcMGte) {
+        this.elfStoragePolicyEcMGte = elfStoragePolicyEcMGte;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GTE);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcMGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GTE);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcMGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_GTE);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMIn(List<Integer> elfStoragePolicyEcMIn) {
+
+        this.elfStoragePolicyEcMIn = elfStoragePolicyEcMIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addElfStoragePolicyEcMInItem(
+            Integer elfStoragePolicyEcMInItem) {
+        if (this.elfStoragePolicyEcMIn == null) {
+            this.elfStoragePolicyEcMIn = new ArrayList<Integer>();
+        }
+        this.elfStoragePolicyEcMIn.add(elfStoragePolicyEcMInItem);
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcMIn
+     *
+     * @return elfStoragePolicyEcMIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getElfStoragePolicyEcMIn() {
+        return elfStoragePolicyEcMIn;
+    }
+
+    public void setElfStoragePolicyEcMIn(List<Integer> elfStoragePolicyEcMIn) {
+        this.elfStoragePolicyEcMIn = elfStoragePolicyEcMIn;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_IN);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcMIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_IN);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcMIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_IN);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMLt(Integer elfStoragePolicyEcMLt) {
+
+        this.elfStoragePolicyEcMLt = elfStoragePolicyEcMLt;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcMLt
+     *
+     * @return elfStoragePolicyEcMLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcMLt() {
+        return elfStoragePolicyEcMLt;
+    }
+
+    public void setElfStoragePolicyEcMLt(Integer elfStoragePolicyEcMLt) {
+        this.elfStoragePolicyEcMLt = elfStoragePolicyEcMLt;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LT);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcMLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LT);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcMLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMLte(Integer elfStoragePolicyEcMLte) {
+
+        this.elfStoragePolicyEcMLte = elfStoragePolicyEcMLte;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcMLte
+     *
+     * @return elfStoragePolicyEcMLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcMLte() {
+        return elfStoragePolicyEcMLte;
+    }
+
+    public void setElfStoragePolicyEcMLte(Integer elfStoragePolicyEcMLte) {
+        this.elfStoragePolicyEcMLte = elfStoragePolicyEcMLte;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LTE);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcMLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LTE);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcMLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_LTE);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMNot(Integer elfStoragePolicyEcMNot) {
+
+        this.elfStoragePolicyEcMNot = elfStoragePolicyEcMNot;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcMNot
+     *
+     * @return elfStoragePolicyEcMNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcMNot() {
+        return elfStoragePolicyEcMNot;
+    }
+
+    public void setElfStoragePolicyEcMNot(Integer elfStoragePolicyEcMNot) {
+        this.elfStoragePolicyEcMNot = elfStoragePolicyEcMNot;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcMNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcMNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMNotIn(
+            List<Integer> elfStoragePolicyEcMNotIn) {
+
+        this.elfStoragePolicyEcMNotIn = elfStoragePolicyEcMNotIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addElfStoragePolicyEcMNotInItem(
+            Integer elfStoragePolicyEcMNotInItem) {
+        if (this.elfStoragePolicyEcMNotIn == null) {
+            this.elfStoragePolicyEcMNotIn = new ArrayList<Integer>();
+        }
+        this.elfStoragePolicyEcMNotIn.add(elfStoragePolicyEcMNotInItem);
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcMNotIn
+     *
+     * @return elfStoragePolicyEcMNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getElfStoragePolicyEcMNotIn() {
+        return elfStoragePolicyEcMNotIn;
+    }
+
+    public void setElfStoragePolicyEcMNotIn(List<Integer> elfStoragePolicyEcMNotIn) {
+        this.elfStoragePolicyEcMNotIn = elfStoragePolicyEcMNotIn;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyEcMNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT_IN);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcMNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT_IN);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcMNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M_NOT_IN);
+    }
+
     public VmVolumeSnapshotWhereInput elfStoragePolicyIn(
             List<VmVolumeElfStoragePolicyType> elfStoragePolicyIn) {
 
@@ -2094,6 +2984,464 @@ public class VmVolumeSnapshotWhereInput
 
     public boolean getElfStoragePolicyNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_NOT_IN);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNum(
+            Integer elfStoragePolicyReplicaNum) {
+
+        this.elfStoragePolicyReplicaNum = elfStoragePolicyReplicaNum;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNum
+     *
+     * @return elfStoragePolicyReplicaNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyReplicaNum() {
+        return elfStoragePolicyReplicaNum;
+    }
+
+    public void setElfStoragePolicyReplicaNum(Integer elfStoragePolicyReplicaNum) {
+        this.elfStoragePolicyReplicaNum = elfStoragePolicyReplicaNum;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumGt(
+            Integer elfStoragePolicyReplicaNumGt) {
+
+        this.elfStoragePolicyReplicaNumGt = elfStoragePolicyReplicaNumGt;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNumGt
+     *
+     * @return elfStoragePolicyReplicaNumGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyReplicaNumGt() {
+        return elfStoragePolicyReplicaNumGt;
+    }
+
+    public void setElfStoragePolicyReplicaNumGt(Integer elfStoragePolicyReplicaNumGt) {
+        this.elfStoragePolicyReplicaNumGt = elfStoragePolicyReplicaNumGt;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GT);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNumGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GT);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNumGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumGte(
+            Integer elfStoragePolicyReplicaNumGte) {
+
+        this.elfStoragePolicyReplicaNumGte = elfStoragePolicyReplicaNumGte;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNumGte
+     *
+     * @return elfStoragePolicyReplicaNumGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyReplicaNumGte() {
+        return elfStoragePolicyReplicaNumGte;
+    }
+
+    public void setElfStoragePolicyReplicaNumGte(Integer elfStoragePolicyReplicaNumGte) {
+        this.elfStoragePolicyReplicaNumGte = elfStoragePolicyReplicaNumGte;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GTE);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNumGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GTE);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNumGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_GTE);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumIn(
+            List<Integer> elfStoragePolicyReplicaNumIn) {
+
+        this.elfStoragePolicyReplicaNumIn = elfStoragePolicyReplicaNumIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addElfStoragePolicyReplicaNumInItem(
+            Integer elfStoragePolicyReplicaNumInItem) {
+        if (this.elfStoragePolicyReplicaNumIn == null) {
+            this.elfStoragePolicyReplicaNumIn = new ArrayList<Integer>();
+        }
+        this.elfStoragePolicyReplicaNumIn.add(elfStoragePolicyReplicaNumInItem);
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNumIn
+     *
+     * @return elfStoragePolicyReplicaNumIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getElfStoragePolicyReplicaNumIn() {
+        return elfStoragePolicyReplicaNumIn;
+    }
+
+    public void setElfStoragePolicyReplicaNumIn(List<Integer> elfStoragePolicyReplicaNumIn) {
+        this.elfStoragePolicyReplicaNumIn = elfStoragePolicyReplicaNumIn;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_IN);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNumIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_IN);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNumIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_IN);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumLt(
+            Integer elfStoragePolicyReplicaNumLt) {
+
+        this.elfStoragePolicyReplicaNumLt = elfStoragePolicyReplicaNumLt;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNumLt
+     *
+     * @return elfStoragePolicyReplicaNumLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyReplicaNumLt() {
+        return elfStoragePolicyReplicaNumLt;
+    }
+
+    public void setElfStoragePolicyReplicaNumLt(Integer elfStoragePolicyReplicaNumLt) {
+        this.elfStoragePolicyReplicaNumLt = elfStoragePolicyReplicaNumLt;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LT);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNumLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LT);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNumLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumLte(
+            Integer elfStoragePolicyReplicaNumLte) {
+
+        this.elfStoragePolicyReplicaNumLte = elfStoragePolicyReplicaNumLte;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNumLte
+     *
+     * @return elfStoragePolicyReplicaNumLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyReplicaNumLte() {
+        return elfStoragePolicyReplicaNumLte;
+    }
+
+    public void setElfStoragePolicyReplicaNumLte(Integer elfStoragePolicyReplicaNumLte) {
+        this.elfStoragePolicyReplicaNumLte = elfStoragePolicyReplicaNumLte;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LTE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LTE);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNumLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LTE);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNumLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_LTE);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumNot(
+            Integer elfStoragePolicyReplicaNumNot) {
+
+        this.elfStoragePolicyReplicaNumNot = elfStoragePolicyReplicaNumNot;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNumNot
+     *
+     * @return elfStoragePolicyReplicaNumNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyReplicaNumNot() {
+        return elfStoragePolicyReplicaNumNot;
+    }
+
+    public void setElfStoragePolicyReplicaNumNot(Integer elfStoragePolicyReplicaNumNot) {
+        this.elfStoragePolicyReplicaNumNot = elfStoragePolicyReplicaNumNot;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNumNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNumNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumNotIn(
+            List<Integer> elfStoragePolicyReplicaNumNotIn) {
+
+        this.elfStoragePolicyReplicaNumNotIn = elfStoragePolicyReplicaNumNotIn;
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput addElfStoragePolicyReplicaNumNotInItem(
+            Integer elfStoragePolicyReplicaNumNotInItem) {
+        if (this.elfStoragePolicyReplicaNumNotIn == null) {
+            this.elfStoragePolicyReplicaNumNotIn = new ArrayList<Integer>();
+        }
+        this.elfStoragePolicyReplicaNumNotIn.add(elfStoragePolicyReplicaNumNotInItem);
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNumNotIn
+     *
+     * @return elfStoragePolicyReplicaNumNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getElfStoragePolicyReplicaNumNotIn() {
+        return elfStoragePolicyReplicaNumNotIn;
+    }
+
+    public void setElfStoragePolicyReplicaNumNotIn(List<Integer> elfStoragePolicyReplicaNumNotIn) {
+        this.elfStoragePolicyReplicaNumNotIn = elfStoragePolicyReplicaNumNotIn;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT_IN);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyReplicaNumNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT_IN);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNumNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT_IN);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNumNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM_NOT_IN);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyThinProvision(
+            Boolean elfStoragePolicyThinProvision) {
+
+        this.elfStoragePolicyThinProvision = elfStoragePolicyThinProvision;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyThinProvision
+     *
+     * @return elfStoragePolicyThinProvision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getElfStoragePolicyThinProvision() {
+        return elfStoragePolicyThinProvision;
+    }
+
+    public void setElfStoragePolicyThinProvision(Boolean elfStoragePolicyThinProvision) {
+        this.elfStoragePolicyThinProvision = elfStoragePolicyThinProvision;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyThinProvision_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyThinProvision_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        return this;
+    }
+
+    public void setElfStoragePolicyThinProvision_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        }
+    }
+
+    public boolean getElfStoragePolicyThinProvision_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyThinProvisionNot(
+            Boolean elfStoragePolicyThinProvisionNot) {
+
+        this.elfStoragePolicyThinProvisionNot = elfStoragePolicyThinProvisionNot;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyThinProvisionNot
+     *
+     * @return elfStoragePolicyThinProvisionNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getElfStoragePolicyThinProvisionNot() {
+        return elfStoragePolicyThinProvisionNot;
+    }
+
+    public void setElfStoragePolicyThinProvisionNot(Boolean elfStoragePolicyThinProvisionNot) {
+        this.elfStoragePolicyThinProvisionNot = elfStoragePolicyThinProvisionNot;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyThinProvisionNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION_NOT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput elfStoragePolicyThinProvisionNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION_NOT);
+        return this;
+    }
+
+    public void setElfStoragePolicyThinProvisionNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION_NOT);
+        }
+    }
+
+    public boolean getElfStoragePolicyThinProvisionNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION_NOT);
     }
 
     public VmVolumeSnapshotWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -4631,6 +5979,92 @@ public class VmVolumeSnapshotWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_NAME_STARTS_WITH);
     }
 
+    public VmVolumeSnapshotWhereInput residentInCache(Boolean residentInCache) {
+
+        this.residentInCache = residentInCache;
+        return this;
+    }
+
+    /**
+     * Get residentInCache
+     *
+     * @return residentInCache
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getResidentInCache() {
+        return residentInCache;
+    }
+
+    public void setResidentInCache(Boolean residentInCache) {
+        this.residentInCache = residentInCache;
+    }
+
+    public VmVolumeSnapshotWhereInput residentInCache_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput residentInCache_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        return this;
+    }
+
+    public void setResidentInCache_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+        }
+    }
+
+    public boolean getResidentInCache_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESIDENT_IN_CACHE);
+    }
+
+    public VmVolumeSnapshotWhereInput residentInCacheNot(Boolean residentInCacheNot) {
+
+        this.residentInCacheNot = residentInCacheNot;
+        return this;
+    }
+
+    /**
+     * Get residentInCacheNot
+     *
+     * @return residentInCacheNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getResidentInCacheNot() {
+        return residentInCacheNot;
+    }
+
+    public void setResidentInCacheNot(Boolean residentInCacheNot) {
+        this.residentInCacheNot = residentInCacheNot;
+    }
+
+    public VmVolumeSnapshotWhereInput residentInCacheNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE_NOT);
+        return this;
+    }
+
+    public VmVolumeSnapshotWhereInput residentInCacheNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE_NOT);
+        return this;
+    }
+
+    public void setResidentInCacheNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESIDENT_IN_CACHE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESIDENT_IN_CACHE_NOT);
+        }
+    }
+
+    public boolean getResidentInCacheNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESIDENT_IN_CACHE_NOT);
+    }
+
     public VmVolumeSnapshotWhereInput sharedSize(Double sharedSize) {
 
         this.sharedSize = sharedSize;
@@ -7058,12 +8492,88 @@ public class VmVolumeSnapshotWhereInput
                 && Objects.equals(
                         this.elfStoragePolicy, vmVolumeSnapshotWhereInput.elfStoragePolicy)
                 && Objects.equals(
+                        this.elfStoragePolicyEcK, vmVolumeSnapshotWhereInput.elfStoragePolicyEcK)
+                && Objects.equals(
+                        this.elfStoragePolicyEcKGt,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcKGt)
+                && Objects.equals(
+                        this.elfStoragePolicyEcKGte,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcKGte)
+                && Objects.equals(
+                        this.elfStoragePolicyEcKIn,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcKIn)
+                && Objects.equals(
+                        this.elfStoragePolicyEcKLt,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcKLt)
+                && Objects.equals(
+                        this.elfStoragePolicyEcKLte,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcKLte)
+                && Objects.equals(
+                        this.elfStoragePolicyEcKNot,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcKNot)
+                && Objects.equals(
+                        this.elfStoragePolicyEcKNotIn,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcKNotIn)
+                && Objects.equals(
+                        this.elfStoragePolicyEcM, vmVolumeSnapshotWhereInput.elfStoragePolicyEcM)
+                && Objects.equals(
+                        this.elfStoragePolicyEcMGt,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcMGt)
+                && Objects.equals(
+                        this.elfStoragePolicyEcMGte,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcMGte)
+                && Objects.equals(
+                        this.elfStoragePolicyEcMIn,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcMIn)
+                && Objects.equals(
+                        this.elfStoragePolicyEcMLt,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcMLt)
+                && Objects.equals(
+                        this.elfStoragePolicyEcMLte,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcMLte)
+                && Objects.equals(
+                        this.elfStoragePolicyEcMNot,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcMNot)
+                && Objects.equals(
+                        this.elfStoragePolicyEcMNotIn,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyEcMNotIn)
+                && Objects.equals(
                         this.elfStoragePolicyIn, vmVolumeSnapshotWhereInput.elfStoragePolicyIn)
                 && Objects.equals(
                         this.elfStoragePolicyNot, vmVolumeSnapshotWhereInput.elfStoragePolicyNot)
                 && Objects.equals(
                         this.elfStoragePolicyNotIn,
                         vmVolumeSnapshotWhereInput.elfStoragePolicyNotIn)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNum,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyReplicaNum)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNumGt,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyReplicaNumGt)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNumGte,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyReplicaNumGte)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNumIn,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyReplicaNumIn)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNumLt,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyReplicaNumLt)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNumLte,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyReplicaNumLte)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNumNot,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyReplicaNumNot)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNumNotIn,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyReplicaNumNotIn)
+                && Objects.equals(
+                        this.elfStoragePolicyThinProvision,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyThinProvision)
+                && Objects.equals(
+                        this.elfStoragePolicyThinProvisionNot,
+                        vmVolumeSnapshotWhereInput.elfStoragePolicyThinProvisionNot)
                 && Objects.equals(
                         this.entityAsyncStatus, vmVolumeSnapshotWhereInput.entityAsyncStatus)
                 && Objects.equals(
@@ -7138,6 +8648,9 @@ public class VmVolumeSnapshotWhereInput
                 && Objects.equals(
                         this.nameNotStartsWith, vmVolumeSnapshotWhereInput.nameNotStartsWith)
                 && Objects.equals(this.nameStartsWith, vmVolumeSnapshotWhereInput.nameStartsWith)
+                && Objects.equals(this.residentInCache, vmVolumeSnapshotWhereInput.residentInCache)
+                && Objects.equals(
+                        this.residentInCacheNot, vmVolumeSnapshotWhereInput.residentInCacheNot)
                 && Objects.equals(this.sharedSize, vmVolumeSnapshotWhereInput.sharedSize)
                 && Objects.equals(this.sharedSizeGt, vmVolumeSnapshotWhereInput.sharedSizeGt)
                 && Objects.equals(this.sharedSizeGte, vmVolumeSnapshotWhereInput.sharedSizeGte)
@@ -7252,9 +8765,35 @@ public class VmVolumeSnapshotWhereInput
                 descriptionNotStartsWith,
                 descriptionStartsWith,
                 elfStoragePolicy,
+                elfStoragePolicyEcK,
+                elfStoragePolicyEcKGt,
+                elfStoragePolicyEcKGte,
+                elfStoragePolicyEcKIn,
+                elfStoragePolicyEcKLt,
+                elfStoragePolicyEcKLte,
+                elfStoragePolicyEcKNot,
+                elfStoragePolicyEcKNotIn,
+                elfStoragePolicyEcM,
+                elfStoragePolicyEcMGt,
+                elfStoragePolicyEcMGte,
+                elfStoragePolicyEcMIn,
+                elfStoragePolicyEcMLt,
+                elfStoragePolicyEcMLte,
+                elfStoragePolicyEcMNot,
+                elfStoragePolicyEcMNotIn,
                 elfStoragePolicyIn,
                 elfStoragePolicyNot,
                 elfStoragePolicyNotIn,
+                elfStoragePolicyReplicaNum,
+                elfStoragePolicyReplicaNumGt,
+                elfStoragePolicyReplicaNumGte,
+                elfStoragePolicyReplicaNumIn,
+                elfStoragePolicyReplicaNumLt,
+                elfStoragePolicyReplicaNumLte,
+                elfStoragePolicyReplicaNumNot,
+                elfStoragePolicyReplicaNumNotIn,
+                elfStoragePolicyThinProvision,
+                elfStoragePolicyThinProvisionNot,
                 entityAsyncStatus,
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
@@ -7312,6 +8851,8 @@ public class VmVolumeSnapshotWhereInput
                 nameNotIn,
                 nameNotStartsWith,
                 nameStartsWith,
+                residentInCache,
+                residentInCacheNot,
                 sharedSize,
                 sharedSizeGt,
                 sharedSizeGte,
@@ -7417,6 +8958,54 @@ public class VmVolumeSnapshotWhereInput
                 .append(toIndentedString(descriptionStartsWith))
                 .append("\n");
         sb.append("    elfStoragePolicy: ").append(toIndentedString(elfStoragePolicy)).append("\n");
+        sb.append("    elfStoragePolicyEcK: ")
+                .append(toIndentedString(elfStoragePolicyEcK))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcKGt: ")
+                .append(toIndentedString(elfStoragePolicyEcKGt))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcKGte: ")
+                .append(toIndentedString(elfStoragePolicyEcKGte))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcKIn: ")
+                .append(toIndentedString(elfStoragePolicyEcKIn))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcKLt: ")
+                .append(toIndentedString(elfStoragePolicyEcKLt))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcKLte: ")
+                .append(toIndentedString(elfStoragePolicyEcKLte))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcKNot: ")
+                .append(toIndentedString(elfStoragePolicyEcKNot))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcKNotIn: ")
+                .append(toIndentedString(elfStoragePolicyEcKNotIn))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcM: ")
+                .append(toIndentedString(elfStoragePolicyEcM))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcMGt: ")
+                .append(toIndentedString(elfStoragePolicyEcMGt))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcMGte: ")
+                .append(toIndentedString(elfStoragePolicyEcMGte))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcMIn: ")
+                .append(toIndentedString(elfStoragePolicyEcMIn))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcMLt: ")
+                .append(toIndentedString(elfStoragePolicyEcMLt))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcMLte: ")
+                .append(toIndentedString(elfStoragePolicyEcMLte))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcMNot: ")
+                .append(toIndentedString(elfStoragePolicyEcMNot))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcMNotIn: ")
+                .append(toIndentedString(elfStoragePolicyEcMNotIn))
+                .append("\n");
         sb.append("    elfStoragePolicyIn: ")
                 .append(toIndentedString(elfStoragePolicyIn))
                 .append("\n");
@@ -7425,6 +9014,36 @@ public class VmVolumeSnapshotWhereInput
                 .append("\n");
         sb.append("    elfStoragePolicyNotIn: ")
                 .append(toIndentedString(elfStoragePolicyNotIn))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNum: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNum))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNumGt: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNumGt))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNumGte: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNumGte))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNumIn: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNumIn))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNumLt: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNumLt))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNumLte: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNumLte))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNumNot: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNumNot))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNumNotIn: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNumNotIn))
+                .append("\n");
+        sb.append("    elfStoragePolicyThinProvision: ")
+                .append(toIndentedString(elfStoragePolicyThinProvision))
+                .append("\n");
+        sb.append("    elfStoragePolicyThinProvisionNot: ")
+                .append(toIndentedString(elfStoragePolicyThinProvisionNot))
                 .append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
@@ -7509,6 +9128,10 @@ public class VmVolumeSnapshotWhereInput
                 .append(toIndentedString(nameNotStartsWith))
                 .append("\n");
         sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
+        sb.append("    residentInCache: ").append(toIndentedString(residentInCache)).append("\n");
+        sb.append("    residentInCacheNot: ")
+                .append(toIndentedString(residentInCacheNot))
+                .append("\n");
         sb.append("    sharedSize: ").append(toIndentedString(sharedSize)).append("\n");
         sb.append("    sharedSizeGt: ").append(toIndentedString(sharedSizeGt)).append("\n");
         sb.append("    sharedSizeGte: ").append(toIndentedString(sharedSizeGte)).append("\n");

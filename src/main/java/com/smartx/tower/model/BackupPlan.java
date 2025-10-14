@@ -1760,8 +1760,8 @@ public class BackupPlan extends com.smartx.tower.ConditionalNullable.Conditional
      *
      * @return logicalSize
      */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
     public Long getLogicalSize() {
         return logicalSize;
     }
@@ -1932,8 +1932,8 @@ public class BackupPlan extends com.smartx.tower.ConditionalNullable.Conditional
      *
      * @return physicalSize
      */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
     public Long getPhysicalSize() {
         return physicalSize;
     }
@@ -2061,8 +2061,8 @@ public class BackupPlan extends com.smartx.tower.ConditionalNullable.Conditional
      *
      * @return validSizeOfBackupObject
      */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
     public Long getValidSizeOfBackupObject() {
         return validSizeOfBackupObject;
     }
@@ -2104,8 +2104,8 @@ public class BackupPlan extends com.smartx.tower.ConditionalNullable.Conditional
      *
      * @return validSizeOfRestorePoint
      */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
     public Long getValidSizeOfRestorePoint() {
         return validSizeOfRestorePoint;
     }

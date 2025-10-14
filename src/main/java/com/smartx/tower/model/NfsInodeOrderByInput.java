@@ -14,6 +14,22 @@ public enum NfsInodeOrderByInput {
 
     ASSIGNED_SIZE_DESC("assigned_size_DESC"),
 
+    DOWNGRADED_PRIORITIZED_SPACE_ASC("downgraded_prioritized_space_ASC"),
+
+    DOWNGRADED_PRIORITIZED_SPACE_DESC("downgraded_prioritized_space_DESC"),
+
+    EC_K_ASC("ec_k_ASC"),
+
+    EC_K_DESC("ec_k_DESC"),
+
+    EC_M_ASC("ec_m_ASC"),
+
+    EC_M_DESC("ec_m_DESC"),
+
+    ENCRYPT_METHOD_ASC("encrypt_method_ASC"),
+
+    ENCRYPT_METHOD_DESC("encrypt_method_DESC"),
+
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
     ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
@@ -41,6 +57,14 @@ public enum NfsInodeOrderByInput {
     PARENT_ID_ASC("parent_id_ASC"),
 
     PARENT_ID_DESC("parent_id_DESC"),
+
+    PRIORITIZED_ASC("prioritized_ASC"),
+
+    PRIORITIZED_DESC("prioritized_DESC"),
+
+    RESILIENCY_TYPE_ASC("resiliency_type_ASC"),
+
+    RESILIENCY_TYPE_DESC("resiliency_type_DESC"),
 
     SHARED_SIZE_ASC("shared_size_ASC"),
 

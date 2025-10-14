@@ -57,15 +57,50 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
     @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
     private Long bpsWrMaxLength;
 
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS = "business_host_groups";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS)
+    private List<NestedBusinessHostGroup> businessHostGroups = null;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS = "business_hosts";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS)
+    private List<NestedBusinessHost> businessHosts = null;
+
     public static final String SERIALIZED_NAME_CLUSTER = "cluster";
 
     @SerializedName(SERIALIZED_NAME_CLUSTER)
     private NestedCluster cluster;
 
+    public static final String SERIALIZED_NAME_CONFIGURATION_ADAPTIVE = "configuration_adaptive";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE)
+    private Boolean configurationAdaptive;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_METHOD = "configuration_method";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD)
+    private ConfigurationMethod configurationMethod;
+
     public static final String SERIALIZED_NAME_DESCRIPTION = "description";
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
     private String description;
+
+    public static final String SERIALIZED_NAME_EC_K = "ec_k";
+
+    @SerializedName(SERIALIZED_NAME_EC_K)
+    private Integer ecK;
+
+    public static final String SERIALIZED_NAME_EC_M = "ec_m";
+
+    @SerializedName(SERIALIZED_NAME_EC_M)
+    private Integer ecM;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD = "encrypt_method";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD)
+    private EncryptMethod encryptMethod;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -142,6 +177,11 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
     @SerializedName(SERIALIZED_NAME_IP_WHITELIST)
     private String ipWhitelist;
 
+    public static final String SERIALIZED_NAME_ISCSI_CONNECTIONS = "iscsi_connections";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_CONNECTIONS)
+    private List<NestedIscsiConnection> iscsiConnections = null;
+
     public static final String SERIALIZED_NAME_LABELS = "labels";
 
     @SerializedName(SERIALIZED_NAME_LABELS)
@@ -177,15 +217,30 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
     @SerializedName(SERIALIZED_NAME_NQN_WHITELIST)
     private String nqnWhitelist;
 
+    public static final String SERIALIZED_NAME_NVMF_NAMESPACES_NUM = "nvmf_namespaces_num";
+
+    @SerializedName(SERIALIZED_NAME_NVMF_NAMESPACES_NUM)
+    private Integer nvmfNamespacesNum;
+
     public static final String SERIALIZED_NAME_POLICY = "policy";
 
     @SerializedName(SERIALIZED_NAME_POLICY)
     private NvmfSubsystemPolicyType policy;
 
+    public static final String SERIALIZED_NAME_PRIORITIZED = "prioritized";
+
+    @SerializedName(SERIALIZED_NAME_PRIORITIZED)
+    private Boolean prioritized;
+
     public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
 
     @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
     private Integer replicaNum;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
+    private ResiliencyType resiliencyType;
 
     public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
 
@@ -591,6 +646,108 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
         return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_MAX_LENGTH);
     }
 
+    public NvmfSubsystem businessHostGroups(List<NestedBusinessHostGroup> businessHostGroups) {
+
+        this.businessHostGroups = businessHostGroups;
+        return this;
+    }
+
+    public NvmfSubsystem addBusinessHostGroupsItem(NestedBusinessHostGroup businessHostGroupsItem) {
+        if (this.businessHostGroups == null) {
+            this.businessHostGroups = new ArrayList<NestedBusinessHostGroup>();
+        }
+        this.businessHostGroups.add(businessHostGroupsItem);
+        return this;
+    }
+
+    /**
+     * Get businessHostGroups
+     *
+     * @return businessHostGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedBusinessHostGroup> getBusinessHostGroups() {
+        return businessHostGroups;
+    }
+
+    public void setBusinessHostGroups(List<NestedBusinessHostGroup> businessHostGroups) {
+        this.businessHostGroups = businessHostGroups;
+    }
+
+    public NvmfSubsystem businessHostGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public NvmfSubsystem businessHostGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public void setBusinessHostGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        }
+    }
+
+    public boolean getBusinessHostGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+    }
+
+    public NvmfSubsystem businessHosts(List<NestedBusinessHost> businessHosts) {
+
+        this.businessHosts = businessHosts;
+        return this;
+    }
+
+    public NvmfSubsystem addBusinessHostsItem(NestedBusinessHost businessHostsItem) {
+        if (this.businessHosts == null) {
+            this.businessHosts = new ArrayList<NestedBusinessHost>();
+        }
+        this.businessHosts.add(businessHostsItem);
+        return this;
+    }
+
+    /**
+     * Get businessHosts
+     *
+     * @return businessHosts
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedBusinessHost> getBusinessHosts() {
+        return businessHosts;
+    }
+
+    public void setBusinessHosts(List<NestedBusinessHost> businessHosts) {
+        this.businessHosts = businessHosts;
+    }
+
+    public NvmfSubsystem businessHosts_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public NvmfSubsystem businessHosts_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public void setBusinessHosts_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        }
+    }
+
+    public boolean getBusinessHosts_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS);
+    }
+
     public NvmfSubsystem cluster(NestedCluster cluster) {
 
         this.cluster = cluster;
@@ -634,6 +791,92 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
         return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER);
     }
 
+    public NvmfSubsystem configurationAdaptive(Boolean configurationAdaptive) {
+
+        this.configurationAdaptive = configurationAdaptive;
+        return this;
+    }
+
+    /**
+     * Get configurationAdaptive
+     *
+     * @return configurationAdaptive
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getConfigurationAdaptive() {
+        return configurationAdaptive;
+    }
+
+    public void setConfigurationAdaptive(Boolean configurationAdaptive) {
+        this.configurationAdaptive = configurationAdaptive;
+    }
+
+    public NvmfSubsystem configurationAdaptive_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        return this;
+    }
+
+    public NvmfSubsystem configurationAdaptive_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        return this;
+    }
+
+    public void setConfigurationAdaptive_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        }
+    }
+
+    public boolean getConfigurationAdaptive_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+    }
+
+    public NvmfSubsystem configurationMethod(ConfigurationMethod configurationMethod) {
+
+        this.configurationMethod = configurationMethod;
+        return this;
+    }
+
+    /**
+     * Get configurationMethod
+     *
+     * @return configurationMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConfigurationMethod getConfigurationMethod() {
+        return configurationMethod;
+    }
+
+    public void setConfigurationMethod(ConfigurationMethod configurationMethod) {
+        this.configurationMethod = configurationMethod;
+    }
+
+    public NvmfSubsystem configurationMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public NvmfSubsystem configurationMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public void setConfigurationMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        }
+    }
+
+    public boolean getConfigurationMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD);
+    }
+
     public NvmfSubsystem description(String description) {
 
         this.description = description;
@@ -675,6 +918,135 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
 
     public boolean getDescription_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DESCRIPTION);
+    }
+
+    public NvmfSubsystem ecK(Integer ecK) {
+
+        this.ecK = ecK;
+        return this;
+    }
+
+    /**
+     * Get ecK
+     *
+     * @return ecK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcK() {
+        return ecK;
+    }
+
+    public void setEcK(Integer ecK) {
+        this.ecK = ecK;
+    }
+
+    public NvmfSubsystem ecK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public NvmfSubsystem ecK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public void setEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        }
+    }
+
+    public boolean getEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K);
+    }
+
+    public NvmfSubsystem ecM(Integer ecM) {
+
+        this.ecM = ecM;
+        return this;
+    }
+
+    /**
+     * Get ecM
+     *
+     * @return ecM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcM() {
+        return ecM;
+    }
+
+    public void setEcM(Integer ecM) {
+        this.ecM = ecM;
+    }
+
+    public NvmfSubsystem ecM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public NvmfSubsystem ecM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public void setEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        }
+    }
+
+    public boolean getEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M);
+    }
+
+    public NvmfSubsystem encryptMethod(EncryptMethod encryptMethod) {
+
+        this.encryptMethod = encryptMethod;
+        return this;
+    }
+
+    /**
+     * Get encryptMethod
+     *
+     * @return encryptMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EncryptMethod getEncryptMethod() {
+        return encryptMethod;
+    }
+
+    public void setEncryptMethod(EncryptMethod encryptMethod) {
+        this.encryptMethod = encryptMethod;
+    }
+
+    public NvmfSubsystem encryptMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public NvmfSubsystem encryptMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public void setEncryptMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        }
+    }
+
+    public boolean getEncryptMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD);
     }
 
     public NvmfSubsystem entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -1322,6 +1694,57 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
         return this._isPresent_.contains(SERIALIZED_NAME_IP_WHITELIST);
     }
 
+    public NvmfSubsystem iscsiConnections(List<NestedIscsiConnection> iscsiConnections) {
+
+        this.iscsiConnections = iscsiConnections;
+        return this;
+    }
+
+    public NvmfSubsystem addIscsiConnectionsItem(NestedIscsiConnection iscsiConnectionsItem) {
+        if (this.iscsiConnections == null) {
+            this.iscsiConnections = new ArrayList<NestedIscsiConnection>();
+        }
+        this.iscsiConnections.add(iscsiConnectionsItem);
+        return this;
+    }
+
+    /**
+     * Get iscsiConnections
+     *
+     * @return iscsiConnections
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedIscsiConnection> getIscsiConnections() {
+        return iscsiConnections;
+    }
+
+    public void setIscsiConnections(List<NestedIscsiConnection> iscsiConnections) {
+        this.iscsiConnections = iscsiConnections;
+    }
+
+    public NvmfSubsystem iscsiConnections_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        return this;
+    }
+
+    public NvmfSubsystem iscsiConnections_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        return this;
+    }
+
+    public void setIscsiConnections_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        }
+    }
+
+    public boolean getIscsiConnections_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+    }
+
     public NvmfSubsystem labels(List<NestedLabel> labels) {
 
         this.labels = labels;
@@ -1647,6 +2070,49 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
         return this._isPresent_.contains(SERIALIZED_NAME_NQN_WHITELIST);
     }
 
+    public NvmfSubsystem nvmfNamespacesNum(Integer nvmfNamespacesNum) {
+
+        this.nvmfNamespacesNum = nvmfNamespacesNum;
+        return this;
+    }
+
+    /**
+     * Get nvmfNamespacesNum
+     *
+     * @return nvmfNamespacesNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getNvmfNamespacesNum() {
+        return nvmfNamespacesNum;
+    }
+
+    public void setNvmfNamespacesNum(Integer nvmfNamespacesNum) {
+        this.nvmfNamespacesNum = nvmfNamespacesNum;
+    }
+
+    public NvmfSubsystem nvmfNamespacesNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NVMF_NAMESPACES_NUM);
+        return this;
+    }
+
+    public NvmfSubsystem nvmfNamespacesNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NVMF_NAMESPACES_NUM);
+        return this;
+    }
+
+    public void setNvmfNamespacesNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NVMF_NAMESPACES_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NVMF_NAMESPACES_NUM);
+        }
+    }
+
+    public boolean getNvmfNamespacesNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NVMF_NAMESPACES_NUM);
+    }
+
     public NvmfSubsystem policy(NvmfSubsystemPolicyType policy) {
 
         this.policy = policy;
@@ -1690,6 +2156,49 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
         return this._isPresent_.contains(SERIALIZED_NAME_POLICY);
     }
 
+    public NvmfSubsystem prioritized(Boolean prioritized) {
+
+        this.prioritized = prioritized;
+        return this;
+    }
+
+    /**
+     * Get prioritized
+     *
+     * @return prioritized
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getPrioritized() {
+        return prioritized;
+    }
+
+    public void setPrioritized(Boolean prioritized) {
+        this.prioritized = prioritized;
+    }
+
+    public NvmfSubsystem prioritized_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public NvmfSubsystem prioritized_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public void setPrioritized_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        }
+    }
+
+    public boolean getPrioritized_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIORITIZED);
+    }
+
     public NvmfSubsystem replicaNum(Integer replicaNum) {
 
         this.replicaNum = replicaNum;
@@ -1731,6 +2240,49 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
 
     public boolean getReplicaNum_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_NUM);
+    }
+
+    public NvmfSubsystem resiliencyType(ResiliencyType resiliencyType) {
+
+        this.resiliencyType = resiliencyType;
+        return this;
+    }
+
+    /**
+     * Get resiliencyType
+     *
+     * @return resiliencyType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyType() {
+        return resiliencyType;
+    }
+
+    public void setResiliencyType(ResiliencyType resiliencyType) {
+        this.resiliencyType = resiliencyType;
+    }
+
+    public NvmfSubsystem resiliencyType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public NvmfSubsystem resiliencyType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public void setResiliencyType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        }
+    }
+
+    public boolean getResiliencyType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
     }
 
     public NvmfSubsystem stripeNum(Integer stripeNum) {
@@ -1880,8 +2432,15 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
                 && Objects.equals(this.bpsWr, nvmfSubsystem.bpsWr)
                 && Objects.equals(this.bpsWrMax, nvmfSubsystem.bpsWrMax)
                 && Objects.equals(this.bpsWrMaxLength, nvmfSubsystem.bpsWrMaxLength)
+                && Objects.equals(this.businessHostGroups, nvmfSubsystem.businessHostGroups)
+                && Objects.equals(this.businessHosts, nvmfSubsystem.businessHosts)
                 && Objects.equals(this.cluster, nvmfSubsystem.cluster)
+                && Objects.equals(this.configurationAdaptive, nvmfSubsystem.configurationAdaptive)
+                && Objects.equals(this.configurationMethod, nvmfSubsystem.configurationMethod)
                 && Objects.equals(this.description, nvmfSubsystem.description)
+                && Objects.equals(this.ecK, nvmfSubsystem.ecK)
+                && Objects.equals(this.ecM, nvmfSubsystem.ecM)
+                && Objects.equals(this.encryptMethod, nvmfSubsystem.encryptMethod)
                 && Objects.equals(this.entityAsyncStatus, nvmfSubsystem.entityAsyncStatus)
                 && Objects.equals(this.externalUse, nvmfSubsystem.externalUse)
                 && Objects.equals(this.id, nvmfSubsystem.id)
@@ -1897,6 +2456,7 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
                 && Objects.equals(this.iopsWrMax, nvmfSubsystem.iopsWrMax)
                 && Objects.equals(this.iopsWrMaxLength, nvmfSubsystem.iopsWrMaxLength)
                 && Objects.equals(this.ipWhitelist, nvmfSubsystem.ipWhitelist)
+                && Objects.equals(this.iscsiConnections, nvmfSubsystem.iscsiConnections)
                 && Objects.equals(this.labels, nvmfSubsystem.labels)
                 && Objects.equals(this.localId, nvmfSubsystem.localId)
                 && Objects.equals(this.name, nvmfSubsystem.name)
@@ -1904,8 +2464,11 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
                 && Objects.equals(this.namespaces, nvmfSubsystem.namespaces)
                 && Objects.equals(this.nqnName, nvmfSubsystem.nqnName)
                 && Objects.equals(this.nqnWhitelist, nvmfSubsystem.nqnWhitelist)
+                && Objects.equals(this.nvmfNamespacesNum, nvmfSubsystem.nvmfNamespacesNum)
                 && Objects.equals(this.policy, nvmfSubsystem.policy)
+                && Objects.equals(this.prioritized, nvmfSubsystem.prioritized)
                 && Objects.equals(this.replicaNum, nvmfSubsystem.replicaNum)
+                && Objects.equals(this.resiliencyType, nvmfSubsystem.resiliencyType)
                 && Objects.equals(this.stripeNum, nvmfSubsystem.stripeNum)
                 && Objects.equals(this.stripeSize, nvmfSubsystem.stripeSize)
                 && Objects.equals(this.thinProvision, nvmfSubsystem.thinProvision);
@@ -1932,8 +2495,15 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
                 bpsWr,
                 bpsWrMax,
                 bpsWrMaxLength,
+                businessHostGroups,
+                businessHosts,
                 cluster,
+                configurationAdaptive,
+                configurationMethod,
                 description,
+                ecK,
+                ecM,
+                encryptMethod,
                 entityAsyncStatus,
                 externalUse,
                 id,
@@ -1949,6 +2519,7 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
                 iopsWrMax,
                 iopsWrMaxLength,
                 ipWhitelist,
+                iscsiConnections,
                 labels,
                 localId,
                 name,
@@ -1956,8 +2527,11 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
                 namespaces,
                 nqnName,
                 nqnWhitelist,
+                nvmfNamespacesNum,
                 policy,
+                prioritized,
                 replicaNum,
+                resiliencyType,
                 stripeNum,
                 stripeSize,
                 thinProvision);
@@ -1983,8 +2557,21 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
         sb.append("    bpsWr: ").append(toIndentedString(bpsWr)).append("\n");
         sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
         sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
+        sb.append("    businessHostGroups: ")
+                .append(toIndentedString(businessHostGroups))
+                .append("\n");
+        sb.append("    businessHosts: ").append(toIndentedString(businessHosts)).append("\n");
         sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
+        sb.append("    configurationAdaptive: ")
+                .append(toIndentedString(configurationAdaptive))
+                .append("\n");
+        sb.append("    configurationMethod: ")
+                .append(toIndentedString(configurationMethod))
+                .append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
+        sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
+        sb.append("    encryptMethod: ").append(toIndentedString(encryptMethod)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -2002,6 +2589,7 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
         sb.append("    iopsWrMax: ").append(toIndentedString(iopsWrMax)).append("\n");
         sb.append("    iopsWrMaxLength: ").append(toIndentedString(iopsWrMaxLength)).append("\n");
         sb.append("    ipWhitelist: ").append(toIndentedString(ipWhitelist)).append("\n");
+        sb.append("    iscsiConnections: ").append(toIndentedString(iscsiConnections)).append("\n");
         sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
@@ -2009,8 +2597,13 @@ public class NvmfSubsystem extends com.smartx.tower.ConditionalNullable.Conditio
         sb.append("    namespaces: ").append(toIndentedString(namespaces)).append("\n");
         sb.append("    nqnName: ").append(toIndentedString(nqnName)).append("\n");
         sb.append("    nqnWhitelist: ").append(toIndentedString(nqnWhitelist)).append("\n");
+        sb.append("    nvmfNamespacesNum: ")
+                .append(toIndentedString(nvmfNamespacesNum))
+                .append("\n");
         sb.append("    policy: ").append(toIndentedString(policy)).append("\n");
+        sb.append("    prioritized: ").append(toIndentedString(prioritized)).append("\n");
         sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
+        sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
         sb.append("    stripeNum: ").append(toIndentedString(stripeNum)).append("\n");
         sb.append("    stripeSize: ").append(toIndentedString(stripeSize)).append("\n");
         sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");

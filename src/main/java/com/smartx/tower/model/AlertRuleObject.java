@@ -16,6 +16,8 @@ public enum AlertRuleObject {
 
     DISK("DISK"),
 
+    DISK_POOL("DISK_POOL"),
+
     HYPERVISOR("HYPERVISOR"),
 
     NETWORK("NETWORK"),

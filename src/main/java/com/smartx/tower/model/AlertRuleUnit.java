@@ -22,6 +22,8 @@ public enum AlertRuleUnit {
 
     MICROSECOND("MICROSECOND"),
 
+    MILLISECOND("MILLISECOND"),
+
     NANOSECOND("NANOSECOND"),
 
     PERCENT("PERCENT"),

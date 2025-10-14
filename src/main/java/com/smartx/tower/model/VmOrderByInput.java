@@ -74,6 +74,10 @@ public enum VmOrderByInput {
 
     HA_DESC("ha_DESC"),
 
+    HA_PRIORITY_ASC("ha_priority_ASC"),
+
+    HA_PRIORITY_DESC("ha_priority_DESC"),
+
     HOSTNAME_ASC("hostname_ASC"),
 
     HOSTNAME_DESC("hostname_DESC"),

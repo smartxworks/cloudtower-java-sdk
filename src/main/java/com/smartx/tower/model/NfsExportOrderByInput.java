@@ -14,6 +14,18 @@ public enum NfsExportOrderByInput {
 
     DESCRIPTION_DESC("description_DESC"),
 
+    EC_K_ASC("ec_k_ASC"),
+
+    EC_K_DESC("ec_k_DESC"),
+
+    EC_M_ASC("ec_m_ASC"),
+
+    EC_M_DESC("ec_m_DESC"),
+
+    ENCRYPT_METHOD_ASC("encrypt_method_ASC"),
+
+    ENCRYPT_METHOD_DESC("encrypt_method_DESC"),
+
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
     ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
@@ -42,9 +54,17 @@ public enum NfsExportOrderByInput {
 
     NAME_DESC("name_DESC"),
 
+    PRIORITIZED_ASC("prioritized_ASC"),
+
+    PRIORITIZED_DESC("prioritized_DESC"),
+
     REPLICA_NUM_ASC("replica_num_ASC"),
 
     REPLICA_NUM_DESC("replica_num_DESC"),
+
+    RESILIENCY_TYPE_ASC("resiliency_type_ASC"),
+
+    RESILIENCY_TYPE_DESC("resiliency_type_DESC"),
 
     THIN_PROVISION_ASC("thin_provision_ASC"),
 

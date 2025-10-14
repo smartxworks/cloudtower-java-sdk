@@ -28,6 +28,114 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_O_R)
     private List<ClusterWhereInput> OR = null;
 
+    public static final String SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED =
+            "access_write_compress_enabled";
+
+    @SerializedName(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED)
+    private Boolean accessWriteCompressEnabled;
+
+    public static final String SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED_NOT =
+            "access_write_compress_enabled_not";
+
+    @SerializedName(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED_NOT)
+    private Boolean accessWriteCompressEnabledNot;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE =
+            "allocated_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE)
+    private Long allocatedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT =
+            "allocated_prioritized_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT)
+    private Long allocatedPrioritizedSpaceGt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE =
+            "allocated_prioritized_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE)
+    private Long allocatedPrioritizedSpaceGte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN =
+            "allocated_prioritized_space_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN)
+    private List<Long> allocatedPrioritizedSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT =
+            "allocated_prioritized_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT)
+    private Long allocatedPrioritizedSpaceLt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE =
+            "allocated_prioritized_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE)
+    private Long allocatedPrioritizedSpaceLte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT =
+            "allocated_prioritized_space_not";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT)
+    private Long allocatedPrioritizedSpaceNot;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN =
+            "allocated_prioritized_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN)
+    private List<Long> allocatedPrioritizedSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE =
+            "allocated_prioritized_space_usage";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE)
+    private Double allocatedPrioritizedSpaceUsage;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT =
+            "allocated_prioritized_space_usage_gt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT)
+    private Double allocatedPrioritizedSpaceUsageGt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE =
+            "allocated_prioritized_space_usage_gte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE)
+    private Double allocatedPrioritizedSpaceUsageGte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN =
+            "allocated_prioritized_space_usage_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN)
+    private List<Double> allocatedPrioritizedSpaceUsageIn = null;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT =
+            "allocated_prioritized_space_usage_lt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT)
+    private Double allocatedPrioritizedSpaceUsageLt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE =
+            "allocated_prioritized_space_usage_lte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE)
+    private Double allocatedPrioritizedSpaceUsageLte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT =
+            "allocated_prioritized_space_usage_not";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT)
+    private Double allocatedPrioritizedSpaceUsageNot;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN =
+            "allocated_prioritized_space_usage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN)
+    private List<Double> allocatedPrioritizedSpaceUsageNotIn = null;
+
     public static final String SERIALIZED_NAME_APPLICATION_HIGHEST_VERSION =
             "application_highest_version";
 
@@ -157,6 +265,53 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_AUTO_CONVERGE_NOT)
     private Boolean autoConvergeNot;
 
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES = "commited_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES)
+    private Long commitedMemoryBytes;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT =
+            "commited_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT)
+    private Long commitedMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE =
+            "commited_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE)
+    private Long commitedMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN =
+            "commited_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN)
+    private List<Long> commitedMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT =
+            "commited_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT)
+    private Long commitedMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE =
+            "commited_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE)
+    private Long commitedMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT =
+            "commited_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT)
+    private Long commitedMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN =
+            "commited_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN)
+    private List<Long> commitedMemoryBytesNotIn = null;
+
     public static final String SERIALIZED_NAME_CONNECT_STATE = "connect_state";
 
     @SerializedName(SERIALIZED_NAME_CONNECT_STATE)
@@ -270,6 +425,97 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_CURRENT_CPU_MODEL_STARTS_WITH)
     private String currentCpuModelStartsWith;
 
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_RATIO = "data_reduction_ratio";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_RATIO)
+    private Double dataReductionRatio;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_RATIO_GT = "data_reduction_ratio_gt";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GT)
+    private Double dataReductionRatioGt;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_RATIO_GTE =
+            "data_reduction_ratio_gte";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GTE)
+    private Double dataReductionRatioGte;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_RATIO_IN = "data_reduction_ratio_in";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_RATIO_IN)
+    private List<Double> dataReductionRatioIn = null;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_RATIO_LT = "data_reduction_ratio_lt";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LT)
+    private Double dataReductionRatioLt;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_RATIO_LTE =
+            "data_reduction_ratio_lte";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LTE)
+    private Double dataReductionRatioLte;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT =
+            "data_reduction_ratio_not";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT)
+    private Double dataReductionRatioNot;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT_IN =
+            "data_reduction_ratio_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT_IN)
+    private List<Double> dataReductionRatioNotIn = null;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_SAVING = "data_reduction_saving";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_SAVING)
+    private Double dataReductionSaving;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_SAVING_GT =
+            "data_reduction_saving_gt";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GT)
+    private Double dataReductionSavingGt;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_SAVING_GTE =
+            "data_reduction_saving_gte";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GTE)
+    private Double dataReductionSavingGte;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_SAVING_IN =
+            "data_reduction_saving_in";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_SAVING_IN)
+    private List<Double> dataReductionSavingIn = null;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_SAVING_LT =
+            "data_reduction_saving_lt";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LT)
+    private Double dataReductionSavingLt;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_SAVING_LTE =
+            "data_reduction_saving_lte";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LTE)
+    private Double dataReductionSavingLte;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT =
+            "data_reduction_saving_not";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT)
+    private Double dataReductionSavingNot;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT_IN =
+            "data_reduction_saving_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT_IN)
+    private List<Double> dataReductionSavingNotIn = null;
+
     public static final String SERIALIZED_NAME_DATACENTERS_EVERY = "datacenters_every";
 
     @SerializedName(SERIALIZED_NAME_DATACENTERS_EVERY)
@@ -346,6 +592,69 @@ public class ClusterWhereInput
 
     @SerializedName(SERIALIZED_NAME_DISCONNECTED_REASON_NOT_IN)
     private List<ClusterConnectorErrorCode> disconnectedReasonNotIn = null;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE =
+            "downgraded_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE)
+    private Long downgradedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT =
+            "downgraded_prioritized_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT)
+    private Long downgradedPrioritizedSpaceGt;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE =
+            "downgraded_prioritized_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE)
+    private Long downgradedPrioritizedSpaceGte;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN =
+            "downgraded_prioritized_space_in";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN)
+    private List<Long> downgradedPrioritizedSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT =
+            "downgraded_prioritized_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT)
+    private Long downgradedPrioritizedSpaceLt;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE =
+            "downgraded_prioritized_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE)
+    private Long downgradedPrioritizedSpaceLte;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT =
+            "downgraded_prioritized_space_not";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT)
+    private Long downgradedPrioritizedSpaceNot;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN =
+            "downgraded_prioritized_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN)
+    private List<Long> downgradedPrioritizedSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_ECP_LICENSE = "ecp_license";
+
+    @SerializedName(SERIALIZED_NAME_ECP_LICENSE)
+    private EcpLicenseWhereInput ecpLicense;
+
+    public static final String SERIALIZED_NAME_ENABLE_TIERING = "enable_tiering";
+
+    @SerializedName(SERIALIZED_NAME_ENABLE_TIERING)
+    private Boolean enableTiering;
+
+    public static final String SERIALIZED_NAME_ENABLE_TIERING_NOT = "enable_tiering_not";
+
+    @SerializedName(SERIALIZED_NAME_ENABLE_TIERING_NOT)
+    private Boolean enableTieringNot;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -983,6 +1292,53 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_LOCAL_ID_STARTS_WITH)
     private String localIdStartsWith;
 
+    public static final String SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE = "logical_used_data_space";
+
+    @SerializedName(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE)
+    private Long logicalUsedDataSpace;
+
+    public static final String SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GT =
+            "logical_used_data_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GT)
+    private Long logicalUsedDataSpaceGt;
+
+    public static final String SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GTE =
+            "logical_used_data_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GTE)
+    private Long logicalUsedDataSpaceGte;
+
+    public static final String SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_IN =
+            "logical_used_data_space_in";
+
+    @SerializedName(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_IN)
+    private List<Long> logicalUsedDataSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LT =
+            "logical_used_data_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LT)
+    private Long logicalUsedDataSpaceLt;
+
+    public static final String SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LTE =
+            "logical_used_data_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LTE)
+    private Long logicalUsedDataSpaceLte;
+
+    public static final String SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT =
+            "logical_used_data_space_not";
+
+    @SerializedName(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT)
+    private Long logicalUsedDataSpaceNot;
+
+    public static final String SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT_IN =
+            "logical_used_data_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT_IN)
+    private List<Long> logicalUsedDataSpaceNotIn = null;
+
     public static final String SERIALIZED_NAME_MAINTENANCE_END_DATE = "maintenance_end_date";
 
     @SerializedName(SERIALIZED_NAME_MAINTENANCE_END_DATE)
@@ -1582,6 +1938,17 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
     private String nameStartsWith;
 
+    public static final String SERIALIZED_NAME_NO_PERFORMANCE_LAYER = "no_performance_layer";
+
+    @SerializedName(SERIALIZED_NAME_NO_PERFORMANCE_LAYER)
+    private Boolean noPerformanceLayer;
+
+    public static final String SERIALIZED_NAME_NO_PERFORMANCE_LAYER_NOT =
+            "no_performance_layer_not";
+
+    @SerializedName(SERIALIZED_NAME_NO_PERFORMANCE_LAYER_NOT)
+    private Boolean noPerformanceLayerNot;
+
     public static final String SERIALIZED_NAME_NTP_MODE = "ntp_mode";
 
     @SerializedName(SERIALIZED_NAME_NTP_MODE)
@@ -1634,6 +2001,329 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_NVMF_ENABLED_NOT)
     private Boolean nvmfEnabledNot;
 
+    public static final String SERIALIZED_NAME_OVERALL_EFFICIENCY = "overall_efficiency";
+
+    @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY)
+    private Double overallEfficiency;
+
+    public static final String SERIALIZED_NAME_OVERALL_EFFICIENCY_GT = "overall_efficiency_gt";
+
+    @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY_GT)
+    private Double overallEfficiencyGt;
+
+    public static final String SERIALIZED_NAME_OVERALL_EFFICIENCY_GTE = "overall_efficiency_gte";
+
+    @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY_GTE)
+    private Double overallEfficiencyGte;
+
+    public static final String SERIALIZED_NAME_OVERALL_EFFICIENCY_IN = "overall_efficiency_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY_IN)
+    private List<Double> overallEfficiencyIn = null;
+
+    public static final String SERIALIZED_NAME_OVERALL_EFFICIENCY_LT = "overall_efficiency_lt";
+
+    @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY_LT)
+    private Double overallEfficiencyLt;
+
+    public static final String SERIALIZED_NAME_OVERALL_EFFICIENCY_LTE = "overall_efficiency_lte";
+
+    @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY_LTE)
+    private Double overallEfficiencyLte;
+
+    public static final String SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT = "overall_efficiency_not";
+
+    @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT)
+    private Double overallEfficiencyNot;
+
+    public static final String SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN =
+            "overall_efficiency_not_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN)
+    private List<Double> overallEfficiencyNotIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE =
+            "perf_allocated_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE)
+    private Long perfAllocatedDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT =
+            "perf_allocated_data_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT)
+    private Long perfAllocatedDataSpaceGt;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE =
+            "perf_allocated_data_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE)
+    private Long perfAllocatedDataSpaceGte;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN =
+            "perf_allocated_data_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN)
+    private List<Long> perfAllocatedDataSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT =
+            "perf_allocated_data_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT)
+    private Long perfAllocatedDataSpaceLt;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE =
+            "perf_allocated_data_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE)
+    private Long perfAllocatedDataSpaceLte;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT =
+            "perf_allocated_data_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT)
+    private Long perfAllocatedDataSpaceNot;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN =
+            "perf_allocated_data_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN)
+    private List<Long> perfAllocatedDataSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE = "perf_failure_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE)
+    private Long perfFailureDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT =
+            "perf_failure_data_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT)
+    private Long perfFailureDataSpaceGt;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE =
+            "perf_failure_data_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE)
+    private Long perfFailureDataSpaceGte;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN =
+            "perf_failure_data_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN)
+    private List<Long> perfFailureDataSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT =
+            "perf_failure_data_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT)
+    private Long perfFailureDataSpaceLt;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE =
+            "perf_failure_data_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE)
+    private Long perfFailureDataSpaceLte;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT =
+            "perf_failure_data_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT)
+    private Long perfFailureDataSpaceNot;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN =
+            "perf_failure_data_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN)
+    private List<Long> perfFailureDataSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY =
+            "perf_total_data_capacity";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY)
+    private Long perfTotalDataCapacity;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT =
+            "perf_total_data_capacity_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT)
+    private Long perfTotalDataCapacityGt;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE =
+            "perf_total_data_capacity_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE)
+    private Long perfTotalDataCapacityGte;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN =
+            "perf_total_data_capacity_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN)
+    private List<Long> perfTotalDataCapacityIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT =
+            "perf_total_data_capacity_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT)
+    private Long perfTotalDataCapacityLt;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE =
+            "perf_total_data_capacity_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE)
+    private Long perfTotalDataCapacityLte;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT =
+            "perf_total_data_capacity_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT)
+    private Long perfTotalDataCapacityNot;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN =
+            "perf_total_data_capacity_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN)
+    private List<Long> perfTotalDataCapacityNotIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE = "perf_used_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE)
+    private Long perfUsedDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT = "perf_used_data_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT)
+    private Long perfUsedDataSpaceGt;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE =
+            "perf_used_data_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE)
+    private Long perfUsedDataSpaceGte;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN = "perf_used_data_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN)
+    private List<Long> perfUsedDataSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT = "perf_used_data_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT)
+    private Long perfUsedDataSpaceLt;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE =
+            "perf_used_data_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE)
+    private Long perfUsedDataSpaceLte;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT =
+            "perf_used_data_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT)
+    private Long perfUsedDataSpaceNot;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN =
+            "perf_used_data_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN)
+    private List<Long> perfUsedDataSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE = "perf_valid_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE)
+    private Long perfValidDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT =
+            "perf_valid_data_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT)
+    private Long perfValidDataSpaceGt;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE =
+            "perf_valid_data_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE)
+    private Long perfValidDataSpaceGte;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN =
+            "perf_valid_data_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN)
+    private List<Long> perfValidDataSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT =
+            "perf_valid_data_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT)
+    private Long perfValidDataSpaceLt;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE =
+            "perf_valid_data_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE)
+    private Long perfValidDataSpaceLte;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT =
+            "perf_valid_data_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT)
+    private Long perfValidDataSpaceNot;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN =
+            "perf_valid_data_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN)
+    private List<Long> perfValidDataSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE =
+            "planned_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE)
+    private Long plannedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT =
+            "planned_prioritized_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT)
+    private Long plannedPrioritizedSpaceGt;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE =
+            "planned_prioritized_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE)
+    private Long plannedPrioritizedSpaceGte;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN =
+            "planned_prioritized_space_in";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN)
+    private List<Long> plannedPrioritizedSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT =
+            "planned_prioritized_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT)
+    private Long plannedPrioritizedSpaceLt;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE =
+            "planned_prioritized_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE)
+    private Long plannedPrioritizedSpaceLte;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT =
+            "planned_prioritized_space_not";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT)
+    private Long plannedPrioritizedSpaceNot;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN =
+            "planned_prioritized_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN)
+    private List<Long> plannedPrioritizedSpaceNotIn = null;
+
     public static final String SERIALIZED_NAME_PMEM_ENABLED = "pmem_enabled";
 
     @SerializedName(SERIALIZED_NAME_PMEM_ENABLED)
@@ -1643,6 +2333,53 @@ public class ClusterWhereInput
 
     @SerializedName(SERIALIZED_NAME_PMEM_ENABLED_NOT)
     private Boolean pmemEnabledNot;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE = "prio_space_percentage";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE)
+    private Double prioSpacePercentage;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT =
+            "prio_space_percentage_gt";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT)
+    private Double prioSpacePercentageGt;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE =
+            "prio_space_percentage_gte";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE)
+    private Double prioSpacePercentageGte;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN =
+            "prio_space_percentage_in";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN)
+    private List<Double> prioSpacePercentageIn = null;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT =
+            "prio_space_percentage_lt";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT)
+    private Double prioSpacePercentageLt;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE =
+            "prio_space_percentage_lte";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE)
+    private Double prioSpacePercentageLte;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT =
+            "prio_space_percentage_not";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT)
+    private Double prioSpacePercentageNot;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN =
+            "prio_space_percentage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN)
+    private List<Double> prioSpacePercentageNotIn = null;
 
     public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES = "provisioned_cpu_cores";
 
@@ -1966,6 +2703,17 @@ public class ClusterWhereInput
 
     @SerializedName(SERIALIZED_NAME_RECOVER_SPEED_NOT_IN)
     private List<Long> recoverSpeedNotIn = null;
+
+    public static final String SERIALIZED_NAME_REPLICA_CAPACITY_ONLY = "replica_capacity_only";
+
+    @SerializedName(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY)
+    private Boolean replicaCapacityOnly;
+
+    public static final String SERIALIZED_NAME_REPLICA_CAPACITY_ONLY_NOT =
+            "replica_capacity_only_not";
+
+    @SerializedName(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY_NOT)
+    private Boolean replicaCapacityOnlyNot;
 
     public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE =
             "reserved_cpu_cores_for_system_service";
@@ -2417,6 +3165,101 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN)
     private List<Long> totalMemoryBytesNotIn = null;
 
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE = "total_prio_volume_size";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE)
+    private Long totalPrioVolumeSize;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GT =
+            "total_prio_volume_size_gt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GT)
+    private Long totalPrioVolumeSizeGt;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GTE =
+            "total_prio_volume_size_gte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GTE)
+    private Long totalPrioVolumeSizeGte;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_IN =
+            "total_prio_volume_size_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_IN)
+    private List<Long> totalPrioVolumeSizeIn = null;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LT =
+            "total_prio_volume_size_lt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LT)
+    private Long totalPrioVolumeSizeLt;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LTE =
+            "total_prio_volume_size_lte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LTE)
+    private Long totalPrioVolumeSizeLte;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT =
+            "total_prio_volume_size_not";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT)
+    private Long totalPrioVolumeSizeNot;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT_IN =
+            "total_prio_volume_size_not_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT_IN)
+    private List<Long> totalPrioVolumeSizeNotIn = null;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE =
+            "total_prio_volume_size_usage";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE)
+    private Double totalPrioVolumeSizeUsage;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GT =
+            "total_prio_volume_size_usage_gt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GT)
+    private Double totalPrioVolumeSizeUsageGt;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GTE =
+            "total_prio_volume_size_usage_gte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GTE)
+    private Double totalPrioVolumeSizeUsageGte;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_IN =
+            "total_prio_volume_size_usage_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_IN)
+    private List<Double> totalPrioVolumeSizeUsageIn = null;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LT =
+            "total_prio_volume_size_usage_lt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LT)
+    private Double totalPrioVolumeSizeUsageLt;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LTE =
+            "total_prio_volume_size_usage_lte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LTE)
+    private Double totalPrioVolumeSizeUsageLte;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT =
+            "total_prio_volume_size_usage_not";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT)
+    private Double totalPrioVolumeSizeUsageNot;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT_IN =
+            "total_prio_volume_size_usage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT_IN)
+    private List<Double> totalPrioVolumeSizeUsageNotIn = null;
+
     public static final String SERIALIZED_NAME_TYPE = "type";
 
     @SerializedName(SERIALIZED_NAME_TYPE)
@@ -2436,6 +3279,16 @@ public class ClusterWhereInput
 
     @SerializedName(SERIALIZED_NAME_TYPE_NOT_IN)
     private List<ClusterType> typeNotIn = null;
+
+    public static final String SERIALIZED_NAME_UPGRADE_FOR_TIERING = "upgrade_for_tiering";
+
+    @SerializedName(SERIALIZED_NAME_UPGRADE_FOR_TIERING)
+    private Boolean upgradeForTiering;
+
+    public static final String SERIALIZED_NAME_UPGRADE_FOR_TIERING_NOT = "upgrade_for_tiering_not";
+
+    @SerializedName(SERIALIZED_NAME_UPGRADE_FOR_TIERING_NOT)
+    private Boolean upgradeForTieringNot;
 
     public static final String SERIALIZED_NAME_UPGRADE_TOOL_VERSION = "upgrade_tool_version";
 
@@ -2516,6 +3369,46 @@ public class ClusterWhereInput
 
     @SerializedName(SERIALIZED_NAME_UPGRADE_TOOL_VERSION_STARTS_WITH)
     private String upgradeToolVersionStartsWith;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE = "used_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE)
+    private Long usedCacheSpace;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_GT = "used_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_GT)
+    private Long usedCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_GTE = "used_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_GTE)
+    private Long usedCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_IN = "used_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_IN)
+    private List<Long> usedCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_LT = "used_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_LT)
+    private Long usedCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_LTE = "used_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_LTE)
+    private Long usedCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_NOT = "used_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_NOT)
+    private Long usedCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN = "used_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN)
+    private List<Long> usedCacheSpaceNotIn = null;
 
     public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
 
@@ -2637,6 +3530,47 @@ public class ClusterWhereInput
 
     @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN)
     private List<Double> usedMemoryBytesNotIn = null;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE = "valid_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE)
+    private Long validCacheSpace;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_GT = "valid_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_GT)
+    private Long validCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_GTE = "valid_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE)
+    private Long validCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_IN = "valid_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_IN)
+    private List<Long> validCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_LT = "valid_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_LT)
+    private Long validCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_LTE = "valid_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE)
+    private Long validCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_NOT = "valid_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT)
+    private Long validCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN =
+            "valid_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN)
+    private List<Long> validCacheSpaceNotIn = null;
 
     public static final String SERIALIZED_NAME_VALID_DATA_SPACE = "valid_data_space";
 
@@ -3036,6 +3970,825 @@ public class ClusterWhereInput
 
     public boolean getOR_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_O_R);
+    }
+
+    public ClusterWhereInput accessWriteCompressEnabled(Boolean accessWriteCompressEnabled) {
+
+        this.accessWriteCompressEnabled = accessWriteCompressEnabled;
+        return this;
+    }
+
+    /**
+     * Get accessWriteCompressEnabled
+     *
+     * @return accessWriteCompressEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getAccessWriteCompressEnabled() {
+        return accessWriteCompressEnabled;
+    }
+
+    public void setAccessWriteCompressEnabled(Boolean accessWriteCompressEnabled) {
+        this.accessWriteCompressEnabled = accessWriteCompressEnabled;
+    }
+
+    public ClusterWhereInput accessWriteCompressEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+        return this;
+    }
+
+    public ClusterWhereInput accessWriteCompressEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+        return this;
+    }
+
+    public void setAccessWriteCompressEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+        }
+    }
+
+    public boolean getAccessWriteCompressEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+    }
+
+    public ClusterWhereInput accessWriteCompressEnabledNot(Boolean accessWriteCompressEnabledNot) {
+
+        this.accessWriteCompressEnabledNot = accessWriteCompressEnabledNot;
+        return this;
+    }
+
+    /**
+     * Get accessWriteCompressEnabledNot
+     *
+     * @return accessWriteCompressEnabledNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getAccessWriteCompressEnabledNot() {
+        return accessWriteCompressEnabledNot;
+    }
+
+    public void setAccessWriteCompressEnabledNot(Boolean accessWriteCompressEnabledNot) {
+        this.accessWriteCompressEnabledNot = accessWriteCompressEnabledNot;
+    }
+
+    public ClusterWhereInput accessWriteCompressEnabledNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput accessWriteCompressEnabledNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED_NOT);
+        return this;
+    }
+
+    public void setAccessWriteCompressEnabledNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED_NOT);
+        }
+    }
+
+    public boolean getAccessWriteCompressEnabledNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED_NOT);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
+
+        this.allocatedPrioritizedSpace = allocatedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpace
+     *
+     * @return allocatedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpace() {
+        return allocatedPrioritizedSpace;
+    }
+
+    public void setAllocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
+        this.allocatedPrioritizedSpace = allocatedPrioritizedSpace;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceGt(Long allocatedPrioritizedSpaceGt) {
+
+        this.allocatedPrioritizedSpaceGt = allocatedPrioritizedSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceGt
+     *
+     * @return allocatedPrioritizedSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceGt() {
+        return allocatedPrioritizedSpaceGt;
+    }
+
+    public void setAllocatedPrioritizedSpaceGt(Long allocatedPrioritizedSpaceGt) {
+        this.allocatedPrioritizedSpaceGt = allocatedPrioritizedSpaceGt;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GT);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceGte(Long allocatedPrioritizedSpaceGte) {
+
+        this.allocatedPrioritizedSpaceGte = allocatedPrioritizedSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceGte
+     *
+     * @return allocatedPrioritizedSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceGte() {
+        return allocatedPrioritizedSpaceGte;
+    }
+
+    public void setAllocatedPrioritizedSpaceGte(Long allocatedPrioritizedSpaceGte) {
+        this.allocatedPrioritizedSpaceGte = allocatedPrioritizedSpaceGte;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_GTE);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceIn(List<Long> allocatedPrioritizedSpaceIn) {
+
+        this.allocatedPrioritizedSpaceIn = allocatedPrioritizedSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addAllocatedPrioritizedSpaceInItem(
+            Long allocatedPrioritizedSpaceInItem) {
+        if (this.allocatedPrioritizedSpaceIn == null) {
+            this.allocatedPrioritizedSpaceIn = new ArrayList<Long>();
+        }
+        this.allocatedPrioritizedSpaceIn.add(allocatedPrioritizedSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceIn
+     *
+     * @return allocatedPrioritizedSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getAllocatedPrioritizedSpaceIn() {
+        return allocatedPrioritizedSpaceIn;
+    }
+
+    public void setAllocatedPrioritizedSpaceIn(List<Long> allocatedPrioritizedSpaceIn) {
+        this.allocatedPrioritizedSpaceIn = allocatedPrioritizedSpaceIn;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_IN);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceLt(Long allocatedPrioritizedSpaceLt) {
+
+        this.allocatedPrioritizedSpaceLt = allocatedPrioritizedSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceLt
+     *
+     * @return allocatedPrioritizedSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceLt() {
+        return allocatedPrioritizedSpaceLt;
+    }
+
+    public void setAllocatedPrioritizedSpaceLt(Long allocatedPrioritizedSpaceLt) {
+        this.allocatedPrioritizedSpaceLt = allocatedPrioritizedSpaceLt;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LT);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceLte(Long allocatedPrioritizedSpaceLte) {
+
+        this.allocatedPrioritizedSpaceLte = allocatedPrioritizedSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceLte
+     *
+     * @return allocatedPrioritizedSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceLte() {
+        return allocatedPrioritizedSpaceLte;
+    }
+
+    public void setAllocatedPrioritizedSpaceLte(Long allocatedPrioritizedSpaceLte) {
+        this.allocatedPrioritizedSpaceLte = allocatedPrioritizedSpaceLte;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_LTE);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceNot(Long allocatedPrioritizedSpaceNot) {
+
+        this.allocatedPrioritizedSpaceNot = allocatedPrioritizedSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceNot
+     *
+     * @return allocatedPrioritizedSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpaceNot() {
+        return allocatedPrioritizedSpaceNot;
+    }
+
+    public void setAllocatedPrioritizedSpaceNot(Long allocatedPrioritizedSpaceNot) {
+        this.allocatedPrioritizedSpaceNot = allocatedPrioritizedSpaceNot;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceNotIn(
+            List<Long> allocatedPrioritizedSpaceNotIn) {
+
+        this.allocatedPrioritizedSpaceNotIn = allocatedPrioritizedSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addAllocatedPrioritizedSpaceNotInItem(
+            Long allocatedPrioritizedSpaceNotInItem) {
+        if (this.allocatedPrioritizedSpaceNotIn == null) {
+            this.allocatedPrioritizedSpaceNotIn = new ArrayList<Long>();
+        }
+        this.allocatedPrioritizedSpaceNotIn.add(allocatedPrioritizedSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceNotIn
+     *
+     * @return allocatedPrioritizedSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getAllocatedPrioritizedSpaceNotIn() {
+        return allocatedPrioritizedSpaceNotIn;
+    }
+
+    public void setAllocatedPrioritizedSpaceNotIn(List<Long> allocatedPrioritizedSpaceNotIn) {
+        this.allocatedPrioritizedSpaceNotIn = allocatedPrioritizedSpaceNotIn;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_NOT_IN);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsage(Double allocatedPrioritizedSpaceUsage) {
+
+        this.allocatedPrioritizedSpaceUsage = allocatedPrioritizedSpaceUsage;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsage
+     *
+     * @return allocatedPrioritizedSpaceUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsage() {
+        return allocatedPrioritizedSpaceUsage;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsage(Double allocatedPrioritizedSpaceUsage) {
+        this.allocatedPrioritizedSpaceUsage = allocatedPrioritizedSpaceUsage;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageGt(
+            Double allocatedPrioritizedSpaceUsageGt) {
+
+        this.allocatedPrioritizedSpaceUsageGt = allocatedPrioritizedSpaceUsageGt;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageGt
+     *
+     * @return allocatedPrioritizedSpaceUsageGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageGt() {
+        return allocatedPrioritizedSpaceUsageGt;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageGt(Double allocatedPrioritizedSpaceUsageGt) {
+        this.allocatedPrioritizedSpaceUsageGt = allocatedPrioritizedSpaceUsageGt;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GT);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageGte(
+            Double allocatedPrioritizedSpaceUsageGte) {
+
+        this.allocatedPrioritizedSpaceUsageGte = allocatedPrioritizedSpaceUsageGte;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageGte
+     *
+     * @return allocatedPrioritizedSpaceUsageGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageGte() {
+        return allocatedPrioritizedSpaceUsageGte;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageGte(Double allocatedPrioritizedSpaceUsageGte) {
+        this.allocatedPrioritizedSpaceUsageGte = allocatedPrioritizedSpaceUsageGte;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_GTE);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageIn(
+            List<Double> allocatedPrioritizedSpaceUsageIn) {
+
+        this.allocatedPrioritizedSpaceUsageIn = allocatedPrioritizedSpaceUsageIn;
+        return this;
+    }
+
+    public ClusterWhereInput addAllocatedPrioritizedSpaceUsageInItem(
+            Double allocatedPrioritizedSpaceUsageInItem) {
+        if (this.allocatedPrioritizedSpaceUsageIn == null) {
+            this.allocatedPrioritizedSpaceUsageIn = new ArrayList<Double>();
+        }
+        this.allocatedPrioritizedSpaceUsageIn.add(allocatedPrioritizedSpaceUsageInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageIn
+     *
+     * @return allocatedPrioritizedSpaceUsageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getAllocatedPrioritizedSpaceUsageIn() {
+        return allocatedPrioritizedSpaceUsageIn;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageIn(List<Double> allocatedPrioritizedSpaceUsageIn) {
+        this.allocatedPrioritizedSpaceUsageIn = allocatedPrioritizedSpaceUsageIn;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_IN);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageLt(
+            Double allocatedPrioritizedSpaceUsageLt) {
+
+        this.allocatedPrioritizedSpaceUsageLt = allocatedPrioritizedSpaceUsageLt;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageLt
+     *
+     * @return allocatedPrioritizedSpaceUsageLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageLt() {
+        return allocatedPrioritizedSpaceUsageLt;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageLt(Double allocatedPrioritizedSpaceUsageLt) {
+        this.allocatedPrioritizedSpaceUsageLt = allocatedPrioritizedSpaceUsageLt;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LT);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageLte(
+            Double allocatedPrioritizedSpaceUsageLte) {
+
+        this.allocatedPrioritizedSpaceUsageLte = allocatedPrioritizedSpaceUsageLte;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageLte
+     *
+     * @return allocatedPrioritizedSpaceUsageLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageLte() {
+        return allocatedPrioritizedSpaceUsageLte;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageLte(Double allocatedPrioritizedSpaceUsageLte) {
+        this.allocatedPrioritizedSpaceUsageLte = allocatedPrioritizedSpaceUsageLte;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_LTE);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageNot(
+            Double allocatedPrioritizedSpaceUsageNot) {
+
+        this.allocatedPrioritizedSpaceUsageNot = allocatedPrioritizedSpaceUsageNot;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageNot
+     *
+     * @return allocatedPrioritizedSpaceUsageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsageNot() {
+        return allocatedPrioritizedSpaceUsageNot;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageNot(Double allocatedPrioritizedSpaceUsageNot) {
+        this.allocatedPrioritizedSpaceUsageNot = allocatedPrioritizedSpaceUsageNot;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT);
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageNotIn(
+            List<Double> allocatedPrioritizedSpaceUsageNotIn) {
+
+        this.allocatedPrioritizedSpaceUsageNotIn = allocatedPrioritizedSpaceUsageNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addAllocatedPrioritizedSpaceUsageNotInItem(
+            Double allocatedPrioritizedSpaceUsageNotInItem) {
+        if (this.allocatedPrioritizedSpaceUsageNotIn == null) {
+            this.allocatedPrioritizedSpaceUsageNotIn = new ArrayList<Double>();
+        }
+        this.allocatedPrioritizedSpaceUsageNotIn.add(allocatedPrioritizedSpaceUsageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsageNotIn
+     *
+     * @return allocatedPrioritizedSpaceUsageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getAllocatedPrioritizedSpaceUsageNotIn() {
+        return allocatedPrioritizedSpaceUsageNotIn;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageNotIn(
+            List<Double> allocatedPrioritizedSpaceUsageNotIn) {
+        this.allocatedPrioritizedSpaceUsageNotIn = allocatedPrioritizedSpaceUsageNotIn;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedPrioritizedSpaceUsageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE_NOT_IN);
     }
 
     public ClusterWhereInput applicationHighestVersion(String applicationHighestVersion) {
@@ -4072,6 +5825,366 @@ public class ClusterWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_AUTO_CONVERGE_NOT);
     }
 
+    public ClusterWhereInput commitedMemoryBytes(Long commitedMemoryBytes) {
+
+        this.commitedMemoryBytes = commitedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytes
+     *
+     * @return commitedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytes() {
+        return commitedMemoryBytes;
+    }
+
+    public void setCommitedMemoryBytes(Long commitedMemoryBytes) {
+        this.commitedMemoryBytes = commitedMemoryBytes;
+    }
+
+    public ClusterWhereInput commitedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        return this;
+    }
+
+    public ClusterWhereInput commitedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setCommitedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getCommitedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+    }
+
+    public ClusterWhereInput commitedMemoryBytesGt(Long commitedMemoryBytesGt) {
+
+        this.commitedMemoryBytesGt = commitedMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesGt
+     *
+     * @return commitedMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesGt() {
+        return commitedMemoryBytesGt;
+    }
+
+    public void setCommitedMemoryBytesGt(Long commitedMemoryBytesGt) {
+        this.commitedMemoryBytesGt = commitedMemoryBytesGt;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GT);
+    }
+
+    public ClusterWhereInput commitedMemoryBytesGte(Long commitedMemoryBytesGte) {
+
+        this.commitedMemoryBytesGte = commitedMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesGte
+     *
+     * @return commitedMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesGte() {
+        return commitedMemoryBytesGte;
+    }
+
+    public void setCommitedMemoryBytesGte(Long commitedMemoryBytesGte) {
+        this.commitedMemoryBytesGte = commitedMemoryBytesGte;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_GTE);
+    }
+
+    public ClusterWhereInput commitedMemoryBytesIn(List<Long> commitedMemoryBytesIn) {
+
+        this.commitedMemoryBytesIn = commitedMemoryBytesIn;
+        return this;
+    }
+
+    public ClusterWhereInput addCommitedMemoryBytesInItem(Long commitedMemoryBytesInItem) {
+        if (this.commitedMemoryBytesIn == null) {
+            this.commitedMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.commitedMemoryBytesIn.add(commitedMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesIn
+     *
+     * @return commitedMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getCommitedMemoryBytesIn() {
+        return commitedMemoryBytesIn;
+    }
+
+    public void setCommitedMemoryBytesIn(List<Long> commitedMemoryBytesIn) {
+        this.commitedMemoryBytesIn = commitedMemoryBytesIn;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_IN);
+    }
+
+    public ClusterWhereInput commitedMemoryBytesLt(Long commitedMemoryBytesLt) {
+
+        this.commitedMemoryBytesLt = commitedMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesLt
+     *
+     * @return commitedMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesLt() {
+        return commitedMemoryBytesLt;
+    }
+
+    public void setCommitedMemoryBytesLt(Long commitedMemoryBytesLt) {
+        this.commitedMemoryBytesLt = commitedMemoryBytesLt;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LT);
+    }
+
+    public ClusterWhereInput commitedMemoryBytesLte(Long commitedMemoryBytesLte) {
+
+        this.commitedMemoryBytesLte = commitedMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesLte
+     *
+     * @return commitedMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesLte() {
+        return commitedMemoryBytesLte;
+    }
+
+    public void setCommitedMemoryBytesLte(Long commitedMemoryBytesLte) {
+        this.commitedMemoryBytesLte = commitedMemoryBytesLte;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_LTE);
+    }
+
+    public ClusterWhereInput commitedMemoryBytesNot(Long commitedMemoryBytesNot) {
+
+        this.commitedMemoryBytesNot = commitedMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesNot
+     *
+     * @return commitedMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytesNot() {
+        return commitedMemoryBytesNot;
+    }
+
+    public void setCommitedMemoryBytesNot(Long commitedMemoryBytesNot) {
+        this.commitedMemoryBytesNot = commitedMemoryBytesNot;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT);
+    }
+
+    public ClusterWhereInput commitedMemoryBytesNotIn(List<Long> commitedMemoryBytesNotIn) {
+
+        this.commitedMemoryBytesNotIn = commitedMemoryBytesNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addCommitedMemoryBytesNotInItem(Long commitedMemoryBytesNotInItem) {
+        if (this.commitedMemoryBytesNotIn == null) {
+            this.commitedMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.commitedMemoryBytesNotIn.add(commitedMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytesNotIn
+     *
+     * @return commitedMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getCommitedMemoryBytesNotIn() {
+        return commitedMemoryBytesNotIn;
+    }
+
+    public void setCommitedMemoryBytesNotIn(List<Long> commitedMemoryBytesNotIn) {
+        this.commitedMemoryBytesNotIn = commitedMemoryBytesNotIn;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput commitedMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setCommitedMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getCommitedMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES_NOT_IN);
+    }
+
     public ClusterWhereInput connectState(ConnectState connectState) {
 
         this.connectState = connectState;
@@ -5010,6 +7123,726 @@ public class ClusterWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_CURRENT_CPU_MODEL_STARTS_WITH);
     }
 
+    public ClusterWhereInput dataReductionRatio(Double dataReductionRatio) {
+
+        this.dataReductionRatio = dataReductionRatio;
+        return this;
+    }
+
+    /**
+     * Get dataReductionRatio
+     *
+     * @return dataReductionRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionRatio() {
+        return dataReductionRatio;
+    }
+
+    public void setDataReductionRatio(Double dataReductionRatio) {
+        this.dataReductionRatio = dataReductionRatio;
+    }
+
+    public ClusterWhereInput dataReductionRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+        return this;
+    }
+
+    public void setDataReductionRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+        }
+    }
+
+    public boolean getDataReductionRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+    }
+
+    public ClusterWhereInput dataReductionRatioGt(Double dataReductionRatioGt) {
+
+        this.dataReductionRatioGt = dataReductionRatioGt;
+        return this;
+    }
+
+    /**
+     * Get dataReductionRatioGt
+     *
+     * @return dataReductionRatioGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionRatioGt() {
+        return dataReductionRatioGt;
+    }
+
+    public void setDataReductionRatioGt(Double dataReductionRatioGt) {
+        this.dataReductionRatioGt = dataReductionRatioGt;
+    }
+
+    public ClusterWhereInput dataReductionRatioGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GT);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionRatioGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GT);
+        return this;
+    }
+
+    public void setDataReductionRatioGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GT);
+        }
+    }
+
+    public boolean getDataReductionRatioGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GT);
+    }
+
+    public ClusterWhereInput dataReductionRatioGte(Double dataReductionRatioGte) {
+
+        this.dataReductionRatioGte = dataReductionRatioGte;
+        return this;
+    }
+
+    /**
+     * Get dataReductionRatioGte
+     *
+     * @return dataReductionRatioGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionRatioGte() {
+        return dataReductionRatioGte;
+    }
+
+    public void setDataReductionRatioGte(Double dataReductionRatioGte) {
+        this.dataReductionRatioGte = dataReductionRatioGte;
+    }
+
+    public ClusterWhereInput dataReductionRatioGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionRatioGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GTE);
+        return this;
+    }
+
+    public void setDataReductionRatioGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GTE);
+        }
+    }
+
+    public boolean getDataReductionRatioGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_RATIO_GTE);
+    }
+
+    public ClusterWhereInput dataReductionRatioIn(List<Double> dataReductionRatioIn) {
+
+        this.dataReductionRatioIn = dataReductionRatioIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDataReductionRatioInItem(Double dataReductionRatioInItem) {
+        if (this.dataReductionRatioIn == null) {
+            this.dataReductionRatioIn = new ArrayList<Double>();
+        }
+        this.dataReductionRatioIn.add(dataReductionRatioInItem);
+        return this;
+    }
+
+    /**
+     * Get dataReductionRatioIn
+     *
+     * @return dataReductionRatioIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDataReductionRatioIn() {
+        return dataReductionRatioIn;
+    }
+
+    public void setDataReductionRatioIn(List<Double> dataReductionRatioIn) {
+        this.dataReductionRatioIn = dataReductionRatioIn;
+    }
+
+    public ClusterWhereInput dataReductionRatioIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_IN);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionRatioIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_IN);
+        return this;
+    }
+
+    public void setDataReductionRatioIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_IN);
+        }
+    }
+
+    public boolean getDataReductionRatioIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_RATIO_IN);
+    }
+
+    public ClusterWhereInput dataReductionRatioLt(Double dataReductionRatioLt) {
+
+        this.dataReductionRatioLt = dataReductionRatioLt;
+        return this;
+    }
+
+    /**
+     * Get dataReductionRatioLt
+     *
+     * @return dataReductionRatioLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionRatioLt() {
+        return dataReductionRatioLt;
+    }
+
+    public void setDataReductionRatioLt(Double dataReductionRatioLt) {
+        this.dataReductionRatioLt = dataReductionRatioLt;
+    }
+
+    public ClusterWhereInput dataReductionRatioLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LT);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionRatioLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LT);
+        return this;
+    }
+
+    public void setDataReductionRatioLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LT);
+        }
+    }
+
+    public boolean getDataReductionRatioLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LT);
+    }
+
+    public ClusterWhereInput dataReductionRatioLte(Double dataReductionRatioLte) {
+
+        this.dataReductionRatioLte = dataReductionRatioLte;
+        return this;
+    }
+
+    /**
+     * Get dataReductionRatioLte
+     *
+     * @return dataReductionRatioLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionRatioLte() {
+        return dataReductionRatioLte;
+    }
+
+    public void setDataReductionRatioLte(Double dataReductionRatioLte) {
+        this.dataReductionRatioLte = dataReductionRatioLte;
+    }
+
+    public ClusterWhereInput dataReductionRatioLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionRatioLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LTE);
+        return this;
+    }
+
+    public void setDataReductionRatioLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LTE);
+        }
+    }
+
+    public boolean getDataReductionRatioLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_RATIO_LTE);
+    }
+
+    public ClusterWhereInput dataReductionRatioNot(Double dataReductionRatioNot) {
+
+        this.dataReductionRatioNot = dataReductionRatioNot;
+        return this;
+    }
+
+    /**
+     * Get dataReductionRatioNot
+     *
+     * @return dataReductionRatioNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionRatioNot() {
+        return dataReductionRatioNot;
+    }
+
+    public void setDataReductionRatioNot(Double dataReductionRatioNot) {
+        this.dataReductionRatioNot = dataReductionRatioNot;
+    }
+
+    public ClusterWhereInput dataReductionRatioNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionRatioNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT);
+        return this;
+    }
+
+    public void setDataReductionRatioNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT);
+        }
+    }
+
+    public boolean getDataReductionRatioNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT);
+    }
+
+    public ClusterWhereInput dataReductionRatioNotIn(List<Double> dataReductionRatioNotIn) {
+
+        this.dataReductionRatioNotIn = dataReductionRatioNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDataReductionRatioNotInItem(Double dataReductionRatioNotInItem) {
+        if (this.dataReductionRatioNotIn == null) {
+            this.dataReductionRatioNotIn = new ArrayList<Double>();
+        }
+        this.dataReductionRatioNotIn.add(dataReductionRatioNotInItem);
+        return this;
+    }
+
+    /**
+     * Get dataReductionRatioNotIn
+     *
+     * @return dataReductionRatioNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDataReductionRatioNotIn() {
+        return dataReductionRatioNotIn;
+    }
+
+    public void setDataReductionRatioNotIn(List<Double> dataReductionRatioNotIn) {
+        this.dataReductionRatioNotIn = dataReductionRatioNotIn;
+    }
+
+    public ClusterWhereInput dataReductionRatioNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionRatioNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT_IN);
+        return this;
+    }
+
+    public void setDataReductionRatioNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT_IN);
+        }
+    }
+
+    public boolean getDataReductionRatioNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_RATIO_NOT_IN);
+    }
+
+    public ClusterWhereInput dataReductionSaving(Double dataReductionSaving) {
+
+        this.dataReductionSaving = dataReductionSaving;
+        return this;
+    }
+
+    /**
+     * Get dataReductionSaving
+     *
+     * @return dataReductionSaving
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionSaving() {
+        return dataReductionSaving;
+    }
+
+    public void setDataReductionSaving(Double dataReductionSaving) {
+        this.dataReductionSaving = dataReductionSaving;
+    }
+
+    public ClusterWhereInput dataReductionSaving_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionSaving_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
+        return this;
+    }
+
+    public void setDataReductionSaving_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
+        }
+    }
+
+    public boolean getDataReductionSaving_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
+    }
+
+    public ClusterWhereInput dataReductionSavingGt(Double dataReductionSavingGt) {
+
+        this.dataReductionSavingGt = dataReductionSavingGt;
+        return this;
+    }
+
+    /**
+     * Get dataReductionSavingGt
+     *
+     * @return dataReductionSavingGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionSavingGt() {
+        return dataReductionSavingGt;
+    }
+
+    public void setDataReductionSavingGt(Double dataReductionSavingGt) {
+        this.dataReductionSavingGt = dataReductionSavingGt;
+    }
+
+    public ClusterWhereInput dataReductionSavingGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GT);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionSavingGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GT);
+        return this;
+    }
+
+    public void setDataReductionSavingGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GT);
+        }
+    }
+
+    public boolean getDataReductionSavingGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GT);
+    }
+
+    public ClusterWhereInput dataReductionSavingGte(Double dataReductionSavingGte) {
+
+        this.dataReductionSavingGte = dataReductionSavingGte;
+        return this;
+    }
+
+    /**
+     * Get dataReductionSavingGte
+     *
+     * @return dataReductionSavingGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionSavingGte() {
+        return dataReductionSavingGte;
+    }
+
+    public void setDataReductionSavingGte(Double dataReductionSavingGte) {
+        this.dataReductionSavingGte = dataReductionSavingGte;
+    }
+
+    public ClusterWhereInput dataReductionSavingGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionSavingGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GTE);
+        return this;
+    }
+
+    public void setDataReductionSavingGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GTE);
+        }
+    }
+
+    public boolean getDataReductionSavingGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_SAVING_GTE);
+    }
+
+    public ClusterWhereInput dataReductionSavingIn(List<Double> dataReductionSavingIn) {
+
+        this.dataReductionSavingIn = dataReductionSavingIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDataReductionSavingInItem(Double dataReductionSavingInItem) {
+        if (this.dataReductionSavingIn == null) {
+            this.dataReductionSavingIn = new ArrayList<Double>();
+        }
+        this.dataReductionSavingIn.add(dataReductionSavingInItem);
+        return this;
+    }
+
+    /**
+     * Get dataReductionSavingIn
+     *
+     * @return dataReductionSavingIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDataReductionSavingIn() {
+        return dataReductionSavingIn;
+    }
+
+    public void setDataReductionSavingIn(List<Double> dataReductionSavingIn) {
+        this.dataReductionSavingIn = dataReductionSavingIn;
+    }
+
+    public ClusterWhereInput dataReductionSavingIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_IN);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionSavingIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_IN);
+        return this;
+    }
+
+    public void setDataReductionSavingIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_IN);
+        }
+    }
+
+    public boolean getDataReductionSavingIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_SAVING_IN);
+    }
+
+    public ClusterWhereInput dataReductionSavingLt(Double dataReductionSavingLt) {
+
+        this.dataReductionSavingLt = dataReductionSavingLt;
+        return this;
+    }
+
+    /**
+     * Get dataReductionSavingLt
+     *
+     * @return dataReductionSavingLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionSavingLt() {
+        return dataReductionSavingLt;
+    }
+
+    public void setDataReductionSavingLt(Double dataReductionSavingLt) {
+        this.dataReductionSavingLt = dataReductionSavingLt;
+    }
+
+    public ClusterWhereInput dataReductionSavingLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LT);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionSavingLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LT);
+        return this;
+    }
+
+    public void setDataReductionSavingLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LT);
+        }
+    }
+
+    public boolean getDataReductionSavingLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LT);
+    }
+
+    public ClusterWhereInput dataReductionSavingLte(Double dataReductionSavingLte) {
+
+        this.dataReductionSavingLte = dataReductionSavingLte;
+        return this;
+    }
+
+    /**
+     * Get dataReductionSavingLte
+     *
+     * @return dataReductionSavingLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionSavingLte() {
+        return dataReductionSavingLte;
+    }
+
+    public void setDataReductionSavingLte(Double dataReductionSavingLte) {
+        this.dataReductionSavingLte = dataReductionSavingLte;
+    }
+
+    public ClusterWhereInput dataReductionSavingLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionSavingLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LTE);
+        return this;
+    }
+
+    public void setDataReductionSavingLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LTE);
+        }
+    }
+
+    public boolean getDataReductionSavingLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_SAVING_LTE);
+    }
+
+    public ClusterWhereInput dataReductionSavingNot(Double dataReductionSavingNot) {
+
+        this.dataReductionSavingNot = dataReductionSavingNot;
+        return this;
+    }
+
+    /**
+     * Get dataReductionSavingNot
+     *
+     * @return dataReductionSavingNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionSavingNot() {
+        return dataReductionSavingNot;
+    }
+
+    public void setDataReductionSavingNot(Double dataReductionSavingNot) {
+        this.dataReductionSavingNot = dataReductionSavingNot;
+    }
+
+    public ClusterWhereInput dataReductionSavingNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionSavingNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT);
+        return this;
+    }
+
+    public void setDataReductionSavingNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT);
+        }
+    }
+
+    public boolean getDataReductionSavingNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT);
+    }
+
+    public ClusterWhereInput dataReductionSavingNotIn(List<Double> dataReductionSavingNotIn) {
+
+        this.dataReductionSavingNotIn = dataReductionSavingNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDataReductionSavingNotInItem(Double dataReductionSavingNotInItem) {
+        if (this.dataReductionSavingNotIn == null) {
+            this.dataReductionSavingNotIn = new ArrayList<Double>();
+        }
+        this.dataReductionSavingNotIn.add(dataReductionSavingNotInItem);
+        return this;
+    }
+
+    /**
+     * Get dataReductionSavingNotIn
+     *
+     * @return dataReductionSavingNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDataReductionSavingNotIn() {
+        return dataReductionSavingNotIn;
+    }
+
+    public void setDataReductionSavingNotIn(List<Double> dataReductionSavingNotIn) {
+        this.dataReductionSavingNotIn = dataReductionSavingNotIn;
+    }
+
+    public ClusterWhereInput dataReductionSavingNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput dataReductionSavingNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT_IN);
+        return this;
+    }
+
+    public void setDataReductionSavingNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT_IN);
+        }
+    }
+
+    public boolean getDataReductionSavingNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_SAVING_NOT_IN);
+    }
+
     public ClusterWhereInput datacentersEvery(DatacenterWhereInput datacentersEvery) {
 
         this.datacentersEvery = datacentersEvery;
@@ -5691,6 +8524,498 @@ public class ClusterWhereInput
 
     public boolean getDisconnectedReasonNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DISCONNECTED_REASON_NOT_IN);
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpace
+     *
+     * @return downgradedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpace() {
+        return downgradedPrioritizedSpace;
+    }
+
+    public void setDowngradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceGt(Long downgradedPrioritizedSpaceGt) {
+
+        this.downgradedPrioritizedSpaceGt = downgradedPrioritizedSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceGt
+     *
+     * @return downgradedPrioritizedSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceGt() {
+        return downgradedPrioritizedSpaceGt;
+    }
+
+    public void setDowngradedPrioritizedSpaceGt(Long downgradedPrioritizedSpaceGt) {
+        this.downgradedPrioritizedSpaceGt = downgradedPrioritizedSpaceGt;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceGte(Long downgradedPrioritizedSpaceGte) {
+
+        this.downgradedPrioritizedSpaceGte = downgradedPrioritizedSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceGte
+     *
+     * @return downgradedPrioritizedSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceGte() {
+        return downgradedPrioritizedSpaceGte;
+    }
+
+    public void setDowngradedPrioritizedSpaceGte(Long downgradedPrioritizedSpaceGte) {
+        this.downgradedPrioritizedSpaceGte = downgradedPrioritizedSpaceGte;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceIn(List<Long> downgradedPrioritizedSpaceIn) {
+
+        this.downgradedPrioritizedSpaceIn = downgradedPrioritizedSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDowngradedPrioritizedSpaceInItem(
+            Long downgradedPrioritizedSpaceInItem) {
+        if (this.downgradedPrioritizedSpaceIn == null) {
+            this.downgradedPrioritizedSpaceIn = new ArrayList<Long>();
+        }
+        this.downgradedPrioritizedSpaceIn.add(downgradedPrioritizedSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceIn
+     *
+     * @return downgradedPrioritizedSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDowngradedPrioritizedSpaceIn() {
+        return downgradedPrioritizedSpaceIn;
+    }
+
+    public void setDowngradedPrioritizedSpaceIn(List<Long> downgradedPrioritizedSpaceIn) {
+        this.downgradedPrioritizedSpaceIn = downgradedPrioritizedSpaceIn;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceLt(Long downgradedPrioritizedSpaceLt) {
+
+        this.downgradedPrioritizedSpaceLt = downgradedPrioritizedSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceLt
+     *
+     * @return downgradedPrioritizedSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceLt() {
+        return downgradedPrioritizedSpaceLt;
+    }
+
+    public void setDowngradedPrioritizedSpaceLt(Long downgradedPrioritizedSpaceLt) {
+        this.downgradedPrioritizedSpaceLt = downgradedPrioritizedSpaceLt;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceLte(Long downgradedPrioritizedSpaceLte) {
+
+        this.downgradedPrioritizedSpaceLte = downgradedPrioritizedSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceLte
+     *
+     * @return downgradedPrioritizedSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceLte() {
+        return downgradedPrioritizedSpaceLte;
+    }
+
+    public void setDowngradedPrioritizedSpaceLte(Long downgradedPrioritizedSpaceLte) {
+        this.downgradedPrioritizedSpaceLte = downgradedPrioritizedSpaceLte;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceNot(Long downgradedPrioritizedSpaceNot) {
+
+        this.downgradedPrioritizedSpaceNot = downgradedPrioritizedSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceNot
+     *
+     * @return downgradedPrioritizedSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceNot() {
+        return downgradedPrioritizedSpaceNot;
+    }
+
+    public void setDowngradedPrioritizedSpaceNot(Long downgradedPrioritizedSpaceNot) {
+        this.downgradedPrioritizedSpaceNot = downgradedPrioritizedSpaceNot;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceNotIn(
+            List<Long> downgradedPrioritizedSpaceNotIn) {
+
+        this.downgradedPrioritizedSpaceNotIn = downgradedPrioritizedSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDowngradedPrioritizedSpaceNotInItem(
+            Long downgradedPrioritizedSpaceNotInItem) {
+        if (this.downgradedPrioritizedSpaceNotIn == null) {
+            this.downgradedPrioritizedSpaceNotIn = new ArrayList<Long>();
+        }
+        this.downgradedPrioritizedSpaceNotIn.add(downgradedPrioritizedSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceNotIn
+     *
+     * @return downgradedPrioritizedSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDowngradedPrioritizedSpaceNotIn() {
+        return downgradedPrioritizedSpaceNotIn;
+    }
+
+    public void setDowngradedPrioritizedSpaceNotIn(List<Long> downgradedPrioritizedSpaceNotIn) {
+        this.downgradedPrioritizedSpaceNotIn = downgradedPrioritizedSpaceNotIn;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput downgradedPrioritizedSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+    }
+
+    public ClusterWhereInput ecpLicense(EcpLicenseWhereInput ecpLicense) {
+
+        this.ecpLicense = ecpLicense;
+        return this;
+    }
+
+    /**
+     * Get ecpLicense
+     *
+     * @return ecpLicense
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EcpLicenseWhereInput getEcpLicense() {
+        return ecpLicense;
+    }
+
+    public void setEcpLicense(EcpLicenseWhereInput ecpLicense) {
+        this.ecpLicense = ecpLicense;
+    }
+
+    public ClusterWhereInput ecpLicense_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ECP_LICENSE);
+        return this;
+    }
+
+    public ClusterWhereInput ecpLicense_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ECP_LICENSE);
+        return this;
+    }
+
+    public void setEcpLicense_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ECP_LICENSE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ECP_LICENSE);
+        }
+    }
+
+    public boolean getEcpLicense_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ECP_LICENSE);
+    }
+
+    public ClusterWhereInput enableTiering(Boolean enableTiering) {
+
+        this.enableTiering = enableTiering;
+        return this;
+    }
+
+    /**
+     * Get enableTiering
+     *
+     * @return enableTiering
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getEnableTiering() {
+        return enableTiering;
+    }
+
+    public void setEnableTiering(Boolean enableTiering) {
+        this.enableTiering = enableTiering;
+    }
+
+    public ClusterWhereInput enableTiering_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENABLE_TIERING);
+        return this;
+    }
+
+    public ClusterWhereInput enableTiering_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENABLE_TIERING);
+        return this;
+    }
+
+    public void setEnableTiering_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENABLE_TIERING);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENABLE_TIERING);
+        }
+    }
+
+    public boolean getEnableTiering_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENABLE_TIERING);
+    }
+
+    public ClusterWhereInput enableTieringNot(Boolean enableTieringNot) {
+
+        this.enableTieringNot = enableTieringNot;
+        return this;
+    }
+
+    /**
+     * Get enableTieringNot
+     *
+     * @return enableTieringNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getEnableTieringNot() {
+        return enableTieringNot;
+    }
+
+    public void setEnableTieringNot(Boolean enableTieringNot) {
+        this.enableTieringNot = enableTieringNot;
+    }
+
+    public ClusterWhereInput enableTieringNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENABLE_TIERING_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput enableTieringNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENABLE_TIERING_NOT);
+        return this;
+    }
+
+    public void setEnableTieringNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENABLE_TIERING_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENABLE_TIERING_NOT);
+        }
+    }
+
+    public boolean getEnableTieringNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENABLE_TIERING_NOT);
     }
 
     public ClusterWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -11262,6 +14587,366 @@ public class ClusterWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_LOCAL_ID_STARTS_WITH);
     }
 
+    public ClusterWhereInput logicalUsedDataSpace(Long logicalUsedDataSpace) {
+
+        this.logicalUsedDataSpace = logicalUsedDataSpace;
+        return this;
+    }
+
+    /**
+     * Get logicalUsedDataSpace
+     *
+     * @return logicalUsedDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getLogicalUsedDataSpace() {
+        return logicalUsedDataSpace;
+    }
+
+    public void setLogicalUsedDataSpace(Long logicalUsedDataSpace) {
+        this.logicalUsedDataSpace = logicalUsedDataSpace;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+        return this;
+    }
+
+    public void setLogicalUsedDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+        }
+    }
+
+    public boolean getLogicalUsedDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceGt(Long logicalUsedDataSpaceGt) {
+
+        this.logicalUsedDataSpaceGt = logicalUsedDataSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get logicalUsedDataSpaceGt
+     *
+     * @return logicalUsedDataSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getLogicalUsedDataSpaceGt() {
+        return logicalUsedDataSpaceGt;
+    }
+
+    public void setLogicalUsedDataSpaceGt(Long logicalUsedDataSpaceGt) {
+        this.logicalUsedDataSpaceGt = logicalUsedDataSpaceGt;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public void setLogicalUsedDataSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GT);
+        }
+    }
+
+    public boolean getLogicalUsedDataSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GT);
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceGte(Long logicalUsedDataSpaceGte) {
+
+        this.logicalUsedDataSpaceGte = logicalUsedDataSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get logicalUsedDataSpaceGte
+     *
+     * @return logicalUsedDataSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getLogicalUsedDataSpaceGte() {
+        return logicalUsedDataSpaceGte;
+    }
+
+    public void setLogicalUsedDataSpaceGte(Long logicalUsedDataSpaceGte) {
+        this.logicalUsedDataSpaceGte = logicalUsedDataSpaceGte;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public void setLogicalUsedDataSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GTE);
+        }
+    }
+
+    public boolean getLogicalUsedDataSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_GTE);
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceIn(List<Long> logicalUsedDataSpaceIn) {
+
+        this.logicalUsedDataSpaceIn = logicalUsedDataSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addLogicalUsedDataSpaceInItem(Long logicalUsedDataSpaceInItem) {
+        if (this.logicalUsedDataSpaceIn == null) {
+            this.logicalUsedDataSpaceIn = new ArrayList<Long>();
+        }
+        this.logicalUsedDataSpaceIn.add(logicalUsedDataSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get logicalUsedDataSpaceIn
+     *
+     * @return logicalUsedDataSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getLogicalUsedDataSpaceIn() {
+        return logicalUsedDataSpaceIn;
+    }
+
+    public void setLogicalUsedDataSpaceIn(List<Long> logicalUsedDataSpaceIn) {
+        this.logicalUsedDataSpaceIn = logicalUsedDataSpaceIn;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public void setLogicalUsedDataSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_IN);
+        }
+    }
+
+    public boolean getLogicalUsedDataSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_IN);
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceLt(Long logicalUsedDataSpaceLt) {
+
+        this.logicalUsedDataSpaceLt = logicalUsedDataSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get logicalUsedDataSpaceLt
+     *
+     * @return logicalUsedDataSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getLogicalUsedDataSpaceLt() {
+        return logicalUsedDataSpaceLt;
+    }
+
+    public void setLogicalUsedDataSpaceLt(Long logicalUsedDataSpaceLt) {
+        this.logicalUsedDataSpaceLt = logicalUsedDataSpaceLt;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public void setLogicalUsedDataSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LT);
+        }
+    }
+
+    public boolean getLogicalUsedDataSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LT);
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceLte(Long logicalUsedDataSpaceLte) {
+
+        this.logicalUsedDataSpaceLte = logicalUsedDataSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get logicalUsedDataSpaceLte
+     *
+     * @return logicalUsedDataSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getLogicalUsedDataSpaceLte() {
+        return logicalUsedDataSpaceLte;
+    }
+
+    public void setLogicalUsedDataSpaceLte(Long logicalUsedDataSpaceLte) {
+        this.logicalUsedDataSpaceLte = logicalUsedDataSpaceLte;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public void setLogicalUsedDataSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LTE);
+        }
+    }
+
+    public boolean getLogicalUsedDataSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_LTE);
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceNot(Long logicalUsedDataSpaceNot) {
+
+        this.logicalUsedDataSpaceNot = logicalUsedDataSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get logicalUsedDataSpaceNot
+     *
+     * @return logicalUsedDataSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getLogicalUsedDataSpaceNot() {
+        return logicalUsedDataSpaceNot;
+    }
+
+    public void setLogicalUsedDataSpaceNot(Long logicalUsedDataSpaceNot) {
+        this.logicalUsedDataSpaceNot = logicalUsedDataSpaceNot;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public void setLogicalUsedDataSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT);
+        }
+    }
+
+    public boolean getLogicalUsedDataSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT);
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceNotIn(List<Long> logicalUsedDataSpaceNotIn) {
+
+        this.logicalUsedDataSpaceNotIn = logicalUsedDataSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addLogicalUsedDataSpaceNotInItem(Long logicalUsedDataSpaceNotInItem) {
+        if (this.logicalUsedDataSpaceNotIn == null) {
+            this.logicalUsedDataSpaceNotIn = new ArrayList<Long>();
+        }
+        this.logicalUsedDataSpaceNotIn.add(logicalUsedDataSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get logicalUsedDataSpaceNotIn
+     *
+     * @return logicalUsedDataSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getLogicalUsedDataSpaceNotIn() {
+        return logicalUsedDataSpaceNotIn;
+    }
+
+    public void setLogicalUsedDataSpaceNotIn(List<Long> logicalUsedDataSpaceNotIn) {
+        this.logicalUsedDataSpaceNotIn = logicalUsedDataSpaceNotIn;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput logicalUsedDataSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setLogicalUsedDataSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getLogicalUsedDataSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE_NOT_IN);
+    }
+
     public ClusterWhereInput maintenanceEndDate(String maintenanceEndDate) {
 
         this.maintenanceEndDate = maintenanceEndDate;
@@ -16267,6 +19952,92 @@ public class ClusterWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_NAME_STARTS_WITH);
     }
 
+    public ClusterWhereInput noPerformanceLayer(Boolean noPerformanceLayer) {
+
+        this.noPerformanceLayer = noPerformanceLayer;
+        return this;
+    }
+
+    /**
+     * Get noPerformanceLayer
+     *
+     * @return noPerformanceLayer
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getNoPerformanceLayer() {
+        return noPerformanceLayer;
+    }
+
+    public void setNoPerformanceLayer(Boolean noPerformanceLayer) {
+        this.noPerformanceLayer = noPerformanceLayer;
+    }
+
+    public ClusterWhereInput noPerformanceLayer_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+        return this;
+    }
+
+    public ClusterWhereInput noPerformanceLayer_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+        return this;
+    }
+
+    public void setNoPerformanceLayer_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+        }
+    }
+
+    public boolean getNoPerformanceLayer_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+    }
+
+    public ClusterWhereInput noPerformanceLayerNot(Boolean noPerformanceLayerNot) {
+
+        this.noPerformanceLayerNot = noPerformanceLayerNot;
+        return this;
+    }
+
+    /**
+     * Get noPerformanceLayerNot
+     *
+     * @return noPerformanceLayerNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getNoPerformanceLayerNot() {
+        return noPerformanceLayerNot;
+    }
+
+    public void setNoPerformanceLayerNot(Boolean noPerformanceLayerNot) {
+        this.noPerformanceLayerNot = noPerformanceLayerNot;
+    }
+
+    public ClusterWhereInput noPerformanceLayerNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NO_PERFORMANCE_LAYER_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput noPerformanceLayerNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NO_PERFORMANCE_LAYER_NOT);
+        return this;
+    }
+
+    public void setNoPerformanceLayerNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NO_PERFORMANCE_LAYER_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NO_PERFORMANCE_LAYER_NOT);
+        }
+    }
+
+    public boolean getNoPerformanceLayerNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NO_PERFORMANCE_LAYER_NOT);
+    }
+
     public ClusterWhereInput ntpMode(NtpMode ntpMode) {
 
         this.ntpMode = ntpMode;
@@ -16713,6 +20484,2529 @@ public class ClusterWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_NVMF_ENABLED_NOT);
     }
 
+    public ClusterWhereInput overallEfficiency(Double overallEfficiency) {
+
+        this.overallEfficiency = overallEfficiency;
+        return this;
+    }
+
+    /**
+     * Get overallEfficiency
+     *
+     * @return overallEfficiency
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverallEfficiency() {
+        return overallEfficiency;
+    }
+
+    public void setOverallEfficiency(Double overallEfficiency) {
+        this.overallEfficiency = overallEfficiency;
+    }
+
+    public ClusterWhereInput overallEfficiency_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+        return this;
+    }
+
+    public ClusterWhereInput overallEfficiency_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+        return this;
+    }
+
+    public void setOverallEfficiency_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+        }
+    }
+
+    public boolean getOverallEfficiency_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+    }
+
+    public ClusterWhereInput overallEfficiencyGt(Double overallEfficiencyGt) {
+
+        this.overallEfficiencyGt = overallEfficiencyGt;
+        return this;
+    }
+
+    /**
+     * Get overallEfficiencyGt
+     *
+     * @return overallEfficiencyGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverallEfficiencyGt() {
+        return overallEfficiencyGt;
+    }
+
+    public void setOverallEfficiencyGt(Double overallEfficiencyGt) {
+        this.overallEfficiencyGt = overallEfficiencyGt;
+    }
+
+    public ClusterWhereInput overallEfficiencyGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_GT);
+        return this;
+    }
+
+    public ClusterWhereInput overallEfficiencyGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_GT);
+        return this;
+    }
+
+    public void setOverallEfficiencyGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_GT);
+        }
+    }
+
+    public boolean getOverallEfficiencyGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY_GT);
+    }
+
+    public ClusterWhereInput overallEfficiencyGte(Double overallEfficiencyGte) {
+
+        this.overallEfficiencyGte = overallEfficiencyGte;
+        return this;
+    }
+
+    /**
+     * Get overallEfficiencyGte
+     *
+     * @return overallEfficiencyGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverallEfficiencyGte() {
+        return overallEfficiencyGte;
+    }
+
+    public void setOverallEfficiencyGte(Double overallEfficiencyGte) {
+        this.overallEfficiencyGte = overallEfficiencyGte;
+    }
+
+    public ClusterWhereInput overallEfficiencyGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput overallEfficiencyGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_GTE);
+        return this;
+    }
+
+    public void setOverallEfficiencyGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_GTE);
+        }
+    }
+
+    public boolean getOverallEfficiencyGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY_GTE);
+    }
+
+    public ClusterWhereInput overallEfficiencyIn(List<Double> overallEfficiencyIn) {
+
+        this.overallEfficiencyIn = overallEfficiencyIn;
+        return this;
+    }
+
+    public ClusterWhereInput addOverallEfficiencyInItem(Double overallEfficiencyInItem) {
+        if (this.overallEfficiencyIn == null) {
+            this.overallEfficiencyIn = new ArrayList<Double>();
+        }
+        this.overallEfficiencyIn.add(overallEfficiencyInItem);
+        return this;
+    }
+
+    /**
+     * Get overallEfficiencyIn
+     *
+     * @return overallEfficiencyIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getOverallEfficiencyIn() {
+        return overallEfficiencyIn;
+    }
+
+    public void setOverallEfficiencyIn(List<Double> overallEfficiencyIn) {
+        this.overallEfficiencyIn = overallEfficiencyIn;
+    }
+
+    public ClusterWhereInput overallEfficiencyIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_IN);
+        return this;
+    }
+
+    public ClusterWhereInput overallEfficiencyIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_IN);
+        return this;
+    }
+
+    public void setOverallEfficiencyIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_IN);
+        }
+    }
+
+    public boolean getOverallEfficiencyIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY_IN);
+    }
+
+    public ClusterWhereInput overallEfficiencyLt(Double overallEfficiencyLt) {
+
+        this.overallEfficiencyLt = overallEfficiencyLt;
+        return this;
+    }
+
+    /**
+     * Get overallEfficiencyLt
+     *
+     * @return overallEfficiencyLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverallEfficiencyLt() {
+        return overallEfficiencyLt;
+    }
+
+    public void setOverallEfficiencyLt(Double overallEfficiencyLt) {
+        this.overallEfficiencyLt = overallEfficiencyLt;
+    }
+
+    public ClusterWhereInput overallEfficiencyLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_LT);
+        return this;
+    }
+
+    public ClusterWhereInput overallEfficiencyLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_LT);
+        return this;
+    }
+
+    public void setOverallEfficiencyLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_LT);
+        }
+    }
+
+    public boolean getOverallEfficiencyLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY_LT);
+    }
+
+    public ClusterWhereInput overallEfficiencyLte(Double overallEfficiencyLte) {
+
+        this.overallEfficiencyLte = overallEfficiencyLte;
+        return this;
+    }
+
+    /**
+     * Get overallEfficiencyLte
+     *
+     * @return overallEfficiencyLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverallEfficiencyLte() {
+        return overallEfficiencyLte;
+    }
+
+    public void setOverallEfficiencyLte(Double overallEfficiencyLte) {
+        this.overallEfficiencyLte = overallEfficiencyLte;
+    }
+
+    public ClusterWhereInput overallEfficiencyLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput overallEfficiencyLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_LTE);
+        return this;
+    }
+
+    public void setOverallEfficiencyLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_LTE);
+        }
+    }
+
+    public boolean getOverallEfficiencyLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY_LTE);
+    }
+
+    public ClusterWhereInput overallEfficiencyNot(Double overallEfficiencyNot) {
+
+        this.overallEfficiencyNot = overallEfficiencyNot;
+        return this;
+    }
+
+    /**
+     * Get overallEfficiencyNot
+     *
+     * @return overallEfficiencyNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverallEfficiencyNot() {
+        return overallEfficiencyNot;
+    }
+
+    public void setOverallEfficiencyNot(Double overallEfficiencyNot) {
+        this.overallEfficiencyNot = overallEfficiencyNot;
+    }
+
+    public ClusterWhereInput overallEfficiencyNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput overallEfficiencyNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT);
+        return this;
+    }
+
+    public void setOverallEfficiencyNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT);
+        }
+    }
+
+    public boolean getOverallEfficiencyNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT);
+    }
+
+    public ClusterWhereInput overallEfficiencyNotIn(List<Double> overallEfficiencyNotIn) {
+
+        this.overallEfficiencyNotIn = overallEfficiencyNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addOverallEfficiencyNotInItem(Double overallEfficiencyNotInItem) {
+        if (this.overallEfficiencyNotIn == null) {
+            this.overallEfficiencyNotIn = new ArrayList<Double>();
+        }
+        this.overallEfficiencyNotIn.add(overallEfficiencyNotInItem);
+        return this;
+    }
+
+    /**
+     * Get overallEfficiencyNotIn
+     *
+     * @return overallEfficiencyNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getOverallEfficiencyNotIn() {
+        return overallEfficiencyNotIn;
+    }
+
+    public void setOverallEfficiencyNotIn(List<Double> overallEfficiencyNotIn) {
+        this.overallEfficiencyNotIn = overallEfficiencyNotIn;
+    }
+
+    public ClusterWhereInput overallEfficiencyNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput overallEfficiencyNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN);
+        return this;
+    }
+
+    public void setOverallEfficiencyNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN);
+        }
+    }
+
+    public boolean getOverallEfficiencyNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN);
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpace(Long perfAllocatedDataSpace) {
+
+        this.perfAllocatedDataSpace = perfAllocatedDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpace
+     *
+     * @return perfAllocatedDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpace() {
+        return perfAllocatedDataSpace;
+    }
+
+    public void setPerfAllocatedDataSpace(Long perfAllocatedDataSpace) {
+        this.perfAllocatedDataSpace = perfAllocatedDataSpace;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceGt(Long perfAllocatedDataSpaceGt) {
+
+        this.perfAllocatedDataSpaceGt = perfAllocatedDataSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceGt
+     *
+     * @return perfAllocatedDataSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceGt() {
+        return perfAllocatedDataSpaceGt;
+    }
+
+    public void setPerfAllocatedDataSpaceGt(Long perfAllocatedDataSpaceGt) {
+        this.perfAllocatedDataSpaceGt = perfAllocatedDataSpaceGt;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GT);
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceGte(Long perfAllocatedDataSpaceGte) {
+
+        this.perfAllocatedDataSpaceGte = perfAllocatedDataSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceGte
+     *
+     * @return perfAllocatedDataSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceGte() {
+        return perfAllocatedDataSpaceGte;
+    }
+
+    public void setPerfAllocatedDataSpaceGte(Long perfAllocatedDataSpaceGte) {
+        this.perfAllocatedDataSpaceGte = perfAllocatedDataSpaceGte;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_GTE);
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceIn(List<Long> perfAllocatedDataSpaceIn) {
+
+        this.perfAllocatedDataSpaceIn = perfAllocatedDataSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfAllocatedDataSpaceInItem(Long perfAllocatedDataSpaceInItem) {
+        if (this.perfAllocatedDataSpaceIn == null) {
+            this.perfAllocatedDataSpaceIn = new ArrayList<Long>();
+        }
+        this.perfAllocatedDataSpaceIn.add(perfAllocatedDataSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceIn
+     *
+     * @return perfAllocatedDataSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfAllocatedDataSpaceIn() {
+        return perfAllocatedDataSpaceIn;
+    }
+
+    public void setPerfAllocatedDataSpaceIn(List<Long> perfAllocatedDataSpaceIn) {
+        this.perfAllocatedDataSpaceIn = perfAllocatedDataSpaceIn;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_IN);
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceLt(Long perfAllocatedDataSpaceLt) {
+
+        this.perfAllocatedDataSpaceLt = perfAllocatedDataSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceLt
+     *
+     * @return perfAllocatedDataSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceLt() {
+        return perfAllocatedDataSpaceLt;
+    }
+
+    public void setPerfAllocatedDataSpaceLt(Long perfAllocatedDataSpaceLt) {
+        this.perfAllocatedDataSpaceLt = perfAllocatedDataSpaceLt;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LT);
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceLte(Long perfAllocatedDataSpaceLte) {
+
+        this.perfAllocatedDataSpaceLte = perfAllocatedDataSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceLte
+     *
+     * @return perfAllocatedDataSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceLte() {
+        return perfAllocatedDataSpaceLte;
+    }
+
+    public void setPerfAllocatedDataSpaceLte(Long perfAllocatedDataSpaceLte) {
+        this.perfAllocatedDataSpaceLte = perfAllocatedDataSpaceLte;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_LTE);
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceNot(Long perfAllocatedDataSpaceNot) {
+
+        this.perfAllocatedDataSpaceNot = perfAllocatedDataSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceNot
+     *
+     * @return perfAllocatedDataSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpaceNot() {
+        return perfAllocatedDataSpaceNot;
+    }
+
+    public void setPerfAllocatedDataSpaceNot(Long perfAllocatedDataSpaceNot) {
+        this.perfAllocatedDataSpaceNot = perfAllocatedDataSpaceNot;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT);
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceNotIn(List<Long> perfAllocatedDataSpaceNotIn) {
+
+        this.perfAllocatedDataSpaceNotIn = perfAllocatedDataSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfAllocatedDataSpaceNotInItem(
+            Long perfAllocatedDataSpaceNotInItem) {
+        if (this.perfAllocatedDataSpaceNotIn == null) {
+            this.perfAllocatedDataSpaceNotIn = new ArrayList<Long>();
+        }
+        this.perfAllocatedDataSpaceNotIn.add(perfAllocatedDataSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpaceNotIn
+     *
+     * @return perfAllocatedDataSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfAllocatedDataSpaceNotIn() {
+        return perfAllocatedDataSpaceNotIn;
+    }
+
+    public void setPerfAllocatedDataSpaceNotIn(List<Long> perfAllocatedDataSpaceNotIn) {
+        this.perfAllocatedDataSpaceNotIn = perfAllocatedDataSpaceNotIn;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfAllocatedDataSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE_NOT_IN);
+    }
+
+    public ClusterWhereInput perfFailureDataSpace(Long perfFailureDataSpace) {
+
+        this.perfFailureDataSpace = perfFailureDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpace
+     *
+     * @return perfFailureDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpace() {
+        return perfFailureDataSpace;
+    }
+
+    public void setPerfFailureDataSpace(Long perfFailureDataSpace) {
+        this.perfFailureDataSpace = perfFailureDataSpace;
+    }
+
+    public ClusterWhereInput perfFailureDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput perfFailureDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfFailureDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfFailureDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceGt(Long perfFailureDataSpaceGt) {
+
+        this.perfFailureDataSpaceGt = perfFailureDataSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceGt
+     *
+     * @return perfFailureDataSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceGt() {
+        return perfFailureDataSpaceGt;
+    }
+
+    public void setPerfFailureDataSpaceGt(Long perfFailureDataSpaceGt) {
+        this.perfFailureDataSpaceGt = perfFailureDataSpaceGt;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GT);
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceGte(Long perfFailureDataSpaceGte) {
+
+        this.perfFailureDataSpaceGte = perfFailureDataSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceGte
+     *
+     * @return perfFailureDataSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceGte() {
+        return perfFailureDataSpaceGte;
+    }
+
+    public void setPerfFailureDataSpaceGte(Long perfFailureDataSpaceGte) {
+        this.perfFailureDataSpaceGte = perfFailureDataSpaceGte;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_GTE);
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceIn(List<Long> perfFailureDataSpaceIn) {
+
+        this.perfFailureDataSpaceIn = perfFailureDataSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfFailureDataSpaceInItem(Long perfFailureDataSpaceInItem) {
+        if (this.perfFailureDataSpaceIn == null) {
+            this.perfFailureDataSpaceIn = new ArrayList<Long>();
+        }
+        this.perfFailureDataSpaceIn.add(perfFailureDataSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceIn
+     *
+     * @return perfFailureDataSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfFailureDataSpaceIn() {
+        return perfFailureDataSpaceIn;
+    }
+
+    public void setPerfFailureDataSpaceIn(List<Long> perfFailureDataSpaceIn) {
+        this.perfFailureDataSpaceIn = perfFailureDataSpaceIn;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_IN);
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceLt(Long perfFailureDataSpaceLt) {
+
+        this.perfFailureDataSpaceLt = perfFailureDataSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceLt
+     *
+     * @return perfFailureDataSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceLt() {
+        return perfFailureDataSpaceLt;
+    }
+
+    public void setPerfFailureDataSpaceLt(Long perfFailureDataSpaceLt) {
+        this.perfFailureDataSpaceLt = perfFailureDataSpaceLt;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LT);
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceLte(Long perfFailureDataSpaceLte) {
+
+        this.perfFailureDataSpaceLte = perfFailureDataSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceLte
+     *
+     * @return perfFailureDataSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceLte() {
+        return perfFailureDataSpaceLte;
+    }
+
+    public void setPerfFailureDataSpaceLte(Long perfFailureDataSpaceLte) {
+        this.perfFailureDataSpaceLte = perfFailureDataSpaceLte;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_LTE);
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceNot(Long perfFailureDataSpaceNot) {
+
+        this.perfFailureDataSpaceNot = perfFailureDataSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceNot
+     *
+     * @return perfFailureDataSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpaceNot() {
+        return perfFailureDataSpaceNot;
+    }
+
+    public void setPerfFailureDataSpaceNot(Long perfFailureDataSpaceNot) {
+        this.perfFailureDataSpaceNot = perfFailureDataSpaceNot;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT);
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceNotIn(List<Long> perfFailureDataSpaceNotIn) {
+
+        this.perfFailureDataSpaceNotIn = perfFailureDataSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfFailureDataSpaceNotInItem(Long perfFailureDataSpaceNotInItem) {
+        if (this.perfFailureDataSpaceNotIn == null) {
+            this.perfFailureDataSpaceNotIn = new ArrayList<Long>();
+        }
+        this.perfFailureDataSpaceNotIn.add(perfFailureDataSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpaceNotIn
+     *
+     * @return perfFailureDataSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfFailureDataSpaceNotIn() {
+        return perfFailureDataSpaceNotIn;
+    }
+
+    public void setPerfFailureDataSpaceNotIn(List<Long> perfFailureDataSpaceNotIn) {
+        this.perfFailureDataSpaceNotIn = perfFailureDataSpaceNotIn;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfFailureDataSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPerfFailureDataSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPerfFailureDataSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE_NOT_IN);
+    }
+
+    public ClusterWhereInput perfTotalDataCapacity(Long perfTotalDataCapacity) {
+
+        this.perfTotalDataCapacity = perfTotalDataCapacity;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacity
+     *
+     * @return perfTotalDataCapacity
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacity() {
+        return perfTotalDataCapacity;
+    }
+
+    public void setPerfTotalDataCapacity(Long perfTotalDataCapacity) {
+        this.perfTotalDataCapacity = perfTotalDataCapacity;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacity_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        return this;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacity_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacity_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacity_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityGt(Long perfTotalDataCapacityGt) {
+
+        this.perfTotalDataCapacityGt = perfTotalDataCapacityGt;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityGt
+     *
+     * @return perfTotalDataCapacityGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityGt() {
+        return perfTotalDataCapacityGt;
+    }
+
+    public void setPerfTotalDataCapacityGt(Long perfTotalDataCapacityGt) {
+        this.perfTotalDataCapacityGt = perfTotalDataCapacityGt;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+        return this;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GT);
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityGte(Long perfTotalDataCapacityGte) {
+
+        this.perfTotalDataCapacityGte = perfTotalDataCapacityGte;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityGte
+     *
+     * @return perfTotalDataCapacityGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityGte() {
+        return perfTotalDataCapacityGte;
+    }
+
+    public void setPerfTotalDataCapacityGte(Long perfTotalDataCapacityGte) {
+        this.perfTotalDataCapacityGte = perfTotalDataCapacityGte;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_GTE);
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityIn(List<Long> perfTotalDataCapacityIn) {
+
+        this.perfTotalDataCapacityIn = perfTotalDataCapacityIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfTotalDataCapacityInItem(Long perfTotalDataCapacityInItem) {
+        if (this.perfTotalDataCapacityIn == null) {
+            this.perfTotalDataCapacityIn = new ArrayList<Long>();
+        }
+        this.perfTotalDataCapacityIn.add(perfTotalDataCapacityInItem);
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityIn
+     *
+     * @return perfTotalDataCapacityIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfTotalDataCapacityIn() {
+        return perfTotalDataCapacityIn;
+    }
+
+    public void setPerfTotalDataCapacityIn(List<Long> perfTotalDataCapacityIn) {
+        this.perfTotalDataCapacityIn = perfTotalDataCapacityIn;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_IN);
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityLt(Long perfTotalDataCapacityLt) {
+
+        this.perfTotalDataCapacityLt = perfTotalDataCapacityLt;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityLt
+     *
+     * @return perfTotalDataCapacityLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityLt() {
+        return perfTotalDataCapacityLt;
+    }
+
+    public void setPerfTotalDataCapacityLt(Long perfTotalDataCapacityLt) {
+        this.perfTotalDataCapacityLt = perfTotalDataCapacityLt;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+        return this;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LT);
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityLte(Long perfTotalDataCapacityLte) {
+
+        this.perfTotalDataCapacityLte = perfTotalDataCapacityLte;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityLte
+     *
+     * @return perfTotalDataCapacityLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityLte() {
+        return perfTotalDataCapacityLte;
+    }
+
+    public void setPerfTotalDataCapacityLte(Long perfTotalDataCapacityLte) {
+        this.perfTotalDataCapacityLte = perfTotalDataCapacityLte;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_LTE);
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityNot(Long perfTotalDataCapacityNot) {
+
+        this.perfTotalDataCapacityNot = perfTotalDataCapacityNot;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityNot
+     *
+     * @return perfTotalDataCapacityNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacityNot() {
+        return perfTotalDataCapacityNot;
+    }
+
+    public void setPerfTotalDataCapacityNot(Long perfTotalDataCapacityNot) {
+        this.perfTotalDataCapacityNot = perfTotalDataCapacityNot;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT);
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityNotIn(List<Long> perfTotalDataCapacityNotIn) {
+
+        this.perfTotalDataCapacityNotIn = perfTotalDataCapacityNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfTotalDataCapacityNotInItem(
+            Long perfTotalDataCapacityNotInItem) {
+        if (this.perfTotalDataCapacityNotIn == null) {
+            this.perfTotalDataCapacityNotIn = new ArrayList<Long>();
+        }
+        this.perfTotalDataCapacityNotIn.add(perfTotalDataCapacityNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacityNotIn
+     *
+     * @return perfTotalDataCapacityNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfTotalDataCapacityNotIn() {
+        return perfTotalDataCapacityNotIn;
+    }
+
+    public void setPerfTotalDataCapacityNotIn(List<Long> perfTotalDataCapacityNotIn) {
+        this.perfTotalDataCapacityNotIn = perfTotalDataCapacityNotIn;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfTotalDataCapacityNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacityNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacityNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY_NOT_IN);
+    }
+
+    public ClusterWhereInput perfUsedDataSpace(Long perfUsedDataSpace) {
+
+        this.perfUsedDataSpace = perfUsedDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpace
+     *
+     * @return perfUsedDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpace() {
+        return perfUsedDataSpace;
+    }
+
+    public void setPerfUsedDataSpace(Long perfUsedDataSpace) {
+        this.perfUsedDataSpace = perfUsedDataSpace;
+    }
+
+    public ClusterWhereInput perfUsedDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput perfUsedDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfUsedDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfUsedDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceGt(Long perfUsedDataSpaceGt) {
+
+        this.perfUsedDataSpaceGt = perfUsedDataSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceGt
+     *
+     * @return perfUsedDataSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceGt() {
+        return perfUsedDataSpaceGt;
+    }
+
+    public void setPerfUsedDataSpaceGt(Long perfUsedDataSpaceGt) {
+        this.perfUsedDataSpaceGt = perfUsedDataSpaceGt;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GT);
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceGte(Long perfUsedDataSpaceGte) {
+
+        this.perfUsedDataSpaceGte = perfUsedDataSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceGte
+     *
+     * @return perfUsedDataSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceGte() {
+        return perfUsedDataSpaceGte;
+    }
+
+    public void setPerfUsedDataSpaceGte(Long perfUsedDataSpaceGte) {
+        this.perfUsedDataSpaceGte = perfUsedDataSpaceGte;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_GTE);
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceIn(List<Long> perfUsedDataSpaceIn) {
+
+        this.perfUsedDataSpaceIn = perfUsedDataSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfUsedDataSpaceInItem(Long perfUsedDataSpaceInItem) {
+        if (this.perfUsedDataSpaceIn == null) {
+            this.perfUsedDataSpaceIn = new ArrayList<Long>();
+        }
+        this.perfUsedDataSpaceIn.add(perfUsedDataSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceIn
+     *
+     * @return perfUsedDataSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfUsedDataSpaceIn() {
+        return perfUsedDataSpaceIn;
+    }
+
+    public void setPerfUsedDataSpaceIn(List<Long> perfUsedDataSpaceIn) {
+        this.perfUsedDataSpaceIn = perfUsedDataSpaceIn;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_IN);
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceLt(Long perfUsedDataSpaceLt) {
+
+        this.perfUsedDataSpaceLt = perfUsedDataSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceLt
+     *
+     * @return perfUsedDataSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceLt() {
+        return perfUsedDataSpaceLt;
+    }
+
+    public void setPerfUsedDataSpaceLt(Long perfUsedDataSpaceLt) {
+        this.perfUsedDataSpaceLt = perfUsedDataSpaceLt;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LT);
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceLte(Long perfUsedDataSpaceLte) {
+
+        this.perfUsedDataSpaceLte = perfUsedDataSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceLte
+     *
+     * @return perfUsedDataSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceLte() {
+        return perfUsedDataSpaceLte;
+    }
+
+    public void setPerfUsedDataSpaceLte(Long perfUsedDataSpaceLte) {
+        this.perfUsedDataSpaceLte = perfUsedDataSpaceLte;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_LTE);
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceNot(Long perfUsedDataSpaceNot) {
+
+        this.perfUsedDataSpaceNot = perfUsedDataSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceNot
+     *
+     * @return perfUsedDataSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpaceNot() {
+        return perfUsedDataSpaceNot;
+    }
+
+    public void setPerfUsedDataSpaceNot(Long perfUsedDataSpaceNot) {
+        this.perfUsedDataSpaceNot = perfUsedDataSpaceNot;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT);
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceNotIn(List<Long> perfUsedDataSpaceNotIn) {
+
+        this.perfUsedDataSpaceNotIn = perfUsedDataSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfUsedDataSpaceNotInItem(Long perfUsedDataSpaceNotInItem) {
+        if (this.perfUsedDataSpaceNotIn == null) {
+            this.perfUsedDataSpaceNotIn = new ArrayList<Long>();
+        }
+        this.perfUsedDataSpaceNotIn.add(perfUsedDataSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpaceNotIn
+     *
+     * @return perfUsedDataSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfUsedDataSpaceNotIn() {
+        return perfUsedDataSpaceNotIn;
+    }
+
+    public void setPerfUsedDataSpaceNotIn(List<Long> perfUsedDataSpaceNotIn) {
+        this.perfUsedDataSpaceNotIn = perfUsedDataSpaceNotIn;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfUsedDataSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPerfUsedDataSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPerfUsedDataSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE_NOT_IN);
+    }
+
+    public ClusterWhereInput perfValidDataSpace(Long perfValidDataSpace) {
+
+        this.perfValidDataSpace = perfValidDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpace
+     *
+     * @return perfValidDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpace() {
+        return perfValidDataSpace;
+    }
+
+    public void setPerfValidDataSpace(Long perfValidDataSpace) {
+        this.perfValidDataSpace = perfValidDataSpace;
+    }
+
+    public ClusterWhereInput perfValidDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput perfValidDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfValidDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfValidDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+    }
+
+    public ClusterWhereInput perfValidDataSpaceGt(Long perfValidDataSpaceGt) {
+
+        this.perfValidDataSpaceGt = perfValidDataSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceGt
+     *
+     * @return perfValidDataSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceGt() {
+        return perfValidDataSpaceGt;
+    }
+
+    public void setPerfValidDataSpaceGt(Long perfValidDataSpaceGt) {
+        this.perfValidDataSpaceGt = perfValidDataSpaceGt;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GT);
+    }
+
+    public ClusterWhereInput perfValidDataSpaceGte(Long perfValidDataSpaceGte) {
+
+        this.perfValidDataSpaceGte = perfValidDataSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceGte
+     *
+     * @return perfValidDataSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceGte() {
+        return perfValidDataSpaceGte;
+    }
+
+    public void setPerfValidDataSpaceGte(Long perfValidDataSpaceGte) {
+        this.perfValidDataSpaceGte = perfValidDataSpaceGte;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_GTE);
+    }
+
+    public ClusterWhereInput perfValidDataSpaceIn(List<Long> perfValidDataSpaceIn) {
+
+        this.perfValidDataSpaceIn = perfValidDataSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfValidDataSpaceInItem(Long perfValidDataSpaceInItem) {
+        if (this.perfValidDataSpaceIn == null) {
+            this.perfValidDataSpaceIn = new ArrayList<Long>();
+        }
+        this.perfValidDataSpaceIn.add(perfValidDataSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceIn
+     *
+     * @return perfValidDataSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfValidDataSpaceIn() {
+        return perfValidDataSpaceIn;
+    }
+
+    public void setPerfValidDataSpaceIn(List<Long> perfValidDataSpaceIn) {
+        this.perfValidDataSpaceIn = perfValidDataSpaceIn;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_IN);
+    }
+
+    public ClusterWhereInput perfValidDataSpaceLt(Long perfValidDataSpaceLt) {
+
+        this.perfValidDataSpaceLt = perfValidDataSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceLt
+     *
+     * @return perfValidDataSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceLt() {
+        return perfValidDataSpaceLt;
+    }
+
+    public void setPerfValidDataSpaceLt(Long perfValidDataSpaceLt) {
+        this.perfValidDataSpaceLt = perfValidDataSpaceLt;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LT);
+    }
+
+    public ClusterWhereInput perfValidDataSpaceLte(Long perfValidDataSpaceLte) {
+
+        this.perfValidDataSpaceLte = perfValidDataSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceLte
+     *
+     * @return perfValidDataSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceLte() {
+        return perfValidDataSpaceLte;
+    }
+
+    public void setPerfValidDataSpaceLte(Long perfValidDataSpaceLte) {
+        this.perfValidDataSpaceLte = perfValidDataSpaceLte;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_LTE);
+    }
+
+    public ClusterWhereInput perfValidDataSpaceNot(Long perfValidDataSpaceNot) {
+
+        this.perfValidDataSpaceNot = perfValidDataSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceNot
+     *
+     * @return perfValidDataSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpaceNot() {
+        return perfValidDataSpaceNot;
+    }
+
+    public void setPerfValidDataSpaceNot(Long perfValidDataSpaceNot) {
+        this.perfValidDataSpaceNot = perfValidDataSpaceNot;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT);
+    }
+
+    public ClusterWhereInput perfValidDataSpaceNotIn(List<Long> perfValidDataSpaceNotIn) {
+
+        this.perfValidDataSpaceNotIn = perfValidDataSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPerfValidDataSpaceNotInItem(Long perfValidDataSpaceNotInItem) {
+        if (this.perfValidDataSpaceNotIn == null) {
+            this.perfValidDataSpaceNotIn = new ArrayList<Long>();
+        }
+        this.perfValidDataSpaceNotIn.add(perfValidDataSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpaceNotIn
+     *
+     * @return perfValidDataSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPerfValidDataSpaceNotIn() {
+        return perfValidDataSpaceNotIn;
+    }
+
+    public void setPerfValidDataSpaceNotIn(List<Long> perfValidDataSpaceNotIn) {
+        this.perfValidDataSpaceNotIn = perfValidDataSpaceNotIn;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput perfValidDataSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPerfValidDataSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPerfValidDataSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE_NOT_IN);
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpace(Long plannedPrioritizedSpace) {
+
+        this.plannedPrioritizedSpace = plannedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpace
+     *
+     * @return plannedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpace() {
+        return plannedPrioritizedSpace;
+    }
+
+    public void setPlannedPrioritizedSpace(Long plannedPrioritizedSpace) {
+        this.plannedPrioritizedSpace = plannedPrioritizedSpace;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceGt(Long plannedPrioritizedSpaceGt) {
+
+        this.plannedPrioritizedSpaceGt = plannedPrioritizedSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceGt
+     *
+     * @return plannedPrioritizedSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceGt() {
+        return plannedPrioritizedSpaceGt;
+    }
+
+    public void setPlannedPrioritizedSpaceGt(Long plannedPrioritizedSpaceGt) {
+        this.plannedPrioritizedSpaceGt = plannedPrioritizedSpaceGt;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GT);
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceGte(Long plannedPrioritizedSpaceGte) {
+
+        this.plannedPrioritizedSpaceGte = plannedPrioritizedSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceGte
+     *
+     * @return plannedPrioritizedSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceGte() {
+        return plannedPrioritizedSpaceGte;
+    }
+
+    public void setPlannedPrioritizedSpaceGte(Long plannedPrioritizedSpaceGte) {
+        this.plannedPrioritizedSpaceGte = plannedPrioritizedSpaceGte;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_GTE);
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceIn(List<Long> plannedPrioritizedSpaceIn) {
+
+        this.plannedPrioritizedSpaceIn = plannedPrioritizedSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPlannedPrioritizedSpaceInItem(Long plannedPrioritizedSpaceInItem) {
+        if (this.plannedPrioritizedSpaceIn == null) {
+            this.plannedPrioritizedSpaceIn = new ArrayList<Long>();
+        }
+        this.plannedPrioritizedSpaceIn.add(plannedPrioritizedSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceIn
+     *
+     * @return plannedPrioritizedSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPlannedPrioritizedSpaceIn() {
+        return plannedPrioritizedSpaceIn;
+    }
+
+    public void setPlannedPrioritizedSpaceIn(List<Long> plannedPrioritizedSpaceIn) {
+        this.plannedPrioritizedSpaceIn = plannedPrioritizedSpaceIn;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_IN);
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceLt(Long plannedPrioritizedSpaceLt) {
+
+        this.plannedPrioritizedSpaceLt = plannedPrioritizedSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceLt
+     *
+     * @return plannedPrioritizedSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceLt() {
+        return plannedPrioritizedSpaceLt;
+    }
+
+    public void setPlannedPrioritizedSpaceLt(Long plannedPrioritizedSpaceLt) {
+        this.plannedPrioritizedSpaceLt = plannedPrioritizedSpaceLt;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LT);
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceLte(Long plannedPrioritizedSpaceLte) {
+
+        this.plannedPrioritizedSpaceLte = plannedPrioritizedSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceLte
+     *
+     * @return plannedPrioritizedSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceLte() {
+        return plannedPrioritizedSpaceLte;
+    }
+
+    public void setPlannedPrioritizedSpaceLte(Long plannedPrioritizedSpaceLte) {
+        this.plannedPrioritizedSpaceLte = plannedPrioritizedSpaceLte;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_LTE);
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceNot(Long plannedPrioritizedSpaceNot) {
+
+        this.plannedPrioritizedSpaceNot = plannedPrioritizedSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceNot
+     *
+     * @return plannedPrioritizedSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpaceNot() {
+        return plannedPrioritizedSpaceNot;
+    }
+
+    public void setPlannedPrioritizedSpaceNot(Long plannedPrioritizedSpaceNot) {
+        this.plannedPrioritizedSpaceNot = plannedPrioritizedSpaceNot;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT);
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceNotIn(List<Long> plannedPrioritizedSpaceNotIn) {
+
+        this.plannedPrioritizedSpaceNotIn = plannedPrioritizedSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPlannedPrioritizedSpaceNotInItem(
+            Long plannedPrioritizedSpaceNotInItem) {
+        if (this.plannedPrioritizedSpaceNotIn == null) {
+            this.plannedPrioritizedSpaceNotIn = new ArrayList<Long>();
+        }
+        this.plannedPrioritizedSpaceNotIn.add(plannedPrioritizedSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpaceNotIn
+     *
+     * @return plannedPrioritizedSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getPlannedPrioritizedSpaceNotIn() {
+        return plannedPrioritizedSpaceNotIn;
+    }
+
+    public void setPlannedPrioritizedSpaceNotIn(List<Long> plannedPrioritizedSpaceNotIn) {
+        this.plannedPrioritizedSpaceNotIn = plannedPrioritizedSpaceNotIn;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput plannedPrioritizedSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE_NOT_IN);
+    }
+
     public ClusterWhereInput pmemEnabled(Boolean pmemEnabled) {
 
         this.pmemEnabled = pmemEnabled;
@@ -16797,6 +23091,366 @@ public class ClusterWhereInput
 
     public boolean getPmemEnabledNot_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_PMEM_ENABLED_NOT);
+    }
+
+    public ClusterWhereInput prioSpacePercentage(Double prioSpacePercentage) {
+
+        this.prioSpacePercentage = prioSpacePercentage;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentage
+     *
+     * @return prioSpacePercentage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentage() {
+        return prioSpacePercentage;
+    }
+
+    public void setPrioSpacePercentage(Double prioSpacePercentage) {
+        this.prioSpacePercentage = prioSpacePercentage;
+    }
+
+    public ClusterWhereInput prioSpacePercentage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        return this;
+    }
+
+    public ClusterWhereInput prioSpacePercentage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        return this;
+    }
+
+    public void setPrioSpacePercentage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        }
+    }
+
+    public boolean getPrioSpacePercentage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+    }
+
+    public ClusterWhereInput prioSpacePercentageGt(Double prioSpacePercentageGt) {
+
+        this.prioSpacePercentageGt = prioSpacePercentageGt;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageGt
+     *
+     * @return prioSpacePercentageGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageGt() {
+        return prioSpacePercentageGt;
+    }
+
+    public void setPrioSpacePercentageGt(Double prioSpacePercentageGt) {
+        this.prioSpacePercentageGt = prioSpacePercentageGt;
+    }
+
+    public ClusterWhereInput prioSpacePercentageGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput prioSpacePercentageGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+        return this;
+    }
+
+    public void setPrioSpacePercentageGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+        }
+    }
+
+    public boolean getPrioSpacePercentageGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GT);
+    }
+
+    public ClusterWhereInput prioSpacePercentageGte(Double prioSpacePercentageGte) {
+
+        this.prioSpacePercentageGte = prioSpacePercentageGte;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageGte
+     *
+     * @return prioSpacePercentageGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageGte() {
+        return prioSpacePercentageGte;
+    }
+
+    public void setPrioSpacePercentageGte(Double prioSpacePercentageGte) {
+        this.prioSpacePercentageGte = prioSpacePercentageGte;
+    }
+
+    public ClusterWhereInput prioSpacePercentageGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput prioSpacePercentageGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+        return this;
+    }
+
+    public void setPrioSpacePercentageGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+        }
+    }
+
+    public boolean getPrioSpacePercentageGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_GTE);
+    }
+
+    public ClusterWhereInput prioSpacePercentageIn(List<Double> prioSpacePercentageIn) {
+
+        this.prioSpacePercentageIn = prioSpacePercentageIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPrioSpacePercentageInItem(Double prioSpacePercentageInItem) {
+        if (this.prioSpacePercentageIn == null) {
+            this.prioSpacePercentageIn = new ArrayList<Double>();
+        }
+        this.prioSpacePercentageIn.add(prioSpacePercentageInItem);
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageIn
+     *
+     * @return prioSpacePercentageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getPrioSpacePercentageIn() {
+        return prioSpacePercentageIn;
+    }
+
+    public void setPrioSpacePercentageIn(List<Double> prioSpacePercentageIn) {
+        this.prioSpacePercentageIn = prioSpacePercentageIn;
+    }
+
+    public ClusterWhereInput prioSpacePercentageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput prioSpacePercentageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+        return this;
+    }
+
+    public void setPrioSpacePercentageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+        }
+    }
+
+    public boolean getPrioSpacePercentageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_IN);
+    }
+
+    public ClusterWhereInput prioSpacePercentageLt(Double prioSpacePercentageLt) {
+
+        this.prioSpacePercentageLt = prioSpacePercentageLt;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageLt
+     *
+     * @return prioSpacePercentageLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageLt() {
+        return prioSpacePercentageLt;
+    }
+
+    public void setPrioSpacePercentageLt(Double prioSpacePercentageLt) {
+        this.prioSpacePercentageLt = prioSpacePercentageLt;
+    }
+
+    public ClusterWhereInput prioSpacePercentageLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput prioSpacePercentageLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+        return this;
+    }
+
+    public void setPrioSpacePercentageLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+        }
+    }
+
+    public boolean getPrioSpacePercentageLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LT);
+    }
+
+    public ClusterWhereInput prioSpacePercentageLte(Double prioSpacePercentageLte) {
+
+        this.prioSpacePercentageLte = prioSpacePercentageLte;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageLte
+     *
+     * @return prioSpacePercentageLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageLte() {
+        return prioSpacePercentageLte;
+    }
+
+    public void setPrioSpacePercentageLte(Double prioSpacePercentageLte) {
+        this.prioSpacePercentageLte = prioSpacePercentageLte;
+    }
+
+    public ClusterWhereInput prioSpacePercentageLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput prioSpacePercentageLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+        return this;
+    }
+
+    public void setPrioSpacePercentageLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+        }
+    }
+
+    public boolean getPrioSpacePercentageLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_LTE);
+    }
+
+    public ClusterWhereInput prioSpacePercentageNot(Double prioSpacePercentageNot) {
+
+        this.prioSpacePercentageNot = prioSpacePercentageNot;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageNot
+     *
+     * @return prioSpacePercentageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentageNot() {
+        return prioSpacePercentageNot;
+    }
+
+    public void setPrioSpacePercentageNot(Double prioSpacePercentageNot) {
+        this.prioSpacePercentageNot = prioSpacePercentageNot;
+    }
+
+    public ClusterWhereInput prioSpacePercentageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput prioSpacePercentageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+        return this;
+    }
+
+    public void setPrioSpacePercentageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+        }
+    }
+
+    public boolean getPrioSpacePercentageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT);
+    }
+
+    public ClusterWhereInput prioSpacePercentageNotIn(List<Double> prioSpacePercentageNotIn) {
+
+        this.prioSpacePercentageNotIn = prioSpacePercentageNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addPrioSpacePercentageNotInItem(Double prioSpacePercentageNotInItem) {
+        if (this.prioSpacePercentageNotIn == null) {
+            this.prioSpacePercentageNotIn = new ArrayList<Double>();
+        }
+        this.prioSpacePercentageNotIn.add(prioSpacePercentageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentageNotIn
+     *
+     * @return prioSpacePercentageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getPrioSpacePercentageNotIn() {
+        return prioSpacePercentageNotIn;
+    }
+
+    public void setPrioSpacePercentageNotIn(List<Double> prioSpacePercentageNotIn) {
+        this.prioSpacePercentageNotIn = prioSpacePercentageNotIn;
+    }
+
+    public ClusterWhereInput prioSpacePercentageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput prioSpacePercentageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
+        return this;
+    }
+
+    public void setPrioSpacePercentageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
+        }
+    }
+
+    public boolean getPrioSpacePercentageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE_NOT_IN);
     }
 
     public ClusterWhereInput provisionedCpuCores(Integer provisionedCpuCores) {
@@ -19421,6 +26075,92 @@ public class ClusterWhereInput
 
     public boolean getRecoverSpeedNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_RECOVER_SPEED_NOT_IN);
+    }
+
+    public ClusterWhereInput replicaCapacityOnly(Boolean replicaCapacityOnly) {
+
+        this.replicaCapacityOnly = replicaCapacityOnly;
+        return this;
+    }
+
+    /**
+     * Get replicaCapacityOnly
+     *
+     * @return replicaCapacityOnly
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getReplicaCapacityOnly() {
+        return replicaCapacityOnly;
+    }
+
+    public void setReplicaCapacityOnly(Boolean replicaCapacityOnly) {
+        this.replicaCapacityOnly = replicaCapacityOnly;
+    }
+
+    public ClusterWhereInput replicaCapacityOnly_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
+        return this;
+    }
+
+    public ClusterWhereInput replicaCapacityOnly_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
+        return this;
+    }
+
+    public void setReplicaCapacityOnly_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
+        }
+    }
+
+    public boolean getReplicaCapacityOnly_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
+    }
+
+    public ClusterWhereInput replicaCapacityOnlyNot(Boolean replicaCapacityOnlyNot) {
+
+        this.replicaCapacityOnlyNot = replicaCapacityOnlyNot;
+        return this;
+    }
+
+    /**
+     * Get replicaCapacityOnlyNot
+     *
+     * @return replicaCapacityOnlyNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getReplicaCapacityOnlyNot() {
+        return replicaCapacityOnlyNot;
+    }
+
+    public void setReplicaCapacityOnlyNot(Boolean replicaCapacityOnlyNot) {
+        this.replicaCapacityOnlyNot = replicaCapacityOnlyNot;
+    }
+
+    public ClusterWhereInput replicaCapacityOnlyNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput replicaCapacityOnlyNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY_NOT);
+        return this;
+    }
+
+    public void setReplicaCapacityOnlyNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY_NOT);
+        }
+    }
+
+    public boolean getReplicaCapacityOnlyNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY_NOT);
     }
 
     public ClusterWhereInput reservedCpuCoresForSystemService(
@@ -23356,6 +30096,729 @@ public class ClusterWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_MEMORY_BYTES_NOT_IN);
     }
 
+    public ClusterWhereInput totalPrioVolumeSize(Long totalPrioVolumeSize) {
+
+        this.totalPrioVolumeSize = totalPrioVolumeSize;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSize
+     *
+     * @return totalPrioVolumeSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPrioVolumeSize() {
+        return totalPrioVolumeSize;
+    }
+
+    public void setTotalPrioVolumeSize(Long totalPrioVolumeSize) {
+        this.totalPrioVolumeSize = totalPrioVolumeSize;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeGt(Long totalPrioVolumeSizeGt) {
+
+        this.totalPrioVolumeSizeGt = totalPrioVolumeSizeGt;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeGt
+     *
+     * @return totalPrioVolumeSizeGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPrioVolumeSizeGt() {
+        return totalPrioVolumeSizeGt;
+    }
+
+    public void setTotalPrioVolumeSizeGt(Long totalPrioVolumeSizeGt) {
+        this.totalPrioVolumeSizeGt = totalPrioVolumeSizeGt;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GT);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GT);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GT);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeGte(Long totalPrioVolumeSizeGte) {
+
+        this.totalPrioVolumeSizeGte = totalPrioVolumeSizeGte;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeGte
+     *
+     * @return totalPrioVolumeSizeGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPrioVolumeSizeGte() {
+        return totalPrioVolumeSizeGte;
+    }
+
+    public void setTotalPrioVolumeSizeGte(Long totalPrioVolumeSizeGte) {
+        this.totalPrioVolumeSizeGte = totalPrioVolumeSizeGte;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GTE);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GTE);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_GTE);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeIn(List<Long> totalPrioVolumeSizeIn) {
+
+        this.totalPrioVolumeSizeIn = totalPrioVolumeSizeIn;
+        return this;
+    }
+
+    public ClusterWhereInput addTotalPrioVolumeSizeInItem(Long totalPrioVolumeSizeInItem) {
+        if (this.totalPrioVolumeSizeIn == null) {
+            this.totalPrioVolumeSizeIn = new ArrayList<Long>();
+        }
+        this.totalPrioVolumeSizeIn.add(totalPrioVolumeSizeInItem);
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeIn
+     *
+     * @return totalPrioVolumeSizeIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getTotalPrioVolumeSizeIn() {
+        return totalPrioVolumeSizeIn;
+    }
+
+    public void setTotalPrioVolumeSizeIn(List<Long> totalPrioVolumeSizeIn) {
+        this.totalPrioVolumeSizeIn = totalPrioVolumeSizeIn;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_IN);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_IN);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_IN);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeLt(Long totalPrioVolumeSizeLt) {
+
+        this.totalPrioVolumeSizeLt = totalPrioVolumeSizeLt;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeLt
+     *
+     * @return totalPrioVolumeSizeLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPrioVolumeSizeLt() {
+        return totalPrioVolumeSizeLt;
+    }
+
+    public void setTotalPrioVolumeSizeLt(Long totalPrioVolumeSizeLt) {
+        this.totalPrioVolumeSizeLt = totalPrioVolumeSizeLt;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LT);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LT);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LT);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeLte(Long totalPrioVolumeSizeLte) {
+
+        this.totalPrioVolumeSizeLte = totalPrioVolumeSizeLte;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeLte
+     *
+     * @return totalPrioVolumeSizeLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPrioVolumeSizeLte() {
+        return totalPrioVolumeSizeLte;
+    }
+
+    public void setTotalPrioVolumeSizeLte(Long totalPrioVolumeSizeLte) {
+        this.totalPrioVolumeSizeLte = totalPrioVolumeSizeLte;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LTE);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LTE);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_LTE);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeNot(Long totalPrioVolumeSizeNot) {
+
+        this.totalPrioVolumeSizeNot = totalPrioVolumeSizeNot;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeNot
+     *
+     * @return totalPrioVolumeSizeNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPrioVolumeSizeNot() {
+        return totalPrioVolumeSizeNot;
+    }
+
+    public void setTotalPrioVolumeSizeNot(Long totalPrioVolumeSizeNot) {
+        this.totalPrioVolumeSizeNot = totalPrioVolumeSizeNot;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeNotIn(List<Long> totalPrioVolumeSizeNotIn) {
+
+        this.totalPrioVolumeSizeNotIn = totalPrioVolumeSizeNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addTotalPrioVolumeSizeNotInItem(Long totalPrioVolumeSizeNotInItem) {
+        if (this.totalPrioVolumeSizeNotIn == null) {
+            this.totalPrioVolumeSizeNotIn = new ArrayList<Long>();
+        }
+        this.totalPrioVolumeSizeNotIn.add(totalPrioVolumeSizeNotInItem);
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeNotIn
+     *
+     * @return totalPrioVolumeSizeNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getTotalPrioVolumeSizeNotIn() {
+        return totalPrioVolumeSizeNotIn;
+    }
+
+    public void setTotalPrioVolumeSizeNotIn(List<Long> totalPrioVolumeSizeNotIn) {
+        this.totalPrioVolumeSizeNotIn = totalPrioVolumeSizeNotIn;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT_IN);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT_IN);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_NOT_IN);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsage(Double totalPrioVolumeSizeUsage) {
+
+        this.totalPrioVolumeSizeUsage = totalPrioVolumeSizeUsage;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeUsage
+     *
+     * @return totalPrioVolumeSizeUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getTotalPrioVolumeSizeUsage() {
+        return totalPrioVolumeSizeUsage;
+    }
+
+    public void setTotalPrioVolumeSizeUsage(Double totalPrioVolumeSizeUsage) {
+        this.totalPrioVolumeSizeUsage = totalPrioVolumeSizeUsage;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageGt(Double totalPrioVolumeSizeUsageGt) {
+
+        this.totalPrioVolumeSizeUsageGt = totalPrioVolumeSizeUsageGt;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeUsageGt
+     *
+     * @return totalPrioVolumeSizeUsageGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getTotalPrioVolumeSizeUsageGt() {
+        return totalPrioVolumeSizeUsageGt;
+    }
+
+    public void setTotalPrioVolumeSizeUsageGt(Double totalPrioVolumeSizeUsageGt) {
+        this.totalPrioVolumeSizeUsageGt = totalPrioVolumeSizeUsageGt;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GT);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeUsageGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GT);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeUsageGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GT);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageGte(Double totalPrioVolumeSizeUsageGte) {
+
+        this.totalPrioVolumeSizeUsageGte = totalPrioVolumeSizeUsageGte;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeUsageGte
+     *
+     * @return totalPrioVolumeSizeUsageGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getTotalPrioVolumeSizeUsageGte() {
+        return totalPrioVolumeSizeUsageGte;
+    }
+
+    public void setTotalPrioVolumeSizeUsageGte(Double totalPrioVolumeSizeUsageGte) {
+        this.totalPrioVolumeSizeUsageGte = totalPrioVolumeSizeUsageGte;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GTE);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeUsageGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GTE);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeUsageGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_GTE);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageIn(List<Double> totalPrioVolumeSizeUsageIn) {
+
+        this.totalPrioVolumeSizeUsageIn = totalPrioVolumeSizeUsageIn;
+        return this;
+    }
+
+    public ClusterWhereInput addTotalPrioVolumeSizeUsageInItem(
+            Double totalPrioVolumeSizeUsageInItem) {
+        if (this.totalPrioVolumeSizeUsageIn == null) {
+            this.totalPrioVolumeSizeUsageIn = new ArrayList<Double>();
+        }
+        this.totalPrioVolumeSizeUsageIn.add(totalPrioVolumeSizeUsageInItem);
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeUsageIn
+     *
+     * @return totalPrioVolumeSizeUsageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getTotalPrioVolumeSizeUsageIn() {
+        return totalPrioVolumeSizeUsageIn;
+    }
+
+    public void setTotalPrioVolumeSizeUsageIn(List<Double> totalPrioVolumeSizeUsageIn) {
+        this.totalPrioVolumeSizeUsageIn = totalPrioVolumeSizeUsageIn;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_IN);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeUsageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_IN);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeUsageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_IN);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageLt(Double totalPrioVolumeSizeUsageLt) {
+
+        this.totalPrioVolumeSizeUsageLt = totalPrioVolumeSizeUsageLt;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeUsageLt
+     *
+     * @return totalPrioVolumeSizeUsageLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getTotalPrioVolumeSizeUsageLt() {
+        return totalPrioVolumeSizeUsageLt;
+    }
+
+    public void setTotalPrioVolumeSizeUsageLt(Double totalPrioVolumeSizeUsageLt) {
+        this.totalPrioVolumeSizeUsageLt = totalPrioVolumeSizeUsageLt;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LT);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeUsageLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LT);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeUsageLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LT);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageLte(Double totalPrioVolumeSizeUsageLte) {
+
+        this.totalPrioVolumeSizeUsageLte = totalPrioVolumeSizeUsageLte;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeUsageLte
+     *
+     * @return totalPrioVolumeSizeUsageLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getTotalPrioVolumeSizeUsageLte() {
+        return totalPrioVolumeSizeUsageLte;
+    }
+
+    public void setTotalPrioVolumeSizeUsageLte(Double totalPrioVolumeSizeUsageLte) {
+        this.totalPrioVolumeSizeUsageLte = totalPrioVolumeSizeUsageLte;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LTE);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeUsageLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LTE);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeUsageLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_LTE);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageNot(Double totalPrioVolumeSizeUsageNot) {
+
+        this.totalPrioVolumeSizeUsageNot = totalPrioVolumeSizeUsageNot;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeUsageNot
+     *
+     * @return totalPrioVolumeSizeUsageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getTotalPrioVolumeSizeUsageNot() {
+        return totalPrioVolumeSizeUsageNot;
+    }
+
+    public void setTotalPrioVolumeSizeUsageNot(Double totalPrioVolumeSizeUsageNot) {
+        this.totalPrioVolumeSizeUsageNot = totalPrioVolumeSizeUsageNot;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeUsageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeUsageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT);
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageNotIn(
+            List<Double> totalPrioVolumeSizeUsageNotIn) {
+
+        this.totalPrioVolumeSizeUsageNotIn = totalPrioVolumeSizeUsageNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addTotalPrioVolumeSizeUsageNotInItem(
+            Double totalPrioVolumeSizeUsageNotInItem) {
+        if (this.totalPrioVolumeSizeUsageNotIn == null) {
+            this.totalPrioVolumeSizeUsageNotIn = new ArrayList<Double>();
+        }
+        this.totalPrioVolumeSizeUsageNotIn.add(totalPrioVolumeSizeUsageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeUsageNotIn
+     *
+     * @return totalPrioVolumeSizeUsageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getTotalPrioVolumeSizeUsageNotIn() {
+        return totalPrioVolumeSizeUsageNotIn;
+    }
+
+    public void setTotalPrioVolumeSizeUsageNotIn(List<Double> totalPrioVolumeSizeUsageNotIn) {
+        this.totalPrioVolumeSizeUsageNotIn = totalPrioVolumeSizeUsageNotIn;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput totalPrioVolumeSizeUsageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeUsageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT_IN);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeUsageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE_NOT_IN);
+    }
+
     public ClusterWhereInput type(ClusterType type) {
 
         this.type = type;
@@ -23542,6 +31005,92 @@ public class ClusterWhereInput
 
     public boolean getTypeNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_TYPE_NOT_IN);
+    }
+
+    public ClusterWhereInput upgradeForTiering(Boolean upgradeForTiering) {
+
+        this.upgradeForTiering = upgradeForTiering;
+        return this;
+    }
+
+    /**
+     * Get upgradeForTiering
+     *
+     * @return upgradeForTiering
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getUpgradeForTiering() {
+        return upgradeForTiering;
+    }
+
+    public void setUpgradeForTiering(Boolean upgradeForTiering) {
+        this.upgradeForTiering = upgradeForTiering;
+    }
+
+    public ClusterWhereInput upgradeForTiering_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+        return this;
+    }
+
+    public ClusterWhereInput upgradeForTiering_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+        return this;
+    }
+
+    public void setUpgradeForTiering_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+        }
+    }
+
+    public boolean getUpgradeForTiering_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+    }
+
+    public ClusterWhereInput upgradeForTieringNot(Boolean upgradeForTieringNot) {
+
+        this.upgradeForTieringNot = upgradeForTieringNot;
+        return this;
+    }
+
+    /**
+     * Get upgradeForTieringNot
+     *
+     * @return upgradeForTieringNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getUpgradeForTieringNot() {
+        return upgradeForTieringNot;
+    }
+
+    public void setUpgradeForTieringNot(Boolean upgradeForTieringNot) {
+        this.upgradeForTieringNot = upgradeForTieringNot;
+    }
+
+    public ClusterWhereInput upgradeForTieringNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPGRADE_FOR_TIERING_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput upgradeForTieringNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPGRADE_FOR_TIERING_NOT);
+        return this;
+    }
+
+    public void setUpgradeForTieringNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPGRADE_FOR_TIERING_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPGRADE_FOR_TIERING_NOT);
+        }
+    }
+
+    public boolean getUpgradeForTieringNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPGRADE_FOR_TIERING_NOT);
     }
 
     public ClusterWhereInput upgradeToolVersion(String upgradeToolVersion) {
@@ -24161,6 +31710,366 @@ public class ClusterWhereInput
 
     public boolean getUpgradeToolVersionStartsWith_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_UPGRADE_TOOL_VERSION_STARTS_WITH);
+    }
+
+    public ClusterWhereInput usedCacheSpace(Long usedCacheSpace) {
+
+        this.usedCacheSpace = usedCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpace
+     *
+     * @return usedCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpace() {
+        return usedCacheSpace;
+    }
+
+    public void setUsedCacheSpace(Long usedCacheSpace) {
+        this.usedCacheSpace = usedCacheSpace;
+    }
+
+    public ClusterWhereInput usedCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput usedCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE);
+        return this;
+    }
+
+    public void setUsedCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE);
+        }
+    }
+
+    public boolean getUsedCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE);
+    }
+
+    public ClusterWhereInput usedCacheSpaceGt(Long usedCacheSpaceGt) {
+
+        this.usedCacheSpaceGt = usedCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceGt
+     *
+     * @return usedCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceGt() {
+        return usedCacheSpaceGt;
+    }
+
+    public void setUsedCacheSpaceGt(Long usedCacheSpaceGt) {
+        this.usedCacheSpaceGt = usedCacheSpaceGt;
+    }
+
+    public ClusterWhereInput usedCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput usedCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setUsedCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getUsedCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_GT);
+    }
+
+    public ClusterWhereInput usedCacheSpaceGte(Long usedCacheSpaceGte) {
+
+        this.usedCacheSpaceGte = usedCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceGte
+     *
+     * @return usedCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceGte() {
+        return usedCacheSpaceGte;
+    }
+
+    public void setUsedCacheSpaceGte(Long usedCacheSpaceGte) {
+        this.usedCacheSpaceGte = usedCacheSpaceGte;
+    }
+
+    public ClusterWhereInput usedCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput usedCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setUsedCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getUsedCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_GTE);
+    }
+
+    public ClusterWhereInput usedCacheSpaceIn(List<Long> usedCacheSpaceIn) {
+
+        this.usedCacheSpaceIn = usedCacheSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addUsedCacheSpaceInItem(Long usedCacheSpaceInItem) {
+        if (this.usedCacheSpaceIn == null) {
+            this.usedCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.usedCacheSpaceIn.add(usedCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceIn
+     *
+     * @return usedCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getUsedCacheSpaceIn() {
+        return usedCacheSpaceIn;
+    }
+
+    public void setUsedCacheSpaceIn(List<Long> usedCacheSpaceIn) {
+        this.usedCacheSpaceIn = usedCacheSpaceIn;
+    }
+
+    public ClusterWhereInput usedCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput usedCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setUsedCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getUsedCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_IN);
+    }
+
+    public ClusterWhereInput usedCacheSpaceLt(Long usedCacheSpaceLt) {
+
+        this.usedCacheSpaceLt = usedCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceLt
+     *
+     * @return usedCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceLt() {
+        return usedCacheSpaceLt;
+    }
+
+    public void setUsedCacheSpaceLt(Long usedCacheSpaceLt) {
+        this.usedCacheSpaceLt = usedCacheSpaceLt;
+    }
+
+    public ClusterWhereInput usedCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput usedCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setUsedCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getUsedCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_LT);
+    }
+
+    public ClusterWhereInput usedCacheSpaceLte(Long usedCacheSpaceLte) {
+
+        this.usedCacheSpaceLte = usedCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceLte
+     *
+     * @return usedCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceLte() {
+        return usedCacheSpaceLte;
+    }
+
+    public void setUsedCacheSpaceLte(Long usedCacheSpaceLte) {
+        this.usedCacheSpaceLte = usedCacheSpaceLte;
+    }
+
+    public ClusterWhereInput usedCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput usedCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setUsedCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getUsedCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_LTE);
+    }
+
+    public ClusterWhereInput usedCacheSpaceNot(Long usedCacheSpaceNot) {
+
+        this.usedCacheSpaceNot = usedCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceNot
+     *
+     * @return usedCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpaceNot() {
+        return usedCacheSpaceNot;
+    }
+
+    public void setUsedCacheSpaceNot(Long usedCacheSpaceNot) {
+        this.usedCacheSpaceNot = usedCacheSpaceNot;
+    }
+
+    public ClusterWhereInput usedCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput usedCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setUsedCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getUsedCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_NOT);
+    }
+
+    public ClusterWhereInput usedCacheSpaceNotIn(List<Long> usedCacheSpaceNotIn) {
+
+        this.usedCacheSpaceNotIn = usedCacheSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addUsedCacheSpaceNotInItem(Long usedCacheSpaceNotInItem) {
+        if (this.usedCacheSpaceNotIn == null) {
+            this.usedCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.usedCacheSpaceNotIn.add(usedCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpaceNotIn
+     *
+     * @return usedCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getUsedCacheSpaceNotIn() {
+        return usedCacheSpaceNotIn;
+    }
+
+    public void setUsedCacheSpaceNotIn(List<Long> usedCacheSpaceNotIn) {
+        this.usedCacheSpaceNotIn = usedCacheSpaceNotIn;
+    }
+
+    public ClusterWhereInput usedCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput usedCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setUsedCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getUsedCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE_NOT_IN);
     }
 
     public ClusterWhereInput usedCpuHz(Double usedCpuHz) {
@@ -25241,6 +33150,366 @@ public class ClusterWhereInput
 
     public boolean getUsedMemoryBytesNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_USED_MEMORY_BYTES_NOT_IN);
+    }
+
+    public ClusterWhereInput validCacheSpace(Long validCacheSpace) {
+
+        this.validCacheSpace = validCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpace
+     *
+     * @return validCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpace() {
+        return validCacheSpace;
+    }
+
+    public void setValidCacheSpace(Long validCacheSpace) {
+        this.validCacheSpace = validCacheSpace;
+    }
+
+    public ClusterWhereInput validCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput validCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        return this;
+    }
+
+    public void setValidCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        }
+    }
+
+    public boolean getValidCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE);
+    }
+
+    public ClusterWhereInput validCacheSpaceGt(Long validCacheSpaceGt) {
+
+        this.validCacheSpaceGt = validCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceGt
+     *
+     * @return validCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceGt() {
+        return validCacheSpaceGt;
+    }
+
+    public void setValidCacheSpaceGt(Long validCacheSpaceGt) {
+        this.validCacheSpaceGt = validCacheSpaceGt;
+    }
+
+    public ClusterWhereInput validCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput validCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setValidCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getValidCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_GT);
+    }
+
+    public ClusterWhereInput validCacheSpaceGte(Long validCacheSpaceGte) {
+
+        this.validCacheSpaceGte = validCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceGte
+     *
+     * @return validCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceGte() {
+        return validCacheSpaceGte;
+    }
+
+    public void setValidCacheSpaceGte(Long validCacheSpaceGte) {
+        this.validCacheSpaceGte = validCacheSpaceGte;
+    }
+
+    public ClusterWhereInput validCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput validCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setValidCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getValidCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_GTE);
+    }
+
+    public ClusterWhereInput validCacheSpaceIn(List<Long> validCacheSpaceIn) {
+
+        this.validCacheSpaceIn = validCacheSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addValidCacheSpaceInItem(Long validCacheSpaceInItem) {
+        if (this.validCacheSpaceIn == null) {
+            this.validCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.validCacheSpaceIn.add(validCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceIn
+     *
+     * @return validCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getValidCacheSpaceIn() {
+        return validCacheSpaceIn;
+    }
+
+    public void setValidCacheSpaceIn(List<Long> validCacheSpaceIn) {
+        this.validCacheSpaceIn = validCacheSpaceIn;
+    }
+
+    public ClusterWhereInput validCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput validCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setValidCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getValidCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_IN);
+    }
+
+    public ClusterWhereInput validCacheSpaceLt(Long validCacheSpaceLt) {
+
+        this.validCacheSpaceLt = validCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceLt
+     *
+     * @return validCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceLt() {
+        return validCacheSpaceLt;
+    }
+
+    public void setValidCacheSpaceLt(Long validCacheSpaceLt) {
+        this.validCacheSpaceLt = validCacheSpaceLt;
+    }
+
+    public ClusterWhereInput validCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput validCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setValidCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getValidCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_LT);
+    }
+
+    public ClusterWhereInput validCacheSpaceLte(Long validCacheSpaceLte) {
+
+        this.validCacheSpaceLte = validCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceLte
+     *
+     * @return validCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceLte() {
+        return validCacheSpaceLte;
+    }
+
+    public void setValidCacheSpaceLte(Long validCacheSpaceLte) {
+        this.validCacheSpaceLte = validCacheSpaceLte;
+    }
+
+    public ClusterWhereInput validCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput validCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setValidCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getValidCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_LTE);
+    }
+
+    public ClusterWhereInput validCacheSpaceNot(Long validCacheSpaceNot) {
+
+        this.validCacheSpaceNot = validCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceNot
+     *
+     * @return validCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpaceNot() {
+        return validCacheSpaceNot;
+    }
+
+    public void setValidCacheSpaceNot(Long validCacheSpaceNot) {
+        this.validCacheSpaceNot = validCacheSpaceNot;
+    }
+
+    public ClusterWhereInput validCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput validCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setValidCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getValidCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT);
+    }
+
+    public ClusterWhereInput validCacheSpaceNotIn(List<Long> validCacheSpaceNotIn) {
+
+        this.validCacheSpaceNotIn = validCacheSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addValidCacheSpaceNotInItem(Long validCacheSpaceNotInItem) {
+        if (this.validCacheSpaceNotIn == null) {
+            this.validCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.validCacheSpaceNotIn.add(validCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get validCacheSpaceNotIn
+     *
+     * @return validCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getValidCacheSpaceNotIn() {
+        return validCacheSpaceNotIn;
+    }
+
+    public void setValidCacheSpaceNotIn(List<Long> validCacheSpaceNotIn) {
+        this.validCacheSpaceNotIn = validCacheSpaceNotIn;
+    }
+
+    public ClusterWhereInput validCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput validCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setValidCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getValidCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE_NOT_IN);
     }
 
     public ClusterWhereInput validDataSpace(Long validDataSpace) {
@@ -27411,6 +35680,59 @@ public class ClusterWhereInput
                 && Objects.equals(this.NOT, clusterWhereInput.NOT)
                 && Objects.equals(this.OR, clusterWhereInput.OR)
                 && Objects.equals(
+                        this.accessWriteCompressEnabled,
+                        clusterWhereInput.accessWriteCompressEnabled)
+                && Objects.equals(
+                        this.accessWriteCompressEnabledNot,
+                        clusterWhereInput.accessWriteCompressEnabledNot)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpace, clusterWhereInput.allocatedPrioritizedSpace)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceGt,
+                        clusterWhereInput.allocatedPrioritizedSpaceGt)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceGte,
+                        clusterWhereInput.allocatedPrioritizedSpaceGte)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceIn,
+                        clusterWhereInput.allocatedPrioritizedSpaceIn)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceLt,
+                        clusterWhereInput.allocatedPrioritizedSpaceLt)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceLte,
+                        clusterWhereInput.allocatedPrioritizedSpaceLte)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceNot,
+                        clusterWhereInput.allocatedPrioritizedSpaceNot)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceNotIn,
+                        clusterWhereInput.allocatedPrioritizedSpaceNotIn)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsage,
+                        clusterWhereInput.allocatedPrioritizedSpaceUsage)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageGt,
+                        clusterWhereInput.allocatedPrioritizedSpaceUsageGt)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageGte,
+                        clusterWhereInput.allocatedPrioritizedSpaceUsageGte)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageIn,
+                        clusterWhereInput.allocatedPrioritizedSpaceUsageIn)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageLt,
+                        clusterWhereInput.allocatedPrioritizedSpaceUsageLt)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageLte,
+                        clusterWhereInput.allocatedPrioritizedSpaceUsageLte)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageNot,
+                        clusterWhereInput.allocatedPrioritizedSpaceUsageNot)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsageNotIn,
+                        clusterWhereInput.allocatedPrioritizedSpaceUsageNotIn)
+                && Objects.equals(
                         this.applicationHighestVersion, clusterWhereInput.applicationHighestVersion)
                 && Objects.equals(
                         this.applicationHighestVersionContains,
@@ -27460,6 +35782,21 @@ public class ClusterWhereInput
                 && Objects.equals(this.architectureNotIn, clusterWhereInput.architectureNotIn)
                 && Objects.equals(this.autoConverge, clusterWhereInput.autoConverge)
                 && Objects.equals(this.autoConvergeNot, clusterWhereInput.autoConvergeNot)
+                && Objects.equals(this.commitedMemoryBytes, clusterWhereInput.commitedMemoryBytes)
+                && Objects.equals(
+                        this.commitedMemoryBytesGt, clusterWhereInput.commitedMemoryBytesGt)
+                && Objects.equals(
+                        this.commitedMemoryBytesGte, clusterWhereInput.commitedMemoryBytesGte)
+                && Objects.equals(
+                        this.commitedMemoryBytesIn, clusterWhereInput.commitedMemoryBytesIn)
+                && Objects.equals(
+                        this.commitedMemoryBytesLt, clusterWhereInput.commitedMemoryBytesLt)
+                && Objects.equals(
+                        this.commitedMemoryBytesLte, clusterWhereInput.commitedMemoryBytesLte)
+                && Objects.equals(
+                        this.commitedMemoryBytesNot, clusterWhereInput.commitedMemoryBytesNot)
+                && Objects.equals(
+                        this.commitedMemoryBytesNotIn, clusterWhereInput.commitedMemoryBytesNotIn)
                 && Objects.equals(this.connectState, clusterWhereInput.connectState)
                 && Objects.equals(this.connectStateIn, clusterWhereInput.connectStateIn)
                 && Objects.equals(this.connectStateNot, clusterWhereInput.connectStateNot)
@@ -27493,6 +35830,33 @@ public class ClusterWhereInput
                         clusterWhereInput.currentCpuModelNotStartsWith)
                 && Objects.equals(
                         this.currentCpuModelStartsWith, clusterWhereInput.currentCpuModelStartsWith)
+                && Objects.equals(this.dataReductionRatio, clusterWhereInput.dataReductionRatio)
+                && Objects.equals(this.dataReductionRatioGt, clusterWhereInput.dataReductionRatioGt)
+                && Objects.equals(
+                        this.dataReductionRatioGte, clusterWhereInput.dataReductionRatioGte)
+                && Objects.equals(this.dataReductionRatioIn, clusterWhereInput.dataReductionRatioIn)
+                && Objects.equals(this.dataReductionRatioLt, clusterWhereInput.dataReductionRatioLt)
+                && Objects.equals(
+                        this.dataReductionRatioLte, clusterWhereInput.dataReductionRatioLte)
+                && Objects.equals(
+                        this.dataReductionRatioNot, clusterWhereInput.dataReductionRatioNot)
+                && Objects.equals(
+                        this.dataReductionRatioNotIn, clusterWhereInput.dataReductionRatioNotIn)
+                && Objects.equals(this.dataReductionSaving, clusterWhereInput.dataReductionSaving)
+                && Objects.equals(
+                        this.dataReductionSavingGt, clusterWhereInput.dataReductionSavingGt)
+                && Objects.equals(
+                        this.dataReductionSavingGte, clusterWhereInput.dataReductionSavingGte)
+                && Objects.equals(
+                        this.dataReductionSavingIn, clusterWhereInput.dataReductionSavingIn)
+                && Objects.equals(
+                        this.dataReductionSavingLt, clusterWhereInput.dataReductionSavingLt)
+                && Objects.equals(
+                        this.dataReductionSavingLte, clusterWhereInput.dataReductionSavingLte)
+                && Objects.equals(
+                        this.dataReductionSavingNot, clusterWhereInput.dataReductionSavingNot)
+                && Objects.equals(
+                        this.dataReductionSavingNotIn, clusterWhereInput.dataReductionSavingNotIn)
                 && Objects.equals(this.datacentersEvery, clusterWhereInput.datacentersEvery)
                 && Objects.equals(this.datacentersNone, clusterWhereInput.datacentersNone)
                 && Objects.equals(this.datacentersSome, clusterWhereInput.datacentersSome)
@@ -27511,6 +35875,33 @@ public class ClusterWhereInput
                         this.disconnectedReasonNot, clusterWhereInput.disconnectedReasonNot)
                 && Objects.equals(
                         this.disconnectedReasonNotIn, clusterWhereInput.disconnectedReasonNotIn)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpace,
+                        clusterWhereInput.downgradedPrioritizedSpace)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceGt,
+                        clusterWhereInput.downgradedPrioritizedSpaceGt)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceGte,
+                        clusterWhereInput.downgradedPrioritizedSpaceGte)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceIn,
+                        clusterWhereInput.downgradedPrioritizedSpaceIn)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceLt,
+                        clusterWhereInput.downgradedPrioritizedSpaceLt)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceLte,
+                        clusterWhereInput.downgradedPrioritizedSpaceLte)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceNot,
+                        clusterWhereInput.downgradedPrioritizedSpaceNot)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceNotIn,
+                        clusterWhereInput.downgradedPrioritizedSpaceNotIn)
+                && Objects.equals(this.ecpLicense, clusterWhereInput.ecpLicense)
+                && Objects.equals(this.enableTiering, clusterWhereInput.enableTiering)
+                && Objects.equals(this.enableTieringNot, clusterWhereInput.enableTieringNot)
                 && Objects.equals(this.entityAsyncStatus, clusterWhereInput.entityAsyncStatus)
                 && Objects.equals(this.entityAsyncStatusIn, clusterWhereInput.entityAsyncStatusIn)
                 && Objects.equals(this.entityAsyncStatusNot, clusterWhereInput.entityAsyncStatusNot)
@@ -27647,6 +36038,21 @@ public class ClusterWhereInput
                 && Objects.equals(this.localIdNotIn, clusterWhereInput.localIdNotIn)
                 && Objects.equals(this.localIdNotStartsWith, clusterWhereInput.localIdNotStartsWith)
                 && Objects.equals(this.localIdStartsWith, clusterWhereInput.localIdStartsWith)
+                && Objects.equals(this.logicalUsedDataSpace, clusterWhereInput.logicalUsedDataSpace)
+                && Objects.equals(
+                        this.logicalUsedDataSpaceGt, clusterWhereInput.logicalUsedDataSpaceGt)
+                && Objects.equals(
+                        this.logicalUsedDataSpaceGte, clusterWhereInput.logicalUsedDataSpaceGte)
+                && Objects.equals(
+                        this.logicalUsedDataSpaceIn, clusterWhereInput.logicalUsedDataSpaceIn)
+                && Objects.equals(
+                        this.logicalUsedDataSpaceLt, clusterWhereInput.logicalUsedDataSpaceLt)
+                && Objects.equals(
+                        this.logicalUsedDataSpaceLte, clusterWhereInput.logicalUsedDataSpaceLte)
+                && Objects.equals(
+                        this.logicalUsedDataSpaceNot, clusterWhereInput.logicalUsedDataSpaceNot)
+                && Objects.equals(
+                        this.logicalUsedDataSpaceNotIn, clusterWhereInput.logicalUsedDataSpaceNotIn)
                 && Objects.equals(this.maintenanceEndDate, clusterWhereInput.maintenanceEndDate)
                 && Objects.equals(this.maintenanceEndDateGt, clusterWhereInput.maintenanceEndDateGt)
                 && Objects.equals(
@@ -27812,6 +36218,9 @@ public class ClusterWhereInput
                 && Objects.equals(this.nameNotIn, clusterWhereInput.nameNotIn)
                 && Objects.equals(this.nameNotStartsWith, clusterWhereInput.nameNotStartsWith)
                 && Objects.equals(this.nameStartsWith, clusterWhereInput.nameStartsWith)
+                && Objects.equals(this.noPerformanceLayer, clusterWhereInput.noPerformanceLayer)
+                && Objects.equals(
+                        this.noPerformanceLayerNot, clusterWhereInput.noPerformanceLayerNot)
                 && Objects.equals(this.ntpMode, clusterWhereInput.ntpMode)
                 && Objects.equals(this.ntpModeIn, clusterWhereInput.ntpModeIn)
                 && Objects.equals(this.ntpModeNot, clusterWhereInput.ntpModeNot)
@@ -27824,8 +36233,122 @@ public class ClusterWhereInput
                         this.nvmeOverTcpEnabledNot, clusterWhereInput.nvmeOverTcpEnabledNot)
                 && Objects.equals(this.nvmfEnabled, clusterWhereInput.nvmfEnabled)
                 && Objects.equals(this.nvmfEnabledNot, clusterWhereInput.nvmfEnabledNot)
+                && Objects.equals(this.overallEfficiency, clusterWhereInput.overallEfficiency)
+                && Objects.equals(this.overallEfficiencyGt, clusterWhereInput.overallEfficiencyGt)
+                && Objects.equals(this.overallEfficiencyGte, clusterWhereInput.overallEfficiencyGte)
+                && Objects.equals(this.overallEfficiencyIn, clusterWhereInput.overallEfficiencyIn)
+                && Objects.equals(this.overallEfficiencyLt, clusterWhereInput.overallEfficiencyLt)
+                && Objects.equals(this.overallEfficiencyLte, clusterWhereInput.overallEfficiencyLte)
+                && Objects.equals(this.overallEfficiencyNot, clusterWhereInput.overallEfficiencyNot)
+                && Objects.equals(
+                        this.overallEfficiencyNotIn, clusterWhereInput.overallEfficiencyNotIn)
+                && Objects.equals(
+                        this.perfAllocatedDataSpace, clusterWhereInput.perfAllocatedDataSpace)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceGt, clusterWhereInput.perfAllocatedDataSpaceGt)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceGte, clusterWhereInput.perfAllocatedDataSpaceGte)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceIn, clusterWhereInput.perfAllocatedDataSpaceIn)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceLt, clusterWhereInput.perfAllocatedDataSpaceLt)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceLte, clusterWhereInput.perfAllocatedDataSpaceLte)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceNot, clusterWhereInput.perfAllocatedDataSpaceNot)
+                && Objects.equals(
+                        this.perfAllocatedDataSpaceNotIn,
+                        clusterWhereInput.perfAllocatedDataSpaceNotIn)
+                && Objects.equals(this.perfFailureDataSpace, clusterWhereInput.perfFailureDataSpace)
+                && Objects.equals(
+                        this.perfFailureDataSpaceGt, clusterWhereInput.perfFailureDataSpaceGt)
+                && Objects.equals(
+                        this.perfFailureDataSpaceGte, clusterWhereInput.perfFailureDataSpaceGte)
+                && Objects.equals(
+                        this.perfFailureDataSpaceIn, clusterWhereInput.perfFailureDataSpaceIn)
+                && Objects.equals(
+                        this.perfFailureDataSpaceLt, clusterWhereInput.perfFailureDataSpaceLt)
+                && Objects.equals(
+                        this.perfFailureDataSpaceLte, clusterWhereInput.perfFailureDataSpaceLte)
+                && Objects.equals(
+                        this.perfFailureDataSpaceNot, clusterWhereInput.perfFailureDataSpaceNot)
+                && Objects.equals(
+                        this.perfFailureDataSpaceNotIn, clusterWhereInput.perfFailureDataSpaceNotIn)
+                && Objects.equals(
+                        this.perfTotalDataCapacity, clusterWhereInput.perfTotalDataCapacity)
+                && Objects.equals(
+                        this.perfTotalDataCapacityGt, clusterWhereInput.perfTotalDataCapacityGt)
+                && Objects.equals(
+                        this.perfTotalDataCapacityGte, clusterWhereInput.perfTotalDataCapacityGte)
+                && Objects.equals(
+                        this.perfTotalDataCapacityIn, clusterWhereInput.perfTotalDataCapacityIn)
+                && Objects.equals(
+                        this.perfTotalDataCapacityLt, clusterWhereInput.perfTotalDataCapacityLt)
+                && Objects.equals(
+                        this.perfTotalDataCapacityLte, clusterWhereInput.perfTotalDataCapacityLte)
+                && Objects.equals(
+                        this.perfTotalDataCapacityNot, clusterWhereInput.perfTotalDataCapacityNot)
+                && Objects.equals(
+                        this.perfTotalDataCapacityNotIn,
+                        clusterWhereInput.perfTotalDataCapacityNotIn)
+                && Objects.equals(this.perfUsedDataSpace, clusterWhereInput.perfUsedDataSpace)
+                && Objects.equals(this.perfUsedDataSpaceGt, clusterWhereInput.perfUsedDataSpaceGt)
+                && Objects.equals(this.perfUsedDataSpaceGte, clusterWhereInput.perfUsedDataSpaceGte)
+                && Objects.equals(this.perfUsedDataSpaceIn, clusterWhereInput.perfUsedDataSpaceIn)
+                && Objects.equals(this.perfUsedDataSpaceLt, clusterWhereInput.perfUsedDataSpaceLt)
+                && Objects.equals(this.perfUsedDataSpaceLte, clusterWhereInput.perfUsedDataSpaceLte)
+                && Objects.equals(this.perfUsedDataSpaceNot, clusterWhereInput.perfUsedDataSpaceNot)
+                && Objects.equals(
+                        this.perfUsedDataSpaceNotIn, clusterWhereInput.perfUsedDataSpaceNotIn)
+                && Objects.equals(this.perfValidDataSpace, clusterWhereInput.perfValidDataSpace)
+                && Objects.equals(this.perfValidDataSpaceGt, clusterWhereInput.perfValidDataSpaceGt)
+                && Objects.equals(
+                        this.perfValidDataSpaceGte, clusterWhereInput.perfValidDataSpaceGte)
+                && Objects.equals(this.perfValidDataSpaceIn, clusterWhereInput.perfValidDataSpaceIn)
+                && Objects.equals(this.perfValidDataSpaceLt, clusterWhereInput.perfValidDataSpaceLt)
+                && Objects.equals(
+                        this.perfValidDataSpaceLte, clusterWhereInput.perfValidDataSpaceLte)
+                && Objects.equals(
+                        this.perfValidDataSpaceNot, clusterWhereInput.perfValidDataSpaceNot)
+                && Objects.equals(
+                        this.perfValidDataSpaceNotIn, clusterWhereInput.perfValidDataSpaceNotIn)
+                && Objects.equals(
+                        this.plannedPrioritizedSpace, clusterWhereInput.plannedPrioritizedSpace)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceGt, clusterWhereInput.plannedPrioritizedSpaceGt)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceGte,
+                        clusterWhereInput.plannedPrioritizedSpaceGte)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceIn, clusterWhereInput.plannedPrioritizedSpaceIn)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceLt, clusterWhereInput.plannedPrioritizedSpaceLt)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceLte,
+                        clusterWhereInput.plannedPrioritizedSpaceLte)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceNot,
+                        clusterWhereInput.plannedPrioritizedSpaceNot)
+                && Objects.equals(
+                        this.plannedPrioritizedSpaceNotIn,
+                        clusterWhereInput.plannedPrioritizedSpaceNotIn)
                 && Objects.equals(this.pmemEnabled, clusterWhereInput.pmemEnabled)
                 && Objects.equals(this.pmemEnabledNot, clusterWhereInput.pmemEnabledNot)
+                && Objects.equals(this.prioSpacePercentage, clusterWhereInput.prioSpacePercentage)
+                && Objects.equals(
+                        this.prioSpacePercentageGt, clusterWhereInput.prioSpacePercentageGt)
+                && Objects.equals(
+                        this.prioSpacePercentageGte, clusterWhereInput.prioSpacePercentageGte)
+                && Objects.equals(
+                        this.prioSpacePercentageIn, clusterWhereInput.prioSpacePercentageIn)
+                && Objects.equals(
+                        this.prioSpacePercentageLt, clusterWhereInput.prioSpacePercentageLt)
+                && Objects.equals(
+                        this.prioSpacePercentageLte, clusterWhereInput.prioSpacePercentageLte)
+                && Objects.equals(
+                        this.prioSpacePercentageNot, clusterWhereInput.prioSpacePercentageNot)
+                && Objects.equals(
+                        this.prioSpacePercentageNotIn, clusterWhereInput.prioSpacePercentageNotIn)
                 && Objects.equals(this.provisionedCpuCores, clusterWhereInput.provisionedCpuCores)
                 && Objects.equals(
                         this.provisionedCpuCoresForActiveVm,
@@ -27933,6 +36456,9 @@ public class ClusterWhereInput
                 && Objects.equals(this.recoverSpeedLte, clusterWhereInput.recoverSpeedLte)
                 && Objects.equals(this.recoverSpeedNot, clusterWhereInput.recoverSpeedNot)
                 && Objects.equals(this.recoverSpeedNotIn, clusterWhereInput.recoverSpeedNotIn)
+                && Objects.equals(this.replicaCapacityOnly, clusterWhereInput.replicaCapacityOnly)
+                && Objects.equals(
+                        this.replicaCapacityOnlyNot, clusterWhereInput.replicaCapacityOnlyNot)
                 && Objects.equals(
                         this.reservedCpuCoresForSystemService,
                         clusterWhereInput.reservedCpuCoresForSystemService)
@@ -28042,10 +36568,50 @@ public class ClusterWhereInput
                 && Objects.equals(this.totalMemoryBytesNot, clusterWhereInput.totalMemoryBytesNot)
                 && Objects.equals(
                         this.totalMemoryBytesNotIn, clusterWhereInput.totalMemoryBytesNotIn)
+                && Objects.equals(this.totalPrioVolumeSize, clusterWhereInput.totalPrioVolumeSize)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeGt, clusterWhereInput.totalPrioVolumeSizeGt)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeGte, clusterWhereInput.totalPrioVolumeSizeGte)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeIn, clusterWhereInput.totalPrioVolumeSizeIn)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeLt, clusterWhereInput.totalPrioVolumeSizeLt)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeLte, clusterWhereInput.totalPrioVolumeSizeLte)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeNot, clusterWhereInput.totalPrioVolumeSizeNot)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeNotIn, clusterWhereInput.totalPrioVolumeSizeNotIn)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeUsage, clusterWhereInput.totalPrioVolumeSizeUsage)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeUsageGt,
+                        clusterWhereInput.totalPrioVolumeSizeUsageGt)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeUsageGte,
+                        clusterWhereInput.totalPrioVolumeSizeUsageGte)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeUsageIn,
+                        clusterWhereInput.totalPrioVolumeSizeUsageIn)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeUsageLt,
+                        clusterWhereInput.totalPrioVolumeSizeUsageLt)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeUsageLte,
+                        clusterWhereInput.totalPrioVolumeSizeUsageLte)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeUsageNot,
+                        clusterWhereInput.totalPrioVolumeSizeUsageNot)
+                && Objects.equals(
+                        this.totalPrioVolumeSizeUsageNotIn,
+                        clusterWhereInput.totalPrioVolumeSizeUsageNotIn)
                 && Objects.equals(this.type, clusterWhereInput.type)
                 && Objects.equals(this.typeIn, clusterWhereInput.typeIn)
                 && Objects.equals(this.typeNot, clusterWhereInput.typeNot)
                 && Objects.equals(this.typeNotIn, clusterWhereInput.typeNotIn)
+                && Objects.equals(this.upgradeForTiering, clusterWhereInput.upgradeForTiering)
+                && Objects.equals(this.upgradeForTieringNot, clusterWhereInput.upgradeForTieringNot)
                 && Objects.equals(this.upgradeToolVersion, clusterWhereInput.upgradeToolVersion)
                 && Objects.equals(
                         this.upgradeToolVersionContains,
@@ -28076,6 +36642,14 @@ public class ClusterWhereInput
                 && Objects.equals(
                         this.upgradeToolVersionStartsWith,
                         clusterWhereInput.upgradeToolVersionStartsWith)
+                && Objects.equals(this.usedCacheSpace, clusterWhereInput.usedCacheSpace)
+                && Objects.equals(this.usedCacheSpaceGt, clusterWhereInput.usedCacheSpaceGt)
+                && Objects.equals(this.usedCacheSpaceGte, clusterWhereInput.usedCacheSpaceGte)
+                && Objects.equals(this.usedCacheSpaceIn, clusterWhereInput.usedCacheSpaceIn)
+                && Objects.equals(this.usedCacheSpaceLt, clusterWhereInput.usedCacheSpaceLt)
+                && Objects.equals(this.usedCacheSpaceLte, clusterWhereInput.usedCacheSpaceLte)
+                && Objects.equals(this.usedCacheSpaceNot, clusterWhereInput.usedCacheSpaceNot)
+                && Objects.equals(this.usedCacheSpaceNotIn, clusterWhereInput.usedCacheSpaceNotIn)
                 && Objects.equals(this.usedCpuHz, clusterWhereInput.usedCpuHz)
                 && Objects.equals(this.usedCpuHzGt, clusterWhereInput.usedCpuHzGt)
                 && Objects.equals(this.usedCpuHzGte, clusterWhereInput.usedCpuHzGte)
@@ -28100,6 +36674,14 @@ public class ClusterWhereInput
                 && Objects.equals(this.usedMemoryBytesLte, clusterWhereInput.usedMemoryBytesLte)
                 && Objects.equals(this.usedMemoryBytesNot, clusterWhereInput.usedMemoryBytesNot)
                 && Objects.equals(this.usedMemoryBytesNotIn, clusterWhereInput.usedMemoryBytesNotIn)
+                && Objects.equals(this.validCacheSpace, clusterWhereInput.validCacheSpace)
+                && Objects.equals(this.validCacheSpaceGt, clusterWhereInput.validCacheSpaceGt)
+                && Objects.equals(this.validCacheSpaceGte, clusterWhereInput.validCacheSpaceGte)
+                && Objects.equals(this.validCacheSpaceIn, clusterWhereInput.validCacheSpaceIn)
+                && Objects.equals(this.validCacheSpaceLt, clusterWhereInput.validCacheSpaceLt)
+                && Objects.equals(this.validCacheSpaceLte, clusterWhereInput.validCacheSpaceLte)
+                && Objects.equals(this.validCacheSpaceNot, clusterWhereInput.validCacheSpaceNot)
+                && Objects.equals(this.validCacheSpaceNotIn, clusterWhereInput.validCacheSpaceNotIn)
                 && Objects.equals(this.validDataSpace, clusterWhereInput.validDataSpace)
                 && Objects.equals(this.validDataSpaceGt, clusterWhereInput.validDataSpaceGt)
                 && Objects.equals(this.validDataSpaceGte, clusterWhereInput.validDataSpaceGte)
@@ -28166,6 +36748,24 @@ public class ClusterWhereInput
                 AND,
                 NOT,
                 OR,
+                accessWriteCompressEnabled,
+                accessWriteCompressEnabledNot,
+                allocatedPrioritizedSpace,
+                allocatedPrioritizedSpaceGt,
+                allocatedPrioritizedSpaceGte,
+                allocatedPrioritizedSpaceIn,
+                allocatedPrioritizedSpaceLt,
+                allocatedPrioritizedSpaceLte,
+                allocatedPrioritizedSpaceNot,
+                allocatedPrioritizedSpaceNotIn,
+                allocatedPrioritizedSpaceUsage,
+                allocatedPrioritizedSpaceUsageGt,
+                allocatedPrioritizedSpaceUsageGte,
+                allocatedPrioritizedSpaceUsageIn,
+                allocatedPrioritizedSpaceUsageLt,
+                allocatedPrioritizedSpaceUsageLte,
+                allocatedPrioritizedSpaceUsageNot,
+                allocatedPrioritizedSpaceUsageNotIn,
                 applicationHighestVersion,
                 applicationHighestVersionContains,
                 applicationHighestVersionEndsWith,
@@ -28189,6 +36789,14 @@ public class ClusterWhereInput
                 architectureNotIn,
                 autoConverge,
                 autoConvergeNot,
+                commitedMemoryBytes,
+                commitedMemoryBytesGt,
+                commitedMemoryBytesGte,
+                commitedMemoryBytesIn,
+                commitedMemoryBytesLt,
+                commitedMemoryBytesLte,
+                commitedMemoryBytesNot,
+                commitedMemoryBytesNotIn,
                 connectState,
                 connectStateIn,
                 connectStateNot,
@@ -28210,6 +36818,22 @@ public class ClusterWhereInput
                 currentCpuModelNotIn,
                 currentCpuModelNotStartsWith,
                 currentCpuModelStartsWith,
+                dataReductionRatio,
+                dataReductionRatioGt,
+                dataReductionRatioGte,
+                dataReductionRatioIn,
+                dataReductionRatioLt,
+                dataReductionRatioLte,
+                dataReductionRatioNot,
+                dataReductionRatioNotIn,
+                dataReductionSaving,
+                dataReductionSavingGt,
+                dataReductionSavingGte,
+                dataReductionSavingIn,
+                dataReductionSavingLt,
+                dataReductionSavingLte,
+                dataReductionSavingNot,
+                dataReductionSavingNotIn,
                 datacentersEvery,
                 datacentersNone,
                 datacentersSome,
@@ -28225,6 +36849,17 @@ public class ClusterWhereInput
                 disconnectedReasonIn,
                 disconnectedReasonNot,
                 disconnectedReasonNotIn,
+                downgradedPrioritizedSpace,
+                downgradedPrioritizedSpaceGt,
+                downgradedPrioritizedSpaceGte,
+                downgradedPrioritizedSpaceIn,
+                downgradedPrioritizedSpaceLt,
+                downgradedPrioritizedSpaceLte,
+                downgradedPrioritizedSpaceNot,
+                downgradedPrioritizedSpaceNotIn,
+                ecpLicense,
+                enableTiering,
+                enableTieringNot,
                 entityAsyncStatus,
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
@@ -28350,6 +36985,14 @@ public class ClusterWhereInput
                 localIdNotIn,
                 localIdNotStartsWith,
                 localIdStartsWith,
+                logicalUsedDataSpace,
+                logicalUsedDataSpaceGt,
+                logicalUsedDataSpaceGte,
+                logicalUsedDataSpaceIn,
+                logicalUsedDataSpaceLt,
+                logicalUsedDataSpaceLte,
+                logicalUsedDataSpaceNot,
+                logicalUsedDataSpaceNotIn,
                 maintenanceEndDate,
                 maintenanceEndDateGt,
                 maintenanceEndDateGte,
@@ -28462,6 +37105,8 @@ public class ClusterWhereInput
                 nameNotIn,
                 nameNotStartsWith,
                 nameStartsWith,
+                noPerformanceLayer,
+                noPerformanceLayerNot,
                 ntpMode,
                 ntpModeIn,
                 ntpModeNot,
@@ -28472,8 +37117,72 @@ public class ClusterWhereInput
                 nvmeOverTcpEnabledNot,
                 nvmfEnabled,
                 nvmfEnabledNot,
+                overallEfficiency,
+                overallEfficiencyGt,
+                overallEfficiencyGte,
+                overallEfficiencyIn,
+                overallEfficiencyLt,
+                overallEfficiencyLte,
+                overallEfficiencyNot,
+                overallEfficiencyNotIn,
+                perfAllocatedDataSpace,
+                perfAllocatedDataSpaceGt,
+                perfAllocatedDataSpaceGte,
+                perfAllocatedDataSpaceIn,
+                perfAllocatedDataSpaceLt,
+                perfAllocatedDataSpaceLte,
+                perfAllocatedDataSpaceNot,
+                perfAllocatedDataSpaceNotIn,
+                perfFailureDataSpace,
+                perfFailureDataSpaceGt,
+                perfFailureDataSpaceGte,
+                perfFailureDataSpaceIn,
+                perfFailureDataSpaceLt,
+                perfFailureDataSpaceLte,
+                perfFailureDataSpaceNot,
+                perfFailureDataSpaceNotIn,
+                perfTotalDataCapacity,
+                perfTotalDataCapacityGt,
+                perfTotalDataCapacityGte,
+                perfTotalDataCapacityIn,
+                perfTotalDataCapacityLt,
+                perfTotalDataCapacityLte,
+                perfTotalDataCapacityNot,
+                perfTotalDataCapacityNotIn,
+                perfUsedDataSpace,
+                perfUsedDataSpaceGt,
+                perfUsedDataSpaceGte,
+                perfUsedDataSpaceIn,
+                perfUsedDataSpaceLt,
+                perfUsedDataSpaceLte,
+                perfUsedDataSpaceNot,
+                perfUsedDataSpaceNotIn,
+                perfValidDataSpace,
+                perfValidDataSpaceGt,
+                perfValidDataSpaceGte,
+                perfValidDataSpaceIn,
+                perfValidDataSpaceLt,
+                perfValidDataSpaceLte,
+                perfValidDataSpaceNot,
+                perfValidDataSpaceNotIn,
+                plannedPrioritizedSpace,
+                plannedPrioritizedSpaceGt,
+                plannedPrioritizedSpaceGte,
+                plannedPrioritizedSpaceIn,
+                plannedPrioritizedSpaceLt,
+                plannedPrioritizedSpaceLte,
+                plannedPrioritizedSpaceNot,
+                plannedPrioritizedSpaceNotIn,
                 pmemEnabled,
                 pmemEnabledNot,
+                prioSpacePercentage,
+                prioSpacePercentageGt,
+                prioSpacePercentageGte,
+                prioSpacePercentageIn,
+                prioSpacePercentageLt,
+                prioSpacePercentageLte,
+                prioSpacePercentageNot,
+                prioSpacePercentageNotIn,
                 provisionedCpuCores,
                 provisionedCpuCoresForActiveVm,
                 provisionedCpuCoresForActiveVmGt,
@@ -28532,6 +37241,8 @@ public class ClusterWhereInput
                 recoverSpeedLte,
                 recoverSpeedNot,
                 recoverSpeedNotIn,
+                replicaCapacityOnly,
+                replicaCapacityOnlyNot,
                 reservedCpuCoresForSystemService,
                 reservedCpuCoresForSystemServiceGt,
                 reservedCpuCoresForSystemServiceGte,
@@ -28619,10 +37330,28 @@ public class ClusterWhereInput
                 totalMemoryBytesLte,
                 totalMemoryBytesNot,
                 totalMemoryBytesNotIn,
+                totalPrioVolumeSize,
+                totalPrioVolumeSizeGt,
+                totalPrioVolumeSizeGte,
+                totalPrioVolumeSizeIn,
+                totalPrioVolumeSizeLt,
+                totalPrioVolumeSizeLte,
+                totalPrioVolumeSizeNot,
+                totalPrioVolumeSizeNotIn,
+                totalPrioVolumeSizeUsage,
+                totalPrioVolumeSizeUsageGt,
+                totalPrioVolumeSizeUsageGte,
+                totalPrioVolumeSizeUsageIn,
+                totalPrioVolumeSizeUsageLt,
+                totalPrioVolumeSizeUsageLte,
+                totalPrioVolumeSizeUsageNot,
+                totalPrioVolumeSizeUsageNotIn,
                 type,
                 typeIn,
                 typeNot,
                 typeNotIn,
+                upgradeForTiering,
+                upgradeForTieringNot,
                 upgradeToolVersion,
                 upgradeToolVersionContains,
                 upgradeToolVersionEndsWith,
@@ -28637,6 +37366,14 @@ public class ClusterWhereInput
                 upgradeToolVersionNotIn,
                 upgradeToolVersionNotStartsWith,
                 upgradeToolVersionStartsWith,
+                usedCacheSpace,
+                usedCacheSpaceGt,
+                usedCacheSpaceGte,
+                usedCacheSpaceIn,
+                usedCacheSpaceLt,
+                usedCacheSpaceLte,
+                usedCacheSpaceNot,
+                usedCacheSpaceNotIn,
                 usedCpuHz,
                 usedCpuHzGt,
                 usedCpuHzGte,
@@ -28661,6 +37398,14 @@ public class ClusterWhereInput
                 usedMemoryBytesLte,
                 usedMemoryBytesNot,
                 usedMemoryBytesNotIn,
+                validCacheSpace,
+                validCacheSpaceGt,
+                validCacheSpaceGte,
+                validCacheSpaceIn,
+                validCacheSpaceLt,
+                validCacheSpaceLte,
+                validCacheSpaceNot,
+                validCacheSpaceNotIn,
                 validDataSpace,
                 validDataSpaceGt,
                 validDataSpaceGte,
@@ -28726,6 +37471,60 @@ public class ClusterWhereInput
         sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
         sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
         sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+        sb.append("    accessWriteCompressEnabled: ")
+                .append(toIndentedString(accessWriteCompressEnabled))
+                .append("\n");
+        sb.append("    accessWriteCompressEnabledNot: ")
+                .append(toIndentedString(accessWriteCompressEnabledNot))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpace: ")
+                .append(toIndentedString(allocatedPrioritizedSpace))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceGt: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceGt))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceGte: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceGte))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceIn: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceIn))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceLt: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceLt))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceLte: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceLte))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceNot: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceNot))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceNotIn: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceNotIn))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsage: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsage))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageGt: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageGt))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageGte: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageGte))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageIn: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageIn))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageLt: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageLt))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageLte: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageLte))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageNot: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageNot))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsageNotIn: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsageNotIn))
+                .append("\n");
         sb.append("    applicationHighestVersion: ")
                 .append(toIndentedString(applicationHighestVersion))
                 .append("\n");
@@ -28781,6 +37580,30 @@ public class ClusterWhereInput
                 .append("\n");
         sb.append("    autoConverge: ").append(toIndentedString(autoConverge)).append("\n");
         sb.append("    autoConvergeNot: ").append(toIndentedString(autoConvergeNot)).append("\n");
+        sb.append("    commitedMemoryBytes: ")
+                .append(toIndentedString(commitedMemoryBytes))
+                .append("\n");
+        sb.append("    commitedMemoryBytesGt: ")
+                .append(toIndentedString(commitedMemoryBytesGt))
+                .append("\n");
+        sb.append("    commitedMemoryBytesGte: ")
+                .append(toIndentedString(commitedMemoryBytesGte))
+                .append("\n");
+        sb.append("    commitedMemoryBytesIn: ")
+                .append(toIndentedString(commitedMemoryBytesIn))
+                .append("\n");
+        sb.append("    commitedMemoryBytesLt: ")
+                .append(toIndentedString(commitedMemoryBytesLt))
+                .append("\n");
+        sb.append("    commitedMemoryBytesLte: ")
+                .append(toIndentedString(commitedMemoryBytesLte))
+                .append("\n");
+        sb.append("    commitedMemoryBytesNot: ")
+                .append(toIndentedString(commitedMemoryBytesNot))
+                .append("\n");
+        sb.append("    commitedMemoryBytesNotIn: ")
+                .append(toIndentedString(commitedMemoryBytesNotIn))
+                .append("\n");
         sb.append("    connectState: ").append(toIndentedString(connectState)).append("\n");
         sb.append("    connectStateIn: ").append(toIndentedString(connectStateIn)).append("\n");
         sb.append("    connectStateNot: ").append(toIndentedString(connectStateNot)).append("\n");
@@ -28836,6 +37659,54 @@ public class ClusterWhereInput
         sb.append("    currentCpuModelStartsWith: ")
                 .append(toIndentedString(currentCpuModelStartsWith))
                 .append("\n");
+        sb.append("    dataReductionRatio: ")
+                .append(toIndentedString(dataReductionRatio))
+                .append("\n");
+        sb.append("    dataReductionRatioGt: ")
+                .append(toIndentedString(dataReductionRatioGt))
+                .append("\n");
+        sb.append("    dataReductionRatioGte: ")
+                .append(toIndentedString(dataReductionRatioGte))
+                .append("\n");
+        sb.append("    dataReductionRatioIn: ")
+                .append(toIndentedString(dataReductionRatioIn))
+                .append("\n");
+        sb.append("    dataReductionRatioLt: ")
+                .append(toIndentedString(dataReductionRatioLt))
+                .append("\n");
+        sb.append("    dataReductionRatioLte: ")
+                .append(toIndentedString(dataReductionRatioLte))
+                .append("\n");
+        sb.append("    dataReductionRatioNot: ")
+                .append(toIndentedString(dataReductionRatioNot))
+                .append("\n");
+        sb.append("    dataReductionRatioNotIn: ")
+                .append(toIndentedString(dataReductionRatioNotIn))
+                .append("\n");
+        sb.append("    dataReductionSaving: ")
+                .append(toIndentedString(dataReductionSaving))
+                .append("\n");
+        sb.append("    dataReductionSavingGt: ")
+                .append(toIndentedString(dataReductionSavingGt))
+                .append("\n");
+        sb.append("    dataReductionSavingGte: ")
+                .append(toIndentedString(dataReductionSavingGte))
+                .append("\n");
+        sb.append("    dataReductionSavingIn: ")
+                .append(toIndentedString(dataReductionSavingIn))
+                .append("\n");
+        sb.append("    dataReductionSavingLt: ")
+                .append(toIndentedString(dataReductionSavingLt))
+                .append("\n");
+        sb.append("    dataReductionSavingLte: ")
+                .append(toIndentedString(dataReductionSavingLte))
+                .append("\n");
+        sb.append("    dataReductionSavingNot: ")
+                .append(toIndentedString(dataReductionSavingNot))
+                .append("\n");
+        sb.append("    dataReductionSavingNotIn: ")
+                .append(toIndentedString(dataReductionSavingNotIn))
+                .append("\n");
         sb.append("    datacentersEvery: ").append(toIndentedString(datacentersEvery)).append("\n");
         sb.append("    datacentersNone: ").append(toIndentedString(datacentersNone)).append("\n");
         sb.append("    datacentersSome: ").append(toIndentedString(datacentersSome)).append("\n");
@@ -28873,6 +37744,33 @@ public class ClusterWhereInput
         sb.append("    disconnectedReasonNotIn: ")
                 .append(toIndentedString(disconnectedReasonNotIn))
                 .append("\n");
+        sb.append("    downgradedPrioritizedSpace: ")
+                .append(toIndentedString(downgradedPrioritizedSpace))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceGt: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceGt))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceGte: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceGte))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceIn: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceIn))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceLt: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceLt))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceLte: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceLte))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceNot: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceNot))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceNotIn: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceNotIn))
+                .append("\n");
+        sb.append("    ecpLicense: ").append(toIndentedString(ecpLicense)).append("\n");
+        sb.append("    enableTiering: ").append(toIndentedString(enableTiering)).append("\n");
+        sb.append("    enableTieringNot: ").append(toIndentedString(enableTieringNot)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -29079,6 +37977,30 @@ public class ClusterWhereInput
                 .append("\n");
         sb.append("    localIdStartsWith: ")
                 .append(toIndentedString(localIdStartsWith))
+                .append("\n");
+        sb.append("    logicalUsedDataSpace: ")
+                .append(toIndentedString(logicalUsedDataSpace))
+                .append("\n");
+        sb.append("    logicalUsedDataSpaceGt: ")
+                .append(toIndentedString(logicalUsedDataSpaceGt))
+                .append("\n");
+        sb.append("    logicalUsedDataSpaceGte: ")
+                .append(toIndentedString(logicalUsedDataSpaceGte))
+                .append("\n");
+        sb.append("    logicalUsedDataSpaceIn: ")
+                .append(toIndentedString(logicalUsedDataSpaceIn))
+                .append("\n");
+        sb.append("    logicalUsedDataSpaceLt: ")
+                .append(toIndentedString(logicalUsedDataSpaceLt))
+                .append("\n");
+        sb.append("    logicalUsedDataSpaceLte: ")
+                .append(toIndentedString(logicalUsedDataSpaceLte))
+                .append("\n");
+        sb.append("    logicalUsedDataSpaceNot: ")
+                .append(toIndentedString(logicalUsedDataSpaceNot))
+                .append("\n");
+        sb.append("    logicalUsedDataSpaceNotIn: ")
+                .append(toIndentedString(logicalUsedDataSpaceNotIn))
                 .append("\n");
         sb.append("    maintenanceEndDate: ")
                 .append(toIndentedString(maintenanceEndDate))
@@ -29320,6 +38242,12 @@ public class ClusterWhereInput
                 .append(toIndentedString(nameNotStartsWith))
                 .append("\n");
         sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
+        sb.append("    noPerformanceLayer: ")
+                .append(toIndentedString(noPerformanceLayer))
+                .append("\n");
+        sb.append("    noPerformanceLayerNot: ")
+                .append(toIndentedString(noPerformanceLayerNot))
+                .append("\n");
         sb.append("    ntpMode: ").append(toIndentedString(ntpMode)).append("\n");
         sb.append("    ntpModeIn: ").append(toIndentedString(ntpModeIn)).append("\n");
         sb.append("    ntpModeNot: ").append(toIndentedString(ntpModeNot)).append("\n");
@@ -29338,8 +38266,200 @@ public class ClusterWhereInput
                 .append("\n");
         sb.append("    nvmfEnabled: ").append(toIndentedString(nvmfEnabled)).append("\n");
         sb.append("    nvmfEnabledNot: ").append(toIndentedString(nvmfEnabledNot)).append("\n");
+        sb.append("    overallEfficiency: ")
+                .append(toIndentedString(overallEfficiency))
+                .append("\n");
+        sb.append("    overallEfficiencyGt: ")
+                .append(toIndentedString(overallEfficiencyGt))
+                .append("\n");
+        sb.append("    overallEfficiencyGte: ")
+                .append(toIndentedString(overallEfficiencyGte))
+                .append("\n");
+        sb.append("    overallEfficiencyIn: ")
+                .append(toIndentedString(overallEfficiencyIn))
+                .append("\n");
+        sb.append("    overallEfficiencyLt: ")
+                .append(toIndentedString(overallEfficiencyLt))
+                .append("\n");
+        sb.append("    overallEfficiencyLte: ")
+                .append(toIndentedString(overallEfficiencyLte))
+                .append("\n");
+        sb.append("    overallEfficiencyNot: ")
+                .append(toIndentedString(overallEfficiencyNot))
+                .append("\n");
+        sb.append("    overallEfficiencyNotIn: ")
+                .append(toIndentedString(overallEfficiencyNotIn))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpace: ")
+                .append(toIndentedString(perfAllocatedDataSpace))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceGt: ")
+                .append(toIndentedString(perfAllocatedDataSpaceGt))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceGte: ")
+                .append(toIndentedString(perfAllocatedDataSpaceGte))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceIn: ")
+                .append(toIndentedString(perfAllocatedDataSpaceIn))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceLt: ")
+                .append(toIndentedString(perfAllocatedDataSpaceLt))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceLte: ")
+                .append(toIndentedString(perfAllocatedDataSpaceLte))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceNot: ")
+                .append(toIndentedString(perfAllocatedDataSpaceNot))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpaceNotIn: ")
+                .append(toIndentedString(perfAllocatedDataSpaceNotIn))
+                .append("\n");
+        sb.append("    perfFailureDataSpace: ")
+                .append(toIndentedString(perfFailureDataSpace))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceGt: ")
+                .append(toIndentedString(perfFailureDataSpaceGt))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceGte: ")
+                .append(toIndentedString(perfFailureDataSpaceGte))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceIn: ")
+                .append(toIndentedString(perfFailureDataSpaceIn))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceLt: ")
+                .append(toIndentedString(perfFailureDataSpaceLt))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceLte: ")
+                .append(toIndentedString(perfFailureDataSpaceLte))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceNot: ")
+                .append(toIndentedString(perfFailureDataSpaceNot))
+                .append("\n");
+        sb.append("    perfFailureDataSpaceNotIn: ")
+                .append(toIndentedString(perfFailureDataSpaceNotIn))
+                .append("\n");
+        sb.append("    perfTotalDataCapacity: ")
+                .append(toIndentedString(perfTotalDataCapacity))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityGt: ")
+                .append(toIndentedString(perfTotalDataCapacityGt))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityGte: ")
+                .append(toIndentedString(perfTotalDataCapacityGte))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityIn: ")
+                .append(toIndentedString(perfTotalDataCapacityIn))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityLt: ")
+                .append(toIndentedString(perfTotalDataCapacityLt))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityLte: ")
+                .append(toIndentedString(perfTotalDataCapacityLte))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityNot: ")
+                .append(toIndentedString(perfTotalDataCapacityNot))
+                .append("\n");
+        sb.append("    perfTotalDataCapacityNotIn: ")
+                .append(toIndentedString(perfTotalDataCapacityNotIn))
+                .append("\n");
+        sb.append("    perfUsedDataSpace: ")
+                .append(toIndentedString(perfUsedDataSpace))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceGt: ")
+                .append(toIndentedString(perfUsedDataSpaceGt))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceGte: ")
+                .append(toIndentedString(perfUsedDataSpaceGte))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceIn: ")
+                .append(toIndentedString(perfUsedDataSpaceIn))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceLt: ")
+                .append(toIndentedString(perfUsedDataSpaceLt))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceLte: ")
+                .append(toIndentedString(perfUsedDataSpaceLte))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceNot: ")
+                .append(toIndentedString(perfUsedDataSpaceNot))
+                .append("\n");
+        sb.append("    perfUsedDataSpaceNotIn: ")
+                .append(toIndentedString(perfUsedDataSpaceNotIn))
+                .append("\n");
+        sb.append("    perfValidDataSpace: ")
+                .append(toIndentedString(perfValidDataSpace))
+                .append("\n");
+        sb.append("    perfValidDataSpaceGt: ")
+                .append(toIndentedString(perfValidDataSpaceGt))
+                .append("\n");
+        sb.append("    perfValidDataSpaceGte: ")
+                .append(toIndentedString(perfValidDataSpaceGte))
+                .append("\n");
+        sb.append("    perfValidDataSpaceIn: ")
+                .append(toIndentedString(perfValidDataSpaceIn))
+                .append("\n");
+        sb.append("    perfValidDataSpaceLt: ")
+                .append(toIndentedString(perfValidDataSpaceLt))
+                .append("\n");
+        sb.append("    perfValidDataSpaceLte: ")
+                .append(toIndentedString(perfValidDataSpaceLte))
+                .append("\n");
+        sb.append("    perfValidDataSpaceNot: ")
+                .append(toIndentedString(perfValidDataSpaceNot))
+                .append("\n");
+        sb.append("    perfValidDataSpaceNotIn: ")
+                .append(toIndentedString(perfValidDataSpaceNotIn))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpace: ")
+                .append(toIndentedString(plannedPrioritizedSpace))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceGt: ")
+                .append(toIndentedString(plannedPrioritizedSpaceGt))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceGte: ")
+                .append(toIndentedString(plannedPrioritizedSpaceGte))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceIn: ")
+                .append(toIndentedString(plannedPrioritizedSpaceIn))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceLt: ")
+                .append(toIndentedString(plannedPrioritizedSpaceLt))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceLte: ")
+                .append(toIndentedString(plannedPrioritizedSpaceLte))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceNot: ")
+                .append(toIndentedString(plannedPrioritizedSpaceNot))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpaceNotIn: ")
+                .append(toIndentedString(plannedPrioritizedSpaceNotIn))
+                .append("\n");
         sb.append("    pmemEnabled: ").append(toIndentedString(pmemEnabled)).append("\n");
         sb.append("    pmemEnabledNot: ").append(toIndentedString(pmemEnabledNot)).append("\n");
+        sb.append("    prioSpacePercentage: ")
+                .append(toIndentedString(prioSpacePercentage))
+                .append("\n");
+        sb.append("    prioSpacePercentageGt: ")
+                .append(toIndentedString(prioSpacePercentageGt))
+                .append("\n");
+        sb.append("    prioSpacePercentageGte: ")
+                .append(toIndentedString(prioSpacePercentageGte))
+                .append("\n");
+        sb.append("    prioSpacePercentageIn: ")
+                .append(toIndentedString(prioSpacePercentageIn))
+                .append("\n");
+        sb.append("    prioSpacePercentageLt: ")
+                .append(toIndentedString(prioSpacePercentageLt))
+                .append("\n");
+        sb.append("    prioSpacePercentageLte: ")
+                .append(toIndentedString(prioSpacePercentageLte))
+                .append("\n");
+        sb.append("    prioSpacePercentageNot: ")
+                .append(toIndentedString(prioSpacePercentageNot))
+                .append("\n");
+        sb.append("    prioSpacePercentageNotIn: ")
+                .append(toIndentedString(prioSpacePercentageNotIn))
+                .append("\n");
         sb.append("    provisionedCpuCores: ")
                 .append(toIndentedString(provisionedCpuCores))
                 .append("\n");
@@ -29491,6 +38611,12 @@ public class ClusterWhereInput
         sb.append("    recoverSpeedNot: ").append(toIndentedString(recoverSpeedNot)).append("\n");
         sb.append("    recoverSpeedNotIn: ")
                 .append(toIndentedString(recoverSpeedNotIn))
+                .append("\n");
+        sb.append("    replicaCapacityOnly: ")
+                .append(toIndentedString(replicaCapacityOnly))
+                .append("\n");
+        sb.append("    replicaCapacityOnlyNot: ")
+                .append(toIndentedString(replicaCapacityOnlyNot))
                 .append("\n");
         sb.append("    reservedCpuCoresForSystemService: ")
                 .append(toIndentedString(reservedCpuCoresForSystemService))
@@ -29675,10 +38801,64 @@ public class ClusterWhereInput
         sb.append("    totalMemoryBytesNotIn: ")
                 .append(toIndentedString(totalMemoryBytesNotIn))
                 .append("\n");
+        sb.append("    totalPrioVolumeSize: ")
+                .append(toIndentedString(totalPrioVolumeSize))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeGt: ")
+                .append(toIndentedString(totalPrioVolumeSizeGt))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeGte: ")
+                .append(toIndentedString(totalPrioVolumeSizeGte))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeIn: ")
+                .append(toIndentedString(totalPrioVolumeSizeIn))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeLt: ")
+                .append(toIndentedString(totalPrioVolumeSizeLt))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeLte: ")
+                .append(toIndentedString(totalPrioVolumeSizeLte))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeNot: ")
+                .append(toIndentedString(totalPrioVolumeSizeNot))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeNotIn: ")
+                .append(toIndentedString(totalPrioVolumeSizeNotIn))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeUsage: ")
+                .append(toIndentedString(totalPrioVolumeSizeUsage))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeUsageGt: ")
+                .append(toIndentedString(totalPrioVolumeSizeUsageGt))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeUsageGte: ")
+                .append(toIndentedString(totalPrioVolumeSizeUsageGte))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeUsageIn: ")
+                .append(toIndentedString(totalPrioVolumeSizeUsageIn))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeUsageLt: ")
+                .append(toIndentedString(totalPrioVolumeSizeUsageLt))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeUsageLte: ")
+                .append(toIndentedString(totalPrioVolumeSizeUsageLte))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeUsageNot: ")
+                .append(toIndentedString(totalPrioVolumeSizeUsageNot))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeUsageNotIn: ")
+                .append(toIndentedString(totalPrioVolumeSizeUsageNotIn))
+                .append("\n");
         sb.append("    type: ").append(toIndentedString(type)).append("\n");
         sb.append("    typeIn: ").append(toIndentedString(typeIn)).append("\n");
         sb.append("    typeNot: ").append(toIndentedString(typeNot)).append("\n");
         sb.append("    typeNotIn: ").append(toIndentedString(typeNotIn)).append("\n");
+        sb.append("    upgradeForTiering: ")
+                .append(toIndentedString(upgradeForTiering))
+                .append("\n");
+        sb.append("    upgradeForTieringNot: ")
+                .append(toIndentedString(upgradeForTieringNot))
+                .append("\n");
         sb.append("    upgradeToolVersion: ")
                 .append(toIndentedString(upgradeToolVersion))
                 .append("\n");
@@ -29721,6 +38901,22 @@ public class ClusterWhereInput
         sb.append("    upgradeToolVersionStartsWith: ")
                 .append(toIndentedString(upgradeToolVersionStartsWith))
                 .append("\n");
+        sb.append("    usedCacheSpace: ").append(toIndentedString(usedCacheSpace)).append("\n");
+        sb.append("    usedCacheSpaceGt: ").append(toIndentedString(usedCacheSpaceGt)).append("\n");
+        sb.append("    usedCacheSpaceGte: ")
+                .append(toIndentedString(usedCacheSpaceGte))
+                .append("\n");
+        sb.append("    usedCacheSpaceIn: ").append(toIndentedString(usedCacheSpaceIn)).append("\n");
+        sb.append("    usedCacheSpaceLt: ").append(toIndentedString(usedCacheSpaceLt)).append("\n");
+        sb.append("    usedCacheSpaceLte: ")
+                .append(toIndentedString(usedCacheSpaceLte))
+                .append("\n");
+        sb.append("    usedCacheSpaceNot: ")
+                .append(toIndentedString(usedCacheSpaceNot))
+                .append("\n");
+        sb.append("    usedCacheSpaceNotIn: ")
+                .append(toIndentedString(usedCacheSpaceNotIn))
+                .append("\n");
         sb.append("    usedCpuHz: ").append(toIndentedString(usedCpuHz)).append("\n");
         sb.append("    usedCpuHzGt: ").append(toIndentedString(usedCpuHzGt)).append("\n");
         sb.append("    usedCpuHzGte: ").append(toIndentedString(usedCpuHzGte)).append("\n");
@@ -29760,6 +38956,28 @@ public class ClusterWhereInput
                 .append("\n");
         sb.append("    usedMemoryBytesNotIn: ")
                 .append(toIndentedString(usedMemoryBytesNotIn))
+                .append("\n");
+        sb.append("    validCacheSpace: ").append(toIndentedString(validCacheSpace)).append("\n");
+        sb.append("    validCacheSpaceGt: ")
+                .append(toIndentedString(validCacheSpaceGt))
+                .append("\n");
+        sb.append("    validCacheSpaceGte: ")
+                .append(toIndentedString(validCacheSpaceGte))
+                .append("\n");
+        sb.append("    validCacheSpaceIn: ")
+                .append(toIndentedString(validCacheSpaceIn))
+                .append("\n");
+        sb.append("    validCacheSpaceLt: ")
+                .append(toIndentedString(validCacheSpaceLt))
+                .append("\n");
+        sb.append("    validCacheSpaceLte: ")
+                .append(toIndentedString(validCacheSpaceLte))
+                .append("\n");
+        sb.append("    validCacheSpaceNot: ")
+                .append(toIndentedString(validCacheSpaceNot))
+                .append("\n");
+        sb.append("    validCacheSpaceNotIn: ")
+                .append(toIndentedString(validCacheSpaceNotIn))
                 .append("\n");
         sb.append("    validDataSpace: ").append(toIndentedString(validDataSpace)).append("\n");
         sb.append("    validDataSpaceGt: ").append(toIndentedString(validDataSpaceGt)).append("\n");

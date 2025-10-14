@@ -50,6 +50,30 @@ public enum NvmfNamespaceOrderByInput {
 
     BPS_WR_MAX_LENGTH_DESC("bps_wr_max_length_DESC"),
 
+    BUSINESS_HOST_IS_SAME_WITH_PARENT_ASC("business_host_is_same_with_parent_ASC"),
+
+    BUSINESS_HOST_IS_SAME_WITH_PARENT_DESC("business_host_is_same_with_parent_DESC"),
+
+    CONFIGURATION_METHOD_ASC("configuration_method_ASC"),
+
+    CONFIGURATION_METHOD_DESC("configuration_method_DESC"),
+
+    DOWNGRADED_PRIORITIZED_SPACE_ASC("downgraded_prioritized_space_ASC"),
+
+    DOWNGRADED_PRIORITIZED_SPACE_DESC("downgraded_prioritized_space_DESC"),
+
+    EC_K_ASC("ec_k_ASC"),
+
+    EC_K_DESC("ec_k_DESC"),
+
+    EC_M_ASC("ec_m_ASC"),
+
+    EC_M_DESC("ec_m_DESC"),
+
+    ENCRYPT_METHOD_ASC("encrypt_method_ASC"),
+
+    ENCRYPT_METHOD_DESC("encrypt_method_DESC"),
+
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
     ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
@@ -122,9 +146,17 @@ public enum NvmfNamespaceOrderByInput {
 
     NQN_WHITELIST_DESC("nqn_whitelist_DESC"),
 
+    PRIORITIZED_ASC("prioritized_ASC"),
+
+    PRIORITIZED_DESC("prioritized_DESC"),
+
     REPLICA_NUM_ASC("replica_num_ASC"),
 
     REPLICA_NUM_DESC("replica_num_DESC"),
+
+    RESILIENCY_TYPE_ASC("resiliency_type_ASC"),
+
+    RESILIENCY_TYPE_DESC("resiliency_type_DESC"),
 
     SHARED_SIZE_ASC("shared_size_ASC"),
 

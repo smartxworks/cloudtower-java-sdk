@@ -31,6 +31,11 @@ public class HostBatchCreateDiskInput
     @SerializedName(SERIALIZED_NAME_DRIVE)
     private String drive;
 
+    public static final String SERIALIZED_NAME_CHUNK_INS_ID = "chunk_ins_id";
+
+    @SerializedName(SERIALIZED_NAME_CHUNK_INS_ID)
+    private Integer chunkInsId;
+
     public HostBatchCreateDiskInput() {}
 
     public HostBatchCreateDiskInput type(DiskType type) {
@@ -205,6 +210,49 @@ public class HostBatchCreateDiskInput
         return this._isPresent_.contains(SERIALIZED_NAME_DRIVE);
     }
 
+    public HostBatchCreateDiskInput chunkInsId(Integer chunkInsId) {
+
+        this.chunkInsId = chunkInsId;
+        return this;
+    }
+
+    /**
+     * Get chunkInsId
+     *
+     * @return chunkInsId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getChunkInsId() {
+        return chunkInsId;
+    }
+
+    public void setChunkInsId(Integer chunkInsId) {
+        this.chunkInsId = chunkInsId;
+    }
+
+    public HostBatchCreateDiskInput chunkInsId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CHUNK_INS_ID);
+        return this;
+    }
+
+    public HostBatchCreateDiskInput chunkInsId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CHUNK_INS_ID);
+        return this;
+    }
+
+    public void setChunkInsId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CHUNK_INS_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CHUNK_INS_ID);
+        }
+    }
+
+    public boolean getChunkInsId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CHUNK_INS_ID);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -217,7 +265,8 @@ public class HostBatchCreateDiskInput
         return Objects.equals(this.type, hostBatchCreateDiskInput.type)
                 && Objects.equals(this.size, hostBatchCreateDiskInput.size)
                 && Objects.equals(this.function, hostBatchCreateDiskInput.function)
-                && Objects.equals(this.drive, hostBatchCreateDiskInput.drive);
+                && Objects.equals(this.drive, hostBatchCreateDiskInput.drive)
+                && Objects.equals(this.chunkInsId, hostBatchCreateDiskInput.chunkInsId);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -231,7 +280,7 @@ public class HostBatchCreateDiskInput
 
     @Override
     public int hashCode() {
-        return Objects.hash(type, size, function, drive);
+        return Objects.hash(type, size, function, drive, chunkInsId);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -249,6 +298,7 @@ public class HostBatchCreateDiskInput
         sb.append("    size: ").append(toIndentedString(size)).append("\n");
         sb.append("    function: ").append(toIndentedString(function)).append("\n");
         sb.append("    drive: ").append(toIndentedString(drive)).append("\n");
+        sb.append("    chunkInsId: ").append(toIndentedString(chunkInsId)).append("\n");
         sb.append("}");
         return sb.toString();
     }

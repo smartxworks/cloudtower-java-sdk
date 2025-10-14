@@ -115,6 +115,11 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
     @SerializedName(SERIALIZED_NAME_CLUSTER)
     private String cluster;
 
+    public static final String SERIALIZED_NAME_CID = "_cid";
+
+    @SerializedName(SERIALIZED_NAME_CID)
+    private String cid;
+
     public static final String SERIALIZED_NAME_CHUNK = "_chunk";
 
     @SerializedName(SERIALIZED_NAME_CHUNK)
@@ -1031,6 +1036,49 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
         return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER);
     }
 
+    public MetricLabel cid(String cid) {
+
+        this.cid = cid;
+        return this;
+    }
+
+    /**
+     * Get cid
+     *
+     * @return cid
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCid() {
+        return cid;
+    }
+
+    public void setCid(String cid) {
+        this.cid = cid;
+    }
+
+    public MetricLabel cid_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CID);
+        return this;
+    }
+
+    public MetricLabel cid_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CID);
+        return this;
+    }
+
+    public void setCid_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CID);
+        }
+    }
+
+    public boolean getCid_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CID);
+    }
+
     public MetricLabel chunk(String chunk) {
 
         this.chunk = chunk;
@@ -1146,6 +1194,7 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
                 && Objects.equals(this.esxiUuid, metricLabel.esxiUuid)
                 && Objects.equals(this.device, metricLabel.device)
                 && Objects.equals(this.cluster, metricLabel.cluster)
+                && Objects.equals(this.cid, metricLabel.cid)
                 && Objects.equals(this.chunk, metricLabel.chunk)
                 && Objects.equals(this.typename, metricLabel.typename);
     }
@@ -1182,6 +1231,7 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
                 esxiUuid,
                 device,
                 cluster,
+                cid,
                 chunk,
                 typename);
     }
@@ -1217,6 +1267,7 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
         sb.append("    esxiUuid: ").append(toIndentedString(esxiUuid)).append("\n");
         sb.append("    device: ").append(toIndentedString(device)).append("\n");
         sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
+        sb.append("    cid: ").append(toIndentedString(cid)).append("\n");
         sb.append("    chunk: ").append(toIndentedString(chunk)).append("\n");
         sb.append("    typename: ").append(toIndentedString(typename)).append("\n");
         sb.append("}");

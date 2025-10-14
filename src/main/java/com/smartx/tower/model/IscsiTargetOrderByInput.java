@@ -58,9 +58,29 @@ public enum IscsiTargetOrderByInput {
 
     CHAP_SECRET_DESC("chap_secret_DESC"),
 
+    CONFIGURATION_ADAPTIVE_ASC("configuration_adaptive_ASC"),
+
+    CONFIGURATION_ADAPTIVE_DESC("configuration_adaptive_DESC"),
+
+    CONFIGURATION_METHOD_ASC("configuration_method_ASC"),
+
+    CONFIGURATION_METHOD_DESC("configuration_method_DESC"),
+
     DESCRIPTION_ASC("description_ASC"),
 
     DESCRIPTION_DESC("description_DESC"),
+
+    EC_K_ASC("ec_k_ASC"),
+
+    EC_K_DESC("ec_k_DESC"),
+
+    EC_M_ASC("ec_m_ASC"),
+
+    EC_M_DESC("ec_m_DESC"),
+
+    ENCRYPT_METHOD_ASC("encrypt_method_ASC"),
+
+    ENCRYPT_METHOD_DESC("encrypt_method_DESC"),
 
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
@@ -134,6 +154,10 @@ public enum IscsiTargetOrderByInput {
 
     IQN_WHITELIST_DESC("iqn_whitelist_DESC"),
 
+    ISCSI_LUNS_NUM_ASC("iscsi_luns_num_ASC"),
+
+    ISCSI_LUNS_NUM_DESC("iscsi_luns_num_DESC"),
+
     LOCAL_ID_ASC("local_id_ASC"),
 
     LOCAL_ID_DESC("local_id_DESC"),
@@ -142,9 +166,17 @@ public enum IscsiTargetOrderByInput {
 
     NAME_DESC("name_DESC"),
 
+    PRIORITIZED_ASC("prioritized_ASC"),
+
+    PRIORITIZED_DESC("prioritized_DESC"),
+
     REPLICA_NUM_ASC("replica_num_ASC"),
 
     REPLICA_NUM_DESC("replica_num_DESC"),
+
+    RESILIENCY_TYPE_ASC("resiliency_type_ASC"),
+
+    RESILIENCY_TYPE_DESC("resiliency_type_DESC"),
 
     STRIPE_NUM_ASC("stripe_num_ASC"),
 

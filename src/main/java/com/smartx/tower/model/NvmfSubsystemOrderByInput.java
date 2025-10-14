@@ -46,9 +46,29 @@ public enum NvmfSubsystemOrderByInput {
 
     BPS_WR_MAX_LENGTH_DESC("bps_wr_max_length_DESC"),
 
+    CONFIGURATION_ADAPTIVE_ASC("configuration_adaptive_ASC"),
+
+    CONFIGURATION_ADAPTIVE_DESC("configuration_adaptive_DESC"),
+
+    CONFIGURATION_METHOD_ASC("configuration_method_ASC"),
+
+    CONFIGURATION_METHOD_DESC("configuration_method_DESC"),
+
     DESCRIPTION_ASC("description_ASC"),
 
     DESCRIPTION_DESC("description_DESC"),
+
+    EC_K_ASC("ec_k_ASC"),
+
+    EC_K_DESC("ec_k_DESC"),
+
+    EC_M_ASC("ec_m_ASC"),
+
+    EC_M_DESC("ec_m_DESC"),
+
+    ENCRYPT_METHOD_ASC("encrypt_method_ASC"),
+
+    ENCRYPT_METHOD_DESC("encrypt_method_DESC"),
 
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
@@ -126,13 +146,25 @@ public enum NvmfSubsystemOrderByInput {
 
     NQN_WHITELIST_DESC("nqn_whitelist_DESC"),
 
+    NVMF_NAMESPACES_NUM_ASC("nvmf_namespaces_num_ASC"),
+
+    NVMF_NAMESPACES_NUM_DESC("nvmf_namespaces_num_DESC"),
+
     POLICY_ASC("policy_ASC"),
 
     POLICY_DESC("policy_DESC"),
 
+    PRIORITIZED_ASC("prioritized_ASC"),
+
+    PRIORITIZED_DESC("prioritized_DESC"),
+
     REPLICA_NUM_ASC("replica_num_ASC"),
 
     REPLICA_NUM_DESC("replica_num_DESC"),
+
+    RESILIENCY_TYPE_ASC("resiliency_type_ASC"),
+
+    RESILIENCY_TYPE_DESC("resiliency_type_DESC"),
 
     STRIPE_NUM_ASC("stripe_num_ASC"),
 

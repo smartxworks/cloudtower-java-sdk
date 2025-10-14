@@ -38,6 +38,8 @@ src/main/java/com/smartx/tower/api/BackupServiceApi.java
 src/main/java/com/smartx/tower/api/BackupStoreRepositoryApi.java
 src/main/java/com/smartx/tower/api/BackupTargetExecutionApi.java
 src/main/java/com/smartx/tower/api/BrickTopoApi.java
+src/main/java/com/smartx/tower/api/BusinessHostApi.java
+src/main/java/com/smartx/tower/api/BusinessHostGroupApi.java
 src/main/java/com/smartx/tower/api/CloudTowerApplicationApi.java
 src/main/java/com/smartx/tower/api/CloudTowerApplicationPackageApi.java
 src/main/java/com/smartx/tower/api/ClusterApi.java
@@ -53,6 +55,8 @@ src/main/java/com/smartx/tower/api/DatacenterApi.java
 src/main/java/com/smartx/tower/api/DeployApi.java
 src/main/java/com/smartx/tower/api/DiscoveredHostApi.java
 src/main/java/com/smartx/tower/api/DiskApi.java
+src/main/java/com/smartx/tower/api/DiskPoolApi.java
+src/main/java/com/smartx/tower/api/EcpLicenseApi.java
 src/main/java/com/smartx/tower/api/ElfDataStoreApi.java
 src/main/java/com/smartx/tower/api/ElfImageApi.java
 src/main/java/com/smartx/tower/api/ElfStoragePolicyApi.java
@@ -95,6 +99,7 @@ src/main/java/com/smartx/tower/api/PmemDimmApi.java
 src/main/java/com/smartx/tower/api/RackTopoApi.java
 src/main/java/com/smartx/tower/api/ReplicaVmApi.java
 src/main/java/com/smartx/tower/api/ReplicationPlanApi.java
+src/main/java/com/smartx/tower/api/ReplicationServiceApi.java
 src/main/java/com/smartx/tower/api/ReportTaskApi.java
 src/main/java/com/smartx/tower/api/ReportTemplateApi.java
 src/main/java/com/smartx/tower/api/ResourceChangeApi.java
@@ -285,6 +290,14 @@ src/main/java/com/smartx/tower/model/BrickTopoUpdationParams.java
 src/main/java/com/smartx/tower/model/BrickTopoUpdationParamsData.java
 src/main/java/com/smartx/tower/model/BrickTopoWhereInput.java
 src/main/java/com/smartx/tower/model/Bus.java
+src/main/java/com/smartx/tower/model/BusinessHost.java
+src/main/java/com/smartx/tower/model/BusinessHostConnection.java
+src/main/java/com/smartx/tower/model/BusinessHostGroup.java
+src/main/java/com/smartx/tower/model/BusinessHostGroupConnection.java
+src/main/java/com/smartx/tower/model/BusinessHostGroupOrderByInput.java
+src/main/java/com/smartx/tower/model/BusinessHostGroupWhereInput.java
+src/main/java/com/smartx/tower/model/BusinessHostOrderByInput.java
+src/main/java/com/smartx/tower/model/BusinessHostWhereInput.java
 src/main/java/com/smartx/tower/model/ByteUnit.java
 src/main/java/com/smartx/tower/model/CancelUploadTaskParams.java
 src/main/java/com/smartx/tower/model/CloneVmVolumeParams.java
@@ -307,7 +320,12 @@ src/main/java/com/smartx/tower/model/ClusterConnection.java
 src/main/java/com/smartx/tower/model/ClusterConnectorErrorCode.java
 src/main/java/com/smartx/tower/model/ClusterCreationParams.java
 src/main/java/com/smartx/tower/model/ClusterDeletionParams.java
+src/main/java/com/smartx/tower/model/ClusterDisablePinInPerformanceParams.java
 src/main/java/com/smartx/tower/model/ClusterEnableIscsiUpdationParams.java
+src/main/java/com/smartx/tower/model/ClusterEnablePinInPerformanceDiskPoolType.java
+src/main/java/com/smartx/tower/model/ClusterEnablePinInPerformanceHostType.java
+src/main/java/com/smartx/tower/model/ClusterEnablePinInPerformanceParams.java
+src/main/java/com/smartx/tower/model/ClusterEnablePinInPerformanceParamsData.java
 src/main/java/com/smartx/tower/model/ClusterHaUpdationParams.java
 src/main/java/com/smartx/tower/model/ClusterImage.java
 src/main/java/com/smartx/tower/model/ClusterImageConnection.java
@@ -318,6 +336,7 @@ src/main/java/com/smartx/tower/model/ClusterLicenseUpdationParamsData.java
 src/main/java/com/smartx/tower/model/ClusterNetworkSettingUpdationParams.java
 src/main/java/com/smartx/tower/model/ClusterNetworkSettingUpdationParamsData.java
 src/main/java/com/smartx/tower/model/ClusterOrderByInput.java
+src/main/java/com/smartx/tower/model/ClusterPinInPerformanceInfo.java
 src/main/java/com/smartx/tower/model/ClusterRecycleBinCreationParams.java
 src/main/java/com/smartx/tower/model/ClusterRecycleBinCreationParamsData.java
 src/main/java/com/smartx/tower/model/ClusterRecycleBinDeletionParams.java
@@ -345,6 +364,7 @@ src/main/java/com/smartx/tower/model/ClusterWhereInput.java
 src/main/java/com/smartx/tower/model/ClusterWhereUniqueInput.java
 src/main/java/com/smartx/tower/model/ColumnConfig.java
 src/main/java/com/smartx/tower/model/CommonHeader.java
+src/main/java/com/smartx/tower/model/ConfigurationMethod.java
 src/main/java/com/smartx/tower/model/ConnectState.java
 src/main/java/com/smartx/tower/model/ConsistencyGroup.java
 src/main/java/com/smartx/tower/model/ConsistencyGroupConnection.java
@@ -485,11 +505,24 @@ src/main/java/com/smartx/tower/model/DiskMountParams.java
 src/main/java/com/smartx/tower/model/DiskMountParamsData.java
 src/main/java/com/smartx/tower/model/DiskOperateModifyDisk.java
 src/main/java/com/smartx/tower/model/DiskOrderByInput.java
+src/main/java/com/smartx/tower/model/DiskPool.java
+src/main/java/com/smartx/tower/model/DiskPoolConnection.java
+src/main/java/com/smartx/tower/model/DiskPoolOrderByInput.java
+src/main/java/com/smartx/tower/model/DiskPoolPinInPerformanceInfo.java
+src/main/java/com/smartx/tower/model/DiskPoolStatus.java
+src/main/java/com/smartx/tower/model/DiskPoolUseState.java
+src/main/java/com/smartx/tower/model/DiskPoolWhereInput.java
+src/main/java/com/smartx/tower/model/DiskPoolWhereUniqueInput.java
 src/main/java/com/smartx/tower/model/DiskType.java
 src/main/java/com/smartx/tower/model/DiskUnmountParams.java
 src/main/java/com/smartx/tower/model/DiskUsage.java
 src/main/java/com/smartx/tower/model/DiskUsageStatus.java
 src/main/java/com/smartx/tower/model/DiskWhereInput.java
+src/main/java/com/smartx/tower/model/EcpEdition.java
+src/main/java/com/smartx/tower/model/EcpLicense.java
+src/main/java/com/smartx/tower/model/EcpLicenseConnection.java
+src/main/java/com/smartx/tower/model/EcpLicenseOrderByInput.java
+src/main/java/com/smartx/tower/model/EcpLicenseWhereInput.java
 src/main/java/com/smartx/tower/model/ElfDataStore.java
 src/main/java/com/smartx/tower/model/ElfDataStoreConnection.java
 src/main/java/com/smartx/tower/model/ElfDataStoreOrderByInput.java
@@ -506,6 +539,7 @@ src/main/java/com/smartx/tower/model/ElfStoragePolicy.java
 src/main/java/com/smartx/tower/model/ElfStoragePolicyConnection.java
 src/main/java/com/smartx/tower/model/ElfStoragePolicyOrderByInput.java
 src/main/java/com/smartx/tower/model/ElfStoragePolicyWhereInput.java
+src/main/java/com/smartx/tower/model/EncryptMethod.java
 src/main/java/com/smartx/tower/model/EnterMaintenanceModeCheckParams.java
 src/main/java/com/smartx/tower/model/EnterMaintenanceModeCheckResult.java
 src/main/java/com/smartx/tower/model/EnterMaintenanceModeInput.java
@@ -585,6 +619,10 @@ src/main/java/com/smartx/tower/model/GetBackupTargetExecutionsConnectionRequestB
 src/main/java/com/smartx/tower/model/GetBackupTargetExecutionsRequestBody.java
 src/main/java/com/smartx/tower/model/GetBrickTopoesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetBrickTopoesRequestBody.java
+src/main/java/com/smartx/tower/model/GetBusinessHostGroupsConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetBusinessHostGroupsRequestBody.java
+src/main/java/com/smartx/tower/model/GetBusinessHostsConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetBusinessHostsRequestBody.java
 src/main/java/com/smartx/tower/model/GetCloudTowerApplicationPackagesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetCloudTowerApplicationPackagesRequestBody.java
 src/main/java/com/smartx/tower/model/GetCloudTowerApplicationsConnectionRequestBody.java
@@ -592,6 +630,7 @@ src/main/java/com/smartx/tower/model/GetCloudTowerApplicationsRequestBody.java
 src/main/java/com/smartx/tower/model/GetClusterImagesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetClusterImagesRequestBody.java
 src/main/java/com/smartx/tower/model/GetClusterMetricInput.java
+src/main/java/com/smartx/tower/model/GetClusterPinInPerformanceInfoRequestBody.java
 src/main/java/com/smartx/tower/model/GetClusterSettingsesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetClusterSettingsesRequestBody.java
 src/main/java/com/smartx/tower/model/GetClusterStorageInfoEffect.java
@@ -616,8 +655,12 @@ src/main/java/com/smartx/tower/model/GetDeploysConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetDeploysRequestBody.java
 src/main/java/com/smartx/tower/model/GetDiscoverHostsRequestBody.java
 src/main/java/com/smartx/tower/model/GetDiskMetricInput.java
+src/main/java/com/smartx/tower/model/GetDiskPoolsConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetDiskPoolsRequestBody.java
 src/main/java/com/smartx/tower/model/GetDisksConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetDisksRequestBody.java
+src/main/java/com/smartx/tower/model/GetEcpLicensesConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetEcpLicensesRequestBody.java
 src/main/java/com/smartx/tower/model/GetElfDataStoresConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetElfDataStoresRequestBody.java
 src/main/java/com/smartx/tower/model/GetElfImagesConnectionRequestBody.java
@@ -696,6 +739,8 @@ src/main/java/com/smartx/tower/model/GetReplicaVmsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetReplicaVmsRequestBody.java
 src/main/java/com/smartx/tower/model/GetReplicationPlansConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetReplicationPlansRequestBody.java
+src/main/java/com/smartx/tower/model/GetReplicationServicesConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetReplicationServicesRequestBody.java
 src/main/java/com/smartx/tower/model/GetReportTasksConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetReportTasksRequestBody.java
 src/main/java/com/smartx/tower/model/GetReportTemplatesConnectionRequestBody.java
@@ -851,16 +896,20 @@ src/main/java/com/smartx/tower/model/HostBatchCreateDiskInput.java
 src/main/java/com/smartx/tower/model/HostBatchCreateIfaceFunction.java
 src/main/java/com/smartx/tower/model/HostBatchCreateIfaceInput.java
 src/main/java/com/smartx/tower/model/HostBatchCreateIpmiInput.java
+src/main/java/com/smartx/tower/model/HostConnectStatus.java
 src/main/java/com/smartx/tower/model/HostConnection.java
 src/main/java/com/smartx/tower/model/HostCreationParams.java
 src/main/java/com/smartx/tower/model/HostCreationParamsData.java
+src/main/java/com/smartx/tower/model/HostMergedStatus.java
 src/main/java/com/smartx/tower/model/HostOrderByInput.java
+src/main/java/com/smartx/tower/model/HostPinInPerformanceInfo.java
 src/main/java/com/smartx/tower/model/HostState.java
 src/main/java/com/smartx/tower/model/HostStatus.java
 src/main/java/com/smartx/tower/model/HostUpdationParams.java
 src/main/java/com/smartx/tower/model/HostUpdationParamsData.java
 src/main/java/com/smartx/tower/model/HostVdsConfig.java
 src/main/java/com/smartx/tower/model/HostWhereInput.java
+src/main/java/com/smartx/tower/model/HostWhereUniqueInput.java
 src/main/java/com/smartx/tower/model/Hypervisor.java
 src/main/java/com/smartx/tower/model/IPSecurityPolicy.java
 src/main/java/com/smartx/tower/model/ImportVmVolumeParams.java
@@ -904,6 +953,8 @@ src/main/java/com/smartx/tower/model/IscsiTargetCreationParamsAllOf.java
 src/main/java/com/smartx/tower/model/IscsiTargetDeletionParams.java
 src/main/java/com/smartx/tower/model/IscsiTargetOrderByInput.java
 src/main/java/com/smartx/tower/model/IscsiTargetUpdationParams.java
+src/main/java/com/smartx/tower/model/IscsiTargetUpdationParamsData.java
+src/main/java/com/smartx/tower/model/IscsiTargetUpdationParamsDataAllOf.java
 src/main/java/com/smartx/tower/model/IscsiTargetWhereInput.java
 src/main/java/com/smartx/tower/model/IsolationMode.java
 src/main/java/com/smartx/tower/model/IsolationPolicy.java
@@ -963,6 +1014,7 @@ src/main/java/com/smartx/tower/model/MigrationVlanUpdationParams.java
 src/main/java/com/smartx/tower/model/MountDisksParams.java
 src/main/java/com/smartx/tower/model/MountNewCreateDisksParams.java
 src/main/java/com/smartx/tower/model/MountNewCreateDisksParamsVmVolume.java
+src/main/java/com/smartx/tower/model/MountNewCreateDisksParamsVmVolumeElfEcStoragePolicy.java
 src/main/java/com/smartx/tower/model/NamespaceGroup.java
 src/main/java/com/smartx/tower/model/NamespaceGroupConnection.java
 src/main/java/com/smartx/tower/model/NamespaceGroupCreationParams.java
@@ -983,6 +1035,8 @@ src/main/java/com/smartx/tower/model/NestedAggregateBackupService.java
 src/main/java/com/smartx/tower/model/NestedAggregateBackupStoreRepository.java
 src/main/java/com/smartx/tower/model/NestedAggregateBackupTargetExecution.java
 src/main/java/com/smartx/tower/model/NestedAggregateBrickTopo.java
+src/main/java/com/smartx/tower/model/NestedAggregateBusinessHost.java
+src/main/java/com/smartx/tower/model/NestedAggregateBusinessHostGroup.java
 src/main/java/com/smartx/tower/model/NestedAggregateCloudTowerApplication.java
 src/main/java/com/smartx/tower/model/NestedAggregateCloudTowerApplicationPackage.java
 src/main/java/com/smartx/tower/model/NestedAggregateCluster.java
@@ -997,6 +1051,8 @@ src/main/java/com/smartx/tower/model/NestedAggregateContentLibraryVmTemplate.jav
 src/main/java/com/smartx/tower/model/NestedAggregateDatacenter.java
 src/main/java/com/smartx/tower/model/NestedAggregateDeploy.java
 src/main/java/com/smartx/tower/model/NestedAggregateDisk.java
+src/main/java/com/smartx/tower/model/NestedAggregateDiskPool.java
+src/main/java/com/smartx/tower/model/NestedAggregateEcpLicense.java
 src/main/java/com/smartx/tower/model/NestedAggregateElfDataStore.java
 src/main/java/com/smartx/tower/model/NestedAggregateElfImage.java
 src/main/java/com/smartx/tower/model/NestedAggregateElfStoragePolicy.java
@@ -1031,6 +1087,7 @@ src/main/java/com/smartx/tower/model/NestedAggregatePmemDimm.java
 src/main/java/com/smartx/tower/model/NestedAggregateRackTopo.java
 src/main/java/com/smartx/tower/model/NestedAggregateReplicaVm.java
 src/main/java/com/smartx/tower/model/NestedAggregateReplicationPlan.java
+src/main/java/com/smartx/tower/model/NestedAggregateReplicationService.java
 src/main/java/com/smartx/tower/model/NestedAggregateReportTask.java
 src/main/java/com/smartx/tower/model/NestedAggregateReportTemplate.java
 src/main/java/com/smartx/tower/model/NestedAggregateSecurityGroup.java
@@ -1098,6 +1155,8 @@ src/main/java/com/smartx/tower/model/NestedBackupTargetExecution.java
 src/main/java/com/smartx/tower/model/NestedBrickDiskLayout.java
 src/main/java/com/smartx/tower/model/NestedBrickPower.java
 src/main/java/com/smartx/tower/model/NestedBrickTopo.java
+src/main/java/com/smartx/tower/model/NestedBusinessHost.java
+src/main/java/com/smartx/tower/model/NestedBusinessHostGroup.java
 src/main/java/com/smartx/tower/model/NestedCapacity.java
 src/main/java/com/smartx/tower/model/NestedCloudTowerApplication.java
 src/main/java/com/smartx/tower/model/NestedCloudTowerApplicationPackage.java
@@ -1117,6 +1176,8 @@ src/main/java/com/smartx/tower/model/NestedDiscoveredHostDisk.java
 src/main/java/com/smartx/tower/model/NestedDiscoveredHostIface.java
 src/main/java/com/smartx/tower/model/NestedDisk.java
 src/main/java/com/smartx/tower/model/NestedDiskFailureInformation.java
+src/main/java/com/smartx/tower/model/NestedDiskPool.java
+src/main/java/com/smartx/tower/model/NestedEcpLicense.java
 src/main/java/com/smartx/tower/model/NestedElfImage.java
 src/main/java/com/smartx/tower/model/NestedEntityFilter.java
 src/main/java/com/smartx/tower/model/NestedEverouteAgentStatus.java
@@ -1133,6 +1194,7 @@ src/main/java/com/smartx/tower/model/NestedEverouteControllerTemplate.java
 src/main/java/com/smartx/tower/model/NestedEverouteManageVDSStatus.java
 src/main/java/com/smartx/tower/model/NestedExecutePlan.java
 src/main/java/com/smartx/tower/model/NestedExternalCloudTower.java
+src/main/java/com/smartx/tower/model/NestedFailoverExecution.java
 src/main/java/com/smartx/tower/model/NestedFilterRule.java
 src/main/java/com/smartx/tower/model/NestedFrozenDisks.java
 src/main/java/com/smartx/tower/model/NestedFrozenNic.java
@@ -1142,8 +1204,10 @@ src/main/java/com/smartx/tower/model/NestedGpuDevice.java
 src/main/java/com/smartx/tower/model/NestedGpuDriverInfo.java
 src/main/java/com/smartx/tower/model/NestedGraph.java
 src/main/java/com/smartx/tower/model/NestedHost.java
+src/main/java/com/smartx/tower/model/NestedInitiator.java
 src/main/java/com/smartx/tower/model/NestedInitiatorChap.java
 src/main/java/com/smartx/tower/model/NestedIpmi.java
+src/main/java/com/smartx/tower/model/NestedIscsiConnection.java
 src/main/java/com/smartx/tower/model/NestedIscsiLun.java
 src/main/java/com/smartx/tower/model/NestedIscsiLunSnapshot.java
 src/main/java/com/smartx/tower/model/NestedIscsiTarget.java
@@ -1171,6 +1235,7 @@ src/main/java/com/smartx/tower/model/NestedOrganization.java
 src/main/java/com/smartx/tower/model/NestedPartition.java
 src/main/java/com/smartx/tower/model/NestedPasswordRecoverQa.java
 src/main/java/com/smartx/tower/model/NestedPasswordReoverQaItem.java
+src/main/java/com/smartx/tower/model/NestedPermanentFailoverExecution.java
 src/main/java/com/smartx/tower/model/NestedPmemDimm.java
 src/main/java/com/smartx/tower/model/NestedPosition.java
 src/main/java/com/smartx/tower/model/NestedRackTopo.java
@@ -1185,6 +1250,7 @@ src/main/java/com/smartx/tower/model/NestedReplicationPlanExecution.java
 src/main/java/com/smartx/tower/model/NestedReplicationPlanNetworkMapping.java
 src/main/java/com/smartx/tower/model/NestedReplicationRestorePoint.java
 src/main/java/com/smartx/tower/model/NestedReplicationService.java
+src/main/java/com/smartx/tower/model/NestedReplicationServiceNetwork.java
 src/main/java/com/smartx/tower/model/NestedReplicationTargetExecution.java
 src/main/java/com/smartx/tower/model/NestedReportTask.java
 src/main/java/com/smartx/tower/model/NestedReportTemplate.java
@@ -1287,6 +1353,8 @@ src/main/java/com/smartx/tower/model/NfsExportWhereInput.java
 src/main/java/com/smartx/tower/model/NfsInode.java
 src/main/java/com/smartx/tower/model/NfsInodeConnection.java
 src/main/java/com/smartx/tower/model/NfsInodeOrderByInput.java
+src/main/java/com/smartx/tower/model/NfsInodeUpdationParams.java
+src/main/java/com/smartx/tower/model/NfsInodeUpdationParamsData.java
 src/main/java/com/smartx/tower/model/NfsInodeWhereInput.java
 src/main/java/com/smartx/tower/model/Nic.java
 src/main/java/com/smartx/tower/model/NicConnection.java
@@ -1334,6 +1402,7 @@ src/main/java/com/smartx/tower/model/NvmfSubsystemDeletionParams.java
 src/main/java/com/smartx/tower/model/NvmfSubsystemOrderByInput.java
 src/main/java/com/smartx/tower/model/NvmfSubsystemPolicyType.java
 src/main/java/com/smartx/tower/model/NvmfSubsystemUpdationParams.java
+src/main/java/com/smartx/tower/model/NvmfSubsystemUpdationParamsData.java
 src/main/java/com/smartx/tower/model/NvmfSubsystemWhereInput.java
 src/main/java/com/smartx/tower/model/ObservabilityConnectedSystemServiceType.java
 src/main/java/com/smartx/tower/model/OperateActionEnum.java
@@ -1398,6 +1467,9 @@ src/main/java/com/smartx/tower/model/ReplicationPlanPeriod.java
 src/main/java/com/smartx/tower/model/ReplicationPlanType.java
 src/main/java/com/smartx/tower/model/ReplicationPlanWhereInput.java
 src/main/java/com/smartx/tower/model/ReplicationRestorePointWhereInput.java
+src/main/java/com/smartx/tower/model/ReplicationService.java
+src/main/java/com/smartx/tower/model/ReplicationServiceConnection.java
+src/main/java/com/smartx/tower/model/ReplicationServiceOrderByInput.java
 src/main/java/com/smartx/tower/model/ReplicationServiceWhereInput.java
 src/main/java/com/smartx/tower/model/ReplicationTargetExecutionCreation.java
 src/main/java/com/smartx/tower/model/ReplicationTargetExecutionWhereInput.java
@@ -1535,8 +1607,6 @@ src/main/java/com/smartx/tower/model/TimeUnit.java
 src/main/java/com/smartx/tower/model/TriggerDiskBlinkParams.java
 src/main/java/com/smartx/tower/model/UninstallCloudTowerApplicationParams.java
 src/main/java/com/smartx/tower/model/UpdateAccessRestrictionParams.java
-src/main/java/com/smartx/tower/model/UpdateCloudTowerApplicationVmSpecParams.java
-src/main/java/com/smartx/tower/model/UpdateCloudTowerApplicationVmSpecParamsData.java
 src/main/java/com/smartx/tower/model/UpdatePassrodSecurityParams.java
 src/main/java/com/smartx/tower/model/UpdateSessionTimeoutParams.java
 src/main/java/com/smartx/tower/model/UpdateVcenterAccountParams.java
@@ -1831,6 +1901,7 @@ src/main/java/com/smartx/tower/model/VmResetGuestOsPasswordParamsData.java
 src/main/java/com/smartx/tower/model/VmRestrictIoParamsData.java
 src/main/java/com/smartx/tower/model/VmRollbackParams.java
 src/main/java/com/smartx/tower/model/VmRollbackParamsData.java
+src/main/java/com/smartx/tower/model/VmSetVmDiskResidentInCacheParams.java
 src/main/java/com/smartx/tower/model/VmSnapshot.java
 src/main/java/com/smartx/tower/model/VmSnapshotConnection.java
 src/main/java/com/smartx/tower/model/VmSnapshotCreationParams.java
@@ -1921,6 +1992,7 @@ src/main/java/com/smartx/tower/model/WithTaskBatchCreateVirtualPrivateCloudFloat
 src/main/java/com/smartx/tower/model/WithTaskBatchHosts.java
 src/main/java/com/smartx/tower/model/WithTaskBrickTopo.java
 src/main/java/com/smartx/tower/model/WithTaskCluster.java
+src/main/java/com/smartx/tower/model/WithTaskClusterPinInPerformanceInfo.java
 src/main/java/com/smartx/tower/model/WithTaskClusterSettings.java
 src/main/java/com/smartx/tower/model/WithTaskConsistencyGroup.java
 src/main/java/com/smartx/tower/model/WithTaskConsistencyGroupSnapshot.java
@@ -2001,6 +2073,7 @@ src/main/java/com/smartx/tower/model/WithTaskMetric.java
 src/main/java/com/smartx/tower/model/WithTaskNamespaceGroup.java
 src/main/java/com/smartx/tower/model/WithTaskNetworkPolicyRuleService.java
 src/main/java/com/smartx/tower/model/WithTaskNfsExport.java
+src/main/java/com/smartx/tower/model/WithTaskNfsInode.java
 src/main/java/com/smartx/tower/model/WithTaskNic.java
 src/main/java/com/smartx/tower/model/WithTaskNodeTopo.java
 src/main/java/com/smartx/tower/model/WithTaskNvmfNamespace.java
