@@ -390,6 +390,39 @@ public class IscsiTargetWhereInput
     @SerializedName(SERIALIZED_NAME_BPS_WR_NOT_IN)
     private List<Long> bpsWrNotIn = null;
 
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY =
+            "business_host_groups_every";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY)
+    private BusinessHostGroupWhereInput businessHostGroupsEvery;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE =
+            "business_host_groups_none";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE)
+    private BusinessHostGroupWhereInput businessHostGroupsNone;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME =
+            "business_host_groups_some";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME)
+    private BusinessHostGroupWhereInput businessHostGroupsSome;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS_EVERY = "business_hosts_every";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY)
+    private BusinessHostWhereInput businessHostsEvery;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS_NONE = "business_hosts_none";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS_NONE)
+    private BusinessHostWhereInput businessHostsNone;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS_SOME = "business_hosts_some";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS_SOME)
+    private BusinessHostWhereInput businessHostsSome;
+
     public static final String SERIALIZED_NAME_CHAP_ENABLED = "chap_enabled";
 
     @SerializedName(SERIALIZED_NAME_CHAP_ENABLED)
@@ -549,6 +582,39 @@ public class IscsiTargetWhereInput
     @SerializedName(SERIALIZED_NAME_CLUSTER)
     private ClusterWhereInput cluster;
 
+    public static final String SERIALIZED_NAME_CONFIGURATION_ADAPTIVE = "configuration_adaptive";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE)
+    private Boolean configurationAdaptive;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_ADAPTIVE_NOT =
+            "configuration_adaptive_not";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE_NOT)
+    private Boolean configurationAdaptiveNot;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_METHOD = "configuration_method";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD)
+    private ConfigurationMethod configurationMethod;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_METHOD_IN = "configuration_method_in";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD_IN)
+    private List<ConfigurationMethod> configurationMethodIn = null;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_METHOD_NOT =
+            "configuration_method_not";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT)
+    private ConfigurationMethod configurationMethodNot;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_METHOD_NOT_IN =
+            "configuration_method_not_in";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT_IN)
+    private List<ConfigurationMethod> configurationMethodNotIn = null;
+
     public static final String SERIALIZED_NAME_DESCRIPTION = "description";
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -621,6 +687,106 @@ public class IscsiTargetWhereInput
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION_STARTS_WITH)
     private String descriptionStartsWith;
+
+    public static final String SERIALIZED_NAME_EC_K = "ec_k";
+
+    @SerializedName(SERIALIZED_NAME_EC_K)
+    private Integer ecK;
+
+    public static final String SERIALIZED_NAME_EC_K_GT = "ec_k_gt";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_GT)
+    private Integer ecKGt;
+
+    public static final String SERIALIZED_NAME_EC_K_GTE = "ec_k_gte";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_GTE)
+    private Integer ecKGte;
+
+    public static final String SERIALIZED_NAME_EC_K_IN = "ec_k_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_IN)
+    private List<Integer> ecKIn = null;
+
+    public static final String SERIALIZED_NAME_EC_K_LT = "ec_k_lt";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_LT)
+    private Integer ecKLt;
+
+    public static final String SERIALIZED_NAME_EC_K_LTE = "ec_k_lte";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_LTE)
+    private Integer ecKLte;
+
+    public static final String SERIALIZED_NAME_EC_K_NOT = "ec_k_not";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_NOT)
+    private Integer ecKNot;
+
+    public static final String SERIALIZED_NAME_EC_K_NOT_IN = "ec_k_not_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_NOT_IN)
+    private List<Integer> ecKNotIn = null;
+
+    public static final String SERIALIZED_NAME_EC_M = "ec_m";
+
+    @SerializedName(SERIALIZED_NAME_EC_M)
+    private Integer ecM;
+
+    public static final String SERIALIZED_NAME_EC_M_GT = "ec_m_gt";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_GT)
+    private Integer ecMGt;
+
+    public static final String SERIALIZED_NAME_EC_M_GTE = "ec_m_gte";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_GTE)
+    private Integer ecMGte;
+
+    public static final String SERIALIZED_NAME_EC_M_IN = "ec_m_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_IN)
+    private List<Integer> ecMIn = null;
+
+    public static final String SERIALIZED_NAME_EC_M_LT = "ec_m_lt";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_LT)
+    private Integer ecMLt;
+
+    public static final String SERIALIZED_NAME_EC_M_LTE = "ec_m_lte";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_LTE)
+    private Integer ecMLte;
+
+    public static final String SERIALIZED_NAME_EC_M_NOT = "ec_m_not";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_NOT)
+    private Integer ecMNot;
+
+    public static final String SERIALIZED_NAME_EC_M_NOT_IN = "ec_m_not_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_NOT_IN)
+    private List<Integer> ecMNotIn = null;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD = "encrypt_method";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD)
+    private EncryptMethod encryptMethod;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD_IN = "encrypt_method_in";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD_IN)
+    private List<EncryptMethod> encryptMethodIn = null;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD_NOT = "encrypt_method_not";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD_NOT)
+    private EncryptMethod encryptMethodNot;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN = "encrypt_method_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN)
+    private List<EncryptMethod> encryptMethodNotIn = null;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -1354,6 +1520,61 @@ public class IscsiTargetWhereInput
     @SerializedName(SERIALIZED_NAME_IQN_WHITELIST_STARTS_WITH)
     private String iqnWhitelistStartsWith;
 
+    public static final String SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY = "iscsi_connections_every";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY)
+    private IscsiConnectionWhereInput iscsiConnectionsEvery;
+
+    public static final String SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE = "iscsi_connections_none";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE)
+    private IscsiConnectionWhereInput iscsiConnectionsNone;
+
+    public static final String SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME = "iscsi_connections_some";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME)
+    private IscsiConnectionWhereInput iscsiConnectionsSome;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM = "iscsi_luns_num";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NUM)
+    private Integer iscsiLunsNum;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM_GT = "iscsi_luns_num_gt";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NUM_GT)
+    private Integer iscsiLunsNumGt;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM_GTE = "iscsi_luns_num_gte";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NUM_GTE)
+    private Integer iscsiLunsNumGte;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM_IN = "iscsi_luns_num_in";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NUM_IN)
+    private List<Integer> iscsiLunsNumIn = null;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM_LT = "iscsi_luns_num_lt";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NUM_LT)
+    private Integer iscsiLunsNumLt;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM_LTE = "iscsi_luns_num_lte";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NUM_LTE)
+    private Integer iscsiLunsNumLte;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT = "iscsi_luns_num_not";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT)
+    private Integer iscsiLunsNumNot;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT_IN = "iscsi_luns_num_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT_IN)
+    private List<Integer> iscsiLunsNumNotIn = null;
+
     public static final String SERIALIZED_NAME_LABELS_EVERY = "labels_every";
 
     @SerializedName(SERIALIZED_NAME_LABELS_EVERY)
@@ -1525,6 +1746,16 @@ public class IscsiTargetWhereInput
     @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
     private String nameStartsWith;
 
+    public static final String SERIALIZED_NAME_PRIORITIZED = "prioritized";
+
+    @SerializedName(SERIALIZED_NAME_PRIORITIZED)
+    private Boolean prioritized;
+
+    public static final String SERIALIZED_NAME_PRIORITIZED_NOT = "prioritized_not";
+
+    @SerializedName(SERIALIZED_NAME_PRIORITIZED_NOT)
+    private Boolean prioritizedNot;
+
     public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
 
     @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
@@ -1564,6 +1795,26 @@ public class IscsiTargetWhereInput
 
     @SerializedName(SERIALIZED_NAME_REPLICA_NUM_NOT_IN)
     private List<Integer> replicaNumNotIn = null;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
+    private ResiliencyType resiliencyType;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE_IN = "resiliency_type_in";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE_IN)
+    private List<ResiliencyType> resiliencyTypeIn = null;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE_NOT = "resiliency_type_not";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE_NOT)
+    private ResiliencyType resiliencyTypeNot;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN = "resiliency_type_not_in";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN)
+    private List<ResiliencyType> resiliencyTypeNotIn = null;
 
     public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
 
@@ -5050,6 +5301,267 @@ public class IscsiTargetWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_NOT_IN);
     }
 
+    public IscsiTargetWhereInput businessHostGroupsEvery(
+            BusinessHostGroupWhereInput businessHostGroupsEvery) {
+
+        this.businessHostGroupsEvery = businessHostGroupsEvery;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroupsEvery
+     *
+     * @return businessHostGroupsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroupsEvery() {
+        return businessHostGroupsEvery;
+    }
+
+    public void setBusinessHostGroupsEvery(BusinessHostGroupWhereInput businessHostGroupsEvery) {
+        this.businessHostGroupsEvery = businessHostGroupsEvery;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        return this;
+    }
+
+    public void setBusinessHostGroupsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+        }
+    }
+
+    public boolean getBusinessHostGroupsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_EVERY);
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsNone(
+            BusinessHostGroupWhereInput businessHostGroupsNone) {
+
+        this.businessHostGroupsNone = businessHostGroupsNone;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroupsNone
+     *
+     * @return businessHostGroupsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroupsNone() {
+        return businessHostGroupsNone;
+    }
+
+    public void setBusinessHostGroupsNone(BusinessHostGroupWhereInput businessHostGroupsNone) {
+        this.businessHostGroupsNone = businessHostGroupsNone;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        return this;
+    }
+
+    public void setBusinessHostGroupsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+        }
+    }
+
+    public boolean getBusinessHostGroupsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_NONE);
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsSome(
+            BusinessHostGroupWhereInput businessHostGroupsSome) {
+
+        this.businessHostGroupsSome = businessHostGroupsSome;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroupsSome
+     *
+     * @return businessHostGroupsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroupsSome() {
+        return businessHostGroupsSome;
+    }
+
+    public void setBusinessHostGroupsSome(BusinessHostGroupWhereInput businessHostGroupsSome) {
+        this.businessHostGroupsSome = businessHostGroupsSome;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostGroupsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        return this;
+    }
+
+    public void setBusinessHostGroupsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+        }
+    }
+
+    public boolean getBusinessHostGroupsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS_SOME);
+    }
+
+    public IscsiTargetWhereInput businessHostsEvery(BusinessHostWhereInput businessHostsEvery) {
+
+        this.businessHostsEvery = businessHostsEvery;
+        return this;
+    }
+
+    /**
+     * Get businessHostsEvery
+     *
+     * @return businessHostsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHostsEvery() {
+        return businessHostsEvery;
+    }
+
+    public void setBusinessHostsEvery(BusinessHostWhereInput businessHostsEvery) {
+        this.businessHostsEvery = businessHostsEvery;
+    }
+
+    public IscsiTargetWhereInput businessHostsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        return this;
+    }
+
+    public void setBusinessHostsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+        }
+    }
+
+    public boolean getBusinessHostsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS_EVERY);
+    }
+
+    public IscsiTargetWhereInput businessHostsNone(BusinessHostWhereInput businessHostsNone) {
+
+        this.businessHostsNone = businessHostsNone;
+        return this;
+    }
+
+    /**
+     * Get businessHostsNone
+     *
+     * @return businessHostsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHostsNone() {
+        return businessHostsNone;
+    }
+
+    public void setBusinessHostsNone(BusinessHostWhereInput businessHostsNone) {
+        this.businessHostsNone = businessHostsNone;
+    }
+
+    public IscsiTargetWhereInput businessHostsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        return this;
+    }
+
+    public void setBusinessHostsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+        }
+    }
+
+    public boolean getBusinessHostsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS_NONE);
+    }
+
+    public IscsiTargetWhereInput businessHostsSome(BusinessHostWhereInput businessHostsSome) {
+
+        this.businessHostsSome = businessHostsSome;
+        return this;
+    }
+
+    /**
+     * Get businessHostsSome
+     *
+     * @return businessHostsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHostsSome() {
+        return businessHostsSome;
+    }
+
+    public void setBusinessHostsSome(BusinessHostWhereInput businessHostsSome) {
+        this.businessHostsSome = businessHostsSome;
+    }
+
+    public IscsiTargetWhereInput businessHostsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        return this;
+    }
+
+    public IscsiTargetWhereInput businessHostsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        return this;
+    }
+
+    public void setBusinessHostsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+        }
+    }
+
+    public boolean getBusinessHostsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS_SOME);
+    }
+
     public IscsiTargetWhereInput chapEnabled(Boolean chapEnabled) {
 
         this.chapEnabled = chapEnabled;
@@ -6415,6 +6927,285 @@ public class IscsiTargetWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER);
     }
 
+    public IscsiTargetWhereInput configurationAdaptive(Boolean configurationAdaptive) {
+
+        this.configurationAdaptive = configurationAdaptive;
+        return this;
+    }
+
+    /**
+     * Get configurationAdaptive
+     *
+     * @return configurationAdaptive
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getConfigurationAdaptive() {
+        return configurationAdaptive;
+    }
+
+    public void setConfigurationAdaptive(Boolean configurationAdaptive) {
+        this.configurationAdaptive = configurationAdaptive;
+    }
+
+    public IscsiTargetWhereInput configurationAdaptive_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput configurationAdaptive_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        return this;
+    }
+
+    public void setConfigurationAdaptive_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        }
+    }
+
+    public boolean getConfigurationAdaptive_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+    }
+
+    public IscsiTargetWhereInput configurationAdaptiveNot(Boolean configurationAdaptiveNot) {
+
+        this.configurationAdaptiveNot = configurationAdaptiveNot;
+        return this;
+    }
+
+    /**
+     * Get configurationAdaptiveNot
+     *
+     * @return configurationAdaptiveNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getConfigurationAdaptiveNot() {
+        return configurationAdaptiveNot;
+    }
+
+    public void setConfigurationAdaptiveNot(Boolean configurationAdaptiveNot) {
+        this.configurationAdaptiveNot = configurationAdaptiveNot;
+    }
+
+    public IscsiTargetWhereInput configurationAdaptiveNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE_NOT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput configurationAdaptiveNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE_NOT);
+        return this;
+    }
+
+    public void setConfigurationAdaptiveNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE_NOT);
+        }
+    }
+
+    public boolean getConfigurationAdaptiveNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE_NOT);
+    }
+
+    public IscsiTargetWhereInput configurationMethod(ConfigurationMethod configurationMethod) {
+
+        this.configurationMethod = configurationMethod;
+        return this;
+    }
+
+    /**
+     * Get configurationMethod
+     *
+     * @return configurationMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConfigurationMethod getConfigurationMethod() {
+        return configurationMethod;
+    }
+
+    public void setConfigurationMethod(ConfigurationMethod configurationMethod) {
+        this.configurationMethod = configurationMethod;
+    }
+
+    public IscsiTargetWhereInput configurationMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public IscsiTargetWhereInput configurationMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public void setConfigurationMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        }
+    }
+
+    public boolean getConfigurationMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD);
+    }
+
+    public IscsiTargetWhereInput configurationMethodIn(
+            List<ConfigurationMethod> configurationMethodIn) {
+
+        this.configurationMethodIn = configurationMethodIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addConfigurationMethodInItem(
+            ConfigurationMethod configurationMethodInItem) {
+        if (this.configurationMethodIn == null) {
+            this.configurationMethodIn = new ArrayList<ConfigurationMethod>();
+        }
+        this.configurationMethodIn.add(configurationMethodInItem);
+        return this;
+    }
+
+    /**
+     * Get configurationMethodIn
+     *
+     * @return configurationMethodIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ConfigurationMethod> getConfigurationMethodIn() {
+        return configurationMethodIn;
+    }
+
+    public void setConfigurationMethodIn(List<ConfigurationMethod> configurationMethodIn) {
+        this.configurationMethodIn = configurationMethodIn;
+    }
+
+    public IscsiTargetWhereInput configurationMethodIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput configurationMethodIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD_IN);
+        return this;
+    }
+
+    public void setConfigurationMethodIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD_IN);
+        }
+    }
+
+    public boolean getConfigurationMethodIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD_IN);
+    }
+
+    public IscsiTargetWhereInput configurationMethodNot(
+            ConfigurationMethod configurationMethodNot) {
+
+        this.configurationMethodNot = configurationMethodNot;
+        return this;
+    }
+
+    /**
+     * Get configurationMethodNot
+     *
+     * @return configurationMethodNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConfigurationMethod getConfigurationMethodNot() {
+        return configurationMethodNot;
+    }
+
+    public void setConfigurationMethodNot(ConfigurationMethod configurationMethodNot) {
+        this.configurationMethodNot = configurationMethodNot;
+    }
+
+    public IscsiTargetWhereInput configurationMethodNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput configurationMethodNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT);
+        return this;
+    }
+
+    public void setConfigurationMethodNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT);
+        }
+    }
+
+    public boolean getConfigurationMethodNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT);
+    }
+
+    public IscsiTargetWhereInput configurationMethodNotIn(
+            List<ConfigurationMethod> configurationMethodNotIn) {
+
+        this.configurationMethodNotIn = configurationMethodNotIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addConfigurationMethodNotInItem(
+            ConfigurationMethod configurationMethodNotInItem) {
+        if (this.configurationMethodNotIn == null) {
+            this.configurationMethodNotIn = new ArrayList<ConfigurationMethod>();
+        }
+        this.configurationMethodNotIn.add(configurationMethodNotInItem);
+        return this;
+    }
+
+    /**
+     * Get configurationMethodNotIn
+     *
+     * @return configurationMethodNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ConfigurationMethod> getConfigurationMethodNotIn() {
+        return configurationMethodNotIn;
+    }
+
+    public void setConfigurationMethodNotIn(List<ConfigurationMethod> configurationMethodNotIn) {
+        this.configurationMethodNotIn = configurationMethodNotIn;
+    }
+
+    public IscsiTargetWhereInput configurationMethodNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput configurationMethodNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT_IN);
+        return this;
+    }
+
+    public void setConfigurationMethodNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT_IN);
+        }
+    }
+
+    public boolean getConfigurationMethodNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD_NOT_IN);
+    }
+
     public IscsiTargetWhereInput description(String description) {
 
         this.description = description;
@@ -7031,6 +7822,914 @@ public class IscsiTargetWhereInput
 
     public boolean getDescriptionStartsWith_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DESCRIPTION_STARTS_WITH);
+    }
+
+    public IscsiTargetWhereInput ecK(Integer ecK) {
+
+        this.ecK = ecK;
+        return this;
+    }
+
+    /**
+     * Get ecK
+     *
+     * @return ecK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcK() {
+        return ecK;
+    }
+
+    public void setEcK(Integer ecK) {
+        this.ecK = ecK;
+    }
+
+    public IscsiTargetWhereInput ecK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public void setEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        }
+    }
+
+    public boolean getEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K);
+    }
+
+    public IscsiTargetWhereInput ecKGt(Integer ecKGt) {
+
+        this.ecKGt = ecKGt;
+        return this;
+    }
+
+    /**
+     * Get ecKGt
+     *
+     * @return ecKGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKGt() {
+        return ecKGt;
+    }
+
+    public void setEcKGt(Integer ecKGt) {
+        this.ecKGt = ecKGt;
+    }
+
+    public IscsiTargetWhereInput ecKGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_GT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecKGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_GT);
+        return this;
+    }
+
+    public void setEcKGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_GT);
+        }
+    }
+
+    public boolean getEcKGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_GT);
+    }
+
+    public IscsiTargetWhereInput ecKGte(Integer ecKGte) {
+
+        this.ecKGte = ecKGte;
+        return this;
+    }
+
+    /**
+     * Get ecKGte
+     *
+     * @return ecKGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKGte() {
+        return ecKGte;
+    }
+
+    public void setEcKGte(Integer ecKGte) {
+        this.ecKGte = ecKGte;
+    }
+
+    public IscsiTargetWhereInput ecKGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_GTE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecKGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_GTE);
+        return this;
+    }
+
+    public void setEcKGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_GTE);
+        }
+    }
+
+    public boolean getEcKGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_GTE);
+    }
+
+    public IscsiTargetWhereInput ecKIn(List<Integer> ecKIn) {
+
+        this.ecKIn = ecKIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addEcKInItem(Integer ecKInItem) {
+        if (this.ecKIn == null) {
+            this.ecKIn = new ArrayList<Integer>();
+        }
+        this.ecKIn.add(ecKInItem);
+        return this;
+    }
+
+    /**
+     * Get ecKIn
+     *
+     * @return ecKIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcKIn() {
+        return ecKIn;
+    }
+
+    public void setEcKIn(List<Integer> ecKIn) {
+        this.ecKIn = ecKIn;
+    }
+
+    public IscsiTargetWhereInput ecKIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecKIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_IN);
+        return this;
+    }
+
+    public void setEcKIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_IN);
+        }
+    }
+
+    public boolean getEcKIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_IN);
+    }
+
+    public IscsiTargetWhereInput ecKLt(Integer ecKLt) {
+
+        this.ecKLt = ecKLt;
+        return this;
+    }
+
+    /**
+     * Get ecKLt
+     *
+     * @return ecKLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKLt() {
+        return ecKLt;
+    }
+
+    public void setEcKLt(Integer ecKLt) {
+        this.ecKLt = ecKLt;
+    }
+
+    public IscsiTargetWhereInput ecKLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_LT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecKLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_LT);
+        return this;
+    }
+
+    public void setEcKLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_LT);
+        }
+    }
+
+    public boolean getEcKLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_LT);
+    }
+
+    public IscsiTargetWhereInput ecKLte(Integer ecKLte) {
+
+        this.ecKLte = ecKLte;
+        return this;
+    }
+
+    /**
+     * Get ecKLte
+     *
+     * @return ecKLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKLte() {
+        return ecKLte;
+    }
+
+    public void setEcKLte(Integer ecKLte) {
+        this.ecKLte = ecKLte;
+    }
+
+    public IscsiTargetWhereInput ecKLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_LTE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecKLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_LTE);
+        return this;
+    }
+
+    public void setEcKLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_LTE);
+        }
+    }
+
+    public boolean getEcKLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_LTE);
+    }
+
+    public IscsiTargetWhereInput ecKNot(Integer ecKNot) {
+
+        this.ecKNot = ecKNot;
+        return this;
+    }
+
+    /**
+     * Get ecKNot
+     *
+     * @return ecKNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKNot() {
+        return ecKNot;
+    }
+
+    public void setEcKNot(Integer ecKNot) {
+        this.ecKNot = ecKNot;
+    }
+
+    public IscsiTargetWhereInput ecKNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecKNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT);
+        return this;
+    }
+
+    public void setEcKNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT);
+        }
+    }
+
+    public boolean getEcKNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_NOT);
+    }
+
+    public IscsiTargetWhereInput ecKNotIn(List<Integer> ecKNotIn) {
+
+        this.ecKNotIn = ecKNotIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addEcKNotInItem(Integer ecKNotInItem) {
+        if (this.ecKNotIn == null) {
+            this.ecKNotIn = new ArrayList<Integer>();
+        }
+        this.ecKNotIn.add(ecKNotInItem);
+        return this;
+    }
+
+    /**
+     * Get ecKNotIn
+     *
+     * @return ecKNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcKNotIn() {
+        return ecKNotIn;
+    }
+
+    public void setEcKNotIn(List<Integer> ecKNotIn) {
+        this.ecKNotIn = ecKNotIn;
+    }
+
+    public IscsiTargetWhereInput ecKNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecKNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT_IN);
+        return this;
+    }
+
+    public void setEcKNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT_IN);
+        }
+    }
+
+    public boolean getEcKNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_NOT_IN);
+    }
+
+    public IscsiTargetWhereInput ecM(Integer ecM) {
+
+        this.ecM = ecM;
+        return this;
+    }
+
+    /**
+     * Get ecM
+     *
+     * @return ecM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcM() {
+        return ecM;
+    }
+
+    public void setEcM(Integer ecM) {
+        this.ecM = ecM;
+    }
+
+    public IscsiTargetWhereInput ecM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public void setEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        }
+    }
+
+    public boolean getEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M);
+    }
+
+    public IscsiTargetWhereInput ecMGt(Integer ecMGt) {
+
+        this.ecMGt = ecMGt;
+        return this;
+    }
+
+    /**
+     * Get ecMGt
+     *
+     * @return ecMGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMGt() {
+        return ecMGt;
+    }
+
+    public void setEcMGt(Integer ecMGt) {
+        this.ecMGt = ecMGt;
+    }
+
+    public IscsiTargetWhereInput ecMGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_GT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecMGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_GT);
+        return this;
+    }
+
+    public void setEcMGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_GT);
+        }
+    }
+
+    public boolean getEcMGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_GT);
+    }
+
+    public IscsiTargetWhereInput ecMGte(Integer ecMGte) {
+
+        this.ecMGte = ecMGte;
+        return this;
+    }
+
+    /**
+     * Get ecMGte
+     *
+     * @return ecMGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMGte() {
+        return ecMGte;
+    }
+
+    public void setEcMGte(Integer ecMGte) {
+        this.ecMGte = ecMGte;
+    }
+
+    public IscsiTargetWhereInput ecMGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_GTE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecMGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_GTE);
+        return this;
+    }
+
+    public void setEcMGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_GTE);
+        }
+    }
+
+    public boolean getEcMGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_GTE);
+    }
+
+    public IscsiTargetWhereInput ecMIn(List<Integer> ecMIn) {
+
+        this.ecMIn = ecMIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addEcMInItem(Integer ecMInItem) {
+        if (this.ecMIn == null) {
+            this.ecMIn = new ArrayList<Integer>();
+        }
+        this.ecMIn.add(ecMInItem);
+        return this;
+    }
+
+    /**
+     * Get ecMIn
+     *
+     * @return ecMIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcMIn() {
+        return ecMIn;
+    }
+
+    public void setEcMIn(List<Integer> ecMIn) {
+        this.ecMIn = ecMIn;
+    }
+
+    public IscsiTargetWhereInput ecMIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecMIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_IN);
+        return this;
+    }
+
+    public void setEcMIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_IN);
+        }
+    }
+
+    public boolean getEcMIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_IN);
+    }
+
+    public IscsiTargetWhereInput ecMLt(Integer ecMLt) {
+
+        this.ecMLt = ecMLt;
+        return this;
+    }
+
+    /**
+     * Get ecMLt
+     *
+     * @return ecMLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMLt() {
+        return ecMLt;
+    }
+
+    public void setEcMLt(Integer ecMLt) {
+        this.ecMLt = ecMLt;
+    }
+
+    public IscsiTargetWhereInput ecMLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_LT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecMLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_LT);
+        return this;
+    }
+
+    public void setEcMLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_LT);
+        }
+    }
+
+    public boolean getEcMLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_LT);
+    }
+
+    public IscsiTargetWhereInput ecMLte(Integer ecMLte) {
+
+        this.ecMLte = ecMLte;
+        return this;
+    }
+
+    /**
+     * Get ecMLte
+     *
+     * @return ecMLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMLte() {
+        return ecMLte;
+    }
+
+    public void setEcMLte(Integer ecMLte) {
+        this.ecMLte = ecMLte;
+    }
+
+    public IscsiTargetWhereInput ecMLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_LTE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecMLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_LTE);
+        return this;
+    }
+
+    public void setEcMLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_LTE);
+        }
+    }
+
+    public boolean getEcMLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_LTE);
+    }
+
+    public IscsiTargetWhereInput ecMNot(Integer ecMNot) {
+
+        this.ecMNot = ecMNot;
+        return this;
+    }
+
+    /**
+     * Get ecMNot
+     *
+     * @return ecMNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMNot() {
+        return ecMNot;
+    }
+
+    public void setEcMNot(Integer ecMNot) {
+        this.ecMNot = ecMNot;
+    }
+
+    public IscsiTargetWhereInput ecMNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecMNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT);
+        return this;
+    }
+
+    public void setEcMNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT);
+        }
+    }
+
+    public boolean getEcMNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_NOT);
+    }
+
+    public IscsiTargetWhereInput ecMNotIn(List<Integer> ecMNotIn) {
+
+        this.ecMNotIn = ecMNotIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addEcMNotInItem(Integer ecMNotInItem) {
+        if (this.ecMNotIn == null) {
+            this.ecMNotIn = new ArrayList<Integer>();
+        }
+        this.ecMNotIn.add(ecMNotInItem);
+        return this;
+    }
+
+    /**
+     * Get ecMNotIn
+     *
+     * @return ecMNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcMNotIn() {
+        return ecMNotIn;
+    }
+
+    public void setEcMNotIn(List<Integer> ecMNotIn) {
+        this.ecMNotIn = ecMNotIn;
+    }
+
+    public IscsiTargetWhereInput ecMNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput ecMNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT_IN);
+        return this;
+    }
+
+    public void setEcMNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT_IN);
+        }
+    }
+
+    public boolean getEcMNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_NOT_IN);
+    }
+
+    public IscsiTargetWhereInput encryptMethod(EncryptMethod encryptMethod) {
+
+        this.encryptMethod = encryptMethod;
+        return this;
+    }
+
+    /**
+     * Get encryptMethod
+     *
+     * @return encryptMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EncryptMethod getEncryptMethod() {
+        return encryptMethod;
+    }
+
+    public void setEncryptMethod(EncryptMethod encryptMethod) {
+        this.encryptMethod = encryptMethod;
+    }
+
+    public IscsiTargetWhereInput encryptMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public IscsiTargetWhereInput encryptMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public void setEncryptMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        }
+    }
+
+    public boolean getEncryptMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD);
+    }
+
+    public IscsiTargetWhereInput encryptMethodIn(List<EncryptMethod> encryptMethodIn) {
+
+        this.encryptMethodIn = encryptMethodIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addEncryptMethodInItem(EncryptMethod encryptMethodInItem) {
+        if (this.encryptMethodIn == null) {
+            this.encryptMethodIn = new ArrayList<EncryptMethod>();
+        }
+        this.encryptMethodIn.add(encryptMethodInItem);
+        return this;
+    }
+
+    /**
+     * Get encryptMethodIn
+     *
+     * @return encryptMethodIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<EncryptMethod> getEncryptMethodIn() {
+        return encryptMethodIn;
+    }
+
+    public void setEncryptMethodIn(List<EncryptMethod> encryptMethodIn) {
+        this.encryptMethodIn = encryptMethodIn;
+    }
+
+    public IscsiTargetWhereInput encryptMethodIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput encryptMethodIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+        return this;
+    }
+
+    public void setEncryptMethodIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+        }
+    }
+
+    public boolean getEncryptMethodIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+    }
+
+    public IscsiTargetWhereInput encryptMethodNot(EncryptMethod encryptMethodNot) {
+
+        this.encryptMethodNot = encryptMethodNot;
+        return this;
+    }
+
+    /**
+     * Get encryptMethodNot
+     *
+     * @return encryptMethodNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EncryptMethod getEncryptMethodNot() {
+        return encryptMethodNot;
+    }
+
+    public void setEncryptMethodNot(EncryptMethod encryptMethodNot) {
+        this.encryptMethodNot = encryptMethodNot;
+    }
+
+    public IscsiTargetWhereInput encryptMethodNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput encryptMethodNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+        return this;
+    }
+
+    public void setEncryptMethodNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+        }
+    }
+
+    public boolean getEncryptMethodNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+    }
+
+    public IscsiTargetWhereInput encryptMethodNotIn(List<EncryptMethod> encryptMethodNotIn) {
+
+        this.encryptMethodNotIn = encryptMethodNotIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addEncryptMethodNotInItem(EncryptMethod encryptMethodNotInItem) {
+        if (this.encryptMethodNotIn == null) {
+            this.encryptMethodNotIn = new ArrayList<EncryptMethod>();
+        }
+        this.encryptMethodNotIn.add(encryptMethodNotInItem);
+        return this;
+    }
+
+    /**
+     * Get encryptMethodNotIn
+     *
+     * @return encryptMethodNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<EncryptMethod> getEncryptMethodNotIn() {
+        return encryptMethodNotIn;
+    }
+
+    public void setEncryptMethodNotIn(List<EncryptMethod> encryptMethodNotIn) {
+        this.encryptMethodNotIn = encryptMethodNotIn;
+    }
+
+    public IscsiTargetWhereInput encryptMethodNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput encryptMethodNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
+        return this;
+    }
+
+    public void setEncryptMethodNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
+        }
+    }
+
+    public boolean getEncryptMethodNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
     }
 
     public IscsiTargetWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -13468,6 +15167,498 @@ public class IscsiTargetWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_IQN_WHITELIST_STARTS_WITH);
     }
 
+    public IscsiTargetWhereInput iscsiConnectionsEvery(
+            IscsiConnectionWhereInput iscsiConnectionsEvery) {
+
+        this.iscsiConnectionsEvery = iscsiConnectionsEvery;
+        return this;
+    }
+
+    /**
+     * Get iscsiConnectionsEvery
+     *
+     * @return iscsiConnectionsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IscsiConnectionWhereInput getIscsiConnectionsEvery() {
+        return iscsiConnectionsEvery;
+    }
+
+    public void setIscsiConnectionsEvery(IscsiConnectionWhereInput iscsiConnectionsEvery) {
+        this.iscsiConnectionsEvery = iscsiConnectionsEvery;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+        return this;
+    }
+
+    public void setIscsiConnectionsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+        }
+    }
+
+    public boolean getIscsiConnectionsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_CONNECTIONS_EVERY);
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsNone(
+            IscsiConnectionWhereInput iscsiConnectionsNone) {
+
+        this.iscsiConnectionsNone = iscsiConnectionsNone;
+        return this;
+    }
+
+    /**
+     * Get iscsiConnectionsNone
+     *
+     * @return iscsiConnectionsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IscsiConnectionWhereInput getIscsiConnectionsNone() {
+        return iscsiConnectionsNone;
+    }
+
+    public void setIscsiConnectionsNone(IscsiConnectionWhereInput iscsiConnectionsNone) {
+        this.iscsiConnectionsNone = iscsiConnectionsNone;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+        return this;
+    }
+
+    public void setIscsiConnectionsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+        }
+    }
+
+    public boolean getIscsiConnectionsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_CONNECTIONS_NONE);
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsSome(
+            IscsiConnectionWhereInput iscsiConnectionsSome) {
+
+        this.iscsiConnectionsSome = iscsiConnectionsSome;
+        return this;
+    }
+
+    /**
+     * Get iscsiConnectionsSome
+     *
+     * @return iscsiConnectionsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public IscsiConnectionWhereInput getIscsiConnectionsSome() {
+        return iscsiConnectionsSome;
+    }
+
+    public void setIscsiConnectionsSome(IscsiConnectionWhereInput iscsiConnectionsSome) {
+        this.iscsiConnectionsSome = iscsiConnectionsSome;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiConnectionsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+        return this;
+    }
+
+    public void setIscsiConnectionsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+        }
+    }
+
+    public boolean getIscsiConnectionsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_CONNECTIONS_SOME);
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNum(Integer iscsiLunsNum) {
+
+        this.iscsiLunsNum = iscsiLunsNum;
+        return this;
+    }
+
+    /**
+     * Get iscsiLunsNum
+     *
+     * @return iscsiLunsNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getIscsiLunsNum() {
+        return iscsiLunsNum;
+    }
+
+    public void setIscsiLunsNum(Integer iscsiLunsNum) {
+        this.iscsiLunsNum = iscsiLunsNum;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+        return this;
+    }
+
+    public void setIscsiLunsNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+        }
+    }
+
+    public boolean getIscsiLunsNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumGt(Integer iscsiLunsNumGt) {
+
+        this.iscsiLunsNumGt = iscsiLunsNumGt;
+        return this;
+    }
+
+    /**
+     * Get iscsiLunsNumGt
+     *
+     * @return iscsiLunsNumGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getIscsiLunsNumGt() {
+        return iscsiLunsNumGt;
+    }
+
+    public void setIscsiLunsNumGt(Integer iscsiLunsNumGt) {
+        this.iscsiLunsNumGt = iscsiLunsNumGt;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_GT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_GT);
+        return this;
+    }
+
+    public void setIscsiLunsNumGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_GT);
+        }
+    }
+
+    public boolean getIscsiLunsNumGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUNS_NUM_GT);
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumGte(Integer iscsiLunsNumGte) {
+
+        this.iscsiLunsNumGte = iscsiLunsNumGte;
+        return this;
+    }
+
+    /**
+     * Get iscsiLunsNumGte
+     *
+     * @return iscsiLunsNumGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getIscsiLunsNumGte() {
+        return iscsiLunsNumGte;
+    }
+
+    public void setIscsiLunsNumGte(Integer iscsiLunsNumGte) {
+        this.iscsiLunsNumGte = iscsiLunsNumGte;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_GTE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_GTE);
+        return this;
+    }
+
+    public void setIscsiLunsNumGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_GTE);
+        }
+    }
+
+    public boolean getIscsiLunsNumGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUNS_NUM_GTE);
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumIn(List<Integer> iscsiLunsNumIn) {
+
+        this.iscsiLunsNumIn = iscsiLunsNumIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addIscsiLunsNumInItem(Integer iscsiLunsNumInItem) {
+        if (this.iscsiLunsNumIn == null) {
+            this.iscsiLunsNumIn = new ArrayList<Integer>();
+        }
+        this.iscsiLunsNumIn.add(iscsiLunsNumInItem);
+        return this;
+    }
+
+    /**
+     * Get iscsiLunsNumIn
+     *
+     * @return iscsiLunsNumIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getIscsiLunsNumIn() {
+        return iscsiLunsNumIn;
+    }
+
+    public void setIscsiLunsNumIn(List<Integer> iscsiLunsNumIn) {
+        this.iscsiLunsNumIn = iscsiLunsNumIn;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_IN);
+        return this;
+    }
+
+    public void setIscsiLunsNumIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_IN);
+        }
+    }
+
+    public boolean getIscsiLunsNumIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUNS_NUM_IN);
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumLt(Integer iscsiLunsNumLt) {
+
+        this.iscsiLunsNumLt = iscsiLunsNumLt;
+        return this;
+    }
+
+    /**
+     * Get iscsiLunsNumLt
+     *
+     * @return iscsiLunsNumLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getIscsiLunsNumLt() {
+        return iscsiLunsNumLt;
+    }
+
+    public void setIscsiLunsNumLt(Integer iscsiLunsNumLt) {
+        this.iscsiLunsNumLt = iscsiLunsNumLt;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_LT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_LT);
+        return this;
+    }
+
+    public void setIscsiLunsNumLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_LT);
+        }
+    }
+
+    public boolean getIscsiLunsNumLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUNS_NUM_LT);
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumLte(Integer iscsiLunsNumLte) {
+
+        this.iscsiLunsNumLte = iscsiLunsNumLte;
+        return this;
+    }
+
+    /**
+     * Get iscsiLunsNumLte
+     *
+     * @return iscsiLunsNumLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getIscsiLunsNumLte() {
+        return iscsiLunsNumLte;
+    }
+
+    public void setIscsiLunsNumLte(Integer iscsiLunsNumLte) {
+        this.iscsiLunsNumLte = iscsiLunsNumLte;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_LTE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_LTE);
+        return this;
+    }
+
+    public void setIscsiLunsNumLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_LTE);
+        }
+    }
+
+    public boolean getIscsiLunsNumLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUNS_NUM_LTE);
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumNot(Integer iscsiLunsNumNot) {
+
+        this.iscsiLunsNumNot = iscsiLunsNumNot;
+        return this;
+    }
+
+    /**
+     * Get iscsiLunsNumNot
+     *
+     * @return iscsiLunsNumNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getIscsiLunsNumNot() {
+        return iscsiLunsNumNot;
+    }
+
+    public void setIscsiLunsNumNot(Integer iscsiLunsNumNot) {
+        this.iscsiLunsNumNot = iscsiLunsNumNot;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT);
+        return this;
+    }
+
+    public void setIscsiLunsNumNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT);
+        }
+    }
+
+    public boolean getIscsiLunsNumNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT);
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumNotIn(List<Integer> iscsiLunsNumNotIn) {
+
+        this.iscsiLunsNumNotIn = iscsiLunsNumNotIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addIscsiLunsNumNotInItem(Integer iscsiLunsNumNotInItem) {
+        if (this.iscsiLunsNumNotIn == null) {
+            this.iscsiLunsNumNotIn = new ArrayList<Integer>();
+        }
+        this.iscsiLunsNumNotIn.add(iscsiLunsNumNotInItem);
+        return this;
+    }
+
+    /**
+     * Get iscsiLunsNumNotIn
+     *
+     * @return iscsiLunsNumNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getIscsiLunsNumNotIn() {
+        return iscsiLunsNumNotIn;
+    }
+
+    public void setIscsiLunsNumNotIn(List<Integer> iscsiLunsNumNotIn) {
+        this.iscsiLunsNumNotIn = iscsiLunsNumNotIn;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput iscsiLunsNumNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT_IN);
+        return this;
+    }
+
+    public void setIscsiLunsNumNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT_IN);
+        }
+    }
+
+    public boolean getIscsiLunsNumNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUNS_NUM_NOT_IN);
+    }
+
     public IscsiTargetWhereInput labelsEvery(LabelWhereInput labelsEvery) {
 
         this.labelsEvery = labelsEvery;
@@ -14962,6 +17153,92 @@ public class IscsiTargetWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_NAME_STARTS_WITH);
     }
 
+    public IscsiTargetWhereInput prioritized(Boolean prioritized) {
+
+        this.prioritized = prioritized;
+        return this;
+    }
+
+    /**
+     * Get prioritized
+     *
+     * @return prioritized
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getPrioritized() {
+        return prioritized;
+    }
+
+    public void setPrioritized(Boolean prioritized) {
+        this.prioritized = prioritized;
+    }
+
+    public IscsiTargetWhereInput prioritized_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public IscsiTargetWhereInput prioritized_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public void setPrioritized_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        }
+    }
+
+    public boolean getPrioritized_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIORITIZED);
+    }
+
+    public IscsiTargetWhereInput prioritizedNot(Boolean prioritizedNot) {
+
+        this.prioritizedNot = prioritizedNot;
+        return this;
+    }
+
+    /**
+     * Get prioritizedNot
+     *
+     * @return prioritizedNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getPrioritizedNot() {
+        return prioritizedNot;
+    }
+
+    public void setPrioritizedNot(Boolean prioritizedNot) {
+        this.prioritizedNot = prioritizedNot;
+    }
+
+    public IscsiTargetWhereInput prioritizedNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED_NOT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput prioritizedNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED_NOT);
+        return this;
+    }
+
+    public void setPrioritizedNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED_NOT);
+        }
+    }
+
+    public boolean getPrioritizedNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIORITIZED_NOT);
+    }
+
     public IscsiTargetWhereInput replicaNum(Integer replicaNum) {
 
         this.replicaNum = replicaNum;
@@ -15320,6 +17597,195 @@ public class IscsiTargetWhereInput
 
     public boolean getReplicaNumNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_NUM_NOT_IN);
+    }
+
+    public IscsiTargetWhereInput resiliencyType(ResiliencyType resiliencyType) {
+
+        this.resiliencyType = resiliencyType;
+        return this;
+    }
+
+    /**
+     * Get resiliencyType
+     *
+     * @return resiliencyType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyType() {
+        return resiliencyType;
+    }
+
+    public void setResiliencyType(ResiliencyType resiliencyType) {
+        this.resiliencyType = resiliencyType;
+    }
+
+    public IscsiTargetWhereInput resiliencyType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public IscsiTargetWhereInput resiliencyType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public void setResiliencyType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        }
+    }
+
+    public boolean getResiliencyType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
+    }
+
+    public IscsiTargetWhereInput resiliencyTypeIn(List<ResiliencyType> resiliencyTypeIn) {
+
+        this.resiliencyTypeIn = resiliencyTypeIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addResiliencyTypeInItem(ResiliencyType resiliencyTypeInItem) {
+        if (this.resiliencyTypeIn == null) {
+            this.resiliencyTypeIn = new ArrayList<ResiliencyType>();
+        }
+        this.resiliencyTypeIn.add(resiliencyTypeInItem);
+        return this;
+    }
+
+    /**
+     * Get resiliencyTypeIn
+     *
+     * @return resiliencyTypeIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ResiliencyType> getResiliencyTypeIn() {
+        return resiliencyTypeIn;
+    }
+
+    public void setResiliencyTypeIn(List<ResiliencyType> resiliencyTypeIn) {
+        this.resiliencyTypeIn = resiliencyTypeIn;
+    }
+
+    public IscsiTargetWhereInput resiliencyTypeIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput resiliencyTypeIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        return this;
+    }
+
+    public void setResiliencyTypeIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        }
+    }
+
+    public boolean getResiliencyTypeIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+    }
+
+    public IscsiTargetWhereInput resiliencyTypeNot(ResiliencyType resiliencyTypeNot) {
+
+        this.resiliencyTypeNot = resiliencyTypeNot;
+        return this;
+    }
+
+    /**
+     * Get resiliencyTypeNot
+     *
+     * @return resiliencyTypeNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyTypeNot() {
+        return resiliencyTypeNot;
+    }
+
+    public void setResiliencyTypeNot(ResiliencyType resiliencyTypeNot) {
+        this.resiliencyTypeNot = resiliencyTypeNot;
+    }
+
+    public IscsiTargetWhereInput resiliencyTypeNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        return this;
+    }
+
+    public IscsiTargetWhereInput resiliencyTypeNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        return this;
+    }
+
+    public void setResiliencyTypeNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        }
+    }
+
+    public boolean getResiliencyTypeNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+    }
+
+    public IscsiTargetWhereInput resiliencyTypeNotIn(List<ResiliencyType> resiliencyTypeNotIn) {
+
+        this.resiliencyTypeNotIn = resiliencyTypeNotIn;
+        return this;
+    }
+
+    public IscsiTargetWhereInput addResiliencyTypeNotInItem(
+            ResiliencyType resiliencyTypeNotInItem) {
+        if (this.resiliencyTypeNotIn == null) {
+            this.resiliencyTypeNotIn = new ArrayList<ResiliencyType>();
+        }
+        this.resiliencyTypeNotIn.add(resiliencyTypeNotInItem);
+        return this;
+    }
+
+    /**
+     * Get resiliencyTypeNotIn
+     *
+     * @return resiliencyTypeNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ResiliencyType> getResiliencyTypeNotIn() {
+        return resiliencyTypeNotIn;
+    }
+
+    public void setResiliencyTypeNotIn(List<ResiliencyType> resiliencyTypeNotIn) {
+        this.resiliencyTypeNotIn = resiliencyTypeNotIn;
+    }
+
+    public IscsiTargetWhereInput resiliencyTypeNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        return this;
+    }
+
+    public IscsiTargetWhereInput resiliencyTypeNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        return this;
+    }
+
+    public void setResiliencyTypeNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        }
+    }
+
+    public boolean getResiliencyTypeNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
     }
 
     public IscsiTargetWhereInput stripeNum(Integer stripeNum) {
@@ -16214,6 +18680,15 @@ public class IscsiTargetWhereInput
                 && Objects.equals(this.bpsWrMaxNotIn, iscsiTargetWhereInput.bpsWrMaxNotIn)
                 && Objects.equals(this.bpsWrNot, iscsiTargetWhereInput.bpsWrNot)
                 && Objects.equals(this.bpsWrNotIn, iscsiTargetWhereInput.bpsWrNotIn)
+                && Objects.equals(
+                        this.businessHostGroupsEvery, iscsiTargetWhereInput.businessHostGroupsEvery)
+                && Objects.equals(
+                        this.businessHostGroupsNone, iscsiTargetWhereInput.businessHostGroupsNone)
+                && Objects.equals(
+                        this.businessHostGroupsSome, iscsiTargetWhereInput.businessHostGroupsSome)
+                && Objects.equals(this.businessHostsEvery, iscsiTargetWhereInput.businessHostsEvery)
+                && Objects.equals(this.businessHostsNone, iscsiTargetWhereInput.businessHostsNone)
+                && Objects.equals(this.businessHostsSome, iscsiTargetWhereInput.businessHostsSome)
                 && Objects.equals(this.chapEnabled, iscsiTargetWhereInput.chapEnabled)
                 && Objects.equals(this.chapEnabledNot, iscsiTargetWhereInput.chapEnabledNot)
                 && Objects.equals(this.chapName, iscsiTargetWhereInput.chapName)
@@ -16252,6 +18727,20 @@ public class IscsiTargetWhereInput
                 && Objects.equals(
                         this.chapSecretStartsWith, iscsiTargetWhereInput.chapSecretStartsWith)
                 && Objects.equals(this.cluster, iscsiTargetWhereInput.cluster)
+                && Objects.equals(
+                        this.configurationAdaptive, iscsiTargetWhereInput.configurationAdaptive)
+                && Objects.equals(
+                        this.configurationAdaptiveNot,
+                        iscsiTargetWhereInput.configurationAdaptiveNot)
+                && Objects.equals(
+                        this.configurationMethod, iscsiTargetWhereInput.configurationMethod)
+                && Objects.equals(
+                        this.configurationMethodIn, iscsiTargetWhereInput.configurationMethodIn)
+                && Objects.equals(
+                        this.configurationMethodNot, iscsiTargetWhereInput.configurationMethodNot)
+                && Objects.equals(
+                        this.configurationMethodNotIn,
+                        iscsiTargetWhereInput.configurationMethodNotIn)
                 && Objects.equals(this.description, iscsiTargetWhereInput.description)
                 && Objects.equals(
                         this.descriptionContains, iscsiTargetWhereInput.descriptionContains)
@@ -16273,6 +18762,26 @@ public class IscsiTargetWhereInput
                         iscsiTargetWhereInput.descriptionNotStartsWith)
                 && Objects.equals(
                         this.descriptionStartsWith, iscsiTargetWhereInput.descriptionStartsWith)
+                && Objects.equals(this.ecK, iscsiTargetWhereInput.ecK)
+                && Objects.equals(this.ecKGt, iscsiTargetWhereInput.ecKGt)
+                && Objects.equals(this.ecKGte, iscsiTargetWhereInput.ecKGte)
+                && Objects.equals(this.ecKIn, iscsiTargetWhereInput.ecKIn)
+                && Objects.equals(this.ecKLt, iscsiTargetWhereInput.ecKLt)
+                && Objects.equals(this.ecKLte, iscsiTargetWhereInput.ecKLte)
+                && Objects.equals(this.ecKNot, iscsiTargetWhereInput.ecKNot)
+                && Objects.equals(this.ecKNotIn, iscsiTargetWhereInput.ecKNotIn)
+                && Objects.equals(this.ecM, iscsiTargetWhereInput.ecM)
+                && Objects.equals(this.ecMGt, iscsiTargetWhereInput.ecMGt)
+                && Objects.equals(this.ecMGte, iscsiTargetWhereInput.ecMGte)
+                && Objects.equals(this.ecMIn, iscsiTargetWhereInput.ecMIn)
+                && Objects.equals(this.ecMLt, iscsiTargetWhereInput.ecMLt)
+                && Objects.equals(this.ecMLte, iscsiTargetWhereInput.ecMLte)
+                && Objects.equals(this.ecMNot, iscsiTargetWhereInput.ecMNot)
+                && Objects.equals(this.ecMNotIn, iscsiTargetWhereInput.ecMNotIn)
+                && Objects.equals(this.encryptMethod, iscsiTargetWhereInput.encryptMethod)
+                && Objects.equals(this.encryptMethodIn, iscsiTargetWhereInput.encryptMethodIn)
+                && Objects.equals(this.encryptMethodNot, iscsiTargetWhereInput.encryptMethodNot)
+                && Objects.equals(this.encryptMethodNotIn, iscsiTargetWhereInput.encryptMethodNotIn)
                 && Objects.equals(this.entityAsyncStatus, iscsiTargetWhereInput.entityAsyncStatus)
                 && Objects.equals(
                         this.entityAsyncStatusIn, iscsiTargetWhereInput.entityAsyncStatusIn)
@@ -16437,6 +18946,20 @@ public class IscsiTargetWhereInput
                         iscsiTargetWhereInput.iqnWhitelistNotStartsWith)
                 && Objects.equals(
                         this.iqnWhitelistStartsWith, iscsiTargetWhereInput.iqnWhitelistStartsWith)
+                && Objects.equals(
+                        this.iscsiConnectionsEvery, iscsiTargetWhereInput.iscsiConnectionsEvery)
+                && Objects.equals(
+                        this.iscsiConnectionsNone, iscsiTargetWhereInput.iscsiConnectionsNone)
+                && Objects.equals(
+                        this.iscsiConnectionsSome, iscsiTargetWhereInput.iscsiConnectionsSome)
+                && Objects.equals(this.iscsiLunsNum, iscsiTargetWhereInput.iscsiLunsNum)
+                && Objects.equals(this.iscsiLunsNumGt, iscsiTargetWhereInput.iscsiLunsNumGt)
+                && Objects.equals(this.iscsiLunsNumGte, iscsiTargetWhereInput.iscsiLunsNumGte)
+                && Objects.equals(this.iscsiLunsNumIn, iscsiTargetWhereInput.iscsiLunsNumIn)
+                && Objects.equals(this.iscsiLunsNumLt, iscsiTargetWhereInput.iscsiLunsNumLt)
+                && Objects.equals(this.iscsiLunsNumLte, iscsiTargetWhereInput.iscsiLunsNumLte)
+                && Objects.equals(this.iscsiLunsNumNot, iscsiTargetWhereInput.iscsiLunsNumNot)
+                && Objects.equals(this.iscsiLunsNumNotIn, iscsiTargetWhereInput.iscsiLunsNumNotIn)
                 && Objects.equals(this.labelsEvery, iscsiTargetWhereInput.labelsEvery)
                 && Objects.equals(this.labelsNone, iscsiTargetWhereInput.labelsNone)
                 && Objects.equals(this.labelsSome, iscsiTargetWhereInput.labelsSome)
@@ -16472,6 +18995,8 @@ public class IscsiTargetWhereInput
                 && Objects.equals(this.nameNotIn, iscsiTargetWhereInput.nameNotIn)
                 && Objects.equals(this.nameNotStartsWith, iscsiTargetWhereInput.nameNotStartsWith)
                 && Objects.equals(this.nameStartsWith, iscsiTargetWhereInput.nameStartsWith)
+                && Objects.equals(this.prioritized, iscsiTargetWhereInput.prioritized)
+                && Objects.equals(this.prioritizedNot, iscsiTargetWhereInput.prioritizedNot)
                 && Objects.equals(this.replicaNum, iscsiTargetWhereInput.replicaNum)
                 && Objects.equals(this.replicaNumGt, iscsiTargetWhereInput.replicaNumGt)
                 && Objects.equals(this.replicaNumGte, iscsiTargetWhereInput.replicaNumGte)
@@ -16480,6 +19005,11 @@ public class IscsiTargetWhereInput
                 && Objects.equals(this.replicaNumLte, iscsiTargetWhereInput.replicaNumLte)
                 && Objects.equals(this.replicaNumNot, iscsiTargetWhereInput.replicaNumNot)
                 && Objects.equals(this.replicaNumNotIn, iscsiTargetWhereInput.replicaNumNotIn)
+                && Objects.equals(this.resiliencyType, iscsiTargetWhereInput.resiliencyType)
+                && Objects.equals(this.resiliencyTypeIn, iscsiTargetWhereInput.resiliencyTypeIn)
+                && Objects.equals(this.resiliencyTypeNot, iscsiTargetWhereInput.resiliencyTypeNot)
+                && Objects.equals(
+                        this.resiliencyTypeNotIn, iscsiTargetWhereInput.resiliencyTypeNotIn)
                 && Objects.equals(this.stripeNum, iscsiTargetWhereInput.stripeNum)
                 && Objects.equals(this.stripeNumGt, iscsiTargetWhereInput.stripeNumGt)
                 && Objects.equals(this.stripeNumGte, iscsiTargetWhereInput.stripeNumGte)
@@ -16587,6 +19117,12 @@ public class IscsiTargetWhereInput
                 bpsWrMaxNotIn,
                 bpsWrNot,
                 bpsWrNotIn,
+                businessHostGroupsEvery,
+                businessHostGroupsNone,
+                businessHostGroupsSome,
+                businessHostsEvery,
+                businessHostsNone,
+                businessHostsSome,
                 chapEnabled,
                 chapEnabledNot,
                 chapName,
@@ -16618,6 +19154,12 @@ public class IscsiTargetWhereInput
                 chapSecretNotStartsWith,
                 chapSecretStartsWith,
                 cluster,
+                configurationAdaptive,
+                configurationAdaptiveNot,
+                configurationMethod,
+                configurationMethodIn,
+                configurationMethodNot,
+                configurationMethodNotIn,
                 description,
                 descriptionContains,
                 descriptionEndsWith,
@@ -16632,6 +19174,26 @@ public class IscsiTargetWhereInput
                 descriptionNotIn,
                 descriptionNotStartsWith,
                 descriptionStartsWith,
+                ecK,
+                ecKGt,
+                ecKGte,
+                ecKIn,
+                ecKLt,
+                ecKLte,
+                ecKNot,
+                ecKNotIn,
+                ecM,
+                ecMGt,
+                ecMGte,
+                ecMIn,
+                ecMLt,
+                ecMLte,
+                ecMNot,
+                ecMNotIn,
+                encryptMethod,
+                encryptMethodIn,
+                encryptMethodNot,
+                encryptMethodNotIn,
                 entityAsyncStatus,
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
@@ -16776,6 +19338,17 @@ public class IscsiTargetWhereInput
                 iqnWhitelistNotIn,
                 iqnWhitelistNotStartsWith,
                 iqnWhitelistStartsWith,
+                iscsiConnectionsEvery,
+                iscsiConnectionsNone,
+                iscsiConnectionsSome,
+                iscsiLunsNum,
+                iscsiLunsNumGt,
+                iscsiLunsNumGte,
+                iscsiLunsNumIn,
+                iscsiLunsNumLt,
+                iscsiLunsNumLte,
+                iscsiLunsNumNot,
+                iscsiLunsNumNotIn,
                 labelsEvery,
                 labelsNone,
                 labelsSome,
@@ -16810,6 +19383,8 @@ public class IscsiTargetWhereInput
                 nameNotIn,
                 nameNotStartsWith,
                 nameStartsWith,
+                prioritized,
+                prioritizedNot,
                 replicaNum,
                 replicaNumGt,
                 replicaNumGte,
@@ -16818,6 +19393,10 @@ public class IscsiTargetWhereInput
                 replicaNumLte,
                 replicaNumNot,
                 replicaNumNotIn,
+                resiliencyType,
+                resiliencyTypeIn,
+                resiliencyTypeNot,
+                resiliencyTypeNotIn,
                 stripeNum,
                 stripeNumGt,
                 stripeNumGte,
@@ -16942,6 +19521,24 @@ public class IscsiTargetWhereInput
         sb.append("    bpsWrMaxNotIn: ").append(toIndentedString(bpsWrMaxNotIn)).append("\n");
         sb.append("    bpsWrNot: ").append(toIndentedString(bpsWrNot)).append("\n");
         sb.append("    bpsWrNotIn: ").append(toIndentedString(bpsWrNotIn)).append("\n");
+        sb.append("    businessHostGroupsEvery: ")
+                .append(toIndentedString(businessHostGroupsEvery))
+                .append("\n");
+        sb.append("    businessHostGroupsNone: ")
+                .append(toIndentedString(businessHostGroupsNone))
+                .append("\n");
+        sb.append("    businessHostGroupsSome: ")
+                .append(toIndentedString(businessHostGroupsSome))
+                .append("\n");
+        sb.append("    businessHostsEvery: ")
+                .append(toIndentedString(businessHostsEvery))
+                .append("\n");
+        sb.append("    businessHostsNone: ")
+                .append(toIndentedString(businessHostsNone))
+                .append("\n");
+        sb.append("    businessHostsSome: ")
+                .append(toIndentedString(businessHostsSome))
+                .append("\n");
         sb.append("    chapEnabled: ").append(toIndentedString(chapEnabled)).append("\n");
         sb.append("    chapEnabledNot: ").append(toIndentedString(chapEnabledNot)).append("\n");
         sb.append("    chapName: ").append(toIndentedString(chapName)).append("\n");
@@ -16993,6 +19590,24 @@ public class IscsiTargetWhereInput
                 .append(toIndentedString(chapSecretStartsWith))
                 .append("\n");
         sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
+        sb.append("    configurationAdaptive: ")
+                .append(toIndentedString(configurationAdaptive))
+                .append("\n");
+        sb.append("    configurationAdaptiveNot: ")
+                .append(toIndentedString(configurationAdaptiveNot))
+                .append("\n");
+        sb.append("    configurationMethod: ")
+                .append(toIndentedString(configurationMethod))
+                .append("\n");
+        sb.append("    configurationMethodIn: ")
+                .append(toIndentedString(configurationMethodIn))
+                .append("\n");
+        sb.append("    configurationMethodNot: ")
+                .append(toIndentedString(configurationMethodNot))
+                .append("\n");
+        sb.append("    configurationMethodNotIn: ")
+                .append(toIndentedString(configurationMethodNotIn))
+                .append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    descriptionContains: ")
                 .append(toIndentedString(descriptionContains))
@@ -17018,6 +19633,28 @@ public class IscsiTargetWhereInput
                 .append("\n");
         sb.append("    descriptionStartsWith: ")
                 .append(toIndentedString(descriptionStartsWith))
+                .append("\n");
+        sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
+        sb.append("    ecKGt: ").append(toIndentedString(ecKGt)).append("\n");
+        sb.append("    ecKGte: ").append(toIndentedString(ecKGte)).append("\n");
+        sb.append("    ecKIn: ").append(toIndentedString(ecKIn)).append("\n");
+        sb.append("    ecKLt: ").append(toIndentedString(ecKLt)).append("\n");
+        sb.append("    ecKLte: ").append(toIndentedString(ecKLte)).append("\n");
+        sb.append("    ecKNot: ").append(toIndentedString(ecKNot)).append("\n");
+        sb.append("    ecKNotIn: ").append(toIndentedString(ecKNotIn)).append("\n");
+        sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
+        sb.append("    ecMGt: ").append(toIndentedString(ecMGt)).append("\n");
+        sb.append("    ecMGte: ").append(toIndentedString(ecMGte)).append("\n");
+        sb.append("    ecMIn: ").append(toIndentedString(ecMIn)).append("\n");
+        sb.append("    ecMLt: ").append(toIndentedString(ecMLt)).append("\n");
+        sb.append("    ecMLte: ").append(toIndentedString(ecMLte)).append("\n");
+        sb.append("    ecMNot: ").append(toIndentedString(ecMNot)).append("\n");
+        sb.append("    ecMNotIn: ").append(toIndentedString(ecMNotIn)).append("\n");
+        sb.append("    encryptMethod: ").append(toIndentedString(encryptMethod)).append("\n");
+        sb.append("    encryptMethodIn: ").append(toIndentedString(encryptMethodIn)).append("\n");
+        sb.append("    encryptMethodNot: ").append(toIndentedString(encryptMethodNot)).append("\n");
+        sb.append("    encryptMethodNotIn: ")
+                .append(toIndentedString(encryptMethodNotIn))
                 .append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
@@ -17235,6 +19872,25 @@ public class IscsiTargetWhereInput
         sb.append("    iqnWhitelistStartsWith: ")
                 .append(toIndentedString(iqnWhitelistStartsWith))
                 .append("\n");
+        sb.append("    iscsiConnectionsEvery: ")
+                .append(toIndentedString(iscsiConnectionsEvery))
+                .append("\n");
+        sb.append("    iscsiConnectionsNone: ")
+                .append(toIndentedString(iscsiConnectionsNone))
+                .append("\n");
+        sb.append("    iscsiConnectionsSome: ")
+                .append(toIndentedString(iscsiConnectionsSome))
+                .append("\n");
+        sb.append("    iscsiLunsNum: ").append(toIndentedString(iscsiLunsNum)).append("\n");
+        sb.append("    iscsiLunsNumGt: ").append(toIndentedString(iscsiLunsNumGt)).append("\n");
+        sb.append("    iscsiLunsNumGte: ").append(toIndentedString(iscsiLunsNumGte)).append("\n");
+        sb.append("    iscsiLunsNumIn: ").append(toIndentedString(iscsiLunsNumIn)).append("\n");
+        sb.append("    iscsiLunsNumLt: ").append(toIndentedString(iscsiLunsNumLt)).append("\n");
+        sb.append("    iscsiLunsNumLte: ").append(toIndentedString(iscsiLunsNumLte)).append("\n");
+        sb.append("    iscsiLunsNumNot: ").append(toIndentedString(iscsiLunsNumNot)).append("\n");
+        sb.append("    iscsiLunsNumNotIn: ")
+                .append(toIndentedString(iscsiLunsNumNotIn))
+                .append("\n");
         sb.append("    labelsEvery: ").append(toIndentedString(labelsEvery)).append("\n");
         sb.append("    labelsNone: ").append(toIndentedString(labelsNone)).append("\n");
         sb.append("    labelsSome: ").append(toIndentedString(labelsSome)).append("\n");
@@ -17279,6 +19935,8 @@ public class IscsiTargetWhereInput
                 .append(toIndentedString(nameNotStartsWith))
                 .append("\n");
         sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
+        sb.append("    prioritized: ").append(toIndentedString(prioritized)).append("\n");
+        sb.append("    prioritizedNot: ").append(toIndentedString(prioritizedNot)).append("\n");
         sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
         sb.append("    replicaNumGt: ").append(toIndentedString(replicaNumGt)).append("\n");
         sb.append("    replicaNumGte: ").append(toIndentedString(replicaNumGte)).append("\n");
@@ -17287,6 +19945,14 @@ public class IscsiTargetWhereInput
         sb.append("    replicaNumLte: ").append(toIndentedString(replicaNumLte)).append("\n");
         sb.append("    replicaNumNot: ").append(toIndentedString(replicaNumNot)).append("\n");
         sb.append("    replicaNumNotIn: ").append(toIndentedString(replicaNumNotIn)).append("\n");
+        sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
+        sb.append("    resiliencyTypeIn: ").append(toIndentedString(resiliencyTypeIn)).append("\n");
+        sb.append("    resiliencyTypeNot: ")
+                .append(toIndentedString(resiliencyTypeNot))
+                .append("\n");
+        sb.append("    resiliencyTypeNotIn: ")
+                .append(toIndentedString(resiliencyTypeNotIn))
+                .append("\n");
         sb.append("    stripeNum: ").append(toIndentedString(stripeNum)).append("\n");
         sb.append("    stripeNumGt: ").append(toIndentedString(stripeNumGt)).append("\n");
         sb.append("    stripeNumGte: ").append(toIndentedString(stripeNumGte)).append("\n");

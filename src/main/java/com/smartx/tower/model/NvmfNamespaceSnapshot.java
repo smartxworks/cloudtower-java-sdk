@@ -19,6 +19,16 @@ public class NvmfNamespaceSnapshot
     @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT)
     private NestedConsistencyGroupSnapshot consistencyGroupSnapshot;
 
+    public static final String SERIALIZED_NAME_EC_K = "ec_k";
+
+    @SerializedName(SERIALIZED_NAME_EC_K)
+    private Integer ecK;
+
+    public static final String SERIALIZED_NAME_EC_M = "ec_m";
+
+    @SerializedName(SERIALIZED_NAME_EC_M)
+    private Integer ecM;
+
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -58,6 +68,16 @@ public class NvmfNamespaceSnapshot
 
     @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
     private NestedNvmfSubsystem nvmfSubsystem;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
+    private ResiliencyType resiliencyType;
+
+    public static final String SERIALIZED_NAME_SNAPSHOT_GROUP = "snapshot_group";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP)
+    private NestedSnapshotGroup snapshotGroup;
 
     public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
 
@@ -109,6 +129,92 @@ public class NvmfNamespaceSnapshot
 
     public boolean getConsistencyGroupSnapshot_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT);
+    }
+
+    public NvmfNamespaceSnapshot ecK(Integer ecK) {
+
+        this.ecK = ecK;
+        return this;
+    }
+
+    /**
+     * Get ecK
+     *
+     * @return ecK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcK() {
+        return ecK;
+    }
+
+    public void setEcK(Integer ecK) {
+        this.ecK = ecK;
+    }
+
+    public NvmfNamespaceSnapshot ecK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public NvmfNamespaceSnapshot ecK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public void setEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        }
+    }
+
+    public boolean getEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K);
+    }
+
+    public NvmfNamespaceSnapshot ecM(Integer ecM) {
+
+        this.ecM = ecM;
+        return this;
+    }
+
+    /**
+     * Get ecM
+     *
+     * @return ecM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcM() {
+        return ecM;
+    }
+
+    public void setEcM(Integer ecM) {
+        this.ecM = ecM;
+    }
+
+    public NvmfNamespaceSnapshot ecM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public NvmfNamespaceSnapshot ecM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public void setEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        }
+    }
+
+    public boolean getEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M);
     }
 
     public NvmfNamespaceSnapshot entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -463,6 +569,92 @@ public class NvmfNamespaceSnapshot
         return this._isPresent_.contains(SERIALIZED_NAME_NVMF_SUBSYSTEM);
     }
 
+    public NvmfNamespaceSnapshot resiliencyType(ResiliencyType resiliencyType) {
+
+        this.resiliencyType = resiliencyType;
+        return this;
+    }
+
+    /**
+     * Get resiliencyType
+     *
+     * @return resiliencyType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyType() {
+        return resiliencyType;
+    }
+
+    public void setResiliencyType(ResiliencyType resiliencyType) {
+        this.resiliencyType = resiliencyType;
+    }
+
+    public NvmfNamespaceSnapshot resiliencyType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public NvmfNamespaceSnapshot resiliencyType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public void setResiliencyType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        }
+    }
+
+    public boolean getResiliencyType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
+    }
+
+    public NvmfNamespaceSnapshot snapshotGroup(NestedSnapshotGroup snapshotGroup) {
+
+        this.snapshotGroup = snapshotGroup;
+        return this;
+    }
+
+    /**
+     * Get snapshotGroup
+     *
+     * @return snapshotGroup
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedSnapshotGroup getSnapshotGroup() {
+        return snapshotGroup;
+    }
+
+    public void setSnapshotGroup(NestedSnapshotGroup snapshotGroup) {
+        this.snapshotGroup = snapshotGroup;
+    }
+
+    public NvmfNamespaceSnapshot snapshotGroup_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public NvmfNamespaceSnapshot snapshotGroup_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public void setSnapshotGroup_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        }
+    }
+
+    public boolean getSnapshotGroup_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_GROUP);
+    }
+
     public NvmfNamespaceSnapshot uniqueSize(Long uniqueSize) {
 
         this.uniqueSize = uniqueSize;
@@ -518,6 +710,8 @@ public class NvmfNamespaceSnapshot
         return Objects.equals(
                         this.consistencyGroupSnapshot,
                         nvmfNamespaceSnapshot.consistencyGroupSnapshot)
+                && Objects.equals(this.ecK, nvmfNamespaceSnapshot.ecK)
+                && Objects.equals(this.ecM, nvmfNamespaceSnapshot.ecM)
                 && Objects.equals(this.entityAsyncStatus, nvmfNamespaceSnapshot.entityAsyncStatus)
                 && Objects.equals(this.id, nvmfNamespaceSnapshot.id)
                 && Objects.equals(this.labels, nvmfNamespaceSnapshot.labels)
@@ -526,6 +720,8 @@ public class NvmfNamespaceSnapshot
                 && Objects.equals(this.name, nvmfNamespaceSnapshot.name)
                 && Objects.equals(this.nvmfNamespace, nvmfNamespaceSnapshot.nvmfNamespace)
                 && Objects.equals(this.nvmfSubsystem, nvmfNamespaceSnapshot.nvmfSubsystem)
+                && Objects.equals(this.resiliencyType, nvmfNamespaceSnapshot.resiliencyType)
+                && Objects.equals(this.snapshotGroup, nvmfNamespaceSnapshot.snapshotGroup)
                 && Objects.equals(this.uniqueSize, nvmfNamespaceSnapshot.uniqueSize);
     }
 
@@ -542,6 +738,8 @@ public class NvmfNamespaceSnapshot
     public int hashCode() {
         return Objects.hash(
                 consistencyGroupSnapshot,
+                ecK,
+                ecM,
                 entityAsyncStatus,
                 id,
                 labels,
@@ -550,6 +748,8 @@ public class NvmfNamespaceSnapshot
                 name,
                 nvmfNamespace,
                 nvmfSubsystem,
+                resiliencyType,
+                snapshotGroup,
                 uniqueSize);
     }
 
@@ -567,6 +767,8 @@ public class NvmfNamespaceSnapshot
         sb.append("    consistencyGroupSnapshot: ")
                 .append(toIndentedString(consistencyGroupSnapshot))
                 .append("\n");
+        sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
+        sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -577,6 +779,8 @@ public class NvmfNamespaceSnapshot
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    nvmfNamespace: ").append(toIndentedString(nvmfNamespace)).append("\n");
         sb.append("    nvmfSubsystem: ").append(toIndentedString(nvmfSubsystem)).append("\n");
+        sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
+        sb.append("    snapshotGroup: ").append(toIndentedString(snapshotGroup)).append("\n");
         sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
         sb.append("}");
         return sb.toString();

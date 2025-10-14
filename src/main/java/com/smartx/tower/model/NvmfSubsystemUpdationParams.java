@@ -12,7 +12,7 @@ public class NvmfSubsystemUpdationParams
     public static final String SERIALIZED_NAME_DATA = "data";
 
     @SerializedName(SERIALIZED_NAME_DATA)
-    private NvmfSubsystemCommonParams data;
+    private NvmfSubsystemUpdationParamsData data;
 
     public static final String SERIALIZED_NAME_WHERE = "where";
 
@@ -21,7 +21,7 @@ public class NvmfSubsystemUpdationParams
 
     public NvmfSubsystemUpdationParams() {}
 
-    public NvmfSubsystemUpdationParams data(NvmfSubsystemCommonParams data) {
+    public NvmfSubsystemUpdationParams data(NvmfSubsystemUpdationParamsData data) {
 
         this.data = data;
         return this;
@@ -34,11 +34,11 @@ public class NvmfSubsystemUpdationParams
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(required = true, value = "")
-    public NvmfSubsystemCommonParams getData() {
+    public NvmfSubsystemUpdationParamsData getData() {
         return data;
     }
 
-    public void setData(NvmfSubsystemCommonParams data) {
+    public void setData(NvmfSubsystemUpdationParamsData data) {
         this.data = data;
     }
 

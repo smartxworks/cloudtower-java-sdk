@@ -57,6 +57,11 @@ public class VmSnapshot extends com.smartx.tower.ConditionalNullable.Conditional
     @SerializedName(SERIALIZED_NAME_HA)
     private Boolean ha;
 
+    public static final String SERIALIZED_NAME_HA_PRIORITY = "ha_priority";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY)
+    private VmHaPriority haPriority;
+
     public static final String SERIALIZED_NAME_ID = "id";
 
     @SerializedName(SERIALIZED_NAME_ID)
@@ -534,6 +539,49 @@ public class VmSnapshot extends com.smartx.tower.ConditionalNullable.Conditional
 
     public boolean getHa_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_HA);
+    }
+
+    public VmSnapshot haPriority(VmHaPriority haPriority) {
+
+        this.haPriority = haPriority;
+        return this;
+    }
+
+    /**
+     * Get haPriority
+     *
+     * @return haPriority
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmHaPriority getHaPriority() {
+        return haPriority;
+    }
+
+    public void setHaPriority(VmHaPriority haPriority) {
+        this.haPriority = haPriority;
+    }
+
+    public VmSnapshot haPriority_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public VmSnapshot haPriority_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public void setHaPriority_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        }
+    }
+
+    public boolean getHaPriority_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY);
     }
 
     public VmSnapshot id(String id) {
@@ -1352,6 +1400,7 @@ public class VmSnapshot extends com.smartx.tower.ConditionalNullable.Conditional
                 && Objects.equals(this.entityAsyncStatus, vmSnapshot.entityAsyncStatus)
                 && Objects.equals(this.firmware, vmSnapshot.firmware)
                 && Objects.equals(this.ha, vmSnapshot.ha)
+                && Objects.equals(this.haPriority, vmSnapshot.haPriority)
                 && Objects.equals(this.id, vmSnapshot.id)
                 && Objects.equals(this.ioPolicy, vmSnapshot.ioPolicy)
                 && Objects.equals(this.labels, vmSnapshot.labels)
@@ -1393,6 +1442,7 @@ public class VmSnapshot extends com.smartx.tower.ConditionalNullable.Conditional
                 entityAsyncStatus,
                 firmware,
                 ha,
+                haPriority,
                 id,
                 ioPolicy,
                 labels,
@@ -1435,6 +1485,7 @@ public class VmSnapshot extends com.smartx.tower.ConditionalNullable.Conditional
                 .append("\n");
         sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
         sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
+        sb.append("    haPriority: ").append(toIndentedString(haPriority)).append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    ioPolicy: ").append(toIndentedString(ioPolicy)).append("\n");
         sb.append("    labels: ").append(toIndentedString(labels)).append("\n");

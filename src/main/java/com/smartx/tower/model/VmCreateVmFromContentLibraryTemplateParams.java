@@ -81,6 +81,11 @@ public class VmCreateVmFromContentLibraryTemplateParams
     @SerializedName(SERIALIZED_NAME_FIRMWARE)
     private VmFirmware firmware;
 
+    public static final String SERIALIZED_NAME_HA_PRIORITY = "ha_priority";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY)
+    private VmHaPriority haPriority;
+
     public static final String SERIALIZED_NAME_HA = "ha";
 
     @SerializedName(SERIALIZED_NAME_HA)
@@ -770,6 +775,49 @@ public class VmCreateVmFromContentLibraryTemplateParams
 
     public boolean getFirmware_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_FIRMWARE);
+    }
+
+    public VmCreateVmFromContentLibraryTemplateParams haPriority(VmHaPriority haPriority) {
+
+        this.haPriority = haPriority;
+        return this;
+    }
+
+    /**
+     * Get haPriority
+     *
+     * @return haPriority
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmHaPriority getHaPriority() {
+        return haPriority;
+    }
+
+    public void setHaPriority(VmHaPriority haPriority) {
+        this.haPriority = haPriority;
+    }
+
+    public VmCreateVmFromContentLibraryTemplateParams haPriority_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public VmCreateVmFromContentLibraryTemplateParams haPriority_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public void setHaPriority_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        }
+    }
+
+    public boolean getHaPriority_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY);
     }
 
     public VmCreateVmFromContentLibraryTemplateParams ha(Boolean ha) {
@@ -1464,6 +1512,8 @@ public class VmCreateVmFromContentLibraryTemplateParams
                 && Objects.equals(this.status, vmCreateVmFromContentLibraryTemplateParams.status)
                 && Objects.equals(
                         this.firmware, vmCreateVmFromContentLibraryTemplateParams.firmware)
+                && Objects.equals(
+                        this.haPriority, vmCreateVmFromContentLibraryTemplateParams.haPriority)
                 && Objects.equals(this.ha, vmCreateVmFromContentLibraryTemplateParams.ha)
                 && Objects.equals(this.pciNics, vmCreateVmFromContentLibraryTemplateParams.pciNics)
                 && Objects.equals(
@@ -1508,6 +1558,7 @@ public class VmCreateVmFromContentLibraryTemplateParams
                 vcpu,
                 status,
                 firmware,
+                haPriority,
                 ha,
                 pciNics,
                 vmPlacementGroup,
@@ -1545,6 +1596,7 @@ public class VmCreateVmFromContentLibraryTemplateParams
         sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
         sb.append("    status: ").append(toIndentedString(status)).append("\n");
         sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
+        sb.append("    haPriority: ").append(toIndentedString(haPriority)).append("\n");
         sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
         sb.append("    pciNics: ").append(toIndentedString(pciNics)).append("\n");
         sb.append("    vmPlacementGroup: ").append(toIndentedString(vmPlacementGroup)).append("\n");

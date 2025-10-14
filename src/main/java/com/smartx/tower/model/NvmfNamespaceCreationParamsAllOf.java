@@ -9,6 +9,26 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class NvmfNamespaceCreationParamsAllOf
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_EC_M = "ec_m";
+
+    @SerializedName(SERIALIZED_NAME_EC_M)
+    private Double ecM;
+
+    public static final String SERIALIZED_NAME_EC_K = "ec_k";
+
+    @SerializedName(SERIALIZED_NAME_EC_K)
+    private Double ecK;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
+    private ResiliencyType resiliencyType;
+
+    public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
+
+    @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
+    private Boolean thinProvision;
+
     public static final String SERIALIZED_NAME_NAMESPACE_ID = "namespace_id";
 
     @SerializedName(SERIALIZED_NAME_NAMESPACE_ID)
@@ -50,6 +70,178 @@ public class NvmfNamespaceCreationParamsAllOf
     private String name;
 
     public NvmfNamespaceCreationParamsAllOf() {}
+
+    public NvmfNamespaceCreationParamsAllOf ecM(Double ecM) {
+
+        this.ecM = ecM;
+        return this;
+    }
+
+    /**
+     * Get ecM
+     *
+     * @return ecM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getEcM() {
+        return ecM;
+    }
+
+    public void setEcM(Double ecM) {
+        this.ecM = ecM;
+    }
+
+    public NvmfNamespaceCreationParamsAllOf ecM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public NvmfNamespaceCreationParamsAllOf ecM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public void setEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        }
+    }
+
+    public boolean getEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M);
+    }
+
+    public NvmfNamespaceCreationParamsAllOf ecK(Double ecK) {
+
+        this.ecK = ecK;
+        return this;
+    }
+
+    /**
+     * Get ecK
+     *
+     * @return ecK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getEcK() {
+        return ecK;
+    }
+
+    public void setEcK(Double ecK) {
+        this.ecK = ecK;
+    }
+
+    public NvmfNamespaceCreationParamsAllOf ecK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public NvmfNamespaceCreationParamsAllOf ecK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public void setEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        }
+    }
+
+    public boolean getEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K);
+    }
+
+    public NvmfNamespaceCreationParamsAllOf resiliencyType(ResiliencyType resiliencyType) {
+
+        this.resiliencyType = resiliencyType;
+        return this;
+    }
+
+    /**
+     * Get resiliencyType
+     *
+     * @return resiliencyType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyType() {
+        return resiliencyType;
+    }
+
+    public void setResiliencyType(ResiliencyType resiliencyType) {
+        this.resiliencyType = resiliencyType;
+    }
+
+    public NvmfNamespaceCreationParamsAllOf resiliencyType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public NvmfNamespaceCreationParamsAllOf resiliencyType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public void setResiliencyType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        }
+    }
+
+    public boolean getResiliencyType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
+    }
+
+    public NvmfNamespaceCreationParamsAllOf thinProvision(Boolean thinProvision) {
+
+        this.thinProvision = thinProvision;
+        return this;
+    }
+
+    /**
+     * Get thinProvision
+     *
+     * @return thinProvision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getThinProvision() {
+        return thinProvision;
+    }
+
+    public void setThinProvision(Boolean thinProvision) {
+        this.thinProvision = thinProvision;
+    }
+
+    public NvmfNamespaceCreationParamsAllOf thinProvision_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_THIN_PROVISION);
+        return this;
+    }
+
+    public NvmfNamespaceCreationParamsAllOf thinProvision_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_THIN_PROVISION);
+        return this;
+    }
+
+    public void setThinProvision_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_THIN_PROVISION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_THIN_PROVISION);
+        }
+    }
+
+    public boolean getThinProvision_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_THIN_PROVISION);
+    }
 
     public NvmfNamespaceCreationParamsAllOf namespaceId(Integer namespaceId) {
 
@@ -405,7 +597,13 @@ public class NvmfNamespaceCreationParamsAllOf
         }
         NvmfNamespaceCreationParamsAllOf nvmfNamespaceCreationParamsAllOf =
                 (NvmfNamespaceCreationParamsAllOf) o;
-        return Objects.equals(this.namespaceId, nvmfNamespaceCreationParamsAllOf.namespaceId)
+        return Objects.equals(this.ecM, nvmfNamespaceCreationParamsAllOf.ecM)
+                && Objects.equals(this.ecK, nvmfNamespaceCreationParamsAllOf.ecK)
+                && Objects.equals(
+                        this.resiliencyType, nvmfNamespaceCreationParamsAllOf.resiliencyType)
+                && Objects.equals(
+                        this.thinProvision, nvmfNamespaceCreationParamsAllOf.thinProvision)
+                && Objects.equals(this.namespaceId, nvmfNamespaceCreationParamsAllOf.namespaceId)
                 && Objects.equals(this.groupId, nvmfNamespaceCreationParamsAllOf.groupId)
                 && Objects.equals(this.isShared, nvmfNamespaceCreationParamsAllOf.isShared)
                 && Objects.equals(
@@ -420,6 +618,10 @@ public class NvmfNamespaceCreationParamsAllOf
     @Override
     public int hashCode() {
         return Objects.hash(
+                ecM,
+                ecK,
+                resiliencyType,
+                thinProvision,
                 namespaceId,
                 groupId,
                 isShared,
@@ -434,6 +636,10 @@ public class NvmfNamespaceCreationParamsAllOf
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class NvmfNamespaceCreationParamsAllOf {\n");
+        sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
+        sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
+        sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
+        sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");
         sb.append("    namespaceId: ").append(toIndentedString(namespaceId)).append("\n");
         sb.append("    groupId: ").append(toIndentedString(groupId)).append("\n");
         sb.append("    isShared: ").append(toIndentedString(isShared)).append("\n");

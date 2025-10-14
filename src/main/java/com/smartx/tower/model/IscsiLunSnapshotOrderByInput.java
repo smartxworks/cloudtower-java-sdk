@@ -10,6 +10,14 @@ import java.io.IOException;
 /** Gets or Sets IscsiLunSnapshotOrderByInput */
 @JsonAdapter(IscsiLunSnapshotOrderByInput.Adapter.class)
 public enum IscsiLunSnapshotOrderByInput {
+    EC_K_ASC("ec_k_ASC"),
+
+    EC_K_DESC("ec_k_DESC"),
+
+    EC_M_ASC("ec_m_ASC"),
+
+    EC_M_DESC("ec_m_DESC"),
+
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
     ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
@@ -29,6 +37,10 @@ public enum IscsiLunSnapshotOrderByInput {
     NAME_ASC("name_ASC"),
 
     NAME_DESC("name_DESC"),
+
+    RESILIENCY_TYPE_ASC("resiliency_type_ASC"),
+
+    RESILIENCY_TYPE_DESC("resiliency_type_DESC"),
 
     UNIQUE_SIZE_ASC("unique_size_ASC"),
 

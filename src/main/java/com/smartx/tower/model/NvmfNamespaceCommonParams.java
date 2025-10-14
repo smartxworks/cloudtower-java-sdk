@@ -9,6 +9,37 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class NvmfNamespaceCommonParams
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS = "business_host_groups";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS)
+    private BusinessHostGroupWhereInput businessHostGroups;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS = "business_hosts";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS)
+    private BusinessHostWhereInput businessHosts;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT =
+            "business_host_is_same_with_parent";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT)
+    private Boolean businessHostIsSameWithParent;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_METHOD = "configuration_method";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD)
+    private ConfigurationMethod configurationMethod;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD = "encrypt_method";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD)
+    private EncryptMethod encryptMethod;
+
+    public static final String SERIALIZED_NAME_PRIORITIZED = "prioritized";
+
+    @SerializedName(SERIALIZED_NAME_PRIORITIZED)
+    private Boolean prioritized;
+
     public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH = "bps_wr_max_length";
 
     @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
@@ -135,6 +166,266 @@ public class NvmfNamespaceCommonParams
     private String nqnWhitelist;
 
     public NvmfNamespaceCommonParams() {}
+
+    public NvmfNamespaceCommonParams businessHostGroups(
+            BusinessHostGroupWhereInput businessHostGroups) {
+
+        this.businessHostGroups = businessHostGroups;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroups
+     *
+     * @return businessHostGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroups() {
+        return businessHostGroups;
+    }
+
+    public void setBusinessHostGroups(BusinessHostGroupWhereInput businessHostGroups) {
+        this.businessHostGroups = businessHostGroups;
+    }
+
+    public NvmfNamespaceCommonParams businessHostGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams businessHostGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public void setBusinessHostGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        }
+    }
+
+    public boolean getBusinessHostGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+    }
+
+    public NvmfNamespaceCommonParams businessHosts(BusinessHostWhereInput businessHosts) {
+
+        this.businessHosts = businessHosts;
+        return this;
+    }
+
+    /**
+     * Get businessHosts
+     *
+     * @return businessHosts
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHosts() {
+        return businessHosts;
+    }
+
+    public void setBusinessHosts(BusinessHostWhereInput businessHosts) {
+        this.businessHosts = businessHosts;
+    }
+
+    public NvmfNamespaceCommonParams businessHosts_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams businessHosts_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public void setBusinessHosts_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        }
+    }
+
+    public boolean getBusinessHosts_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS);
+    }
+
+    public NvmfNamespaceCommonParams businessHostIsSameWithParent(
+            Boolean businessHostIsSameWithParent) {
+
+        this.businessHostIsSameWithParent = businessHostIsSameWithParent;
+        return this;
+    }
+
+    /**
+     * Get businessHostIsSameWithParent
+     *
+     * @return businessHostIsSameWithParent
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getBusinessHostIsSameWithParent() {
+        return businessHostIsSameWithParent;
+    }
+
+    public void setBusinessHostIsSameWithParent(Boolean businessHostIsSameWithParent) {
+        this.businessHostIsSameWithParent = businessHostIsSameWithParent;
+    }
+
+    public NvmfNamespaceCommonParams businessHostIsSameWithParent_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams businessHostIsSameWithParent_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        return this;
+    }
+
+    public void setBusinessHostIsSameWithParent_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        }
+    }
+
+    public boolean getBusinessHostIsSameWithParent_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+    }
+
+    public NvmfNamespaceCommonParams configurationMethod(ConfigurationMethod configurationMethod) {
+
+        this.configurationMethod = configurationMethod;
+        return this;
+    }
+
+    /**
+     * Get configurationMethod
+     *
+     * @return configurationMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConfigurationMethod getConfigurationMethod() {
+        return configurationMethod;
+    }
+
+    public void setConfigurationMethod(ConfigurationMethod configurationMethod) {
+        this.configurationMethod = configurationMethod;
+    }
+
+    public NvmfNamespaceCommonParams configurationMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams configurationMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public void setConfigurationMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        }
+    }
+
+    public boolean getConfigurationMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD);
+    }
+
+    public NvmfNamespaceCommonParams encryptMethod(EncryptMethod encryptMethod) {
+
+        this.encryptMethod = encryptMethod;
+        return this;
+    }
+
+    /**
+     * Get encryptMethod
+     *
+     * @return encryptMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EncryptMethod getEncryptMethod() {
+        return encryptMethod;
+    }
+
+    public void setEncryptMethod(EncryptMethod encryptMethod) {
+        this.encryptMethod = encryptMethod;
+    }
+
+    public NvmfNamespaceCommonParams encryptMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams encryptMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public void setEncryptMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        }
+    }
+
+    public boolean getEncryptMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD);
+    }
+
+    public NvmfNamespaceCommonParams prioritized(Boolean prioritized) {
+
+        this.prioritized = prioritized;
+        return this;
+    }
+
+    /**
+     * Get prioritized
+     *
+     * @return prioritized
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getPrioritized() {
+        return prioritized;
+    }
+
+    public void setPrioritized(Boolean prioritized) {
+        this.prioritized = prioritized;
+    }
+
+    public NvmfNamespaceCommonParams prioritized_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public NvmfNamespaceCommonParams prioritized_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public void setPrioritized_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        }
+    }
+
+    public boolean getPrioritized_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIORITIZED);
+    }
 
     public NvmfNamespaceCommonParams bpsWrMaxLength(Long bpsWrMaxLength) {
 
@@ -1220,7 +1511,16 @@ public class NvmfNamespaceCommonParams
             return false;
         }
         NvmfNamespaceCommonParams nvmfNamespaceCommonParams = (NvmfNamespaceCommonParams) o;
-        return Objects.equals(this.bpsWrMaxLength, nvmfNamespaceCommonParams.bpsWrMaxLength)
+        return Objects.equals(this.businessHostGroups, nvmfNamespaceCommonParams.businessHostGroups)
+                && Objects.equals(this.businessHosts, nvmfNamespaceCommonParams.businessHosts)
+                && Objects.equals(
+                        this.businessHostIsSameWithParent,
+                        nvmfNamespaceCommonParams.businessHostIsSameWithParent)
+                && Objects.equals(
+                        this.configurationMethod, nvmfNamespaceCommonParams.configurationMethod)
+                && Objects.equals(this.encryptMethod, nvmfNamespaceCommonParams.encryptMethod)
+                && Objects.equals(this.prioritized, nvmfNamespaceCommonParams.prioritized)
+                && Objects.equals(this.bpsWrMaxLength, nvmfNamespaceCommonParams.bpsWrMaxLength)
                 && Objects.equals(this.bpsWrMaxUnit, nvmfNamespaceCommonParams.bpsWrMaxUnit)
                 && Objects.equals(this.bpsWrMax, nvmfNamespaceCommonParams.bpsWrMax)
                 && Objects.equals(this.bpsRdMaxLength, nvmfNamespaceCommonParams.bpsRdMaxLength)
@@ -1250,6 +1550,12 @@ public class NvmfNamespaceCommonParams
     @Override
     public int hashCode() {
         return Objects.hash(
+                businessHostGroups,
+                businessHosts,
+                businessHostIsSameWithParent,
+                configurationMethod,
+                encryptMethod,
+                prioritized,
                 bpsWrMaxLength,
                 bpsWrMaxUnit,
                 bpsWrMax,
@@ -1281,6 +1587,18 @@ public class NvmfNamespaceCommonParams
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class NvmfNamespaceCommonParams {\n");
+        sb.append("    businessHostGroups: ")
+                .append(toIndentedString(businessHostGroups))
+                .append("\n");
+        sb.append("    businessHosts: ").append(toIndentedString(businessHosts)).append("\n");
+        sb.append("    businessHostIsSameWithParent: ")
+                .append(toIndentedString(businessHostIsSameWithParent))
+                .append("\n");
+        sb.append("    configurationMethod: ")
+                .append(toIndentedString(configurationMethod))
+                .append("\n");
+        sb.append("    encryptMethod: ").append(toIndentedString(encryptMethod)).append("\n");
+        sb.append("    prioritized: ").append(toIndentedString(prioritized)).append("\n");
         sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
         sb.append("    bpsWrMaxUnit: ").append(toIndentedString(bpsWrMaxUnit)).append("\n");
         sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");

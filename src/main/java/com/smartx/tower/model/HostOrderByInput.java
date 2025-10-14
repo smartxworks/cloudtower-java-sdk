@@ -22,9 +22,25 @@ public enum HostOrderByInput {
 
     ALLOCATABLE_MEMORY_BYTES_DESC("allocatable_memory_bytes_DESC"),
 
+    ALLOCATED_PRIORITIZED_SPACE_ASC("allocated_prioritized_space_ASC"),
+
+    ALLOCATED_PRIORITIZED_SPACE_DESC("allocated_prioritized_space_DESC"),
+
+    ALLOCATED_PRIORITIZED_SPACE_USAGE_ASC("allocated_prioritized_space_usage_ASC"),
+
+    ALLOCATED_PRIORITIZED_SPACE_USAGE_DESC("allocated_prioritized_space_usage_DESC"),
+
     CHUNK_ID_ASC("chunk_id_ASC"),
 
     CHUNK_ID_DESC("chunk_id_DESC"),
+
+    COMMITED_MEMORY_BYTES_ASC("commited_memory_bytes_ASC"),
+
+    COMMITED_MEMORY_BYTES_DESC("commited_memory_bytes_DESC"),
+
+    CONNECT_STATUS_ASC("connect_status_ASC"),
+
+    CONNECT_STATUS_DESC("connect_status_DESC"),
 
     CPU_BRAND_ASC("cpu_brand_ASC"),
 
@@ -49,6 +65,10 @@ public enum HostOrderByInput {
     DATA_IP_ASC("data_ip_ASC"),
 
     DATA_IP_DESC("data_ip_DESC"),
+
+    DOWNGRADED_PRIORITIZED_SPACE_ASC("downgraded_prioritized_space_ASC"),
+
+    DOWNGRADED_PRIORITIZED_SPACE_DESC("downgraded_prioritized_space_DESC"),
 
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
@@ -98,6 +118,10 @@ public enum HostOrderByInput {
 
     MANAGEMENT_IP_DESC("management_ip_DESC"),
 
+    MERGED_STATUS_ASC("merged_status_ASC"),
+
+    MERGED_STATUS_DESC("merged_status_DESC"),
+
     MODEL_ASC("model_ASC"),
 
     MODEL_DESC("model_DESC"),
@@ -126,6 +150,30 @@ public enum HostOrderByInput {
 
     OS_VERSION_DESC("os_version_DESC"),
 
+    PERF_ALLOCATED_DATA_SPACE_ASC("perf_allocated_data_space_ASC"),
+
+    PERF_ALLOCATED_DATA_SPACE_DESC("perf_allocated_data_space_DESC"),
+
+    PERF_FAILURE_DATA_SPACE_ASC("perf_failure_data_space_ASC"),
+
+    PERF_FAILURE_DATA_SPACE_DESC("perf_failure_data_space_DESC"),
+
+    PERF_TOTAL_DATA_CAPACITY_ASC("perf_total_data_capacity_ASC"),
+
+    PERF_TOTAL_DATA_CAPACITY_DESC("perf_total_data_capacity_DESC"),
+
+    PERF_USED_DATA_SPACE_ASC("perf_used_data_space_ASC"),
+
+    PERF_USED_DATA_SPACE_DESC("perf_used_data_space_DESC"),
+
+    PERF_VALID_DATA_SPACE_ASC("perf_valid_data_space_ASC"),
+
+    PERF_VALID_DATA_SPACE_DESC("perf_valid_data_space_DESC"),
+
+    PLANNED_PRIORITIZED_SPACE_ASC("planned_prioritized_space_ASC"),
+
+    PLANNED_PRIORITIZED_SPACE_DESC("planned_prioritized_space_DESC"),
+
     PMEM_DIMM_CAPACITY_ASC("pmem_dimm_capacity_ASC"),
 
     PMEM_DIMM_CAPACITY_DESC("pmem_dimm_capacity_DESC"),
@@ -137,6 +185,10 @@ public enum HostOrderByInput {
     PMEM_DISK_COUNT_ASC("pmem_disk_count_ASC"),
 
     PMEM_DISK_COUNT_DESC("pmem_disk_count_DESC"),
+
+    PRIO_SPACE_PERCENTAGE_ASC("prio_space_percentage_ASC"),
+
+    PRIO_SPACE_PERCENTAGE_DESC("prio_space_percentage_DESC"),
 
     PROVISIONED_CPU_CORES_ASC("provisioned_cpu_cores_ASC"),
 
@@ -218,6 +270,10 @@ public enum HostOrderByInput {
 
     TOTAL_MEMORY_BYTES_DESC("total_memory_bytes_DESC"),
 
+    USED_CACHE_SPACE_ASC("used_cache_space_ASC"),
+
+    USED_CACHE_SPACE_DESC("used_cache_space_DESC"),
+
     USED_CPU_HZ_ASC("used_cpu_hz_ASC"),
 
     USED_CPU_HZ_DESC("used_cpu_hz_DESC"),
@@ -229,6 +285,14 @@ public enum HostOrderByInput {
     USED_MEMORY_BYTES_ASC("used_memory_bytes_ASC"),
 
     USED_MEMORY_BYTES_DESC("used_memory_bytes_DESC"),
+
+    VALID_CACHE_SPACE_ASC("valid_cache_space_ASC"),
+
+    VALID_CACHE_SPACE_DESC("valid_cache_space_DESC"),
+
+    VALID_FREE_CACHE_SPACE_ASC("valid_free_cache_space_ASC"),
+
+    VALID_FREE_CACHE_SPACE_DESC("valid_free_cache_space_DESC"),
 
     VM_NUM_ASC("vm_num_ASC"),
 

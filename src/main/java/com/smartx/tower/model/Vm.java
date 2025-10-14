@@ -117,6 +117,11 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
     @SerializedName(SERIALIZED_NAME_HA)
     private Boolean ha;
 
+    public static final String SERIALIZED_NAME_HA_PRIORITY = "ha_priority";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY)
+    private VmHaPriority haPriority;
+
     public static final String SERIALIZED_NAME_HOST = "host";
 
     @SerializedName(SERIALIZED_NAME_HOST)
@@ -1279,6 +1284,49 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
 
     public boolean getHa_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_HA);
+    }
+
+    public Vm haPriority(VmHaPriority haPriority) {
+
+        this.haPriority = haPriority;
+        return this;
+    }
+
+    /**
+     * Get haPriority
+     *
+     * @return haPriority
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmHaPriority getHaPriority() {
+        return haPriority;
+    }
+
+    public void setHaPriority(VmHaPriority haPriority) {
+        this.haPriority = haPriority;
+    }
+
+    public Vm haPriority_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public Vm haPriority_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public void setHaPriority_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        }
+    }
+
+    public boolean getHaPriority_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY);
     }
 
     public Vm host(NestedHost host) {
@@ -3393,6 +3441,7 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.guestSizeUsage, vm.guestSizeUsage)
                 && Objects.equals(this.guestUsedSize, vm.guestUsedSize)
                 && Objects.equals(this.ha, vm.ha)
+                && Objects.equals(this.haPriority, vm.haPriority)
                 && Objects.equals(this.host, vm.host)
                 && Objects.equals(this.hostname, vm.hostname)
                 && Objects.equals(this.id, vm.id)
@@ -3475,6 +3524,7 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
                 guestSizeUsage,
                 guestUsedSize,
                 ha,
+                haPriority,
                 host,
                 hostname,
                 id,
@@ -3562,6 +3612,7 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
         sb.append("    guestSizeUsage: ").append(toIndentedString(guestSizeUsage)).append("\n");
         sb.append("    guestUsedSize: ").append(toIndentedString(guestUsedSize)).append("\n");
         sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
+        sb.append("    haPriority: ").append(toIndentedString(haPriority)).append("\n");
         sb.append("    host: ").append(toIndentedString(host)).append("\n");
         sb.append("    hostname: ").append(toIndentedString(hostname)).append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");

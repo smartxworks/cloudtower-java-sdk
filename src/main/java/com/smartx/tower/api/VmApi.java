@@ -46,6 +46,7 @@ import com.smartx.tower.model.VmRemoveNicByWhereParams;
 import com.smartx.tower.model.VmRemoveNicParams;
 import com.smartx.tower.model.VmResetGuestOsPasswordParams;
 import com.smartx.tower.model.VmRollbackParams;
+import com.smartx.tower.model.VmSetVmDiskResidentInCacheParams;
 import com.smartx.tower.model.VmStartParams;
 import com.smartx.tower.model.VmToggleCdRomDisableParams;
 import com.smartx.tower.model.VmUpdateAdvancedOptionsParams;
@@ -6534,6 +6535,169 @@ public class VmApi {
             throws ApiException {
 
         okhttp3.Call localVarCall = rollbackVmValidateBeforeCall(vmRollbackParams, _callback);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for setVmDiskResidentInCache
+     *
+     * @param vmSetVmDiskResidentInCacheParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call setVmDiskResidentInCacheCall(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams,
+            final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = vmSetVmDiskResidentInCacheParams;
+
+        // create path and map variables
+        String localVarPath = "/set-vm-disk-resident-in-cache";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call setVmDiskResidentInCacheValidateBeforeCall(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'vmSetVmDiskResidentInCacheParams' is set
+        if (vmSetVmDiskResidentInCacheParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'vmSetVmDiskResidentInCacheParams' when"
+                            + " calling setVmDiskResidentInCache(Async)");
+        }
+
+        okhttp3.Call localVarCall =
+                setVmDiskResidentInCacheCall(vmSetVmDiskResidentInCacheParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param vmSetVmDiskResidentInCacheParams (required)
+     * @return List&lt;WithTaskVm&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<WithTaskVm> setVmDiskResidentInCache(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams) throws ApiException {
+        ApiResponse<List<WithTaskVm>> localVarResp =
+                setVmDiskResidentInCacheWithHttpInfo(vmSetVmDiskResidentInCacheParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param vmSetVmDiskResidentInCacheParams (required)
+     * @return ApiResponse&lt;List&lt;WithTaskVm&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<WithTaskVm>> setVmDiskResidentInCacheWithHttpInfo(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams) throws ApiException {
+        okhttp3.Call localVarCall =
+                setVmDiskResidentInCacheValidateBeforeCall(vmSetVmDiskResidentInCacheParams, null);
+        Type localVarReturnType = new TypeToken<List<WithTaskVm>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param vmSetVmDiskResidentInCacheParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call setVmDiskResidentInCacheAsync(
+            VmSetVmDiskResidentInCacheParams vmSetVmDiskResidentInCacheParams,
+            final ApiCallback<List<WithTaskVm>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                setVmDiskResidentInCacheValidateBeforeCall(
+                        vmSetVmDiskResidentInCacheParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVm>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

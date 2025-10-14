@@ -62,10 +62,52 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
     @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
     private Long bpsWrMaxLength;
 
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS = "business_host_groups";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS)
+    private List<NestedBusinessHostGroup> businessHostGroups = null;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT =
+            "business_host_is_same_with_parent";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT)
+    private Boolean businessHostIsSameWithParent;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS = "business_hosts";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS)
+    private List<NestedBusinessHost> businessHosts = null;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_METHOD = "configuration_method";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD)
+    private ConfigurationMethod configurationMethod;
+
     public static final String SERIALIZED_NAME_CONSISTENCY_GROUP = "consistency_group";
 
     @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP)
     private NestedConsistencyGroup consistencyGroup;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE =
+            "downgraded_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE)
+    private Long downgradedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_EC_K = "ec_k";
+
+    @SerializedName(SERIALIZED_NAME_EC_K)
+    private Integer ecK;
+
+    public static final String SERIALIZED_NAME_EC_M = "ec_m";
+
+    @SerializedName(SERIALIZED_NAME_EC_M)
+    private Integer ecM;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD = "encrypt_method";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD)
+    private EncryptMethod encryptMethod;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -172,10 +214,20 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
     @SerializedName(SERIALIZED_NAME_NVMF_SUBSYSTEM)
     private NestedNvmfSubsystem nvmfSubsystem;
 
+    public static final String SERIALIZED_NAME_PRIORITIZED = "prioritized";
+
+    @SerializedName(SERIALIZED_NAME_PRIORITIZED)
+    private Boolean prioritized;
+
     public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
 
     @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
     private Integer replicaNum;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
+    private ResiliencyType resiliencyType;
 
     public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
 
@@ -186,6 +238,11 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
 
     @SerializedName(SERIALIZED_NAME_SNAPSHOT_NUM)
     private Integer snapshotNum;
+
+    public static final String SERIALIZED_NAME_SNAPSHOT_PLANS = "snapshot_plans";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_PLANS)
+    private List<NestedSnapshotPlan> snapshotPlans = null;
 
     public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
 
@@ -649,6 +706,194 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
         return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_MAX_LENGTH);
     }
 
+    public NvmfNamespace businessHostGroups(List<NestedBusinessHostGroup> businessHostGroups) {
+
+        this.businessHostGroups = businessHostGroups;
+        return this;
+    }
+
+    public NvmfNamespace addBusinessHostGroupsItem(NestedBusinessHostGroup businessHostGroupsItem) {
+        if (this.businessHostGroups == null) {
+            this.businessHostGroups = new ArrayList<NestedBusinessHostGroup>();
+        }
+        this.businessHostGroups.add(businessHostGroupsItem);
+        return this;
+    }
+
+    /**
+     * Get businessHostGroups
+     *
+     * @return businessHostGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedBusinessHostGroup> getBusinessHostGroups() {
+        return businessHostGroups;
+    }
+
+    public void setBusinessHostGroups(List<NestedBusinessHostGroup> businessHostGroups) {
+        this.businessHostGroups = businessHostGroups;
+    }
+
+    public NvmfNamespace businessHostGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public NvmfNamespace businessHostGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public void setBusinessHostGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        }
+    }
+
+    public boolean getBusinessHostGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+    }
+
+    public NvmfNamespace businessHostIsSameWithParent(Boolean businessHostIsSameWithParent) {
+
+        this.businessHostIsSameWithParent = businessHostIsSameWithParent;
+        return this;
+    }
+
+    /**
+     * Get businessHostIsSameWithParent
+     *
+     * @return businessHostIsSameWithParent
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getBusinessHostIsSameWithParent() {
+        return businessHostIsSameWithParent;
+    }
+
+    public void setBusinessHostIsSameWithParent(Boolean businessHostIsSameWithParent) {
+        this.businessHostIsSameWithParent = businessHostIsSameWithParent;
+    }
+
+    public NvmfNamespace businessHostIsSameWithParent_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        return this;
+    }
+
+    public NvmfNamespace businessHostIsSameWithParent_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        return this;
+    }
+
+    public void setBusinessHostIsSameWithParent_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        }
+    }
+
+    public boolean getBusinessHostIsSameWithParent_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+    }
+
+    public NvmfNamespace businessHosts(List<NestedBusinessHost> businessHosts) {
+
+        this.businessHosts = businessHosts;
+        return this;
+    }
+
+    public NvmfNamespace addBusinessHostsItem(NestedBusinessHost businessHostsItem) {
+        if (this.businessHosts == null) {
+            this.businessHosts = new ArrayList<NestedBusinessHost>();
+        }
+        this.businessHosts.add(businessHostsItem);
+        return this;
+    }
+
+    /**
+     * Get businessHosts
+     *
+     * @return businessHosts
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedBusinessHost> getBusinessHosts() {
+        return businessHosts;
+    }
+
+    public void setBusinessHosts(List<NestedBusinessHost> businessHosts) {
+        this.businessHosts = businessHosts;
+    }
+
+    public NvmfNamespace businessHosts_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public NvmfNamespace businessHosts_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public void setBusinessHosts_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        }
+    }
+
+    public boolean getBusinessHosts_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS);
+    }
+
+    public NvmfNamespace configurationMethod(ConfigurationMethod configurationMethod) {
+
+        this.configurationMethod = configurationMethod;
+        return this;
+    }
+
+    /**
+     * Get configurationMethod
+     *
+     * @return configurationMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConfigurationMethod getConfigurationMethod() {
+        return configurationMethod;
+    }
+
+    public void setConfigurationMethod(ConfigurationMethod configurationMethod) {
+        this.configurationMethod = configurationMethod;
+    }
+
+    public NvmfNamespace configurationMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public NvmfNamespace configurationMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public void setConfigurationMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        }
+    }
+
+    public boolean getConfigurationMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD);
+    }
+
     public NvmfNamespace consistencyGroup(NestedConsistencyGroup consistencyGroup) {
 
         this.consistencyGroup = consistencyGroup;
@@ -690,6 +935,178 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
 
     public boolean getConsistencyGroup_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CONSISTENCY_GROUP);
+    }
+
+    public NvmfNamespace downgradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpace
+     *
+     * @return downgradedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpace() {
+        return downgradedPrioritizedSpace;
+    }
+
+    public void setDowngradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+    }
+
+    public NvmfNamespace downgradedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public NvmfNamespace downgradedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+    }
+
+    public NvmfNamespace ecK(Integer ecK) {
+
+        this.ecK = ecK;
+        return this;
+    }
+
+    /**
+     * Get ecK
+     *
+     * @return ecK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcK() {
+        return ecK;
+    }
+
+    public void setEcK(Integer ecK) {
+        this.ecK = ecK;
+    }
+
+    public NvmfNamespace ecK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public NvmfNamespace ecK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public void setEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        }
+    }
+
+    public boolean getEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K);
+    }
+
+    public NvmfNamespace ecM(Integer ecM) {
+
+        this.ecM = ecM;
+        return this;
+    }
+
+    /**
+     * Get ecM
+     *
+     * @return ecM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcM() {
+        return ecM;
+    }
+
+    public void setEcM(Integer ecM) {
+        this.ecM = ecM;
+    }
+
+    public NvmfNamespace ecM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public NvmfNamespace ecM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public void setEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        }
+    }
+
+    public boolean getEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M);
+    }
+
+    public NvmfNamespace encryptMethod(EncryptMethod encryptMethod) {
+
+        this.encryptMethod = encryptMethod;
+        return this;
+    }
+
+    /**
+     * Get encryptMethod
+     *
+     * @return encryptMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EncryptMethod getEncryptMethod() {
+        return encryptMethod;
+    }
+
+    public void setEncryptMethod(EncryptMethod encryptMethod) {
+        this.encryptMethod = encryptMethod;
+    }
+
+    public NvmfNamespace encryptMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public NvmfNamespace encryptMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public void setEncryptMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        }
+    }
+
+    public boolean getEncryptMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD);
     }
 
     public NvmfNamespace entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -1603,6 +2020,49 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
         return this._isPresent_.contains(SERIALIZED_NAME_NVMF_SUBSYSTEM);
     }
 
+    public NvmfNamespace prioritized(Boolean prioritized) {
+
+        this.prioritized = prioritized;
+        return this;
+    }
+
+    /**
+     * Get prioritized
+     *
+     * @return prioritized
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getPrioritized() {
+        return prioritized;
+    }
+
+    public void setPrioritized(Boolean prioritized) {
+        this.prioritized = prioritized;
+    }
+
+    public NvmfNamespace prioritized_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public NvmfNamespace prioritized_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public void setPrioritized_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        }
+    }
+
+    public boolean getPrioritized_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIORITIZED);
+    }
+
     public NvmfNamespace replicaNum(Integer replicaNum) {
 
         this.replicaNum = replicaNum;
@@ -1644,6 +2104,49 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
 
     public boolean getReplicaNum_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_NUM);
+    }
+
+    public NvmfNamespace resiliencyType(ResiliencyType resiliencyType) {
+
+        this.resiliencyType = resiliencyType;
+        return this;
+    }
+
+    /**
+     * Get resiliencyType
+     *
+     * @return resiliencyType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyType() {
+        return resiliencyType;
+    }
+
+    public void setResiliencyType(ResiliencyType resiliencyType) {
+        this.resiliencyType = resiliencyType;
+    }
+
+    public NvmfNamespace resiliencyType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public NvmfNamespace resiliencyType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public void setResiliencyType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        }
+    }
+
+    public boolean getResiliencyType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
     }
 
     public NvmfNamespace sharedSize(Long sharedSize) {
@@ -1730,6 +2233,57 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
 
     public boolean getSnapshotNum_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_NUM);
+    }
+
+    public NvmfNamespace snapshotPlans(List<NestedSnapshotPlan> snapshotPlans) {
+
+        this.snapshotPlans = snapshotPlans;
+        return this;
+    }
+
+    public NvmfNamespace addSnapshotPlansItem(NestedSnapshotPlan snapshotPlansItem) {
+        if (this.snapshotPlans == null) {
+            this.snapshotPlans = new ArrayList<NestedSnapshotPlan>();
+        }
+        this.snapshotPlans.add(snapshotPlansItem);
+        return this;
+    }
+
+    /**
+     * Get snapshotPlans
+     *
+     * @return snapshotPlans
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedSnapshotPlan> getSnapshotPlans() {
+        return snapshotPlans;
+    }
+
+    public void setSnapshotPlans(List<NestedSnapshotPlan> snapshotPlans) {
+        this.snapshotPlans = snapshotPlans;
+    }
+
+    public NvmfNamespace snapshotPlans_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLANS);
+        return this;
+    }
+
+    public NvmfNamespace snapshotPlans_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLANS);
+        return this;
+    }
+
+    public void setSnapshotPlans_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_PLANS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_PLANS);
+        }
+    }
+
+    public boolean getSnapshotPlans_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_PLANS);
     }
 
     public NvmfNamespace stripeNum(Integer stripeNum) {
@@ -2009,7 +2563,18 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
                 && Objects.equals(this.bpsWr, nvmfNamespace.bpsWr)
                 && Objects.equals(this.bpsWrMax, nvmfNamespace.bpsWrMax)
                 && Objects.equals(this.bpsWrMaxLength, nvmfNamespace.bpsWrMaxLength)
+                && Objects.equals(this.businessHostGroups, nvmfNamespace.businessHostGroups)
+                && Objects.equals(
+                        this.businessHostIsSameWithParent,
+                        nvmfNamespace.businessHostIsSameWithParent)
+                && Objects.equals(this.businessHosts, nvmfNamespace.businessHosts)
+                && Objects.equals(this.configurationMethod, nvmfNamespace.configurationMethod)
                 && Objects.equals(this.consistencyGroup, nvmfNamespace.consistencyGroup)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpace, nvmfNamespace.downgradedPrioritizedSpace)
+                && Objects.equals(this.ecK, nvmfNamespace.ecK)
+                && Objects.equals(this.ecM, nvmfNamespace.ecM)
+                && Objects.equals(this.encryptMethod, nvmfNamespace.encryptMethod)
                 && Objects.equals(this.entityAsyncStatus, nvmfNamespace.entityAsyncStatus)
                 && Objects.equals(this.id, nvmfNamespace.id)
                 && Objects.equals(this.ioSize, nvmfNamespace.ioSize)
@@ -2031,9 +2596,12 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
                 && Objects.equals(this.namespaceId, nvmfNamespace.namespaceId)
                 && Objects.equals(this.nqnWhitelist, nvmfNamespace.nqnWhitelist)
                 && Objects.equals(this.nvmfSubsystem, nvmfNamespace.nvmfSubsystem)
+                && Objects.equals(this.prioritized, nvmfNamespace.prioritized)
                 && Objects.equals(this.replicaNum, nvmfNamespace.replicaNum)
+                && Objects.equals(this.resiliencyType, nvmfNamespace.resiliencyType)
                 && Objects.equals(this.sharedSize, nvmfNamespace.sharedSize)
                 && Objects.equals(this.snapshotNum, nvmfNamespace.snapshotNum)
+                && Objects.equals(this.snapshotPlans, nvmfNamespace.snapshotPlans)
                 && Objects.equals(this.stripeNum, nvmfNamespace.stripeNum)
                 && Objects.equals(this.stripeSize, nvmfNamespace.stripeSize)
                 && Objects.equals(this.thinProvision, nvmfNamespace.thinProvision)
@@ -2064,7 +2632,15 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
                 bpsWr,
                 bpsWrMax,
                 bpsWrMaxLength,
+                businessHostGroups,
+                businessHostIsSameWithParent,
+                businessHosts,
+                configurationMethod,
                 consistencyGroup,
+                downgradedPrioritizedSpace,
+                ecK,
+                ecM,
+                encryptMethod,
                 entityAsyncStatus,
                 id,
                 ioSize,
@@ -2086,9 +2662,12 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
                 namespaceId,
                 nqnWhitelist,
                 nvmfSubsystem,
+                prioritized,
                 replicaNum,
+                resiliencyType,
                 sharedSize,
                 snapshotNum,
+                snapshotPlans,
                 stripeNum,
                 stripeSize,
                 thinProvision,
@@ -2118,7 +2697,23 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
         sb.append("    bpsWr: ").append(toIndentedString(bpsWr)).append("\n");
         sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
         sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
+        sb.append("    businessHostGroups: ")
+                .append(toIndentedString(businessHostGroups))
+                .append("\n");
+        sb.append("    businessHostIsSameWithParent: ")
+                .append(toIndentedString(businessHostIsSameWithParent))
+                .append("\n");
+        sb.append("    businessHosts: ").append(toIndentedString(businessHosts)).append("\n");
+        sb.append("    configurationMethod: ")
+                .append(toIndentedString(configurationMethod))
+                .append("\n");
         sb.append("    consistencyGroup: ").append(toIndentedString(consistencyGroup)).append("\n");
+        sb.append("    downgradedPrioritizedSpace: ")
+                .append(toIndentedString(downgradedPrioritizedSpace))
+                .append("\n");
+        sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
+        sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
+        sb.append("    encryptMethod: ").append(toIndentedString(encryptMethod)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -2142,9 +2737,12 @@ public class NvmfNamespace extends com.smartx.tower.ConditionalNullable.Conditio
         sb.append("    namespaceId: ").append(toIndentedString(namespaceId)).append("\n");
         sb.append("    nqnWhitelist: ").append(toIndentedString(nqnWhitelist)).append("\n");
         sb.append("    nvmfSubsystem: ").append(toIndentedString(nvmfSubsystem)).append("\n");
+        sb.append("    prioritized: ").append(toIndentedString(prioritized)).append("\n");
         sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
+        sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
         sb.append("    sharedSize: ").append(toIndentedString(sharedSize)).append("\n");
         sb.append("    snapshotNum: ").append(toIndentedString(snapshotNum)).append("\n");
+        sb.append("    snapshotPlans: ").append(toIndentedString(snapshotPlans)).append("\n");
         sb.append("    stripeNum: ").append(toIndentedString(stripeNum)).append("\n");
         sb.append("    stripeSize: ").append(toIndentedString(stripeSize)).append("\n");
         sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");

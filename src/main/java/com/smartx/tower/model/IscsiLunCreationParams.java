@@ -9,6 +9,26 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class IscsiLunCreationParams
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_EC_M = "ec_m";
+
+    @SerializedName(SERIALIZED_NAME_EC_M)
+    private Double ecM;
+
+    public static final String SERIALIZED_NAME_EC_K = "ec_k";
+
+    @SerializedName(SERIALIZED_NAME_EC_K)
+    private Double ecK;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
+    private ResiliencyType resiliencyType;
+
+    public static final String SERIALIZED_NAME_THIN_PROVISION = "thin_provision";
+
+    @SerializedName(SERIALIZED_NAME_THIN_PROVISION)
+    private Boolean thinProvision;
+
     public static final String SERIALIZED_NAME_LUN_ID = "lun_id";
 
     @SerializedName(SERIALIZED_NAME_LUN_ID)
@@ -38,6 +58,37 @@ public class IscsiLunCreationParams
 
     @SerializedName(SERIALIZED_NAME_NAME)
     private String name;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS = "business_host_groups";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS)
+    private BusinessHostGroupWhereInput businessHostGroups;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS = "business_hosts";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS)
+    private BusinessHostWhereInput businessHosts;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT =
+            "business_host_is_same_with_parent";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT)
+    private Boolean businessHostIsSameWithParent;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_METHOD = "configuration_method";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD)
+    private ConfigurationMethod configurationMethod;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD = "encrypt_method";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD)
+    private EncryptMethod encryptMethod;
+
+    public static final String SERIALIZED_NAME_PRIORITIZED = "prioritized";
+
+    @SerializedName(SERIALIZED_NAME_PRIORITIZED)
+    private Boolean prioritized;
 
     public static final String SERIALIZED_NAME_BPS_WR_MAX_LENGTH = "bps_wr_max_length";
 
@@ -165,6 +216,178 @@ public class IscsiLunCreationParams
     private String allowedInitiators;
 
     public IscsiLunCreationParams() {}
+
+    public IscsiLunCreationParams ecM(Double ecM) {
+
+        this.ecM = ecM;
+        return this;
+    }
+
+    /**
+     * Get ecM
+     *
+     * @return ecM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getEcM() {
+        return ecM;
+    }
+
+    public void setEcM(Double ecM) {
+        this.ecM = ecM;
+    }
+
+    public IscsiLunCreationParams ecM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public IscsiLunCreationParams ecM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public void setEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        }
+    }
+
+    public boolean getEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M);
+    }
+
+    public IscsiLunCreationParams ecK(Double ecK) {
+
+        this.ecK = ecK;
+        return this;
+    }
+
+    /**
+     * Get ecK
+     *
+     * @return ecK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getEcK() {
+        return ecK;
+    }
+
+    public void setEcK(Double ecK) {
+        this.ecK = ecK;
+    }
+
+    public IscsiLunCreationParams ecK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public IscsiLunCreationParams ecK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public void setEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        }
+    }
+
+    public boolean getEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K);
+    }
+
+    public IscsiLunCreationParams resiliencyType(ResiliencyType resiliencyType) {
+
+        this.resiliencyType = resiliencyType;
+        return this;
+    }
+
+    /**
+     * Get resiliencyType
+     *
+     * @return resiliencyType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyType() {
+        return resiliencyType;
+    }
+
+    public void setResiliencyType(ResiliencyType resiliencyType) {
+        this.resiliencyType = resiliencyType;
+    }
+
+    public IscsiLunCreationParams resiliencyType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public IscsiLunCreationParams resiliencyType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public void setResiliencyType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        }
+    }
+
+    public boolean getResiliencyType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
+    }
+
+    public IscsiLunCreationParams thinProvision(Boolean thinProvision) {
+
+        this.thinProvision = thinProvision;
+        return this;
+    }
+
+    /**
+     * Get thinProvision
+     *
+     * @return thinProvision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getThinProvision() {
+        return thinProvision;
+    }
+
+    public void setThinProvision(Boolean thinProvision) {
+        this.thinProvision = thinProvision;
+    }
+
+    public IscsiLunCreationParams thinProvision_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_THIN_PROVISION);
+        return this;
+    }
+
+    public IscsiLunCreationParams thinProvision_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_THIN_PROVISION);
+        return this;
+    }
+
+    public void setThinProvision_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_THIN_PROVISION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_THIN_PROVISION);
+        }
+    }
+
+    public boolean getThinProvision_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_THIN_PROVISION);
+    }
 
     public IscsiLunCreationParams lunId(Integer lunId) {
 
@@ -422,6 +645,266 @@ public class IscsiLunCreationParams
 
     public boolean getName_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_NAME);
+    }
+
+    public IscsiLunCreationParams businessHostGroups(
+            BusinessHostGroupWhereInput businessHostGroups) {
+
+        this.businessHostGroups = businessHostGroups;
+        return this;
+    }
+
+    /**
+     * Get businessHostGroups
+     *
+     * @return businessHostGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostGroupWhereInput getBusinessHostGroups() {
+        return businessHostGroups;
+    }
+
+    public void setBusinessHostGroups(BusinessHostGroupWhereInput businessHostGroups) {
+        this.businessHostGroups = businessHostGroups;
+    }
+
+    public IscsiLunCreationParams businessHostGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public IscsiLunCreationParams businessHostGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public void setBusinessHostGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        }
+    }
+
+    public boolean getBusinessHostGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+    }
+
+    public IscsiLunCreationParams businessHosts(BusinessHostWhereInput businessHosts) {
+
+        this.businessHosts = businessHosts;
+        return this;
+    }
+
+    /**
+     * Get businessHosts
+     *
+     * @return businessHosts
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public BusinessHostWhereInput getBusinessHosts() {
+        return businessHosts;
+    }
+
+    public void setBusinessHosts(BusinessHostWhereInput businessHosts) {
+        this.businessHosts = businessHosts;
+    }
+
+    public IscsiLunCreationParams businessHosts_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public IscsiLunCreationParams businessHosts_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public void setBusinessHosts_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        }
+    }
+
+    public boolean getBusinessHosts_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS);
+    }
+
+    public IscsiLunCreationParams businessHostIsSameWithParent(
+            Boolean businessHostIsSameWithParent) {
+
+        this.businessHostIsSameWithParent = businessHostIsSameWithParent;
+        return this;
+    }
+
+    /**
+     * Get businessHostIsSameWithParent
+     *
+     * @return businessHostIsSameWithParent
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getBusinessHostIsSameWithParent() {
+        return businessHostIsSameWithParent;
+    }
+
+    public void setBusinessHostIsSameWithParent(Boolean businessHostIsSameWithParent) {
+        this.businessHostIsSameWithParent = businessHostIsSameWithParent;
+    }
+
+    public IscsiLunCreationParams businessHostIsSameWithParent_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        return this;
+    }
+
+    public IscsiLunCreationParams businessHostIsSameWithParent_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        return this;
+    }
+
+    public void setBusinessHostIsSameWithParent_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+        }
+    }
+
+    public boolean getBusinessHostIsSameWithParent_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_IS_SAME_WITH_PARENT);
+    }
+
+    public IscsiLunCreationParams configurationMethod(ConfigurationMethod configurationMethod) {
+
+        this.configurationMethod = configurationMethod;
+        return this;
+    }
+
+    /**
+     * Get configurationMethod
+     *
+     * @return configurationMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConfigurationMethod getConfigurationMethod() {
+        return configurationMethod;
+    }
+
+    public void setConfigurationMethod(ConfigurationMethod configurationMethod) {
+        this.configurationMethod = configurationMethod;
+    }
+
+    public IscsiLunCreationParams configurationMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public IscsiLunCreationParams configurationMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public void setConfigurationMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        }
+    }
+
+    public boolean getConfigurationMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD);
+    }
+
+    public IscsiLunCreationParams encryptMethod(EncryptMethod encryptMethod) {
+
+        this.encryptMethod = encryptMethod;
+        return this;
+    }
+
+    /**
+     * Get encryptMethod
+     *
+     * @return encryptMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EncryptMethod getEncryptMethod() {
+        return encryptMethod;
+    }
+
+    public void setEncryptMethod(EncryptMethod encryptMethod) {
+        this.encryptMethod = encryptMethod;
+    }
+
+    public IscsiLunCreationParams encryptMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public IscsiLunCreationParams encryptMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public void setEncryptMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        }
+    }
+
+    public boolean getEncryptMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD);
+    }
+
+    public IscsiLunCreationParams prioritized(Boolean prioritized) {
+
+        this.prioritized = prioritized;
+        return this;
+    }
+
+    /**
+     * Get prioritized
+     *
+     * @return prioritized
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getPrioritized() {
+        return prioritized;
+    }
+
+    public void setPrioritized(Boolean prioritized) {
+        this.prioritized = prioritized;
+    }
+
+    public IscsiLunCreationParams prioritized_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public IscsiLunCreationParams prioritized_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public void setPrioritized_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        }
+    }
+
+    public boolean getPrioritized_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIORITIZED);
     }
 
     public IscsiLunCreationParams bpsWrMaxLength(Long bpsWrMaxLength) {
@@ -1508,12 +1991,26 @@ public class IscsiLunCreationParams
             return false;
         }
         IscsiLunCreationParams iscsiLunCreationParams = (IscsiLunCreationParams) o;
-        return Objects.equals(this.lunId, iscsiLunCreationParams.lunId)
+        return Objects.equals(this.ecM, iscsiLunCreationParams.ecM)
+                && Objects.equals(this.ecK, iscsiLunCreationParams.ecK)
+                && Objects.equals(this.resiliencyType, iscsiLunCreationParams.resiliencyType)
+                && Objects.equals(this.thinProvision, iscsiLunCreationParams.thinProvision)
+                && Objects.equals(this.lunId, iscsiLunCreationParams.lunId)
                 && Objects.equals(this.assignedSizeUnit, iscsiLunCreationParams.assignedSizeUnit)
                 && Objects.equals(this.assignedSize, iscsiLunCreationParams.assignedSize)
                 && Objects.equals(this.replicaNum, iscsiLunCreationParams.replicaNum)
                 && Objects.equals(this.iscsiTargetId, iscsiLunCreationParams.iscsiTargetId)
                 && Objects.equals(this.name, iscsiLunCreationParams.name)
+                && Objects.equals(
+                        this.businessHostGroups, iscsiLunCreationParams.businessHostGroups)
+                && Objects.equals(this.businessHosts, iscsiLunCreationParams.businessHosts)
+                && Objects.equals(
+                        this.businessHostIsSameWithParent,
+                        iscsiLunCreationParams.businessHostIsSameWithParent)
+                && Objects.equals(
+                        this.configurationMethod, iscsiLunCreationParams.configurationMethod)
+                && Objects.equals(this.encryptMethod, iscsiLunCreationParams.encryptMethod)
+                && Objects.equals(this.prioritized, iscsiLunCreationParams.prioritized)
                 && Objects.equals(this.bpsWrMaxLength, iscsiLunCreationParams.bpsWrMaxLength)
                 && Objects.equals(this.bpsWrMaxUnit, iscsiLunCreationParams.bpsWrMaxUnit)
                 && Objects.equals(this.bpsWrMax, iscsiLunCreationParams.bpsWrMax)
@@ -1544,12 +2041,22 @@ public class IscsiLunCreationParams
     @Override
     public int hashCode() {
         return Objects.hash(
+                ecM,
+                ecK,
+                resiliencyType,
+                thinProvision,
                 lunId,
                 assignedSizeUnit,
                 assignedSize,
                 replicaNum,
                 iscsiTargetId,
                 name,
+                businessHostGroups,
+                businessHosts,
+                businessHostIsSameWithParent,
+                configurationMethod,
+                encryptMethod,
+                prioritized,
                 bpsWrMaxLength,
                 bpsWrMaxUnit,
                 bpsWrMax,
@@ -1581,12 +2088,28 @@ public class IscsiLunCreationParams
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class IscsiLunCreationParams {\n");
+        sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
+        sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
+        sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
+        sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");
         sb.append("    lunId: ").append(toIndentedString(lunId)).append("\n");
         sb.append("    assignedSizeUnit: ").append(toIndentedString(assignedSizeUnit)).append("\n");
         sb.append("    assignedSize: ").append(toIndentedString(assignedSize)).append("\n");
         sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
         sb.append("    iscsiTargetId: ").append(toIndentedString(iscsiTargetId)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    businessHostGroups: ")
+                .append(toIndentedString(businessHostGroups))
+                .append("\n");
+        sb.append("    businessHosts: ").append(toIndentedString(businessHosts)).append("\n");
+        sb.append("    businessHostIsSameWithParent: ")
+                .append(toIndentedString(businessHostIsSameWithParent))
+                .append("\n");
+        sb.append("    configurationMethod: ")
+                .append(toIndentedString(configurationMethod))
+                .append("\n");
+        sb.append("    encryptMethod: ").append(toIndentedString(encryptMethod)).append("\n");
+        sb.append("    prioritized: ").append(toIndentedString(prioritized)).append("\n");
         sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
         sb.append("    bpsWrMaxUnit: ").append(toIndentedString(bpsWrMaxUnit)).append("\n");
         sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");

@@ -18,6 +18,22 @@ public enum VmVolumeOrderByInput {
 
     ELF_STORAGE_POLICY_DESC("elf_storage_policy_DESC"),
 
+    ELF_STORAGE_POLICY_EC_K_ASC("elf_storage_policy_ec_k_ASC"),
+
+    ELF_STORAGE_POLICY_EC_K_DESC("elf_storage_policy_ec_k_DESC"),
+
+    ELF_STORAGE_POLICY_EC_M_ASC("elf_storage_policy_ec_m_ASC"),
+
+    ELF_STORAGE_POLICY_EC_M_DESC("elf_storage_policy_ec_m_DESC"),
+
+    ELF_STORAGE_POLICY_REPLICA_NUM_ASC("elf_storage_policy_replica_num_ASC"),
+
+    ELF_STORAGE_POLICY_REPLICA_NUM_DESC("elf_storage_policy_replica_num_DESC"),
+
+    ELF_STORAGE_POLICY_THIN_PROVISION_ASC("elf_storage_policy_thin_provision_ASC"),
+
+    ELF_STORAGE_POLICY_THIN_PROVISION_DESC("elf_storage_policy_thin_provision_DESC"),
+
     ENTITYASYNCSTATUS_ASC("entityAsyncStatus_ASC"),
 
     ENTITYASYNCSTATUS_DESC("entityAsyncStatus_DESC"),
@@ -53,6 +69,10 @@ public enum VmVolumeOrderByInput {
     PATH_ASC("path_ASC"),
 
     PATH_DESC("path_DESC"),
+
+    RESIDENT_IN_CACHE_ASC("resident_in_cache_ASC"),
+
+    RESIDENT_IN_CACHE_DESC("resident_in_cache_DESC"),
 
     SHARING_ASC("sharing_ASC"),
 

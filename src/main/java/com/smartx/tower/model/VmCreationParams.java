@@ -65,6 +65,11 @@ public class VmCreationParams extends com.smartx.tower.ConditionalNullable.Condi
     @SerializedName(SERIALIZED_NAME_FIRMWARE)
     private VmFirmware firmware;
 
+    public static final String SERIALIZED_NAME_HA_PRIORITY = "ha_priority";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY)
+    private VmHaPriority haPriority;
+
     public static final String SERIALIZED_NAME_HA = "ha";
 
     @SerializedName(SERIALIZED_NAME_HA)
@@ -621,6 +626,49 @@ public class VmCreationParams extends com.smartx.tower.ConditionalNullable.Condi
 
     public boolean getFirmware_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_FIRMWARE);
+    }
+
+    public VmCreationParams haPriority(VmHaPriority haPriority) {
+
+        this.haPriority = haPriority;
+        return this;
+    }
+
+    /**
+     * Get haPriority
+     *
+     * @return haPriority
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmHaPriority getHaPriority() {
+        return haPriority;
+    }
+
+    public void setHaPriority(VmHaPriority haPriority) {
+        this.haPriority = haPriority;
+    }
+
+    public VmCreationParams haPriority_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public VmCreationParams haPriority_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public void setHaPriority_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        }
+    }
+
+    public boolean getHaPriority_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY);
     }
 
     public VmCreationParams ha(Boolean ha) {
@@ -1293,6 +1341,7 @@ public class VmCreationParams extends com.smartx.tower.ConditionalNullable.Condi
                 && Objects.equals(this.vcpu, vmCreationParams.vcpu)
                 && Objects.equals(this.status, vmCreationParams.status)
                 && Objects.equals(this.firmware, vmCreationParams.firmware)
+                && Objects.equals(this.haPriority, vmCreationParams.haPriority)
                 && Objects.equals(this.ha, vmCreationParams.ha)
                 && Objects.equals(this.pciNics, vmCreationParams.pciNics)
                 && Objects.equals(this.vmPlacementGroup, vmCreationParams.vmPlacementGroup)
@@ -1324,6 +1373,7 @@ public class VmCreationParams extends com.smartx.tower.ConditionalNullable.Condi
                 vcpu,
                 status,
                 firmware,
+                haPriority,
                 ha,
                 pciNics,
                 vmPlacementGroup,
@@ -1358,6 +1408,7 @@ public class VmCreationParams extends com.smartx.tower.ConditionalNullable.Condi
         sb.append("    vcpu: ").append(toIndentedString(vcpu)).append("\n");
         sb.append("    status: ").append(toIndentedString(status)).append("\n");
         sb.append("    firmware: ").append(toIndentedString(firmware)).append("\n");
+        sb.append("    haPriority: ").append(toIndentedString(haPriority)).append("\n");
         sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
         sb.append("    pciNics: ").append(toIndentedString(pciNics)).append("\n");
         sb.append("    vmPlacementGroup: ").append(toIndentedString(vmPlacementGroup)).append("\n");

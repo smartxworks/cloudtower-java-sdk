@@ -12,7 +12,7 @@ public class IscsiTargetUpdationParams
     public static final String SERIALIZED_NAME_DATA = "data";
 
     @SerializedName(SERIALIZED_NAME_DATA)
-    private IscsiTargetCommonParams data;
+    private IscsiTargetUpdationParamsData data;
 
     public static final String SERIALIZED_NAME_WHERE = "where";
 
@@ -21,7 +21,7 @@ public class IscsiTargetUpdationParams
 
     public IscsiTargetUpdationParams() {}
 
-    public IscsiTargetUpdationParams data(IscsiTargetCommonParams data) {
+    public IscsiTargetUpdationParams data(IscsiTargetUpdationParamsData data) {
 
         this.data = data;
         return this;
@@ -34,11 +34,11 @@ public class IscsiTargetUpdationParams
      */
     @javax.annotation.Nonnull
     @ApiModelProperty(required = true, value = "")
-    public IscsiTargetCommonParams getData() {
+    public IscsiTargetUpdationParamsData getData() {
         return data;
     }
 
-    public void setData(IscsiTargetCommonParams data) {
+    public void setData(IscsiTargetUpdationParamsData data) {
         this.data = data;
     }
 

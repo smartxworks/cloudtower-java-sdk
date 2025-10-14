@@ -50,7 +50,7 @@ public class ConditionalNullable {
                         Object fieldValue;
                         try {
                             // mostly the field is private, so we need to make it accessible
-                            if (!field.canAccess(value)) {
+                            if (!field.isAccessible()) {
                                 field.setAccessible(true);
                             }
                             fieldValue = field.get(value);

@@ -12,6 +12,24 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /** Cluster */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
 public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED =
+            "access_write_compress_enabled";
+
+    @SerializedName(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED)
+    private Boolean accessWriteCompressEnabled;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE =
+            "allocated_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE)
+    private Long allocatedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE =
+            "allocated_prioritized_space_usage";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE)
+    private Double allocatedPrioritizedSpaceUsage;
+
     public static final String SERIALIZED_NAME_APPLICATION_HIGHEST_VERSION =
             "application_highest_version";
 
@@ -33,6 +51,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_AUTO_CONVERGE)
     private Boolean autoConverge;
 
+    public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES = "commited_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES)
+    private Long commitedMemoryBytes;
+
     public static final String SERIALIZED_NAME_CONNECT_STATE = "connect_state";
 
     @SerializedName(SERIALIZED_NAME_CONNECT_STATE)
@@ -47,6 +70,16 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     @SerializedName(SERIALIZED_NAME_CURRENT_CPU_MODEL)
     private String currentCpuModel;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_RATIO = "data_reduction_ratio";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_RATIO)
+    private Double dataReductionRatio;
+
+    public static final String SERIALIZED_NAME_DATA_REDUCTION_SAVING = "data_reduction_saving";
+
+    @SerializedName(SERIALIZED_NAME_DATA_REDUCTION_SAVING)
+    private Double dataReductionSaving;
 
     public static final String SERIALIZED_NAME_DATACENTERS = "datacenters";
 
@@ -67,6 +100,22 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     @SerializedName(SERIALIZED_NAME_DNS)
     private List<String> dns = new ArrayList<String>();
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE =
+            "downgraded_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE)
+    private Long downgradedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_ECP_LICENSE = "ecp_license";
+
+    @SerializedName(SERIALIZED_NAME_ECP_LICENSE)
+    private NestedEcpLicense ecpLicense;
+
+    public static final String SERIALIZED_NAME_ENABLE_TIERING = "enable_tiering";
+
+    @SerializedName(SERIALIZED_NAME_ENABLE_TIERING)
+    private Boolean enableTiering;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -153,6 +202,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_LOCAL_ID)
     private String localId;
 
+    public static final String SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE = "logical_used_data_space";
+
+    @SerializedName(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE)
+    private Long logicalUsedDataSpace;
+
     public static final String SERIALIZED_NAME_MAINTENANCE_END_DATE = "maintenance_end_date";
 
     @SerializedName(SERIALIZED_NAME_MAINTENANCE_END_DATE)
@@ -216,6 +270,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_NAME)
     private String name;
 
+    public static final String SERIALIZED_NAME_NO_PERFORMANCE_LAYER = "no_performance_layer";
+
+    @SerializedName(SERIALIZED_NAME_NO_PERFORMANCE_LAYER)
+    private Boolean noPerformanceLayer;
+
     public static final String SERIALIZED_NAME_NTP_MODE = "ntp_mode";
 
     @SerializedName(SERIALIZED_NAME_NTP_MODE)
@@ -241,10 +300,53 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_NVMF_ENABLED)
     private Boolean nvmfEnabled;
 
+    public static final String SERIALIZED_NAME_OVERALL_EFFICIENCY = "overall_efficiency";
+
+    @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY)
+    private Double overallEfficiency;
+
+    public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE =
+            "perf_allocated_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE)
+    private Long perfAllocatedDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE = "perf_failure_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE)
+    private Long perfFailureDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY =
+            "perf_total_data_capacity";
+
+    @SerializedName(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY)
+    private Long perfTotalDataCapacity;
+
+    public static final String SERIALIZED_NAME_PERF_USED_DATA_SPACE = "perf_used_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_USED_DATA_SPACE)
+    private Long perfUsedDataSpace;
+
+    public static final String SERIALIZED_NAME_PERF_VALID_DATA_SPACE = "perf_valid_data_space";
+
+    @SerializedName(SERIALIZED_NAME_PERF_VALID_DATA_SPACE)
+    private Long perfValidDataSpace;
+
+    public static final String SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE =
+            "planned_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE)
+    private Long plannedPrioritizedSpace;
+
     public static final String SERIALIZED_NAME_PMEM_ENABLED = "pmem_enabled";
 
     @SerializedName(SERIALIZED_NAME_PMEM_ENABLED)
     private Boolean pmemEnabled;
+
+    public static final String SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE = "prio_space_percentage";
+
+    @SerializedName(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE)
+    private Double prioSpacePercentage;
 
     public static final String SERIALIZED_NAME_PROVISIONED_CPU_CORES = "provisioned_cpu_cores";
 
@@ -293,6 +395,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     @SerializedName(SERIALIZED_NAME_RECOVER_SPEED)
     private Long recoverSpeed;
+
+    public static final String SERIALIZED_NAME_REPLICA_CAPACITY_ONLY = "replica_capacity_only";
+
+    @SerializedName(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY)
+    private Boolean replicaCapacityOnly;
 
     public static final String SERIALIZED_NAME_RESERVED_CPU_CORES_FOR_SYSTEM_SERVICE =
             "reserved_cpu_cores_for_system_service";
@@ -365,15 +472,36 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
     private Long totalMemoryBytes;
 
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE = "total_prio_volume_size";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE)
+    private Long totalPrioVolumeSize;
+
+    public static final String SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE =
+            "total_prio_volume_size_usage";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE)
+    private Double totalPrioVolumeSizeUsage;
+
     public static final String SERIALIZED_NAME_TYPE = "type";
 
     @SerializedName(SERIALIZED_NAME_TYPE)
     private ClusterType type;
 
+    public static final String SERIALIZED_NAME_UPGRADE_FOR_TIERING = "upgrade_for_tiering";
+
+    @SerializedName(SERIALIZED_NAME_UPGRADE_FOR_TIERING)
+    private Boolean upgradeForTiering;
+
     public static final String SERIALIZED_NAME_UPGRADE_TOOL_VERSION = "upgrade_tool_version";
 
     @SerializedName(SERIALIZED_NAME_UPGRADE_TOOL_VERSION)
     private String upgradeToolVersion;
+
+    public static final String SERIALIZED_NAME_USED_CACHE_SPACE = "used_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_USED_CACHE_SPACE)
+    private Long usedCacheSpace;
 
     public static final String SERIALIZED_NAME_USED_CPU_HZ = "used_cpu_hz";
 
@@ -389,6 +517,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     @SerializedName(SERIALIZED_NAME_USED_MEMORY_BYTES)
     private Double usedMemoryBytes;
+
+    public static final String SERIALIZED_NAME_VALID_CACHE_SPACE = "valid_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_VALID_CACHE_SPACE)
+    private Long validCacheSpace;
 
     public static final String SERIALIZED_NAME_VALID_DATA_SPACE = "valid_data_space";
 
@@ -446,6 +579,135 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     private List<NestedZone> zones = null;
 
     public Cluster() {}
+
+    public Cluster accessWriteCompressEnabled(Boolean accessWriteCompressEnabled) {
+
+        this.accessWriteCompressEnabled = accessWriteCompressEnabled;
+        return this;
+    }
+
+    /**
+     * Get accessWriteCompressEnabled
+     *
+     * @return accessWriteCompressEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getAccessWriteCompressEnabled() {
+        return accessWriteCompressEnabled;
+    }
+
+    public void setAccessWriteCompressEnabled(Boolean accessWriteCompressEnabled) {
+        this.accessWriteCompressEnabled = accessWriteCompressEnabled;
+    }
+
+    public Cluster accessWriteCompressEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+        return this;
+    }
+
+    public Cluster accessWriteCompressEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+        return this;
+    }
+
+    public void setAccessWriteCompressEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+        }
+    }
+
+    public boolean getAccessWriteCompressEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+    }
+
+    public Cluster allocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
+
+        this.allocatedPrioritizedSpace = allocatedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpace
+     *
+     * @return allocatedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedPrioritizedSpace() {
+        return allocatedPrioritizedSpace;
+    }
+
+    public void setAllocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
+        this.allocatedPrioritizedSpace = allocatedPrioritizedSpace;
+    }
+
+    public Cluster allocatedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public Cluster allocatedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE);
+    }
+
+    public Cluster allocatedPrioritizedSpaceUsage(Double allocatedPrioritizedSpaceUsage) {
+
+        this.allocatedPrioritizedSpaceUsage = allocatedPrioritizedSpaceUsage;
+        return this;
+    }
+
+    /**
+     * Get allocatedPrioritizedSpaceUsage
+     *
+     * @return allocatedPrioritizedSpaceUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getAllocatedPrioritizedSpaceUsage() {
+        return allocatedPrioritizedSpaceUsage;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsage(Double allocatedPrioritizedSpaceUsage) {
+        this.allocatedPrioritizedSpaceUsage = allocatedPrioritizedSpaceUsage;
+    }
+
+    public Cluster allocatedPrioritizedSpaceUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        return this;
+    }
+
+    public Cluster allocatedPrioritizedSpaceUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        return this;
+    }
+
+    public void setAllocatedPrioritizedSpaceUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+        }
+    }
+
+    public boolean getAllocatedPrioritizedSpaceUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE_USAGE);
+    }
 
     public Cluster applicationHighestVersion(String applicationHighestVersion) {
 
@@ -627,6 +889,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         return this._isPresent_.contains(SERIALIZED_NAME_AUTO_CONVERGE);
     }
 
+    public Cluster commitedMemoryBytes(Long commitedMemoryBytes) {
+
+        this.commitedMemoryBytes = commitedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get commitedMemoryBytes
+     *
+     * @return commitedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCommitedMemoryBytes() {
+        return commitedMemoryBytes;
+    }
+
+    public void setCommitedMemoryBytes(Long commitedMemoryBytes) {
+        this.commitedMemoryBytes = commitedMemoryBytes;
+    }
+
+    public Cluster commitedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        return this;
+    }
+
+    public Cluster commitedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setCommitedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getCommitedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_COMMITED_MEMORY_BYTES);
+    }
+
     public Cluster connectState(ConnectState connectState) {
 
         this.connectState = connectState;
@@ -762,6 +1067,92 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getCurrentCpuModel_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CURRENT_CPU_MODEL);
+    }
+
+    public Cluster dataReductionRatio(Double dataReductionRatio) {
+
+        this.dataReductionRatio = dataReductionRatio;
+        return this;
+    }
+
+    /**
+     * Get dataReductionRatio
+     *
+     * @return dataReductionRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionRatio() {
+        return dataReductionRatio;
+    }
+
+    public void setDataReductionRatio(Double dataReductionRatio) {
+        this.dataReductionRatio = dataReductionRatio;
+    }
+
+    public Cluster dataReductionRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+        return this;
+    }
+
+    public Cluster dataReductionRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+        return this;
+    }
+
+    public void setDataReductionRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+        }
+    }
+
+    public boolean getDataReductionRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_RATIO);
+    }
+
+    public Cluster dataReductionSaving(Double dataReductionSaving) {
+
+        this.dataReductionSaving = dataReductionSaving;
+        return this;
+    }
+
+    /**
+     * Get dataReductionSaving
+     *
+     * @return dataReductionSaving
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDataReductionSaving() {
+        return dataReductionSaving;
+    }
+
+    public void setDataReductionSaving(Double dataReductionSaving) {
+        this.dataReductionSaving = dataReductionSaving;
+    }
+
+    public Cluster dataReductionSaving_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
+        return this;
+    }
+
+    public Cluster dataReductionSaving_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
+        return this;
+    }
+
+    public void setDataReductionSaving_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
+        }
+    }
+
+    public boolean getDataReductionSaving_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATA_REDUCTION_SAVING);
     }
 
     public Cluster datacenters(List<NestedDatacenter> datacenters) {
@@ -947,6 +1338,135 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getDns_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DNS);
+    }
+
+    public Cluster downgradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpace
+     *
+     * @return downgradedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpace() {
+        return downgradedPrioritizedSpace;
+    }
+
+    public void setDowngradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+    }
+
+    public Cluster downgradedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public Cluster downgradedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+    }
+
+    public Cluster ecpLicense(NestedEcpLicense ecpLicense) {
+
+        this.ecpLicense = ecpLicense;
+        return this;
+    }
+
+    /**
+     * Get ecpLicense
+     *
+     * @return ecpLicense
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedEcpLicense getEcpLicense() {
+        return ecpLicense;
+    }
+
+    public void setEcpLicense(NestedEcpLicense ecpLicense) {
+        this.ecpLicense = ecpLicense;
+    }
+
+    public Cluster ecpLicense_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ECP_LICENSE);
+        return this;
+    }
+
+    public Cluster ecpLicense_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ECP_LICENSE);
+        return this;
+    }
+
+    public void setEcpLicense_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ECP_LICENSE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ECP_LICENSE);
+        }
+    }
+
+    public boolean getEcpLicense_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ECP_LICENSE);
+    }
+
+    public Cluster enableTiering(Boolean enableTiering) {
+
+        this.enableTiering = enableTiering;
+        return this;
+    }
+
+    /**
+     * Get enableTiering
+     *
+     * @return enableTiering
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getEnableTiering() {
+        return enableTiering;
+    }
+
+    public void setEnableTiering(Boolean enableTiering) {
+        this.enableTiering = enableTiering;
+    }
+
+    public Cluster enableTiering_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENABLE_TIERING);
+        return this;
+    }
+
+    public Cluster enableTiering_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENABLE_TIERING);
+        return this;
+    }
+
+    public void setEnableTiering_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENABLE_TIERING);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENABLE_TIERING);
+        }
+    }
+
+    public boolean getEnableTiering_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENABLE_TIERING);
     }
 
     public Cluster entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -1696,6 +2216,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         return this._isPresent_.contains(SERIALIZED_NAME_LOCAL_ID);
     }
 
+    public Cluster logicalUsedDataSpace(Long logicalUsedDataSpace) {
+
+        this.logicalUsedDataSpace = logicalUsedDataSpace;
+        return this;
+    }
+
+    /**
+     * Get logicalUsedDataSpace
+     *
+     * @return logicalUsedDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getLogicalUsedDataSpace() {
+        return logicalUsedDataSpace;
+    }
+
+    public void setLogicalUsedDataSpace(Long logicalUsedDataSpace) {
+        this.logicalUsedDataSpace = logicalUsedDataSpace;
+    }
+
+    public Cluster logicalUsedDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+        return this;
+    }
+
+    public Cluster logicalUsedDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+        return this;
+    }
+
+    public void setLogicalUsedDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+        }
+    }
+
+    public boolean getLogicalUsedDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOGICAL_USED_DATA_SPACE);
+    }
+
     public Cluster maintenanceEndDate(String maintenanceEndDate) {
 
         this.maintenanceEndDate = maintenanceEndDate;
@@ -2214,6 +2777,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         return this._isPresent_.contains(SERIALIZED_NAME_NAME);
     }
 
+    public Cluster noPerformanceLayer(Boolean noPerformanceLayer) {
+
+        this.noPerformanceLayer = noPerformanceLayer;
+        return this;
+    }
+
+    /**
+     * Get noPerformanceLayer
+     *
+     * @return noPerformanceLayer
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getNoPerformanceLayer() {
+        return noPerformanceLayer;
+    }
+
+    public void setNoPerformanceLayer(Boolean noPerformanceLayer) {
+        this.noPerformanceLayer = noPerformanceLayer;
+    }
+
+    public Cluster noPerformanceLayer_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+        return this;
+    }
+
+    public Cluster noPerformanceLayer_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+        return this;
+    }
+
+    public void setNoPerformanceLayer_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+        }
+    }
+
+    public boolean getNoPerformanceLayer_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NO_PERFORMANCE_LAYER);
+    }
+
     public Cluster ntpMode(NtpMode ntpMode) {
 
         this.ntpMode = ntpMode;
@@ -2434,6 +3040,307 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         return this._isPresent_.contains(SERIALIZED_NAME_NVMF_ENABLED);
     }
 
+    public Cluster overallEfficiency(Double overallEfficiency) {
+
+        this.overallEfficiency = overallEfficiency;
+        return this;
+    }
+
+    /**
+     * Get overallEfficiency
+     *
+     * @return overallEfficiency
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverallEfficiency() {
+        return overallEfficiency;
+    }
+
+    public void setOverallEfficiency(Double overallEfficiency) {
+        this.overallEfficiency = overallEfficiency;
+    }
+
+    public Cluster overallEfficiency_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+        return this;
+    }
+
+    public Cluster overallEfficiency_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+        return this;
+    }
+
+    public void setOverallEfficiency_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+        }
+    }
+
+    public boolean getOverallEfficiency_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+    }
+
+    public Cluster perfAllocatedDataSpace(Long perfAllocatedDataSpace) {
+
+        this.perfAllocatedDataSpace = perfAllocatedDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfAllocatedDataSpace
+     *
+     * @return perfAllocatedDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfAllocatedDataSpace() {
+        return perfAllocatedDataSpace;
+    }
+
+    public void setPerfAllocatedDataSpace(Long perfAllocatedDataSpace) {
+        this.perfAllocatedDataSpace = perfAllocatedDataSpace;
+    }
+
+    public Cluster perfAllocatedDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        return this;
+    }
+
+    public Cluster perfAllocatedDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfAllocatedDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfAllocatedDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE);
+    }
+
+    public Cluster perfFailureDataSpace(Long perfFailureDataSpace) {
+
+        this.perfFailureDataSpace = perfFailureDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfFailureDataSpace
+     *
+     * @return perfFailureDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfFailureDataSpace() {
+        return perfFailureDataSpace;
+    }
+
+    public void setPerfFailureDataSpace(Long perfFailureDataSpace) {
+        this.perfFailureDataSpace = perfFailureDataSpace;
+    }
+
+    public Cluster perfFailureDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        return this;
+    }
+
+    public Cluster perfFailureDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfFailureDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfFailureDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_FAILURE_DATA_SPACE);
+    }
+
+    public Cluster perfTotalDataCapacity(Long perfTotalDataCapacity) {
+
+        this.perfTotalDataCapacity = perfTotalDataCapacity;
+        return this;
+    }
+
+    /**
+     * Get perfTotalDataCapacity
+     *
+     * @return perfTotalDataCapacity
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfTotalDataCapacity() {
+        return perfTotalDataCapacity;
+    }
+
+    public void setPerfTotalDataCapacity(Long perfTotalDataCapacity) {
+        this.perfTotalDataCapacity = perfTotalDataCapacity;
+    }
+
+    public Cluster perfTotalDataCapacity_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        return this;
+    }
+
+    public Cluster perfTotalDataCapacity_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        return this;
+    }
+
+    public void setPerfTotalDataCapacity_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+        }
+    }
+
+    public boolean getPerfTotalDataCapacity_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_TOTAL_DATA_CAPACITY);
+    }
+
+    public Cluster perfUsedDataSpace(Long perfUsedDataSpace) {
+
+        this.perfUsedDataSpace = perfUsedDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfUsedDataSpace
+     *
+     * @return perfUsedDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfUsedDataSpace() {
+        return perfUsedDataSpace;
+    }
+
+    public void setPerfUsedDataSpace(Long perfUsedDataSpace) {
+        this.perfUsedDataSpace = perfUsedDataSpace;
+    }
+
+    public Cluster perfUsedDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        return this;
+    }
+
+    public Cluster perfUsedDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfUsedDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfUsedDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_USED_DATA_SPACE);
+    }
+
+    public Cluster perfValidDataSpace(Long perfValidDataSpace) {
+
+        this.perfValidDataSpace = perfValidDataSpace;
+        return this;
+    }
+
+    /**
+     * Get perfValidDataSpace
+     *
+     * @return perfValidDataSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPerfValidDataSpace() {
+        return perfValidDataSpace;
+    }
+
+    public void setPerfValidDataSpace(Long perfValidDataSpace) {
+        this.perfValidDataSpace = perfValidDataSpace;
+    }
+
+    public Cluster perfValidDataSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        return this;
+    }
+
+    public Cluster perfValidDataSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        return this;
+    }
+
+    public void setPerfValidDataSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+        }
+    }
+
+    public boolean getPerfValidDataSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PERF_VALID_DATA_SPACE);
+    }
+
+    public Cluster plannedPrioritizedSpace(Long plannedPrioritizedSpace) {
+
+        this.plannedPrioritizedSpace = plannedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get plannedPrioritizedSpace
+     *
+     * @return plannedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getPlannedPrioritizedSpace() {
+        return plannedPrioritizedSpace;
+    }
+
+    public void setPlannedPrioritizedSpace(Long plannedPrioritizedSpace) {
+        this.plannedPrioritizedSpace = plannedPrioritizedSpace;
+    }
+
+    public Cluster plannedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public Cluster plannedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setPlannedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getPlannedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PLANNED_PRIORITIZED_SPACE);
+    }
+
     public Cluster pmemEnabled(Boolean pmemEnabled) {
 
         this.pmemEnabled = pmemEnabled;
@@ -2475,6 +3382,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getPmemEnabled_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_PMEM_ENABLED);
+    }
+
+    public Cluster prioSpacePercentage(Double prioSpacePercentage) {
+
+        this.prioSpacePercentage = prioSpacePercentage;
+        return this;
+    }
+
+    /**
+     * Get prioSpacePercentage
+     *
+     * @return prioSpacePercentage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getPrioSpacePercentage() {
+        return prioSpacePercentage;
+    }
+
+    public void setPrioSpacePercentage(Double prioSpacePercentage) {
+        this.prioSpacePercentage = prioSpacePercentage;
+    }
+
+    public Cluster prioSpacePercentage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        return this;
+    }
+
+    public Cluster prioSpacePercentage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        return this;
+    }
+
+    public void setPrioSpacePercentage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
+        }
+    }
+
+    public boolean getPrioSpacePercentage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIO_SPACE_PERCENTAGE);
     }
 
     public Cluster provisionedCpuCores(Integer provisionedCpuCores) {
@@ -2867,6 +3817,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getRecoverSpeed_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_RECOVER_SPEED);
+    }
+
+    public Cluster replicaCapacityOnly(Boolean replicaCapacityOnly) {
+
+        this.replicaCapacityOnly = replicaCapacityOnly;
+        return this;
+    }
+
+    /**
+     * Get replicaCapacityOnly
+     *
+     * @return replicaCapacityOnly
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getReplicaCapacityOnly() {
+        return replicaCapacityOnly;
+    }
+
+    public void setReplicaCapacityOnly(Boolean replicaCapacityOnly) {
+        this.replicaCapacityOnly = replicaCapacityOnly;
+    }
+
+    public Cluster replicaCapacityOnly_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
+        return this;
+    }
+
+    public Cluster replicaCapacityOnly_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
+        return this;
+    }
+
+    public void setReplicaCapacityOnly_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
+        }
+    }
+
+    public boolean getReplicaCapacityOnly_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_CAPACITY_ONLY);
     }
 
     public Cluster reservedCpuCoresForSystemService(Integer reservedCpuCoresForSystemService) {
@@ -3476,6 +4469,92 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_MEMORY_BYTES);
     }
 
+    public Cluster totalPrioVolumeSize(Long totalPrioVolumeSize) {
+
+        this.totalPrioVolumeSize = totalPrioVolumeSize;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSize
+     *
+     * @return totalPrioVolumeSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getTotalPrioVolumeSize() {
+        return totalPrioVolumeSize;
+    }
+
+    public void setTotalPrioVolumeSize(Long totalPrioVolumeSize) {
+        this.totalPrioVolumeSize = totalPrioVolumeSize;
+    }
+
+    public Cluster totalPrioVolumeSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+        return this;
+    }
+
+    public Cluster totalPrioVolumeSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE);
+    }
+
+    public Cluster totalPrioVolumeSizeUsage(Double totalPrioVolumeSizeUsage) {
+
+        this.totalPrioVolumeSizeUsage = totalPrioVolumeSizeUsage;
+        return this;
+    }
+
+    /**
+     * Get totalPrioVolumeSizeUsage
+     *
+     * @return totalPrioVolumeSizeUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getTotalPrioVolumeSizeUsage() {
+        return totalPrioVolumeSizeUsage;
+    }
+
+    public void setTotalPrioVolumeSizeUsage(Double totalPrioVolumeSizeUsage) {
+        this.totalPrioVolumeSizeUsage = totalPrioVolumeSizeUsage;
+    }
+
+    public Cluster totalPrioVolumeSizeUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+        return this;
+    }
+
+    public Cluster totalPrioVolumeSizeUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+        return this;
+    }
+
+    public void setTotalPrioVolumeSizeUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+        }
+    }
+
+    public boolean getTotalPrioVolumeSizeUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_PRIO_VOLUME_SIZE_USAGE);
+    }
+
     public Cluster type(ClusterType type) {
 
         this.type = type;
@@ -3519,6 +4598,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         return this._isPresent_.contains(SERIALIZED_NAME_TYPE);
     }
 
+    public Cluster upgradeForTiering(Boolean upgradeForTiering) {
+
+        this.upgradeForTiering = upgradeForTiering;
+        return this;
+    }
+
+    /**
+     * Get upgradeForTiering
+     *
+     * @return upgradeForTiering
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getUpgradeForTiering() {
+        return upgradeForTiering;
+    }
+
+    public void setUpgradeForTiering(Boolean upgradeForTiering) {
+        this.upgradeForTiering = upgradeForTiering;
+    }
+
+    public Cluster upgradeForTiering_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+        return this;
+    }
+
+    public Cluster upgradeForTiering_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+        return this;
+    }
+
+    public void setUpgradeForTiering_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+        }
+    }
+
+    public boolean getUpgradeForTiering_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPGRADE_FOR_TIERING);
+    }
+
     public Cluster upgradeToolVersion(String upgradeToolVersion) {
 
         this.upgradeToolVersion = upgradeToolVersion;
@@ -3560,6 +4682,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getUpgradeToolVersion_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_UPGRADE_TOOL_VERSION);
+    }
+
+    public Cluster usedCacheSpace(Long usedCacheSpace) {
+
+        this.usedCacheSpace = usedCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get usedCacheSpace
+     *
+     * @return usedCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getUsedCacheSpace() {
+        return usedCacheSpace;
+    }
+
+    public void setUsedCacheSpace(Long usedCacheSpace) {
+        this.usedCacheSpace = usedCacheSpace;
+    }
+
+    public Cluster usedCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE);
+        return this;
+    }
+
+    public Cluster usedCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE);
+        return this;
+    }
+
+    public void setUsedCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_USED_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_USED_CACHE_SPACE);
+        }
+    }
+
+    public boolean getUsedCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_USED_CACHE_SPACE);
     }
 
     public Cluster usedCpuHz(Double usedCpuHz) {
@@ -3689,6 +4854,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getUsedMemoryBytes_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_USED_MEMORY_BYTES);
+    }
+
+    public Cluster validCacheSpace(Long validCacheSpace) {
+
+        this.validCacheSpace = validCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get validCacheSpace
+     *
+     * @return validCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getValidCacheSpace() {
+        return validCacheSpace;
+    }
+
+    public void setValidCacheSpace(Long validCacheSpace) {
+        this.validCacheSpace = validCacheSpace;
+    }
+
+    public Cluster validCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        return this;
+    }
+
+    public Cluster validCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        return this;
+    }
+
+    public void setValidCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VALID_CACHE_SPACE);
+        }
+    }
+
+    public boolean getValidCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VALID_CACHE_SPACE);
     }
 
     public Cluster validDataSpace(Long validDataSpace) {
@@ -4213,17 +5421,28 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
             return false;
         }
         Cluster cluster = (Cluster) o;
-        return Objects.equals(this.applicationHighestVersion, cluster.applicationHighestVersion)
+        return Objects.equals(this.accessWriteCompressEnabled, cluster.accessWriteCompressEnabled)
+                && Objects.equals(this.allocatedPrioritizedSpace, cluster.allocatedPrioritizedSpace)
+                && Objects.equals(
+                        this.allocatedPrioritizedSpaceUsage, cluster.allocatedPrioritizedSpaceUsage)
+                && Objects.equals(this.applicationHighestVersion, cluster.applicationHighestVersion)
                 && Objects.equals(this.applications, cluster.applications)
                 && Objects.equals(this.architecture, cluster.architecture)
                 && Objects.equals(this.autoConverge, cluster.autoConverge)
+                && Objects.equals(this.commitedMemoryBytes, cluster.commitedMemoryBytes)
                 && Objects.equals(this.connectState, cluster.connectState)
                 && Objects.equals(this.consistencyGroups, cluster.consistencyGroups)
                 && Objects.equals(this.currentCpuModel, cluster.currentCpuModel)
+                && Objects.equals(this.dataReductionRatio, cluster.dataReductionRatio)
+                && Objects.equals(this.dataReductionSaving, cluster.dataReductionSaving)
                 && Objects.equals(this.datacenters, cluster.datacenters)
                 && Objects.equals(this.disconnectedDate, cluster.disconnectedDate)
                 && Objects.equals(this.disconnectedReason, cluster.disconnectedReason)
                 && Objects.equals(this.dns, cluster.dns)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpace, cluster.downgradedPrioritizedSpace)
+                && Objects.equals(this.ecpLicense, cluster.ecpLicense)
+                && Objects.equals(this.enableTiering, cluster.enableTiering)
                 && Objects.equals(this.entityAsyncStatus, cluster.entityAsyncStatus)
                 && Objects.equals(this.everouteCluster, cluster.everouteCluster)
                 && Objects.equals(this.failureDataSpace, cluster.failureDataSpace)
@@ -4241,6 +5460,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.licenseSignDate, cluster.licenseSignDate)
                 && Objects.equals(this.licenseType, cluster.licenseType)
                 && Objects.equals(this.localId, cluster.localId)
+                && Objects.equals(this.logicalUsedDataSpace, cluster.logicalUsedDataSpace)
                 && Objects.equals(this.maintenanceEndDate, cluster.maintenanceEndDate)
                 && Objects.equals(this.maintenanceStartDate, cluster.maintenanceStartDate)
                 && Objects.equals(this.managementVip, cluster.managementVip)
@@ -4255,12 +5475,21 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.migrationDataSize, cluster.migrationDataSize)
                 && Objects.equals(this.migrationSpeed, cluster.migrationSpeed)
                 && Objects.equals(this.name, cluster.name)
+                && Objects.equals(this.noPerformanceLayer, cluster.noPerformanceLayer)
                 && Objects.equals(this.ntpMode, cluster.ntpMode)
                 && Objects.equals(this.ntpServers, cluster.ntpServers)
                 && Objects.equals(this.nvmeOverRdmaEnabled, cluster.nvmeOverRdmaEnabled)
                 && Objects.equals(this.nvmeOverTcpEnabled, cluster.nvmeOverTcpEnabled)
                 && Objects.equals(this.nvmfEnabled, cluster.nvmfEnabled)
+                && Objects.equals(this.overallEfficiency, cluster.overallEfficiency)
+                && Objects.equals(this.perfAllocatedDataSpace, cluster.perfAllocatedDataSpace)
+                && Objects.equals(this.perfFailureDataSpace, cluster.perfFailureDataSpace)
+                && Objects.equals(this.perfTotalDataCapacity, cluster.perfTotalDataCapacity)
+                && Objects.equals(this.perfUsedDataSpace, cluster.perfUsedDataSpace)
+                && Objects.equals(this.perfValidDataSpace, cluster.perfValidDataSpace)
+                && Objects.equals(this.plannedPrioritizedSpace, cluster.plannedPrioritizedSpace)
                 && Objects.equals(this.pmemEnabled, cluster.pmemEnabled)
+                && Objects.equals(this.prioSpacePercentage, cluster.prioSpacePercentage)
                 && Objects.equals(this.provisionedCpuCores, cluster.provisionedCpuCores)
                 && Objects.equals(
                         this.provisionedCpuCoresForActiveVm, cluster.provisionedCpuCoresForActiveVm)
@@ -4272,6 +5501,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.recommendedCpuModels, cluster.recommendedCpuModels)
                 && Objects.equals(this.recoverDataSize, cluster.recoverDataSize)
                 && Objects.equals(this.recoverSpeed, cluster.recoverSpeed)
+                && Objects.equals(this.replicaCapacityOnly, cluster.replicaCapacityOnly)
                 && Objects.equals(
                         this.reservedCpuCoresForSystemService,
                         cluster.reservedCpuCoresForSystemService)
@@ -4288,11 +5518,16 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.totalCpuSockets, cluster.totalCpuSockets)
                 && Objects.equals(this.totalDataCapacity, cluster.totalDataCapacity)
                 && Objects.equals(this.totalMemoryBytes, cluster.totalMemoryBytes)
+                && Objects.equals(this.totalPrioVolumeSize, cluster.totalPrioVolumeSize)
+                && Objects.equals(this.totalPrioVolumeSizeUsage, cluster.totalPrioVolumeSizeUsage)
                 && Objects.equals(this.type, cluster.type)
+                && Objects.equals(this.upgradeForTiering, cluster.upgradeForTiering)
                 && Objects.equals(this.upgradeToolVersion, cluster.upgradeToolVersion)
+                && Objects.equals(this.usedCacheSpace, cluster.usedCacheSpace)
                 && Objects.equals(this.usedCpuHz, cluster.usedCpuHz)
                 && Objects.equals(this.usedDataSpace, cluster.usedDataSpace)
                 && Objects.equals(this.usedMemoryBytes, cluster.usedMemoryBytes)
+                && Objects.equals(this.validCacheSpace, cluster.validCacheSpace)
                 && Objects.equals(this.validDataSpace, cluster.validDataSpace)
                 && Objects.equals(this.vcenterAccount, cluster.vcenterAccount)
                 && Objects.equals(this.vdses, cluster.vdses)
@@ -4318,17 +5553,26 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @Override
     public int hashCode() {
         return Objects.hash(
+                accessWriteCompressEnabled,
+                allocatedPrioritizedSpace,
+                allocatedPrioritizedSpaceUsage,
                 applicationHighestVersion,
                 applications,
                 architecture,
                 autoConverge,
+                commitedMemoryBytes,
                 connectState,
                 consistencyGroups,
                 currentCpuModel,
+                dataReductionRatio,
+                dataReductionSaving,
                 datacenters,
                 disconnectedDate,
                 disconnectedReason,
                 dns,
+                downgradedPrioritizedSpace,
+                ecpLicense,
+                enableTiering,
                 entityAsyncStatus,
                 everouteCluster,
                 failureDataSpace,
@@ -4346,6 +5590,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 licenseSignDate,
                 licenseType,
                 localId,
+                logicalUsedDataSpace,
                 maintenanceEndDate,
                 maintenanceStartDate,
                 managementVip,
@@ -4358,12 +5603,21 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 migrationDataSize,
                 migrationSpeed,
                 name,
+                noPerformanceLayer,
                 ntpMode,
                 ntpServers,
                 nvmeOverRdmaEnabled,
                 nvmeOverTcpEnabled,
                 nvmfEnabled,
+                overallEfficiency,
+                perfAllocatedDataSpace,
+                perfFailureDataSpace,
+                perfTotalDataCapacity,
+                perfUsedDataSpace,
+                perfValidDataSpace,
+                plannedPrioritizedSpace,
                 pmemEnabled,
+                prioSpacePercentage,
                 provisionedCpuCores,
                 provisionedCpuCoresForActiveVm,
                 provisionedForActiveVmRatio,
@@ -4373,6 +5627,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 recommendedCpuModels,
                 recoverDataSize,
                 recoverSpeed,
+                replicaCapacityOnly,
                 reservedCpuCoresForSystemService,
                 runningVmNum,
                 settings,
@@ -4387,11 +5642,16 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 totalCpuSockets,
                 totalDataCapacity,
                 totalMemoryBytes,
+                totalPrioVolumeSize,
+                totalPrioVolumeSizeUsage,
                 type,
+                upgradeForTiering,
                 upgradeToolVersion,
+                usedCacheSpace,
                 usedCpuHz,
                 usedDataSpace,
                 usedMemoryBytes,
+                validCacheSpace,
                 validDataSpace,
                 vcenterAccount,
                 vdses,
@@ -4416,23 +5676,46 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class Cluster {\n");
+        sb.append("    accessWriteCompressEnabled: ")
+                .append(toIndentedString(accessWriteCompressEnabled))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpace: ")
+                .append(toIndentedString(allocatedPrioritizedSpace))
+                .append("\n");
+        sb.append("    allocatedPrioritizedSpaceUsage: ")
+                .append(toIndentedString(allocatedPrioritizedSpaceUsage))
+                .append("\n");
         sb.append("    applicationHighestVersion: ")
                 .append(toIndentedString(applicationHighestVersion))
                 .append("\n");
         sb.append("    applications: ").append(toIndentedString(applications)).append("\n");
         sb.append("    architecture: ").append(toIndentedString(architecture)).append("\n");
         sb.append("    autoConverge: ").append(toIndentedString(autoConverge)).append("\n");
+        sb.append("    commitedMemoryBytes: ")
+                .append(toIndentedString(commitedMemoryBytes))
+                .append("\n");
         sb.append("    connectState: ").append(toIndentedString(connectState)).append("\n");
         sb.append("    consistencyGroups: ")
                 .append(toIndentedString(consistencyGroups))
                 .append("\n");
         sb.append("    currentCpuModel: ").append(toIndentedString(currentCpuModel)).append("\n");
+        sb.append("    dataReductionRatio: ")
+                .append(toIndentedString(dataReductionRatio))
+                .append("\n");
+        sb.append("    dataReductionSaving: ")
+                .append(toIndentedString(dataReductionSaving))
+                .append("\n");
         sb.append("    datacenters: ").append(toIndentedString(datacenters)).append("\n");
         sb.append("    disconnectedDate: ").append(toIndentedString(disconnectedDate)).append("\n");
         sb.append("    disconnectedReason: ")
                 .append(toIndentedString(disconnectedReason))
                 .append("\n");
         sb.append("    dns: ").append(toIndentedString(dns)).append("\n");
+        sb.append("    downgradedPrioritizedSpace: ")
+                .append(toIndentedString(downgradedPrioritizedSpace))
+                .append("\n");
+        sb.append("    ecpLicense: ").append(toIndentedString(ecpLicense)).append("\n");
+        sb.append("    enableTiering: ").append(toIndentedString(enableTiering)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -4454,6 +5737,9 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         sb.append("    licenseSignDate: ").append(toIndentedString(licenseSignDate)).append("\n");
         sb.append("    licenseType: ").append(toIndentedString(licenseType)).append("\n");
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
+        sb.append("    logicalUsedDataSpace: ")
+                .append(toIndentedString(logicalUsedDataSpace))
+                .append("\n");
         sb.append("    maintenanceEndDate: ")
                 .append(toIndentedString(maintenanceEndDate))
                 .append("\n");
@@ -4478,6 +5764,9 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 .append("\n");
         sb.append("    migrationSpeed: ").append(toIndentedString(migrationSpeed)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    noPerformanceLayer: ")
+                .append(toIndentedString(noPerformanceLayer))
+                .append("\n");
         sb.append("    ntpMode: ").append(toIndentedString(ntpMode)).append("\n");
         sb.append("    ntpServers: ").append(toIndentedString(ntpServers)).append("\n");
         sb.append("    nvmeOverRdmaEnabled: ")
@@ -4487,7 +5776,31 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 .append(toIndentedString(nvmeOverTcpEnabled))
                 .append("\n");
         sb.append("    nvmfEnabled: ").append(toIndentedString(nvmfEnabled)).append("\n");
+        sb.append("    overallEfficiency: ")
+                .append(toIndentedString(overallEfficiency))
+                .append("\n");
+        sb.append("    perfAllocatedDataSpace: ")
+                .append(toIndentedString(perfAllocatedDataSpace))
+                .append("\n");
+        sb.append("    perfFailureDataSpace: ")
+                .append(toIndentedString(perfFailureDataSpace))
+                .append("\n");
+        sb.append("    perfTotalDataCapacity: ")
+                .append(toIndentedString(perfTotalDataCapacity))
+                .append("\n");
+        sb.append("    perfUsedDataSpace: ")
+                .append(toIndentedString(perfUsedDataSpace))
+                .append("\n");
+        sb.append("    perfValidDataSpace: ")
+                .append(toIndentedString(perfValidDataSpace))
+                .append("\n");
+        sb.append("    plannedPrioritizedSpace: ")
+                .append(toIndentedString(plannedPrioritizedSpace))
+                .append("\n");
         sb.append("    pmemEnabled: ").append(toIndentedString(pmemEnabled)).append("\n");
+        sb.append("    prioSpacePercentage: ")
+                .append(toIndentedString(prioSpacePercentage))
+                .append("\n");
         sb.append("    provisionedCpuCores: ")
                 .append(toIndentedString(provisionedCpuCores))
                 .append("\n");
@@ -4507,6 +5820,9 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 .append("\n");
         sb.append("    recoverDataSize: ").append(toIndentedString(recoverDataSize)).append("\n");
         sb.append("    recoverSpeed: ").append(toIndentedString(recoverSpeed)).append("\n");
+        sb.append("    replicaCapacityOnly: ")
+                .append(toIndentedString(replicaCapacityOnly))
+                .append("\n");
         sb.append("    reservedCpuCoresForSystemService: ")
                 .append(toIndentedString(reservedCpuCoresForSystemService))
                 .append("\n");
@@ -4527,13 +5843,24 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 .append(toIndentedString(totalDataCapacity))
                 .append("\n");
         sb.append("    totalMemoryBytes: ").append(toIndentedString(totalMemoryBytes)).append("\n");
+        sb.append("    totalPrioVolumeSize: ")
+                .append(toIndentedString(totalPrioVolumeSize))
+                .append("\n");
+        sb.append("    totalPrioVolumeSizeUsage: ")
+                .append(toIndentedString(totalPrioVolumeSizeUsage))
+                .append("\n");
         sb.append("    type: ").append(toIndentedString(type)).append("\n");
+        sb.append("    upgradeForTiering: ")
+                .append(toIndentedString(upgradeForTiering))
+                .append("\n");
         sb.append("    upgradeToolVersion: ")
                 .append(toIndentedString(upgradeToolVersion))
                 .append("\n");
+        sb.append("    usedCacheSpace: ").append(toIndentedString(usedCacheSpace)).append("\n");
         sb.append("    usedCpuHz: ").append(toIndentedString(usedCpuHz)).append("\n");
         sb.append("    usedDataSpace: ").append(toIndentedString(usedDataSpace)).append("\n");
         sb.append("    usedMemoryBytes: ").append(toIndentedString(usedMemoryBytes)).append("\n");
+        sb.append("    validCacheSpace: ").append(toIndentedString(validCacheSpace)).append("\n");
         sb.append("    validDataSpace: ").append(toIndentedString(validDataSpace)).append("\n");
         sb.append("    vcenterAccount: ").append(toIndentedString(vcenterAccount)).append("\n");
         sb.append("    vdses: ").append(toIndentedString(vdses)).append("\n");

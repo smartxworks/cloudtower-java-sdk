@@ -37,6 +37,28 @@ public class NestedContentLibraryVmTemplateDisk
     @SerializedName(SERIALIZED_NAME_DISK_NAME)
     private String diskName;
 
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K = "elf_storage_policy_ec_k";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K)
+    private Integer elfStoragePolicyEcK;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M = "elf_storage_policy_ec_m";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M)
+    private Integer elfStoragePolicyEcM;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM =
+            "elf_storage_policy_replica_num";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM)
+    private Integer elfStoragePolicyReplicaNum;
+
+    public static final String SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION =
+            "elf_storage_policy_thin_provision";
+
+    @SerializedName(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION)
+    private Boolean elfStoragePolicyThinProvision;
+
     public static final String SERIALIZED_NAME_INDEX = "index";
 
     @SerializedName(SERIALIZED_NAME_INDEX)
@@ -307,6 +329,180 @@ public class NestedContentLibraryVmTemplateDisk
 
     public boolean getDiskName_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DISK_NAME);
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyEcK(Integer elfStoragePolicyEcK) {
+
+        this.elfStoragePolicyEcK = elfStoragePolicyEcK;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcK
+     *
+     * @return elfStoragePolicyEcK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcK() {
+        return elfStoragePolicyEcK;
+    }
+
+    public void setElfStoragePolicyEcK(Integer elfStoragePolicyEcK) {
+        this.elfStoragePolicyEcK = elfStoragePolicyEcK;
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyEcK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        return this;
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyEcK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_K);
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyEcM(Integer elfStoragePolicyEcM) {
+
+        this.elfStoragePolicyEcM = elfStoragePolicyEcM;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyEcM
+     *
+     * @return elfStoragePolicyEcM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyEcM() {
+        return elfStoragePolicyEcM;
+    }
+
+    public void setElfStoragePolicyEcM(Integer elfStoragePolicyEcM) {
+        this.elfStoragePolicyEcM = elfStoragePolicyEcM;
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyEcM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        return this;
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyEcM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        return this;
+    }
+
+    public void setElfStoragePolicyEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+        }
+    }
+
+    public boolean getElfStoragePolicyEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_EC_M);
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyReplicaNum(
+            Integer elfStoragePolicyReplicaNum) {
+
+        this.elfStoragePolicyReplicaNum = elfStoragePolicyReplicaNum;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyReplicaNum
+     *
+     * @return elfStoragePolicyReplicaNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getElfStoragePolicyReplicaNum() {
+        return elfStoragePolicyReplicaNum;
+    }
+
+    public void setElfStoragePolicyReplicaNum(Integer elfStoragePolicyReplicaNum) {
+        this.elfStoragePolicyReplicaNum = elfStoragePolicyReplicaNum;
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyReplicaNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        return this;
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyReplicaNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        return this;
+    }
+
+    public void setElfStoragePolicyReplicaNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+        }
+    }
+
+    public boolean getElfStoragePolicyReplicaNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_REPLICA_NUM);
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyThinProvision(
+            Boolean elfStoragePolicyThinProvision) {
+
+        this.elfStoragePolicyThinProvision = elfStoragePolicyThinProvision;
+        return this;
+    }
+
+    /**
+     * Get elfStoragePolicyThinProvision
+     *
+     * @return elfStoragePolicyThinProvision
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getElfStoragePolicyThinProvision() {
+        return elfStoragePolicyThinProvision;
+    }
+
+    public void setElfStoragePolicyThinProvision(Boolean elfStoragePolicyThinProvision) {
+        this.elfStoragePolicyThinProvision = elfStoragePolicyThinProvision;
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyThinProvision_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        return this;
+    }
+
+    public NestedContentLibraryVmTemplateDisk elfStoragePolicyThinProvision_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        return this;
+    }
+
+    public void setElfStoragePolicyThinProvision_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
+        }
+    }
+
+    public boolean getElfStoragePolicyThinProvision_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ELF_STORAGE_POLICY_THIN_PROVISION);
     }
 
     public NestedContentLibraryVmTemplateDisk index(Integer index) {
@@ -801,6 +997,18 @@ public class NestedContentLibraryVmTemplateDisk
                         nestedContentLibraryVmTemplateDisk.contentLibraryImageId)
                 && Objects.equals(this.disabled, nestedContentLibraryVmTemplateDisk.disabled)
                 && Objects.equals(this.diskName, nestedContentLibraryVmTemplateDisk.diskName)
+                && Objects.equals(
+                        this.elfStoragePolicyEcK,
+                        nestedContentLibraryVmTemplateDisk.elfStoragePolicyEcK)
+                && Objects.equals(
+                        this.elfStoragePolicyEcM,
+                        nestedContentLibraryVmTemplateDisk.elfStoragePolicyEcM)
+                && Objects.equals(
+                        this.elfStoragePolicyReplicaNum,
+                        nestedContentLibraryVmTemplateDisk.elfStoragePolicyReplicaNum)
+                && Objects.equals(
+                        this.elfStoragePolicyThinProvision,
+                        nestedContentLibraryVmTemplateDisk.elfStoragePolicyThinProvision)
                 && Objects.equals(this.index, nestedContentLibraryVmTemplateDisk.index)
                 && Objects.equals(
                         this.maxBandwidth, nestedContentLibraryVmTemplateDisk.maxBandwidth)
@@ -838,6 +1046,10 @@ public class NestedContentLibraryVmTemplateDisk
                 contentLibraryImageId,
                 disabled,
                 diskName,
+                elfStoragePolicyEcK,
+                elfStoragePolicyEcM,
+                elfStoragePolicyReplicaNum,
+                elfStoragePolicyThinProvision,
                 index,
                 maxBandwidth,
                 maxBandwidthPolicy,
@@ -869,6 +1081,18 @@ public class NestedContentLibraryVmTemplateDisk
                 .append("\n");
         sb.append("    disabled: ").append(toIndentedString(disabled)).append("\n");
         sb.append("    diskName: ").append(toIndentedString(diskName)).append("\n");
+        sb.append("    elfStoragePolicyEcK: ")
+                .append(toIndentedString(elfStoragePolicyEcK))
+                .append("\n");
+        sb.append("    elfStoragePolicyEcM: ")
+                .append(toIndentedString(elfStoragePolicyEcM))
+                .append("\n");
+        sb.append("    elfStoragePolicyReplicaNum: ")
+                .append(toIndentedString(elfStoragePolicyReplicaNum))
+                .append("\n");
+        sb.append("    elfStoragePolicyThinProvision: ")
+                .append(toIndentedString(elfStoragePolicyThinProvision))
+                .append("\n");
         sb.append("    index: ").append(toIndentedString(index)).append("\n");
         sb.append("    maxBandwidth: ").append(toIndentedString(maxBandwidth)).append("\n");
         sb.append("    maxBandwidthPolicy: ")

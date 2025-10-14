@@ -57,6 +57,16 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
     @SerializedName(SERIALIZED_NAME_BPS_WR_MAX_LENGTH)
     private Long bpsWrMaxLength;
 
+    public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS = "business_host_groups";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOST_GROUPS)
+    private List<NestedBusinessHostGroup> businessHostGroups = null;
+
+    public static final String SERIALIZED_NAME_BUSINESS_HOSTS = "business_hosts";
+
+    @SerializedName(SERIALIZED_NAME_BUSINESS_HOSTS)
+    private List<NestedBusinessHost> businessHosts = null;
+
     public static final String SERIALIZED_NAME_CHAP_ENABLED = "chap_enabled";
 
     @SerializedName(SERIALIZED_NAME_CHAP_ENABLED)
@@ -77,10 +87,35 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
     @SerializedName(SERIALIZED_NAME_CLUSTER)
     private NestedCluster cluster;
 
+    public static final String SERIALIZED_NAME_CONFIGURATION_ADAPTIVE = "configuration_adaptive";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE)
+    private Boolean configurationAdaptive;
+
+    public static final String SERIALIZED_NAME_CONFIGURATION_METHOD = "configuration_method";
+
+    @SerializedName(SERIALIZED_NAME_CONFIGURATION_METHOD)
+    private ConfigurationMethod configurationMethod;
+
     public static final String SERIALIZED_NAME_DESCRIPTION = "description";
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
     private String description;
+
+    public static final String SERIALIZED_NAME_EC_K = "ec_k";
+
+    @SerializedName(SERIALIZED_NAME_EC_K)
+    private Integer ecK;
+
+    public static final String SERIALIZED_NAME_EC_M = "ec_m";
+
+    @SerializedName(SERIALIZED_NAME_EC_M)
+    private Integer ecM;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD = "encrypt_method";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD)
+    private EncryptMethod encryptMethod;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -172,6 +207,16 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
     @SerializedName(SERIALIZED_NAME_IQN_WHITELIST)
     private String iqnWhitelist;
 
+    public static final String SERIALIZED_NAME_ISCSI_CONNECTIONS = "iscsi_connections";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_CONNECTIONS)
+    private List<NestedIscsiConnection> iscsiConnections = null;
+
+    public static final String SERIALIZED_NAME_ISCSI_LUNS_NUM = "iscsi_luns_num";
+
+    @SerializedName(SERIALIZED_NAME_ISCSI_LUNS_NUM)
+    private Integer iscsiLunsNum;
+
     public static final String SERIALIZED_NAME_LABELS = "labels";
 
     @SerializedName(SERIALIZED_NAME_LABELS)
@@ -192,10 +237,20 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
     @SerializedName(SERIALIZED_NAME_NAME)
     private String name;
 
+    public static final String SERIALIZED_NAME_PRIORITIZED = "prioritized";
+
+    @SerializedName(SERIALIZED_NAME_PRIORITIZED)
+    private Boolean prioritized;
+
     public static final String SERIALIZED_NAME_REPLICA_NUM = "replica_num";
 
     @SerializedName(SERIALIZED_NAME_REPLICA_NUM)
     private Integer replicaNum;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
+    private ResiliencyType resiliencyType;
 
     public static final String SERIALIZED_NAME_STRIPE_NUM = "stripe_num";
 
@@ -601,6 +656,108 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
         return this._isPresent_.contains(SERIALIZED_NAME_BPS_WR_MAX_LENGTH);
     }
 
+    public IscsiTarget businessHostGroups(List<NestedBusinessHostGroup> businessHostGroups) {
+
+        this.businessHostGroups = businessHostGroups;
+        return this;
+    }
+
+    public IscsiTarget addBusinessHostGroupsItem(NestedBusinessHostGroup businessHostGroupsItem) {
+        if (this.businessHostGroups == null) {
+            this.businessHostGroups = new ArrayList<NestedBusinessHostGroup>();
+        }
+        this.businessHostGroups.add(businessHostGroupsItem);
+        return this;
+    }
+
+    /**
+     * Get businessHostGroups
+     *
+     * @return businessHostGroups
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedBusinessHostGroup> getBusinessHostGroups() {
+        return businessHostGroups;
+    }
+
+    public void setBusinessHostGroups(List<NestedBusinessHostGroup> businessHostGroups) {
+        this.businessHostGroups = businessHostGroups;
+    }
+
+    public IscsiTarget businessHostGroups_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public IscsiTarget businessHostGroups_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        return this;
+    }
+
+    public void setBusinessHostGroups_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+        }
+    }
+
+    public boolean getBusinessHostGroups_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOST_GROUPS);
+    }
+
+    public IscsiTarget businessHosts(List<NestedBusinessHost> businessHosts) {
+
+        this.businessHosts = businessHosts;
+        return this;
+    }
+
+    public IscsiTarget addBusinessHostsItem(NestedBusinessHost businessHostsItem) {
+        if (this.businessHosts == null) {
+            this.businessHosts = new ArrayList<NestedBusinessHost>();
+        }
+        this.businessHosts.add(businessHostsItem);
+        return this;
+    }
+
+    /**
+     * Get businessHosts
+     *
+     * @return businessHosts
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedBusinessHost> getBusinessHosts() {
+        return businessHosts;
+    }
+
+    public void setBusinessHosts(List<NestedBusinessHost> businessHosts) {
+        this.businessHosts = businessHosts;
+    }
+
+    public IscsiTarget businessHosts_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public IscsiTarget businessHosts_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        return this;
+    }
+
+    public void setBusinessHosts_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUSINESS_HOSTS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUSINESS_HOSTS);
+        }
+    }
+
+    public boolean getBusinessHosts_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUSINESS_HOSTS);
+    }
+
     public IscsiTarget chapEnabled(Boolean chapEnabled) {
 
         this.chapEnabled = chapEnabled;
@@ -773,6 +930,92 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
         return this._isPresent_.contains(SERIALIZED_NAME_CLUSTER);
     }
 
+    public IscsiTarget configurationAdaptive(Boolean configurationAdaptive) {
+
+        this.configurationAdaptive = configurationAdaptive;
+        return this;
+    }
+
+    /**
+     * Get configurationAdaptive
+     *
+     * @return configurationAdaptive
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getConfigurationAdaptive() {
+        return configurationAdaptive;
+    }
+
+    public void setConfigurationAdaptive(Boolean configurationAdaptive) {
+        this.configurationAdaptive = configurationAdaptive;
+    }
+
+    public IscsiTarget configurationAdaptive_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        return this;
+    }
+
+    public IscsiTarget configurationAdaptive_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        return this;
+    }
+
+    public void setConfigurationAdaptive_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+        }
+    }
+
+    public boolean getConfigurationAdaptive_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_ADAPTIVE);
+    }
+
+    public IscsiTarget configurationMethod(ConfigurationMethod configurationMethod) {
+
+        this.configurationMethod = configurationMethod;
+        return this;
+    }
+
+    /**
+     * Get configurationMethod
+     *
+     * @return configurationMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ConfigurationMethod getConfigurationMethod() {
+        return configurationMethod;
+    }
+
+    public void setConfigurationMethod(ConfigurationMethod configurationMethod) {
+        this.configurationMethod = configurationMethod;
+    }
+
+    public IscsiTarget configurationMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public IscsiTarget configurationMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        return this;
+    }
+
+    public void setConfigurationMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CONFIGURATION_METHOD);
+        }
+    }
+
+    public boolean getConfigurationMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CONFIGURATION_METHOD);
+    }
+
     public IscsiTarget description(String description) {
 
         this.description = description;
@@ -814,6 +1057,135 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
 
     public boolean getDescription_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DESCRIPTION);
+    }
+
+    public IscsiTarget ecK(Integer ecK) {
+
+        this.ecK = ecK;
+        return this;
+    }
+
+    /**
+     * Get ecK
+     *
+     * @return ecK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcK() {
+        return ecK;
+    }
+
+    public void setEcK(Integer ecK) {
+        this.ecK = ecK;
+    }
+
+    public IscsiTarget ecK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public IscsiTarget ecK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public void setEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        }
+    }
+
+    public boolean getEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K);
+    }
+
+    public IscsiTarget ecM(Integer ecM) {
+
+        this.ecM = ecM;
+        return this;
+    }
+
+    /**
+     * Get ecM
+     *
+     * @return ecM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcM() {
+        return ecM;
+    }
+
+    public void setEcM(Integer ecM) {
+        this.ecM = ecM;
+    }
+
+    public IscsiTarget ecM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public IscsiTarget ecM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public void setEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        }
+    }
+
+    public boolean getEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M);
+    }
+
+    public IscsiTarget encryptMethod(EncryptMethod encryptMethod) {
+
+        this.encryptMethod = encryptMethod;
+        return this;
+    }
+
+    /**
+     * Get encryptMethod
+     *
+     * @return encryptMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EncryptMethod getEncryptMethod() {
+        return encryptMethod;
+    }
+
+    public void setEncryptMethod(EncryptMethod encryptMethod) {
+        this.encryptMethod = encryptMethod;
+    }
+
+    public IscsiTarget encryptMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public IscsiTarget encryptMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public void setEncryptMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        }
+    }
+
+    public boolean getEncryptMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD);
     }
 
     public IscsiTarget entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -1598,6 +1970,100 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
         return this._isPresent_.contains(SERIALIZED_NAME_IQN_WHITELIST);
     }
 
+    public IscsiTarget iscsiConnections(List<NestedIscsiConnection> iscsiConnections) {
+
+        this.iscsiConnections = iscsiConnections;
+        return this;
+    }
+
+    public IscsiTarget addIscsiConnectionsItem(NestedIscsiConnection iscsiConnectionsItem) {
+        if (this.iscsiConnections == null) {
+            this.iscsiConnections = new ArrayList<NestedIscsiConnection>();
+        }
+        this.iscsiConnections.add(iscsiConnectionsItem);
+        return this;
+    }
+
+    /**
+     * Get iscsiConnections
+     *
+     * @return iscsiConnections
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedIscsiConnection> getIscsiConnections() {
+        return iscsiConnections;
+    }
+
+    public void setIscsiConnections(List<NestedIscsiConnection> iscsiConnections) {
+        this.iscsiConnections = iscsiConnections;
+    }
+
+    public IscsiTarget iscsiConnections_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        return this;
+    }
+
+    public IscsiTarget iscsiConnections_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        return this;
+    }
+
+    public void setIscsiConnections_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+        }
+    }
+
+    public boolean getIscsiConnections_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_CONNECTIONS);
+    }
+
+    public IscsiTarget iscsiLunsNum(Integer iscsiLunsNum) {
+
+        this.iscsiLunsNum = iscsiLunsNum;
+        return this;
+    }
+
+    /**
+     * Get iscsiLunsNum
+     *
+     * @return iscsiLunsNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getIscsiLunsNum() {
+        return iscsiLunsNum;
+    }
+
+    public void setIscsiLunsNum(Integer iscsiLunsNum) {
+        this.iscsiLunsNum = iscsiLunsNum;
+    }
+
+    public IscsiTarget iscsiLunsNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+        return this;
+    }
+
+    public IscsiTarget iscsiLunsNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+        return this;
+    }
+
+    public void setIscsiLunsNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+        }
+    }
+
+    public boolean getIscsiLunsNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUNS_NUM);
+    }
+
     public IscsiTarget labels(List<NestedLabel> labels) {
 
         this.labels = labels;
@@ -1786,6 +2252,49 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
         return this._isPresent_.contains(SERIALIZED_NAME_NAME);
     }
 
+    public IscsiTarget prioritized(Boolean prioritized) {
+
+        this.prioritized = prioritized;
+        return this;
+    }
+
+    /**
+     * Get prioritized
+     *
+     * @return prioritized
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getPrioritized() {
+        return prioritized;
+    }
+
+    public void setPrioritized(Boolean prioritized) {
+        this.prioritized = prioritized;
+    }
+
+    public IscsiTarget prioritized_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public IscsiTarget prioritized_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public void setPrioritized_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        }
+    }
+
+    public boolean getPrioritized_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIORITIZED);
+    }
+
     public IscsiTarget replicaNum(Integer replicaNum) {
 
         this.replicaNum = replicaNum;
@@ -1827,6 +2336,49 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
 
     public boolean getReplicaNum_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICA_NUM);
+    }
+
+    public IscsiTarget resiliencyType(ResiliencyType resiliencyType) {
+
+        this.resiliencyType = resiliencyType;
+        return this;
+    }
+
+    /**
+     * Get resiliencyType
+     *
+     * @return resiliencyType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyType() {
+        return resiliencyType;
+    }
+
+    public void setResiliencyType(ResiliencyType resiliencyType) {
+        this.resiliencyType = resiliencyType;
+    }
+
+    public IscsiTarget resiliencyType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public IscsiTarget resiliencyType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public void setResiliencyType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        }
+    }
+
+    public boolean getResiliencyType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
     }
 
     public IscsiTarget stripeNum(Integer stripeNum) {
@@ -1976,11 +2528,18 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
                 && Objects.equals(this.bpsWr, iscsiTarget.bpsWr)
                 && Objects.equals(this.bpsWrMax, iscsiTarget.bpsWrMax)
                 && Objects.equals(this.bpsWrMaxLength, iscsiTarget.bpsWrMaxLength)
+                && Objects.equals(this.businessHostGroups, iscsiTarget.businessHostGroups)
+                && Objects.equals(this.businessHosts, iscsiTarget.businessHosts)
                 && Objects.equals(this.chapEnabled, iscsiTarget.chapEnabled)
                 && Objects.equals(this.chapName, iscsiTarget.chapName)
                 && Objects.equals(this.chapSecret, iscsiTarget.chapSecret)
                 && Objects.equals(this.cluster, iscsiTarget.cluster)
+                && Objects.equals(this.configurationAdaptive, iscsiTarget.configurationAdaptive)
+                && Objects.equals(this.configurationMethod, iscsiTarget.configurationMethod)
                 && Objects.equals(this.description, iscsiTarget.description)
+                && Objects.equals(this.ecK, iscsiTarget.ecK)
+                && Objects.equals(this.ecM, iscsiTarget.ecM)
+                && Objects.equals(this.encryptMethod, iscsiTarget.encryptMethod)
                 && Objects.equals(this.entityAsyncStatus, iscsiTarget.entityAsyncStatus)
                 && Objects.equals(this.externalUse, iscsiTarget.externalUse)
                 && Objects.equals(this.id, iscsiTarget.id)
@@ -1999,11 +2558,15 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
                 && Objects.equals(this.ipWhitelist, iscsiTarget.ipWhitelist)
                 && Objects.equals(this.iqnName, iscsiTarget.iqnName)
                 && Objects.equals(this.iqnWhitelist, iscsiTarget.iqnWhitelist)
+                && Objects.equals(this.iscsiConnections, iscsiTarget.iscsiConnections)
+                && Objects.equals(this.iscsiLunsNum, iscsiTarget.iscsiLunsNum)
                 && Objects.equals(this.labels, iscsiTarget.labels)
                 && Objects.equals(this.localId, iscsiTarget.localId)
                 && Objects.equals(this.luns, iscsiTarget.luns)
                 && Objects.equals(this.name, iscsiTarget.name)
+                && Objects.equals(this.prioritized, iscsiTarget.prioritized)
                 && Objects.equals(this.replicaNum, iscsiTarget.replicaNum)
+                && Objects.equals(this.resiliencyType, iscsiTarget.resiliencyType)
                 && Objects.equals(this.stripeNum, iscsiTarget.stripeNum)
                 && Objects.equals(this.stripeSize, iscsiTarget.stripeSize)
                 && Objects.equals(this.thinProvision, iscsiTarget.thinProvision);
@@ -2030,11 +2593,18 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
                 bpsWr,
                 bpsWrMax,
                 bpsWrMaxLength,
+                businessHostGroups,
+                businessHosts,
                 chapEnabled,
                 chapName,
                 chapSecret,
                 cluster,
+                configurationAdaptive,
+                configurationMethod,
                 description,
+                ecK,
+                ecM,
+                encryptMethod,
                 entityAsyncStatus,
                 externalUse,
                 id,
@@ -2053,11 +2623,15 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
                 ipWhitelist,
                 iqnName,
                 iqnWhitelist,
+                iscsiConnections,
+                iscsiLunsNum,
                 labels,
                 localId,
                 luns,
                 name,
+                prioritized,
                 replicaNum,
+                resiliencyType,
                 stripeNum,
                 stripeSize,
                 thinProvision);
@@ -2083,11 +2657,24 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
         sb.append("    bpsWr: ").append(toIndentedString(bpsWr)).append("\n");
         sb.append("    bpsWrMax: ").append(toIndentedString(bpsWrMax)).append("\n");
         sb.append("    bpsWrMaxLength: ").append(toIndentedString(bpsWrMaxLength)).append("\n");
+        sb.append("    businessHostGroups: ")
+                .append(toIndentedString(businessHostGroups))
+                .append("\n");
+        sb.append("    businessHosts: ").append(toIndentedString(businessHosts)).append("\n");
         sb.append("    chapEnabled: ").append(toIndentedString(chapEnabled)).append("\n");
         sb.append("    chapName: ").append(toIndentedString(chapName)).append("\n");
         sb.append("    chapSecret: ").append(toIndentedString(chapSecret)).append("\n");
         sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
+        sb.append("    configurationAdaptive: ")
+                .append(toIndentedString(configurationAdaptive))
+                .append("\n");
+        sb.append("    configurationMethod: ")
+                .append(toIndentedString(configurationMethod))
+                .append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
+        sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
+        sb.append("    encryptMethod: ").append(toIndentedString(encryptMethod)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -2108,11 +2695,15 @@ public class IscsiTarget extends com.smartx.tower.ConditionalNullable.Conditiona
         sb.append("    ipWhitelist: ").append(toIndentedString(ipWhitelist)).append("\n");
         sb.append("    iqnName: ").append(toIndentedString(iqnName)).append("\n");
         sb.append("    iqnWhitelist: ").append(toIndentedString(iqnWhitelist)).append("\n");
+        sb.append("    iscsiConnections: ").append(toIndentedString(iscsiConnections)).append("\n");
+        sb.append("    iscsiLunsNum: ").append(toIndentedString(iscsiLunsNum)).append("\n");
         sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
         sb.append("    localId: ").append(toIndentedString(localId)).append("\n");
         sb.append("    luns: ").append(toIndentedString(luns)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    prioritized: ").append(toIndentedString(prioritized)).append("\n");
         sb.append("    replicaNum: ").append(toIndentedString(replicaNum)).append("\n");
+        sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
         sb.append("    stripeNum: ").append(toIndentedString(stripeNum)).append("\n");
         sb.append("    stripeSize: ").append(toIndentedString(stripeSize)).append("\n");
         sb.append("    thinProvision: ").append(toIndentedString(thinProvision)).append("\n");

@@ -12,19 +12,24 @@ import com.smartx.tower.model.Cluster;
 import com.smartx.tower.model.ClusterConnection;
 import com.smartx.tower.model.ClusterCreationParams;
 import com.smartx.tower.model.ClusterDeletionParams;
+import com.smartx.tower.model.ClusterDisablePinInPerformanceParams;
 import com.smartx.tower.model.ClusterEnableIscsiUpdationParams;
+import com.smartx.tower.model.ClusterEnablePinInPerformanceParams;
 import com.smartx.tower.model.ClusterHaUpdationParams;
 import com.smartx.tower.model.ClusterLicenseUpdationParams;
 import com.smartx.tower.model.ClusterNetworkSettingUpdationParams;
+import com.smartx.tower.model.ClusterPinInPerformanceInfo;
 import com.smartx.tower.model.ClusterStorageInfo;
 import com.smartx.tower.model.ClusterUpdationParams;
 import com.smartx.tower.model.ClusterVirtualizationUpdationParams;
+import com.smartx.tower.model.GetClusterPinInPerformanceInfoRequestBody;
 import com.smartx.tower.model.GetClusterStorageInfoRequestBody;
 import com.smartx.tower.model.GetClustersConnectionRequestBody;
 import com.smartx.tower.model.GetClustersRequestBody;
 import com.smartx.tower.model.GetMetaLeaderRequestBody;
 import com.smartx.tower.model.MetaLeader;
 import com.smartx.tower.model.WithTaskCluster;
+import com.smartx.tower.model.WithTaskClusterPinInPerformanceInfo;
 import com.smartx.tower.model.WithTaskClusterSettings;
 import com.smartx.tower.model.WithTaskDeleteCluster;
 import java.lang.reflect.Type;
@@ -383,6 +388,176 @@ public class ClusterApi {
         okhttp3.Call localVarCall =
                 deleteClusterValidateBeforeCall(clusterDeletionParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteCluster>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getClusterPinInPerformanceInfo
+     *
+     * @param getClusterPinInPerformanceInfoRequestBody (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call getClusterPinInPerformanceInfoCall(
+            GetClusterPinInPerformanceInfoRequestBody getClusterPinInPerformanceInfoRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = getClusterPinInPerformanceInfoRequestBody;
+
+        // create path and map variables
+        String localVarPath = "/get-cluster-pin-in-performance-info";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getClusterPinInPerformanceInfoValidateBeforeCall(
+            GetClusterPinInPerformanceInfoRequestBody getClusterPinInPerformanceInfoRequestBody,
+            final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'getClusterPinInPerformanceInfoRequestBody' is set
+        if (getClusterPinInPerformanceInfoRequestBody == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'getClusterPinInPerformanceInfoRequestBody'"
+                            + " when calling getClusterPinInPerformanceInfo(Async)");
+        }
+
+        okhttp3.Call localVarCall =
+                getClusterPinInPerformanceInfoCall(
+                        getClusterPinInPerformanceInfoRequestBody, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param getClusterPinInPerformanceInfoRequestBody (required)
+     * @return List&lt;ClusterPinInPerformanceInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<ClusterPinInPerformanceInfo> getClusterPinInPerformanceInfo(
+            GetClusterPinInPerformanceInfoRequestBody getClusterPinInPerformanceInfoRequestBody)
+            throws ApiException {
+        ApiResponse<List<ClusterPinInPerformanceInfo>> localVarResp =
+                getClusterPinInPerformanceInfoWithHttpInfo(
+                        getClusterPinInPerformanceInfoRequestBody);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param getClusterPinInPerformanceInfoRequestBody (required)
+     * @return ApiResponse&lt;List&lt;ClusterPinInPerformanceInfo&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<ClusterPinInPerformanceInfo>>
+            getClusterPinInPerformanceInfoWithHttpInfo(
+                    GetClusterPinInPerformanceInfoRequestBody
+                            getClusterPinInPerformanceInfoRequestBody)
+                    throws ApiException {
+        okhttp3.Call localVarCall =
+                getClusterPinInPerformanceInfoValidateBeforeCall(
+                        getClusterPinInPerformanceInfoRequestBody, null);
+        Type localVarReturnType = new TypeToken<List<ClusterPinInPerformanceInfo>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param getClusterPinInPerformanceInfoRequestBody (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call getClusterPinInPerformanceInfoAsync(
+            GetClusterPinInPerformanceInfoRequestBody getClusterPinInPerformanceInfoRequestBody,
+            final ApiCallback<List<ClusterPinInPerformanceInfo>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                getClusterPinInPerformanceInfoValidateBeforeCall(
+                        getClusterPinInPerformanceInfoRequestBody, _callback);
+        Type localVarReturnType = new TypeToken<List<ClusterPinInPerformanceInfo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1186,6 +1361,177 @@ public class ClusterApi {
         return localVarCall;
     }
     /**
+     * Build call for updateClusterDisablePinInPerformance
+     *
+     * @param clusterDisablePinInPerformanceParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateClusterDisablePinInPerformanceCall(
+            ClusterDisablePinInPerformanceParams clusterDisablePinInPerformanceParams,
+            final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = clusterDisablePinInPerformanceParams;
+
+        // create path and map variables
+        String localVarPath = "/disable-cluster-pin-in-performance";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateClusterDisablePinInPerformanceValidateBeforeCall(
+            ClusterDisablePinInPerformanceParams clusterDisablePinInPerformanceParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'clusterDisablePinInPerformanceParams' is set
+        if (clusterDisablePinInPerformanceParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'clusterDisablePinInPerformanceParams' when"
+                            + " calling updateClusterDisablePinInPerformance(Async)");
+        }
+
+        okhttp3.Call localVarCall =
+                updateClusterDisablePinInPerformanceCall(
+                        clusterDisablePinInPerformanceParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param clusterDisablePinInPerformanceParams (required)
+     * @return List&lt;WithTaskClusterPinInPerformanceInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<WithTaskClusterPinInPerformanceInfo> updateClusterDisablePinInPerformance(
+            ClusterDisablePinInPerformanceParams clusterDisablePinInPerformanceParams)
+            throws ApiException {
+        ApiResponse<List<WithTaskClusterPinInPerformanceInfo>> localVarResp =
+                updateClusterDisablePinInPerformanceWithHttpInfo(
+                        clusterDisablePinInPerformanceParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param clusterDisablePinInPerformanceParams (required)
+     * @return ApiResponse&lt;List&lt;WithTaskClusterPinInPerformanceInfo&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<WithTaskClusterPinInPerformanceInfo>>
+            updateClusterDisablePinInPerformanceWithHttpInfo(
+                    ClusterDisablePinInPerformanceParams clusterDisablePinInPerformanceParams)
+                    throws ApiException {
+        okhttp3.Call localVarCall =
+                updateClusterDisablePinInPerformanceValidateBeforeCall(
+                        clusterDisablePinInPerformanceParams, null);
+        Type localVarReturnType =
+                new TypeToken<List<WithTaskClusterPinInPerformanceInfo>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param clusterDisablePinInPerformanceParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateClusterDisablePinInPerformanceAsync(
+            ClusterDisablePinInPerformanceParams clusterDisablePinInPerformanceParams,
+            final ApiCallback<List<WithTaskClusterPinInPerformanceInfo>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                updateClusterDisablePinInPerformanceValidateBeforeCall(
+                        clusterDisablePinInPerformanceParams, _callback);
+        Type localVarReturnType =
+                new TypeToken<List<WithTaskClusterPinInPerformanceInfo>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for updateClusterEnableISCSISetting
      *
      * @param clusterEnableIscsiUpdationParams (required)
@@ -1346,6 +1692,177 @@ public class ClusterApi {
                 updateClusterEnableISCSISettingValidateBeforeCall(
                         clusterEnableIscsiUpdationParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskClusterSettings>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateClusterEnablePinInPerformance
+     *
+     * @param clusterEnablePinInPerformanceParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateClusterEnablePinInPerformanceCall(
+            ClusterEnablePinInPerformanceParams clusterEnablePinInPerformanceParams,
+            final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = clusterEnablePinInPerformanceParams;
+
+        // create path and map variables
+        String localVarPath = "/enable-cluster-pin-in-performance";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateClusterEnablePinInPerformanceValidateBeforeCall(
+            ClusterEnablePinInPerformanceParams clusterEnablePinInPerformanceParams,
+            final ApiCallback _callback)
+            throws ApiException {
+
+        // verify the required parameter 'clusterEnablePinInPerformanceParams' is set
+        if (clusterEnablePinInPerformanceParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'clusterEnablePinInPerformanceParams' when"
+                            + " calling updateClusterEnablePinInPerformance(Async)");
+        }
+
+        okhttp3.Call localVarCall =
+                updateClusterEnablePinInPerformanceCall(
+                        clusterEnablePinInPerformanceParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param clusterEnablePinInPerformanceParams (required)
+     * @return List&lt;WithTaskClusterPinInPerformanceInfo&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public List<WithTaskClusterPinInPerformanceInfo> updateClusterEnablePinInPerformance(
+            ClusterEnablePinInPerformanceParams clusterEnablePinInPerformanceParams)
+            throws ApiException {
+        ApiResponse<List<WithTaskClusterPinInPerformanceInfo>> localVarResp =
+                updateClusterEnablePinInPerformanceWithHttpInfo(
+                        clusterEnablePinInPerformanceParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param clusterEnablePinInPerformanceParams (required)
+     * @return ApiResponse&lt;List&lt;WithTaskClusterPinInPerformanceInfo&gt;&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<List<WithTaskClusterPinInPerformanceInfo>>
+            updateClusterEnablePinInPerformanceWithHttpInfo(
+                    ClusterEnablePinInPerformanceParams clusterEnablePinInPerformanceParams)
+                    throws ApiException {
+        okhttp3.Call localVarCall =
+                updateClusterEnablePinInPerformanceValidateBeforeCall(
+                        clusterEnablePinInPerformanceParams, null);
+        Type localVarReturnType =
+                new TypeToken<List<WithTaskClusterPinInPerformanceInfo>>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param clusterEnablePinInPerformanceParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call updateClusterEnablePinInPerformanceAsync(
+            ClusterEnablePinInPerformanceParams clusterEnablePinInPerformanceParams,
+            final ApiCallback<List<WithTaskClusterPinInPerformanceInfo>> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall =
+                updateClusterEnablePinInPerformanceValidateBeforeCall(
+                        clusterEnablePinInPerformanceParams, _callback);
+        Type localVarReturnType =
+                new TypeToken<List<WithTaskClusterPinInPerformanceInfo>>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

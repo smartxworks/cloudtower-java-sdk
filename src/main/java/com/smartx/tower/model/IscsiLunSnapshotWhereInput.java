@@ -34,6 +34,86 @@ public class IscsiLunSnapshotWhereInput
     @SerializedName(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT)
     private ConsistencyGroupSnapshotWhereInput consistencyGroupSnapshot;
 
+    public static final String SERIALIZED_NAME_EC_K = "ec_k";
+
+    @SerializedName(SERIALIZED_NAME_EC_K)
+    private Integer ecK;
+
+    public static final String SERIALIZED_NAME_EC_K_GT = "ec_k_gt";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_GT)
+    private Integer ecKGt;
+
+    public static final String SERIALIZED_NAME_EC_K_GTE = "ec_k_gte";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_GTE)
+    private Integer ecKGte;
+
+    public static final String SERIALIZED_NAME_EC_K_IN = "ec_k_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_IN)
+    private List<Integer> ecKIn = null;
+
+    public static final String SERIALIZED_NAME_EC_K_LT = "ec_k_lt";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_LT)
+    private Integer ecKLt;
+
+    public static final String SERIALIZED_NAME_EC_K_LTE = "ec_k_lte";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_LTE)
+    private Integer ecKLte;
+
+    public static final String SERIALIZED_NAME_EC_K_NOT = "ec_k_not";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_NOT)
+    private Integer ecKNot;
+
+    public static final String SERIALIZED_NAME_EC_K_NOT_IN = "ec_k_not_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_NOT_IN)
+    private List<Integer> ecKNotIn = null;
+
+    public static final String SERIALIZED_NAME_EC_M = "ec_m";
+
+    @SerializedName(SERIALIZED_NAME_EC_M)
+    private Integer ecM;
+
+    public static final String SERIALIZED_NAME_EC_M_GT = "ec_m_gt";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_GT)
+    private Integer ecMGt;
+
+    public static final String SERIALIZED_NAME_EC_M_GTE = "ec_m_gte";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_GTE)
+    private Integer ecMGte;
+
+    public static final String SERIALIZED_NAME_EC_M_IN = "ec_m_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_IN)
+    private List<Integer> ecMIn = null;
+
+    public static final String SERIALIZED_NAME_EC_M_LT = "ec_m_lt";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_LT)
+    private Integer ecMLt;
+
+    public static final String SERIALIZED_NAME_EC_M_LTE = "ec_m_lte";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_LTE)
+    private Integer ecMLte;
+
+    public static final String SERIALIZED_NAME_EC_M_NOT = "ec_m_not";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_NOT)
+    private Integer ecMNot;
+
+    public static final String SERIALIZED_NAME_EC_M_NOT_IN = "ec_m_not_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_NOT_IN)
+    private List<Integer> ecMNotIn = null;
+
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -331,6 +411,31 @@ public class IscsiLunSnapshotWhereInput
     @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
     private String nameStartsWith;
 
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
+    private ResiliencyType resiliencyType;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE_IN = "resiliency_type_in";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE_IN)
+    private List<ResiliencyType> resiliencyTypeIn = null;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE_NOT = "resiliency_type_not";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE_NOT)
+    private ResiliencyType resiliencyTypeNot;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN = "resiliency_type_not_in";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN)
+    private List<ResiliencyType> resiliencyTypeNotIn = null;
+
+    public static final String SERIALIZED_NAME_SNAPSHOT_GROUP = "snapshot_group";
+
+    @SerializedName(SERIALIZED_NAME_SNAPSHOT_GROUP)
+    private SnapshotGroupWhereInput snapshotGroup;
+
     public static final String SERIALIZED_NAME_UNIQUE_SIZE = "unique_size";
 
     @SerializedName(SERIALIZED_NAME_UNIQUE_SIZE)
@@ -569,6 +674,726 @@ public class IscsiLunSnapshotWhereInput
 
     public boolean getConsistencyGroupSnapshot_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CONSISTENCY_GROUP_SNAPSHOT);
+    }
+
+    public IscsiLunSnapshotWhereInput ecK(Integer ecK) {
+
+        this.ecK = ecK;
+        return this;
+    }
+
+    /**
+     * Get ecK
+     *
+     * @return ecK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcK() {
+        return ecK;
+    }
+
+    public void setEcK(Integer ecK) {
+        this.ecK = ecK;
+    }
+
+    public IscsiLunSnapshotWhereInput ecK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public void setEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        }
+    }
+
+    public boolean getEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K);
+    }
+
+    public IscsiLunSnapshotWhereInput ecKGt(Integer ecKGt) {
+
+        this.ecKGt = ecKGt;
+        return this;
+    }
+
+    /**
+     * Get ecKGt
+     *
+     * @return ecKGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKGt() {
+        return ecKGt;
+    }
+
+    public void setEcKGt(Integer ecKGt) {
+        this.ecKGt = ecKGt;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_GT);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_GT);
+        return this;
+    }
+
+    public void setEcKGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_GT);
+        }
+    }
+
+    public boolean getEcKGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_GT);
+    }
+
+    public IscsiLunSnapshotWhereInput ecKGte(Integer ecKGte) {
+
+        this.ecKGte = ecKGte;
+        return this;
+    }
+
+    /**
+     * Get ecKGte
+     *
+     * @return ecKGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKGte() {
+        return ecKGte;
+    }
+
+    public void setEcKGte(Integer ecKGte) {
+        this.ecKGte = ecKGte;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_GTE);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_GTE);
+        return this;
+    }
+
+    public void setEcKGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_GTE);
+        }
+    }
+
+    public boolean getEcKGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_GTE);
+    }
+
+    public IscsiLunSnapshotWhereInput ecKIn(List<Integer> ecKIn) {
+
+        this.ecKIn = ecKIn;
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput addEcKInItem(Integer ecKInItem) {
+        if (this.ecKIn == null) {
+            this.ecKIn = new ArrayList<Integer>();
+        }
+        this.ecKIn.add(ecKInItem);
+        return this;
+    }
+
+    /**
+     * Get ecKIn
+     *
+     * @return ecKIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcKIn() {
+        return ecKIn;
+    }
+
+    public void setEcKIn(List<Integer> ecKIn) {
+        this.ecKIn = ecKIn;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_IN);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_IN);
+        return this;
+    }
+
+    public void setEcKIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_IN);
+        }
+    }
+
+    public boolean getEcKIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_IN);
+    }
+
+    public IscsiLunSnapshotWhereInput ecKLt(Integer ecKLt) {
+
+        this.ecKLt = ecKLt;
+        return this;
+    }
+
+    /**
+     * Get ecKLt
+     *
+     * @return ecKLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKLt() {
+        return ecKLt;
+    }
+
+    public void setEcKLt(Integer ecKLt) {
+        this.ecKLt = ecKLt;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_LT);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_LT);
+        return this;
+    }
+
+    public void setEcKLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_LT);
+        }
+    }
+
+    public boolean getEcKLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_LT);
+    }
+
+    public IscsiLunSnapshotWhereInput ecKLte(Integer ecKLte) {
+
+        this.ecKLte = ecKLte;
+        return this;
+    }
+
+    /**
+     * Get ecKLte
+     *
+     * @return ecKLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKLte() {
+        return ecKLte;
+    }
+
+    public void setEcKLte(Integer ecKLte) {
+        this.ecKLte = ecKLte;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_LTE);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_LTE);
+        return this;
+    }
+
+    public void setEcKLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_LTE);
+        }
+    }
+
+    public boolean getEcKLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_LTE);
+    }
+
+    public IscsiLunSnapshotWhereInput ecKNot(Integer ecKNot) {
+
+        this.ecKNot = ecKNot;
+        return this;
+    }
+
+    /**
+     * Get ecKNot
+     *
+     * @return ecKNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKNot() {
+        return ecKNot;
+    }
+
+    public void setEcKNot(Integer ecKNot) {
+        this.ecKNot = ecKNot;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT);
+        return this;
+    }
+
+    public void setEcKNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT);
+        }
+    }
+
+    public boolean getEcKNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_NOT);
+    }
+
+    public IscsiLunSnapshotWhereInput ecKNotIn(List<Integer> ecKNotIn) {
+
+        this.ecKNotIn = ecKNotIn;
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput addEcKNotInItem(Integer ecKNotInItem) {
+        if (this.ecKNotIn == null) {
+            this.ecKNotIn = new ArrayList<Integer>();
+        }
+        this.ecKNotIn.add(ecKNotInItem);
+        return this;
+    }
+
+    /**
+     * Get ecKNotIn
+     *
+     * @return ecKNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcKNotIn() {
+        return ecKNotIn;
+    }
+
+    public void setEcKNotIn(List<Integer> ecKNotIn) {
+        this.ecKNotIn = ecKNotIn;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT_IN);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecKNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT_IN);
+        return this;
+    }
+
+    public void setEcKNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT_IN);
+        }
+    }
+
+    public boolean getEcKNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_NOT_IN);
+    }
+
+    public IscsiLunSnapshotWhereInput ecM(Integer ecM) {
+
+        this.ecM = ecM;
+        return this;
+    }
+
+    /**
+     * Get ecM
+     *
+     * @return ecM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcM() {
+        return ecM;
+    }
+
+    public void setEcM(Integer ecM) {
+        this.ecM = ecM;
+    }
+
+    public IscsiLunSnapshotWhereInput ecM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public void setEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        }
+    }
+
+    public boolean getEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M);
+    }
+
+    public IscsiLunSnapshotWhereInput ecMGt(Integer ecMGt) {
+
+        this.ecMGt = ecMGt;
+        return this;
+    }
+
+    /**
+     * Get ecMGt
+     *
+     * @return ecMGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMGt() {
+        return ecMGt;
+    }
+
+    public void setEcMGt(Integer ecMGt) {
+        this.ecMGt = ecMGt;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_GT);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_GT);
+        return this;
+    }
+
+    public void setEcMGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_GT);
+        }
+    }
+
+    public boolean getEcMGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_GT);
+    }
+
+    public IscsiLunSnapshotWhereInput ecMGte(Integer ecMGte) {
+
+        this.ecMGte = ecMGte;
+        return this;
+    }
+
+    /**
+     * Get ecMGte
+     *
+     * @return ecMGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMGte() {
+        return ecMGte;
+    }
+
+    public void setEcMGte(Integer ecMGte) {
+        this.ecMGte = ecMGte;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_GTE);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_GTE);
+        return this;
+    }
+
+    public void setEcMGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_GTE);
+        }
+    }
+
+    public boolean getEcMGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_GTE);
+    }
+
+    public IscsiLunSnapshotWhereInput ecMIn(List<Integer> ecMIn) {
+
+        this.ecMIn = ecMIn;
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput addEcMInItem(Integer ecMInItem) {
+        if (this.ecMIn == null) {
+            this.ecMIn = new ArrayList<Integer>();
+        }
+        this.ecMIn.add(ecMInItem);
+        return this;
+    }
+
+    /**
+     * Get ecMIn
+     *
+     * @return ecMIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcMIn() {
+        return ecMIn;
+    }
+
+    public void setEcMIn(List<Integer> ecMIn) {
+        this.ecMIn = ecMIn;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_IN);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_IN);
+        return this;
+    }
+
+    public void setEcMIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_IN);
+        }
+    }
+
+    public boolean getEcMIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_IN);
+    }
+
+    public IscsiLunSnapshotWhereInput ecMLt(Integer ecMLt) {
+
+        this.ecMLt = ecMLt;
+        return this;
+    }
+
+    /**
+     * Get ecMLt
+     *
+     * @return ecMLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMLt() {
+        return ecMLt;
+    }
+
+    public void setEcMLt(Integer ecMLt) {
+        this.ecMLt = ecMLt;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_LT);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_LT);
+        return this;
+    }
+
+    public void setEcMLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_LT);
+        }
+    }
+
+    public boolean getEcMLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_LT);
+    }
+
+    public IscsiLunSnapshotWhereInput ecMLte(Integer ecMLte) {
+
+        this.ecMLte = ecMLte;
+        return this;
+    }
+
+    /**
+     * Get ecMLte
+     *
+     * @return ecMLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMLte() {
+        return ecMLte;
+    }
+
+    public void setEcMLte(Integer ecMLte) {
+        this.ecMLte = ecMLte;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_LTE);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_LTE);
+        return this;
+    }
+
+    public void setEcMLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_LTE);
+        }
+    }
+
+    public boolean getEcMLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_LTE);
+    }
+
+    public IscsiLunSnapshotWhereInput ecMNot(Integer ecMNot) {
+
+        this.ecMNot = ecMNot;
+        return this;
+    }
+
+    /**
+     * Get ecMNot
+     *
+     * @return ecMNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMNot() {
+        return ecMNot;
+    }
+
+    public void setEcMNot(Integer ecMNot) {
+        this.ecMNot = ecMNot;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT);
+        return this;
+    }
+
+    public void setEcMNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT);
+        }
+    }
+
+    public boolean getEcMNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_NOT);
+    }
+
+    public IscsiLunSnapshotWhereInput ecMNotIn(List<Integer> ecMNotIn) {
+
+        this.ecMNotIn = ecMNotIn;
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput addEcMNotInItem(Integer ecMNotInItem) {
+        if (this.ecMNotIn == null) {
+            this.ecMNotIn = new ArrayList<Integer>();
+        }
+        this.ecMNotIn.add(ecMNotInItem);
+        return this;
+    }
+
+    /**
+     * Get ecMNotIn
+     *
+     * @return ecMNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcMNotIn() {
+        return ecMNotIn;
+    }
+
+    public void setEcMNotIn(List<Integer> ecMNotIn) {
+        this.ecMNotIn = ecMNotIn;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT_IN);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput ecMNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT_IN);
+        return this;
+    }
+
+    public void setEcMNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT_IN);
+        }
+    }
+
+    public boolean getEcMNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_NOT_IN);
     }
 
     public IscsiLunSnapshotWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -3192,6 +4017,239 @@ public class IscsiLunSnapshotWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_NAME_STARTS_WITH);
     }
 
+    public IscsiLunSnapshotWhereInput resiliencyType(ResiliencyType resiliencyType) {
+
+        this.resiliencyType = resiliencyType;
+        return this;
+    }
+
+    /**
+     * Get resiliencyType
+     *
+     * @return resiliencyType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyType() {
+        return resiliencyType;
+    }
+
+    public void setResiliencyType(ResiliencyType resiliencyType) {
+        this.resiliencyType = resiliencyType;
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public void setResiliencyType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        }
+    }
+
+    public boolean getResiliencyType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyTypeIn(List<ResiliencyType> resiliencyTypeIn) {
+
+        this.resiliencyTypeIn = resiliencyTypeIn;
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput addResiliencyTypeInItem(ResiliencyType resiliencyTypeInItem) {
+        if (this.resiliencyTypeIn == null) {
+            this.resiliencyTypeIn = new ArrayList<ResiliencyType>();
+        }
+        this.resiliencyTypeIn.add(resiliencyTypeInItem);
+        return this;
+    }
+
+    /**
+     * Get resiliencyTypeIn
+     *
+     * @return resiliencyTypeIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ResiliencyType> getResiliencyTypeIn() {
+        return resiliencyTypeIn;
+    }
+
+    public void setResiliencyTypeIn(List<ResiliencyType> resiliencyTypeIn) {
+        this.resiliencyTypeIn = resiliencyTypeIn;
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyTypeIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyTypeIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        return this;
+    }
+
+    public void setResiliencyTypeIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        }
+    }
+
+    public boolean getResiliencyTypeIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyTypeNot(ResiliencyType resiliencyTypeNot) {
+
+        this.resiliencyTypeNot = resiliencyTypeNot;
+        return this;
+    }
+
+    /**
+     * Get resiliencyTypeNot
+     *
+     * @return resiliencyTypeNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyTypeNot() {
+        return resiliencyTypeNot;
+    }
+
+    public void setResiliencyTypeNot(ResiliencyType resiliencyTypeNot) {
+        this.resiliencyTypeNot = resiliencyTypeNot;
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyTypeNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyTypeNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        return this;
+    }
+
+    public void setResiliencyTypeNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        }
+    }
+
+    public boolean getResiliencyTypeNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyTypeNotIn(
+            List<ResiliencyType> resiliencyTypeNotIn) {
+
+        this.resiliencyTypeNotIn = resiliencyTypeNotIn;
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput addResiliencyTypeNotInItem(
+            ResiliencyType resiliencyTypeNotInItem) {
+        if (this.resiliencyTypeNotIn == null) {
+            this.resiliencyTypeNotIn = new ArrayList<ResiliencyType>();
+        }
+        this.resiliencyTypeNotIn.add(resiliencyTypeNotInItem);
+        return this;
+    }
+
+    /**
+     * Get resiliencyTypeNotIn
+     *
+     * @return resiliencyTypeNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ResiliencyType> getResiliencyTypeNotIn() {
+        return resiliencyTypeNotIn;
+    }
+
+    public void setResiliencyTypeNotIn(List<ResiliencyType> resiliencyTypeNotIn) {
+        this.resiliencyTypeNotIn = resiliencyTypeNotIn;
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyTypeNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput resiliencyTypeNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        return this;
+    }
+
+    public void setResiliencyTypeNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        }
+    }
+
+    public boolean getResiliencyTypeNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+    }
+
+    public IscsiLunSnapshotWhereInput snapshotGroup(SnapshotGroupWhereInput snapshotGroup) {
+
+        this.snapshotGroup = snapshotGroup;
+        return this;
+    }
+
+    /**
+     * Get snapshotGroup
+     *
+     * @return snapshotGroup
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SnapshotGroupWhereInput getSnapshotGroup() {
+        return snapshotGroup;
+    }
+
+    public void setSnapshotGroup(SnapshotGroupWhereInput snapshotGroup) {
+        this.snapshotGroup = snapshotGroup;
+    }
+
+    public IscsiLunSnapshotWhereInput snapshotGroup_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public IscsiLunSnapshotWhereInput snapshotGroup_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        return this;
+    }
+
+    public void setSnapshotGroup_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SNAPSHOT_GROUP);
+        }
+    }
+
+    public boolean getSnapshotGroup_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_GROUP);
+    }
+
     public IscsiLunSnapshotWhereInput uniqueSize(Long uniqueSize) {
 
         this.uniqueSize = uniqueSize;
@@ -3567,6 +4625,22 @@ public class IscsiLunSnapshotWhereInput
                 && Objects.equals(
                         this.consistencyGroupSnapshot,
                         iscsiLunSnapshotWhereInput.consistencyGroupSnapshot)
+                && Objects.equals(this.ecK, iscsiLunSnapshotWhereInput.ecK)
+                && Objects.equals(this.ecKGt, iscsiLunSnapshotWhereInput.ecKGt)
+                && Objects.equals(this.ecKGte, iscsiLunSnapshotWhereInput.ecKGte)
+                && Objects.equals(this.ecKIn, iscsiLunSnapshotWhereInput.ecKIn)
+                && Objects.equals(this.ecKLt, iscsiLunSnapshotWhereInput.ecKLt)
+                && Objects.equals(this.ecKLte, iscsiLunSnapshotWhereInput.ecKLte)
+                && Objects.equals(this.ecKNot, iscsiLunSnapshotWhereInput.ecKNot)
+                && Objects.equals(this.ecKNotIn, iscsiLunSnapshotWhereInput.ecKNotIn)
+                && Objects.equals(this.ecM, iscsiLunSnapshotWhereInput.ecM)
+                && Objects.equals(this.ecMGt, iscsiLunSnapshotWhereInput.ecMGt)
+                && Objects.equals(this.ecMGte, iscsiLunSnapshotWhereInput.ecMGte)
+                && Objects.equals(this.ecMIn, iscsiLunSnapshotWhereInput.ecMIn)
+                && Objects.equals(this.ecMLt, iscsiLunSnapshotWhereInput.ecMLt)
+                && Objects.equals(this.ecMLte, iscsiLunSnapshotWhereInput.ecMLte)
+                && Objects.equals(this.ecMNot, iscsiLunSnapshotWhereInput.ecMNot)
+                && Objects.equals(this.ecMNotIn, iscsiLunSnapshotWhereInput.ecMNotIn)
                 && Objects.equals(
                         this.entityAsyncStatus, iscsiLunSnapshotWhereInput.entityAsyncStatus)
                 && Objects.equals(
@@ -3643,6 +4717,14 @@ public class IscsiLunSnapshotWhereInput
                 && Objects.equals(
                         this.nameNotStartsWith, iscsiLunSnapshotWhereInput.nameNotStartsWith)
                 && Objects.equals(this.nameStartsWith, iscsiLunSnapshotWhereInput.nameStartsWith)
+                && Objects.equals(this.resiliencyType, iscsiLunSnapshotWhereInput.resiliencyType)
+                && Objects.equals(
+                        this.resiliencyTypeIn, iscsiLunSnapshotWhereInput.resiliencyTypeIn)
+                && Objects.equals(
+                        this.resiliencyTypeNot, iscsiLunSnapshotWhereInput.resiliencyTypeNot)
+                && Objects.equals(
+                        this.resiliencyTypeNotIn, iscsiLunSnapshotWhereInput.resiliencyTypeNotIn)
+                && Objects.equals(this.snapshotGroup, iscsiLunSnapshotWhereInput.snapshotGroup)
                 && Objects.equals(this.uniqueSize, iscsiLunSnapshotWhereInput.uniqueSize)
                 && Objects.equals(this.uniqueSizeGt, iscsiLunSnapshotWhereInput.uniqueSizeGt)
                 && Objects.equals(this.uniqueSizeGte, iscsiLunSnapshotWhereInput.uniqueSizeGte)
@@ -3669,6 +4751,22 @@ public class IscsiLunSnapshotWhereInput
                 NOT,
                 OR,
                 consistencyGroupSnapshot,
+                ecK,
+                ecKGt,
+                ecKGte,
+                ecKIn,
+                ecKLt,
+                ecKLte,
+                ecKNot,
+                ecKNotIn,
+                ecM,
+                ecMGt,
+                ecMGte,
+                ecMIn,
+                ecMLt,
+                ecMLte,
+                ecMNot,
+                ecMNotIn,
                 entityAsyncStatus,
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
@@ -3728,6 +4826,11 @@ public class IscsiLunSnapshotWhereInput
                 nameNotIn,
                 nameNotStartsWith,
                 nameStartsWith,
+                resiliencyType,
+                resiliencyTypeIn,
+                resiliencyTypeNot,
+                resiliencyTypeNotIn,
+                snapshotGroup,
                 uniqueSize,
                 uniqueSizeGt,
                 uniqueSizeGte,
@@ -3755,6 +4858,22 @@ public class IscsiLunSnapshotWhereInput
         sb.append("    consistencyGroupSnapshot: ")
                 .append(toIndentedString(consistencyGroupSnapshot))
                 .append("\n");
+        sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
+        sb.append("    ecKGt: ").append(toIndentedString(ecKGt)).append("\n");
+        sb.append("    ecKGte: ").append(toIndentedString(ecKGte)).append("\n");
+        sb.append("    ecKIn: ").append(toIndentedString(ecKIn)).append("\n");
+        sb.append("    ecKLt: ").append(toIndentedString(ecKLt)).append("\n");
+        sb.append("    ecKLte: ").append(toIndentedString(ecKLte)).append("\n");
+        sb.append("    ecKNot: ").append(toIndentedString(ecKNot)).append("\n");
+        sb.append("    ecKNotIn: ").append(toIndentedString(ecKNotIn)).append("\n");
+        sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
+        sb.append("    ecMGt: ").append(toIndentedString(ecMGt)).append("\n");
+        sb.append("    ecMGte: ").append(toIndentedString(ecMGte)).append("\n");
+        sb.append("    ecMIn: ").append(toIndentedString(ecMIn)).append("\n");
+        sb.append("    ecMLt: ").append(toIndentedString(ecMLt)).append("\n");
+        sb.append("    ecMLte: ").append(toIndentedString(ecMLte)).append("\n");
+        sb.append("    ecMNot: ").append(toIndentedString(ecMNot)).append("\n");
+        sb.append("    ecMNotIn: ").append(toIndentedString(ecMNotIn)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -3840,6 +4959,15 @@ public class IscsiLunSnapshotWhereInput
                 .append(toIndentedString(nameNotStartsWith))
                 .append("\n");
         sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
+        sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
+        sb.append("    resiliencyTypeIn: ").append(toIndentedString(resiliencyTypeIn)).append("\n");
+        sb.append("    resiliencyTypeNot: ")
+                .append(toIndentedString(resiliencyTypeNot))
+                .append("\n");
+        sb.append("    resiliencyTypeNotIn: ")
+                .append(toIndentedString(resiliencyTypeNotIn))
+                .append("\n");
+        sb.append("    snapshotGroup: ").append(toIndentedString(snapshotGroup)).append("\n");
         sb.append("    uniqueSize: ").append(toIndentedString(uniqueSize)).append("\n");
         sb.append("    uniqueSizeGt: ").append(toIndentedString(uniqueSizeGt)).append("\n");
         sb.append("    uniqueSizeGte: ").append(toIndentedString(uniqueSizeGte)).append("\n");

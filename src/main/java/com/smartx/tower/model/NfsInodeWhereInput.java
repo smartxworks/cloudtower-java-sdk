@@ -68,6 +68,154 @@ public class NfsInodeWhereInput
     @SerializedName(SERIALIZED_NAME_ASSIGNED_SIZE_NOT_IN)
     private List<Long> assignedSizeNotIn = null;
 
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE =
+            "downgraded_prioritized_space";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE)
+    private Long downgradedPrioritizedSpace;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT =
+            "downgraded_prioritized_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT)
+    private Long downgradedPrioritizedSpaceGt;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE =
+            "downgraded_prioritized_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE)
+    private Long downgradedPrioritizedSpaceGte;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN =
+            "downgraded_prioritized_space_in";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN)
+    private List<Long> downgradedPrioritizedSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT =
+            "downgraded_prioritized_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT)
+    private Long downgradedPrioritizedSpaceLt;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE =
+            "downgraded_prioritized_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE)
+    private Long downgradedPrioritizedSpaceLte;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT =
+            "downgraded_prioritized_space_not";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT)
+    private Long downgradedPrioritizedSpaceNot;
+
+    public static final String SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN =
+            "downgraded_prioritized_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN)
+    private List<Long> downgradedPrioritizedSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_EC_K = "ec_k";
+
+    @SerializedName(SERIALIZED_NAME_EC_K)
+    private Integer ecK;
+
+    public static final String SERIALIZED_NAME_EC_K_GT = "ec_k_gt";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_GT)
+    private Integer ecKGt;
+
+    public static final String SERIALIZED_NAME_EC_K_GTE = "ec_k_gte";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_GTE)
+    private Integer ecKGte;
+
+    public static final String SERIALIZED_NAME_EC_K_IN = "ec_k_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_IN)
+    private List<Integer> ecKIn = null;
+
+    public static final String SERIALIZED_NAME_EC_K_LT = "ec_k_lt";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_LT)
+    private Integer ecKLt;
+
+    public static final String SERIALIZED_NAME_EC_K_LTE = "ec_k_lte";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_LTE)
+    private Integer ecKLte;
+
+    public static final String SERIALIZED_NAME_EC_K_NOT = "ec_k_not";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_NOT)
+    private Integer ecKNot;
+
+    public static final String SERIALIZED_NAME_EC_K_NOT_IN = "ec_k_not_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_K_NOT_IN)
+    private List<Integer> ecKNotIn = null;
+
+    public static final String SERIALIZED_NAME_EC_M = "ec_m";
+
+    @SerializedName(SERIALIZED_NAME_EC_M)
+    private Integer ecM;
+
+    public static final String SERIALIZED_NAME_EC_M_GT = "ec_m_gt";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_GT)
+    private Integer ecMGt;
+
+    public static final String SERIALIZED_NAME_EC_M_GTE = "ec_m_gte";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_GTE)
+    private Integer ecMGte;
+
+    public static final String SERIALIZED_NAME_EC_M_IN = "ec_m_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_IN)
+    private List<Integer> ecMIn = null;
+
+    public static final String SERIALIZED_NAME_EC_M_LT = "ec_m_lt";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_LT)
+    private Integer ecMLt;
+
+    public static final String SERIALIZED_NAME_EC_M_LTE = "ec_m_lte";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_LTE)
+    private Integer ecMLte;
+
+    public static final String SERIALIZED_NAME_EC_M_NOT = "ec_m_not";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_NOT)
+    private Integer ecMNot;
+
+    public static final String SERIALIZED_NAME_EC_M_NOT_IN = "ec_m_not_in";
+
+    @SerializedName(SERIALIZED_NAME_EC_M_NOT_IN)
+    private List<Integer> ecMNotIn = null;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD = "encrypt_method";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD)
+    private EncryptMethod encryptMethod;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD_IN = "encrypt_method_in";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD_IN)
+    private List<EncryptMethod> encryptMethodIn = null;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD_NOT = "encrypt_method_not";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD_NOT)
+    private EncryptMethod encryptMethodNot;
+
+    public static final String SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN = "encrypt_method_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN)
+    private List<EncryptMethod> encryptMethodNotIn = null;
+
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
@@ -440,6 +588,36 @@ public class NfsInodeWhereInput
 
     @SerializedName(SERIALIZED_NAME_PARENT_ID_STARTS_WITH)
     private String parentIdStartsWith;
+
+    public static final String SERIALIZED_NAME_PRIORITIZED = "prioritized";
+
+    @SerializedName(SERIALIZED_NAME_PRIORITIZED)
+    private Boolean prioritized;
+
+    public static final String SERIALIZED_NAME_PRIORITIZED_NOT = "prioritized_not";
+
+    @SerializedName(SERIALIZED_NAME_PRIORITIZED_NOT)
+    private Boolean prioritizedNot;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
+    private ResiliencyType resiliencyType;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE_IN = "resiliency_type_in";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE_IN)
+    private List<ResiliencyType> resiliencyTypeIn = null;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE_NOT = "resiliency_type_not";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE_NOT)
+    private ResiliencyType resiliencyTypeNot;
+
+    public static final String SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN = "resiliency_type_not_in";
+
+    @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN)
+    private List<ResiliencyType> resiliencyTypeNotIn = null;
 
     public static final String SERIALIZED_NAME_SHARED_SIZE = "shared_size";
 
@@ -1115,6 +1293,1278 @@ public class NfsInodeWhereInput
 
     public boolean getAssignedSizeNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ASSIGNED_SIZE_NOT_IN);
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpace
+     *
+     * @return downgradedPrioritizedSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpace() {
+        return downgradedPrioritizedSpace;
+    }
+
+    public void setDowngradedPrioritizedSpace(Long downgradedPrioritizedSpace) {
+        this.downgradedPrioritizedSpace = downgradedPrioritizedSpace;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE);
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceGt(Long downgradedPrioritizedSpaceGt) {
+
+        this.downgradedPrioritizedSpaceGt = downgradedPrioritizedSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceGt
+     *
+     * @return downgradedPrioritizedSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceGt() {
+        return downgradedPrioritizedSpaceGt;
+    }
+
+    public void setDowngradedPrioritizedSpaceGt(Long downgradedPrioritizedSpaceGt) {
+        this.downgradedPrioritizedSpaceGt = downgradedPrioritizedSpaceGt;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GT);
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceGte(Long downgradedPrioritizedSpaceGte) {
+
+        this.downgradedPrioritizedSpaceGte = downgradedPrioritizedSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceGte
+     *
+     * @return downgradedPrioritizedSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceGte() {
+        return downgradedPrioritizedSpaceGte;
+    }
+
+    public void setDowngradedPrioritizedSpaceGte(Long downgradedPrioritizedSpaceGte) {
+        this.downgradedPrioritizedSpaceGte = downgradedPrioritizedSpaceGte;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_GTE);
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceIn(
+            List<Long> downgradedPrioritizedSpaceIn) {
+
+        this.downgradedPrioritizedSpaceIn = downgradedPrioritizedSpaceIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addDowngradedPrioritizedSpaceInItem(
+            Long downgradedPrioritizedSpaceInItem) {
+        if (this.downgradedPrioritizedSpaceIn == null) {
+            this.downgradedPrioritizedSpaceIn = new ArrayList<Long>();
+        }
+        this.downgradedPrioritizedSpaceIn.add(downgradedPrioritizedSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceIn
+     *
+     * @return downgradedPrioritizedSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDowngradedPrioritizedSpaceIn() {
+        return downgradedPrioritizedSpaceIn;
+    }
+
+    public void setDowngradedPrioritizedSpaceIn(List<Long> downgradedPrioritizedSpaceIn) {
+        this.downgradedPrioritizedSpaceIn = downgradedPrioritizedSpaceIn;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_IN);
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceLt(Long downgradedPrioritizedSpaceLt) {
+
+        this.downgradedPrioritizedSpaceLt = downgradedPrioritizedSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceLt
+     *
+     * @return downgradedPrioritizedSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceLt() {
+        return downgradedPrioritizedSpaceLt;
+    }
+
+    public void setDowngradedPrioritizedSpaceLt(Long downgradedPrioritizedSpaceLt) {
+        this.downgradedPrioritizedSpaceLt = downgradedPrioritizedSpaceLt;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LT);
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceLte(Long downgradedPrioritizedSpaceLte) {
+
+        this.downgradedPrioritizedSpaceLte = downgradedPrioritizedSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceLte
+     *
+     * @return downgradedPrioritizedSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceLte() {
+        return downgradedPrioritizedSpaceLte;
+    }
+
+    public void setDowngradedPrioritizedSpaceLte(Long downgradedPrioritizedSpaceLte) {
+        this.downgradedPrioritizedSpaceLte = downgradedPrioritizedSpaceLte;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_LTE);
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceNot(Long downgradedPrioritizedSpaceNot) {
+
+        this.downgradedPrioritizedSpaceNot = downgradedPrioritizedSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceNot
+     *
+     * @return downgradedPrioritizedSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDowngradedPrioritizedSpaceNot() {
+        return downgradedPrioritizedSpaceNot;
+    }
+
+    public void setDowngradedPrioritizedSpaceNot(Long downgradedPrioritizedSpaceNot) {
+        this.downgradedPrioritizedSpaceNot = downgradedPrioritizedSpaceNot;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT);
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceNotIn(
+            List<Long> downgradedPrioritizedSpaceNotIn) {
+
+        this.downgradedPrioritizedSpaceNotIn = downgradedPrioritizedSpaceNotIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addDowngradedPrioritizedSpaceNotInItem(
+            Long downgradedPrioritizedSpaceNotInItem) {
+        if (this.downgradedPrioritizedSpaceNotIn == null) {
+            this.downgradedPrioritizedSpaceNotIn = new ArrayList<Long>();
+        }
+        this.downgradedPrioritizedSpaceNotIn.add(downgradedPrioritizedSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get downgradedPrioritizedSpaceNotIn
+     *
+     * @return downgradedPrioritizedSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDowngradedPrioritizedSpaceNotIn() {
+        return downgradedPrioritizedSpaceNotIn;
+    }
+
+    public void setDowngradedPrioritizedSpaceNotIn(List<Long> downgradedPrioritizedSpaceNotIn) {
+        this.downgradedPrioritizedSpaceNotIn = downgradedPrioritizedSpaceNotIn;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput downgradedPrioritizedSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setDowngradedPrioritizedSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getDowngradedPrioritizedSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DOWNGRADED_PRIORITIZED_SPACE_NOT_IN);
+    }
+
+    public NfsInodeWhereInput ecK(Integer ecK) {
+
+        this.ecK = ecK;
+        return this;
+    }
+
+    /**
+     * Get ecK
+     *
+     * @return ecK
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcK() {
+        return ecK;
+    }
+
+    public void setEcK(Integer ecK) {
+        this.ecK = ecK;
+    }
+
+    public NfsInodeWhereInput ecK_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecK_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        return this;
+    }
+
+    public void setEcK_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K);
+        }
+    }
+
+    public boolean getEcK_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K);
+    }
+
+    public NfsInodeWhereInput ecKGt(Integer ecKGt) {
+
+        this.ecKGt = ecKGt;
+        return this;
+    }
+
+    /**
+     * Get ecKGt
+     *
+     * @return ecKGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKGt() {
+        return ecKGt;
+    }
+
+    public void setEcKGt(Integer ecKGt) {
+        this.ecKGt = ecKGt;
+    }
+
+    public NfsInodeWhereInput ecKGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_GT);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecKGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_GT);
+        return this;
+    }
+
+    public void setEcKGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_GT);
+        }
+    }
+
+    public boolean getEcKGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_GT);
+    }
+
+    public NfsInodeWhereInput ecKGte(Integer ecKGte) {
+
+        this.ecKGte = ecKGte;
+        return this;
+    }
+
+    /**
+     * Get ecKGte
+     *
+     * @return ecKGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKGte() {
+        return ecKGte;
+    }
+
+    public void setEcKGte(Integer ecKGte) {
+        this.ecKGte = ecKGte;
+    }
+
+    public NfsInodeWhereInput ecKGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_GTE);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecKGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_GTE);
+        return this;
+    }
+
+    public void setEcKGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_GTE);
+        }
+    }
+
+    public boolean getEcKGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_GTE);
+    }
+
+    public NfsInodeWhereInput ecKIn(List<Integer> ecKIn) {
+
+        this.ecKIn = ecKIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addEcKInItem(Integer ecKInItem) {
+        if (this.ecKIn == null) {
+            this.ecKIn = new ArrayList<Integer>();
+        }
+        this.ecKIn.add(ecKInItem);
+        return this;
+    }
+
+    /**
+     * Get ecKIn
+     *
+     * @return ecKIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcKIn() {
+        return ecKIn;
+    }
+
+    public void setEcKIn(List<Integer> ecKIn) {
+        this.ecKIn = ecKIn;
+    }
+
+    public NfsInodeWhereInput ecKIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecKIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_IN);
+        return this;
+    }
+
+    public void setEcKIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_IN);
+        }
+    }
+
+    public boolean getEcKIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_IN);
+    }
+
+    public NfsInodeWhereInput ecKLt(Integer ecKLt) {
+
+        this.ecKLt = ecKLt;
+        return this;
+    }
+
+    /**
+     * Get ecKLt
+     *
+     * @return ecKLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKLt() {
+        return ecKLt;
+    }
+
+    public void setEcKLt(Integer ecKLt) {
+        this.ecKLt = ecKLt;
+    }
+
+    public NfsInodeWhereInput ecKLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_LT);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecKLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_LT);
+        return this;
+    }
+
+    public void setEcKLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_LT);
+        }
+    }
+
+    public boolean getEcKLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_LT);
+    }
+
+    public NfsInodeWhereInput ecKLte(Integer ecKLte) {
+
+        this.ecKLte = ecKLte;
+        return this;
+    }
+
+    /**
+     * Get ecKLte
+     *
+     * @return ecKLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKLte() {
+        return ecKLte;
+    }
+
+    public void setEcKLte(Integer ecKLte) {
+        this.ecKLte = ecKLte;
+    }
+
+    public NfsInodeWhereInput ecKLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_LTE);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecKLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_LTE);
+        return this;
+    }
+
+    public void setEcKLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_LTE);
+        }
+    }
+
+    public boolean getEcKLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_LTE);
+    }
+
+    public NfsInodeWhereInput ecKNot(Integer ecKNot) {
+
+        this.ecKNot = ecKNot;
+        return this;
+    }
+
+    /**
+     * Get ecKNot
+     *
+     * @return ecKNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcKNot() {
+        return ecKNot;
+    }
+
+    public void setEcKNot(Integer ecKNot) {
+        this.ecKNot = ecKNot;
+    }
+
+    public NfsInodeWhereInput ecKNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecKNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT);
+        return this;
+    }
+
+    public void setEcKNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT);
+        }
+    }
+
+    public boolean getEcKNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_NOT);
+    }
+
+    public NfsInodeWhereInput ecKNotIn(List<Integer> ecKNotIn) {
+
+        this.ecKNotIn = ecKNotIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addEcKNotInItem(Integer ecKNotInItem) {
+        if (this.ecKNotIn == null) {
+            this.ecKNotIn = new ArrayList<Integer>();
+        }
+        this.ecKNotIn.add(ecKNotInItem);
+        return this;
+    }
+
+    /**
+     * Get ecKNotIn
+     *
+     * @return ecKNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcKNotIn() {
+        return ecKNotIn;
+    }
+
+    public void setEcKNotIn(List<Integer> ecKNotIn) {
+        this.ecKNotIn = ecKNotIn;
+    }
+
+    public NfsInodeWhereInput ecKNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecKNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT_IN);
+        return this;
+    }
+
+    public void setEcKNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_K_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_K_NOT_IN);
+        }
+    }
+
+    public boolean getEcKNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_K_NOT_IN);
+    }
+
+    public NfsInodeWhereInput ecM(Integer ecM) {
+
+        this.ecM = ecM;
+        return this;
+    }
+
+    /**
+     * Get ecM
+     *
+     * @return ecM
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcM() {
+        return ecM;
+    }
+
+    public void setEcM(Integer ecM) {
+        this.ecM = ecM;
+    }
+
+    public NfsInodeWhereInput ecM_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecM_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        return this;
+    }
+
+    public void setEcM_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M);
+        }
+    }
+
+    public boolean getEcM_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M);
+    }
+
+    public NfsInodeWhereInput ecMGt(Integer ecMGt) {
+
+        this.ecMGt = ecMGt;
+        return this;
+    }
+
+    /**
+     * Get ecMGt
+     *
+     * @return ecMGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMGt() {
+        return ecMGt;
+    }
+
+    public void setEcMGt(Integer ecMGt) {
+        this.ecMGt = ecMGt;
+    }
+
+    public NfsInodeWhereInput ecMGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_GT);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecMGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_GT);
+        return this;
+    }
+
+    public void setEcMGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_GT);
+        }
+    }
+
+    public boolean getEcMGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_GT);
+    }
+
+    public NfsInodeWhereInput ecMGte(Integer ecMGte) {
+
+        this.ecMGte = ecMGte;
+        return this;
+    }
+
+    /**
+     * Get ecMGte
+     *
+     * @return ecMGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMGte() {
+        return ecMGte;
+    }
+
+    public void setEcMGte(Integer ecMGte) {
+        this.ecMGte = ecMGte;
+    }
+
+    public NfsInodeWhereInput ecMGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_GTE);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecMGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_GTE);
+        return this;
+    }
+
+    public void setEcMGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_GTE);
+        }
+    }
+
+    public boolean getEcMGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_GTE);
+    }
+
+    public NfsInodeWhereInput ecMIn(List<Integer> ecMIn) {
+
+        this.ecMIn = ecMIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addEcMInItem(Integer ecMInItem) {
+        if (this.ecMIn == null) {
+            this.ecMIn = new ArrayList<Integer>();
+        }
+        this.ecMIn.add(ecMInItem);
+        return this;
+    }
+
+    /**
+     * Get ecMIn
+     *
+     * @return ecMIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcMIn() {
+        return ecMIn;
+    }
+
+    public void setEcMIn(List<Integer> ecMIn) {
+        this.ecMIn = ecMIn;
+    }
+
+    public NfsInodeWhereInput ecMIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecMIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_IN);
+        return this;
+    }
+
+    public void setEcMIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_IN);
+        }
+    }
+
+    public boolean getEcMIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_IN);
+    }
+
+    public NfsInodeWhereInput ecMLt(Integer ecMLt) {
+
+        this.ecMLt = ecMLt;
+        return this;
+    }
+
+    /**
+     * Get ecMLt
+     *
+     * @return ecMLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMLt() {
+        return ecMLt;
+    }
+
+    public void setEcMLt(Integer ecMLt) {
+        this.ecMLt = ecMLt;
+    }
+
+    public NfsInodeWhereInput ecMLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_LT);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecMLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_LT);
+        return this;
+    }
+
+    public void setEcMLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_LT);
+        }
+    }
+
+    public boolean getEcMLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_LT);
+    }
+
+    public NfsInodeWhereInput ecMLte(Integer ecMLte) {
+
+        this.ecMLte = ecMLte;
+        return this;
+    }
+
+    /**
+     * Get ecMLte
+     *
+     * @return ecMLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMLte() {
+        return ecMLte;
+    }
+
+    public void setEcMLte(Integer ecMLte) {
+        this.ecMLte = ecMLte;
+    }
+
+    public NfsInodeWhereInput ecMLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_LTE);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecMLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_LTE);
+        return this;
+    }
+
+    public void setEcMLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_LTE);
+        }
+    }
+
+    public boolean getEcMLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_LTE);
+    }
+
+    public NfsInodeWhereInput ecMNot(Integer ecMNot) {
+
+        this.ecMNot = ecMNot;
+        return this;
+    }
+
+    /**
+     * Get ecMNot
+     *
+     * @return ecMNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getEcMNot() {
+        return ecMNot;
+    }
+
+    public void setEcMNot(Integer ecMNot) {
+        this.ecMNot = ecMNot;
+    }
+
+    public NfsInodeWhereInput ecMNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecMNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT);
+        return this;
+    }
+
+    public void setEcMNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT);
+        }
+    }
+
+    public boolean getEcMNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_NOT);
+    }
+
+    public NfsInodeWhereInput ecMNotIn(List<Integer> ecMNotIn) {
+
+        this.ecMNotIn = ecMNotIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addEcMNotInItem(Integer ecMNotInItem) {
+        if (this.ecMNotIn == null) {
+            this.ecMNotIn = new ArrayList<Integer>();
+        }
+        this.ecMNotIn.add(ecMNotInItem);
+        return this;
+    }
+
+    /**
+     * Get ecMNotIn
+     *
+     * @return ecMNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getEcMNotIn() {
+        return ecMNotIn;
+    }
+
+    public void setEcMNotIn(List<Integer> ecMNotIn) {
+        this.ecMNotIn = ecMNotIn;
+    }
+
+    public NfsInodeWhereInput ecMNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput ecMNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT_IN);
+        return this;
+    }
+
+    public void setEcMNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_EC_M_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_EC_M_NOT_IN);
+        }
+    }
+
+    public boolean getEcMNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_EC_M_NOT_IN);
+    }
+
+    public NfsInodeWhereInput encryptMethod(EncryptMethod encryptMethod) {
+
+        this.encryptMethod = encryptMethod;
+        return this;
+    }
+
+    /**
+     * Get encryptMethod
+     *
+     * @return encryptMethod
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EncryptMethod getEncryptMethod() {
+        return encryptMethod;
+    }
+
+    public void setEncryptMethod(EncryptMethod encryptMethod) {
+        this.encryptMethod = encryptMethod;
+    }
+
+    public NfsInodeWhereInput encryptMethod_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public NfsInodeWhereInput encryptMethod_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        return this;
+    }
+
+    public void setEncryptMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD);
+        }
+    }
+
+    public boolean getEncryptMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD);
+    }
+
+    public NfsInodeWhereInput encryptMethodIn(List<EncryptMethod> encryptMethodIn) {
+
+        this.encryptMethodIn = encryptMethodIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addEncryptMethodInItem(EncryptMethod encryptMethodInItem) {
+        if (this.encryptMethodIn == null) {
+            this.encryptMethodIn = new ArrayList<EncryptMethod>();
+        }
+        this.encryptMethodIn.add(encryptMethodInItem);
+        return this;
+    }
+
+    /**
+     * Get encryptMethodIn
+     *
+     * @return encryptMethodIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<EncryptMethod> getEncryptMethodIn() {
+        return encryptMethodIn;
+    }
+
+    public void setEncryptMethodIn(List<EncryptMethod> encryptMethodIn) {
+        this.encryptMethodIn = encryptMethodIn;
+    }
+
+    public NfsInodeWhereInput encryptMethodIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput encryptMethodIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+        return this;
+    }
+
+    public void setEncryptMethodIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+        }
+    }
+
+    public boolean getEncryptMethodIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD_IN);
+    }
+
+    public NfsInodeWhereInput encryptMethodNot(EncryptMethod encryptMethodNot) {
+
+        this.encryptMethodNot = encryptMethodNot;
+        return this;
+    }
+
+    /**
+     * Get encryptMethodNot
+     *
+     * @return encryptMethodNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EncryptMethod getEncryptMethodNot() {
+        return encryptMethodNot;
+    }
+
+    public void setEncryptMethodNot(EncryptMethod encryptMethodNot) {
+        this.encryptMethodNot = encryptMethodNot;
+    }
+
+    public NfsInodeWhereInput encryptMethodNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+        return this;
+    }
+
+    public NfsInodeWhereInput encryptMethodNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+        return this;
+    }
+
+    public void setEncryptMethodNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+        }
+    }
+
+    public boolean getEncryptMethodNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD_NOT);
+    }
+
+    public NfsInodeWhereInput encryptMethodNotIn(List<EncryptMethod> encryptMethodNotIn) {
+
+        this.encryptMethodNotIn = encryptMethodNotIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addEncryptMethodNotInItem(EncryptMethod encryptMethodNotInItem) {
+        if (this.encryptMethodNotIn == null) {
+            this.encryptMethodNotIn = new ArrayList<EncryptMethod>();
+        }
+        this.encryptMethodNotIn.add(encryptMethodNotInItem);
+        return this;
+    }
+
+    /**
+     * Get encryptMethodNotIn
+     *
+     * @return encryptMethodNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<EncryptMethod> getEncryptMethodNotIn() {
+        return encryptMethodNotIn;
+    }
+
+    public void setEncryptMethodNotIn(List<EncryptMethod> encryptMethodNotIn) {
+        this.encryptMethodNotIn = encryptMethodNotIn;
+    }
+
+    public NfsInodeWhereInput encryptMethodNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput encryptMethodNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
+        return this;
+    }
+
+    public void setEncryptMethodNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
+        }
+    }
+
+    public boolean getEncryptMethodNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENCRYPT_METHOD_NOT_IN);
     }
 
     public NfsInodeWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -4398,6 +5848,280 @@ public class NfsInodeWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_PARENT_ID_STARTS_WITH);
     }
 
+    public NfsInodeWhereInput prioritized(Boolean prioritized) {
+
+        this.prioritized = prioritized;
+        return this;
+    }
+
+    /**
+     * Get prioritized
+     *
+     * @return prioritized
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getPrioritized() {
+        return prioritized;
+    }
+
+    public void setPrioritized(Boolean prioritized) {
+        this.prioritized = prioritized;
+    }
+
+    public NfsInodeWhereInput prioritized_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public NfsInodeWhereInput prioritized_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        return this;
+    }
+
+    public void setPrioritized_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED);
+        }
+    }
+
+    public boolean getPrioritized_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIORITIZED);
+    }
+
+    public NfsInodeWhereInput prioritizedNot(Boolean prioritizedNot) {
+
+        this.prioritizedNot = prioritizedNot;
+        return this;
+    }
+
+    /**
+     * Get prioritizedNot
+     *
+     * @return prioritizedNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getPrioritizedNot() {
+        return prioritizedNot;
+    }
+
+    public void setPrioritizedNot(Boolean prioritizedNot) {
+        this.prioritizedNot = prioritizedNot;
+    }
+
+    public NfsInodeWhereInput prioritizedNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED_NOT);
+        return this;
+    }
+
+    public NfsInodeWhereInput prioritizedNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED_NOT);
+        return this;
+    }
+
+    public void setPrioritizedNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PRIORITIZED_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PRIORITIZED_NOT);
+        }
+    }
+
+    public boolean getPrioritizedNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PRIORITIZED_NOT);
+    }
+
+    public NfsInodeWhereInput resiliencyType(ResiliencyType resiliencyType) {
+
+        this.resiliencyType = resiliencyType;
+        return this;
+    }
+
+    /**
+     * Get resiliencyType
+     *
+     * @return resiliencyType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyType() {
+        return resiliencyType;
+    }
+
+    public void setResiliencyType(ResiliencyType resiliencyType) {
+        this.resiliencyType = resiliencyType;
+    }
+
+    public NfsInodeWhereInput resiliencyType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public NfsInodeWhereInput resiliencyType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        return this;
+    }
+
+    public void setResiliencyType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE);
+        }
+    }
+
+    public boolean getResiliencyType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE);
+    }
+
+    public NfsInodeWhereInput resiliencyTypeIn(List<ResiliencyType> resiliencyTypeIn) {
+
+        this.resiliencyTypeIn = resiliencyTypeIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addResiliencyTypeInItem(ResiliencyType resiliencyTypeInItem) {
+        if (this.resiliencyTypeIn == null) {
+            this.resiliencyTypeIn = new ArrayList<ResiliencyType>();
+        }
+        this.resiliencyTypeIn.add(resiliencyTypeInItem);
+        return this;
+    }
+
+    /**
+     * Get resiliencyTypeIn
+     *
+     * @return resiliencyTypeIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ResiliencyType> getResiliencyTypeIn() {
+        return resiliencyTypeIn;
+    }
+
+    public void setResiliencyTypeIn(List<ResiliencyType> resiliencyTypeIn) {
+        this.resiliencyTypeIn = resiliencyTypeIn;
+    }
+
+    public NfsInodeWhereInput resiliencyTypeIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput resiliencyTypeIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        return this;
+    }
+
+    public void setResiliencyTypeIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+        }
+    }
+
+    public boolean getResiliencyTypeIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE_IN);
+    }
+
+    public NfsInodeWhereInput resiliencyTypeNot(ResiliencyType resiliencyTypeNot) {
+
+        this.resiliencyTypeNot = resiliencyTypeNot;
+        return this;
+    }
+
+    /**
+     * Get resiliencyTypeNot
+     *
+     * @return resiliencyTypeNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ResiliencyType getResiliencyTypeNot() {
+        return resiliencyTypeNot;
+    }
+
+    public void setResiliencyTypeNot(ResiliencyType resiliencyTypeNot) {
+        this.resiliencyTypeNot = resiliencyTypeNot;
+    }
+
+    public NfsInodeWhereInput resiliencyTypeNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        return this;
+    }
+
+    public NfsInodeWhereInput resiliencyTypeNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        return this;
+    }
+
+    public void setResiliencyTypeNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+        }
+    }
+
+    public boolean getResiliencyTypeNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE_NOT);
+    }
+
+    public NfsInodeWhereInput resiliencyTypeNotIn(List<ResiliencyType> resiliencyTypeNotIn) {
+
+        this.resiliencyTypeNotIn = resiliencyTypeNotIn;
+        return this;
+    }
+
+    public NfsInodeWhereInput addResiliencyTypeNotInItem(ResiliencyType resiliencyTypeNotInItem) {
+        if (this.resiliencyTypeNotIn == null) {
+            this.resiliencyTypeNotIn = new ArrayList<ResiliencyType>();
+        }
+        this.resiliencyTypeNotIn.add(resiliencyTypeNotInItem);
+        return this;
+    }
+
+    /**
+     * Get resiliencyTypeNotIn
+     *
+     * @return resiliencyTypeNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ResiliencyType> getResiliencyTypeNotIn() {
+        return resiliencyTypeNotIn;
+    }
+
+    public void setResiliencyTypeNotIn(List<ResiliencyType> resiliencyTypeNotIn) {
+        this.resiliencyTypeNotIn = resiliencyTypeNotIn;
+    }
+
+    public NfsInodeWhereInput resiliencyTypeNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        return this;
+    }
+
+    public NfsInodeWhereInput resiliencyTypeNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        return this;
+    }
+
+    public void setResiliencyTypeNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+        }
+    }
+
+    public boolean getResiliencyTypeNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESILIENCY_TYPE_NOT_IN);
+    }
+
     public NfsInodeWhereInput sharedSize(Long sharedSize) {
 
         this.sharedSize = sharedSize;
@@ -5858,6 +7582,50 @@ public class NfsInodeWhereInput
                 && Objects.equals(this.assignedSizeLte, nfsInodeWhereInput.assignedSizeLte)
                 && Objects.equals(this.assignedSizeNot, nfsInodeWhereInput.assignedSizeNot)
                 && Objects.equals(this.assignedSizeNotIn, nfsInodeWhereInput.assignedSizeNotIn)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpace,
+                        nfsInodeWhereInput.downgradedPrioritizedSpace)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceGt,
+                        nfsInodeWhereInput.downgradedPrioritizedSpaceGt)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceGte,
+                        nfsInodeWhereInput.downgradedPrioritizedSpaceGte)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceIn,
+                        nfsInodeWhereInput.downgradedPrioritizedSpaceIn)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceLt,
+                        nfsInodeWhereInput.downgradedPrioritizedSpaceLt)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceLte,
+                        nfsInodeWhereInput.downgradedPrioritizedSpaceLte)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceNot,
+                        nfsInodeWhereInput.downgradedPrioritizedSpaceNot)
+                && Objects.equals(
+                        this.downgradedPrioritizedSpaceNotIn,
+                        nfsInodeWhereInput.downgradedPrioritizedSpaceNotIn)
+                && Objects.equals(this.ecK, nfsInodeWhereInput.ecK)
+                && Objects.equals(this.ecKGt, nfsInodeWhereInput.ecKGt)
+                && Objects.equals(this.ecKGte, nfsInodeWhereInput.ecKGte)
+                && Objects.equals(this.ecKIn, nfsInodeWhereInput.ecKIn)
+                && Objects.equals(this.ecKLt, nfsInodeWhereInput.ecKLt)
+                && Objects.equals(this.ecKLte, nfsInodeWhereInput.ecKLte)
+                && Objects.equals(this.ecKNot, nfsInodeWhereInput.ecKNot)
+                && Objects.equals(this.ecKNotIn, nfsInodeWhereInput.ecKNotIn)
+                && Objects.equals(this.ecM, nfsInodeWhereInput.ecM)
+                && Objects.equals(this.ecMGt, nfsInodeWhereInput.ecMGt)
+                && Objects.equals(this.ecMGte, nfsInodeWhereInput.ecMGte)
+                && Objects.equals(this.ecMIn, nfsInodeWhereInput.ecMIn)
+                && Objects.equals(this.ecMLt, nfsInodeWhereInput.ecMLt)
+                && Objects.equals(this.ecMLte, nfsInodeWhereInput.ecMLte)
+                && Objects.equals(this.ecMNot, nfsInodeWhereInput.ecMNot)
+                && Objects.equals(this.ecMNotIn, nfsInodeWhereInput.ecMNotIn)
+                && Objects.equals(this.encryptMethod, nfsInodeWhereInput.encryptMethod)
+                && Objects.equals(this.encryptMethodIn, nfsInodeWhereInput.encryptMethodIn)
+                && Objects.equals(this.encryptMethodNot, nfsInodeWhereInput.encryptMethodNot)
+                && Objects.equals(this.encryptMethodNotIn, nfsInodeWhereInput.encryptMethodNotIn)
                 && Objects.equals(this.entityAsyncStatus, nfsInodeWhereInput.entityAsyncStatus)
                 && Objects.equals(this.entityAsyncStatusIn, nfsInodeWhereInput.entityAsyncStatusIn)
                 && Objects.equals(
@@ -5936,6 +7704,12 @@ public class NfsInodeWhereInput
                 && Objects.equals(
                         this.parentIdNotStartsWith, nfsInodeWhereInput.parentIdNotStartsWith)
                 && Objects.equals(this.parentIdStartsWith, nfsInodeWhereInput.parentIdStartsWith)
+                && Objects.equals(this.prioritized, nfsInodeWhereInput.prioritized)
+                && Objects.equals(this.prioritizedNot, nfsInodeWhereInput.prioritizedNot)
+                && Objects.equals(this.resiliencyType, nfsInodeWhereInput.resiliencyType)
+                && Objects.equals(this.resiliencyTypeIn, nfsInodeWhereInput.resiliencyTypeIn)
+                && Objects.equals(this.resiliencyTypeNot, nfsInodeWhereInput.resiliencyTypeNot)
+                && Objects.equals(this.resiliencyTypeNotIn, nfsInodeWhereInput.resiliencyTypeNotIn)
                 && Objects.equals(this.sharedSize, nfsInodeWhereInput.sharedSize)
                 && Objects.equals(this.sharedSizeGt, nfsInodeWhereInput.sharedSizeGt)
                 && Objects.equals(this.sharedSizeGte, nfsInodeWhereInput.sharedSizeGte)
@@ -5997,6 +7771,34 @@ public class NfsInodeWhereInput
                 assignedSizeLte,
                 assignedSizeNot,
                 assignedSizeNotIn,
+                downgradedPrioritizedSpace,
+                downgradedPrioritizedSpaceGt,
+                downgradedPrioritizedSpaceGte,
+                downgradedPrioritizedSpaceIn,
+                downgradedPrioritizedSpaceLt,
+                downgradedPrioritizedSpaceLte,
+                downgradedPrioritizedSpaceNot,
+                downgradedPrioritizedSpaceNotIn,
+                ecK,
+                ecKGt,
+                ecKGte,
+                ecKIn,
+                ecKLt,
+                ecKLte,
+                ecKNot,
+                ecKNotIn,
+                ecM,
+                ecMGt,
+                ecMGte,
+                ecMIn,
+                ecMLt,
+                ecMLte,
+                ecMNot,
+                ecMNotIn,
+                encryptMethod,
+                encryptMethodIn,
+                encryptMethodNot,
+                encryptMethodNotIn,
                 entityAsyncStatus,
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
@@ -6071,6 +7873,12 @@ public class NfsInodeWhereInput
                 parentIdNotIn,
                 parentIdNotStartsWith,
                 parentIdStartsWith,
+                prioritized,
+                prioritizedNot,
+                resiliencyType,
+                resiliencyTypeIn,
+                resiliencyTypeNot,
+                resiliencyTypeNotIn,
                 sharedSize,
                 sharedSizeGt,
                 sharedSizeGte,
@@ -6128,6 +7936,52 @@ public class NfsInodeWhereInput
         sb.append("    assignedSizeNot: ").append(toIndentedString(assignedSizeNot)).append("\n");
         sb.append("    assignedSizeNotIn: ")
                 .append(toIndentedString(assignedSizeNotIn))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpace: ")
+                .append(toIndentedString(downgradedPrioritizedSpace))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceGt: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceGt))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceGte: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceGte))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceIn: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceIn))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceLt: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceLt))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceLte: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceLte))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceNot: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceNot))
+                .append("\n");
+        sb.append("    downgradedPrioritizedSpaceNotIn: ")
+                .append(toIndentedString(downgradedPrioritizedSpaceNotIn))
+                .append("\n");
+        sb.append("    ecK: ").append(toIndentedString(ecK)).append("\n");
+        sb.append("    ecKGt: ").append(toIndentedString(ecKGt)).append("\n");
+        sb.append("    ecKGte: ").append(toIndentedString(ecKGte)).append("\n");
+        sb.append("    ecKIn: ").append(toIndentedString(ecKIn)).append("\n");
+        sb.append("    ecKLt: ").append(toIndentedString(ecKLt)).append("\n");
+        sb.append("    ecKLte: ").append(toIndentedString(ecKLte)).append("\n");
+        sb.append("    ecKNot: ").append(toIndentedString(ecKNot)).append("\n");
+        sb.append("    ecKNotIn: ").append(toIndentedString(ecKNotIn)).append("\n");
+        sb.append("    ecM: ").append(toIndentedString(ecM)).append("\n");
+        sb.append("    ecMGt: ").append(toIndentedString(ecMGt)).append("\n");
+        sb.append("    ecMGte: ").append(toIndentedString(ecMGte)).append("\n");
+        sb.append("    ecMIn: ").append(toIndentedString(ecMIn)).append("\n");
+        sb.append("    ecMLt: ").append(toIndentedString(ecMLt)).append("\n");
+        sb.append("    ecMLte: ").append(toIndentedString(ecMLte)).append("\n");
+        sb.append("    ecMNot: ").append(toIndentedString(ecMNot)).append("\n");
+        sb.append("    ecMNotIn: ").append(toIndentedString(ecMNotIn)).append("\n");
+        sb.append("    encryptMethod: ").append(toIndentedString(encryptMethod)).append("\n");
+        sb.append("    encryptMethodIn: ").append(toIndentedString(encryptMethodIn)).append("\n");
+        sb.append("    encryptMethodNot: ").append(toIndentedString(encryptMethodNot)).append("\n");
+        sb.append("    encryptMethodNotIn: ")
+                .append(toIndentedString(encryptMethodNotIn))
                 .append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
@@ -6236,6 +8090,16 @@ public class NfsInodeWhereInput
                 .append("\n");
         sb.append("    parentIdStartsWith: ")
                 .append(toIndentedString(parentIdStartsWith))
+                .append("\n");
+        sb.append("    prioritized: ").append(toIndentedString(prioritized)).append("\n");
+        sb.append("    prioritizedNot: ").append(toIndentedString(prioritizedNot)).append("\n");
+        sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
+        sb.append("    resiliencyTypeIn: ").append(toIndentedString(resiliencyTypeIn)).append("\n");
+        sb.append("    resiliencyTypeNot: ")
+                .append(toIndentedString(resiliencyTypeNot))
+                .append("\n");
+        sb.append("    resiliencyTypeNotIn: ")
+                .append(toIndentedString(resiliencyTypeNotIn))
                 .append("\n");
         sb.append("    sharedSize: ").append(toIndentedString(sharedSize)).append("\n");
         sb.append("    sharedSizeGt: ").append(toIndentedString(sharedSizeGt)).append("\n");

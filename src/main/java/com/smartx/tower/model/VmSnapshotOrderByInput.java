@@ -42,6 +42,10 @@ public enum VmSnapshotOrderByInput {
 
     HA_DESC("ha_DESC"),
 
+    HA_PRIORITY_ASC("ha_priority_ASC"),
+
+    HA_PRIORITY_DESC("ha_priority_DESC"),
+
     ID_ASC("id_ASC"),
 
     ID_DESC("id_DESC"),

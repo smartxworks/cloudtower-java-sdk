@@ -268,6 +268,26 @@ public class VmSnapshotWhereInput
     @SerializedName(SERIALIZED_NAME_HA_NOT)
     private Boolean haNot;
 
+    public static final String SERIALIZED_NAME_HA_PRIORITY = "ha_priority";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY)
+    private VmHaPriority haPriority;
+
+    public static final String SERIALIZED_NAME_HA_PRIORITY_IN = "ha_priority_in";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY_IN)
+    private List<VmHaPriority> haPriorityIn = null;
+
+    public static final String SERIALIZED_NAME_HA_PRIORITY_NOT = "ha_priority_not";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY_NOT)
+    private VmHaPriority haPriorityNot;
+
+    public static final String SERIALIZED_NAME_HA_PRIORITY_NOT_IN = "ha_priority_not_in";
+
+    @SerializedName(SERIALIZED_NAME_HA_PRIORITY_NOT_IN)
+    private List<VmHaPriority> haPriorityNotIn = null;
+
     public static final String SERIALIZED_NAME_ID = "id";
 
     @SerializedName(SERIALIZED_NAME_ID)
@@ -3089,6 +3109,194 @@ public class VmSnapshotWhereInput
 
     public boolean getHaNot_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_HA_NOT);
+    }
+
+    public VmSnapshotWhereInput haPriority(VmHaPriority haPriority) {
+
+        this.haPriority = haPriority;
+        return this;
+    }
+
+    /**
+     * Get haPriority
+     *
+     * @return haPriority
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmHaPriority getHaPriority() {
+        return haPriority;
+    }
+
+    public void setHaPriority(VmHaPriority haPriority) {
+        this.haPriority = haPriority;
+    }
+
+    public VmSnapshotWhereInput haPriority_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public VmSnapshotWhereInput haPriority_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        return this;
+    }
+
+    public void setHaPriority_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY);
+        }
+    }
+
+    public boolean getHaPriority_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY);
+    }
+
+    public VmSnapshotWhereInput haPriorityIn(List<VmHaPriority> haPriorityIn) {
+
+        this.haPriorityIn = haPriorityIn;
+        return this;
+    }
+
+    public VmSnapshotWhereInput addHaPriorityInItem(VmHaPriority haPriorityInItem) {
+        if (this.haPriorityIn == null) {
+            this.haPriorityIn = new ArrayList<VmHaPriority>();
+        }
+        this.haPriorityIn.add(haPriorityInItem);
+        return this;
+    }
+
+    /**
+     * Get haPriorityIn
+     *
+     * @return haPriorityIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VmHaPriority> getHaPriorityIn() {
+        return haPriorityIn;
+    }
+
+    public void setHaPriorityIn(List<VmHaPriority> haPriorityIn) {
+        this.haPriorityIn = haPriorityIn;
+    }
+
+    public VmSnapshotWhereInput haPriorityIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY_IN);
+        return this;
+    }
+
+    public VmSnapshotWhereInput haPriorityIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY_IN);
+        return this;
+    }
+
+    public void setHaPriorityIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY_IN);
+        }
+    }
+
+    public boolean getHaPriorityIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY_IN);
+    }
+
+    public VmSnapshotWhereInput haPriorityNot(VmHaPriority haPriorityNot) {
+
+        this.haPriorityNot = haPriorityNot;
+        return this;
+    }
+
+    /**
+     * Get haPriorityNot
+     *
+     * @return haPriorityNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmHaPriority getHaPriorityNot() {
+        return haPriorityNot;
+    }
+
+    public void setHaPriorityNot(VmHaPriority haPriorityNot) {
+        this.haPriorityNot = haPriorityNot;
+    }
+
+    public VmSnapshotWhereInput haPriorityNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY_NOT);
+        return this;
+    }
+
+    public VmSnapshotWhereInput haPriorityNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY_NOT);
+        return this;
+    }
+
+    public void setHaPriorityNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY_NOT);
+        }
+    }
+
+    public boolean getHaPriorityNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY_NOT);
+    }
+
+    public VmSnapshotWhereInput haPriorityNotIn(List<VmHaPriority> haPriorityNotIn) {
+
+        this.haPriorityNotIn = haPriorityNotIn;
+        return this;
+    }
+
+    public VmSnapshotWhereInput addHaPriorityNotInItem(VmHaPriority haPriorityNotInItem) {
+        if (this.haPriorityNotIn == null) {
+            this.haPriorityNotIn = new ArrayList<VmHaPriority>();
+        }
+        this.haPriorityNotIn.add(haPriorityNotInItem);
+        return this;
+    }
+
+    /**
+     * Get haPriorityNotIn
+     *
+     * @return haPriorityNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VmHaPriority> getHaPriorityNotIn() {
+        return haPriorityNotIn;
+    }
+
+    public void setHaPriorityNotIn(List<VmHaPriority> haPriorityNotIn) {
+        this.haPriorityNotIn = haPriorityNotIn;
+    }
+
+    public VmSnapshotWhereInput haPriorityNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY_NOT_IN);
+        return this;
+    }
+
+    public VmSnapshotWhereInput haPriorityNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY_NOT_IN);
+        return this;
+    }
+
+    public void setHaPriorityNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HA_PRIORITY_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HA_PRIORITY_NOT_IN);
+        }
+    }
+
+    public boolean getHaPriorityNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HA_PRIORITY_NOT_IN);
     }
 
     public VmSnapshotWhereInput id(String id) {
@@ -8048,6 +8256,10 @@ public class VmSnapshotWhereInput
                 && Objects.equals(this.firmwareNotIn, vmSnapshotWhereInput.firmwareNotIn)
                 && Objects.equals(this.ha, vmSnapshotWhereInput.ha)
                 && Objects.equals(this.haNot, vmSnapshotWhereInput.haNot)
+                && Objects.equals(this.haPriority, vmSnapshotWhereInput.haPriority)
+                && Objects.equals(this.haPriorityIn, vmSnapshotWhereInput.haPriorityIn)
+                && Objects.equals(this.haPriorityNot, vmSnapshotWhereInput.haPriorityNot)
+                && Objects.equals(this.haPriorityNotIn, vmSnapshotWhereInput.haPriorityNotIn)
                 && Objects.equals(this.id, vmSnapshotWhereInput.id)
                 && Objects.equals(this.idContains, vmSnapshotWhereInput.idContains)
                 && Objects.equals(this.idEndsWith, vmSnapshotWhereInput.idEndsWith)
@@ -8226,6 +8438,10 @@ public class VmSnapshotWhereInput
                 firmwareNotIn,
                 ha,
                 haNot,
+                haPriority,
+                haPriorityIn,
+                haPriorityNot,
+                haPriorityNotIn,
                 id,
                 idContains,
                 idEndsWith,
@@ -8430,6 +8646,10 @@ public class VmSnapshotWhereInput
         sb.append("    firmwareNotIn: ").append(toIndentedString(firmwareNotIn)).append("\n");
         sb.append("    ha: ").append(toIndentedString(ha)).append("\n");
         sb.append("    haNot: ").append(toIndentedString(haNot)).append("\n");
+        sb.append("    haPriority: ").append(toIndentedString(haPriority)).append("\n");
+        sb.append("    haPriorityIn: ").append(toIndentedString(haPriorityIn)).append("\n");
+        sb.append("    haPriorityNot: ").append(toIndentedString(haPriorityNot)).append("\n");
+        sb.append("    haPriorityNotIn: ").append(toIndentedString(haPriorityNotIn)).append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
         sb.append("    idEndsWith: ").append(toIndentedString(idEndsWith)).append("\n");

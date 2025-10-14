@@ -1,5 +1,34 @@
 # RELEASE NOTE
 
+## release 日期 2025-10-13
+
+v2.21.0 release (tower version 4.7.0)
+
+### features
+
+- 增加 [EcpLicenseApi] 用于 ECP 许可信息的的查询
+- 增加 [ReplicationServiceApi] 用于复制服务的查询
+- 增加 [BusinessHostApi] 与 [BusinessHostGroupApi] 用于业务主机
+- [VmApi]: 创建虚拟机类 API 支持在 ha 字段配置为 true 的情况下配置 haPriority 字段用于配置
+- [VmApi]: [updateVmBasicInfo] 支持配置编辑虚拟机的 haPriority 字段，仅当 ha 为 true 或现 vm ha 字段已经为 true 时生效。
+- [VmApi]: 为电源操作类 API 引入前置条件检查，避免未定义行为
+- [VmApi]: 虚拟机支持 EC 存储策略的配置
+- [VmVolumeApi]: 虚拟卷支持 EC 存储策略的配置
+- [IscsiLunApi], [IscsiTargetApi], [NfsExportApi], [NfsInodeApi], [NvmfNamespaceApi], [NvmfSubsystemApi]: 增加 EC 存储策略的支持，允许副本数提升，精简置备转厚置备
+- [ClusterApi]: 支持查询, 编辑集群常驻缓存功能
+- [Host]: 新增字段 mergedStatus, connectStatus 与 commitedMemoryBytes 字段
+- [Cluster]: 新增字段 commitedMemoryBytes
+
+### bugfix
+
+- 修复 java1.8 版本不支持 Field.canAccess 方法，替换为 Field.isAccessible 方法
+- [VmApi]: 为创建虚拟机类 API 修复未配置 VPC 网卡的 IP 时创建出错
+- [VmApi]: [createVmFromContentLibraryTemplateBatch] 修复单位未生效的问题
+
+### breaking change
+
+- [IscsiTargetApi]: [updateIscsiTarget] 入参的 data 字段类型由 IscsiTargetCommonParams 改为 IscsiTargetUpdationParamsData
+
 ## release 日期 2025-06-09
 
 v2.20.0 release (tower version 4.6.0)
@@ -7,9 +36,9 @@ v2.20.0 release (tower version 4.6.0)
 ### feature
 
 - 为所有 model 实现了 ConditionalNullablePojo 用于显式设置某个字段为 null 时，会在序列化时为被显式序列化为 null 还是被忽略（默认会被忽略），可以通过：
-  - 新增 ${field}_ExplictlyNull, ${field}_ExplictlyNonNull 方法来控制字段是否被显示设置为 null
-  - 新增 set${field}_IsExplictlyNull 方法来设置当前字段是否会被显式序列化为 null
-  - 新增 get${field}_IsExplictlyNull 方法来获取字段是否被显式序列化为 null
+  - 新增 ${field}\_ExplictlyNull, ${field}\_ExplictlyNonNull 方法来控制字段是否被显示设置为 null
+  - 新增 set${field}\_IsExplictlyNull 方法来设置当前字段是否会被显式序列化为 null
+  - 新增 get${field}\_IsExplictlyNull 方法来获取字段是否被显式序列化为 null
 - [Vm], [VmVolume]: 新增 used_size 与 used_size_usage 字段，用于获取虚拟机与虚拟卷的已使用容量
 - [ResourceChangeApi]: 新增 getResourceChange API 用于获取 Resource Change Events
 - [PciDeviceApi]: 新增 getPciDevices API 用于获取 PCI 设备列表
@@ -17,14 +46,14 @@ v2.20.0 release (tower version 4.6.0)
 - [ReplicationPlanApi]: 新增 getReplicationPlan API 用于获取复制计划列表
 - [SmtpServerApi]: 新增 getSmtpServer API 用于获取 SMTP 服务器列表
 - [ReplicaVmApi]: 新增 getReplicaVms API 用于获取复制虚拟机列表
-- [NetworkPolicyRuleServiceApi]: 
+- [NetworkPolicyRuleServiceApi]:
   - 新增 getNetworkPolicyRuleServices API 用于获取「网络安全」的服务资源
   - 新增 createNetworkPolicyRuleService API 用于创建「网络安全」的服务资源
   - 新增 updateNetworkPolicyRuleService API 用于更新「网络安全」的服务资源
   - 新增 deleteNetworkPolicyRuleService API 用于删除「网络安全」的服务资源
 - [SecurityPolicyApi]: [SecurityPolicyIngressEgressInput]: 支持配置 `service_ids` 用于指定「网络安全」的服务资源
 - [SecurityPolicyApi]: [IPSecurityPolicy]: 支持配置 `ip_block`，用于从白名单/黑名单中排除部分 IP
-- [IsolationPolicyApi]: 
+- [IsolationPolicyApi]:
   - 新增 createIsolationPolicy API 用于创建「隔离策略」
   - 新增 updateIsolationPolicy API 用于更新「隔离策略」
   - 新增 deleteIsolationPolicy API 用于删除「隔离策略」
@@ -33,7 +62,7 @@ v2.20.0 release (tower version 4.6.0)
 - [VirtualPrivateCloudEdgeGatewayGroupApi]: 新增 getVirtualPrivateCloudEdgeGatewayGroups API 用于获取「边缘网关组」
 - [VirtualPrivateCloudNatGatewayApi]: [VirtualPrivateCloudNatGatewayCreateParams]: 新增 `external_subnet_group_id` 用于配置外部子网组；新增 `external_ips`，用于配置主备转换地址。
 - [VirtualPrivateCloudNatGatewayApi]: [VirtualPrivateCloudRouteGatewayUpdateParams]: 新增 `external_ips`，用于配置主备转换地址。
-- [VirtualPrivateCloudRouterGatewayApi]: 
+- [VirtualPrivateCloudRouterGatewayApi]:
   - [VirtualPrivateCloudRouterGatewayCreateParams]: 新增 `external_subnet_group_id` 用于配置外部子网组；新增 `external_ips`，用于配置主备转换地址。
   - [VirtualPrivateCloudRouterGatewayUpdateParams]: 新增 `external_ips`，用于配置主备转换地址。
 - [VirtualPrivateCloudFloatingIPApi]: 新增 batchCreateVirtualPrivateCloudFloatingIPs API，用于批量分配浮动 IP。
@@ -90,6 +119,7 @@ v2.18.0 release (tower version 4.4.0)
   - [BackupServiceApi] 备份服务 API
   - [BackupStoreRepositoryApi] 备份存储库 API
   - [BackupTargetExecutionApi] 备份虚拟机执行记录 API
+
 ### optimize
 
 - [VmApi]: [installVmTools]: 优化虚拟机镜像挂载，现在无需输入虚拟机工具镜像 ID 即可挂载
