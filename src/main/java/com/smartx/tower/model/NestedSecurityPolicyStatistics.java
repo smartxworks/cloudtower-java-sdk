@@ -8,7 +8,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** NestedSecurityPolicyStatistics */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class NestedSecurityPolicyStatistics
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_COUNT_RESET_TIMESTAMP = "count_reset_timestamp";

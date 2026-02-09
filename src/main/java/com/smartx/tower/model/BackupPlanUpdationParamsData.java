@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 /** BackupPlanUpdationParamsData */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class BackupPlanUpdationParamsData
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_DISCONNECT_STRATEGY = "disconnect_strategy";

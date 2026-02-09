@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /** VmMigrateAcrossClusterParamsData */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class VmMigrateAcrossClusterParamsData
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_VM_CONFIG = "vm_config";

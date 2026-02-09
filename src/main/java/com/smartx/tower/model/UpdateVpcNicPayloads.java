@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** UpdateVpcNicPayloads */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class UpdateVpcNicPayloads
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_FLOATING_IP_ID = "floating_ip_id";

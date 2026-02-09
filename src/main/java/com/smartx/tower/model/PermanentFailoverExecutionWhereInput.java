@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** PermanentFailoverExecutionWhereInput */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class PermanentFailoverExecutionWhereInput
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_A_N_D = "AND";
@@ -182,6 +182,16 @@ public class PermanentFailoverExecutionWhereInput
 
     @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
     private String idStartsWith;
+
+    public static final String SERIALIZED_NAME_IS_SYNC_REPLICATION = "is_sync_replication";
+
+    @SerializedName(SERIALIZED_NAME_IS_SYNC_REPLICATION)
+    private Boolean isSyncReplication;
+
+    public static final String SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT = "is_sync_replication_not";
+
+    @SerializedName(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT)
+    private Boolean isSyncReplicationNot;
 
     public static final String SERIALIZED_NAME_PERMANENT_FAILOVER_TARGET_EXECUTIONS_EVERY =
             "permanent_failover_target_executions_every";
@@ -1848,6 +1858,92 @@ public class PermanentFailoverExecutionWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_ID_STARTS_WITH);
     }
 
+    public PermanentFailoverExecutionWhereInput isSyncReplication(Boolean isSyncReplication) {
+
+        this.isSyncReplication = isSyncReplication;
+        return this;
+    }
+
+    /**
+     * Get isSyncReplication
+     *
+     * @return isSyncReplication
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getIsSyncReplication() {
+        return isSyncReplication;
+    }
+
+    public void setIsSyncReplication(Boolean isSyncReplication) {
+        this.isSyncReplication = isSyncReplication;
+    }
+
+    public PermanentFailoverExecutionWhereInput isSyncReplication_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+        return this;
+    }
+
+    public PermanentFailoverExecutionWhereInput isSyncReplication_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+        return this;
+    }
+
+    public void setIsSyncReplication_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+        }
+    }
+
+    public boolean getIsSyncReplication_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+    }
+
+    public PermanentFailoverExecutionWhereInput isSyncReplicationNot(Boolean isSyncReplicationNot) {
+
+        this.isSyncReplicationNot = isSyncReplicationNot;
+        return this;
+    }
+
+    /**
+     * Get isSyncReplicationNot
+     *
+     * @return isSyncReplicationNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getIsSyncReplicationNot() {
+        return isSyncReplicationNot;
+    }
+
+    public void setIsSyncReplicationNot(Boolean isSyncReplicationNot) {
+        this.isSyncReplicationNot = isSyncReplicationNot;
+    }
+
+    public PermanentFailoverExecutionWhereInput isSyncReplicationNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
+        return this;
+    }
+
+    public PermanentFailoverExecutionWhereInput isSyncReplicationNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
+        return this;
+    }
+
+    public void setIsSyncReplicationNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
+        }
+    }
+
+    public boolean getIsSyncReplicationNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
+    }
+
     public PermanentFailoverExecutionWhereInput permanentFailoverTargetExecutionsEvery(
             PermanentFailoverTargetExecutionWhereInput permanentFailoverTargetExecutionsEvery) {
 
@@ -3008,6 +3104,12 @@ public class PermanentFailoverExecutionWhereInput
                 && Objects.equals(
                         this.idStartsWith, permanentFailoverExecutionWhereInput.idStartsWith)
                 && Objects.equals(
+                        this.isSyncReplication,
+                        permanentFailoverExecutionWhereInput.isSyncReplication)
+                && Objects.equals(
+                        this.isSyncReplicationNot,
+                        permanentFailoverExecutionWhereInput.isSyncReplicationNot)
+                && Objects.equals(
                         this.permanentFailoverTargetExecutionsEvery,
                         permanentFailoverExecutionWhereInput.permanentFailoverTargetExecutionsEvery)
                 && Objects.equals(
@@ -3101,6 +3203,8 @@ public class PermanentFailoverExecutionWhereInput
                 idNotIn,
                 idNotStartsWith,
                 idStartsWith,
+                isSyncReplication,
+                isSyncReplicationNot,
                 permanentFailoverTargetExecutionsEvery,
                 permanentFailoverTargetExecutionsNone,
                 permanentFailoverTargetExecutionsSome,
@@ -3174,6 +3278,12 @@ public class PermanentFailoverExecutionWhereInput
         sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
         sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
         sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+        sb.append("    isSyncReplication: ")
+                .append(toIndentedString(isSyncReplication))
+                .append("\n");
+        sb.append("    isSyncReplicationNot: ")
+                .append(toIndentedString(isSyncReplicationNot))
+                .append("\n");
         sb.append("    permanentFailoverTargetExecutionsEvery: ")
                 .append(toIndentedString(permanentFailoverTargetExecutionsEvery))
                 .append("\n");

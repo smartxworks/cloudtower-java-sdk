@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** ExternalCloudTowerWhereInput */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class ExternalCloudTowerWhereInput
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_A_N_D = "AND";
@@ -617,6 +617,24 @@ public class ExternalCloudTowerWhereInput
 
     @SerializedName(SERIALIZED_NAME_STATUS_NOT_IN)
     private List<ExternalCloudTowerStatus> statusNotIn = null;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY =
+            "sync_replication_plans_every";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY)
+    private SyncReplicationPlanWhereInput syncReplicationPlansEvery;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE =
+            "sync_replication_plans_none";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE)
+    private SyncReplicationPlanWhereInput syncReplicationPlansNone;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME =
+            "sync_replication_plans_some";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME)
+    private SyncReplicationPlanWhereInput syncReplicationPlansSome;
 
     public static final String SERIALIZED_NAME_UPDATED_AT = "updatedAt";
 
@@ -5928,6 +5946,141 @@ public class ExternalCloudTowerWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_STATUS_NOT_IN);
     }
 
+    public ExternalCloudTowerWhereInput syncReplicationPlansEvery(
+            SyncReplicationPlanWhereInput syncReplicationPlansEvery) {
+
+        this.syncReplicationPlansEvery = syncReplicationPlansEvery;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationPlansEvery
+     *
+     * @return syncReplicationPlansEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationPlanWhereInput getSyncReplicationPlansEvery() {
+        return syncReplicationPlansEvery;
+    }
+
+    public void setSyncReplicationPlansEvery(
+            SyncReplicationPlanWhereInput syncReplicationPlansEvery) {
+        this.syncReplicationPlansEvery = syncReplicationPlansEvery;
+    }
+
+    public ExternalCloudTowerWhereInput syncReplicationPlansEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+        return this;
+    }
+
+    public ExternalCloudTowerWhereInput syncReplicationPlansEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+        return this;
+    }
+
+    public void setSyncReplicationPlansEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+        }
+    }
+
+    public boolean getSyncReplicationPlansEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+    }
+
+    public ExternalCloudTowerWhereInput syncReplicationPlansNone(
+            SyncReplicationPlanWhereInput syncReplicationPlansNone) {
+
+        this.syncReplicationPlansNone = syncReplicationPlansNone;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationPlansNone
+     *
+     * @return syncReplicationPlansNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationPlanWhereInput getSyncReplicationPlansNone() {
+        return syncReplicationPlansNone;
+    }
+
+    public void setSyncReplicationPlansNone(
+            SyncReplicationPlanWhereInput syncReplicationPlansNone) {
+        this.syncReplicationPlansNone = syncReplicationPlansNone;
+    }
+
+    public ExternalCloudTowerWhereInput syncReplicationPlansNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+        return this;
+    }
+
+    public ExternalCloudTowerWhereInput syncReplicationPlansNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+        return this;
+    }
+
+    public void setSyncReplicationPlansNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+        }
+    }
+
+    public boolean getSyncReplicationPlansNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+    }
+
+    public ExternalCloudTowerWhereInput syncReplicationPlansSome(
+            SyncReplicationPlanWhereInput syncReplicationPlansSome) {
+
+        this.syncReplicationPlansSome = syncReplicationPlansSome;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationPlansSome
+     *
+     * @return syncReplicationPlansSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationPlanWhereInput getSyncReplicationPlansSome() {
+        return syncReplicationPlansSome;
+    }
+
+    public void setSyncReplicationPlansSome(
+            SyncReplicationPlanWhereInput syncReplicationPlansSome) {
+        this.syncReplicationPlansSome = syncReplicationPlansSome;
+    }
+
+    public ExternalCloudTowerWhereInput syncReplicationPlansSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+        return this;
+    }
+
+    public ExternalCloudTowerWhereInput syncReplicationPlansSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+        return this;
+    }
+
+    public void setSyncReplicationPlansSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+        }
+    }
+
+    public boolean getSyncReplicationPlansSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+    }
+
     public ExternalCloudTowerWhereInput updatedAt(String updatedAt) {
 
         this.updatedAt = updatedAt;
@@ -6523,6 +6676,15 @@ public class ExternalCloudTowerWhereInput
                 && Objects.equals(this.statusIn, externalCloudTowerWhereInput.statusIn)
                 && Objects.equals(this.statusNot, externalCloudTowerWhereInput.statusNot)
                 && Objects.equals(this.statusNotIn, externalCloudTowerWhereInput.statusNotIn)
+                && Objects.equals(
+                        this.syncReplicationPlansEvery,
+                        externalCloudTowerWhereInput.syncReplicationPlansEvery)
+                && Objects.equals(
+                        this.syncReplicationPlansNone,
+                        externalCloudTowerWhereInput.syncReplicationPlansNone)
+                && Objects.equals(
+                        this.syncReplicationPlansSome,
+                        externalCloudTowerWhereInput.syncReplicationPlansSome)
                 && Objects.equals(this.updatedAt, externalCloudTowerWhereInput.updatedAt)
                 && Objects.equals(this.updatedAtGt, externalCloudTowerWhereInput.updatedAtGt)
                 && Objects.equals(this.updatedAtGte, externalCloudTowerWhereInput.updatedAtGte)
@@ -6664,6 +6826,9 @@ public class ExternalCloudTowerWhereInput
                 statusIn,
                 statusNot,
                 statusNotIn,
+                syncReplicationPlansEvery,
+                syncReplicationPlansNone,
+                syncReplicationPlansSome,
                 updatedAt,
                 updatedAtGt,
                 updatedAtGte,
@@ -6872,6 +7037,15 @@ public class ExternalCloudTowerWhereInput
         sb.append("    statusIn: ").append(toIndentedString(statusIn)).append("\n");
         sb.append("    statusNot: ").append(toIndentedString(statusNot)).append("\n");
         sb.append("    statusNotIn: ").append(toIndentedString(statusNotIn)).append("\n");
+        sb.append("    syncReplicationPlansEvery: ")
+                .append(toIndentedString(syncReplicationPlansEvery))
+                .append("\n");
+        sb.append("    syncReplicationPlansNone: ")
+                .append(toIndentedString(syncReplicationPlansNone))
+                .append("\n");
+        sb.append("    syncReplicationPlansSome: ")
+                .append(toIndentedString(syncReplicationPlansSome))
+                .append("\n");
         sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
         sb.append("    updatedAtGt: ").append(toIndentedString(updatedAtGt)).append("\n");
         sb.append("    updatedAtGte: ").append(toIndentedString(updatedAtGte)).append("\n");

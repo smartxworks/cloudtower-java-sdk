@@ -1,5 +1,5 @@
 .gitignore
-LICENSE
+LICENSE.mustache
 README.md
 README.md
 api/openapi.yaml
@@ -97,6 +97,7 @@ src/main/java/com/smartx/tower/api/OvfApi.java
 src/main/java/com/smartx/tower/api/PciDeviceApi.java
 src/main/java/com/smartx/tower/api/PmemDimmApi.java
 src/main/java/com/smartx/tower/api/RackTopoApi.java
+src/main/java/com/smartx/tower/api/RegistryServiceApi.java
 src/main/java/com/smartx/tower/api/ReplicaVmApi.java
 src/main/java/com/smartx/tower/api/ReplicationPlanApi.java
 src/main/java/com/smartx/tower/api/ReplicationServiceApi.java
@@ -409,6 +410,7 @@ src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateUpdationClusterPara
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateUpdationClusterParamsData.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateUpdationParams.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateUpdationParamsData.java
+src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateUsage.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmTemplateWhereInput.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmdkCdromModify.java
 src/main/java/com/smartx/tower/model/ContentLibraryVmdkCdromMount.java
@@ -735,6 +737,8 @@ src/main/java/com/smartx/tower/model/GetPmemDimmsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetPmemDimmsRequestBody.java
 src/main/java/com/smartx/tower/model/GetRackTopoesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetRackTopoesRequestBody.java
+src/main/java/com/smartx/tower/model/GetRegistryServicesConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetRegistryServicesRequestBody.java
 src/main/java/com/smartx/tower/model/GetReplicaVmsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetReplicaVmsRequestBody.java
 src/main/java/com/smartx/tower/model/GetReplicationPlansConnectionRequestBody.java
@@ -980,6 +984,8 @@ src/main/java/com/smartx/tower/model/LicenseOrderByInput.java
 src/main/java/com/smartx/tower/model/LicenseType.java
 src/main/java/com/smartx/tower/model/LicenseUpdationParams.java
 src/main/java/com/smartx/tower/model/LicenseWhereInput.java
+src/main/java/com/smartx/tower/model/LoadBalancerInstanceGroupWhereInput.java
+src/main/java/com/smartx/tower/model/LoadBalancerInstanceWhereInput.java
 src/main/java/com/smartx/tower/model/LoadBalancerServiceWhereInput.java
 src/main/java/com/smartx/tower/model/LogCollection.java
 src/main/java/com/smartx/tower/model/LogCollectionConnection.java
@@ -1085,6 +1091,7 @@ src/main/java/com/smartx/tower/model/NestedAggregateNvmfSubsystem.java
 src/main/java/com/smartx/tower/model/NestedAggregateOrganization.java
 src/main/java/com/smartx/tower/model/NestedAggregatePmemDimm.java
 src/main/java/com/smartx/tower/model/NestedAggregateRackTopo.java
+src/main/java/com/smartx/tower/model/NestedAggregateRegistryService.java
 src/main/java/com/smartx/tower/model/NestedAggregateReplicaVm.java
 src/main/java/com/smartx/tower/model/NestedAggregateReplicationPlan.java
 src/main/java/com/smartx/tower/model/NestedAggregateReplicationService.java
@@ -1449,6 +1456,11 @@ src/main/java/com/smartx/tower/model/RackTopoOrderByInput.java
 src/main/java/com/smartx/tower/model/RackTopoUpdationParams.java
 src/main/java/com/smartx/tower/model/RackTopoUpdationParamsData.java
 src/main/java/com/smartx/tower/model/RackTopoWhereInput.java
+src/main/java/com/smartx/tower/model/RegistryService.java
+src/main/java/com/smartx/tower/model/RegistryServiceConnection.java
+src/main/java/com/smartx/tower/model/RegistryServiceOrderByInput.java
+src/main/java/com/smartx/tower/model/RegistryServiceUsage.java
+src/main/java/com/smartx/tower/model/RegistryServiceWhereInput.java
 src/main/java/com/smartx/tower/model/RemoveClustersFromDatacenterParams.java
 src/main/java/com/smartx/tower/model/ReplicaNameRule.java
 src/main/java/com/smartx/tower/model/ReplicaVm.java
@@ -1585,6 +1597,7 @@ src/main/java/com/smartx/tower/model/SvtImage.java
 src/main/java/com/smartx/tower/model/SvtImageConnection.java
 src/main/java/com/smartx/tower/model/SvtImageOrderByInput.java
 src/main/java/com/smartx/tower/model/SvtImageWhereInput.java
+src/main/java/com/smartx/tower/model/SyncReplicationPlanWhereInput.java
 src/main/java/com/smartx/tower/model/SystemAuditLog.java
 src/main/java/com/smartx/tower/model/SystemAuditLogConnection.java
 src/main/java/com/smartx/tower/model/SystemAuditLogOrderByInput.java
@@ -1885,6 +1898,7 @@ src/main/java/com/smartx/tower/model/VmPlacementGroupDeletionParams.java
 src/main/java/com/smartx/tower/model/VmPlacementGroupOrderByInput.java
 src/main/java/com/smartx/tower/model/VmPlacementGroupUpdationParams.java
 src/main/java/com/smartx/tower/model/VmPlacementGroupUpdationParamsData.java
+src/main/java/com/smartx/tower/model/VmPlacementGroupUsage.java
 src/main/java/com/smartx/tower/model/VmPlacementGroupWhereInput.java
 src/main/java/com/smartx/tower/model/VmRebuildParams.java
 src/main/java/com/smartx/tower/model/VmRemoveCdRomParams.java
@@ -1976,6 +1990,8 @@ src/main/java/com/smartx/tower/model/VmWhereInput.java
 src/main/java/com/smartx/tower/model/VmWhereUniqueInput.java
 src/main/java/com/smartx/tower/model/VmdkCdromModify.java
 src/main/java/com/smartx/tower/model/VmdkDiskModify.java
+src/main/java/com/smartx/tower/model/VnetBondGroupWhereInput.java
+src/main/java/com/smartx/tower/model/VnetBondNetworkType.java
 src/main/java/com/smartx/tower/model/VnetBondWhereInput.java
 src/main/java/com/smartx/tower/model/VpcNicParams.java
 src/main/java/com/smartx/tower/model/VsphereEsxiAccount.java

@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** EverouteCluster */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class EverouteCluster extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_AGENT_ELF_CLUSTERS = "agent_elf_clusters";
 
@@ -253,8 +253,8 @@ public class EverouteCluster extends com.smartx.tower.ConditionalNullable.Condit
      *
      * @return controllerTemplate
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public NestedEverouteControllerTemplate getControllerTemplate() {
         return controllerTemplate;
     }

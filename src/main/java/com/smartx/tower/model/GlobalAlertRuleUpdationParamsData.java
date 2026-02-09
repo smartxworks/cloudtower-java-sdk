@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 /** GlobalAlertRuleUpdationParamsData */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class GlobalAlertRuleUpdationParamsData
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_THRESHOLDS = "thresholds";

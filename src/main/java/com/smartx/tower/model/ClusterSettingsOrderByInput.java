@@ -30,6 +30,10 @@ public enum ClusterSettingsOrderByInput {
 
     DEFAULT_STORAGE_POLICY_REPLICA_NUM_DESC("default_storage_policy_replica_num_DESC"),
 
+    DEFAULT_STORAGE_POLICY_STRIPE_NUM_ASC("default_storage_policy_stripe_num_ASC"),
+
+    DEFAULT_STORAGE_POLICY_STRIPE_NUM_DESC("default_storage_policy_stripe_num_DESC"),
+
     DEFAULT_STORAGE_POLICY_THIN_PROVISION_ASC("default_storage_policy_thin_provision_ASC"),
 
     DEFAULT_STORAGE_POLICY_THIN_PROVISION_DESC("default_storage_policy_thin_provision_DESC"),

@@ -3,10 +3,12 @@ package com.smartx.tower.model;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Arrays;
 import java.util.Objects;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /** NestedEverouteControllerInstance */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class NestedEverouteControllerInstance
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_IP_ADDR = "ipAddr";
@@ -32,8 +34,8 @@ public class NestedEverouteControllerInstance
      *
      * @return ipAddr
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public String getIpAddr() {
         return ipAddr;
     }
@@ -75,8 +77,8 @@ public class NestedEverouteControllerInstance
      *
      * @return vlan
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public String getVlan() {
         return vlan;
     }
@@ -121,9 +123,25 @@ public class NestedEverouteControllerInstance
                 && Objects.equals(this.vlan, nestedEverouteControllerInstance.vlan);
     }
 
+    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+        return a == b
+                || (a != null
+                        && b != null
+                        && a.isPresent()
+                        && b.isPresent()
+                        && Objects.deepEquals(a.get(), b.get()));
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(ipAddr, vlan);
+    }
+
+    private static <T> int hashCodeNullable(JsonNullable<T> a) {
+        if (a == null) {
+            return 1;
+        }
+        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
     }
 
     @Override

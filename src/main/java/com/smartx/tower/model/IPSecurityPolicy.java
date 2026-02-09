@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 /** IPSecurityPolicy */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class IPSecurityPolicy extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_EXCEPT_IP_BLOCK = "except_ip_block";
 

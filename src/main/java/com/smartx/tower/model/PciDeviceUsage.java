@@ -16,6 +16,8 @@ public enum PciDeviceUsage {
 
     SRIOV_VF("SRIOV_VF"),
 
+    UNKNOWN("UNKNOWN"),
+
     PCIDEVICEUSAGE_UNSUPPORTED_ENUM("PCIDEVICEUSAGE_UNSUPPORTED_ENUM");
     private String value;
 

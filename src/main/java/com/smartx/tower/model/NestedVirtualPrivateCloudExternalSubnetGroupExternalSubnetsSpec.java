@@ -8,7 +8,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** NestedVirtualPrivateCloudExternalSubnetGroupExternalSubnetsSpec */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class NestedVirtualPrivateCloudExternalSubnetGroupExternalSubnetsSpec
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_CIDR = "cidr";

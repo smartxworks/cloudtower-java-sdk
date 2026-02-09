@@ -11,7 +11,7 @@ import java.util.Objects;
  * @deprecated
  */
 @Deprecated
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class InstallVmtoolsParamsData
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_SVT_IMAGE_ID = "svt_image_id";

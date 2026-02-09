@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** VnetBondWhereInput */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class VnetBondWhereInput
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_A_N_D = "AND";
@@ -47,6 +47,46 @@ public class VnetBondWhereInput
 
     @SerializedName(SERIALIZED_NAME_BOND_FOR_SERVER_NOT)
     private Boolean bondForServerNot;
+
+    public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT)
+    private String createdAt;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_GT = "createdAt_gt";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_GT)
+    private String createdAtGt;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_GTE = "createdAt_gte";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_GTE)
+    private String createdAtGte;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_IN = "createdAt_in";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_IN)
+    private List<String> createdAtIn = null;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_LT = "createdAt_lt";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_LT)
+    private String createdAtLt;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_LTE = "createdAt_lte";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_LTE)
+    private String createdAtLte;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_NOT = "createdAt_not";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_NOT)
+    private String createdAtNot;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_NOT_IN = "createdAt_not_in";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_NOT_IN)
+    private List<String> createdAtNotIn = null;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -138,6 +178,11 @@ public class VnetBondWhereInput
 
     @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
     private String idStartsWith;
+
+    public static final String SERIALIZED_NAME_LOAD_BALANCER_INSTANCE = "load_balancer_instance";
+
+    @SerializedName(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE)
+    private LoadBalancerInstanceWhereInput loadBalancerInstance;
 
     public static final String SERIALIZED_NAME_LOAD_BALANCER_SERVICE = "load_balancer_service";
 
@@ -356,10 +401,45 @@ public class VnetBondWhereInput
     @SerializedName(SERIALIZED_NAME_NAMESPACE_STARTS_WITH)
     private String namespaceStartsWith;
 
+    public static final String SERIALIZED_NAME_NETWORK_TYPE = "network_type";
+
+    @SerializedName(SERIALIZED_NAME_NETWORK_TYPE)
+    private VnetBondNetworkType networkType;
+
+    public static final String SERIALIZED_NAME_NETWORK_TYPE_IN = "network_type_in";
+
+    @SerializedName(SERIALIZED_NAME_NETWORK_TYPE_IN)
+    private List<VnetBondNetworkType> networkTypeIn = null;
+
+    public static final String SERIALIZED_NAME_NETWORK_TYPE_NOT = "network_type_not";
+
+    @SerializedName(SERIALIZED_NAME_NETWORK_TYPE_NOT)
+    private VnetBondNetworkType networkTypeNot;
+
+    public static final String SERIALIZED_NAME_NETWORK_TYPE_NOT_IN = "network_type_not_in";
+
+    @SerializedName(SERIALIZED_NAME_NETWORK_TYPE_NOT_IN)
+    private List<VnetBondNetworkType> networkTypeNotIn = null;
+
     public static final String SERIALIZED_NAME_VLAN = "vlan";
 
     @SerializedName(SERIALIZED_NAME_VLAN)
     private VlanWhereInput vlan;
+
+    public static final String SERIALIZED_NAME_VNET_BOND_GROUP = "vnet_bond_group";
+
+    @SerializedName(SERIALIZED_NAME_VNET_BOND_GROUP)
+    private VnetBondGroupWhereInput vnetBondGroup;
+
+    public static final String SERIALIZED_NAME_VPC = "vpc";
+
+    @SerializedName(SERIALIZED_NAME_VPC)
+    private VirtualPrivateCloudWhereInput vpc;
+
+    public static final String SERIALIZED_NAME_VPC_SUBNET = "vpc_subnet";
+
+    @SerializedName(SERIALIZED_NAME_VPC_SUBNET)
+    private VirtualPrivateCloudSubnetWhereInput vpcSubnet;
 
     public VnetBondWhereInput() {}
 
@@ -686,6 +766,366 @@ public class VnetBondWhereInput
 
     public boolean getBondForServerNot_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_BOND_FOR_SERVER_NOT);
+    }
+
+    public VnetBondWhereInput createdAt(String createdAt) {
+
+        this.createdAt = createdAt;
+        return this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return createdAt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public VnetBondWhereInput createdAt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT);
+        return this;
+    }
+
+    public VnetBondWhereInput createdAt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT);
+        return this;
+    }
+
+    public void setCreatedAt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT);
+        }
+    }
+
+    public boolean getCreatedAt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT);
+    }
+
+    public VnetBondWhereInput createdAtGt(String createdAtGt) {
+
+        this.createdAtGt = createdAtGt;
+        return this;
+    }
+
+    /**
+     * Get createdAtGt
+     *
+     * @return createdAtGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtGt() {
+        return createdAtGt;
+    }
+
+    public void setCreatedAtGt(String createdAtGt) {
+        this.createdAtGt = createdAtGt;
+    }
+
+    public VnetBondWhereInput createdAtGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_GT);
+        return this;
+    }
+
+    public VnetBondWhereInput createdAtGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_GT);
+        return this;
+    }
+
+    public void setCreatedAtGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_GT);
+        }
+    }
+
+    public boolean getCreatedAtGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_GT);
+    }
+
+    public VnetBondWhereInput createdAtGte(String createdAtGte) {
+
+        this.createdAtGte = createdAtGte;
+        return this;
+    }
+
+    /**
+     * Get createdAtGte
+     *
+     * @return createdAtGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtGte() {
+        return createdAtGte;
+    }
+
+    public void setCreatedAtGte(String createdAtGte) {
+        this.createdAtGte = createdAtGte;
+    }
+
+    public VnetBondWhereInput createdAtGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_GTE);
+        return this;
+    }
+
+    public VnetBondWhereInput createdAtGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_GTE);
+        return this;
+    }
+
+    public void setCreatedAtGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_GTE);
+        }
+    }
+
+    public boolean getCreatedAtGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_GTE);
+    }
+
+    public VnetBondWhereInput createdAtIn(List<String> createdAtIn) {
+
+        this.createdAtIn = createdAtIn;
+        return this;
+    }
+
+    public VnetBondWhereInput addCreatedAtInItem(String createdAtInItem) {
+        if (this.createdAtIn == null) {
+            this.createdAtIn = new ArrayList<String>();
+        }
+        this.createdAtIn.add(createdAtInItem);
+        return this;
+    }
+
+    /**
+     * Get createdAtIn
+     *
+     * @return createdAtIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getCreatedAtIn() {
+        return createdAtIn;
+    }
+
+    public void setCreatedAtIn(List<String> createdAtIn) {
+        this.createdAtIn = createdAtIn;
+    }
+
+    public VnetBondWhereInput createdAtIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_IN);
+        return this;
+    }
+
+    public VnetBondWhereInput createdAtIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_IN);
+        return this;
+    }
+
+    public void setCreatedAtIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_IN);
+        }
+    }
+
+    public boolean getCreatedAtIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_IN);
+    }
+
+    public VnetBondWhereInput createdAtLt(String createdAtLt) {
+
+        this.createdAtLt = createdAtLt;
+        return this;
+    }
+
+    /**
+     * Get createdAtLt
+     *
+     * @return createdAtLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtLt() {
+        return createdAtLt;
+    }
+
+    public void setCreatedAtLt(String createdAtLt) {
+        this.createdAtLt = createdAtLt;
+    }
+
+    public VnetBondWhereInput createdAtLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_LT);
+        return this;
+    }
+
+    public VnetBondWhereInput createdAtLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_LT);
+        return this;
+    }
+
+    public void setCreatedAtLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_LT);
+        }
+    }
+
+    public boolean getCreatedAtLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_LT);
+    }
+
+    public VnetBondWhereInput createdAtLte(String createdAtLte) {
+
+        this.createdAtLte = createdAtLte;
+        return this;
+    }
+
+    /**
+     * Get createdAtLte
+     *
+     * @return createdAtLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtLte() {
+        return createdAtLte;
+    }
+
+    public void setCreatedAtLte(String createdAtLte) {
+        this.createdAtLte = createdAtLte;
+    }
+
+    public VnetBondWhereInput createdAtLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_LTE);
+        return this;
+    }
+
+    public VnetBondWhereInput createdAtLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_LTE);
+        return this;
+    }
+
+    public void setCreatedAtLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_LTE);
+        }
+    }
+
+    public boolean getCreatedAtLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_LTE);
+    }
+
+    public VnetBondWhereInput createdAtNot(String createdAtNot) {
+
+        this.createdAtNot = createdAtNot;
+        return this;
+    }
+
+    /**
+     * Get createdAtNot
+     *
+     * @return createdAtNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtNot() {
+        return createdAtNot;
+    }
+
+    public void setCreatedAtNot(String createdAtNot) {
+        this.createdAtNot = createdAtNot;
+    }
+
+    public VnetBondWhereInput createdAtNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_NOT);
+        return this;
+    }
+
+    public VnetBondWhereInput createdAtNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_NOT);
+        return this;
+    }
+
+    public void setCreatedAtNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_NOT);
+        }
+    }
+
+    public boolean getCreatedAtNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_NOT);
+    }
+
+    public VnetBondWhereInput createdAtNotIn(List<String> createdAtNotIn) {
+
+        this.createdAtNotIn = createdAtNotIn;
+        return this;
+    }
+
+    public VnetBondWhereInput addCreatedAtNotInItem(String createdAtNotInItem) {
+        if (this.createdAtNotIn == null) {
+            this.createdAtNotIn = new ArrayList<String>();
+        }
+        this.createdAtNotIn.add(createdAtNotInItem);
+        return this;
+    }
+
+    /**
+     * Get createdAtNotIn
+     *
+     * @return createdAtNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getCreatedAtNotIn() {
+        return createdAtNotIn;
+    }
+
+    public void setCreatedAtNotIn(List<String> createdAtNotIn) {
+        this.createdAtNotIn = createdAtNotIn;
+    }
+
+    public VnetBondWhereInput createdAtNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+        return this;
+    }
+
+    public VnetBondWhereInput createdAtNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+        return this;
+    }
+
+    public void setCreatedAtNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+        }
+    }
+
+    public boolean getCreatedAtNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_NOT_IN);
     }
 
     public VnetBondWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -1495,6 +1935,50 @@ public class VnetBondWhereInput
 
     public boolean getIdStartsWith_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ID_STARTS_WITH);
+    }
+
+    public VnetBondWhereInput loadBalancerInstance(
+            LoadBalancerInstanceWhereInput loadBalancerInstance) {
+
+        this.loadBalancerInstance = loadBalancerInstance;
+        return this;
+    }
+
+    /**
+     * Get loadBalancerInstance
+     *
+     * @return loadBalancerInstance
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public LoadBalancerInstanceWhereInput getLoadBalancerInstance() {
+        return loadBalancerInstance;
+    }
+
+    public void setLoadBalancerInstance(LoadBalancerInstanceWhereInput loadBalancerInstance) {
+        this.loadBalancerInstance = loadBalancerInstance;
+    }
+
+    public VnetBondWhereInput loadBalancerInstance_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE);
+        return this;
+    }
+
+    public VnetBondWhereInput loadBalancerInstance_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE);
+        return this;
+    }
+
+    public void setLoadBalancerInstance_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE);
+        }
+    }
+
+    public boolean getLoadBalancerInstance_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LOAD_BALANCER_INSTANCE);
     }
 
     public VnetBondWhereInput loadBalancerService(
@@ -3395,6 +3879,194 @@ public class VnetBondWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_NAMESPACE_STARTS_WITH);
     }
 
+    public VnetBondWhereInput networkType(VnetBondNetworkType networkType) {
+
+        this.networkType = networkType;
+        return this;
+    }
+
+    /**
+     * Get networkType
+     *
+     * @return networkType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VnetBondNetworkType getNetworkType() {
+        return networkType;
+    }
+
+    public void setNetworkType(VnetBondNetworkType networkType) {
+        this.networkType = networkType;
+    }
+
+    public VnetBondWhereInput networkType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NETWORK_TYPE);
+        return this;
+    }
+
+    public VnetBondWhereInput networkType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NETWORK_TYPE);
+        return this;
+    }
+
+    public void setNetworkType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NETWORK_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NETWORK_TYPE);
+        }
+    }
+
+    public boolean getNetworkType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NETWORK_TYPE);
+    }
+
+    public VnetBondWhereInput networkTypeIn(List<VnetBondNetworkType> networkTypeIn) {
+
+        this.networkTypeIn = networkTypeIn;
+        return this;
+    }
+
+    public VnetBondWhereInput addNetworkTypeInItem(VnetBondNetworkType networkTypeInItem) {
+        if (this.networkTypeIn == null) {
+            this.networkTypeIn = new ArrayList<VnetBondNetworkType>();
+        }
+        this.networkTypeIn.add(networkTypeInItem);
+        return this;
+    }
+
+    /**
+     * Get networkTypeIn
+     *
+     * @return networkTypeIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VnetBondNetworkType> getNetworkTypeIn() {
+        return networkTypeIn;
+    }
+
+    public void setNetworkTypeIn(List<VnetBondNetworkType> networkTypeIn) {
+        this.networkTypeIn = networkTypeIn;
+    }
+
+    public VnetBondWhereInput networkTypeIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NETWORK_TYPE_IN);
+        return this;
+    }
+
+    public VnetBondWhereInput networkTypeIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NETWORK_TYPE_IN);
+        return this;
+    }
+
+    public void setNetworkTypeIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NETWORK_TYPE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NETWORK_TYPE_IN);
+        }
+    }
+
+    public boolean getNetworkTypeIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NETWORK_TYPE_IN);
+    }
+
+    public VnetBondWhereInput networkTypeNot(VnetBondNetworkType networkTypeNot) {
+
+        this.networkTypeNot = networkTypeNot;
+        return this;
+    }
+
+    /**
+     * Get networkTypeNot
+     *
+     * @return networkTypeNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VnetBondNetworkType getNetworkTypeNot() {
+        return networkTypeNot;
+    }
+
+    public void setNetworkTypeNot(VnetBondNetworkType networkTypeNot) {
+        this.networkTypeNot = networkTypeNot;
+    }
+
+    public VnetBondWhereInput networkTypeNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NETWORK_TYPE_NOT);
+        return this;
+    }
+
+    public VnetBondWhereInput networkTypeNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NETWORK_TYPE_NOT);
+        return this;
+    }
+
+    public void setNetworkTypeNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NETWORK_TYPE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NETWORK_TYPE_NOT);
+        }
+    }
+
+    public boolean getNetworkTypeNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NETWORK_TYPE_NOT);
+    }
+
+    public VnetBondWhereInput networkTypeNotIn(List<VnetBondNetworkType> networkTypeNotIn) {
+
+        this.networkTypeNotIn = networkTypeNotIn;
+        return this;
+    }
+
+    public VnetBondWhereInput addNetworkTypeNotInItem(VnetBondNetworkType networkTypeNotInItem) {
+        if (this.networkTypeNotIn == null) {
+            this.networkTypeNotIn = new ArrayList<VnetBondNetworkType>();
+        }
+        this.networkTypeNotIn.add(networkTypeNotInItem);
+        return this;
+    }
+
+    /**
+     * Get networkTypeNotIn
+     *
+     * @return networkTypeNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<VnetBondNetworkType> getNetworkTypeNotIn() {
+        return networkTypeNotIn;
+    }
+
+    public void setNetworkTypeNotIn(List<VnetBondNetworkType> networkTypeNotIn) {
+        this.networkTypeNotIn = networkTypeNotIn;
+    }
+
+    public VnetBondWhereInput networkTypeNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_NETWORK_TYPE_NOT_IN);
+        return this;
+    }
+
+    public VnetBondWhereInput networkTypeNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_NETWORK_TYPE_NOT_IN);
+        return this;
+    }
+
+    public void setNetworkTypeNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_NETWORK_TYPE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_NETWORK_TYPE_NOT_IN);
+        }
+    }
+
+    public boolean getNetworkTypeNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_NETWORK_TYPE_NOT_IN);
+    }
+
     public VnetBondWhereInput vlan(VlanWhereInput vlan) {
 
         this.vlan = vlan;
@@ -3438,6 +4110,135 @@ public class VnetBondWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_VLAN);
     }
 
+    public VnetBondWhereInput vnetBondGroup(VnetBondGroupWhereInput vnetBondGroup) {
+
+        this.vnetBondGroup = vnetBondGroup;
+        return this;
+    }
+
+    /**
+     * Get vnetBondGroup
+     *
+     * @return vnetBondGroup
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VnetBondGroupWhereInput getVnetBondGroup() {
+        return vnetBondGroup;
+    }
+
+    public void setVnetBondGroup(VnetBondGroupWhereInput vnetBondGroup) {
+        this.vnetBondGroup = vnetBondGroup;
+    }
+
+    public VnetBondWhereInput vnetBondGroup_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VNET_BOND_GROUP);
+        return this;
+    }
+
+    public VnetBondWhereInput vnetBondGroup_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VNET_BOND_GROUP);
+        return this;
+    }
+
+    public void setVnetBondGroup_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VNET_BOND_GROUP);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VNET_BOND_GROUP);
+        }
+    }
+
+    public boolean getVnetBondGroup_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VNET_BOND_GROUP);
+    }
+
+    public VnetBondWhereInput vpc(VirtualPrivateCloudWhereInput vpc) {
+
+        this.vpc = vpc;
+        return this;
+    }
+
+    /**
+     * Get vpc
+     *
+     * @return vpc
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VirtualPrivateCloudWhereInput getVpc() {
+        return vpc;
+    }
+
+    public void setVpc(VirtualPrivateCloudWhereInput vpc) {
+        this.vpc = vpc;
+    }
+
+    public VnetBondWhereInput vpc_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VPC);
+        return this;
+    }
+
+    public VnetBondWhereInput vpc_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VPC);
+        return this;
+    }
+
+    public void setVpc_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VPC);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VPC);
+        }
+    }
+
+    public boolean getVpc_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VPC);
+    }
+
+    public VnetBondWhereInput vpcSubnet(VirtualPrivateCloudSubnetWhereInput vpcSubnet) {
+
+        this.vpcSubnet = vpcSubnet;
+        return this;
+    }
+
+    /**
+     * Get vpcSubnet
+     *
+     * @return vpcSubnet
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VirtualPrivateCloudSubnetWhereInput getVpcSubnet() {
+        return vpcSubnet;
+    }
+
+    public void setVpcSubnet(VirtualPrivateCloudSubnetWhereInput vpcSubnet) {
+        this.vpcSubnet = vpcSubnet;
+    }
+
+    public VnetBondWhereInput vpcSubnet_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VPC_SUBNET);
+        return this;
+    }
+
+    public VnetBondWhereInput vpcSubnet_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VPC_SUBNET);
+        return this;
+    }
+
+    public void setVpcSubnet_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VPC_SUBNET);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VPC_SUBNET);
+        }
+    }
+
+    public boolean getVpcSubnet_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VPC_SUBNET);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -3454,6 +4255,14 @@ public class VnetBondWhereInput
                 && Objects.equals(this.bondForClientNot, vnetBondWhereInput.bondForClientNot)
                 && Objects.equals(this.bondForServer, vnetBondWhereInput.bondForServer)
                 && Objects.equals(this.bondForServerNot, vnetBondWhereInput.bondForServerNot)
+                && Objects.equals(this.createdAt, vnetBondWhereInput.createdAt)
+                && Objects.equals(this.createdAtGt, vnetBondWhereInput.createdAtGt)
+                && Objects.equals(this.createdAtGte, vnetBondWhereInput.createdAtGte)
+                && Objects.equals(this.createdAtIn, vnetBondWhereInput.createdAtIn)
+                && Objects.equals(this.createdAtLt, vnetBondWhereInput.createdAtLt)
+                && Objects.equals(this.createdAtLte, vnetBondWhereInput.createdAtLte)
+                && Objects.equals(this.createdAtNot, vnetBondWhereInput.createdAtNot)
+                && Objects.equals(this.createdAtNotIn, vnetBondWhereInput.createdAtNotIn)
                 && Objects.equals(this.entityAsyncStatus, vnetBondWhereInput.entityAsyncStatus)
                 && Objects.equals(this.entityAsyncStatusIn, vnetBondWhereInput.entityAsyncStatusIn)
                 && Objects.equals(
@@ -3474,6 +4283,8 @@ public class VnetBondWhereInput
                 && Objects.equals(this.idNotIn, vnetBondWhereInput.idNotIn)
                 && Objects.equals(this.idNotStartsWith, vnetBondWhereInput.idNotStartsWith)
                 && Objects.equals(this.idStartsWith, vnetBondWhereInput.idStartsWith)
+                && Objects.equals(
+                        this.loadBalancerInstance, vnetBondWhereInput.loadBalancerInstance)
                 && Objects.equals(this.loadBalancerService, vnetBondWhereInput.loadBalancerService)
                 && Objects.equals(this.localId, vnetBondWhereInput.localId)
                 && Objects.equals(this.localIdContains, vnetBondWhereInput.localIdContains)
@@ -3521,7 +4332,14 @@ public class VnetBondWhereInput
                 && Objects.equals(
                         this.namespaceNotStartsWith, vnetBondWhereInput.namespaceNotStartsWith)
                 && Objects.equals(this.namespaceStartsWith, vnetBondWhereInput.namespaceStartsWith)
-                && Objects.equals(this.vlan, vnetBondWhereInput.vlan);
+                && Objects.equals(this.networkType, vnetBondWhereInput.networkType)
+                && Objects.equals(this.networkTypeIn, vnetBondWhereInput.networkTypeIn)
+                && Objects.equals(this.networkTypeNot, vnetBondWhereInput.networkTypeNot)
+                && Objects.equals(this.networkTypeNotIn, vnetBondWhereInput.networkTypeNotIn)
+                && Objects.equals(this.vlan, vnetBondWhereInput.vlan)
+                && Objects.equals(this.vnetBondGroup, vnetBondWhereInput.vnetBondGroup)
+                && Objects.equals(this.vpc, vnetBondWhereInput.vpc)
+                && Objects.equals(this.vpcSubnet, vnetBondWhereInput.vpcSubnet);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -3543,6 +4361,14 @@ public class VnetBondWhereInput
                 bondForClientNot,
                 bondForServer,
                 bondForServerNot,
+                createdAt,
+                createdAtGt,
+                createdAtGte,
+                createdAtIn,
+                createdAtLt,
+                createdAtLte,
+                createdAtNot,
+                createdAtNotIn,
                 entityAsyncStatus,
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
@@ -3561,6 +4387,7 @@ public class VnetBondWhereInput
                 idNotIn,
                 idNotStartsWith,
                 idStartsWith,
+                loadBalancerInstance,
                 loadBalancerService,
                 localId,
                 localIdContains,
@@ -3604,7 +4431,14 @@ public class VnetBondWhereInput
                 namespaceNotIn,
                 namespaceNotStartsWith,
                 namespaceStartsWith,
-                vlan);
+                networkType,
+                networkTypeIn,
+                networkTypeNot,
+                networkTypeNotIn,
+                vlan,
+                vnetBondGroup,
+                vpc,
+                vpcSubnet);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -3625,6 +4459,14 @@ public class VnetBondWhereInput
         sb.append("    bondForClientNot: ").append(toIndentedString(bondForClientNot)).append("\n");
         sb.append("    bondForServer: ").append(toIndentedString(bondForServer)).append("\n");
         sb.append("    bondForServerNot: ").append(toIndentedString(bondForServerNot)).append("\n");
+        sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+        sb.append("    createdAtGt: ").append(toIndentedString(createdAtGt)).append("\n");
+        sb.append("    createdAtGte: ").append(toIndentedString(createdAtGte)).append("\n");
+        sb.append("    createdAtIn: ").append(toIndentedString(createdAtIn)).append("\n");
+        sb.append("    createdAtLt: ").append(toIndentedString(createdAtLt)).append("\n");
+        sb.append("    createdAtLte: ").append(toIndentedString(createdAtLte)).append("\n");
+        sb.append("    createdAtNot: ").append(toIndentedString(createdAtNot)).append("\n");
+        sb.append("    createdAtNotIn: ").append(toIndentedString(createdAtNotIn)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -3651,6 +4493,9 @@ public class VnetBondWhereInput
         sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
         sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
         sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+        sb.append("    loadBalancerInstance: ")
+                .append(toIndentedString(loadBalancerInstance))
+                .append("\n");
         sb.append("    loadBalancerService: ")
                 .append(toIndentedString(loadBalancerService))
                 .append("\n");
@@ -3718,7 +4563,14 @@ public class VnetBondWhereInput
         sb.append("    namespaceStartsWith: ")
                 .append(toIndentedString(namespaceStartsWith))
                 .append("\n");
+        sb.append("    networkType: ").append(toIndentedString(networkType)).append("\n");
+        sb.append("    networkTypeIn: ").append(toIndentedString(networkTypeIn)).append("\n");
+        sb.append("    networkTypeNot: ").append(toIndentedString(networkTypeNot)).append("\n");
+        sb.append("    networkTypeNotIn: ").append(toIndentedString(networkTypeNotIn)).append("\n");
         sb.append("    vlan: ").append(toIndentedString(vlan)).append("\n");
+        sb.append("    vnetBondGroup: ").append(toIndentedString(vnetBondGroup)).append("\n");
+        sb.append("    vpc: ").append(toIndentedString(vpc)).append("\n");
+        sb.append("    vpcSubnet: ").append(toIndentedString(vpcSubnet)).append("\n");
         sb.append("}");
         return sb.toString();
     }

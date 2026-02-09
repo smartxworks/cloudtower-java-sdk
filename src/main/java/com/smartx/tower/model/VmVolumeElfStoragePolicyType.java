@@ -1,6 +1,5 @@
 package com.smartx.tower.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -33,6 +32,7 @@ public enum VmVolumeElfStoragePolicyType {
     _3_THIN_PROVISION("REPLICA_3_THIN_PROVISION"),
 
     VMVOLUMEELFSTORAGEPOLICYTYPE_UNSUPPORTED_ENUM("VMVOLUMEELFSTORAGEPOLICYTYPE_UNSUPPORTED_ENUM");
+
     private String value;
 
     VmVolumeElfStoragePolicyType(String value) {
