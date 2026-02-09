@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** ClusterSettingsWhereInput */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class ClusterSettingsWhereInput
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_A_N_D = "AND";
@@ -209,6 +209,54 @@ public class ClusterSettingsWhereInput
 
     @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM_NOT_IN)
     private List<Integer> defaultStoragePolicyReplicaNumNotIn = null;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM =
+            "default_storage_policy_stripe_num";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM)
+    private Integer defaultStoragePolicyStripeNum;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GT =
+            "default_storage_policy_stripe_num_gt";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GT)
+    private Integer defaultStoragePolicyStripeNumGt;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GTE =
+            "default_storage_policy_stripe_num_gte";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GTE)
+    private Integer defaultStoragePolicyStripeNumGte;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_IN =
+            "default_storage_policy_stripe_num_in";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_IN)
+    private List<Integer> defaultStoragePolicyStripeNumIn = null;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LT =
+            "default_storage_policy_stripe_num_lt";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LT)
+    private Integer defaultStoragePolicyStripeNumLt;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LTE =
+            "default_storage_policy_stripe_num_lte";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LTE)
+    private Integer defaultStoragePolicyStripeNumLte;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT =
+            "default_storage_policy_stripe_num_not";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT)
+    private Integer defaultStoragePolicyStripeNumNot;
+
+    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT_IN =
+            "default_storage_policy_stripe_num_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT_IN)
+    private List<Integer> defaultStoragePolicyStripeNumNotIn = null;
 
     public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_THIN_PROVISION =
             "default_storage_policy_thin_provision";
@@ -1888,6 +1936,377 @@ public class ClusterSettingsWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM_NOT_IN);
     }
 
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNum(
+            Integer defaultStoragePolicyStripeNum) {
+
+        this.defaultStoragePolicyStripeNum = defaultStoragePolicyStripeNum;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyStripeNum
+     *
+     * @return defaultStoragePolicyStripeNum
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getDefaultStoragePolicyStripeNum() {
+        return defaultStoragePolicyStripeNum;
+    }
+
+    public void setDefaultStoragePolicyStripeNum(Integer defaultStoragePolicyStripeNum) {
+        this.defaultStoragePolicyStripeNum = defaultStoragePolicyStripeNum;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNum_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
+        return this;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNum_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyStripeNum_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyStripeNum_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumGt(
+            Integer defaultStoragePolicyStripeNumGt) {
+
+        this.defaultStoragePolicyStripeNumGt = defaultStoragePolicyStripeNumGt;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyStripeNumGt
+     *
+     * @return defaultStoragePolicyStripeNumGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getDefaultStoragePolicyStripeNumGt() {
+        return defaultStoragePolicyStripeNumGt;
+    }
+
+    public void setDefaultStoragePolicyStripeNumGt(Integer defaultStoragePolicyStripeNumGt) {
+        this.defaultStoragePolicyStripeNumGt = defaultStoragePolicyStripeNumGt;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GT);
+        return this;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GT);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyStripeNumGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GT);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyStripeNumGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GT);
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumGte(
+            Integer defaultStoragePolicyStripeNumGte) {
+
+        this.defaultStoragePolicyStripeNumGte = defaultStoragePolicyStripeNumGte;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyStripeNumGte
+     *
+     * @return defaultStoragePolicyStripeNumGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getDefaultStoragePolicyStripeNumGte() {
+        return defaultStoragePolicyStripeNumGte;
+    }
+
+    public void setDefaultStoragePolicyStripeNumGte(Integer defaultStoragePolicyStripeNumGte) {
+        this.defaultStoragePolicyStripeNumGte = defaultStoragePolicyStripeNumGte;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GTE);
+        return this;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GTE);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyStripeNumGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GTE);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyStripeNumGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_GTE);
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumIn(
+            List<Integer> defaultStoragePolicyStripeNumIn) {
+
+        this.defaultStoragePolicyStripeNumIn = defaultStoragePolicyStripeNumIn;
+        return this;
+    }
+
+    public ClusterSettingsWhereInput addDefaultStoragePolicyStripeNumInItem(
+            Integer defaultStoragePolicyStripeNumInItem) {
+        if (this.defaultStoragePolicyStripeNumIn == null) {
+            this.defaultStoragePolicyStripeNumIn = new ArrayList<Integer>();
+        }
+        this.defaultStoragePolicyStripeNumIn.add(defaultStoragePolicyStripeNumInItem);
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyStripeNumIn
+     *
+     * @return defaultStoragePolicyStripeNumIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getDefaultStoragePolicyStripeNumIn() {
+        return defaultStoragePolicyStripeNumIn;
+    }
+
+    public void setDefaultStoragePolicyStripeNumIn(List<Integer> defaultStoragePolicyStripeNumIn) {
+        this.defaultStoragePolicyStripeNumIn = defaultStoragePolicyStripeNumIn;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_IN);
+        return this;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_IN);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyStripeNumIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_IN);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyStripeNumIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_IN);
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumLt(
+            Integer defaultStoragePolicyStripeNumLt) {
+
+        this.defaultStoragePolicyStripeNumLt = defaultStoragePolicyStripeNumLt;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyStripeNumLt
+     *
+     * @return defaultStoragePolicyStripeNumLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getDefaultStoragePolicyStripeNumLt() {
+        return defaultStoragePolicyStripeNumLt;
+    }
+
+    public void setDefaultStoragePolicyStripeNumLt(Integer defaultStoragePolicyStripeNumLt) {
+        this.defaultStoragePolicyStripeNumLt = defaultStoragePolicyStripeNumLt;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LT);
+        return this;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LT);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyStripeNumLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LT);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyStripeNumLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LT);
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumLte(
+            Integer defaultStoragePolicyStripeNumLte) {
+
+        this.defaultStoragePolicyStripeNumLte = defaultStoragePolicyStripeNumLte;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyStripeNumLte
+     *
+     * @return defaultStoragePolicyStripeNumLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getDefaultStoragePolicyStripeNumLte() {
+        return defaultStoragePolicyStripeNumLte;
+    }
+
+    public void setDefaultStoragePolicyStripeNumLte(Integer defaultStoragePolicyStripeNumLte) {
+        this.defaultStoragePolicyStripeNumLte = defaultStoragePolicyStripeNumLte;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LTE);
+        return this;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LTE);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyStripeNumLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LTE);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyStripeNumLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_LTE);
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumNot(
+            Integer defaultStoragePolicyStripeNumNot) {
+
+        this.defaultStoragePolicyStripeNumNot = defaultStoragePolicyStripeNumNot;
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyStripeNumNot
+     *
+     * @return defaultStoragePolicyStripeNumNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getDefaultStoragePolicyStripeNumNot() {
+        return defaultStoragePolicyStripeNumNot;
+    }
+
+    public void setDefaultStoragePolicyStripeNumNot(Integer defaultStoragePolicyStripeNumNot) {
+        this.defaultStoragePolicyStripeNumNot = defaultStoragePolicyStripeNumNot;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT);
+        return this;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyStripeNumNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyStripeNumNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT);
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumNotIn(
+            List<Integer> defaultStoragePolicyStripeNumNotIn) {
+
+        this.defaultStoragePolicyStripeNumNotIn = defaultStoragePolicyStripeNumNotIn;
+        return this;
+    }
+
+    public ClusterSettingsWhereInput addDefaultStoragePolicyStripeNumNotInItem(
+            Integer defaultStoragePolicyStripeNumNotInItem) {
+        if (this.defaultStoragePolicyStripeNumNotIn == null) {
+            this.defaultStoragePolicyStripeNumNotIn = new ArrayList<Integer>();
+        }
+        this.defaultStoragePolicyStripeNumNotIn.add(defaultStoragePolicyStripeNumNotInItem);
+        return this;
+    }
+
+    /**
+     * Get defaultStoragePolicyStripeNumNotIn
+     *
+     * @return defaultStoragePolicyStripeNumNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getDefaultStoragePolicyStripeNumNotIn() {
+        return defaultStoragePolicyStripeNumNotIn;
+    }
+
+    public void setDefaultStoragePolicyStripeNumNotIn(
+            List<Integer> defaultStoragePolicyStripeNumNotIn) {
+        this.defaultStoragePolicyStripeNumNotIn = defaultStoragePolicyStripeNumNotIn;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+        return this;
+    }
+
+    public ClusterSettingsWhereInput defaultStoragePolicyStripeNumNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+        return this;
+    }
+
+    public void setDefaultStoragePolicyStripeNumNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+        }
+    }
+
+    public boolean getDefaultStoragePolicyStripeNumNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM_NOT_IN);
+    }
+
     public ClusterSettingsWhereInput defaultStoragePolicyThinProvision(
             Boolean defaultStoragePolicyThinProvision) {
 
@@ -2780,6 +3199,30 @@ public class ClusterSettingsWhereInput
                         this.defaultStoragePolicyReplicaNumNotIn,
                         clusterSettingsWhereInput.defaultStoragePolicyReplicaNumNotIn)
                 && Objects.equals(
+                        this.defaultStoragePolicyStripeNum,
+                        clusterSettingsWhereInput.defaultStoragePolicyStripeNum)
+                && Objects.equals(
+                        this.defaultStoragePolicyStripeNumGt,
+                        clusterSettingsWhereInput.defaultStoragePolicyStripeNumGt)
+                && Objects.equals(
+                        this.defaultStoragePolicyStripeNumGte,
+                        clusterSettingsWhereInput.defaultStoragePolicyStripeNumGte)
+                && Objects.equals(
+                        this.defaultStoragePolicyStripeNumIn,
+                        clusterSettingsWhereInput.defaultStoragePolicyStripeNumIn)
+                && Objects.equals(
+                        this.defaultStoragePolicyStripeNumLt,
+                        clusterSettingsWhereInput.defaultStoragePolicyStripeNumLt)
+                && Objects.equals(
+                        this.defaultStoragePolicyStripeNumLte,
+                        clusterSettingsWhereInput.defaultStoragePolicyStripeNumLte)
+                && Objects.equals(
+                        this.defaultStoragePolicyStripeNumNot,
+                        clusterSettingsWhereInput.defaultStoragePolicyStripeNumNot)
+                && Objects.equals(
+                        this.defaultStoragePolicyStripeNumNotIn,
+                        clusterSettingsWhereInput.defaultStoragePolicyStripeNumNotIn)
+                && Objects.equals(
                         this.defaultStoragePolicyThinProvision,
                         clusterSettingsWhereInput.defaultStoragePolicyThinProvision)
                 && Objects.equals(
@@ -2849,6 +3292,14 @@ public class ClusterSettingsWhereInput
                 defaultStoragePolicyReplicaNumLte,
                 defaultStoragePolicyReplicaNumNot,
                 defaultStoragePolicyReplicaNumNotIn,
+                defaultStoragePolicyStripeNum,
+                defaultStoragePolicyStripeNumGt,
+                defaultStoragePolicyStripeNumGte,
+                defaultStoragePolicyStripeNumIn,
+                defaultStoragePolicyStripeNumLt,
+                defaultStoragePolicyStripeNumLte,
+                defaultStoragePolicyStripeNumNot,
+                defaultStoragePolicyStripeNumNotIn,
                 defaultStoragePolicyThinProvision,
                 defaultStoragePolicyThinProvisionNot,
                 enabledIscsi,
@@ -2969,6 +3420,30 @@ public class ClusterSettingsWhereInput
                 .append("\n");
         sb.append("    defaultStoragePolicyReplicaNumNotIn: ")
                 .append(toIndentedString(defaultStoragePolicyReplicaNumNotIn))
+                .append("\n");
+        sb.append("    defaultStoragePolicyStripeNum: ")
+                .append(toIndentedString(defaultStoragePolicyStripeNum))
+                .append("\n");
+        sb.append("    defaultStoragePolicyStripeNumGt: ")
+                .append(toIndentedString(defaultStoragePolicyStripeNumGt))
+                .append("\n");
+        sb.append("    defaultStoragePolicyStripeNumGte: ")
+                .append(toIndentedString(defaultStoragePolicyStripeNumGte))
+                .append("\n");
+        sb.append("    defaultStoragePolicyStripeNumIn: ")
+                .append(toIndentedString(defaultStoragePolicyStripeNumIn))
+                .append("\n");
+        sb.append("    defaultStoragePolicyStripeNumLt: ")
+                .append(toIndentedString(defaultStoragePolicyStripeNumLt))
+                .append("\n");
+        sb.append("    defaultStoragePolicyStripeNumLte: ")
+                .append(toIndentedString(defaultStoragePolicyStripeNumLte))
+                .append("\n");
+        sb.append("    defaultStoragePolicyStripeNumNot: ")
+                .append(toIndentedString(defaultStoragePolicyStripeNumNot))
+                .append("\n");
+        sb.append("    defaultStoragePolicyStripeNumNotIn: ")
+                .append(toIndentedString(defaultStoragePolicyStripeNumNotIn))
                 .append("\n");
         sb.append("    defaultStoragePolicyThinProvision: ")
                 .append(toIndentedString(defaultStoragePolicyThinProvision))

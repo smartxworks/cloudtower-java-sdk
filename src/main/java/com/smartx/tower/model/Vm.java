@@ -10,8 +10,13 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** Vm */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_ANTI_MALWARE_ENABLED = "anti_malware_enabled";
+
+    @SerializedName(SERIALIZED_NAME_ANTI_MALWARE_ENABLED)
+    private Boolean antiMalwareEnabled;
+
     public static final String SERIALIZED_NAME_BACKUP_PLANS = "backup_plans";
 
     @SerializedName(SERIALIZED_NAME_BACKUP_PLANS)
@@ -66,6 +71,11 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
 
     @SerializedName(SERIALIZED_NAME_DNS_SERVERS)
     private String dnsServers;
+
+    public static final String SERIALIZED_NAME_DPI_ENABLED = "dpi_enabled";
+
+    @SerializedName(SERIALIZED_NAME_DPI_ENABLED)
+    private Boolean dpiEnabled;
 
     public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
 
@@ -146,6 +156,16 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
 
     @SerializedName(SERIALIZED_NAME_INTERNAL)
     private Boolean internal;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT = "internal_product";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT)
+    private String internalProduct;
+
+    public static final String SERIALIZED_NAME_INTERNAL_PRODUCT_NAME = "internal_product_name";
+
+    @SerializedName(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME)
+    private String internalProductName;
 
     public static final String SERIALIZED_NAME_IO_POLICY = "io_policy";
 
@@ -358,6 +378,49 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
     private Boolean winOpt;
 
     public Vm() {}
+
+    public Vm antiMalwareEnabled(Boolean antiMalwareEnabled) {
+
+        this.antiMalwareEnabled = antiMalwareEnabled;
+        return this;
+    }
+
+    /**
+     * Get antiMalwareEnabled
+     *
+     * @return antiMalwareEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getAntiMalwareEnabled() {
+        return antiMalwareEnabled;
+    }
+
+    public void setAntiMalwareEnabled(Boolean antiMalwareEnabled) {
+        this.antiMalwareEnabled = antiMalwareEnabled;
+    }
+
+    public Vm antiMalwareEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        return this;
+    }
+
+    public Vm antiMalwareEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        return this;
+    }
+
+    public void setAntiMalwareEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+        }
+    }
+
+    public boolean getAntiMalwareEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ANTI_MALWARE_ENABLED);
+    }
 
     public Vm backupPlans(List<NestedBackupPlan> backupPlans) {
 
@@ -838,6 +901,49 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
 
     public boolean getDnsServers_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DNS_SERVERS);
+    }
+
+    public Vm dpiEnabled(Boolean dpiEnabled) {
+
+        this.dpiEnabled = dpiEnabled;
+        return this;
+    }
+
+    /**
+     * Get dpiEnabled
+     *
+     * @return dpiEnabled
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getDpiEnabled() {
+        return dpiEnabled;
+    }
+
+    public void setDpiEnabled(Boolean dpiEnabled) {
+        this.dpiEnabled = dpiEnabled;
+    }
+
+    public Vm dpiEnabled_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public Vm dpiEnabled_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        return this;
+    }
+
+    public void setDpiEnabled_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DPI_ENABLED);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DPI_ENABLED);
+        }
+    }
+
+    public boolean getDpiEnabled_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DPI_ENABLED);
     }
 
     public Vm entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
@@ -1542,6 +1648,92 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
 
     public boolean getInternal_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL);
+    }
+
+    public Vm internalProduct(String internalProduct) {
+
+        this.internalProduct = internalProduct;
+        return this;
+    }
+
+    /**
+     * Get internalProduct
+     *
+     * @return internalProduct
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProduct() {
+        return internalProduct;
+    }
+
+    public void setInternalProduct(String internalProduct) {
+        this.internalProduct = internalProduct;
+    }
+
+    public Vm internalProduct_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        return this;
+    }
+
+    public Vm internalProduct_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        return this;
+    }
+
+    public void setInternalProduct_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT);
+        }
+    }
+
+    public boolean getInternalProduct_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT);
+    }
+
+    public Vm internalProductName(String internalProductName) {
+
+        this.internalProductName = internalProductName;
+        return this;
+    }
+
+    /**
+     * Get internalProductName
+     *
+     * @return internalProductName
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getInternalProductName() {
+        return internalProductName;
+    }
+
+    public void setInternalProductName(String internalProductName) {
+        this.internalProductName = internalProductName;
+    }
+
+    public Vm internalProductName_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        return this;
+    }
+
+    public Vm internalProductName_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        return this;
+    }
+
+    public void setInternalProductName_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
+        }
+    }
+
+    public boolean getInternalProductName_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_INTERNAL_PRODUCT_NAME);
     }
 
     public Vm ioPolicy(VmDiskIoPolicy ioPolicy) {
@@ -3420,7 +3612,8 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
             return false;
         }
         Vm vm = (Vm) o;
-        return Objects.equals(this.backupPlans, vm.backupPlans)
+        return Objects.equals(this.antiMalwareEnabled, vm.antiMalwareEnabled)
+                && Objects.equals(this.backupPlans, vm.backupPlans)
                 && Objects.equals(this.biosUuid, vm.biosUuid)
                 && Objects.equals(this.clockOffset, vm.clockOffset)
                 && Objects.equals(this.cloudInitSupported, vm.cloudInitSupported)
@@ -3431,6 +3624,7 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.deletedAt, vm.deletedAt)
                 && Objects.equals(this.description, vm.description)
                 && Objects.equals(this.dnsServers, vm.dnsServers)
+                && Objects.equals(this.dpiEnabled, vm.dpiEnabled)
                 && Objects.equals(this.entityAsyncStatus, vm.entityAsyncStatus)
                 && Objects.equals(this.entityFilterResults, vm.entityFilterResults)
                 && Objects.equals(this.firmware, vm.firmware)
@@ -3447,6 +3641,8 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
                 && Objects.equals(this.id, vm.id)
                 && Objects.equals(this.inRecycleBin, vm.inRecycleBin)
                 && Objects.equals(this.internal, vm.internal)
+                && Objects.equals(this.internalProduct, vm.internalProduct)
+                && Objects.equals(this.internalProductName, vm.internalProductName)
                 && Objects.equals(this.ioPolicy, vm.ioPolicy)
                 && Objects.equals(this.ips, vm.ips)
                 && Objects.equals(this.isolationPolicy, vm.isolationPolicy)
@@ -3503,6 +3699,7 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
     @Override
     public int hashCode() {
         return Objects.hash(
+                antiMalwareEnabled,
                 backupPlans,
                 biosUuid,
                 clockOffset,
@@ -3514,6 +3711,7 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
                 deletedAt,
                 description,
                 dnsServers,
+                dpiEnabled,
                 entityAsyncStatus,
                 entityFilterResults,
                 firmware,
@@ -3530,6 +3728,8 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
                 id,
                 inRecycleBin,
                 internal,
+                internalProduct,
+                internalProductName,
                 ioPolicy,
                 ips,
                 isolationPolicy,
@@ -3585,6 +3785,9 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class Vm {\n");
+        sb.append("    antiMalwareEnabled: ")
+                .append(toIndentedString(antiMalwareEnabled))
+                .append("\n");
         sb.append("    backupPlans: ").append(toIndentedString(backupPlans)).append("\n");
         sb.append("    biosUuid: ").append(toIndentedString(biosUuid)).append("\n");
         sb.append("    clockOffset: ").append(toIndentedString(clockOffset)).append("\n");
@@ -3598,6 +3801,7 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
         sb.append("    deletedAt: ").append(toIndentedString(deletedAt)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    dnsServers: ").append(toIndentedString(dnsServers)).append("\n");
+        sb.append("    dpiEnabled: ").append(toIndentedString(dpiEnabled)).append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
@@ -3618,6 +3822,10 @@ public class Vm extends com.smartx.tower.ConditionalNullable.ConditionalNullable
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    inRecycleBin: ").append(toIndentedString(inRecycleBin)).append("\n");
         sb.append("    internal: ").append(toIndentedString(internal)).append("\n");
+        sb.append("    internalProduct: ").append(toIndentedString(internalProduct)).append("\n");
+        sb.append("    internalProductName: ")
+                .append(toIndentedString(internalProductName))
+                .append("\n");
         sb.append("    ioPolicy: ").append(toIndentedString(ioPolicy)).append("\n");
         sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
         sb.append("    isolationPolicy: ").append(toIndentedString(isolationPolicy)).append("\n");

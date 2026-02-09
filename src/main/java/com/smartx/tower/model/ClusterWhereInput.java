@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** ClusterWhereInput */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class ClusterWhereInput
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_A_N_D = "AND";
@@ -531,6 +531,88 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_DATACENTERS_SOME)
     private DatacenterWhereInput datacentersSome;
 
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE = "dirty_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE)
+    private Long dirtyCacheSpace;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT = "dirty_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT)
+    private Long dirtyCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE = "dirty_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE)
+    private Long dirtyCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN = "dirty_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN)
+    private List<Long> dirtyCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT = "dirty_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT)
+    private Long dirtyCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE = "dirty_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE)
+    private Long dirtyCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT = "dirty_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT)
+    private Long dirtyCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN =
+            "dirty_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN)
+    private List<Long> dirtyCacheSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE = "dirty_cache_usage";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE)
+    private Double dirtyCacheUsage;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT = "dirty_cache_usage_gt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT)
+    private Double dirtyCacheUsageGt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE = "dirty_cache_usage_gte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE)
+    private Double dirtyCacheUsageGte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN = "dirty_cache_usage_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN)
+    private List<Double> dirtyCacheUsageIn = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT = "dirty_cache_usage_lt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT)
+    private Double dirtyCacheUsageLt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE = "dirty_cache_usage_lte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE)
+    private Double dirtyCacheUsageLte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT = "dirty_cache_usage_not";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT)
+    private Double dirtyCacheUsageNot;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN =
+            "dirty_cache_usage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN)
+    private List<Double> dirtyCacheUsageNotIn = null;
+
     public static final String SERIALIZED_NAME_DISCONNECTED_DATE = "disconnected_date";
 
     @SerializedName(SERIALIZED_NAME_DISCONNECTED_DATE)
@@ -681,6 +763,47 @@ public class ClusterWhereInput
 
     @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
     private EverouteClusterWhereInput everouteCluster;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE = "failure_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE)
+    private Long failureCacheSpace;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT = "failure_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT)
+    private Long failureCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE = "failure_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE)
+    private Long failureCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN = "failure_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN)
+    private List<Long> failureCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT = "failure_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT)
+    private Long failureCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE = "failure_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE)
+    private Long failureCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT = "failure_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT)
+    private Long failureCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN =
+            "failure_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN)
+    private List<Long> failureCacheSpaceNotIn = null;
 
     public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
 
@@ -7972,6 +8095,726 @@ public class ClusterWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_DATACENTERS_SOME);
     }
 
+    public ClusterWhereInput dirtyCacheSpace(Long dirtyCacheSpace) {
+
+        this.dirtyCacheSpace = dirtyCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpace
+     *
+     * @return dirtyCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpace() {
+        return dirtyCacheSpace;
+    }
+
+    public void setDirtyCacheSpace(Long dirtyCacheSpace) {
+        this.dirtyCacheSpace = dirtyCacheSpace;
+    }
+
+    public ClusterWhereInput dirtyCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public void setDirtyCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        }
+    }
+
+    public boolean getDirtyCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceGt(Long dirtyCacheSpaceGt) {
+
+        this.dirtyCacheSpaceGt = dirtyCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceGt
+     *
+     * @return dirtyCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceGt() {
+        return dirtyCacheSpaceGt;
+    }
+
+    public void setDirtyCacheSpaceGt(Long dirtyCacheSpaceGt) {
+        this.dirtyCacheSpaceGt = dirtyCacheSpaceGt;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceGte(Long dirtyCacheSpaceGte) {
+
+        this.dirtyCacheSpaceGte = dirtyCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceGte
+     *
+     * @return dirtyCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceGte() {
+        return dirtyCacheSpaceGte;
+    }
+
+    public void setDirtyCacheSpaceGte(Long dirtyCacheSpaceGte) {
+        this.dirtyCacheSpaceGte = dirtyCacheSpaceGte;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceIn(List<Long> dirtyCacheSpaceIn) {
+
+        this.dirtyCacheSpaceIn = dirtyCacheSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDirtyCacheSpaceInItem(Long dirtyCacheSpaceInItem) {
+        if (this.dirtyCacheSpaceIn == null) {
+            this.dirtyCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.dirtyCacheSpaceIn.add(dirtyCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceIn
+     *
+     * @return dirtyCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDirtyCacheSpaceIn() {
+        return dirtyCacheSpaceIn;
+    }
+
+    public void setDirtyCacheSpaceIn(List<Long> dirtyCacheSpaceIn) {
+        this.dirtyCacheSpaceIn = dirtyCacheSpaceIn;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceLt(Long dirtyCacheSpaceLt) {
+
+        this.dirtyCacheSpaceLt = dirtyCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceLt
+     *
+     * @return dirtyCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceLt() {
+        return dirtyCacheSpaceLt;
+    }
+
+    public void setDirtyCacheSpaceLt(Long dirtyCacheSpaceLt) {
+        this.dirtyCacheSpaceLt = dirtyCacheSpaceLt;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceLte(Long dirtyCacheSpaceLte) {
+
+        this.dirtyCacheSpaceLte = dirtyCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceLte
+     *
+     * @return dirtyCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceLte() {
+        return dirtyCacheSpaceLte;
+    }
+
+    public void setDirtyCacheSpaceLte(Long dirtyCacheSpaceLte) {
+        this.dirtyCacheSpaceLte = dirtyCacheSpaceLte;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceNot(Long dirtyCacheSpaceNot) {
+
+        this.dirtyCacheSpaceNot = dirtyCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceNot
+     *
+     * @return dirtyCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceNot() {
+        return dirtyCacheSpaceNot;
+    }
+
+    public void setDirtyCacheSpaceNot(Long dirtyCacheSpaceNot) {
+        this.dirtyCacheSpaceNot = dirtyCacheSpaceNot;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceNotIn(List<Long> dirtyCacheSpaceNotIn) {
+
+        this.dirtyCacheSpaceNotIn = dirtyCacheSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDirtyCacheSpaceNotInItem(Long dirtyCacheSpaceNotInItem) {
+        if (this.dirtyCacheSpaceNotIn == null) {
+            this.dirtyCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.dirtyCacheSpaceNotIn.add(dirtyCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceNotIn
+     *
+     * @return dirtyCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDirtyCacheSpaceNotIn() {
+        return dirtyCacheSpaceNotIn;
+    }
+
+    public void setDirtyCacheSpaceNotIn(List<Long> dirtyCacheSpaceNotIn) {
+        this.dirtyCacheSpaceNotIn = dirtyCacheSpaceNotIn;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+    }
+
+    public ClusterWhereInput dirtyCacheUsage(Double dirtyCacheUsage) {
+
+        this.dirtyCacheUsage = dirtyCacheUsage;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsage
+     *
+     * @return dirtyCacheUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsage() {
+        return dirtyCacheUsage;
+    }
+
+    public void setDirtyCacheUsage(Double dirtyCacheUsage) {
+        this.dirtyCacheUsage = dirtyCacheUsage;
+    }
+
+    public ClusterWhereInput dirtyCacheUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public void setDirtyCacheUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        }
+    }
+
+    public boolean getDirtyCacheUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+    }
+
+    public ClusterWhereInput dirtyCacheUsageGt(Double dirtyCacheUsageGt) {
+
+        this.dirtyCacheUsageGt = dirtyCacheUsageGt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageGt
+     *
+     * @return dirtyCacheUsageGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageGt() {
+        return dirtyCacheUsageGt;
+    }
+
+    public void setDirtyCacheUsageGt(Double dirtyCacheUsageGt) {
+        this.dirtyCacheUsageGt = dirtyCacheUsageGt;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        return this;
+    }
+
+    public void setDirtyCacheUsageGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        }
+    }
+
+    public boolean getDirtyCacheUsageGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+    }
+
+    public ClusterWhereInput dirtyCacheUsageGte(Double dirtyCacheUsageGte) {
+
+        this.dirtyCacheUsageGte = dirtyCacheUsageGte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageGte
+     *
+     * @return dirtyCacheUsageGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageGte() {
+        return dirtyCacheUsageGte;
+    }
+
+    public void setDirtyCacheUsageGte(Double dirtyCacheUsageGte) {
+        this.dirtyCacheUsageGte = dirtyCacheUsageGte;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        return this;
+    }
+
+    public void setDirtyCacheUsageGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        }
+    }
+
+    public boolean getDirtyCacheUsageGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+    }
+
+    public ClusterWhereInput dirtyCacheUsageIn(List<Double> dirtyCacheUsageIn) {
+
+        this.dirtyCacheUsageIn = dirtyCacheUsageIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDirtyCacheUsageInItem(Double dirtyCacheUsageInItem) {
+        if (this.dirtyCacheUsageIn == null) {
+            this.dirtyCacheUsageIn = new ArrayList<Double>();
+        }
+        this.dirtyCacheUsageIn.add(dirtyCacheUsageInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageIn
+     *
+     * @return dirtyCacheUsageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDirtyCacheUsageIn() {
+        return dirtyCacheUsageIn;
+    }
+
+    public void setDirtyCacheUsageIn(List<Double> dirtyCacheUsageIn) {
+        this.dirtyCacheUsageIn = dirtyCacheUsageIn;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        return this;
+    }
+
+    public void setDirtyCacheUsageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        }
+    }
+
+    public boolean getDirtyCacheUsageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+    }
+
+    public ClusterWhereInput dirtyCacheUsageLt(Double dirtyCacheUsageLt) {
+
+        this.dirtyCacheUsageLt = dirtyCacheUsageLt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageLt
+     *
+     * @return dirtyCacheUsageLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageLt() {
+        return dirtyCacheUsageLt;
+    }
+
+    public void setDirtyCacheUsageLt(Double dirtyCacheUsageLt) {
+        this.dirtyCacheUsageLt = dirtyCacheUsageLt;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        return this;
+    }
+
+    public void setDirtyCacheUsageLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        }
+    }
+
+    public boolean getDirtyCacheUsageLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+    }
+
+    public ClusterWhereInput dirtyCacheUsageLte(Double dirtyCacheUsageLte) {
+
+        this.dirtyCacheUsageLte = dirtyCacheUsageLte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageLte
+     *
+     * @return dirtyCacheUsageLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageLte() {
+        return dirtyCacheUsageLte;
+    }
+
+    public void setDirtyCacheUsageLte(Double dirtyCacheUsageLte) {
+        this.dirtyCacheUsageLte = dirtyCacheUsageLte;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        return this;
+    }
+
+    public void setDirtyCacheUsageLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        }
+    }
+
+    public boolean getDirtyCacheUsageLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+    }
+
+    public ClusterWhereInput dirtyCacheUsageNot(Double dirtyCacheUsageNot) {
+
+        this.dirtyCacheUsageNot = dirtyCacheUsageNot;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageNot
+     *
+     * @return dirtyCacheUsageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageNot() {
+        return dirtyCacheUsageNot;
+    }
+
+    public void setDirtyCacheUsageNot(Double dirtyCacheUsageNot) {
+        this.dirtyCacheUsageNot = dirtyCacheUsageNot;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        return this;
+    }
+
+    public void setDirtyCacheUsageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        }
+    }
+
+    public boolean getDirtyCacheUsageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+    }
+
+    public ClusterWhereInput dirtyCacheUsageNotIn(List<Double> dirtyCacheUsageNotIn) {
+
+        this.dirtyCacheUsageNotIn = dirtyCacheUsageNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addDirtyCacheUsageNotInItem(Double dirtyCacheUsageNotInItem) {
+        if (this.dirtyCacheUsageNotIn == null) {
+            this.dirtyCacheUsageNotIn = new ArrayList<Double>();
+        }
+        this.dirtyCacheUsageNotIn.add(dirtyCacheUsageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageNotIn
+     *
+     * @return dirtyCacheUsageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDirtyCacheUsageNotIn() {
+        return dirtyCacheUsageNotIn;
+    }
+
+    public void setDirtyCacheUsageNotIn(List<Double> dirtyCacheUsageNotIn) {
+        this.dirtyCacheUsageNotIn = dirtyCacheUsageNotIn;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput dirtyCacheUsageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public void setDirtyCacheUsageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        }
+    }
+
+    public boolean getDirtyCacheUsageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+    }
+
     public ClusterWhereInput disconnectedDate(String disconnectedDate) {
 
         this.disconnectedDate = disconnectedDate;
@@ -9249,6 +10092,366 @@ public class ClusterWhereInput
 
     public boolean getEverouteCluster_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_EVEROUTE_CLUSTER);
+    }
+
+    public ClusterWhereInput failureCacheSpace(Long failureCacheSpace) {
+
+        this.failureCacheSpace = failureCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpace
+     *
+     * @return failureCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpace() {
+        return failureCacheSpace;
+    }
+
+    public void setFailureCacheSpace(Long failureCacheSpace) {
+        this.failureCacheSpace = failureCacheSpace;
+    }
+
+    public ClusterWhereInput failureCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public ClusterWhereInput failureCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public void setFailureCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        }
+    }
+
+    public boolean getFailureCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+    }
+
+    public ClusterWhereInput failureCacheSpaceGt(Long failureCacheSpaceGt) {
+
+        this.failureCacheSpaceGt = failureCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceGt
+     *
+     * @return failureCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceGt() {
+        return failureCacheSpaceGt;
+    }
+
+    public void setFailureCacheSpaceGt(Long failureCacheSpaceGt) {
+        this.failureCacheSpaceGt = failureCacheSpaceGt;
+    }
+
+    public ClusterWhereInput failureCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput failureCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setFailureCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getFailureCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+    }
+
+    public ClusterWhereInput failureCacheSpaceGte(Long failureCacheSpaceGte) {
+
+        this.failureCacheSpaceGte = failureCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceGte
+     *
+     * @return failureCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceGte() {
+        return failureCacheSpaceGte;
+    }
+
+    public void setFailureCacheSpaceGte(Long failureCacheSpaceGte) {
+        this.failureCacheSpaceGte = failureCacheSpaceGte;
+    }
+
+    public ClusterWhereInput failureCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput failureCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setFailureCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getFailureCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+    }
+
+    public ClusterWhereInput failureCacheSpaceIn(List<Long> failureCacheSpaceIn) {
+
+        this.failureCacheSpaceIn = failureCacheSpaceIn;
+        return this;
+    }
+
+    public ClusterWhereInput addFailureCacheSpaceInItem(Long failureCacheSpaceInItem) {
+        if (this.failureCacheSpaceIn == null) {
+            this.failureCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.failureCacheSpaceIn.add(failureCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceIn
+     *
+     * @return failureCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getFailureCacheSpaceIn() {
+        return failureCacheSpaceIn;
+    }
+
+    public void setFailureCacheSpaceIn(List<Long> failureCacheSpaceIn) {
+        this.failureCacheSpaceIn = failureCacheSpaceIn;
+    }
+
+    public ClusterWhereInput failureCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput failureCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setFailureCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getFailureCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+    }
+
+    public ClusterWhereInput failureCacheSpaceLt(Long failureCacheSpaceLt) {
+
+        this.failureCacheSpaceLt = failureCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceLt
+     *
+     * @return failureCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceLt() {
+        return failureCacheSpaceLt;
+    }
+
+    public void setFailureCacheSpaceLt(Long failureCacheSpaceLt) {
+        this.failureCacheSpaceLt = failureCacheSpaceLt;
+    }
+
+    public ClusterWhereInput failureCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput failureCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setFailureCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getFailureCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+    }
+
+    public ClusterWhereInput failureCacheSpaceLte(Long failureCacheSpaceLte) {
+
+        this.failureCacheSpaceLte = failureCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceLte
+     *
+     * @return failureCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceLte() {
+        return failureCacheSpaceLte;
+    }
+
+    public void setFailureCacheSpaceLte(Long failureCacheSpaceLte) {
+        this.failureCacheSpaceLte = failureCacheSpaceLte;
+    }
+
+    public ClusterWhereInput failureCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput failureCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setFailureCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getFailureCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+    }
+
+    public ClusterWhereInput failureCacheSpaceNot(Long failureCacheSpaceNot) {
+
+        this.failureCacheSpaceNot = failureCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceNot
+     *
+     * @return failureCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceNot() {
+        return failureCacheSpaceNot;
+    }
+
+    public void setFailureCacheSpaceNot(Long failureCacheSpaceNot) {
+        this.failureCacheSpaceNot = failureCacheSpaceNot;
+    }
+
+    public ClusterWhereInput failureCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput failureCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setFailureCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getFailureCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+    }
+
+    public ClusterWhereInput failureCacheSpaceNotIn(List<Long> failureCacheSpaceNotIn) {
+
+        this.failureCacheSpaceNotIn = failureCacheSpaceNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addFailureCacheSpaceNotInItem(Long failureCacheSpaceNotInItem) {
+        if (this.failureCacheSpaceNotIn == null) {
+            this.failureCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.failureCacheSpaceNotIn.add(failureCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceNotIn
+     *
+     * @return failureCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getFailureCacheSpaceNotIn() {
+        return failureCacheSpaceNotIn;
+    }
+
+    public void setFailureCacheSpaceNotIn(List<Long> failureCacheSpaceNotIn) {
+        this.failureCacheSpaceNotIn = failureCacheSpaceNotIn;
+    }
+
+    public ClusterWhereInput failureCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput failureCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setFailureCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getFailureCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
     }
 
     public ClusterWhereInput failureDataSpace(Long failureDataSpace) {
@@ -35860,6 +37063,22 @@ public class ClusterWhereInput
                 && Objects.equals(this.datacentersEvery, clusterWhereInput.datacentersEvery)
                 && Objects.equals(this.datacentersNone, clusterWhereInput.datacentersNone)
                 && Objects.equals(this.datacentersSome, clusterWhereInput.datacentersSome)
+                && Objects.equals(this.dirtyCacheSpace, clusterWhereInput.dirtyCacheSpace)
+                && Objects.equals(this.dirtyCacheSpaceGt, clusterWhereInput.dirtyCacheSpaceGt)
+                && Objects.equals(this.dirtyCacheSpaceGte, clusterWhereInput.dirtyCacheSpaceGte)
+                && Objects.equals(this.dirtyCacheSpaceIn, clusterWhereInput.dirtyCacheSpaceIn)
+                && Objects.equals(this.dirtyCacheSpaceLt, clusterWhereInput.dirtyCacheSpaceLt)
+                && Objects.equals(this.dirtyCacheSpaceLte, clusterWhereInput.dirtyCacheSpaceLte)
+                && Objects.equals(this.dirtyCacheSpaceNot, clusterWhereInput.dirtyCacheSpaceNot)
+                && Objects.equals(this.dirtyCacheSpaceNotIn, clusterWhereInput.dirtyCacheSpaceNotIn)
+                && Objects.equals(this.dirtyCacheUsage, clusterWhereInput.dirtyCacheUsage)
+                && Objects.equals(this.dirtyCacheUsageGt, clusterWhereInput.dirtyCacheUsageGt)
+                && Objects.equals(this.dirtyCacheUsageGte, clusterWhereInput.dirtyCacheUsageGte)
+                && Objects.equals(this.dirtyCacheUsageIn, clusterWhereInput.dirtyCacheUsageIn)
+                && Objects.equals(this.dirtyCacheUsageLt, clusterWhereInput.dirtyCacheUsageLt)
+                && Objects.equals(this.dirtyCacheUsageLte, clusterWhereInput.dirtyCacheUsageLte)
+                && Objects.equals(this.dirtyCacheUsageNot, clusterWhereInput.dirtyCacheUsageNot)
+                && Objects.equals(this.dirtyCacheUsageNotIn, clusterWhereInput.dirtyCacheUsageNotIn)
                 && Objects.equals(this.disconnectedDate, clusterWhereInput.disconnectedDate)
                 && Objects.equals(this.disconnectedDateGt, clusterWhereInput.disconnectedDateGt)
                 && Objects.equals(this.disconnectedDateGte, clusterWhereInput.disconnectedDateGte)
@@ -35908,6 +37127,15 @@ public class ClusterWhereInput
                 && Objects.equals(
                         this.entityAsyncStatusNotIn, clusterWhereInput.entityAsyncStatusNotIn)
                 && Objects.equals(this.everouteCluster, clusterWhereInput.everouteCluster)
+                && Objects.equals(this.failureCacheSpace, clusterWhereInput.failureCacheSpace)
+                && Objects.equals(this.failureCacheSpaceGt, clusterWhereInput.failureCacheSpaceGt)
+                && Objects.equals(this.failureCacheSpaceGte, clusterWhereInput.failureCacheSpaceGte)
+                && Objects.equals(this.failureCacheSpaceIn, clusterWhereInput.failureCacheSpaceIn)
+                && Objects.equals(this.failureCacheSpaceLt, clusterWhereInput.failureCacheSpaceLt)
+                && Objects.equals(this.failureCacheSpaceLte, clusterWhereInput.failureCacheSpaceLte)
+                && Objects.equals(this.failureCacheSpaceNot, clusterWhereInput.failureCacheSpaceNot)
+                && Objects.equals(
+                        this.failureCacheSpaceNotIn, clusterWhereInput.failureCacheSpaceNotIn)
                 && Objects.equals(this.failureDataSpace, clusterWhereInput.failureDataSpace)
                 && Objects.equals(this.failureDataSpaceGt, clusterWhereInput.failureDataSpaceGt)
                 && Objects.equals(this.failureDataSpaceGte, clusterWhereInput.failureDataSpaceGte)
@@ -36837,6 +38065,22 @@ public class ClusterWhereInput
                 datacentersEvery,
                 datacentersNone,
                 datacentersSome,
+                dirtyCacheSpace,
+                dirtyCacheSpaceGt,
+                dirtyCacheSpaceGte,
+                dirtyCacheSpaceIn,
+                dirtyCacheSpaceLt,
+                dirtyCacheSpaceLte,
+                dirtyCacheSpaceNot,
+                dirtyCacheSpaceNotIn,
+                dirtyCacheUsage,
+                dirtyCacheUsageGt,
+                dirtyCacheUsageGte,
+                dirtyCacheUsageIn,
+                dirtyCacheUsageLt,
+                dirtyCacheUsageLte,
+                dirtyCacheUsageNot,
+                dirtyCacheUsageNotIn,
                 disconnectedDate,
                 disconnectedDateGt,
                 disconnectedDateGte,
@@ -36865,6 +38109,14 @@ public class ClusterWhereInput
                 entityAsyncStatusNot,
                 entityAsyncStatusNotIn,
                 everouteCluster,
+                failureCacheSpace,
+                failureCacheSpaceGt,
+                failureCacheSpaceGte,
+                failureCacheSpaceIn,
+                failureCacheSpaceLt,
+                failureCacheSpaceLte,
+                failureCacheSpaceNot,
+                failureCacheSpaceNotIn,
                 failureDataSpace,
                 failureDataSpaceGt,
                 failureDataSpaceGte,
@@ -37710,6 +38962,50 @@ public class ClusterWhereInput
         sb.append("    datacentersEvery: ").append(toIndentedString(datacentersEvery)).append("\n");
         sb.append("    datacentersNone: ").append(toIndentedString(datacentersNone)).append("\n");
         sb.append("    datacentersSome: ").append(toIndentedString(datacentersSome)).append("\n");
+        sb.append("    dirtyCacheSpace: ").append(toIndentedString(dirtyCacheSpace)).append("\n");
+        sb.append("    dirtyCacheSpaceGt: ")
+                .append(toIndentedString(dirtyCacheSpaceGt))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceGte: ")
+                .append(toIndentedString(dirtyCacheSpaceGte))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceIn: ")
+                .append(toIndentedString(dirtyCacheSpaceIn))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceLt: ")
+                .append(toIndentedString(dirtyCacheSpaceLt))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceLte: ")
+                .append(toIndentedString(dirtyCacheSpaceLte))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceNot: ")
+                .append(toIndentedString(dirtyCacheSpaceNot))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceNotIn: ")
+                .append(toIndentedString(dirtyCacheSpaceNotIn))
+                .append("\n");
+        sb.append("    dirtyCacheUsage: ").append(toIndentedString(dirtyCacheUsage)).append("\n");
+        sb.append("    dirtyCacheUsageGt: ")
+                .append(toIndentedString(dirtyCacheUsageGt))
+                .append("\n");
+        sb.append("    dirtyCacheUsageGte: ")
+                .append(toIndentedString(dirtyCacheUsageGte))
+                .append("\n");
+        sb.append("    dirtyCacheUsageIn: ")
+                .append(toIndentedString(dirtyCacheUsageIn))
+                .append("\n");
+        sb.append("    dirtyCacheUsageLt: ")
+                .append(toIndentedString(dirtyCacheUsageLt))
+                .append("\n");
+        sb.append("    dirtyCacheUsageLte: ")
+                .append(toIndentedString(dirtyCacheUsageLte))
+                .append("\n");
+        sb.append("    dirtyCacheUsageNot: ")
+                .append(toIndentedString(dirtyCacheUsageNot))
+                .append("\n");
+        sb.append("    dirtyCacheUsageNotIn: ")
+                .append(toIndentedString(dirtyCacheUsageNotIn))
+                .append("\n");
         sb.append("    disconnectedDate: ").append(toIndentedString(disconnectedDate)).append("\n");
         sb.append("    disconnectedDateGt: ")
                 .append(toIndentedString(disconnectedDateGt))
@@ -37784,6 +39080,30 @@ public class ClusterWhereInput
                 .append(toIndentedString(entityAsyncStatusNotIn))
                 .append("\n");
         sb.append("    everouteCluster: ").append(toIndentedString(everouteCluster)).append("\n");
+        sb.append("    failureCacheSpace: ")
+                .append(toIndentedString(failureCacheSpace))
+                .append("\n");
+        sb.append("    failureCacheSpaceGt: ")
+                .append(toIndentedString(failureCacheSpaceGt))
+                .append("\n");
+        sb.append("    failureCacheSpaceGte: ")
+                .append(toIndentedString(failureCacheSpaceGte))
+                .append("\n");
+        sb.append("    failureCacheSpaceIn: ")
+                .append(toIndentedString(failureCacheSpaceIn))
+                .append("\n");
+        sb.append("    failureCacheSpaceLt: ")
+                .append(toIndentedString(failureCacheSpaceLt))
+                .append("\n");
+        sb.append("    failureCacheSpaceLte: ")
+                .append(toIndentedString(failureCacheSpaceLte))
+                .append("\n");
+        sb.append("    failureCacheSpaceNot: ")
+                .append(toIndentedString(failureCacheSpaceNot))
+                .append("\n");
+        sb.append("    failureCacheSpaceNotIn: ")
+                .append(toIndentedString(failureCacheSpaceNotIn))
+                .append("\n");
         sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
         sb.append("    failureDataSpaceGt: ")
                 .append(toIndentedString(failureDataSpaceGt))

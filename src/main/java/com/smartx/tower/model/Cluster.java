@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** Cluster */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED =
             "access_write_compress_enabled";
@@ -86,6 +86,16 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_DATACENTERS)
     private List<NestedDatacenter> datacenters = null;
 
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE = "dirty_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE)
+    private Long dirtyCacheSpace;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE = "dirty_cache_usage";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE)
+    private Double dirtyCacheUsage;
+
     public static final String SERIALIZED_NAME_DISCONNECTED_DATE = "disconnected_date";
 
     @SerializedName(SERIALIZED_NAME_DISCONNECTED_DATE)
@@ -126,6 +136,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     @SerializedName(SERIALIZED_NAME_EVEROUTE_CLUSTER)
     private NestedEverouteCluster everouteCluster;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE = "failure_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE)
+    private Long failureCacheSpace;
 
     public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
 
@@ -1206,6 +1221,92 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         return this._isPresent_.contains(SERIALIZED_NAME_DATACENTERS);
     }
 
+    public Cluster dirtyCacheSpace(Long dirtyCacheSpace) {
+
+        this.dirtyCacheSpace = dirtyCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpace
+     *
+     * @return dirtyCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpace() {
+        return dirtyCacheSpace;
+    }
+
+    public void setDirtyCacheSpace(Long dirtyCacheSpace) {
+        this.dirtyCacheSpace = dirtyCacheSpace;
+    }
+
+    public Cluster dirtyCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public Cluster dirtyCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public void setDirtyCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        }
+    }
+
+    public boolean getDirtyCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+    }
+
+    public Cluster dirtyCacheUsage(Double dirtyCacheUsage) {
+
+        this.dirtyCacheUsage = dirtyCacheUsage;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsage
+     *
+     * @return dirtyCacheUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsage() {
+        return dirtyCacheUsage;
+    }
+
+    public void setDirtyCacheUsage(Double dirtyCacheUsage) {
+        this.dirtyCacheUsage = dirtyCacheUsage;
+    }
+
+    public Cluster dirtyCacheUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public Cluster dirtyCacheUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public void setDirtyCacheUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        }
+    }
+
+    public boolean getDirtyCacheUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+    }
+
     public Cluster disconnectedDate(String disconnectedDate) {
 
         this.disconnectedDate = disconnectedDate;
@@ -1553,6 +1654,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getEverouteCluster_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_EVEROUTE_CLUSTER);
+    }
+
+    public Cluster failureCacheSpace(Long failureCacheSpace) {
+
+        this.failureCacheSpace = failureCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpace
+     *
+     * @return failureCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpace() {
+        return failureCacheSpace;
+    }
+
+    public void setFailureCacheSpace(Long failureCacheSpace) {
+        this.failureCacheSpace = failureCacheSpace;
+    }
+
+    public Cluster failureCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public Cluster failureCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public void setFailureCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        }
+    }
+
+    public boolean getFailureCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
     }
 
     public Cluster failureDataSpace(Long failureDataSpace) {
@@ -5436,6 +5580,8 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.dataReductionRatio, cluster.dataReductionRatio)
                 && Objects.equals(this.dataReductionSaving, cluster.dataReductionSaving)
                 && Objects.equals(this.datacenters, cluster.datacenters)
+                && Objects.equals(this.dirtyCacheSpace, cluster.dirtyCacheSpace)
+                && Objects.equals(this.dirtyCacheUsage, cluster.dirtyCacheUsage)
                 && Objects.equals(this.disconnectedDate, cluster.disconnectedDate)
                 && Objects.equals(this.disconnectedReason, cluster.disconnectedReason)
                 && Objects.equals(this.dns, cluster.dns)
@@ -5445,6 +5591,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.enableTiering, cluster.enableTiering)
                 && Objects.equals(this.entityAsyncStatus, cluster.entityAsyncStatus)
                 && Objects.equals(this.everouteCluster, cluster.everouteCluster)
+                && Objects.equals(this.failureCacheSpace, cluster.failureCacheSpace)
                 && Objects.equals(this.failureDataSpace, cluster.failureDataSpace)
                 && Objects.equals(this.hasMetrox, cluster.hasMetrox)
                 && Objects.equals(this.hostNum, cluster.hostNum)
@@ -5567,6 +5714,8 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 dataReductionRatio,
                 dataReductionSaving,
                 datacenters,
+                dirtyCacheSpace,
+                dirtyCacheUsage,
                 disconnectedDate,
                 disconnectedReason,
                 dns,
@@ -5575,6 +5724,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 enableTiering,
                 entityAsyncStatus,
                 everouteCluster,
+                failureCacheSpace,
                 failureDataSpace,
                 hasMetrox,
                 hostNum,
@@ -5706,6 +5856,8 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 .append(toIndentedString(dataReductionSaving))
                 .append("\n");
         sb.append("    datacenters: ").append(toIndentedString(datacenters)).append("\n");
+        sb.append("    dirtyCacheSpace: ").append(toIndentedString(dirtyCacheSpace)).append("\n");
+        sb.append("    dirtyCacheUsage: ").append(toIndentedString(dirtyCacheUsage)).append("\n");
         sb.append("    disconnectedDate: ").append(toIndentedString(disconnectedDate)).append("\n");
         sb.append("    disconnectedReason: ")
                 .append(toIndentedString(disconnectedReason))
@@ -5720,6 +5872,9 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 .append(toIndentedString(entityAsyncStatus))
                 .append("\n");
         sb.append("    everouteCluster: ").append(toIndentedString(everouteCluster)).append("\n");
+        sb.append("    failureCacheSpace: ")
+                .append(toIndentedString(failureCacheSpace))
+                .append("\n");
         sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
         sb.append("    hasMetrox: ").append(toIndentedString(hasMetrox)).append("\n");
         sb.append("    hostNum: ").append(toIndentedString(hostNum)).append("\n");

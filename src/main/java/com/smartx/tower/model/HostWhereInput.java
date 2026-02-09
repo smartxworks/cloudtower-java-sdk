@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** HostWhereInput */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class HostWhereInput extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_A_N_D = "AND";
 
@@ -778,6 +778,88 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_DATA_IP_STARTS_WITH)
     private String dataIpStartsWith;
 
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE = "dirty_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE)
+    private Long dirtyCacheSpace;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT = "dirty_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT)
+    private Long dirtyCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE = "dirty_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE)
+    private Long dirtyCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN = "dirty_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN)
+    private List<Long> dirtyCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT = "dirty_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT)
+    private Long dirtyCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE = "dirty_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE)
+    private Long dirtyCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT = "dirty_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT)
+    private Long dirtyCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN =
+            "dirty_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN)
+    private List<Long> dirtyCacheSpaceNotIn = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE = "dirty_cache_usage";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE)
+    private Double dirtyCacheUsage;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT = "dirty_cache_usage_gt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT)
+    private Double dirtyCacheUsageGt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE = "dirty_cache_usage_gte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE)
+    private Double dirtyCacheUsageGte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN = "dirty_cache_usage_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN)
+    private List<Double> dirtyCacheUsageIn = null;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT = "dirty_cache_usage_lt";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT)
+    private Double dirtyCacheUsageLt;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE = "dirty_cache_usage_lte";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE)
+    private Double dirtyCacheUsageLte;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT = "dirty_cache_usage_not";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT)
+    private Double dirtyCacheUsageNot;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN =
+            "dirty_cache_usage_not_in";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN)
+    private List<Double> dirtyCacheUsageNotIn = null;
+
     public static final String SERIALIZED_NAME_DISK_POOLS_EVERY = "disk_pools_every";
 
     @SerializedName(SERIALIZED_NAME_DISK_POOLS_EVERY)
@@ -876,6 +958,47 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
     private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE = "failure_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE)
+    private Long failureCacheSpace;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT = "failure_cache_space_gt";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT)
+    private Long failureCacheSpaceGt;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE = "failure_cache_space_gte";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE)
+    private Long failureCacheSpaceGte;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN = "failure_cache_space_in";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN)
+    private List<Long> failureCacheSpaceIn = null;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT = "failure_cache_space_lt";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT)
+    private Long failureCacheSpaceLt;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE = "failure_cache_space_lte";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE)
+    private Long failureCacheSpaceLte;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT = "failure_cache_space_not";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT)
+    private Long failureCacheSpaceNot;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN =
+            "failure_cache_space_not_in";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN)
+    private List<Long> failureCacheSpaceNotIn = null;
 
     public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
 
@@ -9976,6 +10099,726 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         return this._isPresent_.contains(SERIALIZED_NAME_DATA_IP_STARTS_WITH);
     }
 
+    public HostWhereInput dirtyCacheSpace(Long dirtyCacheSpace) {
+
+        this.dirtyCacheSpace = dirtyCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpace
+     *
+     * @return dirtyCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpace() {
+        return dirtyCacheSpace;
+    }
+
+    public void setDirtyCacheSpace(Long dirtyCacheSpace) {
+        this.dirtyCacheSpace = dirtyCacheSpace;
+    }
+
+    public HostWhereInput dirtyCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public void setDirtyCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        }
+    }
+
+    public boolean getDirtyCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+    }
+
+    public HostWhereInput dirtyCacheSpaceGt(Long dirtyCacheSpaceGt) {
+
+        this.dirtyCacheSpaceGt = dirtyCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceGt
+     *
+     * @return dirtyCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceGt() {
+        return dirtyCacheSpaceGt;
+    }
+
+    public void setDirtyCacheSpaceGt(Long dirtyCacheSpaceGt) {
+        this.dirtyCacheSpaceGt = dirtyCacheSpaceGt;
+    }
+
+    public HostWhereInput dirtyCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GT);
+    }
+
+    public HostWhereInput dirtyCacheSpaceGte(Long dirtyCacheSpaceGte) {
+
+        this.dirtyCacheSpaceGte = dirtyCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceGte
+     *
+     * @return dirtyCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceGte() {
+        return dirtyCacheSpaceGte;
+    }
+
+    public void setDirtyCacheSpaceGte(Long dirtyCacheSpaceGte) {
+        this.dirtyCacheSpaceGte = dirtyCacheSpaceGte;
+    }
+
+    public HostWhereInput dirtyCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_GTE);
+    }
+
+    public HostWhereInput dirtyCacheSpaceIn(List<Long> dirtyCacheSpaceIn) {
+
+        this.dirtyCacheSpaceIn = dirtyCacheSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addDirtyCacheSpaceInItem(Long dirtyCacheSpaceInItem) {
+        if (this.dirtyCacheSpaceIn == null) {
+            this.dirtyCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.dirtyCacheSpaceIn.add(dirtyCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceIn
+     *
+     * @return dirtyCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDirtyCacheSpaceIn() {
+        return dirtyCacheSpaceIn;
+    }
+
+    public void setDirtyCacheSpaceIn(List<Long> dirtyCacheSpaceIn) {
+        this.dirtyCacheSpaceIn = dirtyCacheSpaceIn;
+    }
+
+    public HostWhereInput dirtyCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_IN);
+    }
+
+    public HostWhereInput dirtyCacheSpaceLt(Long dirtyCacheSpaceLt) {
+
+        this.dirtyCacheSpaceLt = dirtyCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceLt
+     *
+     * @return dirtyCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceLt() {
+        return dirtyCacheSpaceLt;
+    }
+
+    public void setDirtyCacheSpaceLt(Long dirtyCacheSpaceLt) {
+        this.dirtyCacheSpaceLt = dirtyCacheSpaceLt;
+    }
+
+    public HostWhereInput dirtyCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LT);
+    }
+
+    public HostWhereInput dirtyCacheSpaceLte(Long dirtyCacheSpaceLte) {
+
+        this.dirtyCacheSpaceLte = dirtyCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceLte
+     *
+     * @return dirtyCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceLte() {
+        return dirtyCacheSpaceLte;
+    }
+
+    public void setDirtyCacheSpaceLte(Long dirtyCacheSpaceLte) {
+        this.dirtyCacheSpaceLte = dirtyCacheSpaceLte;
+    }
+
+    public HostWhereInput dirtyCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_LTE);
+    }
+
+    public HostWhereInput dirtyCacheSpaceNot(Long dirtyCacheSpaceNot) {
+
+        this.dirtyCacheSpaceNot = dirtyCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceNot
+     *
+     * @return dirtyCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpaceNot() {
+        return dirtyCacheSpaceNot;
+    }
+
+    public void setDirtyCacheSpaceNot(Long dirtyCacheSpaceNot) {
+        this.dirtyCacheSpaceNot = dirtyCacheSpaceNot;
+    }
+
+    public HostWhereInput dirtyCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT);
+    }
+
+    public HostWhereInput dirtyCacheSpaceNotIn(List<Long> dirtyCacheSpaceNotIn) {
+
+        this.dirtyCacheSpaceNotIn = dirtyCacheSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addDirtyCacheSpaceNotInItem(Long dirtyCacheSpaceNotInItem) {
+        if (this.dirtyCacheSpaceNotIn == null) {
+            this.dirtyCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.dirtyCacheSpaceNotIn.add(dirtyCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpaceNotIn
+     *
+     * @return dirtyCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getDirtyCacheSpaceNotIn() {
+        return dirtyCacheSpaceNotIn;
+    }
+
+    public void setDirtyCacheSpaceNotIn(List<Long> dirtyCacheSpaceNotIn) {
+        this.dirtyCacheSpaceNotIn = dirtyCacheSpaceNotIn;
+    }
+
+    public HostWhereInput dirtyCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setDirtyCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getDirtyCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE_NOT_IN);
+    }
+
+    public HostWhereInput dirtyCacheUsage(Double dirtyCacheUsage) {
+
+        this.dirtyCacheUsage = dirtyCacheUsage;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsage
+     *
+     * @return dirtyCacheUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsage() {
+        return dirtyCacheUsage;
+    }
+
+    public void setDirtyCacheUsage(Double dirtyCacheUsage) {
+        this.dirtyCacheUsage = dirtyCacheUsage;
+    }
+
+    public HostWhereInput dirtyCacheUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public void setDirtyCacheUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        }
+    }
+
+    public boolean getDirtyCacheUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+    }
+
+    public HostWhereInput dirtyCacheUsageGt(Double dirtyCacheUsageGt) {
+
+        this.dirtyCacheUsageGt = dirtyCacheUsageGt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageGt
+     *
+     * @return dirtyCacheUsageGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageGt() {
+        return dirtyCacheUsageGt;
+    }
+
+    public void setDirtyCacheUsageGt(Double dirtyCacheUsageGt) {
+        this.dirtyCacheUsageGt = dirtyCacheUsageGt;
+    }
+
+    public HostWhereInput dirtyCacheUsageGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        return this;
+    }
+
+    public void setDirtyCacheUsageGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+        }
+    }
+
+    public boolean getDirtyCacheUsageGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GT);
+    }
+
+    public HostWhereInput dirtyCacheUsageGte(Double dirtyCacheUsageGte) {
+
+        this.dirtyCacheUsageGte = dirtyCacheUsageGte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageGte
+     *
+     * @return dirtyCacheUsageGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageGte() {
+        return dirtyCacheUsageGte;
+    }
+
+    public void setDirtyCacheUsageGte(Double dirtyCacheUsageGte) {
+        this.dirtyCacheUsageGte = dirtyCacheUsageGte;
+    }
+
+    public HostWhereInput dirtyCacheUsageGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        return this;
+    }
+
+    public void setDirtyCacheUsageGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+        }
+    }
+
+    public boolean getDirtyCacheUsageGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_GTE);
+    }
+
+    public HostWhereInput dirtyCacheUsageIn(List<Double> dirtyCacheUsageIn) {
+
+        this.dirtyCacheUsageIn = dirtyCacheUsageIn;
+        return this;
+    }
+
+    public HostWhereInput addDirtyCacheUsageInItem(Double dirtyCacheUsageInItem) {
+        if (this.dirtyCacheUsageIn == null) {
+            this.dirtyCacheUsageIn = new ArrayList<Double>();
+        }
+        this.dirtyCacheUsageIn.add(dirtyCacheUsageInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageIn
+     *
+     * @return dirtyCacheUsageIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDirtyCacheUsageIn() {
+        return dirtyCacheUsageIn;
+    }
+
+    public void setDirtyCacheUsageIn(List<Double> dirtyCacheUsageIn) {
+        this.dirtyCacheUsageIn = dirtyCacheUsageIn;
+    }
+
+    public HostWhereInput dirtyCacheUsageIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        return this;
+    }
+
+    public void setDirtyCacheUsageIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+        }
+    }
+
+    public boolean getDirtyCacheUsageIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_IN);
+    }
+
+    public HostWhereInput dirtyCacheUsageLt(Double dirtyCacheUsageLt) {
+
+        this.dirtyCacheUsageLt = dirtyCacheUsageLt;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageLt
+     *
+     * @return dirtyCacheUsageLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageLt() {
+        return dirtyCacheUsageLt;
+    }
+
+    public void setDirtyCacheUsageLt(Double dirtyCacheUsageLt) {
+        this.dirtyCacheUsageLt = dirtyCacheUsageLt;
+    }
+
+    public HostWhereInput dirtyCacheUsageLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        return this;
+    }
+
+    public void setDirtyCacheUsageLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+        }
+    }
+
+    public boolean getDirtyCacheUsageLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LT);
+    }
+
+    public HostWhereInput dirtyCacheUsageLte(Double dirtyCacheUsageLte) {
+
+        this.dirtyCacheUsageLte = dirtyCacheUsageLte;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageLte
+     *
+     * @return dirtyCacheUsageLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageLte() {
+        return dirtyCacheUsageLte;
+    }
+
+    public void setDirtyCacheUsageLte(Double dirtyCacheUsageLte) {
+        this.dirtyCacheUsageLte = dirtyCacheUsageLte;
+    }
+
+    public HostWhereInput dirtyCacheUsageLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        return this;
+    }
+
+    public void setDirtyCacheUsageLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+        }
+    }
+
+    public boolean getDirtyCacheUsageLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_LTE);
+    }
+
+    public HostWhereInput dirtyCacheUsageNot(Double dirtyCacheUsageNot) {
+
+        this.dirtyCacheUsageNot = dirtyCacheUsageNot;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageNot
+     *
+     * @return dirtyCacheUsageNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsageNot() {
+        return dirtyCacheUsageNot;
+    }
+
+    public void setDirtyCacheUsageNot(Double dirtyCacheUsageNot) {
+        this.dirtyCacheUsageNot = dirtyCacheUsageNot;
+    }
+
+    public HostWhereInput dirtyCacheUsageNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        return this;
+    }
+
+    public void setDirtyCacheUsageNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+        }
+    }
+
+    public boolean getDirtyCacheUsageNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT);
+    }
+
+    public HostWhereInput dirtyCacheUsageNotIn(List<Double> dirtyCacheUsageNotIn) {
+
+        this.dirtyCacheUsageNotIn = dirtyCacheUsageNotIn;
+        return this;
+    }
+
+    public HostWhereInput addDirtyCacheUsageNotInItem(Double dirtyCacheUsageNotInItem) {
+        if (this.dirtyCacheUsageNotIn == null) {
+            this.dirtyCacheUsageNotIn = new ArrayList<Double>();
+        }
+        this.dirtyCacheUsageNotIn.add(dirtyCacheUsageNotInItem);
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsageNotIn
+     *
+     * @return dirtyCacheUsageNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getDirtyCacheUsageNotIn() {
+        return dirtyCacheUsageNotIn;
+    }
+
+    public void setDirtyCacheUsageNotIn(List<Double> dirtyCacheUsageNotIn) {
+        this.dirtyCacheUsageNotIn = dirtyCacheUsageNotIn;
+    }
+
+    public HostWhereInput dirtyCacheUsageNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput dirtyCacheUsageNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        return this;
+    }
+
+    public void setDirtyCacheUsageNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+        }
+    }
+
+    public boolean getDirtyCacheUsageNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE_NOT_IN);
+    }
+
     public HostWhereInput diskPoolsEvery(DiskPoolWhereInput diskPoolsEvery) {
 
         this.diskPoolsEvery = diskPoolsEvery;
@@ -10784,6 +11627,366 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
 
     public boolean getEntityAsyncStatusNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN);
+    }
+
+    public HostWhereInput failureCacheSpace(Long failureCacheSpace) {
+
+        this.failureCacheSpace = failureCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpace
+     *
+     * @return failureCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpace() {
+        return failureCacheSpace;
+    }
+
+    public void setFailureCacheSpace(Long failureCacheSpace) {
+        this.failureCacheSpace = failureCacheSpace;
+    }
+
+    public HostWhereInput failureCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public void setFailureCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        }
+    }
+
+    public boolean getFailureCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+    }
+
+    public HostWhereInput failureCacheSpaceGt(Long failureCacheSpaceGt) {
+
+        this.failureCacheSpaceGt = failureCacheSpaceGt;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceGt
+     *
+     * @return failureCacheSpaceGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceGt() {
+        return failureCacheSpaceGt;
+    }
+
+    public void setFailureCacheSpaceGt(Long failureCacheSpaceGt) {
+        this.failureCacheSpaceGt = failureCacheSpaceGt;
+    }
+
+    public HostWhereInput failureCacheSpaceGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        return this;
+    }
+
+    public void setFailureCacheSpaceGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+        }
+    }
+
+    public boolean getFailureCacheSpaceGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GT);
+    }
+
+    public HostWhereInput failureCacheSpaceGte(Long failureCacheSpaceGte) {
+
+        this.failureCacheSpaceGte = failureCacheSpaceGte;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceGte
+     *
+     * @return failureCacheSpaceGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceGte() {
+        return failureCacheSpaceGte;
+    }
+
+    public void setFailureCacheSpaceGte(Long failureCacheSpaceGte) {
+        this.failureCacheSpaceGte = failureCacheSpaceGte;
+    }
+
+    public HostWhereInput failureCacheSpaceGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        return this;
+    }
+
+    public void setFailureCacheSpaceGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+        }
+    }
+
+    public boolean getFailureCacheSpaceGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_GTE);
+    }
+
+    public HostWhereInput failureCacheSpaceIn(List<Long> failureCacheSpaceIn) {
+
+        this.failureCacheSpaceIn = failureCacheSpaceIn;
+        return this;
+    }
+
+    public HostWhereInput addFailureCacheSpaceInItem(Long failureCacheSpaceInItem) {
+        if (this.failureCacheSpaceIn == null) {
+            this.failureCacheSpaceIn = new ArrayList<Long>();
+        }
+        this.failureCacheSpaceIn.add(failureCacheSpaceInItem);
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceIn
+     *
+     * @return failureCacheSpaceIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getFailureCacheSpaceIn() {
+        return failureCacheSpaceIn;
+    }
+
+    public void setFailureCacheSpaceIn(List<Long> failureCacheSpaceIn) {
+        this.failureCacheSpaceIn = failureCacheSpaceIn;
+    }
+
+    public HostWhereInput failureCacheSpaceIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        return this;
+    }
+
+    public void setFailureCacheSpaceIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+        }
+    }
+
+    public boolean getFailureCacheSpaceIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_IN);
+    }
+
+    public HostWhereInput failureCacheSpaceLt(Long failureCacheSpaceLt) {
+
+        this.failureCacheSpaceLt = failureCacheSpaceLt;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceLt
+     *
+     * @return failureCacheSpaceLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceLt() {
+        return failureCacheSpaceLt;
+    }
+
+    public void setFailureCacheSpaceLt(Long failureCacheSpaceLt) {
+        this.failureCacheSpaceLt = failureCacheSpaceLt;
+    }
+
+    public HostWhereInput failureCacheSpaceLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        return this;
+    }
+
+    public void setFailureCacheSpaceLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+        }
+    }
+
+    public boolean getFailureCacheSpaceLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LT);
+    }
+
+    public HostWhereInput failureCacheSpaceLte(Long failureCacheSpaceLte) {
+
+        this.failureCacheSpaceLte = failureCacheSpaceLte;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceLte
+     *
+     * @return failureCacheSpaceLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceLte() {
+        return failureCacheSpaceLte;
+    }
+
+    public void setFailureCacheSpaceLte(Long failureCacheSpaceLte) {
+        this.failureCacheSpaceLte = failureCacheSpaceLte;
+    }
+
+    public HostWhereInput failureCacheSpaceLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        return this;
+    }
+
+    public void setFailureCacheSpaceLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+        }
+    }
+
+    public boolean getFailureCacheSpaceLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_LTE);
+    }
+
+    public HostWhereInput failureCacheSpaceNot(Long failureCacheSpaceNot) {
+
+        this.failureCacheSpaceNot = failureCacheSpaceNot;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceNot
+     *
+     * @return failureCacheSpaceNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpaceNot() {
+        return failureCacheSpaceNot;
+    }
+
+    public void setFailureCacheSpaceNot(Long failureCacheSpaceNot) {
+        this.failureCacheSpaceNot = failureCacheSpaceNot;
+    }
+
+    public HostWhereInput failureCacheSpaceNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        return this;
+    }
+
+    public void setFailureCacheSpaceNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+        }
+    }
+
+    public boolean getFailureCacheSpaceNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT);
+    }
+
+    public HostWhereInput failureCacheSpaceNotIn(List<Long> failureCacheSpaceNotIn) {
+
+        this.failureCacheSpaceNotIn = failureCacheSpaceNotIn;
+        return this;
+    }
+
+    public HostWhereInput addFailureCacheSpaceNotInItem(Long failureCacheSpaceNotInItem) {
+        if (this.failureCacheSpaceNotIn == null) {
+            this.failureCacheSpaceNotIn = new ArrayList<Long>();
+        }
+        this.failureCacheSpaceNotIn.add(failureCacheSpaceNotInItem);
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpaceNotIn
+     *
+     * @return failureCacheSpaceNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getFailureCacheSpaceNotIn() {
+        return failureCacheSpaceNotIn;
+    }
+
+    public void setFailureCacheSpaceNotIn(List<Long> failureCacheSpaceNotIn) {
+        this.failureCacheSpaceNotIn = failureCacheSpaceNotIn;
+    }
+
+    public HostWhereInput failureCacheSpaceNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput failureCacheSpaceNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        return this;
+    }
+
+    public void setFailureCacheSpaceNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
+        }
+    }
+
+    public boolean getFailureCacheSpaceNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE_NOT_IN);
     }
 
     public HostWhereInput failureDataSpace(Long failureDataSpace) {
@@ -33480,6 +34683,22 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(this.dataIpNotIn, hostWhereInput.dataIpNotIn)
                 && Objects.equals(this.dataIpNotStartsWith, hostWhereInput.dataIpNotStartsWith)
                 && Objects.equals(this.dataIpStartsWith, hostWhereInput.dataIpStartsWith)
+                && Objects.equals(this.dirtyCacheSpace, hostWhereInput.dirtyCacheSpace)
+                && Objects.equals(this.dirtyCacheSpaceGt, hostWhereInput.dirtyCacheSpaceGt)
+                && Objects.equals(this.dirtyCacheSpaceGte, hostWhereInput.dirtyCacheSpaceGte)
+                && Objects.equals(this.dirtyCacheSpaceIn, hostWhereInput.dirtyCacheSpaceIn)
+                && Objects.equals(this.dirtyCacheSpaceLt, hostWhereInput.dirtyCacheSpaceLt)
+                && Objects.equals(this.dirtyCacheSpaceLte, hostWhereInput.dirtyCacheSpaceLte)
+                && Objects.equals(this.dirtyCacheSpaceNot, hostWhereInput.dirtyCacheSpaceNot)
+                && Objects.equals(this.dirtyCacheSpaceNotIn, hostWhereInput.dirtyCacheSpaceNotIn)
+                && Objects.equals(this.dirtyCacheUsage, hostWhereInput.dirtyCacheUsage)
+                && Objects.equals(this.dirtyCacheUsageGt, hostWhereInput.dirtyCacheUsageGt)
+                && Objects.equals(this.dirtyCacheUsageGte, hostWhereInput.dirtyCacheUsageGte)
+                && Objects.equals(this.dirtyCacheUsageIn, hostWhereInput.dirtyCacheUsageIn)
+                && Objects.equals(this.dirtyCacheUsageLt, hostWhereInput.dirtyCacheUsageLt)
+                && Objects.equals(this.dirtyCacheUsageLte, hostWhereInput.dirtyCacheUsageLte)
+                && Objects.equals(this.dirtyCacheUsageNot, hostWhereInput.dirtyCacheUsageNot)
+                && Objects.equals(this.dirtyCacheUsageNotIn, hostWhereInput.dirtyCacheUsageNotIn)
                 && Objects.equals(this.diskPoolsEvery, hostWhereInput.diskPoolsEvery)
                 && Objects.equals(this.diskPoolsNone, hostWhereInput.diskPoolsNone)
                 && Objects.equals(this.diskPoolsSome, hostWhereInput.diskPoolsSome)
@@ -33514,6 +34733,15 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(this.entityAsyncStatusNot, hostWhereInput.entityAsyncStatusNot)
                 && Objects.equals(
                         this.entityAsyncStatusNotIn, hostWhereInput.entityAsyncStatusNotIn)
+                && Objects.equals(this.failureCacheSpace, hostWhereInput.failureCacheSpace)
+                && Objects.equals(this.failureCacheSpaceGt, hostWhereInput.failureCacheSpaceGt)
+                && Objects.equals(this.failureCacheSpaceGte, hostWhereInput.failureCacheSpaceGte)
+                && Objects.equals(this.failureCacheSpaceIn, hostWhereInput.failureCacheSpaceIn)
+                && Objects.equals(this.failureCacheSpaceLt, hostWhereInput.failureCacheSpaceLt)
+                && Objects.equals(this.failureCacheSpaceLte, hostWhereInput.failureCacheSpaceLte)
+                && Objects.equals(this.failureCacheSpaceNot, hostWhereInput.failureCacheSpaceNot)
+                && Objects.equals(
+                        this.failureCacheSpaceNotIn, hostWhereInput.failureCacheSpaceNotIn)
                 && Objects.equals(this.failureDataSpace, hostWhereInput.failureDataSpace)
                 && Objects.equals(this.failureDataSpaceGt, hostWhereInput.failureDataSpaceGt)
                 && Objects.equals(this.failureDataSpaceGte, hostWhereInput.failureDataSpaceGte)
@@ -34267,6 +35495,22 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 dataIpNotIn,
                 dataIpNotStartsWith,
                 dataIpStartsWith,
+                dirtyCacheSpace,
+                dirtyCacheSpaceGt,
+                dirtyCacheSpaceGte,
+                dirtyCacheSpaceIn,
+                dirtyCacheSpaceLt,
+                dirtyCacheSpaceLte,
+                dirtyCacheSpaceNot,
+                dirtyCacheSpaceNotIn,
+                dirtyCacheUsage,
+                dirtyCacheUsageGt,
+                dirtyCacheUsageGte,
+                dirtyCacheUsageIn,
+                dirtyCacheUsageLt,
+                dirtyCacheUsageLte,
+                dirtyCacheUsageNot,
+                dirtyCacheUsageNotIn,
                 diskPoolsEvery,
                 diskPoolsNone,
                 diskPoolsSome,
@@ -34285,6 +35529,14 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 entityAsyncStatusIn,
                 entityAsyncStatusNot,
                 entityAsyncStatusNotIn,
+                failureCacheSpace,
+                failureCacheSpaceGt,
+                failureCacheSpaceGte,
+                failureCacheSpaceIn,
+                failureCacheSpaceLt,
+                failureCacheSpaceLte,
+                failureCacheSpaceNot,
+                failureCacheSpaceNotIn,
                 failureDataSpace,
                 failureDataSpaceGt,
                 failureDataSpaceGte,
@@ -35085,6 +36337,50 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 .append(toIndentedString(dataIpNotStartsWith))
                 .append("\n");
         sb.append("    dataIpStartsWith: ").append(toIndentedString(dataIpStartsWith)).append("\n");
+        sb.append("    dirtyCacheSpace: ").append(toIndentedString(dirtyCacheSpace)).append("\n");
+        sb.append("    dirtyCacheSpaceGt: ")
+                .append(toIndentedString(dirtyCacheSpaceGt))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceGte: ")
+                .append(toIndentedString(dirtyCacheSpaceGte))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceIn: ")
+                .append(toIndentedString(dirtyCacheSpaceIn))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceLt: ")
+                .append(toIndentedString(dirtyCacheSpaceLt))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceLte: ")
+                .append(toIndentedString(dirtyCacheSpaceLte))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceNot: ")
+                .append(toIndentedString(dirtyCacheSpaceNot))
+                .append("\n");
+        sb.append("    dirtyCacheSpaceNotIn: ")
+                .append(toIndentedString(dirtyCacheSpaceNotIn))
+                .append("\n");
+        sb.append("    dirtyCacheUsage: ").append(toIndentedString(dirtyCacheUsage)).append("\n");
+        sb.append("    dirtyCacheUsageGt: ")
+                .append(toIndentedString(dirtyCacheUsageGt))
+                .append("\n");
+        sb.append("    dirtyCacheUsageGte: ")
+                .append(toIndentedString(dirtyCacheUsageGte))
+                .append("\n");
+        sb.append("    dirtyCacheUsageIn: ")
+                .append(toIndentedString(dirtyCacheUsageIn))
+                .append("\n");
+        sb.append("    dirtyCacheUsageLt: ")
+                .append(toIndentedString(dirtyCacheUsageLt))
+                .append("\n");
+        sb.append("    dirtyCacheUsageLte: ")
+                .append(toIndentedString(dirtyCacheUsageLte))
+                .append("\n");
+        sb.append("    dirtyCacheUsageNot: ")
+                .append(toIndentedString(dirtyCacheUsageNot))
+                .append("\n");
+        sb.append("    dirtyCacheUsageNotIn: ")
+                .append(toIndentedString(dirtyCacheUsageNotIn))
+                .append("\n");
         sb.append("    diskPoolsEvery: ").append(toIndentedString(diskPoolsEvery)).append("\n");
         sb.append("    diskPoolsNone: ").append(toIndentedString(diskPoolsNone)).append("\n");
         sb.append("    diskPoolsSome: ").append(toIndentedString(diskPoolsSome)).append("\n");
@@ -35126,6 +36422,30 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 .append("\n");
         sb.append("    entityAsyncStatusNotIn: ")
                 .append(toIndentedString(entityAsyncStatusNotIn))
+                .append("\n");
+        sb.append("    failureCacheSpace: ")
+                .append(toIndentedString(failureCacheSpace))
+                .append("\n");
+        sb.append("    failureCacheSpaceGt: ")
+                .append(toIndentedString(failureCacheSpaceGt))
+                .append("\n");
+        sb.append("    failureCacheSpaceGte: ")
+                .append(toIndentedString(failureCacheSpaceGte))
+                .append("\n");
+        sb.append("    failureCacheSpaceIn: ")
+                .append(toIndentedString(failureCacheSpaceIn))
+                .append("\n");
+        sb.append("    failureCacheSpaceLt: ")
+                .append(toIndentedString(failureCacheSpaceLt))
+                .append("\n");
+        sb.append("    failureCacheSpaceLte: ")
+                .append(toIndentedString(failureCacheSpaceLte))
+                .append("\n");
+        sb.append("    failureCacheSpaceNot: ")
+                .append(toIndentedString(failureCacheSpaceNot))
+                .append("\n");
+        sb.append("    failureCacheSpaceNotIn: ")
+                .append(toIndentedString(failureCacheSpaceNotIn))
                 .append("\n");
         sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
         sb.append("    failureDataSpaceGt: ")

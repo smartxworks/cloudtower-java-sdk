@@ -12,6 +12,8 @@ import java.io.IOException;
 public enum HostBatchCreateIfaceFunction {
     ACCESS("ACCESS"),
 
+    ERSPAN("ERSPAN"),
+
     MANAGEMENT("MANAGEMENT"),
 
     MIGRATION("MIGRATION"),

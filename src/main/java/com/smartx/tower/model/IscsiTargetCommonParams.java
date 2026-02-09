@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 /** IscsiTargetCommonParams */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class IscsiTargetCommonParams
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_BUSINESS_HOST_GROUPS = "business_host_groups";

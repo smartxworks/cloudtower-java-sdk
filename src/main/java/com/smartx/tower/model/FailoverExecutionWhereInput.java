@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** FailoverExecutionWhereInput */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class FailoverExecutionWhereInput
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_A_N_D = "AND";
@@ -203,6 +203,16 @@ public class FailoverExecutionWhereInput
 
     @SerializedName(SERIALIZED_NAME_ID_STARTS_WITH)
     private String idStartsWith;
+
+    public static final String SERIALIZED_NAME_IS_SYNC_REPLICATION = "is_sync_replication";
+
+    @SerializedName(SERIALIZED_NAME_IS_SYNC_REPLICATION)
+    private Boolean isSyncReplication;
+
+    public static final String SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT = "is_sync_replication_not";
+
+    @SerializedName(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT)
+    private Boolean isSyncReplicationNot;
 
     public static final String SERIALIZED_NAME_IS_TEST_MODE = "is_test_mode";
 
@@ -2166,6 +2176,92 @@ public class FailoverExecutionWhereInput
 
     public boolean getIdStartsWith_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ID_STARTS_WITH);
+    }
+
+    public FailoverExecutionWhereInput isSyncReplication(Boolean isSyncReplication) {
+
+        this.isSyncReplication = isSyncReplication;
+        return this;
+    }
+
+    /**
+     * Get isSyncReplication
+     *
+     * @return isSyncReplication
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getIsSyncReplication() {
+        return isSyncReplication;
+    }
+
+    public void setIsSyncReplication(Boolean isSyncReplication) {
+        this.isSyncReplication = isSyncReplication;
+    }
+
+    public FailoverExecutionWhereInput isSyncReplication_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+        return this;
+    }
+
+    public FailoverExecutionWhereInput isSyncReplication_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+        return this;
+    }
+
+    public void setIsSyncReplication_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+        }
+    }
+
+    public boolean getIsSyncReplication_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IS_SYNC_REPLICATION);
+    }
+
+    public FailoverExecutionWhereInput isSyncReplicationNot(Boolean isSyncReplicationNot) {
+
+        this.isSyncReplicationNot = isSyncReplicationNot;
+        return this;
+    }
+
+    /**
+     * Get isSyncReplicationNot
+     *
+     * @return isSyncReplicationNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Boolean getIsSyncReplicationNot() {
+        return isSyncReplicationNot;
+    }
+
+    public void setIsSyncReplicationNot(Boolean isSyncReplicationNot) {
+        this.isSyncReplicationNot = isSyncReplicationNot;
+    }
+
+    public FailoverExecutionWhereInput isSyncReplicationNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
+        return this;
+    }
+
+    public FailoverExecutionWhereInput isSyncReplicationNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
+        return this;
+    }
+
+    public void setIsSyncReplicationNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
+        }
+    }
+
+    public boolean getIsSyncReplicationNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IS_SYNC_REPLICATION_NOT);
     }
 
     public FailoverExecutionWhereInput isTestMode(Boolean isTestMode) {
@@ -4316,6 +4412,10 @@ public class FailoverExecutionWhereInput
                 && Objects.equals(this.idNotIn, failoverExecutionWhereInput.idNotIn)
                 && Objects.equals(this.idNotStartsWith, failoverExecutionWhereInput.idNotStartsWith)
                 && Objects.equals(this.idStartsWith, failoverExecutionWhereInput.idStartsWith)
+                && Objects.equals(
+                        this.isSyncReplication, failoverExecutionWhereInput.isSyncReplication)
+                && Objects.equals(
+                        this.isSyncReplicationNot, failoverExecutionWhereInput.isSyncReplicationNot)
                 && Objects.equals(this.isTestMode, failoverExecutionWhereInput.isTestMode)
                 && Objects.equals(this.isTestModeNot, failoverExecutionWhereInput.isTestModeNot)
                 && Objects.equals(
@@ -4440,6 +4540,8 @@ public class FailoverExecutionWhereInput
                 idNotIn,
                 idNotStartsWith,
                 idStartsWith,
+                isSyncReplication,
+                isSyncReplicationNot,
                 isTestMode,
                 isTestModeNot,
                 replicationFailoverTargetExecutionsEvery,
@@ -4547,6 +4649,12 @@ public class FailoverExecutionWhereInput
         sb.append("    idNotIn: ").append(toIndentedString(idNotIn)).append("\n");
         sb.append("    idNotStartsWith: ").append(toIndentedString(idNotStartsWith)).append("\n");
         sb.append("    idStartsWith: ").append(toIndentedString(idStartsWith)).append("\n");
+        sb.append("    isSyncReplication: ")
+                .append(toIndentedString(isSyncReplication))
+                .append("\n");
+        sb.append("    isSyncReplicationNot: ")
+                .append(toIndentedString(isSyncReplicationNot))
+                .append("\n");
         sb.append("    isTestMode: ").append(toIndentedString(isTestMode)).append("\n");
         sb.append("    isTestModeNot: ").append(toIndentedString(isTestModeNot)).append("\n");
         sb.append("    replicationFailoverTargetExecutionsEvery: ")

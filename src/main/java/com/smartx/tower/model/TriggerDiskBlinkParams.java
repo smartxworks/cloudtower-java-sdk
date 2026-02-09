@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 /** TriggerDiskBlinkParams */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class TriggerDiskBlinkParams
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     /** Gets or Sets ledStatus */
