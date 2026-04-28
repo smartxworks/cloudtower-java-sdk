@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 /** VmUpdateOwnerParamsData */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class VmUpdateOwnerParamsData
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     /** Gets or Sets searchFor */

@@ -4,7 +4,7 @@ package com.smartx.tower;
 import java.util.Collection;
 import java.util.Iterator;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class StringUtil {
     /**
      * Check if the given array contains the given value (with case-insensitive comparison).

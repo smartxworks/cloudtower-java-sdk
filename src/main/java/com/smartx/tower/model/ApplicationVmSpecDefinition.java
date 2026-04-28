@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 /** ApplicationVmSpecDefinition */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class ApplicationVmSpecDefinition
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_VM_AFFINITY = "vmAffinity";

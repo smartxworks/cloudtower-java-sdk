@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 /** ExitMaintenanceModeInput */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class ExitMaintenanceModeInput
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_POWERON_VMS = "poweron_vms";

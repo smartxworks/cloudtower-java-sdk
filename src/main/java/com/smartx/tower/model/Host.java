@@ -10,7 +10,7 @@ import java.util.Objects;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 /** Host */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_ACCESS_IP = "access_ip";
 
@@ -106,6 +106,16 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
     @SerializedName(SERIALIZED_NAME_DATA_IP)
     private String dataIp;
 
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_SPACE = "dirty_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_SPACE)
+    private Long dirtyCacheSpace;
+
+    public static final String SERIALIZED_NAME_DIRTY_CACHE_USAGE = "dirty_cache_usage";
+
+    @SerializedName(SERIALIZED_NAME_DIRTY_CACHE_USAGE)
+    private Double dirtyCacheUsage;
+
     public static final String SERIALIZED_NAME_DISK_POOLS = "disk_pools";
 
     @SerializedName(SERIALIZED_NAME_DISK_POOLS)
@@ -126,6 +136,11 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
 
     @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
     private EntityAsyncStatus entityAsyncStatus;
+
+    public static final String SERIALIZED_NAME_FAILURE_CACHE_SPACE = "failure_cache_space";
+
+    @SerializedName(SERIALIZED_NAME_FAILURE_CACHE_SPACE)
+    private Long failureCacheSpace;
 
     public static final String SERIALIZED_NAME_FAILURE_DATA_SPACE = "failure_data_space";
 
@@ -1260,6 +1275,92 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
         return this._isPresent_.contains(SERIALIZED_NAME_DATA_IP);
     }
 
+    public Host dirtyCacheSpace(Long dirtyCacheSpace) {
+
+        this.dirtyCacheSpace = dirtyCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheSpace
+     *
+     * @return dirtyCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getDirtyCacheSpace() {
+        return dirtyCacheSpace;
+    }
+
+    public void setDirtyCacheSpace(Long dirtyCacheSpace) {
+        this.dirtyCacheSpace = dirtyCacheSpace;
+    }
+
+    public Host dirtyCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public Host dirtyCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        return this;
+    }
+
+    public void setDirtyCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+        }
+    }
+
+    public boolean getDirtyCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_SPACE);
+    }
+
+    public Host dirtyCacheUsage(Double dirtyCacheUsage) {
+
+        this.dirtyCacheUsage = dirtyCacheUsage;
+        return this;
+    }
+
+    /**
+     * Get dirtyCacheUsage
+     *
+     * @return dirtyCacheUsage
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getDirtyCacheUsage() {
+        return dirtyCacheUsage;
+    }
+
+    public void setDirtyCacheUsage(Double dirtyCacheUsage) {
+        this.dirtyCacheUsage = dirtyCacheUsage;
+    }
+
+    public Host dirtyCacheUsage_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public Host dirtyCacheUsage_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        return this;
+    }
+
+    public void setDirtyCacheUsage_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+        }
+    }
+
+    public boolean getDirtyCacheUsage_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DIRTY_CACHE_USAGE);
+    }
+
     public Host diskPools(List<NestedDiskPool> diskPools) {
 
         this.diskPools = diskPools;
@@ -1446,6 +1547,49 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
 
     public boolean getEntityAsyncStatus_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+    }
+
+    public Host failureCacheSpace(Long failureCacheSpace) {
+
+        this.failureCacheSpace = failureCacheSpace;
+        return this;
+    }
+
+    /**
+     * Get failureCacheSpace
+     *
+     * @return failureCacheSpace
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getFailureCacheSpace() {
+        return failureCacheSpace;
+    }
+
+    public void setFailureCacheSpace(Long failureCacheSpace) {
+        this.failureCacheSpace = failureCacheSpace;
+    }
+
+    public Host failureCacheSpace_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public Host failureCacheSpace_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        return this;
+    }
+
+    public void setFailureCacheSpace_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
+        }
+    }
+
+    public boolean getFailureCacheSpace_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_FAILURE_CACHE_SPACE);
     }
 
     public Host failureDataSpace(Long failureDataSpace) {
@@ -4406,10 +4550,13 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
                 && Objects.equals(this.cpuTemperatureCelsius, host.cpuTemperatureCelsius)
                 && Objects.equals(this.cpuVendor, host.cpuVendor)
                 && Objects.equals(this.dataIp, host.dataIp)
+                && Objects.equals(this.dirtyCacheSpace, host.dirtyCacheSpace)
+                && Objects.equals(this.dirtyCacheUsage, host.dirtyCacheUsage)
                 && Objects.equals(this.diskPools, host.diskPools)
                 && Objects.equals(this.disks, host.disks)
                 && Objects.equals(this.downgradedPrioritizedSpace, host.downgradedPrioritizedSpace)
                 && Objects.equals(this.entityAsyncStatus, host.entityAsyncStatus)
+                && Objects.equals(this.failureCacheSpace, host.failureCacheSpace)
                 && Objects.equals(this.failureDataSpace, host.failureDataSpace)
                 && Objects.equals(this.gpuDevices, host.gpuDevices)
                 && Objects.equals(this.hddDataCapacity, host.hddDataCapacity)
@@ -4509,10 +4656,13 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
                 cpuTemperatureCelsius,
                 cpuVendor,
                 dataIp,
+                dirtyCacheSpace,
+                dirtyCacheUsage,
                 diskPools,
                 disks,
                 downgradedPrioritizedSpace,
                 entityAsyncStatus,
+                failureCacheSpace,
                 failureDataSpace,
                 gpuDevices,
                 hddDataCapacity,
@@ -4625,6 +4775,8 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
                 .append("\n");
         sb.append("    cpuVendor: ").append(toIndentedString(cpuVendor)).append("\n");
         sb.append("    dataIp: ").append(toIndentedString(dataIp)).append("\n");
+        sb.append("    dirtyCacheSpace: ").append(toIndentedString(dirtyCacheSpace)).append("\n");
+        sb.append("    dirtyCacheUsage: ").append(toIndentedString(dirtyCacheUsage)).append("\n");
         sb.append("    diskPools: ").append(toIndentedString(diskPools)).append("\n");
         sb.append("    disks: ").append(toIndentedString(disks)).append("\n");
         sb.append("    downgradedPrioritizedSpace: ")
@@ -4632,6 +4784,9 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
                 .append("\n");
         sb.append("    entityAsyncStatus: ")
                 .append(toIndentedString(entityAsyncStatus))
+                .append("\n");
+        sb.append("    failureCacheSpace: ")
+                .append(toIndentedString(failureCacheSpace))
                 .append("\n");
         sb.append("    failureDataSpace: ").append(toIndentedString(failureDataSpace)).append("\n");
         sb.append("    gpuDevices: ").append(toIndentedString(gpuDevices)).append("\n");

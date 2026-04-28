@@ -7,7 +7,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class HttpBearerAuth implements Authentication {
     private final String scheme;
     private String bearerToken;

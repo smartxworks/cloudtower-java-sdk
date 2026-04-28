@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Objects;
 
 /** AlertNotifierUpdationParams */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class AlertNotifierUpdationParams
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     /** Gets or Sets noticeSeverities */

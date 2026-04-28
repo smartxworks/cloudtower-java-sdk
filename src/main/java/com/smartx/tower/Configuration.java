@@ -1,6 +1,6 @@
 package com.smartx.tower;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 

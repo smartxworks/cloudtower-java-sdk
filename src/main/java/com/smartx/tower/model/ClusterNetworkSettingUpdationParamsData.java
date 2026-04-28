@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Objects;
 
 /** ClusterNetworkSettingUpdationParamsData */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaSmartxClientCodegen")
+@javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class ClusterNetworkSettingUpdationParamsData
         extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
     public static final String SERIALIZED_NAME_MGT_IP_MAPPER = "mgt_ip_mapper";
