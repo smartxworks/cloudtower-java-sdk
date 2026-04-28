@@ -1,6 +1,5 @@
 .gitignore
-LICENSE.mustache
-README.md
+LICENSE
 README.md
 api/openapi.yaml
 git_push.sh

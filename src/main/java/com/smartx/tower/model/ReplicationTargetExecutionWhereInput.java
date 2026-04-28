@@ -28,6 +28,46 @@ public class ReplicationTargetExecutionWhereInput
     @SerializedName(SERIALIZED_NAME_O_R)
     private List<ReplicationTargetExecutionWhereInput> OR = null;
 
+    public static final String SERIALIZED_NAME_CREATED_AT = "createdAt";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT)
+    private String createdAt;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_GT = "createdAt_gt";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_GT)
+    private String createdAtGt;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_GTE = "createdAt_gte";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_GTE)
+    private String createdAtGte;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_IN = "createdAt_in";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_IN)
+    private List<String> createdAtIn = null;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_LT = "createdAt_lt";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_LT)
+    private String createdAtLt;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_LTE = "createdAt_lte";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_LTE)
+    private String createdAtLte;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_NOT = "createdAt_not";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_NOT)
+    private String createdAtNot;
+
+    public static final String SERIALIZED_NAME_CREATED_AT_NOT_IN = "createdAt_not_in";
+
+    @SerializedName(SERIALIZED_NAME_CREATED_AT_NOT_IN)
+    private List<String> createdAtNotIn = null;
+
     public static final String SERIALIZED_NAME_CREATION = "creation";
 
     @SerializedName(SERIALIZED_NAME_CREATION)
@@ -391,6 +431,46 @@ public class ReplicationTargetExecutionWhereInput
     @SerializedName(SERIALIZED_NAME_TYPE_NOT_IN)
     private List<BackupExecutionType> typeNotIn = null;
 
+    public static final String SERIALIZED_NAME_UPDATED_AT = "updatedAt";
+
+    @SerializedName(SERIALIZED_NAME_UPDATED_AT)
+    private String updatedAt;
+
+    public static final String SERIALIZED_NAME_UPDATED_AT_GT = "updatedAt_gt";
+
+    @SerializedName(SERIALIZED_NAME_UPDATED_AT_GT)
+    private String updatedAtGt;
+
+    public static final String SERIALIZED_NAME_UPDATED_AT_GTE = "updatedAt_gte";
+
+    @SerializedName(SERIALIZED_NAME_UPDATED_AT_GTE)
+    private String updatedAtGte;
+
+    public static final String SERIALIZED_NAME_UPDATED_AT_IN = "updatedAt_in";
+
+    @SerializedName(SERIALIZED_NAME_UPDATED_AT_IN)
+    private List<String> updatedAtIn = null;
+
+    public static final String SERIALIZED_NAME_UPDATED_AT_LT = "updatedAt_lt";
+
+    @SerializedName(SERIALIZED_NAME_UPDATED_AT_LT)
+    private String updatedAtLt;
+
+    public static final String SERIALIZED_NAME_UPDATED_AT_LTE = "updatedAt_lte";
+
+    @SerializedName(SERIALIZED_NAME_UPDATED_AT_LTE)
+    private String updatedAtLte;
+
+    public static final String SERIALIZED_NAME_UPDATED_AT_NOT = "updatedAt_not";
+
+    @SerializedName(SERIALIZED_NAME_UPDATED_AT_NOT)
+    private String updatedAtNot;
+
+    public static final String SERIALIZED_NAME_UPDATED_AT_NOT_IN = "updatedAt_not_in";
+
+    @SerializedName(SERIALIZED_NAME_UPDATED_AT_NOT_IN)
+    private List<String> updatedAtNotIn = null;
+
     public ReplicationTargetExecutionWhereInput() {}
 
     public ReplicationTargetExecutionWhereInput AND(
@@ -549,6 +629,366 @@ public class ReplicationTargetExecutionWhereInput
 
     public boolean getOR_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_O_R);
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAt(String createdAt) {
+
+        this.createdAt = createdAt;
+        return this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return createdAt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT);
+        return this;
+    }
+
+    public void setCreatedAt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT);
+        }
+    }
+
+    public boolean getCreatedAt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT);
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtGt(String createdAtGt) {
+
+        this.createdAtGt = createdAtGt;
+        return this;
+    }
+
+    /**
+     * Get createdAtGt
+     *
+     * @return createdAtGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtGt() {
+        return createdAtGt;
+    }
+
+    public void setCreatedAtGt(String createdAtGt) {
+        this.createdAtGt = createdAtGt;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_GT);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_GT);
+        return this;
+    }
+
+    public void setCreatedAtGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_GT);
+        }
+    }
+
+    public boolean getCreatedAtGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_GT);
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtGte(String createdAtGte) {
+
+        this.createdAtGte = createdAtGte;
+        return this;
+    }
+
+    /**
+     * Get createdAtGte
+     *
+     * @return createdAtGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtGte() {
+        return createdAtGte;
+    }
+
+    public void setCreatedAtGte(String createdAtGte) {
+        this.createdAtGte = createdAtGte;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_GTE);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_GTE);
+        return this;
+    }
+
+    public void setCreatedAtGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_GTE);
+        }
+    }
+
+    public boolean getCreatedAtGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_GTE);
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtIn(List<String> createdAtIn) {
+
+        this.createdAtIn = createdAtIn;
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput addCreatedAtInItem(String createdAtInItem) {
+        if (this.createdAtIn == null) {
+            this.createdAtIn = new ArrayList<String>();
+        }
+        this.createdAtIn.add(createdAtInItem);
+        return this;
+    }
+
+    /**
+     * Get createdAtIn
+     *
+     * @return createdAtIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getCreatedAtIn() {
+        return createdAtIn;
+    }
+
+    public void setCreatedAtIn(List<String> createdAtIn) {
+        this.createdAtIn = createdAtIn;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_IN);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_IN);
+        return this;
+    }
+
+    public void setCreatedAtIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_IN);
+        }
+    }
+
+    public boolean getCreatedAtIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_IN);
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtLt(String createdAtLt) {
+
+        this.createdAtLt = createdAtLt;
+        return this;
+    }
+
+    /**
+     * Get createdAtLt
+     *
+     * @return createdAtLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtLt() {
+        return createdAtLt;
+    }
+
+    public void setCreatedAtLt(String createdAtLt) {
+        this.createdAtLt = createdAtLt;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_LT);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_LT);
+        return this;
+    }
+
+    public void setCreatedAtLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_LT);
+        }
+    }
+
+    public boolean getCreatedAtLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_LT);
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtLte(String createdAtLte) {
+
+        this.createdAtLte = createdAtLte;
+        return this;
+    }
+
+    /**
+     * Get createdAtLte
+     *
+     * @return createdAtLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtLte() {
+        return createdAtLte;
+    }
+
+    public void setCreatedAtLte(String createdAtLte) {
+        this.createdAtLte = createdAtLte;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_LTE);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_LTE);
+        return this;
+    }
+
+    public void setCreatedAtLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_LTE);
+        }
+    }
+
+    public boolean getCreatedAtLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_LTE);
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtNot(String createdAtNot) {
+
+        this.createdAtNot = createdAtNot;
+        return this;
+    }
+
+    /**
+     * Get createdAtNot
+     *
+     * @return createdAtNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getCreatedAtNot() {
+        return createdAtNot;
+    }
+
+    public void setCreatedAtNot(String createdAtNot) {
+        this.createdAtNot = createdAtNot;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_NOT);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_NOT);
+        return this;
+    }
+
+    public void setCreatedAtNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_NOT);
+        }
+    }
+
+    public boolean getCreatedAtNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_NOT);
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtNotIn(List<String> createdAtNotIn) {
+
+        this.createdAtNotIn = createdAtNotIn;
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput addCreatedAtNotInItem(String createdAtNotInItem) {
+        if (this.createdAtNotIn == null) {
+            this.createdAtNotIn = new ArrayList<String>();
+        }
+        this.createdAtNotIn.add(createdAtNotInItem);
+        return this;
+    }
+
+    /**
+     * Get createdAtNotIn
+     *
+     * @return createdAtNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getCreatedAtNotIn() {
+        return createdAtNotIn;
+    }
+
+    public void setCreatedAtNotIn(List<String> createdAtNotIn) {
+        this.createdAtNotIn = createdAtNotIn;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput createdAtNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+        return this;
+    }
+
+    public void setCreatedAtNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+        }
+    }
+
+    public boolean getCreatedAtNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_NOT_IN);
     }
 
     public ReplicationTargetExecutionWhereInput creation(
@@ -3811,6 +4251,366 @@ public class ReplicationTargetExecutionWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_TYPE_NOT_IN);
     }
 
+    public ReplicationTargetExecutionWhereInput updatedAt(String updatedAt) {
+
+        this.updatedAt = updatedAt;
+        return this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return updatedAt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT);
+        return this;
+    }
+
+    public void setUpdatedAt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT);
+        }
+    }
+
+    public boolean getUpdatedAt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPDATED_AT);
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtGt(String updatedAtGt) {
+
+        this.updatedAtGt = updatedAtGt;
+        return this;
+    }
+
+    /**
+     * Get updatedAtGt
+     *
+     * @return updatedAtGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getUpdatedAtGt() {
+        return updatedAtGt;
+    }
+
+    public void setUpdatedAtGt(String updatedAtGt) {
+        this.updatedAtGt = updatedAtGt;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_GT);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_GT);
+        return this;
+    }
+
+    public void setUpdatedAtGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_GT);
+        }
+    }
+
+    public boolean getUpdatedAtGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPDATED_AT_GT);
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtGte(String updatedAtGte) {
+
+        this.updatedAtGte = updatedAtGte;
+        return this;
+    }
+
+    /**
+     * Get updatedAtGte
+     *
+     * @return updatedAtGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getUpdatedAtGte() {
+        return updatedAtGte;
+    }
+
+    public void setUpdatedAtGte(String updatedAtGte) {
+        this.updatedAtGte = updatedAtGte;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_GTE);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_GTE);
+        return this;
+    }
+
+    public void setUpdatedAtGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_GTE);
+        }
+    }
+
+    public boolean getUpdatedAtGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPDATED_AT_GTE);
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtIn(List<String> updatedAtIn) {
+
+        this.updatedAtIn = updatedAtIn;
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput addUpdatedAtInItem(String updatedAtInItem) {
+        if (this.updatedAtIn == null) {
+            this.updatedAtIn = new ArrayList<String>();
+        }
+        this.updatedAtIn.add(updatedAtInItem);
+        return this;
+    }
+
+    /**
+     * Get updatedAtIn
+     *
+     * @return updatedAtIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getUpdatedAtIn() {
+        return updatedAtIn;
+    }
+
+    public void setUpdatedAtIn(List<String> updatedAtIn) {
+        this.updatedAtIn = updatedAtIn;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_IN);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_IN);
+        return this;
+    }
+
+    public void setUpdatedAtIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_IN);
+        }
+    }
+
+    public boolean getUpdatedAtIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPDATED_AT_IN);
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtLt(String updatedAtLt) {
+
+        this.updatedAtLt = updatedAtLt;
+        return this;
+    }
+
+    /**
+     * Get updatedAtLt
+     *
+     * @return updatedAtLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getUpdatedAtLt() {
+        return updatedAtLt;
+    }
+
+    public void setUpdatedAtLt(String updatedAtLt) {
+        this.updatedAtLt = updatedAtLt;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_LT);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_LT);
+        return this;
+    }
+
+    public void setUpdatedAtLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_LT);
+        }
+    }
+
+    public boolean getUpdatedAtLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPDATED_AT_LT);
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtLte(String updatedAtLte) {
+
+        this.updatedAtLte = updatedAtLte;
+        return this;
+    }
+
+    /**
+     * Get updatedAtLte
+     *
+     * @return updatedAtLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getUpdatedAtLte() {
+        return updatedAtLte;
+    }
+
+    public void setUpdatedAtLte(String updatedAtLte) {
+        this.updatedAtLte = updatedAtLte;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_LTE);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_LTE);
+        return this;
+    }
+
+    public void setUpdatedAtLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_LTE);
+        }
+    }
+
+    public boolean getUpdatedAtLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPDATED_AT_LTE);
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtNot(String updatedAtNot) {
+
+        this.updatedAtNot = updatedAtNot;
+        return this;
+    }
+
+    /**
+     * Get updatedAtNot
+     *
+     * @return updatedAtNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getUpdatedAtNot() {
+        return updatedAtNot;
+    }
+
+    public void setUpdatedAtNot(String updatedAtNot) {
+        this.updatedAtNot = updatedAtNot;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_NOT);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_NOT);
+        return this;
+    }
+
+    public void setUpdatedAtNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_NOT);
+        }
+    }
+
+    public boolean getUpdatedAtNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPDATED_AT_NOT);
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtNotIn(List<String> updatedAtNotIn) {
+
+        this.updatedAtNotIn = updatedAtNotIn;
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput addUpdatedAtNotInItem(String updatedAtNotInItem) {
+        if (this.updatedAtNotIn == null) {
+            this.updatedAtNotIn = new ArrayList<String>();
+        }
+        this.updatedAtNotIn.add(updatedAtNotInItem);
+        return this;
+    }
+
+    /**
+     * Get updatedAtNotIn
+     *
+     * @return updatedAtNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getUpdatedAtNotIn() {
+        return updatedAtNotIn;
+    }
+
+    public void setUpdatedAtNotIn(List<String> updatedAtNotIn) {
+        this.updatedAtNotIn = updatedAtNotIn;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_NOT_IN);
+        return this;
+    }
+
+    public ReplicationTargetExecutionWhereInput updatedAtNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_NOT_IN);
+        return this;
+    }
+
+    public void setUpdatedAtNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_UPDATED_AT_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_UPDATED_AT_NOT_IN);
+        }
+    }
+
+    public boolean getUpdatedAtNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_UPDATED_AT_NOT_IN);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -3824,6 +4624,21 @@ public class ReplicationTargetExecutionWhereInput
         return Objects.equals(this.AND, replicationTargetExecutionWhereInput.AND)
                 && Objects.equals(this.NOT, replicationTargetExecutionWhereInput.NOT)
                 && Objects.equals(this.OR, replicationTargetExecutionWhereInput.OR)
+                && Objects.equals(this.createdAt, replicationTargetExecutionWhereInput.createdAt)
+                && Objects.equals(
+                        this.createdAtGt, replicationTargetExecutionWhereInput.createdAtGt)
+                && Objects.equals(
+                        this.createdAtGte, replicationTargetExecutionWhereInput.createdAtGte)
+                && Objects.equals(
+                        this.createdAtIn, replicationTargetExecutionWhereInput.createdAtIn)
+                && Objects.equals(
+                        this.createdAtLt, replicationTargetExecutionWhereInput.createdAtLt)
+                && Objects.equals(
+                        this.createdAtLte, replicationTargetExecutionWhereInput.createdAtLte)
+                && Objects.equals(
+                        this.createdAtNot, replicationTargetExecutionWhereInput.createdAtNot)
+                && Objects.equals(
+                        this.createdAtNotIn, replicationTargetExecutionWhereInput.createdAtNotIn)
                 && Objects.equals(this.creation, replicationTargetExecutionWhereInput.creation)
                 && Objects.equals(this.creationIn, replicationTargetExecutionWhereInput.creationIn)
                 && Objects.equals(
@@ -3954,7 +4769,22 @@ public class ReplicationTargetExecutionWhereInput
                 && Objects.equals(this.type, replicationTargetExecutionWhereInput.type)
                 && Objects.equals(this.typeIn, replicationTargetExecutionWhereInput.typeIn)
                 && Objects.equals(this.typeNot, replicationTargetExecutionWhereInput.typeNot)
-                && Objects.equals(this.typeNotIn, replicationTargetExecutionWhereInput.typeNotIn);
+                && Objects.equals(this.typeNotIn, replicationTargetExecutionWhereInput.typeNotIn)
+                && Objects.equals(this.updatedAt, replicationTargetExecutionWhereInput.updatedAt)
+                && Objects.equals(
+                        this.updatedAtGt, replicationTargetExecutionWhereInput.updatedAtGt)
+                && Objects.equals(
+                        this.updatedAtGte, replicationTargetExecutionWhereInput.updatedAtGte)
+                && Objects.equals(
+                        this.updatedAtIn, replicationTargetExecutionWhereInput.updatedAtIn)
+                && Objects.equals(
+                        this.updatedAtLt, replicationTargetExecutionWhereInput.updatedAtLt)
+                && Objects.equals(
+                        this.updatedAtLte, replicationTargetExecutionWhereInput.updatedAtLte)
+                && Objects.equals(
+                        this.updatedAtNot, replicationTargetExecutionWhereInput.updatedAtNot)
+                && Objects.equals(
+                        this.updatedAtNotIn, replicationTargetExecutionWhereInput.updatedAtNotIn);
     }
 
     private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -3972,6 +4802,14 @@ public class ReplicationTargetExecutionWhereInput
                 AND,
                 NOT,
                 OR,
+                createdAt,
+                createdAtGt,
+                createdAtGte,
+                createdAtIn,
+                createdAtLt,
+                createdAtLte,
+                createdAtNot,
+                createdAtNotIn,
                 creation,
                 creationIn,
                 creationNot,
@@ -4043,7 +4881,15 @@ public class ReplicationTargetExecutionWhereInput
                 type,
                 typeIn,
                 typeNot,
-                typeNotIn);
+                typeNotIn,
+                updatedAt,
+                updatedAtGt,
+                updatedAtGte,
+                updatedAtIn,
+                updatedAtLt,
+                updatedAtLte,
+                updatedAtNot,
+                updatedAtNotIn);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -4060,6 +4906,14 @@ public class ReplicationTargetExecutionWhereInput
         sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
         sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
         sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+        sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
+        sb.append("    createdAtGt: ").append(toIndentedString(createdAtGt)).append("\n");
+        sb.append("    createdAtGte: ").append(toIndentedString(createdAtGte)).append("\n");
+        sb.append("    createdAtIn: ").append(toIndentedString(createdAtIn)).append("\n");
+        sb.append("    createdAtLt: ").append(toIndentedString(createdAtLt)).append("\n");
+        sb.append("    createdAtLte: ").append(toIndentedString(createdAtLte)).append("\n");
+        sb.append("    createdAtNot: ").append(toIndentedString(createdAtNot)).append("\n");
+        sb.append("    createdAtNotIn: ").append(toIndentedString(createdAtNotIn)).append("\n");
         sb.append("    creation: ").append(toIndentedString(creation)).append("\n");
         sb.append("    creationIn: ").append(toIndentedString(creationIn)).append("\n");
         sb.append("    creationNot: ").append(toIndentedString(creationNot)).append("\n");
@@ -4166,6 +5020,14 @@ public class ReplicationTargetExecutionWhereInput
         sb.append("    typeIn: ").append(toIndentedString(typeIn)).append("\n");
         sb.append("    typeNot: ").append(toIndentedString(typeNot)).append("\n");
         sb.append("    typeNotIn: ").append(toIndentedString(typeNotIn)).append("\n");
+        sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
+        sb.append("    updatedAtGt: ").append(toIndentedString(updatedAtGt)).append("\n");
+        sb.append("    updatedAtGte: ").append(toIndentedString(updatedAtGte)).append("\n");
+        sb.append("    updatedAtIn: ").append(toIndentedString(updatedAtIn)).append("\n");
+        sb.append("    updatedAtLt: ").append(toIndentedString(updatedAtLt)).append("\n");
+        sb.append("    updatedAtLte: ").append(toIndentedString(updatedAtLte)).append("\n");
+        sb.append("    updatedAtNot: ").append(toIndentedString(updatedAtNot)).append("\n");
+        sb.append("    updatedAtNotIn: ").append(toIndentedString(updatedAtNotIn)).append("\n");
         sb.append("}");
         return sb.toString();
     }

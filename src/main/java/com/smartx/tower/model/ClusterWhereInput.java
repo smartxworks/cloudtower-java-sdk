@@ -2165,6 +2165,47 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN)
     private List<Double> overallEfficiencyNotIn = null;
 
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO = "overprovision_ratio";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO)
+    private Double overprovisionRatio;
+
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO_GT = "overprovision_ratio_gt";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO_GT)
+    private Double overprovisionRatioGt;
+
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO_GTE = "overprovision_ratio_gte";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO_GTE)
+    private Double overprovisionRatioGte;
+
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO_IN = "overprovision_ratio_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO_IN)
+    private List<Double> overprovisionRatioIn = null;
+
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO_LT = "overprovision_ratio_lt";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO_LT)
+    private Double overprovisionRatioLt;
+
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO_LTE = "overprovision_ratio_lte";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO_LTE)
+    private Double overprovisionRatioLte;
+
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO_NOT = "overprovision_ratio_not";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT)
+    private Double overprovisionRatioNot;
+
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO_NOT_IN =
+            "overprovision_ratio_not_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT_IN)
+    private List<Double> overprovisionRatioNotIn = null;
+
     public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE =
             "perf_allocated_data_space";
 
@@ -22047,6 +22088,366 @@ public class ClusterWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN);
     }
 
+    public ClusterWhereInput overprovisionRatio(Double overprovisionRatio) {
+
+        this.overprovisionRatio = overprovisionRatio;
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatio
+     *
+     * @return overprovisionRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverprovisionRatio() {
+        return overprovisionRatio;
+    }
+
+    public void setOverprovisionRatio(Double overprovisionRatio) {
+        this.overprovisionRatio = overprovisionRatio;
+    }
+
+    public ClusterWhereInput overprovisionRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        return this;
+    }
+
+    public ClusterWhereInput overprovisionRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        return this;
+    }
+
+    public void setOverprovisionRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        }
+    }
+
+    public boolean getOverprovisionRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO);
+    }
+
+    public ClusterWhereInput overprovisionRatioGt(Double overprovisionRatioGt) {
+
+        this.overprovisionRatioGt = overprovisionRatioGt;
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatioGt
+     *
+     * @return overprovisionRatioGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverprovisionRatioGt() {
+        return overprovisionRatioGt;
+    }
+
+    public void setOverprovisionRatioGt(Double overprovisionRatioGt) {
+        this.overprovisionRatioGt = overprovisionRatioGt;
+    }
+
+    public ClusterWhereInput overprovisionRatioGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_GT);
+        return this;
+    }
+
+    public ClusterWhereInput overprovisionRatioGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_GT);
+        return this;
+    }
+
+    public void setOverprovisionRatioGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_GT);
+        }
+    }
+
+    public boolean getOverprovisionRatioGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO_GT);
+    }
+
+    public ClusterWhereInput overprovisionRatioGte(Double overprovisionRatioGte) {
+
+        this.overprovisionRatioGte = overprovisionRatioGte;
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatioGte
+     *
+     * @return overprovisionRatioGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverprovisionRatioGte() {
+        return overprovisionRatioGte;
+    }
+
+    public void setOverprovisionRatioGte(Double overprovisionRatioGte) {
+        this.overprovisionRatioGte = overprovisionRatioGte;
+    }
+
+    public ClusterWhereInput overprovisionRatioGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput overprovisionRatioGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_GTE);
+        return this;
+    }
+
+    public void setOverprovisionRatioGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_GTE);
+        }
+    }
+
+    public boolean getOverprovisionRatioGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO_GTE);
+    }
+
+    public ClusterWhereInput overprovisionRatioIn(List<Double> overprovisionRatioIn) {
+
+        this.overprovisionRatioIn = overprovisionRatioIn;
+        return this;
+    }
+
+    public ClusterWhereInput addOverprovisionRatioInItem(Double overprovisionRatioInItem) {
+        if (this.overprovisionRatioIn == null) {
+            this.overprovisionRatioIn = new ArrayList<Double>();
+        }
+        this.overprovisionRatioIn.add(overprovisionRatioInItem);
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatioIn
+     *
+     * @return overprovisionRatioIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getOverprovisionRatioIn() {
+        return overprovisionRatioIn;
+    }
+
+    public void setOverprovisionRatioIn(List<Double> overprovisionRatioIn) {
+        this.overprovisionRatioIn = overprovisionRatioIn;
+    }
+
+    public ClusterWhereInput overprovisionRatioIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_IN);
+        return this;
+    }
+
+    public ClusterWhereInput overprovisionRatioIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_IN);
+        return this;
+    }
+
+    public void setOverprovisionRatioIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_IN);
+        }
+    }
+
+    public boolean getOverprovisionRatioIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO_IN);
+    }
+
+    public ClusterWhereInput overprovisionRatioLt(Double overprovisionRatioLt) {
+
+        this.overprovisionRatioLt = overprovisionRatioLt;
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatioLt
+     *
+     * @return overprovisionRatioLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverprovisionRatioLt() {
+        return overprovisionRatioLt;
+    }
+
+    public void setOverprovisionRatioLt(Double overprovisionRatioLt) {
+        this.overprovisionRatioLt = overprovisionRatioLt;
+    }
+
+    public ClusterWhereInput overprovisionRatioLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_LT);
+        return this;
+    }
+
+    public ClusterWhereInput overprovisionRatioLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_LT);
+        return this;
+    }
+
+    public void setOverprovisionRatioLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_LT);
+        }
+    }
+
+    public boolean getOverprovisionRatioLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO_LT);
+    }
+
+    public ClusterWhereInput overprovisionRatioLte(Double overprovisionRatioLte) {
+
+        this.overprovisionRatioLte = overprovisionRatioLte;
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatioLte
+     *
+     * @return overprovisionRatioLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverprovisionRatioLte() {
+        return overprovisionRatioLte;
+    }
+
+    public void setOverprovisionRatioLte(Double overprovisionRatioLte) {
+        this.overprovisionRatioLte = overprovisionRatioLte;
+    }
+
+    public ClusterWhereInput overprovisionRatioLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput overprovisionRatioLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_LTE);
+        return this;
+    }
+
+    public void setOverprovisionRatioLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_LTE);
+        }
+    }
+
+    public boolean getOverprovisionRatioLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO_LTE);
+    }
+
+    public ClusterWhereInput overprovisionRatioNot(Double overprovisionRatioNot) {
+
+        this.overprovisionRatioNot = overprovisionRatioNot;
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatioNot
+     *
+     * @return overprovisionRatioNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverprovisionRatioNot() {
+        return overprovisionRatioNot;
+    }
+
+    public void setOverprovisionRatioNot(Double overprovisionRatioNot) {
+        this.overprovisionRatioNot = overprovisionRatioNot;
+    }
+
+    public ClusterWhereInput overprovisionRatioNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput overprovisionRatioNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT);
+        return this;
+    }
+
+    public void setOverprovisionRatioNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT);
+        }
+    }
+
+    public boolean getOverprovisionRatioNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT);
+    }
+
+    public ClusterWhereInput overprovisionRatioNotIn(List<Double> overprovisionRatioNotIn) {
+
+        this.overprovisionRatioNotIn = overprovisionRatioNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addOverprovisionRatioNotInItem(Double overprovisionRatioNotInItem) {
+        if (this.overprovisionRatioNotIn == null) {
+            this.overprovisionRatioNotIn = new ArrayList<Double>();
+        }
+        this.overprovisionRatioNotIn.add(overprovisionRatioNotInItem);
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatioNotIn
+     *
+     * @return overprovisionRatioNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getOverprovisionRatioNotIn() {
+        return overprovisionRatioNotIn;
+    }
+
+    public void setOverprovisionRatioNotIn(List<Double> overprovisionRatioNotIn) {
+        this.overprovisionRatioNotIn = overprovisionRatioNotIn;
+    }
+
+    public ClusterWhereInput overprovisionRatioNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput overprovisionRatioNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT_IN);
+        return this;
+    }
+
+    public void setOverprovisionRatioNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT_IN);
+        }
+    }
+
+    public boolean getOverprovisionRatioNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO_NOT_IN);
+    }
+
     public ClusterWhereInput perfAllocatedDataSpace(Long perfAllocatedDataSpace) {
 
         this.perfAllocatedDataSpace = perfAllocatedDataSpace;
@@ -37470,6 +37871,18 @@ public class ClusterWhereInput
                 && Objects.equals(this.overallEfficiencyNot, clusterWhereInput.overallEfficiencyNot)
                 && Objects.equals(
                         this.overallEfficiencyNotIn, clusterWhereInput.overallEfficiencyNotIn)
+                && Objects.equals(this.overprovisionRatio, clusterWhereInput.overprovisionRatio)
+                && Objects.equals(this.overprovisionRatioGt, clusterWhereInput.overprovisionRatioGt)
+                && Objects.equals(
+                        this.overprovisionRatioGte, clusterWhereInput.overprovisionRatioGte)
+                && Objects.equals(this.overprovisionRatioIn, clusterWhereInput.overprovisionRatioIn)
+                && Objects.equals(this.overprovisionRatioLt, clusterWhereInput.overprovisionRatioLt)
+                && Objects.equals(
+                        this.overprovisionRatioLte, clusterWhereInput.overprovisionRatioLte)
+                && Objects.equals(
+                        this.overprovisionRatioNot, clusterWhereInput.overprovisionRatioNot)
+                && Objects.equals(
+                        this.overprovisionRatioNotIn, clusterWhereInput.overprovisionRatioNotIn)
                 && Objects.equals(
                         this.perfAllocatedDataSpace, clusterWhereInput.perfAllocatedDataSpace)
                 && Objects.equals(
@@ -38377,6 +38790,14 @@ public class ClusterWhereInput
                 overallEfficiencyLte,
                 overallEfficiencyNot,
                 overallEfficiencyNotIn,
+                overprovisionRatio,
+                overprovisionRatioGt,
+                overprovisionRatioGte,
+                overprovisionRatioIn,
+                overprovisionRatioLt,
+                overprovisionRatioLte,
+                overprovisionRatioNot,
+                overprovisionRatioNotIn,
                 perfAllocatedDataSpace,
                 perfAllocatedDataSpaceGt,
                 perfAllocatedDataSpaceGte,
@@ -39609,6 +40030,30 @@ public class ClusterWhereInput
                 .append("\n");
         sb.append("    overallEfficiencyNotIn: ")
                 .append(toIndentedString(overallEfficiencyNotIn))
+                .append("\n");
+        sb.append("    overprovisionRatio: ")
+                .append(toIndentedString(overprovisionRatio))
+                .append("\n");
+        sb.append("    overprovisionRatioGt: ")
+                .append(toIndentedString(overprovisionRatioGt))
+                .append("\n");
+        sb.append("    overprovisionRatioGte: ")
+                .append(toIndentedString(overprovisionRatioGte))
+                .append("\n");
+        sb.append("    overprovisionRatioIn: ")
+                .append(toIndentedString(overprovisionRatioIn))
+                .append("\n");
+        sb.append("    overprovisionRatioLt: ")
+                .append(toIndentedString(overprovisionRatioLt))
+                .append("\n");
+        sb.append("    overprovisionRatioLte: ")
+                .append(toIndentedString(overprovisionRatioLte))
+                .append("\n");
+        sb.append("    overprovisionRatioNot: ")
+                .append(toIndentedString(overprovisionRatioNot))
+                .append("\n");
+        sb.append("    overprovisionRatioNotIn: ")
+                .append(toIndentedString(overprovisionRatioNotIn))
                 .append("\n");
         sb.append("    perfAllocatedDataSpace: ")
                 .append(toIndentedString(perfAllocatedDataSpace))
