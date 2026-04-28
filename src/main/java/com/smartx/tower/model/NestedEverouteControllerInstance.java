@@ -3,9 +3,7 @@ package com.smartx.tower.model;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.Arrays;
 import java.util.Objects;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 /** NestedEverouteControllerInstance */
 @javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
@@ -34,8 +32,8 @@ public class NestedEverouteControllerInstance
      *
      * @return ipAddr
      */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
     public String getIpAddr() {
         return ipAddr;
     }
@@ -77,8 +75,8 @@ public class NestedEverouteControllerInstance
      *
      * @return vlan
      */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
     public String getVlan() {
         return vlan;
     }
@@ -123,25 +121,9 @@ public class NestedEverouteControllerInstance
                 && Objects.equals(this.vlan, nestedEverouteControllerInstance.vlan);
     }
 
-    private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-        return a == b
-                || (a != null
-                        && b != null
-                        && a.isPresent()
-                        && b.isPresent()
-                        && Objects.deepEquals(a.get(), b.get()));
-    }
-
     @Override
     public int hashCode() {
         return Objects.hash(ipAddr, vlan);
-    }
-
-    private static <T> int hashCodeNullable(JsonNullable<T> a) {
-        if (a == null) {
-            return 1;
-        }
-        return a.isPresent() ? Arrays.deepHashCode(new Object[] {a.get()}) : 31;
     }
 
     @Override

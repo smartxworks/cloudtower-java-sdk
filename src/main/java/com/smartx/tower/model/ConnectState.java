@@ -12,8 +12,6 @@ import java.io.IOException;
 public enum ConnectState {
     CONNECTED("CONNECTED"),
 
-    CONNECTED_ERROR("CONNECTED_ERROR"),
-
     DISCONNECTED("DISCONNECTED"),
 
     INITIALIZING("INITIALIZING"),

@@ -253,8 +253,8 @@ public class EverouteCluster extends com.smartx.tower.ConditionalNullable.Condit
      *
      * @return controllerTemplate
      */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
     public NestedEverouteControllerTemplate getControllerTemplate() {
         return controllerTemplate;
     }

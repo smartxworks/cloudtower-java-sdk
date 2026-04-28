@@ -366,11 +366,6 @@ public class ReplicationTargetExecutionWhereInput
     @SerializedName(SERIALIZED_NAME_STARTED_AT_NOT_IN)
     private List<String> startedAtNotIn = null;
 
-    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLAN = "sync_replication_plan";
-
-    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLAN)
-    private SyncReplicationPlanWhereInput syncReplicationPlan;
-
     public static final String SERIALIZED_NAME_TYPE = "type";
 
     @SerializedName(SERIALIZED_NAME_TYPE)
@@ -3578,50 +3573,6 @@ public class ReplicationTargetExecutionWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_STARTED_AT_NOT_IN);
     }
 
-    public ReplicationTargetExecutionWhereInput syncReplicationPlan(
-            SyncReplicationPlanWhereInput syncReplicationPlan) {
-
-        this.syncReplicationPlan = syncReplicationPlan;
-        return this;
-    }
-
-    /**
-     * Get syncReplicationPlan
-     *
-     * @return syncReplicationPlan
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public SyncReplicationPlanWhereInput getSyncReplicationPlan() {
-        return syncReplicationPlan;
-    }
-
-    public void setSyncReplicationPlan(SyncReplicationPlanWhereInput syncReplicationPlan) {
-        this.syncReplicationPlan = syncReplicationPlan;
-    }
-
-    public ReplicationTargetExecutionWhereInput syncReplicationPlan_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-        return this;
-    }
-
-    public ReplicationTargetExecutionWhereInput syncReplicationPlan_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-        return this;
-    }
-
-    public void setSyncReplicationPlan_IsExplictlyNull(boolean isExplictlyNull) {
-        if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-        } else {
-            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-        }
-    }
-
-    public boolean getSyncReplicationPlan_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-    }
-
     public ReplicationTargetExecutionWhereInput type(BackupExecutionType type) {
 
         this.type = type;
@@ -3948,9 +3899,6 @@ public class ReplicationTargetExecutionWhereInput
                         this.startedAtNot, replicationTargetExecutionWhereInput.startedAtNot)
                 && Objects.equals(
                         this.startedAtNotIn, replicationTargetExecutionWhereInput.startedAtNotIn)
-                && Objects.equals(
-                        this.syncReplicationPlan,
-                        replicationTargetExecutionWhereInput.syncReplicationPlan)
                 && Objects.equals(this.type, replicationTargetExecutionWhereInput.type)
                 && Objects.equals(this.typeIn, replicationTargetExecutionWhereInput.typeIn)
                 && Objects.equals(this.typeNot, replicationTargetExecutionWhereInput.typeNot)
@@ -4039,7 +3987,6 @@ public class ReplicationTargetExecutionWhereInput
                 startedAtLte,
                 startedAtNot,
                 startedAtNotIn,
-                syncReplicationPlan,
                 type,
                 typeIn,
                 typeNot,
@@ -4159,9 +4106,6 @@ public class ReplicationTargetExecutionWhereInput
         sb.append("    startedAtLte: ").append(toIndentedString(startedAtLte)).append("\n");
         sb.append("    startedAtNot: ").append(toIndentedString(startedAtNot)).append("\n");
         sb.append("    startedAtNotIn: ").append(toIndentedString(startedAtNotIn)).append("\n");
-        sb.append("    syncReplicationPlan: ")
-                .append(toIndentedString(syncReplicationPlan))
-                .append("\n");
         sb.append("    type: ").append(toIndentedString(type)).append("\n");
         sb.append("    typeIn: ").append(toIndentedString(typeIn)).append("\n");
         sb.append("    typeNot: ").append(toIndentedString(typeNot)).append("\n");

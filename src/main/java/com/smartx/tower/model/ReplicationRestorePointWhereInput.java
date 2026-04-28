@@ -604,11 +604,6 @@ public class ReplicationRestorePointWhereInput
     @SerializedName(SERIALIZED_NAME_SNAPSHOT_CONSISTENT_TYPE_NOT_IN)
     private List<ConsistentType> snapshotConsistentTypeNotIn = null;
 
-    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLAN = "sync_replication_plan";
-
-    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLAN)
-    private SyncReplicationPlanWhereInput syncReplicationPlan;
-
     public static final String SERIALIZED_NAME_TOWER_DEPLOY_ID = "tower_deploy_id";
 
     @SerializedName(SERIALIZED_NAME_TOWER_DEPLOY_ID)
@@ -5956,50 +5951,6 @@ public class ReplicationRestorePointWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_SNAPSHOT_CONSISTENT_TYPE_NOT_IN);
     }
 
-    public ReplicationRestorePointWhereInput syncReplicationPlan(
-            SyncReplicationPlanWhereInput syncReplicationPlan) {
-
-        this.syncReplicationPlan = syncReplicationPlan;
-        return this;
-    }
-
-    /**
-     * Get syncReplicationPlan
-     *
-     * @return syncReplicationPlan
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public SyncReplicationPlanWhereInput getSyncReplicationPlan() {
-        return syncReplicationPlan;
-    }
-
-    public void setSyncReplicationPlan(SyncReplicationPlanWhereInput syncReplicationPlan) {
-        this.syncReplicationPlan = syncReplicationPlan;
-    }
-
-    public ReplicationRestorePointWhereInput syncReplicationPlan_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-        return this;
-    }
-
-    public ReplicationRestorePointWhereInput syncReplicationPlan_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-        return this;
-    }
-
-    public void setSyncReplicationPlan_IsExplictlyNull(boolean isExplictlyNull) {
-        if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-        } else {
-            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-        }
-    }
-
-    public boolean getSyncReplicationPlan_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
-    }
-
     public ReplicationRestorePointWhereInput towerDeployId(String towerDeployId) {
 
         this.towerDeployId = towerDeployId;
@@ -8331,9 +8282,6 @@ public class ReplicationRestorePointWhereInput
                         this.snapshotConsistentTypeNotIn,
                         replicationRestorePointWhereInput.snapshotConsistentTypeNotIn)
                 && Objects.equals(
-                        this.syncReplicationPlan,
-                        replicationRestorePointWhereInput.syncReplicationPlan)
-                && Objects.equals(
                         this.towerDeployId, replicationRestorePointWhereInput.towerDeployId)
                 && Objects.equals(
                         this.towerDeployIdContains,
@@ -8546,7 +8494,6 @@ public class ReplicationRestorePointWhereInput
                 snapshotConsistentTypeIn,
                 snapshotConsistentTypeNot,
                 snapshotConsistentTypeNotIn,
-                syncReplicationPlan,
                 towerDeployId,
                 towerDeployIdContains,
                 towerDeployIdEndsWith,
@@ -8825,9 +8772,6 @@ public class ReplicationRestorePointWhereInput
                 .append("\n");
         sb.append("    snapshotConsistentTypeNotIn: ")
                 .append(toIndentedString(snapshotConsistentTypeNotIn))
-                .append("\n");
-        sb.append("    syncReplicationPlan: ")
-                .append(toIndentedString(syncReplicationPlan))
                 .append("\n");
         sb.append("    towerDeployId: ").append(toIndentedString(towerDeployId)).append("\n");
         sb.append("    towerDeployIdContains: ")

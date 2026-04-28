@@ -320,6 +320,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY)
     private Double overallEfficiency;
 
+    public static final String SERIALIZED_NAME_OVERPROVISION_RATIO = "overprovision_ratio";
+
+    @SerializedName(SERIALIZED_NAME_OVERPROVISION_RATIO)
+    private Double overprovisionRatio;
+
     public static final String SERIALIZED_NAME_PERF_ALLOCATED_DATA_SPACE =
             "perf_allocated_data_space";
 
@@ -3227,6 +3232,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY);
     }
 
+    public Cluster overprovisionRatio(Double overprovisionRatio) {
+
+        this.overprovisionRatio = overprovisionRatio;
+        return this;
+    }
+
+    /**
+     * Get overprovisionRatio
+     *
+     * @return overprovisionRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOverprovisionRatio() {
+        return overprovisionRatio;
+    }
+
+    public void setOverprovisionRatio(Double overprovisionRatio) {
+        this.overprovisionRatio = overprovisionRatio;
+    }
+
+    public Cluster overprovisionRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        return this;
+    }
+
+    public Cluster overprovisionRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        return this;
+    }
+
+    public void setOverprovisionRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERPROVISION_RATIO);
+        }
+    }
+
+    public boolean getOverprovisionRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERPROVISION_RATIO);
+    }
+
     public Cluster perfAllocatedDataSpace(Long perfAllocatedDataSpace) {
 
         this.perfAllocatedDataSpace = perfAllocatedDataSpace;
@@ -5629,6 +5677,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.nvmeOverTcpEnabled, cluster.nvmeOverTcpEnabled)
                 && Objects.equals(this.nvmfEnabled, cluster.nvmfEnabled)
                 && Objects.equals(this.overallEfficiency, cluster.overallEfficiency)
+                && Objects.equals(this.overprovisionRatio, cluster.overprovisionRatio)
                 && Objects.equals(this.perfAllocatedDataSpace, cluster.perfAllocatedDataSpace)
                 && Objects.equals(this.perfFailureDataSpace, cluster.perfFailureDataSpace)
                 && Objects.equals(this.perfTotalDataCapacity, cluster.perfTotalDataCapacity)
@@ -5760,6 +5809,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 nvmeOverTcpEnabled,
                 nvmfEnabled,
                 overallEfficiency,
+                overprovisionRatio,
                 perfAllocatedDataSpace,
                 perfFailureDataSpace,
                 perfTotalDataCapacity,
@@ -5933,6 +5983,9 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         sb.append("    nvmfEnabled: ").append(toIndentedString(nvmfEnabled)).append("\n");
         sb.append("    overallEfficiency: ")
                 .append(toIndentedString(overallEfficiency))
+                .append("\n");
+        sb.append("    overprovisionRatio: ")
+                .append(toIndentedString(overprovisionRatio))
                 .append("\n");
         sb.append("    perfAllocatedDataSpace: ")
                 .append(toIndentedString(perfAllocatedDataSpace))

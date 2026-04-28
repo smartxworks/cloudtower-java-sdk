@@ -43,12 +43,6 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
     @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM)
     private Integer defaultStoragePolicyReplicaNum;
 
-    public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM =
-            "default_storage_policy_stripe_num";
-
-    @SerializedName(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM)
-    private Integer defaultStoragePolicyStripeNum;
-
     public static final String SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_THIN_PROVISION =
             "default_storage_policy_thin_provision";
 
@@ -330,49 +324,6 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
         return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_REPLICA_NUM);
     }
 
-    public ClusterSettings defaultStoragePolicyStripeNum(Integer defaultStoragePolicyStripeNum) {
-
-        this.defaultStoragePolicyStripeNum = defaultStoragePolicyStripeNum;
-        return this;
-    }
-
-    /**
-     * Get defaultStoragePolicyStripeNum
-     *
-     * @return defaultStoragePolicyStripeNum
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public Integer getDefaultStoragePolicyStripeNum() {
-        return defaultStoragePolicyStripeNum;
-    }
-
-    public void setDefaultStoragePolicyStripeNum(Integer defaultStoragePolicyStripeNum) {
-        this.defaultStoragePolicyStripeNum = defaultStoragePolicyStripeNum;
-    }
-
-    public ClusterSettings defaultStoragePolicyStripeNum_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
-        return this;
-    }
-
-    public ClusterSettings defaultStoragePolicyStripeNum_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
-        return this;
-    }
-
-    public void setDefaultStoragePolicyStripeNum_IsExplictlyNull(boolean isExplictlyNull) {
-        if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
-        } else {
-            this._isPresent_.remove(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
-        }
-    }
-
-    public boolean getDefaultStoragePolicyStripeNum_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_DEFAULT_STORAGE_POLICY_STRIPE_NUM);
-    }
-
     public ClusterSettings defaultStoragePolicyThinProvision(
             Boolean defaultStoragePolicyThinProvision) {
 
@@ -566,9 +517,6 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
                         this.defaultStoragePolicyReplicaNum,
                         clusterSettings.defaultStoragePolicyReplicaNum)
                 && Objects.equals(
-                        this.defaultStoragePolicyStripeNum,
-                        clusterSettings.defaultStoragePolicyStripeNum)
-                && Objects.equals(
                         this.defaultStoragePolicyThinProvision,
                         clusterSettings.defaultStoragePolicyThinProvision)
                 && Objects.equals(this.enabledIscsi, clusterSettings.enabledIscsi)
@@ -594,7 +542,6 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
                 defaultStoragePolicyEcK,
                 defaultStoragePolicyEcM,
                 defaultStoragePolicyReplicaNum,
-                defaultStoragePolicyStripeNum,
                 defaultStoragePolicyThinProvision,
                 enabledIscsi,
                 id,
@@ -625,9 +572,6 @@ public class ClusterSettings extends com.smartx.tower.ConditionalNullable.Condit
                 .append("\n");
         sb.append("    defaultStoragePolicyReplicaNum: ")
                 .append(toIndentedString(defaultStoragePolicyReplicaNum))
-                .append("\n");
-        sb.append("    defaultStoragePolicyStripeNum: ")
-                .append(toIndentedString(defaultStoragePolicyStripeNum))
                 .append("\n");
         sb.append("    defaultStoragePolicyThinProvision: ")
                 .append(toIndentedString(defaultStoragePolicyThinProvision))
