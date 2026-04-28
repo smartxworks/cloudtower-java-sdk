@@ -214,6 +214,10 @@ public enum ClusterOrderByInput {
 
     OVERALL_EFFICIENCY_DESC("overall_efficiency_DESC"),
 
+    OVERPROVISION_RATIO_ASC("overprovision_ratio_ASC"),
+
+    OVERPROVISION_RATIO_DESC("overprovision_ratio_DESC"),
+
     PERF_ALLOCATED_DATA_SPACE_ASC("perf_allocated_data_space_ASC"),
 
     PERF_ALLOCATED_DATA_SPACE_DESC("perf_allocated_data_space_DESC"),
