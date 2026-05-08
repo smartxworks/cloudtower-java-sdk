@@ -53,6 +53,8 @@ import org.threeten.bp.format.DateTimeFormatter;
 
 /** ApiClient class. */
 public class ApiClient {
+    private static final int DEFAULT_ACTIVE_PASSIVE_PROBE_TIMEOUT_MILLIS = 10_000;
+    private static final int HTTP_TEMPORARY_REDIRECT = 307;
 
     private String basePath = "http://localhost";
     private boolean debugging = false;
@@ -1077,6 +1079,62 @@ public class ApiClient {
             }
             throw new ApiException(
                     response.message(), response.code(), response.headers().toMultimap(), respBody);
+        }
+    }
+
+    /**
+     * Probe this client's current base path and return whether it is the active endpoint.
+     *
+     * <p>The probe sends GET /api/healthz on the endpoint root. HTTP 200 means active, HTTP 307
+     * means passive, and any other status is treated as an error.
+     */
+    public boolean probeActivePassive() throws ApiException {
+        return probeActivePassive(basePath, DEFAULT_ACTIVE_PASSIVE_PROBE_TIMEOUT_MILLIS);
+    }
+
+    protected boolean probeActivePassive(String basePath, int timeoutMillis) throws ApiException {
+        HttpUrl endpoint = HttpUrl.parse(basePath);
+        if (endpoint == null) {
+            throw new ApiException("Invalid base path: " + basePath);
+        }
+
+        HttpUrl probeUrl =
+                endpoint.newBuilder().encodedPath("/api/healthz").query(null).fragment(null).build();
+        Request request =
+                new Request.Builder()
+                        .url(probeUrl)
+                        .tag(ActivePassiveRequestTags.Bypass.class, ActivePassiveRequestTags.BYPASS)
+                        .get()
+                        .build();
+        OkHttpClient probeClient =
+                httpClient
+                        .newBuilder()
+                        .followRedirects(false)
+                        .followSslRedirects(false)
+                        .callTimeout(
+                                timeoutMillis > 0
+                                        ? timeoutMillis
+                                        : DEFAULT_ACTIVE_PASSIVE_PROBE_TIMEOUT_MILLIS,
+                                TimeUnit.MILLISECONDS)
+                        .build();
+
+        try {
+            Response response = probeClient.newCall(request).execute();
+            try {
+                if (response.code() == 200) {
+                    return true;
+                }
+                if (response.code() == HTTP_TEMPORARY_REDIRECT) {
+                    return false;
+                }
+                throw ActivePassiveApiException.unexpectedProbeStatus(response);
+            } finally {
+                if (response.body() != null) {
+                    response.body().close();
+                }
+            }
+        } catch (IOException e) {
+            throw new ApiException(e);
         }
     }
 
