@@ -5,6 +5,10 @@ api/openapi.yaml
 git_push.sh
 pom.xml
 pom.xml
+src/main/java/com/smartx/tower/ActivePassiveApiClient.java
+src/main/java/com/smartx/tower/ActivePassiveApiException.java
+src/main/java/com/smartx/tower/ActivePassiveFailoverStrategy.java
+src/main/java/com/smartx/tower/ActivePassiveRequestTags.java
 src/main/java/com/smartx/tower/ApiCallback.java
 src/main/java/com/smartx/tower/ApiClient.java
 src/main/java/com/smartx/tower/ApiClient.java
@@ -1512,6 +1516,7 @@ src/main/java/com/smartx/tower/model/SecurityGroup.java
 src/main/java/com/smartx/tower/model/SecurityGroupConnection.java
 src/main/java/com/smartx/tower/model/SecurityGroupCreateParams.java
 src/main/java/com/smartx/tower/model/SecurityGroupDeleteParams.java
+src/main/java/com/smartx/tower/model/SecurityGroupMemberType.java
 src/main/java/com/smartx/tower/model/SecurityGroupOrderByInput.java
 src/main/java/com/smartx/tower/model/SecurityGroupUpdateBody.java
 src/main/java/com/smartx/tower/model/SecurityGroupUpdateParams.java
@@ -2146,3 +2151,4 @@ src/main/java/com/smartx/tower/model/ZoneTopoConnection.java
 src/main/java/com/smartx/tower/model/ZoneTopoOrderByInput.java
 src/main/java/com/smartx/tower/model/ZoneTopoWhereInput.java
 src/main/java/com/smartx/tower/model/ZoneWhereInput.java
+src/test/java/com/smartx/tower/ActivePassiveApiClientTest.java
