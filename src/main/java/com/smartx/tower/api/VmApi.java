@@ -14,6 +14,8 @@ import com.smartx.tower.model.GetVmVncInfoParams;
 import com.smartx.tower.model.GetVmsConnectionRequestBody;
 import com.smartx.tower.model.GetVmsRequestBody;
 import com.smartx.tower.model.InstallVmtoolsParams;
+import com.smartx.tower.model.NvramDownloadResponse;
+import com.smartx.tower.model.NvramParams;
 import com.smartx.tower.model.StopVmInCutoverMigrationParams;
 import com.smartx.tower.model.Task;
 import com.smartx.tower.model.Vm;
@@ -2327,6 +2329,158 @@ public class VmApi {
 
         okhttp3.Call localVarCall = deleteVmValidateBeforeCall(vmDeleteParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskDeleteVm>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for downloadNvram
+     *
+     * @param nvramParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call downloadNvramCall(NvramParams nvramParams, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = nvramParams;
+
+        // create path and map variables
+        String localVarPath = "/download_nvram";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call downloadNvramValidateBeforeCall(
+            NvramParams nvramParams, final ApiCallback _callback) throws ApiException {
+
+        // verify the required parameter 'nvramParams' is set
+        if (nvramParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'nvramParams' when calling"
+                            + " downloadNvram(Async)");
+        }
+
+        okhttp3.Call localVarCall = downloadNvramCall(nvramParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param nvramParams (required)
+     * @return NvramDownloadResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public NvramDownloadResponse downloadNvram(NvramParams nvramParams) throws ApiException {
+        ApiResponse<NvramDownloadResponse> localVarResp = downloadNvramWithHttpInfo(nvramParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param nvramParams (required)
+     * @return ApiResponse&lt;NvramDownloadResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<NvramDownloadResponse> downloadNvramWithHttpInfo(NvramParams nvramParams)
+            throws ApiException {
+        okhttp3.Call localVarCall = downloadNvramValidateBeforeCall(nvramParams, null);
+        Type localVarReturnType = new TypeToken<NvramDownloadResponse>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param nvramParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call downloadNvramAsync(
+            NvramParams nvramParams, final ApiCallback<NvramDownloadResponse> _callback)
+            throws ApiException {
+
+        okhttp3.Call localVarCall = downloadNvramValidateBeforeCall(nvramParams, _callback);
+        Type localVarReturnType = new TypeToken<NvramDownloadResponse>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -9239,6 +9393,156 @@ public class VmApi {
 
         okhttp3.Call localVarCall = updateVmOwnerValidateBeforeCall(vmUpdateOwnerParams, _callback);
         Type localVarReturnType = new TypeToken<List<WithTaskVm>>() {}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for uploadNvram
+     *
+     * @param nvramParams (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call uploadNvramCall(NvramParams nvramParams, final ApiCallback _callback)
+            throws ApiException {
+        String basePath = null;
+
+        // Operation Servers
+        String[] localBasePaths = new String[] {};
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null) {
+            basePath = localCustomBaseUrl;
+        } else if (localBasePaths.length > 0) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = nvramParams;
+
+        // create path and map variables
+        String localVarPath = "/upload_nvram";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {"application/json"};
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {"application/json"};
+        final String localVarContentType =
+                localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {"Authorization"};
+        return localVarApiClient.buildCall(
+                basePath,
+                localVarPath,
+                "POST",
+                localVarQueryParams,
+                localVarCollectionQueryParams,
+                localVarPostBody,
+                localVarHeaderParams,
+                localVarCookieParams,
+                localVarFormParams,
+                localVarAuthNames,
+                _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call uploadNvramValidateBeforeCall(
+            NvramParams nvramParams, final ApiCallback _callback) throws ApiException {
+
+        // verify the required parameter 'nvramParams' is set
+        if (nvramParams == null) {
+            throw new ApiException(
+                    "Missing the required parameter 'nvramParams' when calling uploadNvram(Async)");
+        }
+
+        okhttp3.Call localVarCall = uploadNvramCall(nvramParams, _callback);
+        return localVarCall;
+    }
+
+    /**
+     * @param nvramParams (required)
+     * @return String
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public String uploadNvram(NvramParams nvramParams) throws ApiException {
+        ApiResponse<String> localVarResp = uploadNvramWithHttpInfo(nvramParams);
+        return localVarResp.getData();
+    }
+
+    /**
+     * @param nvramParams (required)
+     * @return ApiResponse&lt;String&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+     *     response body
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public ApiResponse<String> uploadNvramWithHttpInfo(NvramParams nvramParams)
+            throws ApiException {
+        okhttp3.Call localVarCall = uploadNvramValidateBeforeCall(nvramParams, null);
+        Type localVarReturnType = new TypeToken<String>() {}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * (asynchronously)
+     *
+     * @param nvramParams (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body
+     *     object
+     * @http.response.details
+     *     <table summary="Response Details" border="1">
+     * <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+     * <tr><td> 200 </td><td>  </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 400 </td><td> Bad request </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 404 </td><td> Not found </td><td>  * CommonHeader -  <br>  </td></tr>
+     * <tr><td> 500 </td><td> Server error </td><td>  * CommonHeader -  <br>  </td></tr>
+     * </table>
+     */
+    public okhttp3.Call uploadNvramAsync(
+            NvramParams nvramParams, final ApiCallback<String> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = uploadNvramValidateBeforeCall(nvramParams, _callback);
+        Type localVarReturnType = new TypeToken<String>() {}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

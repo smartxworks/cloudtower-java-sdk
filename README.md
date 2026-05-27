@@ -33,14 +33,14 @@ Java 环境下的 Cloudtower SDK，适用于 Java 1.8 及以上版本
 
 ```java
 ApiClient client = new ApiClient();
-client.setBasePath("http://192.168.96.133/v2/api");
+client.setBasePath("http://tower.example.com/v2/api");
 ```
 
 > 如果需要使用 https，可以选择忽略证书验证
 
 ```java
 ApiClient client = new ApiClient();
-client.setBasePath("https://192.168.96.133/v2/api");
+client.setBasePath("https://tower.example.com/v2/api");
 client.setVerifyingSsl(false);
 ```
 
@@ -58,8 +58,8 @@ VmApi vmApi = new VmApi(client);
 // 通过 UserApi 中的 login 方法来获得 token。
 UserApi userApi = new UserApi(client);
 LoginInput loginInput = new LoginInput()
-    .username("root")
-    .password("!QAZ2wsx").source(UserSource.LOCAL);
+    .username("<username>")
+    .password("<password>").source(UserSource.LOCAL);
 WithTaskLoginResponse token = userApi.login(loginInput);
 ((ApiKeyAuth) client.getAuthentication("Authorization")).setApiKey(token.getData().getToken());
 ```
@@ -140,6 +140,42 @@ TaskUtil.WaitTasks(tasks, client);
 
 #### 其他
 
+##### 创建 `ActivePassiveApiClient` 实例
+
+CloudTower 在 4.9.0 引入了多管理 IP 主备部署，如果需要访问此类 CloudTower，可以使用 `ActivePassiveApiClient` 配置同一个主备集群的多个 endpoint。同一时间预期最多只有一个 active endpoint，传入顺序不代表主备关系，客户端会通过探测结果选择当前 active endpoint。
+
+```java
+ActivePassiveApiClient client = new ActivePassiveApiClient(
+    "https://tower-a.example.com",
+    "https://tower-b.example.com");
+
+LoginInput loginInput = new LoginInput()
+    .username("<username>")
+    .password("<password>")
+    .source(UserSource.LOCAL);
+WithTaskLoginResponse token = new UserApi(client).login(loginInput);
+ClientUtil.login(token.getData().getToken(), client);
+
+VmApi vmApi = new VmApi(client);
+```
+
+##### 故障切换策略
+
+`ActivePassiveApiClient` 支持以下故障切换策略：
+
+- `AUTO_FAILOVER`：默认的策略，当没有缓存的 active endpoint 时，会尝试探测并缓存当前 active endpoint；请求返回 307 后自动重新探测并重试一次；请求发生网络 I/O 异常后清空缓存，但不会自动重试。
+- `MANUAL_FAILOVER`：请求返回 307 后不自动重新探测和重试，清空缓存由调用方处理故障切换，其余业务逻辑和 `AUTO_FAILOVER` 一致。
+- `ALWAYS_PROBE`：不缓存 active endpoint，每次请求前都重新探测 active endpoint；请求返回 307 后不自动重试。
+
+如果需要指定故障切换策略，可以在创建实例时传入：
+
+```java
+ActivePassiveApiClient client = new ActivePassiveApiClient(
+    ActivePassiveFailoverStrategy.MANUAL_FAILOVER,
+    "https://tower-a.example.com",
+    "https://tower-b.example.com");
+```
+
 ##### 发送异步请求
 
 > 上述请求的发送都是同步的请求，会堵塞当前进程。如果需要使用异步请求，可以使用 `${Api}Async` 配合 `ApiCallback` 来发送异步请求。
@@ -197,7 +233,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     List<Vm> vms = getAllVms(client);
   }
@@ -216,7 +252,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     List<Vm> vms = getVmsByPagination(client, 50, 100);
   }
@@ -236,7 +272,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     List<Vm> vms = getAllRunningVms(client);
   }
@@ -257,7 +293,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     List<Vm> vms = getVmsByNameMatching(client, "yinsw");
   }
@@ -278,7 +314,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     List<Vm> vms = getVmsHasNMoreCpuCore(client, 4);
   }
@@ -302,8 +338,8 @@ public class App {
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
 
-    client.setBasePath("http://192.168.96.133/v2/api");
-    ClientUtil.login("username", "password", client);
+    client.setBasePath("http://tower.example.com/v2/api");
+    ClientUtil.login("<username>", "<password>", client);
     List<Vm> vms = createVmFromTemplate(client, new VmCreateVmFromContentLibraryTemplateParams()
         .clusterId("cluster_id")
         .templateId("template_id")
@@ -339,8 +375,8 @@ public class App {
   public static void main(String[] args) throws ApiException, IOException {
     ApiClient client = new ApiClient();
 
-    client.setBasePath("http://192.168.96.133/v2/api");
-    ClientUtil.login("username", "password", client);
+    client.setBasePath("http://tower.example.com/v2/api");
+    ClientUtil.login("<username>", "<password>", client);
     VmDiskOperate diskOperate = new VmDiskOperate()
         .removeDisks(
             new VmDiskOperateRemoveDisks()
@@ -402,8 +438,8 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
-    ClientUtil.login("username", "password", client);
+    client.setBasePath("http://tower.example.com/v2/api");
+    ClientUtil.login("<username>", "<password>", client);
     VmNicParams nicParams = new VmNicParams()
         .connectVlanId("nic_vlan_id") // 并非 vlan 的 vlan_id（0-4095） 而是 vlan 的 id（uuid）
         .enabled(true)
@@ -445,7 +481,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     VmCreationParams param = new VmCreationParams()
         .clusterId("cl2k0mpoy026d0822xq6ctsim")
@@ -491,7 +527,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     VmCreationParams param = new VmCreationParams()
         .clusterId("cl2k0mpoy026d0822xq6ctsim")
@@ -539,7 +575,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     VmCreationParams param = new VmCreationParams()
         .clusterId("cl2k0mpoy026d0822xq6ctsim")
@@ -588,7 +624,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     VmCreationParams param = new VmCreationParams()
         .clusterId("cl2k0mpoy026d0822xq6ctsim")
@@ -640,7 +676,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
     VmCreationParams param = new VmCreationParams()
         .clusterId("cl2k0mpoy026d0822xq6ctsim")
@@ -690,7 +726,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -728,7 +764,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -767,7 +803,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -804,7 +840,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -839,7 +875,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -881,7 +917,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -919,7 +955,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -954,7 +990,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -988,7 +1024,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmNicWhereInput where = new VmNicWhereInput().id("cl2k3coie0ngx0822oz5wgubx");
@@ -1024,7 +1060,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmNicWhereInput where = new VmNicWhereInput().id("cl2k3ill50oes0822f09n8ml6");
@@ -1062,7 +1098,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1098,7 +1134,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1131,7 +1167,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1168,7 +1204,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1201,7 +1237,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().nameStartsWith("prefix");
@@ -1234,7 +1270,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1269,7 +1305,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1301,7 +1337,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().nameStartsWith("prefix");
@@ -1333,7 +1369,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1365,7 +1401,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().nameStartsWith("prefix");
@@ -1399,7 +1435,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1431,7 +1467,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().nameStartsWith("prefix");
@@ -1463,7 +1499,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1495,7 +1531,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().nameStartsWith("prefix");
@@ -1529,7 +1565,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1561,7 +1597,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().nameStartsWith("prefix");
@@ -1595,7 +1631,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1627,7 +1663,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().nameStartsWith("prefix");
@@ -1663,7 +1699,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1696,7 +1732,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");
@@ -1729,7 +1765,7 @@ public class App {
 
   public static void main(String[] args) throws ApiException {
     ApiClient client = new ApiClient();
-    client.setBasePath("http://192.168.96.133/v2/api");
+    client.setBasePath("http://tower.example.com/v2/api");
     client.setApiKey("token");
 
     VmWhereInput where = new VmWhereInput().id("cl2k0njfl04480822fxjq5nns");

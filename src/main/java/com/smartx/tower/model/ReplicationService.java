@@ -123,6 +123,11 @@ public class ReplicationService
     @SerializedName(SERIALIZED_NAME_STORAGE_NETWORK)
     private NestedReplicationServiceNetwork storageNetwork;
 
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLANS = "sync_replication_plans";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLANS)
+    private List<NestedSyncReplicationPlan> syncReplicationPlans = null;
+
     public static final String SERIALIZED_NAME_UPDATED_AT = "updatedAt";
 
     @SerializedName(SERIALIZED_NAME_UPDATED_AT)
@@ -1078,6 +1083,59 @@ public class ReplicationService
         return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_NETWORK);
     }
 
+    public ReplicationService syncReplicationPlans(
+            List<NestedSyncReplicationPlan> syncReplicationPlans) {
+
+        this.syncReplicationPlans = syncReplicationPlans;
+        return this;
+    }
+
+    public ReplicationService addSyncReplicationPlansItem(
+            NestedSyncReplicationPlan syncReplicationPlansItem) {
+        if (this.syncReplicationPlans == null) {
+            this.syncReplicationPlans = new ArrayList<NestedSyncReplicationPlan>();
+        }
+        this.syncReplicationPlans.add(syncReplicationPlansItem);
+        return this;
+    }
+
+    /**
+     * Get syncReplicationPlans
+     *
+     * @return syncReplicationPlans
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<NestedSyncReplicationPlan> getSyncReplicationPlans() {
+        return syncReplicationPlans;
+    }
+
+    public void setSyncReplicationPlans(List<NestedSyncReplicationPlan> syncReplicationPlans) {
+        this.syncReplicationPlans = syncReplicationPlans;
+    }
+
+    public ReplicationService syncReplicationPlans_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS);
+        return this;
+    }
+
+    public ReplicationService syncReplicationPlans_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS);
+        return this;
+    }
+
+    public void setSyncReplicationPlans_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS);
+        }
+    }
+
+    public boolean getSyncReplicationPlans_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLANS);
+    }
+
     public ReplicationService updatedAt(String updatedAt) {
 
         this.updatedAt = updatedAt;
@@ -1157,6 +1215,8 @@ public class ReplicationService
                 && Objects.equals(this.replicationPlans, replicationService.replicationPlans)
                 && Objects.equals(this.retryInterval, replicationService.retryInterval)
                 && Objects.equals(this.storageNetwork, replicationService.storageNetwork)
+                && Objects.equals(
+                        this.syncReplicationPlans, replicationService.syncReplicationPlans)
                 && Objects.equals(this.updatedAt, replicationService.updatedAt);
     }
 
@@ -1193,6 +1253,7 @@ public class ReplicationService
                 replicationPlans,
                 retryInterval,
                 storageNetwork,
+                syncReplicationPlans,
                 updatedAt);
     }
 
@@ -1248,6 +1309,9 @@ public class ReplicationService
         sb.append("    replicationPlans: ").append(toIndentedString(replicationPlans)).append("\n");
         sb.append("    retryInterval: ").append(toIndentedString(retryInterval)).append("\n");
         sb.append("    storageNetwork: ").append(toIndentedString(storageNetwork)).append("\n");
+        sb.append("    syncReplicationPlans: ")
+                .append(toIndentedString(syncReplicationPlans))
+                .append("\n");
         sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
         sb.append("}");
         return sb.toString();

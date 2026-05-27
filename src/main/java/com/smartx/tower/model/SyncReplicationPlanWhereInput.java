@@ -1039,24 +1039,6 @@ public class SyncReplicationPlanWhereInput
     @SerializedName(SERIALIZED_NAME_REPLICATION_RESTORE_POINTS_SOME)
     private ReplicationRestorePointWhereInput replicationRestorePointsSome;
 
-    public static final String SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_EVERY =
-            "replication_target_executions_every";
-
-    @SerializedName(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_EVERY)
-    private ReplicationTargetExecutionWhereInput replicationTargetExecutionsEvery;
-
-    public static final String SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_NONE =
-            "replication_target_executions_none";
-
-    @SerializedName(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_NONE)
-    private ReplicationTargetExecutionWhereInput replicationTargetExecutionsNone;
-
-    public static final String SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_SOME =
-            "replication_target_executions_some";
-
-    @SerializedName(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_SOME)
-    private ReplicationTargetExecutionWhereInput replicationTargetExecutionsSome;
-
     public static final String SERIALIZED_NAME_RESILIENCY_TYPE = "resiliency_type";
 
     @SerializedName(SERIALIZED_NAME_RESILIENCY_TYPE)
@@ -10069,141 +10051,6 @@ public class SyncReplicationPlanWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_RESTORE_POINTS_SOME);
     }
 
-    public SyncReplicationPlanWhereInput replicationTargetExecutionsEvery(
-            ReplicationTargetExecutionWhereInput replicationTargetExecutionsEvery) {
-
-        this.replicationTargetExecutionsEvery = replicationTargetExecutionsEvery;
-        return this;
-    }
-
-    /**
-     * Get replicationTargetExecutionsEvery
-     *
-     * @return replicationTargetExecutionsEvery
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public ReplicationTargetExecutionWhereInput getReplicationTargetExecutionsEvery() {
-        return replicationTargetExecutionsEvery;
-    }
-
-    public void setReplicationTargetExecutionsEvery(
-            ReplicationTargetExecutionWhereInput replicationTargetExecutionsEvery) {
-        this.replicationTargetExecutionsEvery = replicationTargetExecutionsEvery;
-    }
-
-    public SyncReplicationPlanWhereInput replicationTargetExecutionsEvery_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_EVERY);
-        return this;
-    }
-
-    public SyncReplicationPlanWhereInput replicationTargetExecutionsEvery_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_EVERY);
-        return this;
-    }
-
-    public void setReplicationTargetExecutionsEvery_IsExplictlyNull(boolean isExplictlyNull) {
-        if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_EVERY);
-        } else {
-            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_EVERY);
-        }
-    }
-
-    public boolean getReplicationTargetExecutionsEvery_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_EVERY);
-    }
-
-    public SyncReplicationPlanWhereInput replicationTargetExecutionsNone(
-            ReplicationTargetExecutionWhereInput replicationTargetExecutionsNone) {
-
-        this.replicationTargetExecutionsNone = replicationTargetExecutionsNone;
-        return this;
-    }
-
-    /**
-     * Get replicationTargetExecutionsNone
-     *
-     * @return replicationTargetExecutionsNone
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public ReplicationTargetExecutionWhereInput getReplicationTargetExecutionsNone() {
-        return replicationTargetExecutionsNone;
-    }
-
-    public void setReplicationTargetExecutionsNone(
-            ReplicationTargetExecutionWhereInput replicationTargetExecutionsNone) {
-        this.replicationTargetExecutionsNone = replicationTargetExecutionsNone;
-    }
-
-    public SyncReplicationPlanWhereInput replicationTargetExecutionsNone_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_NONE);
-        return this;
-    }
-
-    public SyncReplicationPlanWhereInput replicationTargetExecutionsNone_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_NONE);
-        return this;
-    }
-
-    public void setReplicationTargetExecutionsNone_IsExplictlyNull(boolean isExplictlyNull) {
-        if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_NONE);
-        } else {
-            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_NONE);
-        }
-    }
-
-    public boolean getReplicationTargetExecutionsNone_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_NONE);
-    }
-
-    public SyncReplicationPlanWhereInput replicationTargetExecutionsSome(
-            ReplicationTargetExecutionWhereInput replicationTargetExecutionsSome) {
-
-        this.replicationTargetExecutionsSome = replicationTargetExecutionsSome;
-        return this;
-    }
-
-    /**
-     * Get replicationTargetExecutionsSome
-     *
-     * @return replicationTargetExecutionsSome
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public ReplicationTargetExecutionWhereInput getReplicationTargetExecutionsSome() {
-        return replicationTargetExecutionsSome;
-    }
-
-    public void setReplicationTargetExecutionsSome(
-            ReplicationTargetExecutionWhereInput replicationTargetExecutionsSome) {
-        this.replicationTargetExecutionsSome = replicationTargetExecutionsSome;
-    }
-
-    public SyncReplicationPlanWhereInput replicationTargetExecutionsSome_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_SOME);
-        return this;
-    }
-
-    public SyncReplicationPlanWhereInput replicationTargetExecutionsSome_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_SOME);
-        return this;
-    }
-
-    public void setReplicationTargetExecutionsSome_IsExplictlyNull(boolean isExplictlyNull) {
-        if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_SOME);
-        } else {
-            this._isPresent_.remove(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_SOME);
-        }
-    }
-
-    public boolean getReplicationTargetExecutionsSome_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_SOME);
-    }
-
     public SyncReplicationPlanWhereInput resiliencyType(ResiliencyType resiliencyType) {
 
         this.resiliencyType = resiliencyType;
@@ -12631,15 +12478,6 @@ public class SyncReplicationPlanWhereInput
                 && Objects.equals(
                         this.replicationRestorePointsSome,
                         syncReplicationPlanWhereInput.replicationRestorePointsSome)
-                && Objects.equals(
-                        this.replicationTargetExecutionsEvery,
-                        syncReplicationPlanWhereInput.replicationTargetExecutionsEvery)
-                && Objects.equals(
-                        this.replicationTargetExecutionsNone,
-                        syncReplicationPlanWhereInput.replicationTargetExecutionsNone)
-                && Objects.equals(
-                        this.replicationTargetExecutionsSome,
-                        syncReplicationPlanWhereInput.replicationTargetExecutionsSome)
                 && Objects.equals(this.resiliencyType, syncReplicationPlanWhereInput.resiliencyType)
                 && Objects.equals(
                         this.resiliencyTypeIn, syncReplicationPlanWhereInput.resiliencyTypeIn)
@@ -12921,9 +12759,6 @@ public class SyncReplicationPlanWhereInput
                 replicationRestorePointsEvery,
                 replicationRestorePointsNone,
                 replicationRestorePointsSome,
-                replicationTargetExecutionsEvery,
-                replicationTargetExecutionsNone,
-                replicationTargetExecutionsSome,
                 resiliencyType,
                 resiliencyTypeIn,
                 resiliencyTypeNot,
@@ -13343,15 +13178,6 @@ public class SyncReplicationPlanWhereInput
                 .append("\n");
         sb.append("    replicationRestorePointsSome: ")
                 .append(toIndentedString(replicationRestorePointsSome))
-                .append("\n");
-        sb.append("    replicationTargetExecutionsEvery: ")
-                .append(toIndentedString(replicationTargetExecutionsEvery))
-                .append("\n");
-        sb.append("    replicationTargetExecutionsNone: ")
-                .append(toIndentedString(replicationTargetExecutionsNone))
-                .append("\n");
-        sb.append("    replicationTargetExecutionsSome: ")
-                .append(toIndentedString(replicationTargetExecutionsSome))
                 .append("\n");
         sb.append("    resiliencyType: ").append(toIndentedString(resiliencyType)).append("\n");
         sb.append("    resiliencyTypeIn: ").append(toIndentedString(resiliencyTypeIn)).append("\n");

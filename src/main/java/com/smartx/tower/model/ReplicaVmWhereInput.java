@@ -268,6 +268,190 @@ public class ReplicaVmWhereInput
     @SerializedName(SERIALIZED_NAME_ISCSI_LUN)
     private IscsiLunWhereInput iscsiLun;
 
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT = "last_out_of_sync_at";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT)
+    private String lastOutOfSyncAt;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GT = "last_out_of_sync_at_gt";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GT)
+    private String lastOutOfSyncAtGt;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GTE = "last_out_of_sync_at_gte";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GTE)
+    private String lastOutOfSyncAtGte;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_IN = "last_out_of_sync_at_in";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_IN)
+    private List<String> lastOutOfSyncAtIn = null;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LT = "last_out_of_sync_at_lt";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LT)
+    private String lastOutOfSyncAtLt;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LTE = "last_out_of_sync_at_lte";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LTE)
+    private String lastOutOfSyncAtLte;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT = "last_out_of_sync_at_not";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT)
+    private String lastOutOfSyncAtNot;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT_IN =
+            "last_out_of_sync_at_not_in";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT_IN)
+    private List<String> lastOutOfSyncAtNotIn = null;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON = "last_out_of_sync_reason";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON)
+    private String lastOutOfSyncReason;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_CONTAINS =
+            "last_out_of_sync_reason_contains";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_CONTAINS)
+    private String lastOutOfSyncReasonContains;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_ENDS_WITH =
+            "last_out_of_sync_reason_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_ENDS_WITH)
+    private String lastOutOfSyncReasonEndsWith;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GT =
+            "last_out_of_sync_reason_gt";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GT)
+    private String lastOutOfSyncReasonGt;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GTE =
+            "last_out_of_sync_reason_gte";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GTE)
+    private String lastOutOfSyncReasonGte;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_IN =
+            "last_out_of_sync_reason_in";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_IN)
+    private List<String> lastOutOfSyncReasonIn = null;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LT =
+            "last_out_of_sync_reason_lt";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LT)
+    private String lastOutOfSyncReasonLt;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LTE =
+            "last_out_of_sync_reason_lte";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LTE)
+    private String lastOutOfSyncReasonLte;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT =
+            "last_out_of_sync_reason_not";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT)
+    private String lastOutOfSyncReasonNot;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_CONTAINS =
+            "last_out_of_sync_reason_not_contains";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_CONTAINS)
+    private String lastOutOfSyncReasonNotContains;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_ENDS_WITH =
+            "last_out_of_sync_reason_not_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_ENDS_WITH)
+    private String lastOutOfSyncReasonNotEndsWith;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_IN =
+            "last_out_of_sync_reason_not_in";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_IN)
+    private List<String> lastOutOfSyncReasonNotIn = null;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_STARTS_WITH =
+            "last_out_of_sync_reason_not_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_STARTS_WITH)
+    private String lastOutOfSyncReasonNotStartsWith;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_STARTS_WITH =
+            "last_out_of_sync_reason_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_STARTS_WITH)
+    private String lastOutOfSyncReasonStartsWith;
+
+    public static final String SERIALIZED_NAME_LAST_SYNCED_AT = "last_synced_at";
+
+    @SerializedName(SERIALIZED_NAME_LAST_SYNCED_AT)
+    private String lastSyncedAt;
+
+    public static final String SERIALIZED_NAME_LAST_SYNCED_AT_GT = "last_synced_at_gt";
+
+    @SerializedName(SERIALIZED_NAME_LAST_SYNCED_AT_GT)
+    private String lastSyncedAtGt;
+
+    public static final String SERIALIZED_NAME_LAST_SYNCED_AT_GTE = "last_synced_at_gte";
+
+    @SerializedName(SERIALIZED_NAME_LAST_SYNCED_AT_GTE)
+    private String lastSyncedAtGte;
+
+    public static final String SERIALIZED_NAME_LAST_SYNCED_AT_IN = "last_synced_at_in";
+
+    @SerializedName(SERIALIZED_NAME_LAST_SYNCED_AT_IN)
+    private List<String> lastSyncedAtIn = null;
+
+    public static final String SERIALIZED_NAME_LAST_SYNCED_AT_LT = "last_synced_at_lt";
+
+    @SerializedName(SERIALIZED_NAME_LAST_SYNCED_AT_LT)
+    private String lastSyncedAtLt;
+
+    public static final String SERIALIZED_NAME_LAST_SYNCED_AT_LTE = "last_synced_at_lte";
+
+    @SerializedName(SERIALIZED_NAME_LAST_SYNCED_AT_LTE)
+    private String lastSyncedAtLte;
+
+    public static final String SERIALIZED_NAME_LAST_SYNCED_AT_NOT = "last_synced_at_not";
+
+    @SerializedName(SERIALIZED_NAME_LAST_SYNCED_AT_NOT)
+    private String lastSyncedAtNot;
+
+    public static final String SERIALIZED_NAME_LAST_SYNCED_AT_NOT_IN = "last_synced_at_not_in";
+
+    @SerializedName(SERIALIZED_NAME_LAST_SYNCED_AT_NOT_IN)
+    private List<String> lastSyncedAtNotIn = null;
+
+    public static final String SERIALIZED_NAME_METHOD = "method";
+
+    @SerializedName(SERIALIZED_NAME_METHOD)
+    private ReplicationMethod method;
+
+    public static final String SERIALIZED_NAME_METHOD_IN = "method_in";
+
+    @SerializedName(SERIALIZED_NAME_METHOD_IN)
+    private List<ReplicationMethod> methodIn = null;
+
+    public static final String SERIALIZED_NAME_METHOD_NOT = "method_not";
+
+    @SerializedName(SERIALIZED_NAME_METHOD_NOT)
+    private ReplicationMethod methodNot;
+
+    public static final String SERIALIZED_NAME_METHOD_NOT_IN = "method_not_in";
+
+    @SerializedName(SERIALIZED_NAME_METHOD_NOT_IN)
+    private List<ReplicationMethod> methodNotIn = null;
+
     public static final String SERIALIZED_NAME_ORIGIN_ISCSI_LUN = "origin_iscsi_lun";
 
     @SerializedName(SERIALIZED_NAME_ORIGIN_ISCSI_LUN)
@@ -776,6 +960,46 @@ public class ReplicaVmWhereInput
     @SerializedName(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_SOME)
     private ReplicationTargetExecutionWhereInput replicationTargetExecutionsSome;
 
+    public static final String SERIALIZED_NAME_RESOURCE_VERSION = "resource_version";
+
+    @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION)
+    private Integer resourceVersion;
+
+    public static final String SERIALIZED_NAME_RESOURCE_VERSION_GT = "resource_version_gt";
+
+    @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION_GT)
+    private Integer resourceVersionGt;
+
+    public static final String SERIALIZED_NAME_RESOURCE_VERSION_GTE = "resource_version_gte";
+
+    @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION_GTE)
+    private Integer resourceVersionGte;
+
+    public static final String SERIALIZED_NAME_RESOURCE_VERSION_IN = "resource_version_in";
+
+    @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION_IN)
+    private List<Integer> resourceVersionIn = null;
+
+    public static final String SERIALIZED_NAME_RESOURCE_VERSION_LT = "resource_version_lt";
+
+    @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION_LT)
+    private Integer resourceVersionLt;
+
+    public static final String SERIALIZED_NAME_RESOURCE_VERSION_LTE = "resource_version_lte";
+
+    @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION_LTE)
+    private Integer resourceVersionLte;
+
+    public static final String SERIALIZED_NAME_RESOURCE_VERSION_NOT = "resource_version_not";
+
+    @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION_NOT)
+    private Integer resourceVersionNot;
+
+    public static final String SERIALIZED_NAME_RESOURCE_VERSION_NOT_IN = "resource_version_not_in";
+
+    @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION_NOT_IN)
+    private List<Integer> resourceVersionNotIn = null;
+
     public static final String SERIALIZED_NAME_RESTORE_POINTS_EVERY = "restore_points_every";
 
     @SerializedName(SERIALIZED_NAME_RESTORE_POINTS_EVERY)
@@ -810,6 +1034,58 @@ public class ReplicaVmWhereInput
 
     @SerializedName(SERIALIZED_NAME_STATE_NOT_IN)
     private List<ReplicaVmState> stateNotIn = null;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS =
+            "sync_replication_object_status";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS)
+    private SyncReplicationObjectStatus syncReplicationObjectStatus;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_IN =
+            "sync_replication_object_status_in";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_IN)
+    private List<SyncReplicationObjectStatus> syncReplicationObjectStatusIn = null;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT =
+            "sync_replication_object_status_not";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT)
+    private SyncReplicationObjectStatus syncReplicationObjectStatusNot;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT_IN =
+            "sync_replication_object_status_not_in";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT_IN)
+    private List<SyncReplicationObjectStatus> syncReplicationObjectStatusNotIn = null;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLAN = "sync_replication_plan";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLAN)
+    private SyncReplicationPlanWhereInput syncReplicationPlan;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_STATUS = "sync_replication_status";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_STATUS)
+    private SyncReplicationStatus syncReplicationStatus;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_STATUS_IN =
+            "sync_replication_status_in";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_IN)
+    private List<SyncReplicationStatus> syncReplicationStatusIn = null;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT =
+            "sync_replication_status_not";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT)
+    private SyncReplicationStatus syncReplicationStatusNot;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT_IN =
+            "sync_replication_status_not_in";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT_IN)
+    private List<SyncReplicationStatus> syncReplicationStatusNotIn = null;
 
     public static final String SERIALIZED_NAME_TARGETS_DELETABLE = "targets_deletable";
 
@@ -3052,6 +3328,1536 @@ public class ReplicaVmWhereInput
 
     public boolean getIscsiLun_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUN);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAt(String lastOutOfSyncAt) {
+
+        this.lastOutOfSyncAt = lastOutOfSyncAt;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncAt
+     *
+     * @return lastOutOfSyncAt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncAt() {
+        return lastOutOfSyncAt;
+    }
+
+    public void setLastOutOfSyncAt(String lastOutOfSyncAt) {
+        this.lastOutOfSyncAt = lastOutOfSyncAt;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+        return this;
+    }
+
+    public void setLastOutOfSyncAt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+        }
+    }
+
+    public boolean getLastOutOfSyncAt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtGt(String lastOutOfSyncAtGt) {
+
+        this.lastOutOfSyncAtGt = lastOutOfSyncAtGt;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncAtGt
+     *
+     * @return lastOutOfSyncAtGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncAtGt() {
+        return lastOutOfSyncAtGt;
+    }
+
+    public void setLastOutOfSyncAtGt(String lastOutOfSyncAtGt) {
+        this.lastOutOfSyncAtGt = lastOutOfSyncAtGt;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GT);
+        return this;
+    }
+
+    public void setLastOutOfSyncAtGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GT);
+        }
+    }
+
+    public boolean getLastOutOfSyncAtGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GT);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtGte(String lastOutOfSyncAtGte) {
+
+        this.lastOutOfSyncAtGte = lastOutOfSyncAtGte;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncAtGte
+     *
+     * @return lastOutOfSyncAtGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncAtGte() {
+        return lastOutOfSyncAtGte;
+    }
+
+    public void setLastOutOfSyncAtGte(String lastOutOfSyncAtGte) {
+        this.lastOutOfSyncAtGte = lastOutOfSyncAtGte;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GTE);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GTE);
+        return this;
+    }
+
+    public void setLastOutOfSyncAtGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GTE);
+        }
+    }
+
+    public boolean getLastOutOfSyncAtGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_GTE);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtIn(List<String> lastOutOfSyncAtIn) {
+
+        this.lastOutOfSyncAtIn = lastOutOfSyncAtIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addLastOutOfSyncAtInItem(String lastOutOfSyncAtInItem) {
+        if (this.lastOutOfSyncAtIn == null) {
+            this.lastOutOfSyncAtIn = new ArrayList<String>();
+        }
+        this.lastOutOfSyncAtIn.add(lastOutOfSyncAtInItem);
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncAtIn
+     *
+     * @return lastOutOfSyncAtIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getLastOutOfSyncAtIn() {
+        return lastOutOfSyncAtIn;
+    }
+
+    public void setLastOutOfSyncAtIn(List<String> lastOutOfSyncAtIn) {
+        this.lastOutOfSyncAtIn = lastOutOfSyncAtIn;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_IN);
+        return this;
+    }
+
+    public void setLastOutOfSyncAtIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_IN);
+        }
+    }
+
+    public boolean getLastOutOfSyncAtIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_IN);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtLt(String lastOutOfSyncAtLt) {
+
+        this.lastOutOfSyncAtLt = lastOutOfSyncAtLt;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncAtLt
+     *
+     * @return lastOutOfSyncAtLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncAtLt() {
+        return lastOutOfSyncAtLt;
+    }
+
+    public void setLastOutOfSyncAtLt(String lastOutOfSyncAtLt) {
+        this.lastOutOfSyncAtLt = lastOutOfSyncAtLt;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LT);
+        return this;
+    }
+
+    public void setLastOutOfSyncAtLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LT);
+        }
+    }
+
+    public boolean getLastOutOfSyncAtLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LT);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtLte(String lastOutOfSyncAtLte) {
+
+        this.lastOutOfSyncAtLte = lastOutOfSyncAtLte;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncAtLte
+     *
+     * @return lastOutOfSyncAtLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncAtLte() {
+        return lastOutOfSyncAtLte;
+    }
+
+    public void setLastOutOfSyncAtLte(String lastOutOfSyncAtLte) {
+        this.lastOutOfSyncAtLte = lastOutOfSyncAtLte;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LTE);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LTE);
+        return this;
+    }
+
+    public void setLastOutOfSyncAtLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LTE);
+        }
+    }
+
+    public boolean getLastOutOfSyncAtLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_LTE);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtNot(String lastOutOfSyncAtNot) {
+
+        this.lastOutOfSyncAtNot = lastOutOfSyncAtNot;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncAtNot
+     *
+     * @return lastOutOfSyncAtNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncAtNot() {
+        return lastOutOfSyncAtNot;
+    }
+
+    public void setLastOutOfSyncAtNot(String lastOutOfSyncAtNot) {
+        this.lastOutOfSyncAtNot = lastOutOfSyncAtNot;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT);
+        return this;
+    }
+
+    public void setLastOutOfSyncAtNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT);
+        }
+    }
+
+    public boolean getLastOutOfSyncAtNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtNotIn(List<String> lastOutOfSyncAtNotIn) {
+
+        this.lastOutOfSyncAtNotIn = lastOutOfSyncAtNotIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addLastOutOfSyncAtNotInItem(String lastOutOfSyncAtNotInItem) {
+        if (this.lastOutOfSyncAtNotIn == null) {
+            this.lastOutOfSyncAtNotIn = new ArrayList<String>();
+        }
+        this.lastOutOfSyncAtNotIn.add(lastOutOfSyncAtNotInItem);
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncAtNotIn
+     *
+     * @return lastOutOfSyncAtNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getLastOutOfSyncAtNotIn() {
+        return lastOutOfSyncAtNotIn;
+    }
+
+    public void setLastOutOfSyncAtNotIn(List<String> lastOutOfSyncAtNotIn) {
+        this.lastOutOfSyncAtNotIn = lastOutOfSyncAtNotIn;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncAtNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT_IN);
+        return this;
+    }
+
+    public void setLastOutOfSyncAtNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT_IN);
+        }
+    }
+
+    public boolean getLastOutOfSyncAtNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT_NOT_IN);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReason(String lastOutOfSyncReason) {
+
+        this.lastOutOfSyncReason = lastOutOfSyncReason;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReason
+     *
+     * @return lastOutOfSyncReason
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReason() {
+        return lastOutOfSyncReason;
+    }
+
+    public void setLastOutOfSyncReason(String lastOutOfSyncReason) {
+        this.lastOutOfSyncReason = lastOutOfSyncReason;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReason_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReason_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+        return this;
+    }
+
+    public void setLastOutOfSyncReason_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+        }
+    }
+
+    public boolean getLastOutOfSyncReason_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonContains(String lastOutOfSyncReasonContains) {
+
+        this.lastOutOfSyncReasonContains = lastOutOfSyncReasonContains;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonContains
+     *
+     * @return lastOutOfSyncReasonContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonContains() {
+        return lastOutOfSyncReasonContains;
+    }
+
+    public void setLastOutOfSyncReasonContains(String lastOutOfSyncReasonContains) {
+        this.lastOutOfSyncReasonContains = lastOutOfSyncReasonContains;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_CONTAINS);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_CONTAINS);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_CONTAINS);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_CONTAINS);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonEndsWith(String lastOutOfSyncReasonEndsWith) {
+
+        this.lastOutOfSyncReasonEndsWith = lastOutOfSyncReasonEndsWith;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonEndsWith
+     *
+     * @return lastOutOfSyncReasonEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonEndsWith() {
+        return lastOutOfSyncReasonEndsWith;
+    }
+
+    public void setLastOutOfSyncReasonEndsWith(String lastOutOfSyncReasonEndsWith) {
+        this.lastOutOfSyncReasonEndsWith = lastOutOfSyncReasonEndsWith;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_ENDS_WITH);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_ENDS_WITH);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_ENDS_WITH);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_ENDS_WITH);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonGt(String lastOutOfSyncReasonGt) {
+
+        this.lastOutOfSyncReasonGt = lastOutOfSyncReasonGt;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonGt
+     *
+     * @return lastOutOfSyncReasonGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonGt() {
+        return lastOutOfSyncReasonGt;
+    }
+
+    public void setLastOutOfSyncReasonGt(String lastOutOfSyncReasonGt) {
+        this.lastOutOfSyncReasonGt = lastOutOfSyncReasonGt;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GT);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GT);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GT);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonGte(String lastOutOfSyncReasonGte) {
+
+        this.lastOutOfSyncReasonGte = lastOutOfSyncReasonGte;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonGte
+     *
+     * @return lastOutOfSyncReasonGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonGte() {
+        return lastOutOfSyncReasonGte;
+    }
+
+    public void setLastOutOfSyncReasonGte(String lastOutOfSyncReasonGte) {
+        this.lastOutOfSyncReasonGte = lastOutOfSyncReasonGte;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GTE);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GTE);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GTE);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_GTE);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonIn(List<String> lastOutOfSyncReasonIn) {
+
+        this.lastOutOfSyncReasonIn = lastOutOfSyncReasonIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addLastOutOfSyncReasonInItem(String lastOutOfSyncReasonInItem) {
+        if (this.lastOutOfSyncReasonIn == null) {
+            this.lastOutOfSyncReasonIn = new ArrayList<String>();
+        }
+        this.lastOutOfSyncReasonIn.add(lastOutOfSyncReasonInItem);
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonIn
+     *
+     * @return lastOutOfSyncReasonIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getLastOutOfSyncReasonIn() {
+        return lastOutOfSyncReasonIn;
+    }
+
+    public void setLastOutOfSyncReasonIn(List<String> lastOutOfSyncReasonIn) {
+        this.lastOutOfSyncReasonIn = lastOutOfSyncReasonIn;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_IN);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_IN);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_IN);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonLt(String lastOutOfSyncReasonLt) {
+
+        this.lastOutOfSyncReasonLt = lastOutOfSyncReasonLt;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonLt
+     *
+     * @return lastOutOfSyncReasonLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonLt() {
+        return lastOutOfSyncReasonLt;
+    }
+
+    public void setLastOutOfSyncReasonLt(String lastOutOfSyncReasonLt) {
+        this.lastOutOfSyncReasonLt = lastOutOfSyncReasonLt;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LT);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LT);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LT);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonLte(String lastOutOfSyncReasonLte) {
+
+        this.lastOutOfSyncReasonLte = lastOutOfSyncReasonLte;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonLte
+     *
+     * @return lastOutOfSyncReasonLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonLte() {
+        return lastOutOfSyncReasonLte;
+    }
+
+    public void setLastOutOfSyncReasonLte(String lastOutOfSyncReasonLte) {
+        this.lastOutOfSyncReasonLte = lastOutOfSyncReasonLte;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LTE);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LTE);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LTE);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_LTE);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNot(String lastOutOfSyncReasonNot) {
+
+        this.lastOutOfSyncReasonNot = lastOutOfSyncReasonNot;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonNot
+     *
+     * @return lastOutOfSyncReasonNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonNot() {
+        return lastOutOfSyncReasonNot;
+    }
+
+    public void setLastOutOfSyncReasonNot(String lastOutOfSyncReasonNot) {
+        this.lastOutOfSyncReasonNot = lastOutOfSyncReasonNot;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotContains(
+            String lastOutOfSyncReasonNotContains) {
+
+        this.lastOutOfSyncReasonNotContains = lastOutOfSyncReasonNotContains;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonNotContains
+     *
+     * @return lastOutOfSyncReasonNotContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonNotContains() {
+        return lastOutOfSyncReasonNotContains;
+    }
+
+    public void setLastOutOfSyncReasonNotContains(String lastOutOfSyncReasonNotContains) {
+        this.lastOutOfSyncReasonNotContains = lastOutOfSyncReasonNotContains;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_CONTAINS);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_CONTAINS);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonNotContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_CONTAINS);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonNotContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_CONTAINS);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotEndsWith(
+            String lastOutOfSyncReasonNotEndsWith) {
+
+        this.lastOutOfSyncReasonNotEndsWith = lastOutOfSyncReasonNotEndsWith;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonNotEndsWith
+     *
+     * @return lastOutOfSyncReasonNotEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonNotEndsWith() {
+        return lastOutOfSyncReasonNotEndsWith;
+    }
+
+    public void setLastOutOfSyncReasonNotEndsWith(String lastOutOfSyncReasonNotEndsWith) {
+        this.lastOutOfSyncReasonNotEndsWith = lastOutOfSyncReasonNotEndsWith;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonNotEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_ENDS_WITH);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonNotEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_ENDS_WITH);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotIn(List<String> lastOutOfSyncReasonNotIn) {
+
+        this.lastOutOfSyncReasonNotIn = lastOutOfSyncReasonNotIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addLastOutOfSyncReasonNotInItem(
+            String lastOutOfSyncReasonNotInItem) {
+        if (this.lastOutOfSyncReasonNotIn == null) {
+            this.lastOutOfSyncReasonNotIn = new ArrayList<String>();
+        }
+        this.lastOutOfSyncReasonNotIn.add(lastOutOfSyncReasonNotInItem);
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonNotIn
+     *
+     * @return lastOutOfSyncReasonNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getLastOutOfSyncReasonNotIn() {
+        return lastOutOfSyncReasonNotIn;
+    }
+
+    public void setLastOutOfSyncReasonNotIn(List<String> lastOutOfSyncReasonNotIn) {
+        this.lastOutOfSyncReasonNotIn = lastOutOfSyncReasonNotIn;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_IN);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_IN);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_IN);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotStartsWith(
+            String lastOutOfSyncReasonNotStartsWith) {
+
+        this.lastOutOfSyncReasonNotStartsWith = lastOutOfSyncReasonNotStartsWith;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonNotStartsWith
+     *
+     * @return lastOutOfSyncReasonNotStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonNotStartsWith() {
+        return lastOutOfSyncReasonNotStartsWith;
+    }
+
+    public void setLastOutOfSyncReasonNotStartsWith(String lastOutOfSyncReasonNotStartsWith) {
+        this.lastOutOfSyncReasonNotStartsWith = lastOutOfSyncReasonNotStartsWith;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonNotStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonNotStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_STARTS_WITH);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonNotStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_NOT_STARTS_WITH);
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonStartsWith(String lastOutOfSyncReasonStartsWith) {
+
+        this.lastOutOfSyncReasonStartsWith = lastOutOfSyncReasonStartsWith;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReasonStartsWith
+     *
+     * @return lastOutOfSyncReasonStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReasonStartsWith() {
+        return lastOutOfSyncReasonStartsWith;
+    }
+
+    public void setLastOutOfSyncReasonStartsWith(String lastOutOfSyncReasonStartsWith) {
+        this.lastOutOfSyncReasonStartsWith = lastOutOfSyncReasonStartsWith;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_STARTS_WITH);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastOutOfSyncReasonStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_STARTS_WITH);
+        return this;
+    }
+
+    public void setLastOutOfSyncReasonStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_STARTS_WITH);
+        }
+    }
+
+    public boolean getLastOutOfSyncReasonStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON_STARTS_WITH);
+    }
+
+    public ReplicaVmWhereInput lastSyncedAt(String lastSyncedAt) {
+
+        this.lastSyncedAt = lastSyncedAt;
+        return this;
+    }
+
+    /**
+     * Get lastSyncedAt
+     *
+     * @return lastSyncedAt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastSyncedAt() {
+        return lastSyncedAt;
+    }
+
+    public void setLastSyncedAt(String lastSyncedAt) {
+        this.lastSyncedAt = lastSyncedAt;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT);
+        return this;
+    }
+
+    public void setLastSyncedAt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT);
+        }
+    }
+
+    public boolean getLastSyncedAt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_SYNCED_AT);
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtGt(String lastSyncedAtGt) {
+
+        this.lastSyncedAtGt = lastSyncedAtGt;
+        return this;
+    }
+
+    /**
+     * Get lastSyncedAtGt
+     *
+     * @return lastSyncedAtGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastSyncedAtGt() {
+        return lastSyncedAtGt;
+    }
+
+    public void setLastSyncedAtGt(String lastSyncedAtGt) {
+        this.lastSyncedAtGt = lastSyncedAtGt;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_GT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_GT);
+        return this;
+    }
+
+    public void setLastSyncedAtGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_GT);
+        }
+    }
+
+    public boolean getLastSyncedAtGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_SYNCED_AT_GT);
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtGte(String lastSyncedAtGte) {
+
+        this.lastSyncedAtGte = lastSyncedAtGte;
+        return this;
+    }
+
+    /**
+     * Get lastSyncedAtGte
+     *
+     * @return lastSyncedAtGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastSyncedAtGte() {
+        return lastSyncedAtGte;
+    }
+
+    public void setLastSyncedAtGte(String lastSyncedAtGte) {
+        this.lastSyncedAtGte = lastSyncedAtGte;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_GTE);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_GTE);
+        return this;
+    }
+
+    public void setLastSyncedAtGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_GTE);
+        }
+    }
+
+    public boolean getLastSyncedAtGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_SYNCED_AT_GTE);
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtIn(List<String> lastSyncedAtIn) {
+
+        this.lastSyncedAtIn = lastSyncedAtIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addLastSyncedAtInItem(String lastSyncedAtInItem) {
+        if (this.lastSyncedAtIn == null) {
+            this.lastSyncedAtIn = new ArrayList<String>();
+        }
+        this.lastSyncedAtIn.add(lastSyncedAtInItem);
+        return this;
+    }
+
+    /**
+     * Get lastSyncedAtIn
+     *
+     * @return lastSyncedAtIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getLastSyncedAtIn() {
+        return lastSyncedAtIn;
+    }
+
+    public void setLastSyncedAtIn(List<String> lastSyncedAtIn) {
+        this.lastSyncedAtIn = lastSyncedAtIn;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_IN);
+        return this;
+    }
+
+    public void setLastSyncedAtIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_IN);
+        }
+    }
+
+    public boolean getLastSyncedAtIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_SYNCED_AT_IN);
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtLt(String lastSyncedAtLt) {
+
+        this.lastSyncedAtLt = lastSyncedAtLt;
+        return this;
+    }
+
+    /**
+     * Get lastSyncedAtLt
+     *
+     * @return lastSyncedAtLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastSyncedAtLt() {
+        return lastSyncedAtLt;
+    }
+
+    public void setLastSyncedAtLt(String lastSyncedAtLt) {
+        this.lastSyncedAtLt = lastSyncedAtLt;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_LT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_LT);
+        return this;
+    }
+
+    public void setLastSyncedAtLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_LT);
+        }
+    }
+
+    public boolean getLastSyncedAtLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_SYNCED_AT_LT);
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtLte(String lastSyncedAtLte) {
+
+        this.lastSyncedAtLte = lastSyncedAtLte;
+        return this;
+    }
+
+    /**
+     * Get lastSyncedAtLte
+     *
+     * @return lastSyncedAtLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastSyncedAtLte() {
+        return lastSyncedAtLte;
+    }
+
+    public void setLastSyncedAtLte(String lastSyncedAtLte) {
+        this.lastSyncedAtLte = lastSyncedAtLte;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_LTE);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_LTE);
+        return this;
+    }
+
+    public void setLastSyncedAtLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_LTE);
+        }
+    }
+
+    public boolean getLastSyncedAtLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_SYNCED_AT_LTE);
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtNot(String lastSyncedAtNot) {
+
+        this.lastSyncedAtNot = lastSyncedAtNot;
+        return this;
+    }
+
+    /**
+     * Get lastSyncedAtNot
+     *
+     * @return lastSyncedAtNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastSyncedAtNot() {
+        return lastSyncedAtNot;
+    }
+
+    public void setLastSyncedAtNot(String lastSyncedAtNot) {
+        this.lastSyncedAtNot = lastSyncedAtNot;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_NOT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_NOT);
+        return this;
+    }
+
+    public void setLastSyncedAtNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_NOT);
+        }
+    }
+
+    public boolean getLastSyncedAtNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_SYNCED_AT_NOT);
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtNotIn(List<String> lastSyncedAtNotIn) {
+
+        this.lastSyncedAtNotIn = lastSyncedAtNotIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addLastSyncedAtNotInItem(String lastSyncedAtNotInItem) {
+        if (this.lastSyncedAtNotIn == null) {
+            this.lastSyncedAtNotIn = new ArrayList<String>();
+        }
+        this.lastSyncedAtNotIn.add(lastSyncedAtNotInItem);
+        return this;
+    }
+
+    /**
+     * Get lastSyncedAtNotIn
+     *
+     * @return lastSyncedAtNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getLastSyncedAtNotIn() {
+        return lastSyncedAtNotIn;
+    }
+
+    public void setLastSyncedAtNotIn(List<String> lastSyncedAtNotIn) {
+        this.lastSyncedAtNotIn = lastSyncedAtNotIn;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_NOT_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput lastSyncedAtNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_NOT_IN);
+        return this;
+    }
+
+    public void setLastSyncedAtNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT_NOT_IN);
+        }
+    }
+
+    public boolean getLastSyncedAtNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_SYNCED_AT_NOT_IN);
+    }
+
+    public ReplicaVmWhereInput method(ReplicationMethod method) {
+
+        this.method = method;
+        return this;
+    }
+
+    /**
+     * Get method
+     *
+     * @return method
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ReplicationMethod getMethod() {
+        return method;
+    }
+
+    public void setMethod(ReplicationMethod method) {
+        this.method = method;
+    }
+
+    public ReplicaVmWhereInput method_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_METHOD);
+        return this;
+    }
+
+    public ReplicaVmWhereInput method_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_METHOD);
+        return this;
+    }
+
+    public void setMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_METHOD);
+        }
+    }
+
+    public boolean getMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_METHOD);
+    }
+
+    public ReplicaVmWhereInput methodIn(List<ReplicationMethod> methodIn) {
+
+        this.methodIn = methodIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addMethodInItem(ReplicationMethod methodInItem) {
+        if (this.methodIn == null) {
+            this.methodIn = new ArrayList<ReplicationMethod>();
+        }
+        this.methodIn.add(methodInItem);
+        return this;
+    }
+
+    /**
+     * Get methodIn
+     *
+     * @return methodIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ReplicationMethod> getMethodIn() {
+        return methodIn;
+    }
+
+    public void setMethodIn(List<ReplicationMethod> methodIn) {
+        this.methodIn = methodIn;
+    }
+
+    public ReplicaVmWhereInput methodIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_METHOD_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput methodIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_METHOD_IN);
+        return this;
+    }
+
+    public void setMethodIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_METHOD_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_METHOD_IN);
+        }
+    }
+
+    public boolean getMethodIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_METHOD_IN);
+    }
+
+    public ReplicaVmWhereInput methodNot(ReplicationMethod methodNot) {
+
+        this.methodNot = methodNot;
+        return this;
+    }
+
+    /**
+     * Get methodNot
+     *
+     * @return methodNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public ReplicationMethod getMethodNot() {
+        return methodNot;
+    }
+
+    public void setMethodNot(ReplicationMethod methodNot) {
+        this.methodNot = methodNot;
+    }
+
+    public ReplicaVmWhereInput methodNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_METHOD_NOT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput methodNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_METHOD_NOT);
+        return this;
+    }
+
+    public void setMethodNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_METHOD_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_METHOD_NOT);
+        }
+    }
+
+    public boolean getMethodNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_METHOD_NOT);
+    }
+
+    public ReplicaVmWhereInput methodNotIn(List<ReplicationMethod> methodNotIn) {
+
+        this.methodNotIn = methodNotIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addMethodNotInItem(ReplicationMethod methodNotInItem) {
+        if (this.methodNotIn == null) {
+            this.methodNotIn = new ArrayList<ReplicationMethod>();
+        }
+        this.methodNotIn.add(methodNotInItem);
+        return this;
+    }
+
+    /**
+     * Get methodNotIn
+     *
+     * @return methodNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ReplicationMethod> getMethodNotIn() {
+        return methodNotIn;
+    }
+
+    public void setMethodNotIn(List<ReplicationMethod> methodNotIn) {
+        this.methodNotIn = methodNotIn;
+    }
+
+    public ReplicaVmWhereInput methodNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_METHOD_NOT_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput methodNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_METHOD_NOT_IN);
+        return this;
+    }
+
+    public void setMethodNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_METHOD_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_METHOD_NOT_IN);
+        }
+    }
+
+    public boolean getMethodNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_METHOD_NOT_IN);
     }
 
     public ReplicaVmWhereInput originIscsiLun(IscsiLunWhereInput originIscsiLun) {
@@ -7083,6 +8889,366 @@ public class ReplicaVmWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS_SOME);
     }
 
+    public ReplicaVmWhereInput resourceVersion(Integer resourceVersion) {
+
+        this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    /**
+     * Get resourceVersion
+     *
+     * @return resourceVersion
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getResourceVersion() {
+        return resourceVersion;
+    }
+
+    public void setResourceVersion(Integer resourceVersion) {
+        this.resourceVersion = resourceVersion;
+    }
+
+    public ReplicaVmWhereInput resourceVersion_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION);
+        return this;
+    }
+
+    public ReplicaVmWhereInput resourceVersion_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION);
+        return this;
+    }
+
+    public void setResourceVersion_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION);
+        }
+    }
+
+    public boolean getResourceVersion_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESOURCE_VERSION);
+    }
+
+    public ReplicaVmWhereInput resourceVersionGt(Integer resourceVersionGt) {
+
+        this.resourceVersionGt = resourceVersionGt;
+        return this;
+    }
+
+    /**
+     * Get resourceVersionGt
+     *
+     * @return resourceVersionGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getResourceVersionGt() {
+        return resourceVersionGt;
+    }
+
+    public void setResourceVersionGt(Integer resourceVersionGt) {
+        this.resourceVersionGt = resourceVersionGt;
+    }
+
+    public ReplicaVmWhereInput resourceVersionGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_GT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput resourceVersionGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_GT);
+        return this;
+    }
+
+    public void setResourceVersionGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_GT);
+        }
+    }
+
+    public boolean getResourceVersionGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESOURCE_VERSION_GT);
+    }
+
+    public ReplicaVmWhereInput resourceVersionGte(Integer resourceVersionGte) {
+
+        this.resourceVersionGte = resourceVersionGte;
+        return this;
+    }
+
+    /**
+     * Get resourceVersionGte
+     *
+     * @return resourceVersionGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getResourceVersionGte() {
+        return resourceVersionGte;
+    }
+
+    public void setResourceVersionGte(Integer resourceVersionGte) {
+        this.resourceVersionGte = resourceVersionGte;
+    }
+
+    public ReplicaVmWhereInput resourceVersionGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_GTE);
+        return this;
+    }
+
+    public ReplicaVmWhereInput resourceVersionGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_GTE);
+        return this;
+    }
+
+    public void setResourceVersionGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_GTE);
+        }
+    }
+
+    public boolean getResourceVersionGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESOURCE_VERSION_GTE);
+    }
+
+    public ReplicaVmWhereInput resourceVersionIn(List<Integer> resourceVersionIn) {
+
+        this.resourceVersionIn = resourceVersionIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addResourceVersionInItem(Integer resourceVersionInItem) {
+        if (this.resourceVersionIn == null) {
+            this.resourceVersionIn = new ArrayList<Integer>();
+        }
+        this.resourceVersionIn.add(resourceVersionInItem);
+        return this;
+    }
+
+    /**
+     * Get resourceVersionIn
+     *
+     * @return resourceVersionIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getResourceVersionIn() {
+        return resourceVersionIn;
+    }
+
+    public void setResourceVersionIn(List<Integer> resourceVersionIn) {
+        this.resourceVersionIn = resourceVersionIn;
+    }
+
+    public ReplicaVmWhereInput resourceVersionIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput resourceVersionIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_IN);
+        return this;
+    }
+
+    public void setResourceVersionIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_IN);
+        }
+    }
+
+    public boolean getResourceVersionIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESOURCE_VERSION_IN);
+    }
+
+    public ReplicaVmWhereInput resourceVersionLt(Integer resourceVersionLt) {
+
+        this.resourceVersionLt = resourceVersionLt;
+        return this;
+    }
+
+    /**
+     * Get resourceVersionLt
+     *
+     * @return resourceVersionLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getResourceVersionLt() {
+        return resourceVersionLt;
+    }
+
+    public void setResourceVersionLt(Integer resourceVersionLt) {
+        this.resourceVersionLt = resourceVersionLt;
+    }
+
+    public ReplicaVmWhereInput resourceVersionLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_LT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput resourceVersionLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_LT);
+        return this;
+    }
+
+    public void setResourceVersionLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_LT);
+        }
+    }
+
+    public boolean getResourceVersionLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESOURCE_VERSION_LT);
+    }
+
+    public ReplicaVmWhereInput resourceVersionLte(Integer resourceVersionLte) {
+
+        this.resourceVersionLte = resourceVersionLte;
+        return this;
+    }
+
+    /**
+     * Get resourceVersionLte
+     *
+     * @return resourceVersionLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getResourceVersionLte() {
+        return resourceVersionLte;
+    }
+
+    public void setResourceVersionLte(Integer resourceVersionLte) {
+        this.resourceVersionLte = resourceVersionLte;
+    }
+
+    public ReplicaVmWhereInput resourceVersionLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_LTE);
+        return this;
+    }
+
+    public ReplicaVmWhereInput resourceVersionLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_LTE);
+        return this;
+    }
+
+    public void setResourceVersionLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_LTE);
+        }
+    }
+
+    public boolean getResourceVersionLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESOURCE_VERSION_LTE);
+    }
+
+    public ReplicaVmWhereInput resourceVersionNot(Integer resourceVersionNot) {
+
+        this.resourceVersionNot = resourceVersionNot;
+        return this;
+    }
+
+    /**
+     * Get resourceVersionNot
+     *
+     * @return resourceVersionNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getResourceVersionNot() {
+        return resourceVersionNot;
+    }
+
+    public void setResourceVersionNot(Integer resourceVersionNot) {
+        this.resourceVersionNot = resourceVersionNot;
+    }
+
+    public ReplicaVmWhereInput resourceVersionNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_NOT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput resourceVersionNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_NOT);
+        return this;
+    }
+
+    public void setResourceVersionNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_NOT);
+        }
+    }
+
+    public boolean getResourceVersionNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESOURCE_VERSION_NOT);
+    }
+
+    public ReplicaVmWhereInput resourceVersionNotIn(List<Integer> resourceVersionNotIn) {
+
+        this.resourceVersionNotIn = resourceVersionNotIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addResourceVersionNotInItem(Integer resourceVersionNotInItem) {
+        if (this.resourceVersionNotIn == null) {
+            this.resourceVersionNotIn = new ArrayList<Integer>();
+        }
+        this.resourceVersionNotIn.add(resourceVersionNotInItem);
+        return this;
+    }
+
+    /**
+     * Get resourceVersionNotIn
+     *
+     * @return resourceVersionNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getResourceVersionNotIn() {
+        return resourceVersionNotIn;
+    }
+
+    public void setResourceVersionNotIn(List<Integer> resourceVersionNotIn) {
+        this.resourceVersionNotIn = resourceVersionNotIn;
+    }
+
+    public ReplicaVmWhereInput resourceVersionNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_NOT_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput resourceVersionNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_NOT_IN);
+        return this;
+    }
+
+    public void setResourceVersionNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION_NOT_IN);
+        }
+    }
+
+    public boolean getResourceVersionNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESOURCE_VERSION_NOT_IN);
+    }
+
     public ReplicaVmWhereInput restorePointsEvery(
             ReplicationRestorePointWhereInput restorePointsEvery) {
 
@@ -7401,6 +9567,442 @@ public class ReplicaVmWhereInput
 
     public boolean getStateNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_STATE_NOT_IN);
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatus(
+            SyncReplicationObjectStatus syncReplicationObjectStatus) {
+
+        this.syncReplicationObjectStatus = syncReplicationObjectStatus;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationObjectStatus
+     *
+     * @return syncReplicationObjectStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationObjectStatus getSyncReplicationObjectStatus() {
+        return syncReplicationObjectStatus;
+    }
+
+    public void setSyncReplicationObjectStatus(
+            SyncReplicationObjectStatus syncReplicationObjectStatus) {
+        this.syncReplicationObjectStatus = syncReplicationObjectStatus;
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+        return this;
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+        return this;
+    }
+
+    public void setSyncReplicationObjectStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+        }
+    }
+
+    public boolean getSyncReplicationObjectStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatusIn(
+            List<SyncReplicationObjectStatus> syncReplicationObjectStatusIn) {
+
+        this.syncReplicationObjectStatusIn = syncReplicationObjectStatusIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addSyncReplicationObjectStatusInItem(
+            SyncReplicationObjectStatus syncReplicationObjectStatusInItem) {
+        if (this.syncReplicationObjectStatusIn == null) {
+            this.syncReplicationObjectStatusIn = new ArrayList<SyncReplicationObjectStatus>();
+        }
+        this.syncReplicationObjectStatusIn.add(syncReplicationObjectStatusInItem);
+        return this;
+    }
+
+    /**
+     * Get syncReplicationObjectStatusIn
+     *
+     * @return syncReplicationObjectStatusIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<SyncReplicationObjectStatus> getSyncReplicationObjectStatusIn() {
+        return syncReplicationObjectStatusIn;
+    }
+
+    public void setSyncReplicationObjectStatusIn(
+            List<SyncReplicationObjectStatus> syncReplicationObjectStatusIn) {
+        this.syncReplicationObjectStatusIn = syncReplicationObjectStatusIn;
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatusIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatusIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_IN);
+        return this;
+    }
+
+    public void setSyncReplicationObjectStatusIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_IN);
+        }
+    }
+
+    public boolean getSyncReplicationObjectStatusIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_IN);
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatusNot(
+            SyncReplicationObjectStatus syncReplicationObjectStatusNot) {
+
+        this.syncReplicationObjectStatusNot = syncReplicationObjectStatusNot;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationObjectStatusNot
+     *
+     * @return syncReplicationObjectStatusNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationObjectStatus getSyncReplicationObjectStatusNot() {
+        return syncReplicationObjectStatusNot;
+    }
+
+    public void setSyncReplicationObjectStatusNot(
+            SyncReplicationObjectStatus syncReplicationObjectStatusNot) {
+        this.syncReplicationObjectStatusNot = syncReplicationObjectStatusNot;
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatusNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatusNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT);
+        return this;
+    }
+
+    public void setSyncReplicationObjectStatusNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT);
+        }
+    }
+
+    public boolean getSyncReplicationObjectStatusNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT);
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatusNotIn(
+            List<SyncReplicationObjectStatus> syncReplicationObjectStatusNotIn) {
+
+        this.syncReplicationObjectStatusNotIn = syncReplicationObjectStatusNotIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addSyncReplicationObjectStatusNotInItem(
+            SyncReplicationObjectStatus syncReplicationObjectStatusNotInItem) {
+        if (this.syncReplicationObjectStatusNotIn == null) {
+            this.syncReplicationObjectStatusNotIn = new ArrayList<SyncReplicationObjectStatus>();
+        }
+        this.syncReplicationObjectStatusNotIn.add(syncReplicationObjectStatusNotInItem);
+        return this;
+    }
+
+    /**
+     * Get syncReplicationObjectStatusNotIn
+     *
+     * @return syncReplicationObjectStatusNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<SyncReplicationObjectStatus> getSyncReplicationObjectStatusNotIn() {
+        return syncReplicationObjectStatusNotIn;
+    }
+
+    public void setSyncReplicationObjectStatusNotIn(
+            List<SyncReplicationObjectStatus> syncReplicationObjectStatusNotIn) {
+        this.syncReplicationObjectStatusNotIn = syncReplicationObjectStatusNotIn;
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatusNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput syncReplicationObjectStatusNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT_IN);
+        return this;
+    }
+
+    public void setSyncReplicationObjectStatusNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT_IN);
+        }
+    }
+
+    public boolean getSyncReplicationObjectStatusNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS_NOT_IN);
+    }
+
+    public ReplicaVmWhereInput syncReplicationPlan(
+            SyncReplicationPlanWhereInput syncReplicationPlan) {
+
+        this.syncReplicationPlan = syncReplicationPlan;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationPlan
+     *
+     * @return syncReplicationPlan
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationPlanWhereInput getSyncReplicationPlan() {
+        return syncReplicationPlan;
+    }
+
+    public void setSyncReplicationPlan(SyncReplicationPlanWhereInput syncReplicationPlan) {
+        this.syncReplicationPlan = syncReplicationPlan;
+    }
+
+    public ReplicaVmWhereInput syncReplicationPlan_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput syncReplicationPlan_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+        return this;
+    }
+
+    public void setSyncReplicationPlan_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+        }
+    }
+
+    public boolean getSyncReplicationPlan_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatus(SyncReplicationStatus syncReplicationStatus) {
+
+        this.syncReplicationStatus = syncReplicationStatus;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationStatus
+     *
+     * @return syncReplicationStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationStatus getSyncReplicationStatus() {
+        return syncReplicationStatus;
+    }
+
+    public void setSyncReplicationStatus(SyncReplicationStatus syncReplicationStatus) {
+        this.syncReplicationStatus = syncReplicationStatus;
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
+        return this;
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
+        return this;
+    }
+
+    public void setSyncReplicationStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
+        }
+    }
+
+    public boolean getSyncReplicationStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatusIn(
+            List<SyncReplicationStatus> syncReplicationStatusIn) {
+
+        this.syncReplicationStatusIn = syncReplicationStatusIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addSyncReplicationStatusInItem(
+            SyncReplicationStatus syncReplicationStatusInItem) {
+        if (this.syncReplicationStatusIn == null) {
+            this.syncReplicationStatusIn = new ArrayList<SyncReplicationStatus>();
+        }
+        this.syncReplicationStatusIn.add(syncReplicationStatusInItem);
+        return this;
+    }
+
+    /**
+     * Get syncReplicationStatusIn
+     *
+     * @return syncReplicationStatusIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<SyncReplicationStatus> getSyncReplicationStatusIn() {
+        return syncReplicationStatusIn;
+    }
+
+    public void setSyncReplicationStatusIn(List<SyncReplicationStatus> syncReplicationStatusIn) {
+        this.syncReplicationStatusIn = syncReplicationStatusIn;
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatusIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatusIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_IN);
+        return this;
+    }
+
+    public void setSyncReplicationStatusIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_IN);
+        }
+    }
+
+    public boolean getSyncReplicationStatusIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_IN);
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatusNot(
+            SyncReplicationStatus syncReplicationStatusNot) {
+
+        this.syncReplicationStatusNot = syncReplicationStatusNot;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationStatusNot
+     *
+     * @return syncReplicationStatusNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationStatus getSyncReplicationStatusNot() {
+        return syncReplicationStatusNot;
+    }
+
+    public void setSyncReplicationStatusNot(SyncReplicationStatus syncReplicationStatusNot) {
+        this.syncReplicationStatusNot = syncReplicationStatusNot;
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatusNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT);
+        return this;
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatusNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT);
+        return this;
+    }
+
+    public void setSyncReplicationStatusNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT);
+        }
+    }
+
+    public boolean getSyncReplicationStatusNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT);
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatusNotIn(
+            List<SyncReplicationStatus> syncReplicationStatusNotIn) {
+
+        this.syncReplicationStatusNotIn = syncReplicationStatusNotIn;
+        return this;
+    }
+
+    public ReplicaVmWhereInput addSyncReplicationStatusNotInItem(
+            SyncReplicationStatus syncReplicationStatusNotInItem) {
+        if (this.syncReplicationStatusNotIn == null) {
+            this.syncReplicationStatusNotIn = new ArrayList<SyncReplicationStatus>();
+        }
+        this.syncReplicationStatusNotIn.add(syncReplicationStatusNotInItem);
+        return this;
+    }
+
+    /**
+     * Get syncReplicationStatusNotIn
+     *
+     * @return syncReplicationStatusNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<SyncReplicationStatus> getSyncReplicationStatusNotIn() {
+        return syncReplicationStatusNotIn;
+    }
+
+    public void setSyncReplicationStatusNotIn(
+            List<SyncReplicationStatus> syncReplicationStatusNotIn) {
+        this.syncReplicationStatusNotIn = syncReplicationStatusNotIn;
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatusNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT_IN);
+        return this;
+    }
+
+    public ReplicaVmWhereInput syncReplicationStatusNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT_IN);
+        return this;
+    }
+
+    public void setSyncReplicationStatusNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT_IN);
+        }
+    }
+
+    public boolean getSyncReplicationStatusNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_STATUS_NOT_IN);
     }
 
     public ReplicaVmWhereInput targetsDeletable(Boolean targetsDeletable) {
@@ -8166,6 +10768,60 @@ public class ReplicaVmWhereInput
                 && Objects.equals(this.inbound, replicaVmWhereInput.inbound)
                 && Objects.equals(this.inboundNot, replicaVmWhereInput.inboundNot)
                 && Objects.equals(this.iscsiLun, replicaVmWhereInput.iscsiLun)
+                && Objects.equals(this.lastOutOfSyncAt, replicaVmWhereInput.lastOutOfSyncAt)
+                && Objects.equals(this.lastOutOfSyncAtGt, replicaVmWhereInput.lastOutOfSyncAtGt)
+                && Objects.equals(this.lastOutOfSyncAtGte, replicaVmWhereInput.lastOutOfSyncAtGte)
+                && Objects.equals(this.lastOutOfSyncAtIn, replicaVmWhereInput.lastOutOfSyncAtIn)
+                && Objects.equals(this.lastOutOfSyncAtLt, replicaVmWhereInput.lastOutOfSyncAtLt)
+                && Objects.equals(this.lastOutOfSyncAtLte, replicaVmWhereInput.lastOutOfSyncAtLte)
+                && Objects.equals(this.lastOutOfSyncAtNot, replicaVmWhereInput.lastOutOfSyncAtNot)
+                && Objects.equals(
+                        this.lastOutOfSyncAtNotIn, replicaVmWhereInput.lastOutOfSyncAtNotIn)
+                && Objects.equals(this.lastOutOfSyncReason, replicaVmWhereInput.lastOutOfSyncReason)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonContains,
+                        replicaVmWhereInput.lastOutOfSyncReasonContains)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonEndsWith,
+                        replicaVmWhereInput.lastOutOfSyncReasonEndsWith)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonGt, replicaVmWhereInput.lastOutOfSyncReasonGt)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonGte, replicaVmWhereInput.lastOutOfSyncReasonGte)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonIn, replicaVmWhereInput.lastOutOfSyncReasonIn)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonLt, replicaVmWhereInput.lastOutOfSyncReasonLt)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonLte, replicaVmWhereInput.lastOutOfSyncReasonLte)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonNot, replicaVmWhereInput.lastOutOfSyncReasonNot)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonNotContains,
+                        replicaVmWhereInput.lastOutOfSyncReasonNotContains)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonNotEndsWith,
+                        replicaVmWhereInput.lastOutOfSyncReasonNotEndsWith)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonNotIn, replicaVmWhereInput.lastOutOfSyncReasonNotIn)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonNotStartsWith,
+                        replicaVmWhereInput.lastOutOfSyncReasonNotStartsWith)
+                && Objects.equals(
+                        this.lastOutOfSyncReasonStartsWith,
+                        replicaVmWhereInput.lastOutOfSyncReasonStartsWith)
+                && Objects.equals(this.lastSyncedAt, replicaVmWhereInput.lastSyncedAt)
+                && Objects.equals(this.lastSyncedAtGt, replicaVmWhereInput.lastSyncedAtGt)
+                && Objects.equals(this.lastSyncedAtGte, replicaVmWhereInput.lastSyncedAtGte)
+                && Objects.equals(this.lastSyncedAtIn, replicaVmWhereInput.lastSyncedAtIn)
+                && Objects.equals(this.lastSyncedAtLt, replicaVmWhereInput.lastSyncedAtLt)
+                && Objects.equals(this.lastSyncedAtLte, replicaVmWhereInput.lastSyncedAtLte)
+                && Objects.equals(this.lastSyncedAtNot, replicaVmWhereInput.lastSyncedAtNot)
+                && Objects.equals(this.lastSyncedAtNotIn, replicaVmWhereInput.lastSyncedAtNotIn)
+                && Objects.equals(this.method, replicaVmWhereInput.method)
+                && Objects.equals(this.methodIn, replicaVmWhereInput.methodIn)
+                && Objects.equals(this.methodNot, replicaVmWhereInput.methodNot)
+                && Objects.equals(this.methodNotIn, replicaVmWhereInput.methodNotIn)
                 && Objects.equals(this.originIscsiLun, replicaVmWhereInput.originIscsiLun)
                 && Objects.equals(this.originVm, replicaVmWhereInput.originVm)
                 && Objects.equals(
@@ -8342,6 +10998,15 @@ public class ReplicaVmWhereInput
                 && Objects.equals(
                         this.replicationTargetExecutionsSome,
                         replicaVmWhereInput.replicationTargetExecutionsSome)
+                && Objects.equals(this.resourceVersion, replicaVmWhereInput.resourceVersion)
+                && Objects.equals(this.resourceVersionGt, replicaVmWhereInput.resourceVersionGt)
+                && Objects.equals(this.resourceVersionGte, replicaVmWhereInput.resourceVersionGte)
+                && Objects.equals(this.resourceVersionIn, replicaVmWhereInput.resourceVersionIn)
+                && Objects.equals(this.resourceVersionLt, replicaVmWhereInput.resourceVersionLt)
+                && Objects.equals(this.resourceVersionLte, replicaVmWhereInput.resourceVersionLte)
+                && Objects.equals(this.resourceVersionNot, replicaVmWhereInput.resourceVersionNot)
+                && Objects.equals(
+                        this.resourceVersionNotIn, replicaVmWhereInput.resourceVersionNotIn)
                 && Objects.equals(this.restorePointsEvery, replicaVmWhereInput.restorePointsEvery)
                 && Objects.equals(this.restorePointsNone, replicaVmWhereInput.restorePointsNone)
                 && Objects.equals(this.restorePointsSome, replicaVmWhereInput.restorePointsSome)
@@ -8349,6 +11014,28 @@ public class ReplicaVmWhereInput
                 && Objects.equals(this.stateIn, replicaVmWhereInput.stateIn)
                 && Objects.equals(this.stateNot, replicaVmWhereInput.stateNot)
                 && Objects.equals(this.stateNotIn, replicaVmWhereInput.stateNotIn)
+                && Objects.equals(
+                        this.syncReplicationObjectStatus,
+                        replicaVmWhereInput.syncReplicationObjectStatus)
+                && Objects.equals(
+                        this.syncReplicationObjectStatusIn,
+                        replicaVmWhereInput.syncReplicationObjectStatusIn)
+                && Objects.equals(
+                        this.syncReplicationObjectStatusNot,
+                        replicaVmWhereInput.syncReplicationObjectStatusNot)
+                && Objects.equals(
+                        this.syncReplicationObjectStatusNotIn,
+                        replicaVmWhereInput.syncReplicationObjectStatusNotIn)
+                && Objects.equals(this.syncReplicationPlan, replicaVmWhereInput.syncReplicationPlan)
+                && Objects.equals(
+                        this.syncReplicationStatus, replicaVmWhereInput.syncReplicationStatus)
+                && Objects.equals(
+                        this.syncReplicationStatusIn, replicaVmWhereInput.syncReplicationStatusIn)
+                && Objects.equals(
+                        this.syncReplicationStatusNot, replicaVmWhereInput.syncReplicationStatusNot)
+                && Objects.equals(
+                        this.syncReplicationStatusNotIn,
+                        replicaVmWhereInput.syncReplicationStatusNotIn)
                 && Objects.equals(this.targetsDeletable, replicaVmWhereInput.targetsDeletable)
                 && Objects.equals(this.targetsDeletableNot, replicaVmWhereInput.targetsDeletableNot)
                 && Objects.equals(this.type, replicaVmWhereInput.type)
@@ -8426,6 +11113,40 @@ public class ReplicaVmWhereInput
                 inbound,
                 inboundNot,
                 iscsiLun,
+                lastOutOfSyncAt,
+                lastOutOfSyncAtGt,
+                lastOutOfSyncAtGte,
+                lastOutOfSyncAtIn,
+                lastOutOfSyncAtLt,
+                lastOutOfSyncAtLte,
+                lastOutOfSyncAtNot,
+                lastOutOfSyncAtNotIn,
+                lastOutOfSyncReason,
+                lastOutOfSyncReasonContains,
+                lastOutOfSyncReasonEndsWith,
+                lastOutOfSyncReasonGt,
+                lastOutOfSyncReasonGte,
+                lastOutOfSyncReasonIn,
+                lastOutOfSyncReasonLt,
+                lastOutOfSyncReasonLte,
+                lastOutOfSyncReasonNot,
+                lastOutOfSyncReasonNotContains,
+                lastOutOfSyncReasonNotEndsWith,
+                lastOutOfSyncReasonNotIn,
+                lastOutOfSyncReasonNotStartsWith,
+                lastOutOfSyncReasonStartsWith,
+                lastSyncedAt,
+                lastSyncedAtGt,
+                lastSyncedAtGte,
+                lastSyncedAtIn,
+                lastSyncedAtLt,
+                lastSyncedAtLte,
+                lastSyncedAtNot,
+                lastSyncedAtNotIn,
+                method,
+                methodIn,
+                methodNot,
+                methodNotIn,
                 originIscsiLun,
                 originVm,
                 originVmClusterLocalId,
@@ -8517,6 +11238,14 @@ public class ReplicaVmWhereInput
                 replicationTargetExecutionsEvery,
                 replicationTargetExecutionsNone,
                 replicationTargetExecutionsSome,
+                resourceVersion,
+                resourceVersionGt,
+                resourceVersionGte,
+                resourceVersionIn,
+                resourceVersionLt,
+                resourceVersionLte,
+                resourceVersionNot,
+                resourceVersionNotIn,
                 restorePointsEvery,
                 restorePointsNone,
                 restorePointsSome,
@@ -8524,6 +11253,15 @@ public class ReplicaVmWhereInput
                 stateIn,
                 stateNot,
                 stateNotIn,
+                syncReplicationObjectStatus,
+                syncReplicationObjectStatusIn,
+                syncReplicationObjectStatusNot,
+                syncReplicationObjectStatusNotIn,
+                syncReplicationPlan,
+                syncReplicationStatus,
+                syncReplicationStatusIn,
+                syncReplicationStatusNot,
+                syncReplicationStatusNotIn,
                 targetsDeletable,
                 targetsDeletableNot,
                 type,
@@ -8638,6 +11376,84 @@ public class ReplicaVmWhereInput
         sb.append("    inbound: ").append(toIndentedString(inbound)).append("\n");
         sb.append("    inboundNot: ").append(toIndentedString(inboundNot)).append("\n");
         sb.append("    iscsiLun: ").append(toIndentedString(iscsiLun)).append("\n");
+        sb.append("    lastOutOfSyncAt: ").append(toIndentedString(lastOutOfSyncAt)).append("\n");
+        sb.append("    lastOutOfSyncAtGt: ")
+                .append(toIndentedString(lastOutOfSyncAtGt))
+                .append("\n");
+        sb.append("    lastOutOfSyncAtGte: ")
+                .append(toIndentedString(lastOutOfSyncAtGte))
+                .append("\n");
+        sb.append("    lastOutOfSyncAtIn: ")
+                .append(toIndentedString(lastOutOfSyncAtIn))
+                .append("\n");
+        sb.append("    lastOutOfSyncAtLt: ")
+                .append(toIndentedString(lastOutOfSyncAtLt))
+                .append("\n");
+        sb.append("    lastOutOfSyncAtLte: ")
+                .append(toIndentedString(lastOutOfSyncAtLte))
+                .append("\n");
+        sb.append("    lastOutOfSyncAtNot: ")
+                .append(toIndentedString(lastOutOfSyncAtNot))
+                .append("\n");
+        sb.append("    lastOutOfSyncAtNotIn: ")
+                .append(toIndentedString(lastOutOfSyncAtNotIn))
+                .append("\n");
+        sb.append("    lastOutOfSyncReason: ")
+                .append(toIndentedString(lastOutOfSyncReason))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonContains: ")
+                .append(toIndentedString(lastOutOfSyncReasonContains))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonEndsWith: ")
+                .append(toIndentedString(lastOutOfSyncReasonEndsWith))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonGt: ")
+                .append(toIndentedString(lastOutOfSyncReasonGt))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonGte: ")
+                .append(toIndentedString(lastOutOfSyncReasonGte))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonIn: ")
+                .append(toIndentedString(lastOutOfSyncReasonIn))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonLt: ")
+                .append(toIndentedString(lastOutOfSyncReasonLt))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonLte: ")
+                .append(toIndentedString(lastOutOfSyncReasonLte))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonNot: ")
+                .append(toIndentedString(lastOutOfSyncReasonNot))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonNotContains: ")
+                .append(toIndentedString(lastOutOfSyncReasonNotContains))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonNotEndsWith: ")
+                .append(toIndentedString(lastOutOfSyncReasonNotEndsWith))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonNotIn: ")
+                .append(toIndentedString(lastOutOfSyncReasonNotIn))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonNotStartsWith: ")
+                .append(toIndentedString(lastOutOfSyncReasonNotStartsWith))
+                .append("\n");
+        sb.append("    lastOutOfSyncReasonStartsWith: ")
+                .append(toIndentedString(lastOutOfSyncReasonStartsWith))
+                .append("\n");
+        sb.append("    lastSyncedAt: ").append(toIndentedString(lastSyncedAt)).append("\n");
+        sb.append("    lastSyncedAtGt: ").append(toIndentedString(lastSyncedAtGt)).append("\n");
+        sb.append("    lastSyncedAtGte: ").append(toIndentedString(lastSyncedAtGte)).append("\n");
+        sb.append("    lastSyncedAtIn: ").append(toIndentedString(lastSyncedAtIn)).append("\n");
+        sb.append("    lastSyncedAtLt: ").append(toIndentedString(lastSyncedAtLt)).append("\n");
+        sb.append("    lastSyncedAtLte: ").append(toIndentedString(lastSyncedAtLte)).append("\n");
+        sb.append("    lastSyncedAtNot: ").append(toIndentedString(lastSyncedAtNot)).append("\n");
+        sb.append("    lastSyncedAtNotIn: ")
+                .append(toIndentedString(lastSyncedAtNotIn))
+                .append("\n");
+        sb.append("    method: ").append(toIndentedString(method)).append("\n");
+        sb.append("    methodIn: ").append(toIndentedString(methodIn)).append("\n");
+        sb.append("    methodNot: ").append(toIndentedString(methodNot)).append("\n");
+        sb.append("    methodNotIn: ").append(toIndentedString(methodNotIn)).append("\n");
         sb.append("    originIscsiLun: ").append(toIndentedString(originIscsiLun)).append("\n");
         sb.append("    originVm: ").append(toIndentedString(originVm)).append("\n");
         sb.append("    originVmClusterLocalId: ")
@@ -8873,6 +11689,28 @@ public class ReplicaVmWhereInput
         sb.append("    replicationTargetExecutionsSome: ")
                 .append(toIndentedString(replicationTargetExecutionsSome))
                 .append("\n");
+        sb.append("    resourceVersion: ").append(toIndentedString(resourceVersion)).append("\n");
+        sb.append("    resourceVersionGt: ")
+                .append(toIndentedString(resourceVersionGt))
+                .append("\n");
+        sb.append("    resourceVersionGte: ")
+                .append(toIndentedString(resourceVersionGte))
+                .append("\n");
+        sb.append("    resourceVersionIn: ")
+                .append(toIndentedString(resourceVersionIn))
+                .append("\n");
+        sb.append("    resourceVersionLt: ")
+                .append(toIndentedString(resourceVersionLt))
+                .append("\n");
+        sb.append("    resourceVersionLte: ")
+                .append(toIndentedString(resourceVersionLte))
+                .append("\n");
+        sb.append("    resourceVersionNot: ")
+                .append(toIndentedString(resourceVersionNot))
+                .append("\n");
+        sb.append("    resourceVersionNotIn: ")
+                .append(toIndentedString(resourceVersionNotIn))
+                .append("\n");
         sb.append("    restorePointsEvery: ")
                 .append(toIndentedString(restorePointsEvery))
                 .append("\n");
@@ -8886,6 +11724,33 @@ public class ReplicaVmWhereInput
         sb.append("    stateIn: ").append(toIndentedString(stateIn)).append("\n");
         sb.append("    stateNot: ").append(toIndentedString(stateNot)).append("\n");
         sb.append("    stateNotIn: ").append(toIndentedString(stateNotIn)).append("\n");
+        sb.append("    syncReplicationObjectStatus: ")
+                .append(toIndentedString(syncReplicationObjectStatus))
+                .append("\n");
+        sb.append("    syncReplicationObjectStatusIn: ")
+                .append(toIndentedString(syncReplicationObjectStatusIn))
+                .append("\n");
+        sb.append("    syncReplicationObjectStatusNot: ")
+                .append(toIndentedString(syncReplicationObjectStatusNot))
+                .append("\n");
+        sb.append("    syncReplicationObjectStatusNotIn: ")
+                .append(toIndentedString(syncReplicationObjectStatusNotIn))
+                .append("\n");
+        sb.append("    syncReplicationPlan: ")
+                .append(toIndentedString(syncReplicationPlan))
+                .append("\n");
+        sb.append("    syncReplicationStatus: ")
+                .append(toIndentedString(syncReplicationStatus))
+                .append("\n");
+        sb.append("    syncReplicationStatusIn: ")
+                .append(toIndentedString(syncReplicationStatusIn))
+                .append("\n");
+        sb.append("    syncReplicationStatusNot: ")
+                .append(toIndentedString(syncReplicationStatusNot))
+                .append("\n");
+        sb.append("    syncReplicationStatusNotIn: ")
+                .append(toIndentedString(syncReplicationStatusNotIn))
+                .append("\n");
         sb.append("    targetsDeletable: ").append(toIndentedString(targetsDeletable)).append("\n");
         sb.append("    targetsDeletableNot: ")
                 .append(toIndentedString(targetsDeletableNot))

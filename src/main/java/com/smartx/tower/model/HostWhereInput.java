@@ -3179,6 +3179,53 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN)
     private List<Long> totalDataCapacityNotIn = null;
 
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES = "total_logical_cpu_cores";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES)
+    private Integer totalLogicalCpuCores;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT =
+            "total_logical_cpu_cores_gt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT)
+    private Integer totalLogicalCpuCoresGt;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE =
+            "total_logical_cpu_cores_gte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE)
+    private Integer totalLogicalCpuCoresGte;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN =
+            "total_logical_cpu_cores_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN)
+    private List<Integer> totalLogicalCpuCoresIn = null;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT =
+            "total_logical_cpu_cores_lt";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT)
+    private Integer totalLogicalCpuCoresLt;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE =
+            "total_logical_cpu_cores_lte";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE)
+    private Integer totalLogicalCpuCoresLte;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT =
+            "total_logical_cpu_cores_not";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT)
+    private Integer totalLogicalCpuCoresNot;
+
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN =
+            "total_logical_cpu_cores_not_in";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN)
+    private List<Integer> totalLogicalCpuCoresNotIn = null;
+
     public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
 
     @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
@@ -30541,6 +30588,366 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
         return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_DATA_CAPACITY_NOT_IN);
     }
 
+    public HostWhereInput totalLogicalCpuCores(Integer totalLogicalCpuCores) {
+
+        this.totalLogicalCpuCores = totalLogicalCpuCores;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCores
+     *
+     * @return totalLogicalCpuCores
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCores() {
+        return totalLogicalCpuCores;
+    }
+
+    public void setTotalLogicalCpuCores(Integer totalLogicalCpuCores) {
+        this.totalLogicalCpuCores = totalLogicalCpuCores;
+    }
+
+    public HostWhereInput totalLogicalCpuCores_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCores_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCores_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCores_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGt(Integer totalLogicalCpuCoresGt) {
+
+        this.totalLogicalCpuCoresGt = totalLogicalCpuCoresGt;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresGt
+     *
+     * @return totalLogicalCpuCoresGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresGt() {
+        return totalLogicalCpuCoresGt;
+    }
+
+    public void setTotalLogicalCpuCoresGt(Integer totalLogicalCpuCoresGt) {
+        this.totalLogicalCpuCoresGt = totalLogicalCpuCoresGt;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GT);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGte(Integer totalLogicalCpuCoresGte) {
+
+        this.totalLogicalCpuCoresGte = totalLogicalCpuCoresGte;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresGte
+     *
+     * @return totalLogicalCpuCoresGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresGte() {
+        return totalLogicalCpuCoresGte;
+    }
+
+    public void setTotalLogicalCpuCoresGte(Integer totalLogicalCpuCoresGte) {
+        this.totalLogicalCpuCoresGte = totalLogicalCpuCoresGte;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_GTE);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresIn(List<Integer> totalLogicalCpuCoresIn) {
+
+        this.totalLogicalCpuCoresIn = totalLogicalCpuCoresIn;
+        return this;
+    }
+
+    public HostWhereInput addTotalLogicalCpuCoresInItem(Integer totalLogicalCpuCoresInItem) {
+        if (this.totalLogicalCpuCoresIn == null) {
+            this.totalLogicalCpuCoresIn = new ArrayList<Integer>();
+        }
+        this.totalLogicalCpuCoresIn.add(totalLogicalCpuCoresInItem);
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresIn
+     *
+     * @return totalLogicalCpuCoresIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getTotalLogicalCpuCoresIn() {
+        return totalLogicalCpuCoresIn;
+    }
+
+    public void setTotalLogicalCpuCoresIn(List<Integer> totalLogicalCpuCoresIn) {
+        this.totalLogicalCpuCoresIn = totalLogicalCpuCoresIn;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_IN);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLt(Integer totalLogicalCpuCoresLt) {
+
+        this.totalLogicalCpuCoresLt = totalLogicalCpuCoresLt;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresLt
+     *
+     * @return totalLogicalCpuCoresLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresLt() {
+        return totalLogicalCpuCoresLt;
+    }
+
+    public void setTotalLogicalCpuCoresLt(Integer totalLogicalCpuCoresLt) {
+        this.totalLogicalCpuCoresLt = totalLogicalCpuCoresLt;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LT);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLte(Integer totalLogicalCpuCoresLte) {
+
+        this.totalLogicalCpuCoresLte = totalLogicalCpuCoresLte;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresLte
+     *
+     * @return totalLogicalCpuCoresLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresLte() {
+        return totalLogicalCpuCoresLte;
+    }
+
+    public void setTotalLogicalCpuCoresLte(Integer totalLogicalCpuCoresLte) {
+        this.totalLogicalCpuCoresLte = totalLogicalCpuCoresLte;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_LTE);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNot(Integer totalLogicalCpuCoresNot) {
+
+        this.totalLogicalCpuCoresNot = totalLogicalCpuCoresNot;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresNot
+     *
+     * @return totalLogicalCpuCoresNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCoresNot() {
+        return totalLogicalCpuCoresNot;
+    }
+
+    public void setTotalLogicalCpuCoresNot(Integer totalLogicalCpuCoresNot) {
+        this.totalLogicalCpuCoresNot = totalLogicalCpuCoresNot;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT);
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNotIn(List<Integer> totalLogicalCpuCoresNotIn) {
+
+        this.totalLogicalCpuCoresNotIn = totalLogicalCpuCoresNotIn;
+        return this;
+    }
+
+    public HostWhereInput addTotalLogicalCpuCoresNotInItem(Integer totalLogicalCpuCoresNotInItem) {
+        if (this.totalLogicalCpuCoresNotIn == null) {
+            this.totalLogicalCpuCoresNotIn = new ArrayList<Integer>();
+        }
+        this.totalLogicalCpuCoresNotIn.add(totalLogicalCpuCoresNotInItem);
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCoresNotIn
+     *
+     * @return totalLogicalCpuCoresNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Integer> getTotalLogicalCpuCoresNotIn() {
+        return totalLogicalCpuCoresNotIn;
+    }
+
+    public void setTotalLogicalCpuCoresNotIn(List<Integer> totalLogicalCpuCoresNotIn) {
+        this.totalLogicalCpuCoresNotIn = totalLogicalCpuCoresNotIn;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+        return this;
+    }
+
+    public HostWhereInput totalLogicalCpuCoresNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCoresNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCoresNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES_NOT_IN);
+    }
+
     public HostWhereInput totalMemoryBytes(Long totalMemoryBytes) {
 
         this.totalMemoryBytes = totalMemoryBytes;
@@ -35243,6 +35650,21 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 && Objects.equals(this.totalDataCapacityNot, hostWhereInput.totalDataCapacityNot)
                 && Objects.equals(
                         this.totalDataCapacityNotIn, hostWhereInput.totalDataCapacityNotIn)
+                && Objects.equals(this.totalLogicalCpuCores, hostWhereInput.totalLogicalCpuCores)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresGt, hostWhereInput.totalLogicalCpuCoresGt)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresGte, hostWhereInput.totalLogicalCpuCoresGte)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresIn, hostWhereInput.totalLogicalCpuCoresIn)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresLt, hostWhereInput.totalLogicalCpuCoresLt)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresLte, hostWhereInput.totalLogicalCpuCoresLte)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresNot, hostWhereInput.totalLogicalCpuCoresNot)
+                && Objects.equals(
+                        this.totalLogicalCpuCoresNotIn, hostWhereInput.totalLogicalCpuCoresNotIn)
                 && Objects.equals(this.totalMemoryBytes, hostWhereInput.totalMemoryBytes)
                 && Objects.equals(this.totalMemoryBytesGt, hostWhereInput.totalMemoryBytesGt)
                 && Objects.equals(this.totalMemoryBytesGte, hostWhereInput.totalMemoryBytesGte)
@@ -35952,6 +36374,14 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 totalDataCapacityLte,
                 totalDataCapacityNot,
                 totalDataCapacityNotIn,
+                totalLogicalCpuCores,
+                totalLogicalCpuCoresGt,
+                totalLogicalCpuCoresGte,
+                totalLogicalCpuCoresIn,
+                totalLogicalCpuCoresLt,
+                totalLogicalCpuCoresLte,
+                totalLogicalCpuCoresNot,
+                totalLogicalCpuCoresNotIn,
                 totalMemoryBytes,
                 totalMemoryBytesGt,
                 totalMemoryBytesGte,
@@ -37249,6 +37679,30 @@ public class HostWhereInput extends com.smartx.tower.ConditionalNullable.Conditi
                 .append("\n");
         sb.append("    totalDataCapacityNotIn: ")
                 .append(toIndentedString(totalDataCapacityNotIn))
+                .append("\n");
+        sb.append("    totalLogicalCpuCores: ")
+                .append(toIndentedString(totalLogicalCpuCores))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresGt: ")
+                .append(toIndentedString(totalLogicalCpuCoresGt))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresGte: ")
+                .append(toIndentedString(totalLogicalCpuCoresGte))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresIn: ")
+                .append(toIndentedString(totalLogicalCpuCoresIn))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresLt: ")
+                .append(toIndentedString(totalLogicalCpuCoresLt))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresLte: ")
+                .append(toIndentedString(totalLogicalCpuCoresLte))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresNot: ")
+                .append(toIndentedString(totalLogicalCpuCoresNot))
+                .append("\n");
+        sb.append("    totalLogicalCpuCoresNotIn: ")
+                .append(toIndentedString(totalLogicalCpuCoresNotIn))
                 .append("\n");
         sb.append("    totalMemoryBytes: ").append(toIndentedString(totalMemoryBytes)).append("\n");
         sb.append("    totalMemoryBytesGt: ")
