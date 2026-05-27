@@ -413,6 +413,11 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
     @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
     private Long totalDataCapacity;
 
+    public static final String SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES = "total_logical_cpu_cores";
+
+    @SerializedName(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES)
+    private Integer totalLogicalCpuCores;
+
     public static final String SERIALIZED_NAME_TOTAL_MEMORY_BYTES = "total_memory_bytes";
 
     @SerializedName(SERIALIZED_NAME_TOTAL_MEMORY_BYTES)
@@ -3903,6 +3908,49 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
         return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_DATA_CAPACITY);
     }
 
+    public Host totalLogicalCpuCores(Integer totalLogicalCpuCores) {
+
+        this.totalLogicalCpuCores = totalLogicalCpuCores;
+        return this;
+    }
+
+    /**
+     * Get totalLogicalCpuCores
+     *
+     * @return totalLogicalCpuCores
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getTotalLogicalCpuCores() {
+        return totalLogicalCpuCores;
+    }
+
+    public void setTotalLogicalCpuCores(Integer totalLogicalCpuCores) {
+        this.totalLogicalCpuCores = totalLogicalCpuCores;
+    }
+
+    public Host totalLogicalCpuCores_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        return this;
+    }
+
+    public Host totalLogicalCpuCores_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        return this;
+    }
+
+    public void setTotalLogicalCpuCores_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+        }
+    }
+
+    public boolean getTotalLogicalCpuCores_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_LOGICAL_CPU_CORES);
+    }
+
     public Host totalMemoryBytes(Long totalMemoryBytes) {
 
         this.totalMemoryBytes = totalMemoryBytes;
@@ -4610,6 +4658,7 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
                 && Objects.equals(this.totalCpuHz, host.totalCpuHz)
                 && Objects.equals(this.totalCpuSockets, host.totalCpuSockets)
                 && Objects.equals(this.totalDataCapacity, host.totalDataCapacity)
+                && Objects.equals(this.totalLogicalCpuCores, host.totalLogicalCpuCores)
                 && Objects.equals(this.totalMemoryBytes, host.totalMemoryBytes)
                 && Objects.equals(this.usbDevices, host.usbDevices)
                 && Objects.equals(this.usedCacheSpace, host.usedCacheSpace)
@@ -4716,6 +4765,7 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
                 totalCpuHz,
                 totalCpuSockets,
                 totalDataCapacity,
+                totalLogicalCpuCores,
                 totalMemoryBytes,
                 usbDevices,
                 usedCacheSpace,
@@ -4868,6 +4918,9 @@ public class Host extends com.smartx.tower.ConditionalNullable.ConditionalNullab
         sb.append("    totalCpuSockets: ").append(toIndentedString(totalCpuSockets)).append("\n");
         sb.append("    totalDataCapacity: ")
                 .append(toIndentedString(totalDataCapacity))
+                .append("\n");
+        sb.append("    totalLogicalCpuCores: ")
+                .append(toIndentedString(totalLogicalCpuCores))
                 .append("\n");
         sb.append("    totalMemoryBytes: ").append(toIndentedString(totalMemoryBytes)).append("\n");
         sb.append("    usbDevices: ").append(toIndentedString(usbDevices)).append("\n");

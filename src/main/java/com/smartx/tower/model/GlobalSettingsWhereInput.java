@@ -28,6 +28,27 @@ public class GlobalSettingsWhereInput
     @SerializedName(SERIALIZED_NAME_O_R)
     private List<GlobalSettingsWhereInput> OR = null;
 
+    public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+
+    @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+    private EntityAsyncStatus entityAsyncStatus;
+
+    public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN = "entityAsyncStatus_in";
+
+    @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN)
+    private List<EntityAsyncStatus> entityAsyncStatusIn = null;
+
+    public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT = "entityAsyncStatus_not";
+
+    @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT)
+    private EntityAsyncStatus entityAsyncStatusNot;
+
+    public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN =
+            "entityAsyncStatus_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN)
+    private List<EntityAsyncStatus> entityAsyncStatusNotIn = null;
+
     public static final String SERIALIZED_NAME_ID = "id";
 
     @SerializedName(SERIALIZED_NAME_ID)
@@ -251,6 +272,198 @@ public class GlobalSettingsWhereInput
 
     public boolean getOR_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_O_R);
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+
+        this.entityAsyncStatus = entityAsyncStatus;
+        return this;
+    }
+
+    /**
+     * Get entityAsyncStatus
+     *
+     * @return entityAsyncStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EntityAsyncStatus getEntityAsyncStatus() {
+        return entityAsyncStatus;
+    }
+
+    public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+        this.entityAsyncStatus = entityAsyncStatus;
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        return this;
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        return this;
+    }
+
+    public void setEntityAsyncStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        }
+    }
+
+    public boolean getEntityAsyncStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatusIn(
+            List<EntityAsyncStatus> entityAsyncStatusIn) {
+
+        this.entityAsyncStatusIn = entityAsyncStatusIn;
+        return this;
+    }
+
+    public GlobalSettingsWhereInput addEntityAsyncStatusInItem(
+            EntityAsyncStatus entityAsyncStatusInItem) {
+        if (this.entityAsyncStatusIn == null) {
+            this.entityAsyncStatusIn = new ArrayList<EntityAsyncStatus>();
+        }
+        this.entityAsyncStatusIn.add(entityAsyncStatusInItem);
+        return this;
+    }
+
+    /**
+     * Get entityAsyncStatusIn
+     *
+     * @return entityAsyncStatusIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<EntityAsyncStatus> getEntityAsyncStatusIn() {
+        return entityAsyncStatusIn;
+    }
+
+    public void setEntityAsyncStatusIn(List<EntityAsyncStatus> entityAsyncStatusIn) {
+        this.entityAsyncStatusIn = entityAsyncStatusIn;
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatusIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN);
+        return this;
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatusIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN);
+        return this;
+    }
+
+    public void setEntityAsyncStatusIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN);
+        }
+    }
+
+    public boolean getEntityAsyncStatusIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_IN);
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+
+        this.entityAsyncStatusNot = entityAsyncStatusNot;
+        return this;
+    }
+
+    /**
+     * Get entityAsyncStatusNot
+     *
+     * @return entityAsyncStatusNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EntityAsyncStatus getEntityAsyncStatusNot() {
+        return entityAsyncStatusNot;
+    }
+
+    public void setEntityAsyncStatusNot(EntityAsyncStatus entityAsyncStatusNot) {
+        this.entityAsyncStatusNot = entityAsyncStatusNot;
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatusNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT);
+        return this;
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatusNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT);
+        return this;
+    }
+
+    public void setEntityAsyncStatusNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT);
+        }
+    }
+
+    public boolean getEntityAsyncStatusNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT);
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatusNotIn(
+            List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+
+        this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
+        return this;
+    }
+
+    public GlobalSettingsWhereInput addEntityAsyncStatusNotInItem(
+            EntityAsyncStatus entityAsyncStatusNotInItem) {
+        if (this.entityAsyncStatusNotIn == null) {
+            this.entityAsyncStatusNotIn = new ArrayList<EntityAsyncStatus>();
+        }
+        this.entityAsyncStatusNotIn.add(entityAsyncStatusNotInItem);
+        return this;
+    }
+
+    /**
+     * Get entityAsyncStatusNotIn
+     *
+     * @return entityAsyncStatusNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<EntityAsyncStatus> getEntityAsyncStatusNotIn() {
+        return entityAsyncStatusNotIn;
+    }
+
+    public void setEntityAsyncStatusNotIn(List<EntityAsyncStatus> entityAsyncStatusNotIn) {
+        this.entityAsyncStatusNotIn = entityAsyncStatusNotIn;
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatusNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN);
+        return this;
+    }
+
+    public GlobalSettingsWhereInput entityAsyncStatusNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN);
+        return this;
+    }
+
+    public void setEntityAsyncStatusNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN);
+        }
+    }
+
+    public boolean getEntityAsyncStatusNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS_NOT_IN);
     }
 
     public GlobalSettingsWhereInput id(String id) {
@@ -883,6 +1096,15 @@ public class GlobalSettingsWhereInput
         return Objects.equals(this.AND, globalSettingsWhereInput.AND)
                 && Objects.equals(this.NOT, globalSettingsWhereInput.NOT)
                 && Objects.equals(this.OR, globalSettingsWhereInput.OR)
+                && Objects.equals(
+                        this.entityAsyncStatus, globalSettingsWhereInput.entityAsyncStatus)
+                && Objects.equals(
+                        this.entityAsyncStatusIn, globalSettingsWhereInput.entityAsyncStatusIn)
+                && Objects.equals(
+                        this.entityAsyncStatusNot, globalSettingsWhereInput.entityAsyncStatusNot)
+                && Objects.equals(
+                        this.entityAsyncStatusNotIn,
+                        globalSettingsWhereInput.entityAsyncStatusNotIn)
                 && Objects.equals(this.id, globalSettingsWhereInput.id)
                 && Objects.equals(this.idContains, globalSettingsWhereInput.idContains)
                 && Objects.equals(this.idEndsWith, globalSettingsWhereInput.idEndsWith)
@@ -914,6 +1136,10 @@ public class GlobalSettingsWhereInput
                 AND,
                 NOT,
                 OR,
+                entityAsyncStatus,
+                entityAsyncStatusIn,
+                entityAsyncStatusNot,
+                entityAsyncStatusNotIn,
                 id,
                 idContains,
                 idEndsWith,
@@ -944,6 +1170,18 @@ public class GlobalSettingsWhereInput
         sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
         sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
         sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+        sb.append("    entityAsyncStatus: ")
+                .append(toIndentedString(entityAsyncStatus))
+                .append("\n");
+        sb.append("    entityAsyncStatusIn: ")
+                .append(toIndentedString(entityAsyncStatusIn))
+                .append("\n");
+        sb.append("    entityAsyncStatusNot: ")
+                .append(toIndentedString(entityAsyncStatusNot))
+                .append("\n");
+        sb.append("    entityAsyncStatusNotIn: ")
+                .append(toIndentedString(entityAsyncStatusNotIn))
+                .append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    idContains: ").append(toIndentedString(idContains)).append("\n");
         sb.append("    idEndsWith: ").append(toIndentedString(idEndsWith)).append("\n");

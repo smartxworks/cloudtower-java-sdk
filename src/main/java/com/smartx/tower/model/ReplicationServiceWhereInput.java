@@ -710,6 +710,24 @@ public class ReplicationServiceWhereInput
     @SerializedName(SERIALIZED_NAME_RETRY_INTERVAL_NOT_IN)
     private List<Integer> retryIntervalNotIn = null;
 
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY =
+            "sync_replication_plans_every";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY)
+    private SyncReplicationPlanWhereInput syncReplicationPlansEvery;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE =
+            "sync_replication_plans_none";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE)
+    private SyncReplicationPlanWhereInput syncReplicationPlansNone;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME =
+            "sync_replication_plans_some";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME)
+    private SyncReplicationPlanWhereInput syncReplicationPlansSome;
+
     public static final String SERIALIZED_NAME_UPDATED_AT = "updatedAt";
 
     @SerializedName(SERIALIZED_NAME_UPDATED_AT)
@@ -6681,6 +6699,141 @@ public class ReplicationServiceWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_RETRY_INTERVAL_NOT_IN);
     }
 
+    public ReplicationServiceWhereInput syncReplicationPlansEvery(
+            SyncReplicationPlanWhereInput syncReplicationPlansEvery) {
+
+        this.syncReplicationPlansEvery = syncReplicationPlansEvery;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationPlansEvery
+     *
+     * @return syncReplicationPlansEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationPlanWhereInput getSyncReplicationPlansEvery() {
+        return syncReplicationPlansEvery;
+    }
+
+    public void setSyncReplicationPlansEvery(
+            SyncReplicationPlanWhereInput syncReplicationPlansEvery) {
+        this.syncReplicationPlansEvery = syncReplicationPlansEvery;
+    }
+
+    public ReplicationServiceWhereInput syncReplicationPlansEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+        return this;
+    }
+
+    public ReplicationServiceWhereInput syncReplicationPlansEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+        return this;
+    }
+
+    public void setSyncReplicationPlansEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+        }
+    }
+
+    public boolean getSyncReplicationPlansEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_EVERY);
+    }
+
+    public ReplicationServiceWhereInput syncReplicationPlansNone(
+            SyncReplicationPlanWhereInput syncReplicationPlansNone) {
+
+        this.syncReplicationPlansNone = syncReplicationPlansNone;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationPlansNone
+     *
+     * @return syncReplicationPlansNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationPlanWhereInput getSyncReplicationPlansNone() {
+        return syncReplicationPlansNone;
+    }
+
+    public void setSyncReplicationPlansNone(
+            SyncReplicationPlanWhereInput syncReplicationPlansNone) {
+        this.syncReplicationPlansNone = syncReplicationPlansNone;
+    }
+
+    public ReplicationServiceWhereInput syncReplicationPlansNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+        return this;
+    }
+
+    public ReplicationServiceWhereInput syncReplicationPlansNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+        return this;
+    }
+
+    public void setSyncReplicationPlansNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+        }
+    }
+
+    public boolean getSyncReplicationPlansNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_NONE);
+    }
+
+    public ReplicationServiceWhereInput syncReplicationPlansSome(
+            SyncReplicationPlanWhereInput syncReplicationPlansSome) {
+
+        this.syncReplicationPlansSome = syncReplicationPlansSome;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationPlansSome
+     *
+     * @return syncReplicationPlansSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationPlanWhereInput getSyncReplicationPlansSome() {
+        return syncReplicationPlansSome;
+    }
+
+    public void setSyncReplicationPlansSome(
+            SyncReplicationPlanWhereInput syncReplicationPlansSome) {
+        this.syncReplicationPlansSome = syncReplicationPlansSome;
+    }
+
+    public ReplicationServiceWhereInput syncReplicationPlansSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+        return this;
+    }
+
+    public ReplicationServiceWhereInput syncReplicationPlansSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+        return this;
+    }
+
+    public void setSyncReplicationPlansSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+        }
+    }
+
+    public boolean getSyncReplicationPlansSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLANS_SOME);
+    }
+
     public ReplicationServiceWhereInput updatedAt(String updatedAt) {
 
         this.updatedAt = updatedAt;
@@ -7309,6 +7462,15 @@ public class ReplicationServiceWhereInput
                         this.retryIntervalNot, replicationServiceWhereInput.retryIntervalNot)
                 && Objects.equals(
                         this.retryIntervalNotIn, replicationServiceWhereInput.retryIntervalNotIn)
+                && Objects.equals(
+                        this.syncReplicationPlansEvery,
+                        replicationServiceWhereInput.syncReplicationPlansEvery)
+                && Objects.equals(
+                        this.syncReplicationPlansNone,
+                        replicationServiceWhereInput.syncReplicationPlansNone)
+                && Objects.equals(
+                        this.syncReplicationPlansSome,
+                        replicationServiceWhereInput.syncReplicationPlansSome)
                 && Objects.equals(this.updatedAt, replicationServiceWhereInput.updatedAt)
                 && Objects.equals(this.updatedAtGt, replicationServiceWhereInput.updatedAtGt)
                 && Objects.equals(this.updatedAtGte, replicationServiceWhereInput.updatedAtGte)
@@ -7463,6 +7625,9 @@ public class ReplicationServiceWhereInput
                 retryIntervalLte,
                 retryIntervalNot,
                 retryIntervalNotIn,
+                syncReplicationPlansEvery,
+                syncReplicationPlansNone,
+                syncReplicationPlansSome,
                 updatedAt,
                 updatedAtGt,
                 updatedAtGte,
@@ -7739,6 +7904,15 @@ public class ReplicationServiceWhereInput
         sb.append("    retryIntervalNot: ").append(toIndentedString(retryIntervalNot)).append("\n");
         sb.append("    retryIntervalNotIn: ")
                 .append(toIndentedString(retryIntervalNotIn))
+                .append("\n");
+        sb.append("    syncReplicationPlansEvery: ")
+                .append(toIndentedString(syncReplicationPlansEvery))
+                .append("\n");
+        sb.append("    syncReplicationPlansNone: ")
+                .append(toIndentedString(syncReplicationPlansNone))
+                .append("\n");
+        sb.append("    syncReplicationPlansSome: ")
+                .append(toIndentedString(syncReplicationPlansSome))
                 .append("\n");
         sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");
         sb.append("    updatedAtGt: ").append(toIndentedString(updatedAtGt)).append("\n");

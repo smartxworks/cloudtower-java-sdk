@@ -51,6 +51,17 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_AUTO_CONVERGE)
     private Boolean autoConverge;
 
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE =
+            "cap_snapshot_unique_size";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE)
+    private Long capSnapshotUniqueSize;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE = "cap_volume_unique_size";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE)
+    private Long capVolumeUniqueSize;
+
     public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES = "commited_memory_bytes";
 
     @SerializedName(SERIALIZED_NAME_COMMITED_MEMORY_BYTES)
@@ -907,6 +918,92 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getAutoConverge_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_AUTO_CONVERGE);
+    }
+
+    public Cluster capSnapshotUniqueSize(Long capSnapshotUniqueSize) {
+
+        this.capSnapshotUniqueSize = capSnapshotUniqueSize;
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSize
+     *
+     * @return capSnapshotUniqueSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapSnapshotUniqueSize() {
+        return capSnapshotUniqueSize;
+    }
+
+    public void setCapSnapshotUniqueSize(Long capSnapshotUniqueSize) {
+        this.capSnapshotUniqueSize = capSnapshotUniqueSize;
+    }
+
+    public Cluster capSnapshotUniqueSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        return this;
+    }
+
+    public Cluster capSnapshotUniqueSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+    }
+
+    public Cluster capVolumeUniqueSize(Long capVolumeUniqueSize) {
+
+        this.capVolumeUniqueSize = capVolumeUniqueSize;
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSize
+     *
+     * @return capVolumeUniqueSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapVolumeUniqueSize() {
+        return capVolumeUniqueSize;
+    }
+
+    public void setCapVolumeUniqueSize(Long capVolumeUniqueSize) {
+        this.capVolumeUniqueSize = capVolumeUniqueSize;
+    }
+
+    public Cluster capVolumeUniqueSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        return this;
+    }
+
+    public Cluster capVolumeUniqueSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
     }
 
     public Cluster commitedMemoryBytes(Long commitedMemoryBytes) {
@@ -5621,6 +5718,8 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.applications, cluster.applications)
                 && Objects.equals(this.architecture, cluster.architecture)
                 && Objects.equals(this.autoConverge, cluster.autoConverge)
+                && Objects.equals(this.capSnapshotUniqueSize, cluster.capSnapshotUniqueSize)
+                && Objects.equals(this.capVolumeUniqueSize, cluster.capVolumeUniqueSize)
                 && Objects.equals(this.commitedMemoryBytes, cluster.commitedMemoryBytes)
                 && Objects.equals(this.connectState, cluster.connectState)
                 && Objects.equals(this.consistencyGroups, cluster.consistencyGroups)
@@ -5756,6 +5855,8 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 applications,
                 architecture,
                 autoConverge,
+                capSnapshotUniqueSize,
+                capVolumeUniqueSize,
                 commitedMemoryBytes,
                 connectState,
                 consistencyGroups,
@@ -5891,6 +5992,12 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         sb.append("    applications: ").append(toIndentedString(applications)).append("\n");
         sb.append("    architecture: ").append(toIndentedString(architecture)).append("\n");
         sb.append("    autoConverge: ").append(toIndentedString(autoConverge)).append("\n");
+        sb.append("    capSnapshotUniqueSize: ")
+                .append(toIndentedString(capSnapshotUniqueSize))
+                .append("\n");
+        sb.append("    capVolumeUniqueSize: ")
+                .append(toIndentedString(capVolumeUniqueSize))
+                .append("\n");
         sb.append("    commitedMemoryBytes: ")
                 .append(toIndentedString(commitedMemoryBytes))
                 .append("\n");

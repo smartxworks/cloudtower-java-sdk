@@ -1,5 +1,20 @@
 # RELEASE NOTE
 
+## release 日期 2026-05-27
+
+v2.23.0 release (tower version 4.9.0)
+
+### features
+
+- 新增 `ActivePassiveApiClient` 用于支持多管理 IP 主备部署，可配置同一主备集群的多个 endpoint，自动探测当前 active endpoint，支持 `AUTO_FAILOVER`、`MANUAL_FAILOVER` 与 `ALWAYS_PROBE` 三种故障切换策略
+- 增加 `SyncReplicationPlanApi` 用于同步复制计划的查询
+- [VmApi]: 新增 `downloadNvram` 与 `uploadNvram` API，用于 NVRAM 的下载与上传
+- [Cluster]: 新增字段 `capSnapshotUniqueSize`、`capVolumeUniqueSize`
+- [Host]: 新增字段 `totalLogicalCpuCores`
+- [GlobalSettings]: 新增字段 `entityAsyncStatus`
+- [ReplicaVm]: 新增字段 `lastOutOfSyncAt`、`lastOutOfSyncReason`、`lastSyncedAt`、`method`、`resourceVersion`、`syncReplicationObjectStatus`、`syncReplicationPlan`、`syncReplicationStatus`
+- [ReplicationService]: 新增字段 `syncReplicationPlans`
+
 ## release 日期 2026-04-28
 
 v2.22.1 release (tower version 4.8.1)

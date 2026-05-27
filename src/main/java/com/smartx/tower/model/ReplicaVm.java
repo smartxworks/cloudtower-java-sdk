@@ -59,6 +59,26 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
     @SerializedName(SERIALIZED_NAME_ISCSI_LUN)
     private NestedIscsiLun iscsiLun;
 
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT = "last_out_of_sync_at";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT)
+    private String lastOutOfSyncAt;
+
+    public static final String SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON = "last_out_of_sync_reason";
+
+    @SerializedName(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON)
+    private String lastOutOfSyncReason;
+
+    public static final String SERIALIZED_NAME_LAST_SYNCED_AT = "last_synced_at";
+
+    @SerializedName(SERIALIZED_NAME_LAST_SYNCED_AT)
+    private String lastSyncedAt;
+
+    public static final String SERIALIZED_NAME_METHOD = "method";
+
+    @SerializedName(SERIALIZED_NAME_METHOD)
+    private ReplicationMethod method;
+
     public static final String SERIALIZED_NAME_OBJECT_DESCRIPTOR = "object_descriptor";
 
     @SerializedName(SERIALIZED_NAME_OBJECT_DESCRIPTOR)
@@ -127,6 +147,11 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
     @SerializedName(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS)
     private List<NestedReplicationTargetExecution> replicationTargetExecutions = null;
 
+    public static final String SERIALIZED_NAME_RESOURCE_VERSION = "resource_version";
+
+    @SerializedName(SERIALIZED_NAME_RESOURCE_VERSION)
+    private Integer resourceVersion;
+
     public static final String SERIALIZED_NAME_RESTORE_POINTS = "restore_points";
 
     @SerializedName(SERIALIZED_NAME_RESTORE_POINTS)
@@ -136,6 +161,22 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
 
     @SerializedName(SERIALIZED_NAME_STATE)
     private ReplicaVmState state;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS =
+            "sync_replication_object_status";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS)
+    private SyncReplicationObjectStatus syncReplicationObjectStatus;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_PLAN = "sync_replication_plan";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_PLAN)
+    private NestedSyncReplicationPlan syncReplicationPlan;
+
+    public static final String SERIALIZED_NAME_SYNC_REPLICATION_STATUS = "sync_replication_status";
+
+    @SerializedName(SERIALIZED_NAME_SYNC_REPLICATION_STATUS)
+    private SyncReplicationStatus syncReplicationStatus;
 
     public static final String SERIALIZED_NAME_TARGETS_DELETABLE = "targets_deletable";
 
@@ -546,6 +587,178 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
 
     public boolean getIscsiLun_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ISCSI_LUN);
+    }
+
+    public ReplicaVm lastOutOfSyncAt(String lastOutOfSyncAt) {
+
+        this.lastOutOfSyncAt = lastOutOfSyncAt;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncAt
+     *
+     * @return lastOutOfSyncAt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncAt() {
+        return lastOutOfSyncAt;
+    }
+
+    public void setLastOutOfSyncAt(String lastOutOfSyncAt) {
+        this.lastOutOfSyncAt = lastOutOfSyncAt;
+    }
+
+    public ReplicaVm lastOutOfSyncAt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+        return this;
+    }
+
+    public ReplicaVm lastOutOfSyncAt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+        return this;
+    }
+
+    public void setLastOutOfSyncAt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+        }
+    }
+
+    public boolean getLastOutOfSyncAt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_AT);
+    }
+
+    public ReplicaVm lastOutOfSyncReason(String lastOutOfSyncReason) {
+
+        this.lastOutOfSyncReason = lastOutOfSyncReason;
+        return this;
+    }
+
+    /**
+     * Get lastOutOfSyncReason
+     *
+     * @return lastOutOfSyncReason
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastOutOfSyncReason() {
+        return lastOutOfSyncReason;
+    }
+
+    public void setLastOutOfSyncReason(String lastOutOfSyncReason) {
+        this.lastOutOfSyncReason = lastOutOfSyncReason;
+    }
+
+    public ReplicaVm lastOutOfSyncReason_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+        return this;
+    }
+
+    public ReplicaVm lastOutOfSyncReason_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+        return this;
+    }
+
+    public void setLastOutOfSyncReason_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+        }
+    }
+
+    public boolean getLastOutOfSyncReason_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_OUT_OF_SYNC_REASON);
+    }
+
+    public ReplicaVm lastSyncedAt(String lastSyncedAt) {
+
+        this.lastSyncedAt = lastSyncedAt;
+        return this;
+    }
+
+    /**
+     * Get lastSyncedAt
+     *
+     * @return lastSyncedAt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getLastSyncedAt() {
+        return lastSyncedAt;
+    }
+
+    public void setLastSyncedAt(String lastSyncedAt) {
+        this.lastSyncedAt = lastSyncedAt;
+    }
+
+    public ReplicaVm lastSyncedAt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT);
+        return this;
+    }
+
+    public ReplicaVm lastSyncedAt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT);
+        return this;
+    }
+
+    public void setLastSyncedAt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_LAST_SYNCED_AT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_LAST_SYNCED_AT);
+        }
+    }
+
+    public boolean getLastSyncedAt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_LAST_SYNCED_AT);
+    }
+
+    public ReplicaVm method(ReplicationMethod method) {
+
+        this.method = method;
+        return this;
+    }
+
+    /**
+     * Get method
+     *
+     * @return method
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public ReplicationMethod getMethod() {
+        return method;
+    }
+
+    public void setMethod(ReplicationMethod method) {
+        this.method = method;
+    }
+
+    public ReplicaVm method_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_METHOD);
+        return this;
+    }
+
+    public ReplicaVm method_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_METHOD);
+        return this;
+    }
+
+    public void setMethod_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_METHOD);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_METHOD);
+        }
+    }
+
+    public boolean getMethod_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_METHOD);
     }
 
     public ReplicaVm objectDescriptor(NestedReplicationObjectDescriptor objectDescriptor) {
@@ -1120,6 +1333,49 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
         return this._isPresent_.contains(SERIALIZED_NAME_REPLICATION_TARGET_EXECUTIONS);
     }
 
+    public ReplicaVm resourceVersion(Integer resourceVersion) {
+
+        this.resourceVersion = resourceVersion;
+        return this;
+    }
+
+    /**
+     * Get resourceVersion
+     *
+     * @return resourceVersion
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Integer getResourceVersion() {
+        return resourceVersion;
+    }
+
+    public void setResourceVersion(Integer resourceVersion) {
+        this.resourceVersion = resourceVersion;
+    }
+
+    public ReplicaVm resourceVersion_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION);
+        return this;
+    }
+
+    public ReplicaVm resourceVersion_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION);
+        return this;
+    }
+
+    public void setResourceVersion_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_RESOURCE_VERSION);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_RESOURCE_VERSION);
+        }
+    }
+
+    public boolean getResourceVersion_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_RESOURCE_VERSION);
+    }
+
     public ReplicaVm restorePoints(List<NestedReplicationRestorePoint> restorePoints) {
 
         this.restorePoints = restorePoints;
@@ -1212,6 +1468,137 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
 
     public boolean getState_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_STATE);
+    }
+
+    public ReplicaVm syncReplicationObjectStatus(
+            SyncReplicationObjectStatus syncReplicationObjectStatus) {
+
+        this.syncReplicationObjectStatus = syncReplicationObjectStatus;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationObjectStatus
+     *
+     * @return syncReplicationObjectStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationObjectStatus getSyncReplicationObjectStatus() {
+        return syncReplicationObjectStatus;
+    }
+
+    public void setSyncReplicationObjectStatus(
+            SyncReplicationObjectStatus syncReplicationObjectStatus) {
+        this.syncReplicationObjectStatus = syncReplicationObjectStatus;
+    }
+
+    public ReplicaVm syncReplicationObjectStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+        return this;
+    }
+
+    public ReplicaVm syncReplicationObjectStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+        return this;
+    }
+
+    public void setSyncReplicationObjectStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+        }
+    }
+
+    public boolean getSyncReplicationObjectStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_OBJECT_STATUS);
+    }
+
+    public ReplicaVm syncReplicationPlan(NestedSyncReplicationPlan syncReplicationPlan) {
+
+        this.syncReplicationPlan = syncReplicationPlan;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationPlan
+     *
+     * @return syncReplicationPlan
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedSyncReplicationPlan getSyncReplicationPlan() {
+        return syncReplicationPlan;
+    }
+
+    public void setSyncReplicationPlan(NestedSyncReplicationPlan syncReplicationPlan) {
+        this.syncReplicationPlan = syncReplicationPlan;
+    }
+
+    public ReplicaVm syncReplicationPlan_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+        return this;
+    }
+
+    public ReplicaVm syncReplicationPlan_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+        return this;
+    }
+
+    public void setSyncReplicationPlan_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+        }
+    }
+
+    public boolean getSyncReplicationPlan_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_PLAN);
+    }
+
+    public ReplicaVm syncReplicationStatus(SyncReplicationStatus syncReplicationStatus) {
+
+        this.syncReplicationStatus = syncReplicationStatus;
+        return this;
+    }
+
+    /**
+     * Get syncReplicationStatus
+     *
+     * @return syncReplicationStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public SyncReplicationStatus getSyncReplicationStatus() {
+        return syncReplicationStatus;
+    }
+
+    public void setSyncReplicationStatus(SyncReplicationStatus syncReplicationStatus) {
+        this.syncReplicationStatus = syncReplicationStatus;
+    }
+
+    public ReplicaVm syncReplicationStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
+        return this;
+    }
+
+    public ReplicaVm syncReplicationStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
+        return this;
+    }
+
+    public void setSyncReplicationStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
+        }
+    }
+
+    public boolean getSyncReplicationStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_SYNC_REPLICATION_STATUS);
     }
 
     public ReplicaVm targetsDeletable(Boolean targetsDeletable) {
@@ -1405,6 +1792,10 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
                 && Objects.equals(this.id, replicaVm.id)
                 && Objects.equals(this.inbound, replicaVm.inbound)
                 && Objects.equals(this.iscsiLun, replicaVm.iscsiLun)
+                && Objects.equals(this.lastOutOfSyncAt, replicaVm.lastOutOfSyncAt)
+                && Objects.equals(this.lastOutOfSyncReason, replicaVm.lastOutOfSyncReason)
+                && Objects.equals(this.lastSyncedAt, replicaVm.lastSyncedAt)
+                && Objects.equals(this.method, replicaVm.method)
                 && Objects.equals(this.objectDescriptor, replicaVm.objectDescriptor)
                 && Objects.equals(this.originIscsiLun, replicaVm.originIscsiLun)
                 && Objects.equals(this.originObjectDescriptor, replicaVm.originObjectDescriptor)
@@ -1419,8 +1810,13 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
                 && Objects.equals(this.replicationService, replicaVm.replicationService)
                 && Objects.equals(
                         this.replicationTargetExecutions, replicaVm.replicationTargetExecutions)
+                && Objects.equals(this.resourceVersion, replicaVm.resourceVersion)
                 && Objects.equals(this.restorePoints, replicaVm.restorePoints)
                 && Objects.equals(this.state, replicaVm.state)
+                && Objects.equals(
+                        this.syncReplicationObjectStatus, replicaVm.syncReplicationObjectStatus)
+                && Objects.equals(this.syncReplicationPlan, replicaVm.syncReplicationPlan)
+                && Objects.equals(this.syncReplicationStatus, replicaVm.syncReplicationStatus)
                 && Objects.equals(this.targetsDeletable, replicaVm.targetsDeletable)
                 && Objects.equals(this.type, replicaVm.type)
                 && Objects.equals(this.updatedAt, replicaVm.updatedAt)
@@ -1448,6 +1844,10 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
                 id,
                 inbound,
                 iscsiLun,
+                lastOutOfSyncAt,
+                lastOutOfSyncReason,
+                lastSyncedAt,
+                method,
                 objectDescriptor,
                 originIscsiLun,
                 originObjectDescriptor,
@@ -1461,8 +1861,12 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
                 replicationPlan,
                 replicationService,
                 replicationTargetExecutions,
+                resourceVersion,
                 restorePoints,
                 state,
+                syncReplicationObjectStatus,
+                syncReplicationPlan,
+                syncReplicationStatus,
                 targetsDeletable,
                 type,
                 updatedAt,
@@ -1497,6 +1901,12 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    inbound: ").append(toIndentedString(inbound)).append("\n");
         sb.append("    iscsiLun: ").append(toIndentedString(iscsiLun)).append("\n");
+        sb.append("    lastOutOfSyncAt: ").append(toIndentedString(lastOutOfSyncAt)).append("\n");
+        sb.append("    lastOutOfSyncReason: ")
+                .append(toIndentedString(lastOutOfSyncReason))
+                .append("\n");
+        sb.append("    lastSyncedAt: ").append(toIndentedString(lastSyncedAt)).append("\n");
+        sb.append("    method: ").append(toIndentedString(method)).append("\n");
         sb.append("    objectDescriptor: ").append(toIndentedString(objectDescriptor)).append("\n");
         sb.append("    originIscsiLun: ").append(toIndentedString(originIscsiLun)).append("\n");
         sb.append("    originObjectDescriptor: ")
@@ -1520,8 +1930,18 @@ public class ReplicaVm extends com.smartx.tower.ConditionalNullable.ConditionalN
         sb.append("    replicationTargetExecutions: ")
                 .append(toIndentedString(replicationTargetExecutions))
                 .append("\n");
+        sb.append("    resourceVersion: ").append(toIndentedString(resourceVersion)).append("\n");
         sb.append("    restorePoints: ").append(toIndentedString(restorePoints)).append("\n");
         sb.append("    state: ").append(toIndentedString(state)).append("\n");
+        sb.append("    syncReplicationObjectStatus: ")
+                .append(toIndentedString(syncReplicationObjectStatus))
+                .append("\n");
+        sb.append("    syncReplicationPlan: ")
+                .append(toIndentedString(syncReplicationPlan))
+                .append("\n");
+        sb.append("    syncReplicationStatus: ")
+                .append(toIndentedString(syncReplicationStatus))
+                .append("\n");
         sb.append("    targetsDeletable: ").append(toIndentedString(targetsDeletable)).append("\n");
         sb.append("    type: ").append(toIndentedString(type)).append("\n");
         sb.append("    updatedAt: ").append(toIndentedString(updatedAt)).append("\n");

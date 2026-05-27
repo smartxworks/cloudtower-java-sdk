@@ -15,6 +15,11 @@ public class GlobalSettings extends com.smartx.tower.ConditionalNullable.Conditi
     @SerializedName(SERIALIZED_NAME_AUTH)
     private NestedAuthSettings auth;
 
+    public static final String SERIALIZED_NAME_ENTITY_ASYNC_STATUS = "entityAsyncStatus";
+
+    @SerializedName(SERIALIZED_NAME_ENTITY_ASYNC_STATUS)
+    private EntityAsyncStatus entityAsyncStatus;
+
     public static final String SERIALIZED_NAME_ID = "id";
 
     @SerializedName(SERIALIZED_NAME_ID)
@@ -68,6 +73,49 @@ public class GlobalSettings extends com.smartx.tower.ConditionalNullable.Conditi
 
     public boolean getAuth_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_AUTH);
+    }
+
+    public GlobalSettings entityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+
+        this.entityAsyncStatus = entityAsyncStatus;
+        return this;
+    }
+
+    /**
+     * Get entityAsyncStatus
+     *
+     * @return entityAsyncStatus
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public EntityAsyncStatus getEntityAsyncStatus() {
+        return entityAsyncStatus;
+    }
+
+    public void setEntityAsyncStatus(EntityAsyncStatus entityAsyncStatus) {
+        this.entityAsyncStatus = entityAsyncStatus;
+    }
+
+    public GlobalSettings entityAsyncStatus_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        return this;
+    }
+
+    public GlobalSettings entityAsyncStatus_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        return this;
+    }
+
+    public void setEntityAsyncStatus_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
+        }
+    }
+
+    public boolean getEntityAsyncStatus_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ENTITY_ASYNC_STATUS);
     }
 
     public GlobalSettings id(String id) {
@@ -166,6 +214,7 @@ public class GlobalSettings extends com.smartx.tower.ConditionalNullable.Conditi
         }
         GlobalSettings globalSettings = (GlobalSettings) o;
         return Objects.equals(this.auth, globalSettings.auth)
+                && Objects.equals(this.entityAsyncStatus, globalSettings.entityAsyncStatus)
                 && Objects.equals(this.id, globalSettings.id)
                 && Objects.equals(this.vmRecycleBin, globalSettings.vmRecycleBin);
     }
@@ -181,7 +230,7 @@ public class GlobalSettings extends com.smartx.tower.ConditionalNullable.Conditi
 
     @Override
     public int hashCode() {
-        return Objects.hash(auth, id, vmRecycleBin);
+        return Objects.hash(auth, entityAsyncStatus, id, vmRecycleBin);
     }
 
     private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -196,6 +245,9 @@ public class GlobalSettings extends com.smartx.tower.ConditionalNullable.Conditi
         StringBuilder sb = new StringBuilder();
         sb.append("class GlobalSettings {\n");
         sb.append("    auth: ").append(toIndentedString(auth)).append("\n");
+        sb.append("    entityAsyncStatus: ")
+                .append(toIndentedString(entityAsyncStatus))
+                .append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    vmRecycleBin: ").append(toIndentedString(vmRecycleBin)).append("\n");
         sb.append("}");

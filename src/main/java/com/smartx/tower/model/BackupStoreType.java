@@ -10,6 +10,8 @@ import java.io.IOException;
 /** Gets or Sets BackupStoreType */
 @JsonAdapter(BackupStoreType.Adapter.class)
 public enum BackupStoreType {
+    BOOSTFS("BOOSTFS"),
+
     ISCSI("ISCSI"),
 
     NFS3("NFS3"),

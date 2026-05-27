@@ -278,6 +278,10 @@ public enum HostOrderByInput {
 
     TOTAL_DATA_CAPACITY_DESC("total_data_capacity_DESC"),
 
+    TOTAL_LOGICAL_CPU_CORES_ASC("total_logical_cpu_cores_ASC"),
+
+    TOTAL_LOGICAL_CPU_CORES_DESC("total_logical_cpu_cores_DESC"),
+
     TOTAL_MEMORY_BYTES_ASC("total_memory_bytes_ASC"),
 
     TOTAL_MEMORY_BYTES_DESC("total_memory_bytes_DESC"),

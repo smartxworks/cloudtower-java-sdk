@@ -5,6 +5,10 @@ api/openapi.yaml
 git_push.sh
 pom.xml
 pom.xml
+src/main/java/com/smartx/tower/ActivePassiveApiClient.java
+src/main/java/com/smartx/tower/ActivePassiveApiException.java
+src/main/java/com/smartx/tower/ActivePassiveFailoverStrategy.java
+src/main/java/com/smartx/tower/ActivePassiveRequestTags.java
 src/main/java/com/smartx/tower/ApiCallback.java
 src/main/java/com/smartx/tower/ApiClient.java
 src/main/java/com/smartx/tower/ApiClient.java
@@ -112,6 +116,7 @@ src/main/java/com/smartx/tower/api/SnapshotPlanTaskApi.java
 src/main/java/com/smartx/tower/api/SnmpTransportApi.java
 src/main/java/com/smartx/tower/api/SnmpTrapReceiverApi.java
 src/main/java/com/smartx/tower/api/SvtImageApi.java
+src/main/java/com/smartx/tower/api/SyncReplicationPlanApi.java
 src/main/java/com/smartx/tower/api/SystemAuditLogApi.java
 src/main/java/com/smartx/tower/api/TableReporterApi.java
 src/main/java/com/smartx/tower/api/TaskApi.java
@@ -770,6 +775,8 @@ src/main/java/com/smartx/tower/model/GetSnmpTrapReceiversConnectionRequestBody.j
 src/main/java/com/smartx/tower/model/GetSnmpTrapReceiversRequestBody.java
 src/main/java/com/smartx/tower/model/GetSvtImagesConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetSvtImagesRequestBody.java
+src/main/java/com/smartx/tower/model/GetSyncReplicationPlansConnectionRequestBody.java
+src/main/java/com/smartx/tower/model/GetSyncReplicationPlansRequestBody.java
 src/main/java/com/smartx/tower/model/GetSystemAuditLogsConnectionRequestBody.java
 src/main/java/com/smartx/tower/model/GetSystemAuditLogsRequestBody.java
 src/main/java/com/smartx/tower/model/GetTasksConnectionRequestBody.java
@@ -1105,6 +1112,7 @@ src/main/java/com/smartx/tower/model/NestedAggregateSnapshotPlanTask.java
 src/main/java/com/smartx/tower/model/NestedAggregateSnmpTransport.java
 src/main/java/com/smartx/tower/model/NestedAggregateSnmpTrapReceiver.java
 src/main/java/com/smartx/tower/model/NestedAggregateSvtImage.java
+src/main/java/com/smartx/tower/model/NestedAggregateSyncReplicationPlan.java
 src/main/java/com/smartx/tower/model/NestedAggregateSystemAuditLog.java
 src/main/java/com/smartx/tower/model/NestedAggregateTask.java
 src/main/java/com/smartx/tower/model/NestedAggregateUploadTask.java
@@ -1275,6 +1283,7 @@ src/main/java/com/smartx/tower/model/NestedSnapshotPlanTask.java
 src/main/java/com/smartx/tower/model/NestedStep.java
 src/main/java/com/smartx/tower/model/NestedStoragePolicyConfig.java
 src/main/java/com/smartx/tower/model/NestedSvtImage.java
+src/main/java/com/smartx/tower/model/NestedSyncReplicationPlan.java
 src/main/java/com/smartx/tower/model/NestedTagPosition.java
 src/main/java/com/smartx/tower/model/NestedTask.java
 src/main/java/com/smartx/tower/model/NestedTemplateConfig.java
@@ -1410,6 +1419,9 @@ src/main/java/com/smartx/tower/model/NvmfSubsystemPolicyType.java
 src/main/java/com/smartx/tower/model/NvmfSubsystemUpdationParams.java
 src/main/java/com/smartx/tower/model/NvmfSubsystemUpdationParamsData.java
 src/main/java/com/smartx/tower/model/NvmfSubsystemWhereInput.java
+src/main/java/com/smartx/tower/model/NvramDownloadResponse.java
+src/main/java/com/smartx/tower/model/NvramDownloadResponseData.java
+src/main/java/com/smartx/tower/model/NvramParams.java
 src/main/java/com/smartx/tower/model/ObservabilityConnectedSystemServiceType.java
 src/main/java/com/smartx/tower/model/OperateActionEnum.java
 src/main/java/com/smartx/tower/model/OperateHostPowerData.java
@@ -1469,6 +1481,7 @@ src/main/java/com/smartx/tower/model/ReplicaVmState.java
 src/main/java/com/smartx/tower/model/ReplicaVmWhereInput.java
 src/main/java/com/smartx/tower/model/ReplicationFailbackTargetExecutionWhereInput.java
 src/main/java/com/smartx/tower/model/ReplicationFailoverTargetExecutionWhereInput.java
+src/main/java/com/smartx/tower/model/ReplicationMethod.java
 src/main/java/com/smartx/tower/model/ReplicationObjectType.java
 src/main/java/com/smartx/tower/model/ReplicationPlan.java
 src/main/java/com/smartx/tower/model/ReplicationPlanConnection.java
@@ -1512,6 +1525,7 @@ src/main/java/com/smartx/tower/model/SecurityGroup.java
 src/main/java/com/smartx/tower/model/SecurityGroupConnection.java
 src/main/java/com/smartx/tower/model/SecurityGroupCreateParams.java
 src/main/java/com/smartx/tower/model/SecurityGroupDeleteParams.java
+src/main/java/com/smartx/tower/model/SecurityGroupMemberType.java
 src/main/java/com/smartx/tower/model/SecurityGroupOrderByInput.java
 src/main/java/com/smartx/tower/model/SecurityGroupUpdateBody.java
 src/main/java/com/smartx/tower/model/SecurityGroupUpdateParams.java
@@ -1596,7 +1610,12 @@ src/main/java/com/smartx/tower/model/SvtImage.java
 src/main/java/com/smartx/tower/model/SvtImageConnection.java
 src/main/java/com/smartx/tower/model/SvtImageOrderByInput.java
 src/main/java/com/smartx/tower/model/SvtImageWhereInput.java
+src/main/java/com/smartx/tower/model/SyncReplicationObjectStatus.java
+src/main/java/com/smartx/tower/model/SyncReplicationPlan.java
+src/main/java/com/smartx/tower/model/SyncReplicationPlanConnection.java
+src/main/java/com/smartx/tower/model/SyncReplicationPlanOrderByInput.java
 src/main/java/com/smartx/tower/model/SyncReplicationPlanWhereInput.java
+src/main/java/com/smartx/tower/model/SyncReplicationStatus.java
 src/main/java/com/smartx/tower/model/SystemAuditLog.java
 src/main/java/com/smartx/tower/model/SystemAuditLogConnection.java
 src/main/java/com/smartx/tower/model/SystemAuditLogOrderByInput.java
@@ -2146,3 +2165,4 @@ src/main/java/com/smartx/tower/model/ZoneTopoConnection.java
 src/main/java/com/smartx/tower/model/ZoneTopoOrderByInput.java
 src/main/java/com/smartx/tower/model/ZoneTopoWhereInput.java
 src/main/java/com/smartx/tower/model/ZoneWhereInput.java
+src/test/java/com/smartx/tower/ActivePassiveApiClientTest.java

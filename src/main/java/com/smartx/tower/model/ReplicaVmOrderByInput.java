@@ -34,6 +34,22 @@ public enum ReplicaVmOrderByInput {
 
     INBOUND_DESC("inbound_DESC"),
 
+    LAST_OUT_OF_SYNC_AT_ASC("last_out_of_sync_at_ASC"),
+
+    LAST_OUT_OF_SYNC_AT_DESC("last_out_of_sync_at_DESC"),
+
+    LAST_OUT_OF_SYNC_REASON_ASC("last_out_of_sync_reason_ASC"),
+
+    LAST_OUT_OF_SYNC_REASON_DESC("last_out_of_sync_reason_DESC"),
+
+    LAST_SYNCED_AT_ASC("last_synced_at_ASC"),
+
+    LAST_SYNCED_AT_DESC("last_synced_at_DESC"),
+
+    METHOD_ASC("method_ASC"),
+
+    METHOD_DESC("method_DESC"),
+
     OBJECT_DESCRIPTOR_ASC("object_descriptor_ASC"),
 
     OBJECT_DESCRIPTOR_DESC("object_descriptor_DESC"),
@@ -66,9 +82,21 @@ public enum ReplicaVmOrderByInput {
 
     REPLICATION_GROUP_DESC("replication_group_DESC"),
 
+    RESOURCE_VERSION_ASC("resource_version_ASC"),
+
+    RESOURCE_VERSION_DESC("resource_version_DESC"),
+
     STATE_ASC("state_ASC"),
 
     STATE_DESC("state_DESC"),
+
+    SYNC_REPLICATION_OBJECT_STATUS_ASC("sync_replication_object_status_ASC"),
+
+    SYNC_REPLICATION_OBJECT_STATUS_DESC("sync_replication_object_status_DESC"),
+
+    SYNC_REPLICATION_STATUS_ASC("sync_replication_status_ASC"),
+
+    SYNC_REPLICATION_STATUS_DESC("sync_replication_status_DESC"),
 
     TARGETS_DELETABLE_ASC("targets_deletable_ASC"),
 
