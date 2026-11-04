@@ -20,6 +20,8 @@ public enum DiskHealthStatus {
 
     UNHEALTHY("UNHEALTHY"),
 
+    UNKNOWN("UNKNOWN"),
+
     DISKHEALTHSTATUS_UNSUPPORTED_ENUM("DISKHEALTHSTATUS_UNSUPPORTED_ENUM");
     private String value;
 

@@ -50,6 +50,16 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
     @SerializedName(SERIALIZED_NAME_INSTANCE)
     private String instance;
 
+    public static final String SERIALIZED_NAME_IDENTIFIER = "identifier";
+
+    @SerializedName(SERIALIZED_NAME_IDENTIFIER)
+    private String identifier;
+
+    public static final String SERIALIZED_NAME_ADAPTER_TYPE = "adapter_type";
+
+    @SerializedName(SERIALIZED_NAME_ADAPTER_TYPE)
+    private String adapterType;
+
     public static final String SERIALIZED_NAME_ZONE = "_zone";
 
     @SerializedName(SERIALIZED_NAME_ZONE)
@@ -59,6 +69,11 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
 
     @SerializedName(SERIALIZED_NAME_WITNESS)
     private String witness;
+
+    public static final String SERIALIZED_NAME_VOLUME_ID = "_volume_id";
+
+    @SerializedName(SERIALIZED_NAME_VOLUME_ID)
+    private String volumeId;
 
     public static final String SERIALIZED_NAME_VOLUME = "_volume";
 
@@ -95,6 +110,11 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
     @SerializedName(SERIALIZED_NAME_MAC)
     private String mac;
 
+    public static final String SERIALIZED_NAME_HOST_ID = "_host_id";
+
+    @SerializedName(SERIALIZED_NAME_HOST_ID)
+    private String hostId;
+
     public static final String SERIALIZED_NAME_HOST = "_host";
 
     @SerializedName(SERIALIZED_NAME_HOST)
@@ -110,6 +130,11 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
     @SerializedName(SERIALIZED_NAME_DEVICE)
     private String device;
 
+    public static final String SERIALIZED_NAME_DATASTORE_ID = "_datastore_id";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORE_ID)
+    private String datastoreId;
+
     public static final String SERIALIZED_NAME_CLUSTER = "_cluster";
 
     @SerializedName(SERIALIZED_NAME_CLUSTER)
@@ -124,6 +149,11 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
 
     @SerializedName(SERIALIZED_NAME_CHUNK)
     private String chunk;
+
+    public static final String SERIALIZED_NAME_ADAPTER = "_adapter";
+
+    @SerializedName(SERIALIZED_NAME_ADAPTER)
+    private String adapter;
 
     /** Gets or Sets typename */
     @JsonAdapter(TypenameEnum.Adapter.class)
@@ -477,6 +507,92 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
         return this._isPresent_.contains(SERIALIZED_NAME_INSTANCE);
     }
 
+    public MetricLabel identifier(String identifier) {
+
+        this.identifier = identifier;
+        return this;
+    }
+
+    /**
+     * Get identifier
+     *
+     * @return identifier
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
+
+    public MetricLabel identifier_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_IDENTIFIER);
+        return this;
+    }
+
+    public MetricLabel identifier_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_IDENTIFIER);
+        return this;
+    }
+
+    public void setIdentifier_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_IDENTIFIER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_IDENTIFIER);
+        }
+    }
+
+    public boolean getIdentifier_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_IDENTIFIER);
+    }
+
+    public MetricLabel adapterType(String adapterType) {
+
+        this.adapterType = adapterType;
+        return this;
+    }
+
+    /**
+     * Get adapterType
+     *
+     * @return adapterType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getAdapterType() {
+        return adapterType;
+    }
+
+    public void setAdapterType(String adapterType) {
+        this.adapterType = adapterType;
+    }
+
+    public MetricLabel adapterType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ADAPTER_TYPE);
+        return this;
+    }
+
+    public MetricLabel adapterType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ADAPTER_TYPE);
+        return this;
+    }
+
+    public void setAdapterType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ADAPTER_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ADAPTER_TYPE);
+        }
+    }
+
+    public boolean getAdapterType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ADAPTER_TYPE);
+    }
+
     public MetricLabel zone(String zone) {
 
         this.zone = zone;
@@ -561,6 +677,49 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
 
     public boolean getWitness_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_WITNESS);
+    }
+
+    public MetricLabel volumeId(String volumeId) {
+
+        this.volumeId = volumeId;
+        return this;
+    }
+
+    /**
+     * Get volumeId
+     *
+     * @return volumeId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getVolumeId() {
+        return volumeId;
+    }
+
+    public void setVolumeId(String volumeId) {
+        this.volumeId = volumeId;
+    }
+
+    public MetricLabel volumeId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VOLUME_ID);
+        return this;
+    }
+
+    public MetricLabel volumeId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VOLUME_ID);
+        return this;
+    }
+
+    public void setVolumeId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VOLUME_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VOLUME_ID);
+        }
+    }
+
+    public boolean getVolumeId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VOLUME_ID);
     }
 
     public MetricLabel volume(String volume) {
@@ -864,6 +1023,49 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
         return this._isPresent_.contains(SERIALIZED_NAME_MAC);
     }
 
+    public MetricLabel hostId(String hostId) {
+
+        this.hostId = hostId;
+        return this;
+    }
+
+    /**
+     * Get hostId
+     *
+     * @return hostId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getHostId() {
+        return hostId;
+    }
+
+    public void setHostId(String hostId) {
+        this.hostId = hostId;
+    }
+
+    public MetricLabel hostId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public MetricLabel hostId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        return this;
+    }
+
+    public void setHostId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_HOST_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_HOST_ID);
+        }
+    }
+
+    public boolean getHostId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_HOST_ID);
+    }
+
     public MetricLabel host(String host) {
 
         this.host = host;
@@ -991,6 +1193,49 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
 
     public boolean getDevice_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_DEVICE);
+    }
+
+    public MetricLabel datastoreId(String datastoreId) {
+
+        this.datastoreId = datastoreId;
+        return this;
+    }
+
+    /**
+     * Get datastoreId
+     *
+     * @return datastoreId
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getDatastoreId() {
+        return datastoreId;
+    }
+
+    public void setDatastoreId(String datastoreId) {
+        this.datastoreId = datastoreId;
+    }
+
+    public MetricLabel datastoreId_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORE_ID);
+        return this;
+    }
+
+    public MetricLabel datastoreId_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORE_ID);
+        return this;
+    }
+
+    public void setDatastoreId_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORE_ID);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORE_ID);
+        }
+    }
+
+    public boolean getDatastoreId_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORE_ID);
     }
 
     public MetricLabel cluster(String cluster) {
@@ -1122,6 +1367,49 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
         return this._isPresent_.contains(SERIALIZED_NAME_CHUNK);
     }
 
+    public MetricLabel adapter(String adapter) {
+
+        this.adapter = adapter;
+        return this;
+    }
+
+    /**
+     * Get adapter
+     *
+     * @return adapter
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getAdapter() {
+        return adapter;
+    }
+
+    public void setAdapter(String adapter) {
+        this.adapter = adapter;
+    }
+
+    public MetricLabel adapter_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ADAPTER);
+        return this;
+    }
+
+    public MetricLabel adapter_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ADAPTER);
+        return this;
+    }
+
+    public void setAdapter_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ADAPTER);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ADAPTER);
+        }
+    }
+
+    public boolean getAdapter_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ADAPTER);
+    }
+
     public MetricLabel typename(TypenameEnum typename) {
 
         this.typename = typename;
@@ -1181,8 +1469,11 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
                 && Objects.equals(this.metricName, metricLabel.metricName)
                 && Objects.equals(this.job, metricLabel.job)
                 && Objects.equals(this.instance, metricLabel.instance)
+                && Objects.equals(this.identifier, metricLabel.identifier)
+                && Objects.equals(this.adapterType, metricLabel.adapterType)
                 && Objects.equals(this.zone, metricLabel.zone)
                 && Objects.equals(this.witness, metricLabel.witness)
+                && Objects.equals(this.volumeId, metricLabel.volumeId)
                 && Objects.equals(this.volume, metricLabel.volume)
                 && Objects.equals(this.vm, metricLabel.vm)
                 && Objects.equals(this.toUuid, metricLabel.toUuid)
@@ -1190,12 +1481,15 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
                 && Objects.equals(this.scvm, metricLabel.scvm)
                 && Objects.equals(this.network, metricLabel.network)
                 && Objects.equals(this.mac, metricLabel.mac)
+                && Objects.equals(this.hostId, metricLabel.hostId)
                 && Objects.equals(this.host, metricLabel.host)
                 && Objects.equals(this.esxiUuid, metricLabel.esxiUuid)
                 && Objects.equals(this.device, metricLabel.device)
+                && Objects.equals(this.datastoreId, metricLabel.datastoreId)
                 && Objects.equals(this.cluster, metricLabel.cluster)
                 && Objects.equals(this.cid, metricLabel.cid)
                 && Objects.equals(this.chunk, metricLabel.chunk)
+                && Objects.equals(this.adapter, metricLabel.adapter)
                 && Objects.equals(this.typename, metricLabel.typename);
     }
 
@@ -1218,8 +1512,11 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
                 metricName,
                 job,
                 instance,
+                identifier,
+                adapterType,
                 zone,
                 witness,
+                volumeId,
                 volume,
                 vm,
                 toUuid,
@@ -1227,12 +1524,15 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
                 scvm,
                 network,
                 mac,
+                hostId,
                 host,
                 esxiUuid,
                 device,
+                datastoreId,
                 cluster,
                 cid,
                 chunk,
+                adapter,
                 typename);
     }
 
@@ -1254,8 +1554,11 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
         sb.append("    metricName: ").append(toIndentedString(metricName)).append("\n");
         sb.append("    job: ").append(toIndentedString(job)).append("\n");
         sb.append("    instance: ").append(toIndentedString(instance)).append("\n");
+        sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
+        sb.append("    adapterType: ").append(toIndentedString(adapterType)).append("\n");
         sb.append("    zone: ").append(toIndentedString(zone)).append("\n");
         sb.append("    witness: ").append(toIndentedString(witness)).append("\n");
+        sb.append("    volumeId: ").append(toIndentedString(volumeId)).append("\n");
         sb.append("    volume: ").append(toIndentedString(volume)).append("\n");
         sb.append("    vm: ").append(toIndentedString(vm)).append("\n");
         sb.append("    toUuid: ").append(toIndentedString(toUuid)).append("\n");
@@ -1263,12 +1566,15 @@ public class MetricLabel extends com.smartx.tower.ConditionalNullable.Conditiona
         sb.append("    scvm: ").append(toIndentedString(scvm)).append("\n");
         sb.append("    network: ").append(toIndentedString(network)).append("\n");
         sb.append("    mac: ").append(toIndentedString(mac)).append("\n");
+        sb.append("    hostId: ").append(toIndentedString(hostId)).append("\n");
         sb.append("    host: ").append(toIndentedString(host)).append("\n");
         sb.append("    esxiUuid: ").append(toIndentedString(esxiUuid)).append("\n");
         sb.append("    device: ").append(toIndentedString(device)).append("\n");
+        sb.append("    datastoreId: ").append(toIndentedString(datastoreId)).append("\n");
         sb.append("    cluster: ").append(toIndentedString(cluster)).append("\n");
         sb.append("    cid: ").append(toIndentedString(cid)).append("\n");
         sb.append("    chunk: ").append(toIndentedString(chunk)).append("\n");
+        sb.append("    adapter: ").append(toIndentedString(adapter)).append("\n");
         sb.append("    typename: ").append(toIndentedString(typename)).append("\n");
         sb.append("}");
         return sb.toString();

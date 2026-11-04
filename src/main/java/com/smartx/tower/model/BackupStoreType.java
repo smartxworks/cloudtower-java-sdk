@@ -14,6 +14,8 @@ public enum BackupStoreType {
 
     ISCSI("ISCSI"),
 
+    NETBACKUP("NETBACKUP"),
+
     NFS3("NFS3"),
 
     NFS4("NFS4"),
