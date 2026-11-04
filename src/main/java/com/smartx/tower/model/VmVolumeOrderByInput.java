@@ -74,6 +74,10 @@ public enum VmVolumeOrderByInput {
 
     PATH_DESC("path_DESC"),
 
+    PROVISION_POLICY_ASC("provision_policy_ASC"),
+
+    PROVISION_POLICY_DESC("provision_policy_DESC"),
+
     RESIDENT_IN_CACHE_ASC("resident_in_cache_ASC"),
 
     RESIDENT_IN_CACHE_DESC("resident_in_cache_DESC"),

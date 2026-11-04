@@ -255,7 +255,7 @@ public class V2EverouteLicenseApi {
         Object localVarPostBody = getV2EverouteLicensesConnectionRequestBody;
 
         // create path and map variables
-        String localVarPath = "/get-v-2-everoute-licenses-connection";
+        String localVarPath = "/get-v2-everoute-licenses-connection";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();

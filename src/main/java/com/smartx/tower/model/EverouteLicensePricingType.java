@@ -10,6 +10,8 @@ import java.io.IOException;
 /** Gets or Sets EverouteLicensePricingType */
 @JsonAdapter(EverouteLicensePricingType.Adapter.class)
 public enum EverouteLicensePricingType {
+    CORE_NUM("CORE_NUM"),
+
     CPU_SLOT_NUM("CPU_SLOT_NUM"),
 
     VCPU_NUM("VCPU_NUM"),

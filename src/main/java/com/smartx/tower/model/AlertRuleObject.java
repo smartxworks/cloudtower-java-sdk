@@ -14,6 +14,8 @@ public enum AlertRuleObject {
 
     CLUSTER("CLUSTER"),
 
+    DATASTORE("DATASTORE"),
+
     DISK("DISK"),
 
     DISK_POOL("DISK_POOL"),

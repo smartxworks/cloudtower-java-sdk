@@ -110,6 +110,11 @@ public class VmVolume extends com.smartx.tower.ConditionalNullable.ConditionalNu
     @SerializedName(SERIALIZED_NAME_PATH)
     private String path;
 
+    public static final String SERIALIZED_NAME_PROVISION_POLICY = "provision_policy";
+
+    @SerializedName(SERIALIZED_NAME_PROVISION_POLICY)
+    private String provisionPolicy;
+
     public static final String SERIALIZED_NAME_RESIDENT_IN_CACHE = "resident_in_cache";
 
     @SerializedName(SERIALIZED_NAME_RESIDENT_IN_CACHE)
@@ -124,6 +129,11 @@ public class VmVolume extends com.smartx.tower.ConditionalNullable.ConditionalNu
 
     @SerializedName(SERIALIZED_NAME_SIZE)
     private Long size;
+
+    public static final String SERIALIZED_NAME_STORAGE_CLUSTER_CONFIG = "storage_cluster_config";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIG)
+    private NestedStorageClusterConfig storageClusterConfig;
 
     public static final String SERIALIZED_NAME_TYPE = "type";
 
@@ -982,6 +992,49 @@ public class VmVolume extends com.smartx.tower.ConditionalNullable.ConditionalNu
         return this._isPresent_.contains(SERIALIZED_NAME_PATH);
     }
 
+    public VmVolume provisionPolicy(String provisionPolicy) {
+
+        this.provisionPolicy = provisionPolicy;
+        return this;
+    }
+
+    /**
+     * Get provisionPolicy
+     *
+     * @return provisionPolicy
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getProvisionPolicy() {
+        return provisionPolicy;
+    }
+
+    public void setProvisionPolicy(String provisionPolicy) {
+        this.provisionPolicy = provisionPolicy;
+    }
+
+    public VmVolume provisionPolicy_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public VmVolume provisionPolicy_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        return this;
+    }
+
+    public void setProvisionPolicy_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_PROVISION_POLICY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_PROVISION_POLICY);
+        }
+    }
+
+    public boolean getProvisionPolicy_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_PROVISION_POLICY);
+    }
+
     public VmVolume residentInCache(Boolean residentInCache) {
 
         this.residentInCache = residentInCache;
@@ -1109,6 +1162,49 @@ public class VmVolume extends com.smartx.tower.ConditionalNullable.ConditionalNu
 
     public boolean getSize_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_SIZE);
+    }
+
+    public VmVolume storageClusterConfig(NestedStorageClusterConfig storageClusterConfig) {
+
+        this.storageClusterConfig = storageClusterConfig;
+        return this;
+    }
+
+    /**
+     * Get storageClusterConfig
+     *
+     * @return storageClusterConfig
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public NestedStorageClusterConfig getStorageClusterConfig() {
+        return storageClusterConfig;
+    }
+
+    public void setStorageClusterConfig(NestedStorageClusterConfig storageClusterConfig) {
+        this.storageClusterConfig = storageClusterConfig;
+    }
+
+    public VmVolume storageClusterConfig_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIG);
+        return this;
+    }
+
+    public VmVolume storageClusterConfig_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIG);
+        return this;
+    }
+
+    public void setStorageClusterConfig_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIG);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIG);
+        }
+    }
+
+    public boolean getStorageClusterConfig_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIG);
     }
 
     public VmVolume type(VmVolumeType type) {
@@ -1408,9 +1504,11 @@ public class VmVolume extends com.smartx.tower.ConditionalNullable.ConditionalNu
                 && Objects.equals(this.mounting, vmVolume.mounting)
                 && Objects.equals(this.name, vmVolume.name)
                 && Objects.equals(this.path, vmVolume.path)
+                && Objects.equals(this.provisionPolicy, vmVolume.provisionPolicy)
                 && Objects.equals(this.residentInCache, vmVolume.residentInCache)
                 && Objects.equals(this.sharing, vmVolume.sharing)
                 && Objects.equals(this.size, vmVolume.size)
+                && Objects.equals(this.storageClusterConfig, vmVolume.storageClusterConfig)
                 && Objects.equals(this.type, vmVolume.type)
                 && Objects.equals(this.uniqueLogicalSize, vmVolume.uniqueLogicalSize)
                 && Objects.equals(this.uniqueSize, vmVolume.uniqueSize)
@@ -1450,9 +1548,11 @@ public class VmVolume extends com.smartx.tower.ConditionalNullable.ConditionalNu
                 mounting,
                 name,
                 path,
+                provisionPolicy,
                 residentInCache,
                 sharing,
                 size,
+                storageClusterConfig,
                 type,
                 uniqueLogicalSize,
                 uniqueSize,
@@ -1503,9 +1603,13 @@ public class VmVolume extends com.smartx.tower.ConditionalNullable.ConditionalNu
         sb.append("    mounting: ").append(toIndentedString(mounting)).append("\n");
         sb.append("    name: ").append(toIndentedString(name)).append("\n");
         sb.append("    path: ").append(toIndentedString(path)).append("\n");
+        sb.append("    provisionPolicy: ").append(toIndentedString(provisionPolicy)).append("\n");
         sb.append("    residentInCache: ").append(toIndentedString(residentInCache)).append("\n");
         sb.append("    sharing: ").append(toIndentedString(sharing)).append("\n");
         sb.append("    size: ").append(toIndentedString(size)).append("\n");
+        sb.append("    storageClusterConfig: ")
+                .append(toIndentedString(storageClusterConfig))
+                .append("\n");
         sb.append("    type: ").append(toIndentedString(type)).append("\n");
         sb.append("    uniqueLogicalSize: ")
                 .append(toIndentedString(uniqueLogicalSize))

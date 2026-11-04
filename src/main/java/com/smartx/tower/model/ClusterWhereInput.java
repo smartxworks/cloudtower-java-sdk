@@ -40,6 +40,53 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED_NOT)
     private Boolean accessWriteCompressEnabledNot;
 
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES = "allocated_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES)
+    private Long allocatedMemoryBytes;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT =
+            "allocated_memory_bytes_gt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT)
+    private Long allocatedMemoryBytesGt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE =
+            "allocated_memory_bytes_gte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE)
+    private Long allocatedMemoryBytesGte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN =
+            "allocated_memory_bytes_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN)
+    private List<Long> allocatedMemoryBytesIn = null;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT =
+            "allocated_memory_bytes_lt";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT)
+    private Long allocatedMemoryBytesLt;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE =
+            "allocated_memory_bytes_lte";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE)
+    private Long allocatedMemoryBytesLte;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT =
+            "allocated_memory_bytes_not";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT)
+    private Long allocatedMemoryBytesNot;
+
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN =
+            "allocated_memory_bytes_not_in";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN)
+    private List<Long> allocatedMemoryBytesNotIn = null;
+
     public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE =
             "allocated_prioritized_space";
 
@@ -264,6 +311,101 @@ public class ClusterWhereInput
 
     @SerializedName(SERIALIZED_NAME_AUTO_CONVERGE_NOT)
     private Boolean autoConvergeNot;
+
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE =
+            "cap_snapshot_unique_size";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE)
+    private Long capSnapshotUniqueSize;
+
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GT =
+            "cap_snapshot_unique_size_gt";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GT)
+    private Long capSnapshotUniqueSizeGt;
+
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GTE =
+            "cap_snapshot_unique_size_gte";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GTE)
+    private Long capSnapshotUniqueSizeGte;
+
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_IN =
+            "cap_snapshot_unique_size_in";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_IN)
+    private List<Long> capSnapshotUniqueSizeIn = null;
+
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LT =
+            "cap_snapshot_unique_size_lt";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LT)
+    private Long capSnapshotUniqueSizeLt;
+
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LTE =
+            "cap_snapshot_unique_size_lte";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LTE)
+    private Long capSnapshotUniqueSizeLte;
+
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT =
+            "cap_snapshot_unique_size_not";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT)
+    private Long capSnapshotUniqueSizeNot;
+
+    public static final String SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT_IN =
+            "cap_snapshot_unique_size_not_in";
+
+    @SerializedName(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT_IN)
+    private List<Long> capSnapshotUniqueSizeNotIn = null;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE = "cap_volume_unique_size";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE)
+    private Long capVolumeUniqueSize;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GT =
+            "cap_volume_unique_size_gt";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GT)
+    private Long capVolumeUniqueSizeGt;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GTE =
+            "cap_volume_unique_size_gte";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GTE)
+    private Long capVolumeUniqueSizeGte;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_IN =
+            "cap_volume_unique_size_in";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_IN)
+    private List<Long> capVolumeUniqueSizeIn = null;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LT =
+            "cap_volume_unique_size_lt";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LT)
+    private Long capVolumeUniqueSizeLt;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LTE =
+            "cap_volume_unique_size_lte";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LTE)
+    private Long capVolumeUniqueSizeLte;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT =
+            "cap_volume_unique_size_not";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT)
+    private Long capVolumeUniqueSizeNot;
+
+    public static final String SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT_IN =
+            "cap_volume_unique_size_not_in";
+
+    @SerializedName(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT_IN)
+    private List<Long> capVolumeUniqueSizeNotIn = null;
 
     public static final String SERIALIZED_NAME_COMMITED_MEMORY_BYTES = "commited_memory_bytes";
 
@@ -1764,6 +1906,53 @@ public class ClusterWhereInput
     @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_NOT_IN)
     private List<Long> maxPhysicalDataCapacityPerNodeNotIn = null;
 
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE = "memory_allocation_rate";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE)
+    private Double memoryAllocationRate;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT =
+            "memory_allocation_rate_gt";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT)
+    private Double memoryAllocationRateGt;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE =
+            "memory_allocation_rate_gte";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE)
+    private Double memoryAllocationRateGte;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN =
+            "memory_allocation_rate_in";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN)
+    private List<Double> memoryAllocationRateIn = null;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT =
+            "memory_allocation_rate_lt";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT)
+    private Double memoryAllocationRateLt;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE =
+            "memory_allocation_rate_lte";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE)
+    private Double memoryAllocationRateLte;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT =
+            "memory_allocation_rate_not";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT)
+    private Double memoryAllocationRateNot;
+
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN =
+            "memory_allocation_rate_not_in";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN)
+    private List<Double> memoryAllocationRateNotIn = null;
+
     public static final String SERIALIZED_NAME_MGT_GATEWAY = "mgt_gateway";
 
     @SerializedName(SERIALIZED_NAME_MGT_GATEWAY)
@@ -2164,6 +2353,53 @@ public class ClusterWhereInput
 
     @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN)
     private List<Double> overallEfficiencyNotIn = null;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO = "overcommit_memory_ratio";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO)
+    private Double overcommitMemoryRatio;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT =
+            "overcommit_memory_ratio_gt";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT)
+    private Double overcommitMemoryRatioGt;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE =
+            "overcommit_memory_ratio_gte";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE)
+    private Double overcommitMemoryRatioGte;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN =
+            "overcommit_memory_ratio_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN)
+    private List<Double> overcommitMemoryRatioIn = null;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT =
+            "overcommit_memory_ratio_lt";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT)
+    private Double overcommitMemoryRatioLt;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE =
+            "overcommit_memory_ratio_lte";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE)
+    private Double overcommitMemoryRatioLte;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT =
+            "overcommit_memory_ratio_not";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT)
+    private Double overcommitMemoryRatioNot;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN =
+            "overcommit_memory_ratio_not_in";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN)
+    private List<Double> overcommitMemoryRatioNotIn = null;
 
     public static final String SERIALIZED_NAME_OVERPROVISION_RATIO = "overprovision_ratio";
 
@@ -4222,6 +4458,366 @@ public class ClusterWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED_NOT);
     }
 
+    public ClusterWhereInput allocatedMemoryBytes(Long allocatedMemoryBytes) {
+
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytes
+     *
+     * @return allocatedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytes() {
+        return allocatedMemoryBytes;
+    }
+
+    public void setAllocatedMemoryBytes(Long allocatedMemoryBytes) {
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesGt(Long allocatedMemoryBytesGt) {
+
+        this.allocatedMemoryBytesGt = allocatedMemoryBytesGt;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesGt
+     *
+     * @return allocatedMemoryBytesGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesGt() {
+        return allocatedMemoryBytesGt;
+    }
+
+    public void setAllocatedMemoryBytesGt(Long allocatedMemoryBytesGt) {
+        this.allocatedMemoryBytesGt = allocatedMemoryBytesGt;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GT);
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesGte(Long allocatedMemoryBytesGte) {
+
+        this.allocatedMemoryBytesGte = allocatedMemoryBytesGte;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesGte
+     *
+     * @return allocatedMemoryBytesGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesGte() {
+        return allocatedMemoryBytesGte;
+    }
+
+    public void setAllocatedMemoryBytesGte(Long allocatedMemoryBytesGte) {
+        this.allocatedMemoryBytesGte = allocatedMemoryBytesGte;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_GTE);
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesIn(List<Long> allocatedMemoryBytesIn) {
+
+        this.allocatedMemoryBytesIn = allocatedMemoryBytesIn;
+        return this;
+    }
+
+    public ClusterWhereInput addAllocatedMemoryBytesInItem(Long allocatedMemoryBytesInItem) {
+        if (this.allocatedMemoryBytesIn == null) {
+            this.allocatedMemoryBytesIn = new ArrayList<Long>();
+        }
+        this.allocatedMemoryBytesIn.add(allocatedMemoryBytesInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesIn
+     *
+     * @return allocatedMemoryBytesIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getAllocatedMemoryBytesIn() {
+        return allocatedMemoryBytesIn;
+    }
+
+    public void setAllocatedMemoryBytesIn(List<Long> allocatedMemoryBytesIn) {
+        this.allocatedMemoryBytesIn = allocatedMemoryBytesIn;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_IN);
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesLt(Long allocatedMemoryBytesLt) {
+
+        this.allocatedMemoryBytesLt = allocatedMemoryBytesLt;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesLt
+     *
+     * @return allocatedMemoryBytesLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesLt() {
+        return allocatedMemoryBytesLt;
+    }
+
+    public void setAllocatedMemoryBytesLt(Long allocatedMemoryBytesLt) {
+        this.allocatedMemoryBytesLt = allocatedMemoryBytesLt;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LT);
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesLte(Long allocatedMemoryBytesLte) {
+
+        this.allocatedMemoryBytesLte = allocatedMemoryBytesLte;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesLte
+     *
+     * @return allocatedMemoryBytesLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesLte() {
+        return allocatedMemoryBytesLte;
+    }
+
+    public void setAllocatedMemoryBytesLte(Long allocatedMemoryBytesLte) {
+        this.allocatedMemoryBytesLte = allocatedMemoryBytesLte;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_LTE);
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesNot(Long allocatedMemoryBytesNot) {
+
+        this.allocatedMemoryBytesNot = allocatedMemoryBytesNot;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesNot
+     *
+     * @return allocatedMemoryBytesNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytesNot() {
+        return allocatedMemoryBytesNot;
+    }
+
+    public void setAllocatedMemoryBytesNot(Long allocatedMemoryBytesNot) {
+        this.allocatedMemoryBytesNot = allocatedMemoryBytesNot;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT);
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesNotIn(List<Long> allocatedMemoryBytesNotIn) {
+
+        this.allocatedMemoryBytesNotIn = allocatedMemoryBytesNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addAllocatedMemoryBytesNotInItem(Long allocatedMemoryBytesNotInItem) {
+        if (this.allocatedMemoryBytesNotIn == null) {
+            this.allocatedMemoryBytesNotIn = new ArrayList<Long>();
+        }
+        this.allocatedMemoryBytesNotIn.add(allocatedMemoryBytesNotInItem);
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytesNotIn
+     *
+     * @return allocatedMemoryBytesNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getAllocatedMemoryBytesNotIn() {
+        return allocatedMemoryBytesNotIn;
+    }
+
+    public void setAllocatedMemoryBytesNotIn(List<Long> allocatedMemoryBytesNotIn) {
+        this.allocatedMemoryBytesNotIn = allocatedMemoryBytesNotIn;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput allocatedMemoryBytesNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytesNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytesNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES_NOT_IN);
+    }
+
     public ClusterWhereInput allocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
 
         this.allocatedPrioritizedSpace = allocatedPrioritizedSpace;
@@ -5987,6 +6583,727 @@ public class ClusterWhereInput
 
     public boolean getAutoConvergeNot_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_AUTO_CONVERGE_NOT);
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSize(Long capSnapshotUniqueSize) {
+
+        this.capSnapshotUniqueSize = capSnapshotUniqueSize;
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSize
+     *
+     * @return capSnapshotUniqueSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapSnapshotUniqueSize() {
+        return capSnapshotUniqueSize;
+    }
+
+    public void setCapSnapshotUniqueSize(Long capSnapshotUniqueSize) {
+        this.capSnapshotUniqueSize = capSnapshotUniqueSize;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        return this;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE);
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeGt(Long capSnapshotUniqueSizeGt) {
+
+        this.capSnapshotUniqueSizeGt = capSnapshotUniqueSizeGt;
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSizeGt
+     *
+     * @return capSnapshotUniqueSizeGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapSnapshotUniqueSizeGt() {
+        return capSnapshotUniqueSizeGt;
+    }
+
+    public void setCapSnapshotUniqueSizeGt(Long capSnapshotUniqueSizeGt) {
+        this.capSnapshotUniqueSizeGt = capSnapshotUniqueSizeGt;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GT);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSizeGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GT);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSizeGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GT);
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeGte(Long capSnapshotUniqueSizeGte) {
+
+        this.capSnapshotUniqueSizeGte = capSnapshotUniqueSizeGte;
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSizeGte
+     *
+     * @return capSnapshotUniqueSizeGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapSnapshotUniqueSizeGte() {
+        return capSnapshotUniqueSizeGte;
+    }
+
+    public void setCapSnapshotUniqueSizeGte(Long capSnapshotUniqueSizeGte) {
+        this.capSnapshotUniqueSizeGte = capSnapshotUniqueSizeGte;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GTE);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSizeGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GTE);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSizeGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_GTE);
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeIn(List<Long> capSnapshotUniqueSizeIn) {
+
+        this.capSnapshotUniqueSizeIn = capSnapshotUniqueSizeIn;
+        return this;
+    }
+
+    public ClusterWhereInput addCapSnapshotUniqueSizeInItem(Long capSnapshotUniqueSizeInItem) {
+        if (this.capSnapshotUniqueSizeIn == null) {
+            this.capSnapshotUniqueSizeIn = new ArrayList<Long>();
+        }
+        this.capSnapshotUniqueSizeIn.add(capSnapshotUniqueSizeInItem);
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSizeIn
+     *
+     * @return capSnapshotUniqueSizeIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getCapSnapshotUniqueSizeIn() {
+        return capSnapshotUniqueSizeIn;
+    }
+
+    public void setCapSnapshotUniqueSizeIn(List<Long> capSnapshotUniqueSizeIn) {
+        this.capSnapshotUniqueSizeIn = capSnapshotUniqueSizeIn;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_IN);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSizeIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_IN);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSizeIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_IN);
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeLt(Long capSnapshotUniqueSizeLt) {
+
+        this.capSnapshotUniqueSizeLt = capSnapshotUniqueSizeLt;
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSizeLt
+     *
+     * @return capSnapshotUniqueSizeLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapSnapshotUniqueSizeLt() {
+        return capSnapshotUniqueSizeLt;
+    }
+
+    public void setCapSnapshotUniqueSizeLt(Long capSnapshotUniqueSizeLt) {
+        this.capSnapshotUniqueSizeLt = capSnapshotUniqueSizeLt;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LT);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSizeLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LT);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSizeLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LT);
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeLte(Long capSnapshotUniqueSizeLte) {
+
+        this.capSnapshotUniqueSizeLte = capSnapshotUniqueSizeLte;
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSizeLte
+     *
+     * @return capSnapshotUniqueSizeLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapSnapshotUniqueSizeLte() {
+        return capSnapshotUniqueSizeLte;
+    }
+
+    public void setCapSnapshotUniqueSizeLte(Long capSnapshotUniqueSizeLte) {
+        this.capSnapshotUniqueSizeLte = capSnapshotUniqueSizeLte;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LTE);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSizeLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LTE);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSizeLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_LTE);
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeNot(Long capSnapshotUniqueSizeNot) {
+
+        this.capSnapshotUniqueSizeNot = capSnapshotUniqueSizeNot;
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSizeNot
+     *
+     * @return capSnapshotUniqueSizeNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapSnapshotUniqueSizeNot() {
+        return capSnapshotUniqueSizeNot;
+    }
+
+    public void setCapSnapshotUniqueSizeNot(Long capSnapshotUniqueSizeNot) {
+        this.capSnapshotUniqueSizeNot = capSnapshotUniqueSizeNot;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSizeNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSizeNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT);
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeNotIn(List<Long> capSnapshotUniqueSizeNotIn) {
+
+        this.capSnapshotUniqueSizeNotIn = capSnapshotUniqueSizeNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addCapSnapshotUniqueSizeNotInItem(
+            Long capSnapshotUniqueSizeNotInItem) {
+        if (this.capSnapshotUniqueSizeNotIn == null) {
+            this.capSnapshotUniqueSizeNotIn = new ArrayList<Long>();
+        }
+        this.capSnapshotUniqueSizeNotIn.add(capSnapshotUniqueSizeNotInItem);
+        return this;
+    }
+
+    /**
+     * Get capSnapshotUniqueSizeNotIn
+     *
+     * @return capSnapshotUniqueSizeNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getCapSnapshotUniqueSizeNotIn() {
+        return capSnapshotUniqueSizeNotIn;
+    }
+
+    public void setCapSnapshotUniqueSizeNotIn(List<Long> capSnapshotUniqueSizeNotIn) {
+        this.capSnapshotUniqueSizeNotIn = capSnapshotUniqueSizeNotIn;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput capSnapshotUniqueSizeNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT_IN);
+        return this;
+    }
+
+    public void setCapSnapshotUniqueSizeNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT_IN);
+        }
+    }
+
+    public boolean getCapSnapshotUniqueSizeNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_SNAPSHOT_UNIQUE_SIZE_NOT_IN);
+    }
+
+    public ClusterWhereInput capVolumeUniqueSize(Long capVolumeUniqueSize) {
+
+        this.capVolumeUniqueSize = capVolumeUniqueSize;
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSize
+     *
+     * @return capVolumeUniqueSize
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapVolumeUniqueSize() {
+        return capVolumeUniqueSize;
+    }
+
+    public void setCapVolumeUniqueSize(Long capVolumeUniqueSize) {
+        this.capVolumeUniqueSize = capVolumeUniqueSize;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSize_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        return this;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSize_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSize_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSize_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE);
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeGt(Long capVolumeUniqueSizeGt) {
+
+        this.capVolumeUniqueSizeGt = capVolumeUniqueSizeGt;
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSizeGt
+     *
+     * @return capVolumeUniqueSizeGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapVolumeUniqueSizeGt() {
+        return capVolumeUniqueSizeGt;
+    }
+
+    public void setCapVolumeUniqueSizeGt(Long capVolumeUniqueSizeGt) {
+        this.capVolumeUniqueSizeGt = capVolumeUniqueSizeGt;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GT);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSizeGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GT);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSizeGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GT);
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeGte(Long capVolumeUniqueSizeGte) {
+
+        this.capVolumeUniqueSizeGte = capVolumeUniqueSizeGte;
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSizeGte
+     *
+     * @return capVolumeUniqueSizeGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapVolumeUniqueSizeGte() {
+        return capVolumeUniqueSizeGte;
+    }
+
+    public void setCapVolumeUniqueSizeGte(Long capVolumeUniqueSizeGte) {
+        this.capVolumeUniqueSizeGte = capVolumeUniqueSizeGte;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GTE);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSizeGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GTE);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSizeGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_GTE);
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeIn(List<Long> capVolumeUniqueSizeIn) {
+
+        this.capVolumeUniqueSizeIn = capVolumeUniqueSizeIn;
+        return this;
+    }
+
+    public ClusterWhereInput addCapVolumeUniqueSizeInItem(Long capVolumeUniqueSizeInItem) {
+        if (this.capVolumeUniqueSizeIn == null) {
+            this.capVolumeUniqueSizeIn = new ArrayList<Long>();
+        }
+        this.capVolumeUniqueSizeIn.add(capVolumeUniqueSizeInItem);
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSizeIn
+     *
+     * @return capVolumeUniqueSizeIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getCapVolumeUniqueSizeIn() {
+        return capVolumeUniqueSizeIn;
+    }
+
+    public void setCapVolumeUniqueSizeIn(List<Long> capVolumeUniqueSizeIn) {
+        this.capVolumeUniqueSizeIn = capVolumeUniqueSizeIn;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_IN);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSizeIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_IN);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSizeIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_IN);
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeLt(Long capVolumeUniqueSizeLt) {
+
+        this.capVolumeUniqueSizeLt = capVolumeUniqueSizeLt;
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSizeLt
+     *
+     * @return capVolumeUniqueSizeLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapVolumeUniqueSizeLt() {
+        return capVolumeUniqueSizeLt;
+    }
+
+    public void setCapVolumeUniqueSizeLt(Long capVolumeUniqueSizeLt) {
+        this.capVolumeUniqueSizeLt = capVolumeUniqueSizeLt;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LT);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSizeLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LT);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSizeLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LT);
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeLte(Long capVolumeUniqueSizeLte) {
+
+        this.capVolumeUniqueSizeLte = capVolumeUniqueSizeLte;
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSizeLte
+     *
+     * @return capVolumeUniqueSizeLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapVolumeUniqueSizeLte() {
+        return capVolumeUniqueSizeLte;
+    }
+
+    public void setCapVolumeUniqueSizeLte(Long capVolumeUniqueSizeLte) {
+        this.capVolumeUniqueSizeLte = capVolumeUniqueSizeLte;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LTE);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSizeLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LTE);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSizeLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_LTE);
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeNot(Long capVolumeUniqueSizeNot) {
+
+        this.capVolumeUniqueSizeNot = capVolumeUniqueSizeNot;
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSizeNot
+     *
+     * @return capVolumeUniqueSizeNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getCapVolumeUniqueSizeNot() {
+        return capVolumeUniqueSizeNot;
+    }
+
+    public void setCapVolumeUniqueSizeNot(Long capVolumeUniqueSizeNot) {
+        this.capVolumeUniqueSizeNot = capVolumeUniqueSizeNot;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSizeNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSizeNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT);
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeNotIn(List<Long> capVolumeUniqueSizeNotIn) {
+
+        this.capVolumeUniqueSizeNotIn = capVolumeUniqueSizeNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addCapVolumeUniqueSizeNotInItem(Long capVolumeUniqueSizeNotInItem) {
+        if (this.capVolumeUniqueSizeNotIn == null) {
+            this.capVolumeUniqueSizeNotIn = new ArrayList<Long>();
+        }
+        this.capVolumeUniqueSizeNotIn.add(capVolumeUniqueSizeNotInItem);
+        return this;
+    }
+
+    /**
+     * Get capVolumeUniqueSizeNotIn
+     *
+     * @return capVolumeUniqueSizeNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Long> getCapVolumeUniqueSizeNotIn() {
+        return capVolumeUniqueSizeNotIn;
+    }
+
+    public void setCapVolumeUniqueSizeNotIn(List<Long> capVolumeUniqueSizeNotIn) {
+        this.capVolumeUniqueSizeNotIn = capVolumeUniqueSizeNotIn;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput capVolumeUniqueSizeNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT_IN);
+        return this;
+    }
+
+    public void setCapVolumeUniqueSizeNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT_IN);
+        }
+    }
+
+    public boolean getCapVolumeUniqueSizeNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_CAP_VOLUME_UNIQUE_SIZE_NOT_IN);
     }
 
     public ClusterWhereInput commitedMemoryBytes(Long commitedMemoryBytes) {
@@ -18622,6 +19939,367 @@ public class ClusterWhereInput
                 SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE_NOT_IN);
     }
 
+    public ClusterWhereInput memoryAllocationRate(Double memoryAllocationRate) {
+
+        this.memoryAllocationRate = memoryAllocationRate;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRate
+     *
+     * @return memoryAllocationRate
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRate() {
+        return memoryAllocationRate;
+    }
+
+    public void setMemoryAllocationRate(Double memoryAllocationRate) {
+        this.memoryAllocationRate = memoryAllocationRate;
+    }
+
+    public ClusterWhereInput memoryAllocationRate_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public ClusterWhereInput memoryAllocationRate_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public void setMemoryAllocationRate_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        }
+    }
+
+    public boolean getMemoryAllocationRate_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+    }
+
+    public ClusterWhereInput memoryAllocationRateGt(Double memoryAllocationRateGt) {
+
+        this.memoryAllocationRateGt = memoryAllocationRateGt;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateGt
+     *
+     * @return memoryAllocationRateGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateGt() {
+        return memoryAllocationRateGt;
+    }
+
+    public void setMemoryAllocationRateGt(Double memoryAllocationRateGt) {
+        this.memoryAllocationRateGt = memoryAllocationRateGt;
+    }
+
+    public ClusterWhereInput memoryAllocationRateGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+        return this;
+    }
+
+    public ClusterWhereInput memoryAllocationRateGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+        return this;
+    }
+
+    public void setMemoryAllocationRateGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+        }
+    }
+
+    public boolean getMemoryAllocationRateGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GT);
+    }
+
+    public ClusterWhereInput memoryAllocationRateGte(Double memoryAllocationRateGte) {
+
+        this.memoryAllocationRateGte = memoryAllocationRateGte;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateGte
+     *
+     * @return memoryAllocationRateGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateGte() {
+        return memoryAllocationRateGte;
+    }
+
+    public void setMemoryAllocationRateGte(Double memoryAllocationRateGte) {
+        this.memoryAllocationRateGte = memoryAllocationRateGte;
+    }
+
+    public ClusterWhereInput memoryAllocationRateGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput memoryAllocationRateGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+        return this;
+    }
+
+    public void setMemoryAllocationRateGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+        }
+    }
+
+    public boolean getMemoryAllocationRateGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_GTE);
+    }
+
+    public ClusterWhereInput memoryAllocationRateIn(List<Double> memoryAllocationRateIn) {
+
+        this.memoryAllocationRateIn = memoryAllocationRateIn;
+        return this;
+    }
+
+    public ClusterWhereInput addMemoryAllocationRateInItem(Double memoryAllocationRateInItem) {
+        if (this.memoryAllocationRateIn == null) {
+            this.memoryAllocationRateIn = new ArrayList<Double>();
+        }
+        this.memoryAllocationRateIn.add(memoryAllocationRateInItem);
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateIn
+     *
+     * @return memoryAllocationRateIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getMemoryAllocationRateIn() {
+        return memoryAllocationRateIn;
+    }
+
+    public void setMemoryAllocationRateIn(List<Double> memoryAllocationRateIn) {
+        this.memoryAllocationRateIn = memoryAllocationRateIn;
+    }
+
+    public ClusterWhereInput memoryAllocationRateIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+        return this;
+    }
+
+    public ClusterWhereInput memoryAllocationRateIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+        return this;
+    }
+
+    public void setMemoryAllocationRateIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+        }
+    }
+
+    public boolean getMemoryAllocationRateIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_IN);
+    }
+
+    public ClusterWhereInput memoryAllocationRateLt(Double memoryAllocationRateLt) {
+
+        this.memoryAllocationRateLt = memoryAllocationRateLt;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateLt
+     *
+     * @return memoryAllocationRateLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateLt() {
+        return memoryAllocationRateLt;
+    }
+
+    public void setMemoryAllocationRateLt(Double memoryAllocationRateLt) {
+        this.memoryAllocationRateLt = memoryAllocationRateLt;
+    }
+
+    public ClusterWhereInput memoryAllocationRateLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+        return this;
+    }
+
+    public ClusterWhereInput memoryAllocationRateLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+        return this;
+    }
+
+    public void setMemoryAllocationRateLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+        }
+    }
+
+    public boolean getMemoryAllocationRateLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LT);
+    }
+
+    public ClusterWhereInput memoryAllocationRateLte(Double memoryAllocationRateLte) {
+
+        this.memoryAllocationRateLte = memoryAllocationRateLte;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateLte
+     *
+     * @return memoryAllocationRateLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateLte() {
+        return memoryAllocationRateLte;
+    }
+
+    public void setMemoryAllocationRateLte(Double memoryAllocationRateLte) {
+        this.memoryAllocationRateLte = memoryAllocationRateLte;
+    }
+
+    public ClusterWhereInput memoryAllocationRateLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput memoryAllocationRateLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+        return this;
+    }
+
+    public void setMemoryAllocationRateLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+        }
+    }
+
+    public boolean getMemoryAllocationRateLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_LTE);
+    }
+
+    public ClusterWhereInput memoryAllocationRateNot(Double memoryAllocationRateNot) {
+
+        this.memoryAllocationRateNot = memoryAllocationRateNot;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateNot
+     *
+     * @return memoryAllocationRateNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRateNot() {
+        return memoryAllocationRateNot;
+    }
+
+    public void setMemoryAllocationRateNot(Double memoryAllocationRateNot) {
+        this.memoryAllocationRateNot = memoryAllocationRateNot;
+    }
+
+    public ClusterWhereInput memoryAllocationRateNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput memoryAllocationRateNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+        return this;
+    }
+
+    public void setMemoryAllocationRateNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+        }
+    }
+
+    public boolean getMemoryAllocationRateNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT);
+    }
+
+    public ClusterWhereInput memoryAllocationRateNotIn(List<Double> memoryAllocationRateNotIn) {
+
+        this.memoryAllocationRateNotIn = memoryAllocationRateNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addMemoryAllocationRateNotInItem(
+            Double memoryAllocationRateNotInItem) {
+        if (this.memoryAllocationRateNotIn == null) {
+            this.memoryAllocationRateNotIn = new ArrayList<Double>();
+        }
+        this.memoryAllocationRateNotIn.add(memoryAllocationRateNotInItem);
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRateNotIn
+     *
+     * @return memoryAllocationRateNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getMemoryAllocationRateNotIn() {
+        return memoryAllocationRateNotIn;
+    }
+
+    public void setMemoryAllocationRateNotIn(List<Double> memoryAllocationRateNotIn) {
+        this.memoryAllocationRateNotIn = memoryAllocationRateNotIn;
+    }
+
+    public ClusterWhereInput memoryAllocationRateNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput memoryAllocationRateNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+        return this;
+    }
+
+    public void setMemoryAllocationRateNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+        }
+    }
+
+    public boolean getMemoryAllocationRateNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE_NOT_IN);
+    }
+
     public ClusterWhereInput mgtGateway(String mgtGateway) {
 
         this.mgtGateway = mgtGateway;
@@ -22086,6 +23764,367 @@ public class ClusterWhereInput
 
     public boolean getOverallEfficiencyNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY_NOT_IN);
+    }
+
+    public ClusterWhereInput overcommitMemoryRatio(Double overcommitMemoryRatio) {
+
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatio
+     *
+     * @return overcommitMemoryRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatio() {
+        return overcommitMemoryRatio;
+    }
+
+    public void setOvercommitMemoryRatio(Double overcommitMemoryRatio) {
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioGt(Double overcommitMemoryRatioGt) {
+
+        this.overcommitMemoryRatioGt = overcommitMemoryRatioGt;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioGt
+     *
+     * @return overcommitMemoryRatioGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioGt() {
+        return overcommitMemoryRatioGt;
+    }
+
+    public void setOvercommitMemoryRatioGt(Double overcommitMemoryRatioGt) {
+        this.overcommitMemoryRatioGt = overcommitMemoryRatioGt;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+        return this;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GT);
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioGte(Double overcommitMemoryRatioGte) {
+
+        this.overcommitMemoryRatioGte = overcommitMemoryRatioGte;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioGte
+     *
+     * @return overcommitMemoryRatioGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioGte() {
+        return overcommitMemoryRatioGte;
+    }
+
+    public void setOvercommitMemoryRatioGte(Double overcommitMemoryRatioGte) {
+        this.overcommitMemoryRatioGte = overcommitMemoryRatioGte;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+        return this;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_GTE);
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioIn(List<Double> overcommitMemoryRatioIn) {
+
+        this.overcommitMemoryRatioIn = overcommitMemoryRatioIn;
+        return this;
+    }
+
+    public ClusterWhereInput addOvercommitMemoryRatioInItem(Double overcommitMemoryRatioInItem) {
+        if (this.overcommitMemoryRatioIn == null) {
+            this.overcommitMemoryRatioIn = new ArrayList<Double>();
+        }
+        this.overcommitMemoryRatioIn.add(overcommitMemoryRatioInItem);
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioIn
+     *
+     * @return overcommitMemoryRatioIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getOvercommitMemoryRatioIn() {
+        return overcommitMemoryRatioIn;
+    }
+
+    public void setOvercommitMemoryRatioIn(List<Double> overcommitMemoryRatioIn) {
+        this.overcommitMemoryRatioIn = overcommitMemoryRatioIn;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+        return this;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_IN);
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioLt(Double overcommitMemoryRatioLt) {
+
+        this.overcommitMemoryRatioLt = overcommitMemoryRatioLt;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioLt
+     *
+     * @return overcommitMemoryRatioLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioLt() {
+        return overcommitMemoryRatioLt;
+    }
+
+    public void setOvercommitMemoryRatioLt(Double overcommitMemoryRatioLt) {
+        this.overcommitMemoryRatioLt = overcommitMemoryRatioLt;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+        return this;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LT);
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioLte(Double overcommitMemoryRatioLte) {
+
+        this.overcommitMemoryRatioLte = overcommitMemoryRatioLte;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioLte
+     *
+     * @return overcommitMemoryRatioLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioLte() {
+        return overcommitMemoryRatioLte;
+    }
+
+    public void setOvercommitMemoryRatioLte(Double overcommitMemoryRatioLte) {
+        this.overcommitMemoryRatioLte = overcommitMemoryRatioLte;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+        return this;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_LTE);
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioNot(Double overcommitMemoryRatioNot) {
+
+        this.overcommitMemoryRatioNot = overcommitMemoryRatioNot;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioNot
+     *
+     * @return overcommitMemoryRatioNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatioNot() {
+        return overcommitMemoryRatioNot;
+    }
+
+    public void setOvercommitMemoryRatioNot(Double overcommitMemoryRatioNot) {
+        this.overcommitMemoryRatioNot = overcommitMemoryRatioNot;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+        return this;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT);
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioNotIn(List<Double> overcommitMemoryRatioNotIn) {
+
+        this.overcommitMemoryRatioNotIn = overcommitMemoryRatioNotIn;
+        return this;
+    }
+
+    public ClusterWhereInput addOvercommitMemoryRatioNotInItem(
+            Double overcommitMemoryRatioNotInItem) {
+        if (this.overcommitMemoryRatioNotIn == null) {
+            this.overcommitMemoryRatioNotIn = new ArrayList<Double>();
+        }
+        this.overcommitMemoryRatioNotIn.add(overcommitMemoryRatioNotInItem);
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatioNotIn
+     *
+     * @return overcommitMemoryRatioNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<Double> getOvercommitMemoryRatioNotIn() {
+        return overcommitMemoryRatioNotIn;
+    }
+
+    public void setOvercommitMemoryRatioNotIn(List<Double> overcommitMemoryRatioNotIn) {
+        this.overcommitMemoryRatioNotIn = overcommitMemoryRatioNotIn;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
+        return this;
+    }
+
+    public ClusterWhereInput overcommitMemoryRatioNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatioNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatioNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO_NOT_IN);
     }
 
     public ClusterWhereInput overprovisionRatio(Double overprovisionRatio) {
@@ -37289,6 +39328,21 @@ public class ClusterWhereInput
                 && Objects.equals(
                         this.accessWriteCompressEnabledNot,
                         clusterWhereInput.accessWriteCompressEnabledNot)
+                && Objects.equals(this.allocatedMemoryBytes, clusterWhereInput.allocatedMemoryBytes)
+                && Objects.equals(
+                        this.allocatedMemoryBytesGt, clusterWhereInput.allocatedMemoryBytesGt)
+                && Objects.equals(
+                        this.allocatedMemoryBytesGte, clusterWhereInput.allocatedMemoryBytesGte)
+                && Objects.equals(
+                        this.allocatedMemoryBytesIn, clusterWhereInput.allocatedMemoryBytesIn)
+                && Objects.equals(
+                        this.allocatedMemoryBytesLt, clusterWhereInput.allocatedMemoryBytesLt)
+                && Objects.equals(
+                        this.allocatedMemoryBytesLte, clusterWhereInput.allocatedMemoryBytesLte)
+                && Objects.equals(
+                        this.allocatedMemoryBytesNot, clusterWhereInput.allocatedMemoryBytesNot)
+                && Objects.equals(
+                        this.allocatedMemoryBytesNotIn, clusterWhereInput.allocatedMemoryBytesNotIn)
                 && Objects.equals(
                         this.allocatedPrioritizedSpace, clusterWhereInput.allocatedPrioritizedSpace)
                 && Objects.equals(
@@ -37386,6 +39440,38 @@ public class ClusterWhereInput
                 && Objects.equals(this.architectureNotIn, clusterWhereInput.architectureNotIn)
                 && Objects.equals(this.autoConverge, clusterWhereInput.autoConverge)
                 && Objects.equals(this.autoConvergeNot, clusterWhereInput.autoConvergeNot)
+                && Objects.equals(
+                        this.capSnapshotUniqueSize, clusterWhereInput.capSnapshotUniqueSize)
+                && Objects.equals(
+                        this.capSnapshotUniqueSizeGt, clusterWhereInput.capSnapshotUniqueSizeGt)
+                && Objects.equals(
+                        this.capSnapshotUniqueSizeGte, clusterWhereInput.capSnapshotUniqueSizeGte)
+                && Objects.equals(
+                        this.capSnapshotUniqueSizeIn, clusterWhereInput.capSnapshotUniqueSizeIn)
+                && Objects.equals(
+                        this.capSnapshotUniqueSizeLt, clusterWhereInput.capSnapshotUniqueSizeLt)
+                && Objects.equals(
+                        this.capSnapshotUniqueSizeLte, clusterWhereInput.capSnapshotUniqueSizeLte)
+                && Objects.equals(
+                        this.capSnapshotUniqueSizeNot, clusterWhereInput.capSnapshotUniqueSizeNot)
+                && Objects.equals(
+                        this.capSnapshotUniqueSizeNotIn,
+                        clusterWhereInput.capSnapshotUniqueSizeNotIn)
+                && Objects.equals(this.capVolumeUniqueSize, clusterWhereInput.capVolumeUniqueSize)
+                && Objects.equals(
+                        this.capVolumeUniqueSizeGt, clusterWhereInput.capVolumeUniqueSizeGt)
+                && Objects.equals(
+                        this.capVolumeUniqueSizeGte, clusterWhereInput.capVolumeUniqueSizeGte)
+                && Objects.equals(
+                        this.capVolumeUniqueSizeIn, clusterWhereInput.capVolumeUniqueSizeIn)
+                && Objects.equals(
+                        this.capVolumeUniqueSizeLt, clusterWhereInput.capVolumeUniqueSizeLt)
+                && Objects.equals(
+                        this.capVolumeUniqueSizeLte, clusterWhereInput.capVolumeUniqueSizeLte)
+                && Objects.equals(
+                        this.capVolumeUniqueSizeNot, clusterWhereInput.capVolumeUniqueSizeNot)
+                && Objects.equals(
+                        this.capVolumeUniqueSizeNotIn, clusterWhereInput.capVolumeUniqueSizeNotIn)
                 && Objects.equals(this.commitedMemoryBytes, clusterWhereInput.commitedMemoryBytes)
                 && Objects.equals(
                         this.commitedMemoryBytesGt, clusterWhereInput.commitedMemoryBytesGt)
@@ -37782,6 +39868,21 @@ public class ClusterWhereInput
                 && Objects.equals(
                         this.maxPhysicalDataCapacityPerNodeNotIn,
                         clusterWhereInput.maxPhysicalDataCapacityPerNodeNotIn)
+                && Objects.equals(this.memoryAllocationRate, clusterWhereInput.memoryAllocationRate)
+                && Objects.equals(
+                        this.memoryAllocationRateGt, clusterWhereInput.memoryAllocationRateGt)
+                && Objects.equals(
+                        this.memoryAllocationRateGte, clusterWhereInput.memoryAllocationRateGte)
+                && Objects.equals(
+                        this.memoryAllocationRateIn, clusterWhereInput.memoryAllocationRateIn)
+                && Objects.equals(
+                        this.memoryAllocationRateLt, clusterWhereInput.memoryAllocationRateLt)
+                && Objects.equals(
+                        this.memoryAllocationRateLte, clusterWhereInput.memoryAllocationRateLte)
+                && Objects.equals(
+                        this.memoryAllocationRateNot, clusterWhereInput.memoryAllocationRateNot)
+                && Objects.equals(
+                        this.memoryAllocationRateNotIn, clusterWhereInput.memoryAllocationRateNotIn)
                 && Objects.equals(this.mgtGateway, clusterWhereInput.mgtGateway)
                 && Objects.equals(this.mgtGatewayContains, clusterWhereInput.mgtGatewayContains)
                 && Objects.equals(this.mgtGatewayEndsWith, clusterWhereInput.mgtGatewayEndsWith)
@@ -37871,6 +39972,23 @@ public class ClusterWhereInput
                 && Objects.equals(this.overallEfficiencyNot, clusterWhereInput.overallEfficiencyNot)
                 && Objects.equals(
                         this.overallEfficiencyNotIn, clusterWhereInput.overallEfficiencyNotIn)
+                && Objects.equals(
+                        this.overcommitMemoryRatio, clusterWhereInput.overcommitMemoryRatio)
+                && Objects.equals(
+                        this.overcommitMemoryRatioGt, clusterWhereInput.overcommitMemoryRatioGt)
+                && Objects.equals(
+                        this.overcommitMemoryRatioGte, clusterWhereInput.overcommitMemoryRatioGte)
+                && Objects.equals(
+                        this.overcommitMemoryRatioIn, clusterWhereInput.overcommitMemoryRatioIn)
+                && Objects.equals(
+                        this.overcommitMemoryRatioLt, clusterWhereInput.overcommitMemoryRatioLt)
+                && Objects.equals(
+                        this.overcommitMemoryRatioLte, clusterWhereInput.overcommitMemoryRatioLte)
+                && Objects.equals(
+                        this.overcommitMemoryRatioNot, clusterWhereInput.overcommitMemoryRatioNot)
+                && Objects.equals(
+                        this.overcommitMemoryRatioNotIn,
+                        clusterWhereInput.overcommitMemoryRatioNotIn)
                 && Objects.equals(this.overprovisionRatio, clusterWhereInput.overprovisionRatio)
                 && Objects.equals(this.overprovisionRatioGt, clusterWhereInput.overprovisionRatioGt)
                 && Objects.equals(
@@ -38391,6 +40509,14 @@ public class ClusterWhereInput
                 OR,
                 accessWriteCompressEnabled,
                 accessWriteCompressEnabledNot,
+                allocatedMemoryBytes,
+                allocatedMemoryBytesGt,
+                allocatedMemoryBytesGte,
+                allocatedMemoryBytesIn,
+                allocatedMemoryBytesLt,
+                allocatedMemoryBytesLte,
+                allocatedMemoryBytesNot,
+                allocatedMemoryBytesNotIn,
                 allocatedPrioritizedSpace,
                 allocatedPrioritizedSpaceGt,
                 allocatedPrioritizedSpaceGte,
@@ -38430,6 +40556,22 @@ public class ClusterWhereInput
                 architectureNotIn,
                 autoConverge,
                 autoConvergeNot,
+                capSnapshotUniqueSize,
+                capSnapshotUniqueSizeGt,
+                capSnapshotUniqueSizeGte,
+                capSnapshotUniqueSizeIn,
+                capSnapshotUniqueSizeLt,
+                capSnapshotUniqueSizeLte,
+                capSnapshotUniqueSizeNot,
+                capSnapshotUniqueSizeNotIn,
+                capVolumeUniqueSize,
+                capVolumeUniqueSizeGt,
+                capVolumeUniqueSizeGte,
+                capVolumeUniqueSizeIn,
+                capVolumeUniqueSizeLt,
+                capVolumeUniqueSizeLte,
+                capVolumeUniqueSizeNot,
+                capVolumeUniqueSizeNotIn,
                 commitedMemoryBytes,
                 commitedMemoryBytesGt,
                 commitedMemoryBytesGte,
@@ -38712,6 +40854,14 @@ public class ClusterWhereInput
                 maxPhysicalDataCapacityPerNodeLte,
                 maxPhysicalDataCapacityPerNodeNot,
                 maxPhysicalDataCapacityPerNodeNotIn,
+                memoryAllocationRate,
+                memoryAllocationRateGt,
+                memoryAllocationRateGte,
+                memoryAllocationRateIn,
+                memoryAllocationRateLt,
+                memoryAllocationRateLte,
+                memoryAllocationRateNot,
+                memoryAllocationRateNotIn,
                 mgtGateway,
                 mgtGatewayContains,
                 mgtGatewayEndsWith,
@@ -38790,6 +40940,14 @@ public class ClusterWhereInput
                 overallEfficiencyLte,
                 overallEfficiencyNot,
                 overallEfficiencyNotIn,
+                overcommitMemoryRatio,
+                overcommitMemoryRatioGt,
+                overcommitMemoryRatioGte,
+                overcommitMemoryRatioIn,
+                overcommitMemoryRatioLt,
+                overcommitMemoryRatioLte,
+                overcommitMemoryRatioNot,
+                overcommitMemoryRatioNotIn,
                 overprovisionRatio,
                 overprovisionRatioGt,
                 overprovisionRatioGte,
@@ -39150,6 +41308,30 @@ public class ClusterWhereInput
         sb.append("    accessWriteCompressEnabledNot: ")
                 .append(toIndentedString(accessWriteCompressEnabledNot))
                 .append("\n");
+        sb.append("    allocatedMemoryBytes: ")
+                .append(toIndentedString(allocatedMemoryBytes))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesGt: ")
+                .append(toIndentedString(allocatedMemoryBytesGt))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesGte: ")
+                .append(toIndentedString(allocatedMemoryBytesGte))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesIn: ")
+                .append(toIndentedString(allocatedMemoryBytesIn))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesLt: ")
+                .append(toIndentedString(allocatedMemoryBytesLt))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesLte: ")
+                .append(toIndentedString(allocatedMemoryBytesLte))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesNot: ")
+                .append(toIndentedString(allocatedMemoryBytesNot))
+                .append("\n");
+        sb.append("    allocatedMemoryBytesNotIn: ")
+                .append(toIndentedString(allocatedMemoryBytesNotIn))
+                .append("\n");
         sb.append("    allocatedPrioritizedSpace: ")
                 .append(toIndentedString(allocatedPrioritizedSpace))
                 .append("\n");
@@ -39253,6 +41435,54 @@ public class ClusterWhereInput
                 .append("\n");
         sb.append("    autoConverge: ").append(toIndentedString(autoConverge)).append("\n");
         sb.append("    autoConvergeNot: ").append(toIndentedString(autoConvergeNot)).append("\n");
+        sb.append("    capSnapshotUniqueSize: ")
+                .append(toIndentedString(capSnapshotUniqueSize))
+                .append("\n");
+        sb.append("    capSnapshotUniqueSizeGt: ")
+                .append(toIndentedString(capSnapshotUniqueSizeGt))
+                .append("\n");
+        sb.append("    capSnapshotUniqueSizeGte: ")
+                .append(toIndentedString(capSnapshotUniqueSizeGte))
+                .append("\n");
+        sb.append("    capSnapshotUniqueSizeIn: ")
+                .append(toIndentedString(capSnapshotUniqueSizeIn))
+                .append("\n");
+        sb.append("    capSnapshotUniqueSizeLt: ")
+                .append(toIndentedString(capSnapshotUniqueSizeLt))
+                .append("\n");
+        sb.append("    capSnapshotUniqueSizeLte: ")
+                .append(toIndentedString(capSnapshotUniqueSizeLte))
+                .append("\n");
+        sb.append("    capSnapshotUniqueSizeNot: ")
+                .append(toIndentedString(capSnapshotUniqueSizeNot))
+                .append("\n");
+        sb.append("    capSnapshotUniqueSizeNotIn: ")
+                .append(toIndentedString(capSnapshotUniqueSizeNotIn))
+                .append("\n");
+        sb.append("    capVolumeUniqueSize: ")
+                .append(toIndentedString(capVolumeUniqueSize))
+                .append("\n");
+        sb.append("    capVolumeUniqueSizeGt: ")
+                .append(toIndentedString(capVolumeUniqueSizeGt))
+                .append("\n");
+        sb.append("    capVolumeUniqueSizeGte: ")
+                .append(toIndentedString(capVolumeUniqueSizeGte))
+                .append("\n");
+        sb.append("    capVolumeUniqueSizeIn: ")
+                .append(toIndentedString(capVolumeUniqueSizeIn))
+                .append("\n");
+        sb.append("    capVolumeUniqueSizeLt: ")
+                .append(toIndentedString(capVolumeUniqueSizeLt))
+                .append("\n");
+        sb.append("    capVolumeUniqueSizeLte: ")
+                .append(toIndentedString(capVolumeUniqueSizeLte))
+                .append("\n");
+        sb.append("    capVolumeUniqueSizeNot: ")
+                .append(toIndentedString(capVolumeUniqueSizeNot))
+                .append("\n");
+        sb.append("    capVolumeUniqueSizeNotIn: ")
+                .append(toIndentedString(capVolumeUniqueSizeNotIn))
+                .append("\n");
         sb.append("    commitedMemoryBytes: ")
                 .append(toIndentedString(commitedMemoryBytes))
                 .append("\n");
@@ -39875,6 +42105,30 @@ public class ClusterWhereInput
         sb.append("    maxPhysicalDataCapacityPerNodeNotIn: ")
                 .append(toIndentedString(maxPhysicalDataCapacityPerNodeNotIn))
                 .append("\n");
+        sb.append("    memoryAllocationRate: ")
+                .append(toIndentedString(memoryAllocationRate))
+                .append("\n");
+        sb.append("    memoryAllocationRateGt: ")
+                .append(toIndentedString(memoryAllocationRateGt))
+                .append("\n");
+        sb.append("    memoryAllocationRateGte: ")
+                .append(toIndentedString(memoryAllocationRateGte))
+                .append("\n");
+        sb.append("    memoryAllocationRateIn: ")
+                .append(toIndentedString(memoryAllocationRateIn))
+                .append("\n");
+        sb.append("    memoryAllocationRateLt: ")
+                .append(toIndentedString(memoryAllocationRateLt))
+                .append("\n");
+        sb.append("    memoryAllocationRateLte: ")
+                .append(toIndentedString(memoryAllocationRateLte))
+                .append("\n");
+        sb.append("    memoryAllocationRateNot: ")
+                .append(toIndentedString(memoryAllocationRateNot))
+                .append("\n");
+        sb.append("    memoryAllocationRateNotIn: ")
+                .append(toIndentedString(memoryAllocationRateNotIn))
+                .append("\n");
         sb.append("    mgtGateway: ").append(toIndentedString(mgtGateway)).append("\n");
         sb.append("    mgtGatewayContains: ")
                 .append(toIndentedString(mgtGatewayContains))
@@ -40030,6 +42284,30 @@ public class ClusterWhereInput
                 .append("\n");
         sb.append("    overallEfficiencyNotIn: ")
                 .append(toIndentedString(overallEfficiencyNotIn))
+                .append("\n");
+        sb.append("    overcommitMemoryRatio: ")
+                .append(toIndentedString(overcommitMemoryRatio))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioGt: ")
+                .append(toIndentedString(overcommitMemoryRatioGt))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioGte: ")
+                .append(toIndentedString(overcommitMemoryRatioGte))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioIn: ")
+                .append(toIndentedString(overcommitMemoryRatioIn))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioLt: ")
+                .append(toIndentedString(overcommitMemoryRatioLt))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioLte: ")
+                .append(toIndentedString(overcommitMemoryRatioLte))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioNot: ")
+                .append(toIndentedString(overcommitMemoryRatioNot))
+                .append("\n");
+        sb.append("    overcommitMemoryRatioNotIn: ")
+                .append(toIndentedString(overcommitMemoryRatioNotIn))
                 .append("\n");
         sb.append("    overprovisionRatio: ")
                 .append(toIndentedString(overprovisionRatio))

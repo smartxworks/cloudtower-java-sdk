@@ -46,6 +46,11 @@ public class NestedReplicationObjectDescriptor
     @SerializedName(SERIALIZED_NAME_TOWER_DEPLOY_ID)
     private String towerDeployId;
 
+    public static final String SERIALIZED_NAME_TYPE = "type";
+
+    @SerializedName(SERIALIZED_NAME_TYPE)
+    private ReplicationObjectType type;
+
     public static final String SERIALIZED_NAME_ZBS_VOLUME_ID = "zbs_volume_id";
 
     @SerializedName(SERIALIZED_NAME_ZBS_VOLUME_ID)
@@ -354,6 +359,49 @@ public class NestedReplicationObjectDescriptor
         return this._isPresent_.contains(SERIALIZED_NAME_TOWER_DEPLOY_ID);
     }
 
+    public NestedReplicationObjectDescriptor type(ReplicationObjectType type) {
+
+        this.type = type;
+        return this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return type
+     */
+    @javax.annotation.Nonnull
+    @ApiModelProperty(required = true, value = "")
+    public ReplicationObjectType getType() {
+        return type;
+    }
+
+    public void setType(ReplicationObjectType type) {
+        this.type = type;
+    }
+
+    public NestedReplicationObjectDescriptor type_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_TYPE);
+        return this;
+    }
+
+    public NestedReplicationObjectDescriptor type_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_TYPE);
+        return this;
+    }
+
+    public void setType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_TYPE);
+        }
+    }
+
+    public boolean getType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_TYPE);
+    }
+
     public NestedReplicationObjectDescriptor zbsVolumeId(String zbsVolumeId) {
 
         this.zbsVolumeId = zbsVolumeId;
@@ -419,6 +467,7 @@ public class NestedReplicationObjectDescriptor
                         this.parentObjectName, nestedReplicationObjectDescriptor.parentObjectName)
                 && Objects.equals(
                         this.towerDeployId, nestedReplicationObjectDescriptor.towerDeployId)
+                && Objects.equals(this.type, nestedReplicationObjectDescriptor.type)
                 && Objects.equals(this.zbsVolumeId, nestedReplicationObjectDescriptor.zbsVolumeId);
     }
 
@@ -441,6 +490,7 @@ public class NestedReplicationObjectDescriptor
                 parentObjectLocalId,
                 parentObjectName,
                 towerDeployId,
+                type,
                 zbsVolumeId);
     }
 
@@ -464,6 +514,7 @@ public class NestedReplicationObjectDescriptor
                 .append("\n");
         sb.append("    parentObjectName: ").append(toIndentedString(parentObjectName)).append("\n");
         sb.append("    towerDeployId: ").append(toIndentedString(towerDeployId)).append("\n");
+        sb.append("    type: ").append(toIndentedString(type)).append("\n");
         sb.append("    zbsVolumeId: ").append(toIndentedString(zbsVolumeId)).append("\n");
         sb.append("}");
         return sb.toString();

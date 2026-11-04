@@ -886,8 +886,8 @@ public class BackupPlan extends com.smartx.tower.ConditionalNullable.Conditional
      *
      * @return fullInterval
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public Integer getFullInterval() {
         return fullInterval;
     }
@@ -929,8 +929,8 @@ public class BackupPlan extends com.smartx.tower.ConditionalNullable.Conditional
      *
      * @return fullPeriod
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public BackupPlanPeriod getFullPeriod() {
         return fullPeriod;
     }
@@ -972,8 +972,8 @@ public class BackupPlan extends com.smartx.tower.ConditionalNullable.Conditional
      *
      * @return fullTimePoint
      */
-    @javax.annotation.Nonnull
-    @ApiModelProperty(required = true, value = "")
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
     public NestedBackupPlanTimePoint getFullTimePoint() {
         return fullTimePoint;
     }
