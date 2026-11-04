@@ -18,6 +18,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED)
     private Boolean accessWriteCompressEnabled;
 
+    public static final String SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES = "allocated_memory_bytes";
+
+    @SerializedName(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES)
+    private Long allocatedMemoryBytes;
+
     public static final String SERIALIZED_NAME_ALLOCATED_PRIORITIZED_SPACE =
             "allocated_prioritized_space";
 
@@ -265,6 +270,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @SerializedName(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE)
     private Long maxPhysicalDataCapacityPerNode;
 
+    public static final String SERIALIZED_NAME_MEMORY_ALLOCATION_RATE = "memory_allocation_rate";
+
+    @SerializedName(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE)
+    private Double memoryAllocationRate;
+
     public static final String SERIALIZED_NAME_METRO_AVAILABILITY_CHECKLIST =
             "metro_availability_checklist";
 
@@ -330,6 +340,11 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     @SerializedName(SERIALIZED_NAME_OVERALL_EFFICIENCY)
     private Double overallEfficiency;
+
+    public static final String SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO = "overcommit_memory_ratio";
+
+    @SerializedName(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO)
+    private Double overcommitMemoryRatio;
 
     public static final String SERIALIZED_NAME_OVERPROVISION_RATIO = "overprovision_ratio";
 
@@ -652,6 +667,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getAccessWriteCompressEnabled_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_ACCESS_WRITE_COMPRESS_ENABLED);
+    }
+
+    public Cluster allocatedMemoryBytes(Long allocatedMemoryBytes) {
+
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+        return this;
+    }
+
+    /**
+     * Get allocatedMemoryBytes
+     *
+     * @return allocatedMemoryBytes
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Long getAllocatedMemoryBytes() {
+        return allocatedMemoryBytes;
+    }
+
+    public void setAllocatedMemoryBytes(Long allocatedMemoryBytes) {
+        this.allocatedMemoryBytes = allocatedMemoryBytes;
+    }
+
+    public Cluster allocatedMemoryBytes_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public Cluster allocatedMemoryBytes_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        return this;
+    }
+
+    public void setAllocatedMemoryBytes_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
+        }
+    }
+
+    public boolean getAllocatedMemoryBytes_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_ALLOCATED_MEMORY_BYTES);
     }
 
     public Cluster allocatedPrioritizedSpace(Long allocatedPrioritizedSpace) {
@@ -2763,6 +2821,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         return this._isPresent_.contains(SERIALIZED_NAME_MAX_PHYSICAL_DATA_CAPACITY_PER_NODE);
     }
 
+    public Cluster memoryAllocationRate(Double memoryAllocationRate) {
+
+        this.memoryAllocationRate = memoryAllocationRate;
+        return this;
+    }
+
+    /**
+     * Get memoryAllocationRate
+     *
+     * @return memoryAllocationRate
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getMemoryAllocationRate() {
+        return memoryAllocationRate;
+    }
+
+    public void setMemoryAllocationRate(Double memoryAllocationRate) {
+        this.memoryAllocationRate = memoryAllocationRate;
+    }
+
+    public Cluster memoryAllocationRate_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public Cluster memoryAllocationRate_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        return this;
+    }
+
+    public void setMemoryAllocationRate_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+        }
+    }
+
+    public boolean getMemoryAllocationRate_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_MEMORY_ALLOCATION_RATE);
+    }
+
     public Cluster metroAvailabilityChecklist(
             NestedMetroAvailabilityChecklist metroAvailabilityChecklist) {
 
@@ -3327,6 +3428,49 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
 
     public boolean getOverallEfficiency_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_OVERALL_EFFICIENCY);
+    }
+
+    public Cluster overcommitMemoryRatio(Double overcommitMemoryRatio) {
+
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+        return this;
+    }
+
+    /**
+     * Get overcommitMemoryRatio
+     *
+     * @return overcommitMemoryRatio
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public Double getOvercommitMemoryRatio() {
+        return overcommitMemoryRatio;
+    }
+
+    public void setOvercommitMemoryRatio(Double overcommitMemoryRatio) {
+        this.overcommitMemoryRatio = overcommitMemoryRatio;
+    }
+
+    public Cluster overcommitMemoryRatio_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public Cluster overcommitMemoryRatio_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        return this;
+    }
+
+    public void setOvercommitMemoryRatio_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
+        }
+    }
+
+    public boolean getOvercommitMemoryRatio_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_OVERCOMMIT_MEMORY_RATIO);
     }
 
     public Cluster overprovisionRatio(Double overprovisionRatio) {
@@ -5711,6 +5855,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         }
         Cluster cluster = (Cluster) o;
         return Objects.equals(this.accessWriteCompressEnabled, cluster.accessWriteCompressEnabled)
+                && Objects.equals(this.allocatedMemoryBytes, cluster.allocatedMemoryBytes)
                 && Objects.equals(this.allocatedPrioritizedSpace, cluster.allocatedPrioritizedSpace)
                 && Objects.equals(
                         this.allocatedPrioritizedSpaceUsage, cluster.allocatedPrioritizedSpaceUsage)
@@ -5762,6 +5907,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.maxPhysicalDataCapacity, cluster.maxPhysicalDataCapacity)
                 && Objects.equals(
                         this.maxPhysicalDataCapacityPerNode, cluster.maxPhysicalDataCapacityPerNode)
+                && Objects.equals(this.memoryAllocationRate, cluster.memoryAllocationRate)
                 && Objects.equals(
                         this.metroAvailabilityChecklist, cluster.metroAvailabilityChecklist)
                 && Objects.equals(this.mgtGateway, cluster.mgtGateway)
@@ -5776,6 +5922,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 && Objects.equals(this.nvmeOverTcpEnabled, cluster.nvmeOverTcpEnabled)
                 && Objects.equals(this.nvmfEnabled, cluster.nvmfEnabled)
                 && Objects.equals(this.overallEfficiency, cluster.overallEfficiency)
+                && Objects.equals(this.overcommitMemoryRatio, cluster.overcommitMemoryRatio)
                 && Objects.equals(this.overprovisionRatio, cluster.overprovisionRatio)
                 && Objects.equals(this.perfAllocatedDataSpace, cluster.perfAllocatedDataSpace)
                 && Objects.equals(this.perfFailureDataSpace, cluster.perfFailureDataSpace)
@@ -5849,6 +5996,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
     public int hashCode() {
         return Objects.hash(
                 accessWriteCompressEnabled,
+                allocatedMemoryBytes,
                 allocatedPrioritizedSpace,
                 allocatedPrioritizedSpaceUsage,
                 applicationHighestVersion,
@@ -5897,6 +6045,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 maxChunkNum,
                 maxPhysicalDataCapacity,
                 maxPhysicalDataCapacityPerNode,
+                memoryAllocationRate,
                 metroAvailabilityChecklist,
                 mgtGateway,
                 mgtNetmask,
@@ -5910,6 +6059,7 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
                 nvmeOverTcpEnabled,
                 nvmfEnabled,
                 overallEfficiency,
+                overcommitMemoryRatio,
                 overprovisionRatio,
                 perfAllocatedDataSpace,
                 perfFailureDataSpace,
@@ -5979,6 +6129,9 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         sb.append("class Cluster {\n");
         sb.append("    accessWriteCompressEnabled: ")
                 .append(toIndentedString(accessWriteCompressEnabled))
+                .append("\n");
+        sb.append("    allocatedMemoryBytes: ")
+                .append(toIndentedString(allocatedMemoryBytes))
                 .append("\n");
         sb.append("    allocatedPrioritizedSpace: ")
                 .append(toIndentedString(allocatedPrioritizedSpace))
@@ -6066,6 +6219,9 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         sb.append("    maxPhysicalDataCapacityPerNode: ")
                 .append(toIndentedString(maxPhysicalDataCapacityPerNode))
                 .append("\n");
+        sb.append("    memoryAllocationRate: ")
+                .append(toIndentedString(memoryAllocationRate))
+                .append("\n");
         sb.append("    metroAvailabilityChecklist: ")
                 .append(toIndentedString(metroAvailabilityChecklist))
                 .append("\n");
@@ -6090,6 +6246,9 @@ public class Cluster extends com.smartx.tower.ConditionalNullable.ConditionalNul
         sb.append("    nvmfEnabled: ").append(toIndentedString(nvmfEnabled)).append("\n");
         sb.append("    overallEfficiency: ")
                 .append(toIndentedString(overallEfficiency))
+                .append("\n");
+        sb.append("    overcommitMemoryRatio: ")
+                .append(toIndentedString(overcommitMemoryRatio))
                 .append("\n");
         sb.append("    overprovisionRatio: ")
                 .append(toIndentedString(overprovisionRatio))

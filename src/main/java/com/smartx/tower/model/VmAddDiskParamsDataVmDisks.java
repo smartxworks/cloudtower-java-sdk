@@ -19,7 +19,7 @@ public class VmAddDiskParamsDataVmDisks
     public static final String SERIALIZED_NAME_MOUNT_NEW_CREATE_DISKS = "mount_new_create_disks";
 
     @SerializedName(SERIALIZED_NAME_MOUNT_NEW_CREATE_DISKS)
-    private List<MountNewCreateDisksParams> mountNewCreateDisks = null;
+    private List<AddVmDiskMountNewCreateDisksParams> mountNewCreateDisks = null;
 
     public VmAddDiskParamsDataVmDisks() {}
 
@@ -75,16 +75,16 @@ public class VmAddDiskParamsDataVmDisks
     }
 
     public VmAddDiskParamsDataVmDisks mountNewCreateDisks(
-            List<MountNewCreateDisksParams> mountNewCreateDisks) {
+            List<AddVmDiskMountNewCreateDisksParams> mountNewCreateDisks) {
 
         this.mountNewCreateDisks = mountNewCreateDisks;
         return this;
     }
 
     public VmAddDiskParamsDataVmDisks addMountNewCreateDisksItem(
-            MountNewCreateDisksParams mountNewCreateDisksItem) {
+            AddVmDiskMountNewCreateDisksParams mountNewCreateDisksItem) {
         if (this.mountNewCreateDisks == null) {
-            this.mountNewCreateDisks = new ArrayList<MountNewCreateDisksParams>();
+            this.mountNewCreateDisks = new ArrayList<AddVmDiskMountNewCreateDisksParams>();
         }
         this.mountNewCreateDisks.add(mountNewCreateDisksItem);
         return this;
@@ -97,11 +97,12 @@ public class VmAddDiskParamsDataVmDisks
      */
     @javax.annotation.Nullable
     @ApiModelProperty(value = "")
-    public List<MountNewCreateDisksParams> getMountNewCreateDisks() {
+    public List<AddVmDiskMountNewCreateDisksParams> getMountNewCreateDisks() {
         return mountNewCreateDisks;
     }
 
-    public void setMountNewCreateDisks(List<MountNewCreateDisksParams> mountNewCreateDisks) {
+    public void setMountNewCreateDisks(
+            List<AddVmDiskMountNewCreateDisksParams> mountNewCreateDisks) {
         this.mountNewCreateDisks = mountNewCreateDisks;
     }
 

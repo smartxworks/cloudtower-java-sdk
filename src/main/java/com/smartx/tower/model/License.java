@@ -10,6 +10,11 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /** License */
 @javax.annotation.Generated(value = "JavaCloudTowerClientCodegen")
 public class License extends com.smartx.tower.ConditionalNullable.ConditionalNullablePojo {
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE = "bundle_type";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE)
+    private String bundleType;
+
     public static final String SERIALIZED_NAME_EXPIRE_DATE = "expire_date";
 
     @SerializedName(SERIALIZED_NAME_EXPIRE_DATE)
@@ -61,6 +66,49 @@ public class License extends com.smartx.tower.ConditionalNullable.ConditionalNul
     private LicenseType type;
 
     public License() {}
+
+    public License bundleType(String bundleType) {
+
+        this.bundleType = bundleType;
+        return this;
+    }
+
+    /**
+     * Get bundleType
+     *
+     * @return bundleType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleType() {
+        return bundleType;
+    }
+
+    public void setBundleType(String bundleType) {
+        this.bundleType = bundleType;
+    }
+
+    public License bundleType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE);
+        return this;
+    }
+
+    public License bundleType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE);
+        return this;
+    }
+
+    public void setBundleType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE);
+        }
+    }
+
+    public boolean getBundleType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE);
+    }
 
     public License expireDate(String expireDate) {
 
@@ -501,7 +549,8 @@ public class License extends com.smartx.tower.ConditionalNullable.ConditionalNul
             return false;
         }
         License license = (License) o;
-        return Objects.equals(this.expireDate, license.expireDate)
+        return Objects.equals(this.bundleType, license.bundleType)
+                && Objects.equals(this.expireDate, license.expireDate)
                 && Objects.equals(this.id, license.id)
                 && Objects.equals(this.licenseSerial, license.licenseSerial)
                 && Objects.equals(this.maintenanceEndDate, license.maintenanceEndDate)
@@ -525,6 +574,7 @@ public class License extends com.smartx.tower.ConditionalNullable.ConditionalNul
     @Override
     public int hashCode() {
         return Objects.hash(
+                bundleType,
                 expireDate,
                 id,
                 licenseSerial,
@@ -548,6 +598,7 @@ public class License extends com.smartx.tower.ConditionalNullable.ConditionalNul
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("class License {\n");
+        sb.append("    bundleType: ").append(toIndentedString(bundleType)).append("\n");
         sb.append("    expireDate: ").append(toIndentedString(expireDate)).append("\n");
         sb.append("    id: ").append(toIndentedString(id)).append("\n");
         sb.append("    licenseSerial: ").append(toIndentedString(licenseSerial)).append("\n");
