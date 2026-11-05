@@ -43,6 +43,16 @@ public class SecurityGroupWhereInput
     @SerializedName(SERIALIZED_NAME_SECURITY_POLICIES_EVERY)
     private SecurityPolicyWhereInput securityPoliciesEvery;
 
+    public static final String SERIALIZED_NAME_O_R = "OR";
+
+    @SerializedName(SERIALIZED_NAME_O_R)
+    private List<SecurityGroupWhereInput> OR = null;
+
+    public static final String SERIALIZED_NAME_N_O_T = "NOT";
+
+    @SerializedName(SERIALIZED_NAME_N_O_T)
+    private List<SecurityGroupWhereInput> NOT = null;
+
     public static final String SERIALIZED_NAME_NAME_STARTS_WITH = "name_starts_with";
 
     @SerializedName(SERIALIZED_NAME_NAME_STARTS_WITH)
@@ -440,16 +450,6 @@ public class SecurityGroupWhereInput
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
     private String description;
 
-    public static final String SERIALIZED_NAME_O_R = "OR";
-
-    @SerializedName(SERIALIZED_NAME_O_R)
-    private List<SecurityGroupWhereInput> OR = null;
-
-    public static final String SERIALIZED_NAME_N_O_T = "NOT";
-
-    @SerializedName(SERIALIZED_NAME_N_O_T)
-    private List<SecurityGroupWhereInput> NOT = null;
-
     public static final String SERIALIZED_NAME_A_N_D = "AND";
 
     @SerializedName(SERIALIZED_NAME_A_N_D)
@@ -716,6 +716,108 @@ public class SecurityGroupWhereInput
 
     public boolean getSecurityPoliciesEvery_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_SECURITY_POLICIES_EVERY);
+    }
+
+    public SecurityGroupWhereInput OR(List<SecurityGroupWhereInput> OR) {
+
+        this.OR = OR;
+        return this;
+    }
+
+    public SecurityGroupWhereInput addORItem(SecurityGroupWhereInput ORItem) {
+        if (this.OR == null) {
+            this.OR = new ArrayList<SecurityGroupWhereInput>();
+        }
+        this.OR.add(ORItem);
+        return this;
+    }
+
+    /**
+     * Get OR
+     *
+     * @return OR
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<SecurityGroupWhereInput> getOR() {
+        return OR;
+    }
+
+    public void setOR(List<SecurityGroupWhereInput> OR) {
+        this.OR = OR;
+    }
+
+    public SecurityGroupWhereInput OR_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_O_R);
+        return this;
+    }
+
+    public SecurityGroupWhereInput OR_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_O_R);
+        return this;
+    }
+
+    public void setOR_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_O_R);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_O_R);
+        }
+    }
+
+    public boolean getOR_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_O_R);
+    }
+
+    public SecurityGroupWhereInput NOT(List<SecurityGroupWhereInput> NOT) {
+
+        this.NOT = NOT;
+        return this;
+    }
+
+    public SecurityGroupWhereInput addNOTItem(SecurityGroupWhereInput NOTItem) {
+        if (this.NOT == null) {
+            this.NOT = new ArrayList<SecurityGroupWhereInput>();
+        }
+        this.NOT.add(NOTItem);
+        return this;
+    }
+
+    /**
+     * Get NOT
+     *
+     * @return NOT
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<SecurityGroupWhereInput> getNOT() {
+        return NOT;
+    }
+
+    public void setNOT(List<SecurityGroupWhereInput> NOT) {
+        this.NOT = NOT;
+    }
+
+    public SecurityGroupWhereInput NOT_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_N_O_T);
+        return this;
+    }
+
+    public SecurityGroupWhereInput NOT_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_N_O_T);
+        return this;
+    }
+
+    public void setNOT_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_N_O_T);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_N_O_T);
+        }
+    }
+
+    public boolean getNOT_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_N_O_T);
     }
 
     public SecurityGroupWhereInput nameStartsWith(String nameStartsWith) {
@@ -4172,108 +4274,6 @@ public class SecurityGroupWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_DESCRIPTION);
     }
 
-    public SecurityGroupWhereInput OR(List<SecurityGroupWhereInput> OR) {
-
-        this.OR = OR;
-        return this;
-    }
-
-    public SecurityGroupWhereInput addORItem(SecurityGroupWhereInput ORItem) {
-        if (this.OR == null) {
-            this.OR = new ArrayList<SecurityGroupWhereInput>();
-        }
-        this.OR.add(ORItem);
-        return this;
-    }
-
-    /**
-     * Get OR
-     *
-     * @return OR
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public List<SecurityGroupWhereInput> getOR() {
-        return OR;
-    }
-
-    public void setOR(List<SecurityGroupWhereInput> OR) {
-        this.OR = OR;
-    }
-
-    public SecurityGroupWhereInput OR_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_O_R);
-        return this;
-    }
-
-    public SecurityGroupWhereInput OR_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_O_R);
-        return this;
-    }
-
-    public void setOR_IsExplictlyNull(boolean isExplictlyNull) {
-        if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_O_R);
-        } else {
-            this._isPresent_.remove(SERIALIZED_NAME_O_R);
-        }
-    }
-
-    public boolean getOR_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_O_R);
-    }
-
-    public SecurityGroupWhereInput NOT(List<SecurityGroupWhereInput> NOT) {
-
-        this.NOT = NOT;
-        return this;
-    }
-
-    public SecurityGroupWhereInput addNOTItem(SecurityGroupWhereInput NOTItem) {
-        if (this.NOT == null) {
-            this.NOT = new ArrayList<SecurityGroupWhereInput>();
-        }
-        this.NOT.add(NOTItem);
-        return this;
-    }
-
-    /**
-     * Get NOT
-     *
-     * @return NOT
-     */
-    @javax.annotation.Nullable
-    @ApiModelProperty(value = "")
-    public List<SecurityGroupWhereInput> getNOT() {
-        return NOT;
-    }
-
-    public void setNOT(List<SecurityGroupWhereInput> NOT) {
-        this.NOT = NOT;
-    }
-
-    public SecurityGroupWhereInput NOT_ExplictlyNull() {
-        this._isPresent_.add(SERIALIZED_NAME_N_O_T);
-        return this;
-    }
-
-    public SecurityGroupWhereInput NOT_ExplictlyNonNull() {
-        this._isPresent_.remove(SERIALIZED_NAME_N_O_T);
-        return this;
-    }
-
-    public void setNOT_IsExplictlyNull(boolean isExplictlyNull) {
-        if (isExplictlyNull) {
-            this._isPresent_.add(SERIALIZED_NAME_N_O_T);
-        } else {
-            this._isPresent_.remove(SERIALIZED_NAME_N_O_T);
-        }
-    }
-
-    public boolean getNOT_IsExplictlyNull() {
-        return this._isPresent_.contains(SERIALIZED_NAME_N_O_T);
-    }
-
     public SecurityGroupWhereInput AND(List<SecurityGroupWhereInput> AND) {
 
         this.AND = AND;
@@ -4343,6 +4343,8 @@ public class SecurityGroupWhereInput
                         this.securityPoliciesNone, securityGroupWhereInput.securityPoliciesNone)
                 && Objects.equals(
                         this.securityPoliciesEvery, securityGroupWhereInput.securityPoliciesEvery)
+                && Objects.equals(this.OR, securityGroupWhereInput.OR)
+                && Objects.equals(this.NOT, securityGroupWhereInput.NOT)
                 && Objects.equals(this.nameStartsWith, securityGroupWhereInput.nameStartsWith)
                 && Objects.equals(this.nameNotStartsWith, securityGroupWhereInput.nameNotStartsWith)
                 && Objects.equals(this.nameNotIn, securityGroupWhereInput.nameNotIn)
@@ -4438,8 +4440,6 @@ public class SecurityGroupWhereInput
                 && Objects.equals(
                         this.descriptionContains, securityGroupWhereInput.descriptionContains)
                 && Objects.equals(this.description, securityGroupWhereInput.description)
-                && Objects.equals(this.OR, securityGroupWhereInput.OR)
-                && Objects.equals(this.NOT, securityGroupWhereInput.NOT)
                 && Objects.equals(this.AND, securityGroupWhereInput.AND);
     }
 
@@ -4461,6 +4461,8 @@ public class SecurityGroupWhereInput
                 securityPoliciesSome,
                 securityPoliciesNone,
                 securityPoliciesEvery,
+                OR,
+                NOT,
                 nameStartsWith,
                 nameNotStartsWith,
                 nameNotIn,
@@ -4539,8 +4541,6 @@ public class SecurityGroupWhereInput
                 descriptionEndsWith,
                 descriptionContains,
                 description,
-                OR,
-                NOT,
                 AND);
     }
 
@@ -4567,6 +4567,8 @@ public class SecurityGroupWhereInput
         sb.append("    securityPoliciesEvery: ")
                 .append(toIndentedString(securityPoliciesEvery))
                 .append("\n");
+        sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+        sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
         sb.append("    nameStartsWith: ").append(toIndentedString(nameStartsWith)).append("\n");
         sb.append("    nameNotStartsWith: ")
                 .append(toIndentedString(nameNotStartsWith))
@@ -4677,8 +4679,6 @@ public class SecurityGroupWhereInput
                 .append(toIndentedString(descriptionContains))
                 .append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
-        sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
-        sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
         sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
         sb.append("}");
         return sb.toString();

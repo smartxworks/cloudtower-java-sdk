@@ -205,6 +205,21 @@ public class ContentLibraryVmTemplateWhereInput
     @SerializedName(SERIALIZED_NAME_CREATED_AT_NOT_IN)
     private List<String> createdAtNotIn = null;
 
+    public static final String SERIALIZED_NAME_DATASTORES_EVERY = "datastores_every";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORES_EVERY)
+    private DatastoreWhereInput datastoresEvery;
+
+    public static final String SERIALIZED_NAME_DATASTORES_NONE = "datastores_none";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORES_NONE)
+    private DatastoreWhereInput datastoresNone;
+
+    public static final String SERIALIZED_NAME_DATASTORES_SOME = "datastores_some";
+
+    @SerializedName(SERIALIZED_NAME_DATASTORES_SOME)
+    private DatastoreWhereInput datastoresSome;
+
     public static final String SERIALIZED_NAME_DESCRIPTION = "description";
 
     @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -907,6 +922,24 @@ public class ContentLibraryVmTemplateWhereInput
 
     @SerializedName(SERIALIZED_NAME_VIDEO_TYPE_STARTS_WITH)
     private String videoTypeStartsWith;
+
+    public static final String SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_EVERY =
+            "vm_template_configs_every";
+
+    @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_EVERY)
+    private VmTemplateConfigWhereInput vmTemplateConfigsEvery;
+
+    public static final String SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_NONE =
+            "vm_template_configs_none";
+
+    @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_NONE)
+    private VmTemplateConfigWhereInput vmTemplateConfigsNone;
+
+    public static final String SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_SOME =
+            "vm_template_configs_some";
+
+    @SerializedName(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_SOME)
+    private VmTemplateConfigWhereInput vmTemplateConfigsSome;
 
     public static final String SERIALIZED_NAME_VM_TEMPLATES_EVERY = "vm_templates_every";
 
@@ -2663,6 +2696,135 @@ public class ContentLibraryVmTemplateWhereInput
 
     public boolean getCreatedAtNotIn_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_CREATED_AT_NOT_IN);
+    }
+
+    public ContentLibraryVmTemplateWhereInput datastoresEvery(DatastoreWhereInput datastoresEvery) {
+
+        this.datastoresEvery = datastoresEvery;
+        return this;
+    }
+
+    /**
+     * Get datastoresEvery
+     *
+     * @return datastoresEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DatastoreWhereInput getDatastoresEvery() {
+        return datastoresEvery;
+    }
+
+    public void setDatastoresEvery(DatastoreWhereInput datastoresEvery) {
+        this.datastoresEvery = datastoresEvery;
+    }
+
+    public ContentLibraryVmTemplateWhereInput datastoresEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORES_EVERY);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput datastoresEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_EVERY);
+        return this;
+    }
+
+    public void setDatastoresEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORES_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_EVERY);
+        }
+    }
+
+    public boolean getDatastoresEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORES_EVERY);
+    }
+
+    public ContentLibraryVmTemplateWhereInput datastoresNone(DatastoreWhereInput datastoresNone) {
+
+        this.datastoresNone = datastoresNone;
+        return this;
+    }
+
+    /**
+     * Get datastoresNone
+     *
+     * @return datastoresNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DatastoreWhereInput getDatastoresNone() {
+        return datastoresNone;
+    }
+
+    public void setDatastoresNone(DatastoreWhereInput datastoresNone) {
+        this.datastoresNone = datastoresNone;
+    }
+
+    public ContentLibraryVmTemplateWhereInput datastoresNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORES_NONE);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput datastoresNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_NONE);
+        return this;
+    }
+
+    public void setDatastoresNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORES_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_NONE);
+        }
+    }
+
+    public boolean getDatastoresNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORES_NONE);
+    }
+
+    public ContentLibraryVmTemplateWhereInput datastoresSome(DatastoreWhereInput datastoresSome) {
+
+        this.datastoresSome = datastoresSome;
+        return this;
+    }
+
+    /**
+     * Get datastoresSome
+     *
+     * @return datastoresSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public DatastoreWhereInput getDatastoresSome() {
+        return datastoresSome;
+    }
+
+    public void setDatastoresSome(DatastoreWhereInput datastoresSome) {
+        this.datastoresSome = datastoresSome;
+    }
+
+    public ContentLibraryVmTemplateWhereInput datastoresSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_DATASTORES_SOME);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput datastoresSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_SOME);
+        return this;
+    }
+
+    public void setDatastoresSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_DATASTORES_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_DATASTORES_SOME);
+        }
+    }
+
+    public boolean getDatastoresSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_DATASTORES_SOME);
     }
 
     public ContentLibraryVmTemplateWhereInput description(String description) {
@@ -8923,6 +9085,138 @@ public class ContentLibraryVmTemplateWhereInput
         return this._isPresent_.contains(SERIALIZED_NAME_VIDEO_TYPE_STARTS_WITH);
     }
 
+    public ContentLibraryVmTemplateWhereInput vmTemplateConfigsEvery(
+            VmTemplateConfigWhereInput vmTemplateConfigsEvery) {
+
+        this.vmTemplateConfigsEvery = vmTemplateConfigsEvery;
+        return this;
+    }
+
+    /**
+     * Get vmTemplateConfigsEvery
+     *
+     * @return vmTemplateConfigsEvery
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmTemplateConfigWhereInput getVmTemplateConfigsEvery() {
+        return vmTemplateConfigsEvery;
+    }
+
+    public void setVmTemplateConfigsEvery(VmTemplateConfigWhereInput vmTemplateConfigsEvery) {
+        this.vmTemplateConfigsEvery = vmTemplateConfigsEvery;
+    }
+
+    public ContentLibraryVmTemplateWhereInput vmTemplateConfigsEvery_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_EVERY);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput vmTemplateConfigsEvery_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_EVERY);
+        return this;
+    }
+
+    public void setVmTemplateConfigsEvery_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_EVERY);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_EVERY);
+        }
+    }
+
+    public boolean getVmTemplateConfigsEvery_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_EVERY);
+    }
+
+    public ContentLibraryVmTemplateWhereInput vmTemplateConfigsNone(
+            VmTemplateConfigWhereInput vmTemplateConfigsNone) {
+
+        this.vmTemplateConfigsNone = vmTemplateConfigsNone;
+        return this;
+    }
+
+    /**
+     * Get vmTemplateConfigsNone
+     *
+     * @return vmTemplateConfigsNone
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmTemplateConfigWhereInput getVmTemplateConfigsNone() {
+        return vmTemplateConfigsNone;
+    }
+
+    public void setVmTemplateConfigsNone(VmTemplateConfigWhereInput vmTemplateConfigsNone) {
+        this.vmTemplateConfigsNone = vmTemplateConfigsNone;
+    }
+
+    public ContentLibraryVmTemplateWhereInput vmTemplateConfigsNone_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_NONE);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput vmTemplateConfigsNone_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_NONE);
+        return this;
+    }
+
+    public void setVmTemplateConfigsNone_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_NONE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_NONE);
+        }
+    }
+
+    public boolean getVmTemplateConfigsNone_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_NONE);
+    }
+
+    public ContentLibraryVmTemplateWhereInput vmTemplateConfigsSome(
+            VmTemplateConfigWhereInput vmTemplateConfigsSome) {
+
+        this.vmTemplateConfigsSome = vmTemplateConfigsSome;
+        return this;
+    }
+
+    /**
+     * Get vmTemplateConfigsSome
+     *
+     * @return vmTemplateConfigsSome
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public VmTemplateConfigWhereInput getVmTemplateConfigsSome() {
+        return vmTemplateConfigsSome;
+    }
+
+    public void setVmTemplateConfigsSome(VmTemplateConfigWhereInput vmTemplateConfigsSome) {
+        this.vmTemplateConfigsSome = vmTemplateConfigsSome;
+    }
+
+    public ContentLibraryVmTemplateWhereInput vmTemplateConfigsSome_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_SOME);
+        return this;
+    }
+
+    public ContentLibraryVmTemplateWhereInput vmTemplateConfigsSome_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_SOME);
+        return this;
+    }
+
+    public void setVmTemplateConfigsSome_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_SOME);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_SOME);
+        }
+    }
+
+    public boolean getVmTemplateConfigsSome_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_VM_TEMPLATE_CONFIGS_SOME);
+    }
+
     public ContentLibraryVmTemplateWhereInput vmTemplatesEvery(
             VmTemplateWhereInput vmTemplatesEvery) {
 
@@ -9219,6 +9513,12 @@ public class ContentLibraryVmTemplateWhereInput
                         this.createdAtNot, contentLibraryVmTemplateWhereInput.createdAtNot)
                 && Objects.equals(
                         this.createdAtNotIn, contentLibraryVmTemplateWhereInput.createdAtNotIn)
+                && Objects.equals(
+                        this.datastoresEvery, contentLibraryVmTemplateWhereInput.datastoresEvery)
+                && Objects.equals(
+                        this.datastoresNone, contentLibraryVmTemplateWhereInput.datastoresNone)
+                && Objects.equals(
+                        this.datastoresSome, contentLibraryVmTemplateWhereInput.datastoresSome)
                 && Objects.equals(this.description, contentLibraryVmTemplateWhereInput.description)
                 && Objects.equals(
                         this.descriptionContains,
@@ -9442,6 +9742,15 @@ public class ContentLibraryVmTemplateWhereInput
                         this.videoTypeStartsWith,
                         contentLibraryVmTemplateWhereInput.videoTypeStartsWith)
                 && Objects.equals(
+                        this.vmTemplateConfigsEvery,
+                        contentLibraryVmTemplateWhereInput.vmTemplateConfigsEvery)
+                && Objects.equals(
+                        this.vmTemplateConfigsNone,
+                        contentLibraryVmTemplateWhereInput.vmTemplateConfigsNone)
+                && Objects.equals(
+                        this.vmTemplateConfigsSome,
+                        contentLibraryVmTemplateWhereInput.vmTemplateConfigsSome)
+                && Objects.equals(
                         this.vmTemplatesEvery, contentLibraryVmTemplateWhereInput.vmTemplatesEvery)
                 && Objects.equals(
                         this.vmTemplatesNone, contentLibraryVmTemplateWhereInput.vmTemplatesNone)
@@ -9501,6 +9810,9 @@ public class ContentLibraryVmTemplateWhereInput
                 createdAtLte,
                 createdAtNot,
                 createdAtNotIn,
+                datastoresEvery,
+                datastoresNone,
+                datastoresSome,
                 description,
                 descriptionContains,
                 descriptionEndsWith,
@@ -9640,6 +9952,9 @@ public class ContentLibraryVmTemplateWhereInput
                 videoTypeNotIn,
                 videoTypeNotStartsWith,
                 videoTypeStartsWith,
+                vmTemplateConfigsEvery,
+                vmTemplateConfigsNone,
+                vmTemplateConfigsSome,
                 vmTemplatesEvery,
                 vmTemplatesNone,
                 vmTemplatesSome,
@@ -9710,6 +10025,9 @@ public class ContentLibraryVmTemplateWhereInput
         sb.append("    createdAtLte: ").append(toIndentedString(createdAtLte)).append("\n");
         sb.append("    createdAtNot: ").append(toIndentedString(createdAtNot)).append("\n");
         sb.append("    createdAtNotIn: ").append(toIndentedString(createdAtNotIn)).append("\n");
+        sb.append("    datastoresEvery: ").append(toIndentedString(datastoresEvery)).append("\n");
+        sb.append("    datastoresNone: ").append(toIndentedString(datastoresNone)).append("\n");
+        sb.append("    datastoresSome: ").append(toIndentedString(datastoresSome)).append("\n");
         sb.append("    description: ").append(toIndentedString(description)).append("\n");
         sb.append("    descriptionContains: ")
                 .append(toIndentedString(descriptionContains))
@@ -9894,6 +10212,15 @@ public class ContentLibraryVmTemplateWhereInput
                 .append("\n");
         sb.append("    videoTypeStartsWith: ")
                 .append(toIndentedString(videoTypeStartsWith))
+                .append("\n");
+        sb.append("    vmTemplateConfigsEvery: ")
+                .append(toIndentedString(vmTemplateConfigsEvery))
+                .append("\n");
+        sb.append("    vmTemplateConfigsNone: ")
+                .append(toIndentedString(vmTemplateConfigsNone))
+                .append("\n");
+        sb.append("    vmTemplateConfigsSome: ")
+                .append(toIndentedString(vmTemplateConfigsSome))
                 .append("\n");
         sb.append("    vmTemplatesEvery: ").append(toIndentedString(vmTemplatesEvery)).append("\n");
         sb.append("    vmTemplatesNone: ").append(toIndentedString(vmTemplatesNone)).append("\n");

@@ -18,6 +18,8 @@ public enum DiskUsageStatus {
 
     PARTIAL_MOUNTED("PARTIAL_MOUNTED"),
 
+    UNKNOWN("UNKNOWN"),
+
     UNMOUNTED("UNMOUNTED"),
 
     UNMOUNTING("UNMOUNTING"),

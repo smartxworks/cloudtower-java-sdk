@@ -37,6 +37,11 @@ public class ClusterStorageInfo
     @SerializedName(SERIALIZED_NAME_TOTAL_DATA_CAPACITY)
     private Long totalDataCapacity;
 
+    public static final String SERIALIZED_NAME_STORAGE_CLUSTER_CONFIGS = "storage_cluster_configs";
+
+    @SerializedName(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIGS)
+    private List<ClusterStorageClusterConfig> storageClusterConfigs = null;
+
     public static final String SERIALIZED_NAME_STORAGE_CLUSTER = "storage_cluster";
 
     @SerializedName(SERIALIZED_NAME_STORAGE_CLUSTER)
@@ -280,6 +285,59 @@ public class ClusterStorageInfo
         return this._isPresent_.contains(SERIALIZED_NAME_TOTAL_DATA_CAPACITY);
     }
 
+    public ClusterStorageInfo storageClusterConfigs(
+            List<ClusterStorageClusterConfig> storageClusterConfigs) {
+
+        this.storageClusterConfigs = storageClusterConfigs;
+        return this;
+    }
+
+    public ClusterStorageInfo addStorageClusterConfigsItem(
+            ClusterStorageClusterConfig storageClusterConfigsItem) {
+        if (this.storageClusterConfigs == null) {
+            this.storageClusterConfigs = new ArrayList<ClusterStorageClusterConfig>();
+        }
+        this.storageClusterConfigs.add(storageClusterConfigsItem);
+        return this;
+    }
+
+    /**
+     * Get storageClusterConfigs
+     *
+     * @return storageClusterConfigs
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<ClusterStorageClusterConfig> getStorageClusterConfigs() {
+        return storageClusterConfigs;
+    }
+
+    public void setStorageClusterConfigs(List<ClusterStorageClusterConfig> storageClusterConfigs) {
+        this.storageClusterConfigs = storageClusterConfigs;
+    }
+
+    public ClusterStorageInfo storageClusterConfigs_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIGS);
+        return this;
+    }
+
+    public ClusterStorageInfo storageClusterConfigs_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIGS);
+        return this;
+    }
+
+    public void setStorageClusterConfigs_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIGS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIGS);
+        }
+    }
+
+    public boolean getStorageClusterConfigs_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_STORAGE_CLUSTER_CONFIGS);
+    }
+
     public ClusterStorageInfo storageCluster(List<ClusterStorageInfo> storageCluster) {
 
         this.storageCluster = storageCluster;
@@ -518,6 +576,8 @@ public class ClusterStorageInfo
                 && Objects.equals(this.failureDataSpace, clusterStorageInfo.failureDataSpace)
                 && Objects.equals(this.usedDataSpace, clusterStorageInfo.usedDataSpace)
                 && Objects.equals(this.totalDataCapacity, clusterStorageInfo.totalDataCapacity)
+                && Objects.equals(
+                        this.storageClusterConfigs, clusterStorageInfo.storageClusterConfigs)
                 && Objects.equals(this.storageCluster, clusterStorageInfo.storageCluster)
                 && Objects.equals(this.stretch, clusterStorageInfo.stretch)
                 && Objects.equals(this.type, clusterStorageInfo.type)
@@ -533,6 +593,7 @@ public class ClusterStorageInfo
                 failureDataSpace,
                 usedDataSpace,
                 totalDataCapacity,
+                storageClusterConfigs,
                 storageCluster,
                 stretch,
                 type,
@@ -552,6 +613,9 @@ public class ClusterStorageInfo
         sb.append("    usedDataSpace: ").append(toIndentedString(usedDataSpace)).append("\n");
         sb.append("    totalDataCapacity: ")
                 .append(toIndentedString(totalDataCapacity))
+                .append("\n");
+        sb.append("    storageClusterConfigs: ")
+                .append(toIndentedString(storageClusterConfigs))
                 .append("\n");
         sb.append("    storageCluster: ").append(toIndentedString(storageCluster)).append("\n");
         sb.append("    stretch: ").append(toIndentedString(stretch)).append("\n");

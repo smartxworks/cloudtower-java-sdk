@@ -20,6 +20,8 @@ public enum DiskUsage {
 
     DATA_AND_META("DATA_AND_META"),
 
+    UNKNOWN("UNKNOWN"),
+
     DISKUSAGE_UNSUPPORTED_ENUM("DISKUSAGE_UNSUPPORTED_ENUM");
     private String value;
 
