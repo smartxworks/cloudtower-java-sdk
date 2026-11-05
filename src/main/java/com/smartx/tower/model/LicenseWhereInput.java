@@ -28,6 +28,79 @@ public class LicenseWhereInput
     @SerializedName(SERIALIZED_NAME_O_R)
     private List<LicenseWhereInput> OR = null;
 
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE = "bundle_type";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE)
+    private String bundleType;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_CONTAINS = "bundle_type_contains";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_CONTAINS)
+    private String bundleTypeContains;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_ENDS_WITH = "bundle_type_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_ENDS_WITH)
+    private String bundleTypeEndsWith;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_GT = "bundle_type_gt";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_GT)
+    private String bundleTypeGt;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_GTE = "bundle_type_gte";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_GTE)
+    private String bundleTypeGte;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_IN = "bundle_type_in";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_IN)
+    private List<String> bundleTypeIn = null;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_LT = "bundle_type_lt";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_LT)
+    private String bundleTypeLt;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_LTE = "bundle_type_lte";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_LTE)
+    private String bundleTypeLte;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_NOT = "bundle_type_not";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_NOT)
+    private String bundleTypeNot;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_NOT_CONTAINS =
+            "bundle_type_not_contains";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_NOT_CONTAINS)
+    private String bundleTypeNotContains;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_NOT_ENDS_WITH =
+            "bundle_type_not_ends_with";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_NOT_ENDS_WITH)
+    private String bundleTypeNotEndsWith;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_NOT_IN = "bundle_type_not_in";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_NOT_IN)
+    private List<String> bundleTypeNotIn = null;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_NOT_STARTS_WITH =
+            "bundle_type_not_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_NOT_STARTS_WITH)
+    private String bundleTypeNotStartsWith;
+
+    public static final String SERIALIZED_NAME_BUNDLE_TYPE_STARTS_WITH = "bundle_type_starts_with";
+
+    @SerializedName(SERIALIZED_NAME_BUNDLE_TYPE_STARTS_WITH)
+    private String bundleTypeStartsWith;
+
     public static final String SERIALIZED_NAME_EXPIRE_DATE = "expire_date";
 
     @SerializedName(SERIALIZED_NAME_EXPIRE_DATE)
@@ -617,6 +690,624 @@ public class LicenseWhereInput
 
     public boolean getOR_IsExplictlyNull() {
         return this._isPresent_.contains(SERIALIZED_NAME_O_R);
+    }
+
+    public LicenseWhereInput bundleType(String bundleType) {
+
+        this.bundleType = bundleType;
+        return this;
+    }
+
+    /**
+     * Get bundleType
+     *
+     * @return bundleType
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleType() {
+        return bundleType;
+    }
+
+    public void setBundleType(String bundleType) {
+        this.bundleType = bundleType;
+    }
+
+    public LicenseWhereInput bundleType_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE);
+        return this;
+    }
+
+    public LicenseWhereInput bundleType_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE);
+        return this;
+    }
+
+    public void setBundleType_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE);
+        }
+    }
+
+    public boolean getBundleType_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE);
+    }
+
+    public LicenseWhereInput bundleTypeContains(String bundleTypeContains) {
+
+        this.bundleTypeContains = bundleTypeContains;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeContains
+     *
+     * @return bundleTypeContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeContains() {
+        return bundleTypeContains;
+    }
+
+    public void setBundleTypeContains(String bundleTypeContains) {
+        this.bundleTypeContains = bundleTypeContains;
+    }
+
+    public LicenseWhereInput bundleTypeContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_CONTAINS);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_CONTAINS);
+        return this;
+    }
+
+    public void setBundleTypeContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_CONTAINS);
+        }
+    }
+
+    public boolean getBundleTypeContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_CONTAINS);
+    }
+
+    public LicenseWhereInput bundleTypeEndsWith(String bundleTypeEndsWith) {
+
+        this.bundleTypeEndsWith = bundleTypeEndsWith;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeEndsWith
+     *
+     * @return bundleTypeEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeEndsWith() {
+        return bundleTypeEndsWith;
+    }
+
+    public void setBundleTypeEndsWith(String bundleTypeEndsWith) {
+        this.bundleTypeEndsWith = bundleTypeEndsWith;
+    }
+
+    public LicenseWhereInput bundleTypeEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_ENDS_WITH);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_ENDS_WITH);
+        return this;
+    }
+
+    public void setBundleTypeEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_ENDS_WITH);
+        }
+    }
+
+    public boolean getBundleTypeEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_ENDS_WITH);
+    }
+
+    public LicenseWhereInput bundleTypeGt(String bundleTypeGt) {
+
+        this.bundleTypeGt = bundleTypeGt;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeGt
+     *
+     * @return bundleTypeGt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeGt() {
+        return bundleTypeGt;
+    }
+
+    public void setBundleTypeGt(String bundleTypeGt) {
+        this.bundleTypeGt = bundleTypeGt;
+    }
+
+    public LicenseWhereInput bundleTypeGt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_GT);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeGt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_GT);
+        return this;
+    }
+
+    public void setBundleTypeGt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_GT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_GT);
+        }
+    }
+
+    public boolean getBundleTypeGt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_GT);
+    }
+
+    public LicenseWhereInput bundleTypeGte(String bundleTypeGte) {
+
+        this.bundleTypeGte = bundleTypeGte;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeGte
+     *
+     * @return bundleTypeGte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeGte() {
+        return bundleTypeGte;
+    }
+
+    public void setBundleTypeGte(String bundleTypeGte) {
+        this.bundleTypeGte = bundleTypeGte;
+    }
+
+    public LicenseWhereInput bundleTypeGte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_GTE);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeGte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_GTE);
+        return this;
+    }
+
+    public void setBundleTypeGte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_GTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_GTE);
+        }
+    }
+
+    public boolean getBundleTypeGte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_GTE);
+    }
+
+    public LicenseWhereInput bundleTypeIn(List<String> bundleTypeIn) {
+
+        this.bundleTypeIn = bundleTypeIn;
+        return this;
+    }
+
+    public LicenseWhereInput addBundleTypeInItem(String bundleTypeInItem) {
+        if (this.bundleTypeIn == null) {
+            this.bundleTypeIn = new ArrayList<String>();
+        }
+        this.bundleTypeIn.add(bundleTypeInItem);
+        return this;
+    }
+
+    /**
+     * Get bundleTypeIn
+     *
+     * @return bundleTypeIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getBundleTypeIn() {
+        return bundleTypeIn;
+    }
+
+    public void setBundleTypeIn(List<String> bundleTypeIn) {
+        this.bundleTypeIn = bundleTypeIn;
+    }
+
+    public LicenseWhereInput bundleTypeIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_IN);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_IN);
+        return this;
+    }
+
+    public void setBundleTypeIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_IN);
+        }
+    }
+
+    public boolean getBundleTypeIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_IN);
+    }
+
+    public LicenseWhereInput bundleTypeLt(String bundleTypeLt) {
+
+        this.bundleTypeLt = bundleTypeLt;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeLt
+     *
+     * @return bundleTypeLt
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeLt() {
+        return bundleTypeLt;
+    }
+
+    public void setBundleTypeLt(String bundleTypeLt) {
+        this.bundleTypeLt = bundleTypeLt;
+    }
+
+    public LicenseWhereInput bundleTypeLt_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_LT);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeLt_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_LT);
+        return this;
+    }
+
+    public void setBundleTypeLt_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_LT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_LT);
+        }
+    }
+
+    public boolean getBundleTypeLt_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_LT);
+    }
+
+    public LicenseWhereInput bundleTypeLte(String bundleTypeLte) {
+
+        this.bundleTypeLte = bundleTypeLte;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeLte
+     *
+     * @return bundleTypeLte
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeLte() {
+        return bundleTypeLte;
+    }
+
+    public void setBundleTypeLte(String bundleTypeLte) {
+        this.bundleTypeLte = bundleTypeLte;
+    }
+
+    public LicenseWhereInput bundleTypeLte_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_LTE);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeLte_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_LTE);
+        return this;
+    }
+
+    public void setBundleTypeLte_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_LTE);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_LTE);
+        }
+    }
+
+    public boolean getBundleTypeLte_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_LTE);
+    }
+
+    public LicenseWhereInput bundleTypeNot(String bundleTypeNot) {
+
+        this.bundleTypeNot = bundleTypeNot;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeNot
+     *
+     * @return bundleTypeNot
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeNot() {
+        return bundleTypeNot;
+    }
+
+    public void setBundleTypeNot(String bundleTypeNot) {
+        this.bundleTypeNot = bundleTypeNot;
+    }
+
+    public LicenseWhereInput bundleTypeNot_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeNot_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT);
+        return this;
+    }
+
+    public void setBundleTypeNot_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT);
+        }
+    }
+
+    public boolean getBundleTypeNot_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_NOT);
+    }
+
+    public LicenseWhereInput bundleTypeNotContains(String bundleTypeNotContains) {
+
+        this.bundleTypeNotContains = bundleTypeNotContains;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeNotContains
+     *
+     * @return bundleTypeNotContains
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeNotContains() {
+        return bundleTypeNotContains;
+    }
+
+    public void setBundleTypeNotContains(String bundleTypeNotContains) {
+        this.bundleTypeNotContains = bundleTypeNotContains;
+    }
+
+    public LicenseWhereInput bundleTypeNotContains_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT_CONTAINS);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeNotContains_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT_CONTAINS);
+        return this;
+    }
+
+    public void setBundleTypeNotContains_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT_CONTAINS);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT_CONTAINS);
+        }
+    }
+
+    public boolean getBundleTypeNotContains_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_NOT_CONTAINS);
+    }
+
+    public LicenseWhereInput bundleTypeNotEndsWith(String bundleTypeNotEndsWith) {
+
+        this.bundleTypeNotEndsWith = bundleTypeNotEndsWith;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeNotEndsWith
+     *
+     * @return bundleTypeNotEndsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeNotEndsWith() {
+        return bundleTypeNotEndsWith;
+    }
+
+    public void setBundleTypeNotEndsWith(String bundleTypeNotEndsWith) {
+        this.bundleTypeNotEndsWith = bundleTypeNotEndsWith;
+    }
+
+    public LicenseWhereInput bundleTypeNotEndsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeNotEndsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT_ENDS_WITH);
+        return this;
+    }
+
+    public void setBundleTypeNotEndsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT_ENDS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT_ENDS_WITH);
+        }
+    }
+
+    public boolean getBundleTypeNotEndsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_NOT_ENDS_WITH);
+    }
+
+    public LicenseWhereInput bundleTypeNotIn(List<String> bundleTypeNotIn) {
+
+        this.bundleTypeNotIn = bundleTypeNotIn;
+        return this;
+    }
+
+    public LicenseWhereInput addBundleTypeNotInItem(String bundleTypeNotInItem) {
+        if (this.bundleTypeNotIn == null) {
+            this.bundleTypeNotIn = new ArrayList<String>();
+        }
+        this.bundleTypeNotIn.add(bundleTypeNotInItem);
+        return this;
+    }
+
+    /**
+     * Get bundleTypeNotIn
+     *
+     * @return bundleTypeNotIn
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public List<String> getBundleTypeNotIn() {
+        return bundleTypeNotIn;
+    }
+
+    public void setBundleTypeNotIn(List<String> bundleTypeNotIn) {
+        this.bundleTypeNotIn = bundleTypeNotIn;
+    }
+
+    public LicenseWhereInput bundleTypeNotIn_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT_IN);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeNotIn_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT_IN);
+        return this;
+    }
+
+    public void setBundleTypeNotIn_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT_IN);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT_IN);
+        }
+    }
+
+    public boolean getBundleTypeNotIn_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_NOT_IN);
+    }
+
+    public LicenseWhereInput bundleTypeNotStartsWith(String bundleTypeNotStartsWith) {
+
+        this.bundleTypeNotStartsWith = bundleTypeNotStartsWith;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeNotStartsWith
+     *
+     * @return bundleTypeNotStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeNotStartsWith() {
+        return bundleTypeNotStartsWith;
+    }
+
+    public void setBundleTypeNotStartsWith(String bundleTypeNotStartsWith) {
+        this.bundleTypeNotStartsWith = bundleTypeNotStartsWith;
+    }
+
+    public LicenseWhereInput bundleTypeNotStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeNotStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT_STARTS_WITH);
+        return this;
+    }
+
+    public void setBundleTypeNotStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_NOT_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_NOT_STARTS_WITH);
+        }
+    }
+
+    public boolean getBundleTypeNotStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_NOT_STARTS_WITH);
+    }
+
+    public LicenseWhereInput bundleTypeStartsWith(String bundleTypeStartsWith) {
+
+        this.bundleTypeStartsWith = bundleTypeStartsWith;
+        return this;
+    }
+
+    /**
+     * Get bundleTypeStartsWith
+     *
+     * @return bundleTypeStartsWith
+     */
+    @javax.annotation.Nullable
+    @ApiModelProperty(value = "")
+    public String getBundleTypeStartsWith() {
+        return bundleTypeStartsWith;
+    }
+
+    public void setBundleTypeStartsWith(String bundleTypeStartsWith) {
+        this.bundleTypeStartsWith = bundleTypeStartsWith;
+    }
+
+    public LicenseWhereInput bundleTypeStartsWith_ExplictlyNull() {
+        this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_STARTS_WITH);
+        return this;
+    }
+
+    public LicenseWhereInput bundleTypeStartsWith_ExplictlyNonNull() {
+        this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_STARTS_WITH);
+        return this;
+    }
+
+    public void setBundleTypeStartsWith_IsExplictlyNull(boolean isExplictlyNull) {
+        if (isExplictlyNull) {
+            this._isPresent_.add(SERIALIZED_NAME_BUNDLE_TYPE_STARTS_WITH);
+        } else {
+            this._isPresent_.remove(SERIALIZED_NAME_BUNDLE_TYPE_STARTS_WITH);
+        }
+    }
+
+    public boolean getBundleTypeStartsWith_IsExplictlyNull() {
+        return this._isPresent_.contains(SERIALIZED_NAME_BUNDLE_TYPE_STARTS_WITH);
     }
 
     public LicenseWhereInput expireDate(String expireDate) {
@@ -4404,6 +5095,23 @@ public class LicenseWhereInput
         return Objects.equals(this.AND, licenseWhereInput.AND)
                 && Objects.equals(this.NOT, licenseWhereInput.NOT)
                 && Objects.equals(this.OR, licenseWhereInput.OR)
+                && Objects.equals(this.bundleType, licenseWhereInput.bundleType)
+                && Objects.equals(this.bundleTypeContains, licenseWhereInput.bundleTypeContains)
+                && Objects.equals(this.bundleTypeEndsWith, licenseWhereInput.bundleTypeEndsWith)
+                && Objects.equals(this.bundleTypeGt, licenseWhereInput.bundleTypeGt)
+                && Objects.equals(this.bundleTypeGte, licenseWhereInput.bundleTypeGte)
+                && Objects.equals(this.bundleTypeIn, licenseWhereInput.bundleTypeIn)
+                && Objects.equals(this.bundleTypeLt, licenseWhereInput.bundleTypeLt)
+                && Objects.equals(this.bundleTypeLte, licenseWhereInput.bundleTypeLte)
+                && Objects.equals(this.bundleTypeNot, licenseWhereInput.bundleTypeNot)
+                && Objects.equals(
+                        this.bundleTypeNotContains, licenseWhereInput.bundleTypeNotContains)
+                && Objects.equals(
+                        this.bundleTypeNotEndsWith, licenseWhereInput.bundleTypeNotEndsWith)
+                && Objects.equals(this.bundleTypeNotIn, licenseWhereInput.bundleTypeNotIn)
+                && Objects.equals(
+                        this.bundleTypeNotStartsWith, licenseWhereInput.bundleTypeNotStartsWith)
+                && Objects.equals(this.bundleTypeStartsWith, licenseWhereInput.bundleTypeStartsWith)
                 && Objects.equals(this.expireDate, licenseWhereInput.expireDate)
                 && Objects.equals(this.expireDateGt, licenseWhereInput.expireDateGt)
                 && Objects.equals(this.expireDateGte, licenseWhereInput.expireDateGte)
@@ -4523,6 +5231,20 @@ public class LicenseWhereInput
                 AND,
                 NOT,
                 OR,
+                bundleType,
+                bundleTypeContains,
+                bundleTypeEndsWith,
+                bundleTypeGt,
+                bundleTypeGte,
+                bundleTypeIn,
+                bundleTypeLt,
+                bundleTypeLte,
+                bundleTypeNot,
+                bundleTypeNotContains,
+                bundleTypeNotEndsWith,
+                bundleTypeNotIn,
+                bundleTypeNotStartsWith,
+                bundleTypeStartsWith,
                 expireDate,
                 expireDateGt,
                 expireDateGte,
@@ -4623,6 +5345,32 @@ public class LicenseWhereInput
         sb.append("    AND: ").append(toIndentedString(AND)).append("\n");
         sb.append("    NOT: ").append(toIndentedString(NOT)).append("\n");
         sb.append("    OR: ").append(toIndentedString(OR)).append("\n");
+        sb.append("    bundleType: ").append(toIndentedString(bundleType)).append("\n");
+        sb.append("    bundleTypeContains: ")
+                .append(toIndentedString(bundleTypeContains))
+                .append("\n");
+        sb.append("    bundleTypeEndsWith: ")
+                .append(toIndentedString(bundleTypeEndsWith))
+                .append("\n");
+        sb.append("    bundleTypeGt: ").append(toIndentedString(bundleTypeGt)).append("\n");
+        sb.append("    bundleTypeGte: ").append(toIndentedString(bundleTypeGte)).append("\n");
+        sb.append("    bundleTypeIn: ").append(toIndentedString(bundleTypeIn)).append("\n");
+        sb.append("    bundleTypeLt: ").append(toIndentedString(bundleTypeLt)).append("\n");
+        sb.append("    bundleTypeLte: ").append(toIndentedString(bundleTypeLte)).append("\n");
+        sb.append("    bundleTypeNot: ").append(toIndentedString(bundleTypeNot)).append("\n");
+        sb.append("    bundleTypeNotContains: ")
+                .append(toIndentedString(bundleTypeNotContains))
+                .append("\n");
+        sb.append("    bundleTypeNotEndsWith: ")
+                .append(toIndentedString(bundleTypeNotEndsWith))
+                .append("\n");
+        sb.append("    bundleTypeNotIn: ").append(toIndentedString(bundleTypeNotIn)).append("\n");
+        sb.append("    bundleTypeNotStartsWith: ")
+                .append(toIndentedString(bundleTypeNotStartsWith))
+                .append("\n");
+        sb.append("    bundleTypeStartsWith: ")
+                .append(toIndentedString(bundleTypeStartsWith))
+                .append("\n");
         sb.append("    expireDate: ").append(toIndentedString(expireDate)).append("\n");
         sb.append("    expireDateGt: ").append(toIndentedString(expireDateGt)).append("\n");
         sb.append("    expireDateGte: ").append(toIndentedString(expireDateGte)).append("\n");

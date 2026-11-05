@@ -10,9 +10,25 @@ import java.io.IOException;
 /** Gets or Sets EcpLicenseOrderByInput */
 @JsonAdapter(EcpLicenseOrderByInput.Adapter.class)
 public enum EcpLicenseOrderByInput {
+    ASYNC_REPLICATION_ASC("async_replication_ASC"),
+
+    ASYNC_REPLICATION_DESC("async_replication_DESC"),
+
+    BACKUP_ASC("backup_ASC"),
+
+    BACKUP_DESC("backup_DESC"),
+
+    BRAND_ASC("brand_ASC"),
+
+    BRAND_DESC("brand_DESC"),
+
     CLUSTER_LOCAL_ID_ASC("cluster_local_id_ASC"),
 
     CLUSTER_LOCAL_ID_DESC("cluster_local_id_DESC"),
+
+    DFW_ASC("dfw_ASC"),
+
+    DFW_DESC("dfw_DESC"),
 
     ECP_EDITION_ASC("ecp_edition_ASC"),
 
@@ -21,6 +37,14 @@ public enum EcpLicenseOrderByInput {
     EXPIRE_DATE_ASC("expire_date_ASC"),
 
     EXPIRE_DATE_DESC("expire_date_DESC"),
+
+    EXTERNAL_STORAGE_ASC("external_storage_ASC"),
+
+    EXTERNAL_STORAGE_DESC("external_storage_DESC"),
+
+    FILE_STORAGE_ASC("file_storage_ASC"),
+
+    FILE_STORAGE_DESC("file_storage_DESC"),
 
     HAS_METROX_ASC("has_metrox_ASC"),
 
@@ -33,6 +57,26 @@ public enum EcpLicenseOrderByInput {
     ID_ASC("id_ASC"),
 
     ID_DESC("id_DESC"),
+
+    K8S_BARE_METAL_ASC("k8s_bare_metal_ASC"),
+
+    K8S_BARE_METAL_DESC("k8s_bare_metal_DESC"),
+
+    K8S_SERVICE_ASC("k8s_service_ASC"),
+
+    K8S_SERVICE_DESC("k8s_service_DESC"),
+
+    LB_ASC("lb_ASC"),
+
+    LB_DESC("lb_DESC"),
+
+    LICENSE_PAYLOAD_ASC("license_payload_ASC"),
+
+    LICENSE_PAYLOAD_DESC("license_payload_DESC"),
+
+    LICENSE_SIGNATURE_ASC("license_signature_ASC"),
+
+    LICENSE_SIGNATURE_DESC("license_signature_DESC"),
 
     LICENSE_TYPE_ASC("license_type_ASC"),
 
@@ -70,6 +114,14 @@ public enum EcpLicenseOrderByInput {
 
     SUBSCRIPTION_START_DATE_DESC("subscription_start_date_DESC"),
 
+    SYNC_REPLICATION_ASC("sync_replication_ASC"),
+
+    SYNC_REPLICATION_DESC("sync_replication_DESC"),
+
+    TRAFFIC_VISUALIZATION_ASC("traffic_visualization_ASC"),
+
+    TRAFFIC_VISUALIZATION_DESC("traffic_visualization_DESC"),
+
     VENDOR_ASC("vendor_ASC"),
 
     VENDOR_DESC("vendor_DESC"),
@@ -77,6 +129,10 @@ public enum EcpLicenseOrderByInput {
     VERSION_ASC("version_ASC"),
 
     VERSION_DESC("version_DESC"),
+
+    VPC_ASC("vpc_ASC"),
+
+    VPC_DESC("vpc_DESC"),
 
     ECPLICENSEORDERBYINPUT_UNSUPPORTED_ENUM("ECPLICENSEORDERBYINPUT_UNSUPPORTED_ENUM");
     private String value;

@@ -1,3 +1,45 @@
+## release 日期 2026-11-05
+
+v2.24.0 release (tower version 4.10.0)
+
+### features
+
+- 增加 [DatastoreApi] 用于 VCFS datastore 的查询
+  - [getDatastores] 获取 datastore 列表
+  - [getDatastoresConnection] 获取 datastore 连接数
+- 增加 [DatastoreMountApi] 用于 datastore 挂载关系的查询
+  - [getDatastoreMounts] 获取 datastore 挂载列表
+  - [getDatastoreMountsConnection] 获取 datastore 挂载连接数
+- [VmApi]: 创建、克隆、重建虚拟机以及添加、更新磁盘、添加 CD-ROM 等 API 的磁盘参数新增 `storageConfig` 字段，用于指定磁盘所在的存储集群（`storageClusterId`）或 VCFS datastore（`datastoreId`）；`mountNewCreateDisks` 新增 `provisionPolicy` 字段用于指定 datastore 卷的置备策略（`thin` / `thick_lazy_zeroed` / `thick_eager_zeroed`）
+- [VmApi]: [migrateVm] 跨集群迁移支持为磁盘配置 `storageConfig` 与 `provisionPolicy`
+- [VmVolumeApi]: [createVmVolume]、[importVmVolume]、[cloneVmVolume] 新增 `storageConfig` 与 `provisionPolicy` 字段，支持在 datastore 上创建、导入、克隆虚拟卷并指定置备策略
+- [VmVolume]: 新增字段 `provisionPolicy`、`storageClusterConfig`
+- [VmVolumeSnapshot]: 新增字段 `provisionPolicy`、`storageClusterConfig`
+- [ClusterApi]: [getClusterStorageInfo] 响应新增 `storageClusterConfigs` 字段，包含存储集群配置及关联 datastore 的元数据（容量、状态、类型等）
+- [Host]: 新增字段 `datastoreMounts`
+- [Host]: 新增内存超配相关字段 `memoryOvercommitEnabled`、`allocatedMemoryBytes`、`memoryAllocationRate`、`overcommitMemoryRatio`、`reservedMemoryBytes`、`runningPauseReservedMemoryBytes`、`overcommitMemoryBytes`、`runningPauseOvercommitMemoryBytes`、`overcommitActiveMemoryBytes`、`totalPhysicalMemoryBytes`
+- [Cluster]: 新增内存超配相关字段 `allocatedMemoryBytes`、`memoryAllocationRate`、`overcommitMemoryRatio`
+- [ContentLibraryImageApi]: 新增 [importContentLibraryImageV2] API，支持将镜像导入到多个集群或 datastore；原 [importContentLibraryImage] 标记为废弃
+- [ContentLibraryImageApi]: [uploadContentLibraryImage] 新增 `datastores` 表单字段，支持上传时直接分发到 datastore
+- [ContentLibraryImageApi]: [distributeContentLibraryImageClusters] 与 [removeContentLibraryImageClusters] 新增 `datastores` 字段，支持按 datastore 分发与移除镜像
+- [ContentLibraryImage]: 新增字段 `datastores`
+- [ContentLibraryVmTemplateApi]: [cloneContentLibraryVmTemplateFromVm] 新增 `storageConfigs` 字段，支持指定模板配置文件与卷文件存放的 datastore（VCFS 模板放置）
+- [ContentLibraryVmTemplate]: 新增字段 `vmTemplateConfigs`，用于查询模板在各存储位置的拷贝信息
+- [VmTemplateApi] [VmApi]: 原生模板相关 API（创建模板、虚拟机转模板等）增加集群类型校验，仅支持 SMTX OS 集群；SMTX ELF 集群请使用内容库模板相关 API
+- [ClusterApi]: 新增 [getClusterNtpServices] API 用于查询集群的 NTP 服务信息
+- [VmApi]: 新增 [updateVmSyncTimeOnResume] API 用于配置虚拟机从挂起恢复时同步时间
+- [UserApi]: 新增 [getAuthConfigs] API 用于查询认证配置（登录源），[login] 支持通过 LDAP 登录源登录
+- [LabelApi]: 新增 [getLabels] API 用于查询标签列表
+- [LabelApi]: [getLabels]、[updateLabel]、[addLabelsToResources]、[removeLabelsFromResources] 支持 `x-skip-resources` 请求头，跳过关联资源加载以提升查询性能
+- [VmFolderApi]: [createVmFolder] 与 [updateVmFolder] 支持 `parentId` 字段，用于创建、调整嵌套虚拟机文件夹
+- [License]: 新增字段 `bundleType`
+- [EcpLicense]: 新增字段 `brand`、`fileStorage`、`k8sService`、`k8sBareMetal`、`backup`、`asyncReplication`、`syncReplication`、`dfw`、`lb`、`vpc`、`trafficVisualization`、`externalStorage`、`licenseSignature`、`licensePayload`
+
+### bugfix
+
+- [VlanApi]: 修复更新 VLAN 时 `vlanId` 为 0 被忽略的问题
+- [LabelApi]: 修复标签查询携带多余参数的问题
+
 ## release 日期 2026-05-27
 
 v2.23.0 release (tower version 4.9.0)

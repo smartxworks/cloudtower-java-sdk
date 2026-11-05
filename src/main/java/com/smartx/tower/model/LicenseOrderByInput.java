@@ -10,6 +10,10 @@ import java.io.IOException;
 /** Gets or Sets LicenseOrderByInput */
 @JsonAdapter(LicenseOrderByInput.Adapter.class)
 public enum LicenseOrderByInput {
+    BUNDLE_TYPE_ASC("bundle_type_ASC"),
+
+    BUNDLE_TYPE_DESC("bundle_type_DESC"),
+
     EXPIRE_DATE_ASC("expire_date_ASC"),
 
     EXPIRE_DATE_DESC("expire_date_DESC"),
