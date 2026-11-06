@@ -169,8 +169,6 @@ src/main/java/com/smartx/tower/model/AddClustersToDatacenterParams.java
 src/main/java/com/smartx/tower/model/AddClustersToDatacenterParamsData.java
 src/main/java/com/smartx/tower/model/AddLabelsToResourcesParams.java
 src/main/java/com/smartx/tower/model/AddLabelsToResourcesParamsData.java
-src/main/java/com/smartx/tower/model/AddVmDiskMountNewCreateDisksParams.java
-src/main/java/com/smartx/tower/model/AddVmDiskVmVolumeParams.java
 src/main/java/com/smartx/tower/model/Alert.java
 src/main/java/com/smartx/tower/model/AlertConnection.java
 src/main/java/com/smartx/tower/model/AlertNotifier.java

@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   description: cloudtower operation API and SDK
-  version: 2.24.0
+  version: 2.24.1
 servers:
 - url: /
 paths:
@@ -166955,92 +166955,6 @@ components:
       required:
       - where
       type: object
-    AddVmDiskVmVolumeParams:
-      example:
-        path: path
-        resident_in_cache: true
-        size: 5
-        name: name
-        elf_ec_storage_policy:
-          ec_m: 9
-          ec_k: 0
-          thin_provision: true
-      properties:
-        provision_policy:
-          $ref: '#/components/schemas/VmVolumeProvisionPolicy'
-        resident_in_cache:
-          type: boolean
-        elf_ec_storage_policy:
-          $ref: '#/components/schemas/MountNewCreateDisksParams_vm_volume_elf_ec_storage_policy'
-        elf_replica_storage_policy:
-          $ref: '#/components/schemas/VmVolumeElfStoragePolicyType'
-        elf_storage_policy:
-          $ref: '#/components/schemas/VmVolumeElfStoragePolicyType'
-        path:
-          type: string
-        size_unit:
-          $ref: '#/components/schemas/ByteUnit'
-        size:
-          format: int64
-          type: integer
-        name:
-          type: string
-      required:
-      - name
-      - size
-      type: object
-    AddVmDiskMountNewCreateDisksParams:
-      example:
-        max_bandwidth: 1
-        vm_volume:
-          path: path
-          resident_in_cache: true
-          size: 5
-          name: name
-          elf_ec_storage_policy:
-            ec_m: 9
-            ec_k: 0
-            thin_provision: true
-        storage_config:
-          datastore_id: datastore_id
-          storage_cluster_id: storage_cluster_id
-        index: 2
-        max_iops: 5
-        boot: 9
-        key: 7
-      properties:
-        storage_config:
-          $ref: '#/components/schemas/StorageConfig'
-        max_bandwidth_policy:
-          $ref: '#/components/schemas/VmDiskIoRestrictType'
-        max_bandwidth_unit:
-          $ref: '#/components/schemas/BPSUnit'
-        max_bandwidth:
-          format: int64
-          type: integer
-        max_iops_policy:
-          $ref: '#/components/schemas/VmDiskIoRestrictType'
-        max_iops:
-          format: int64
-          type: integer
-        vm_volume:
-          $ref: '#/components/schemas/AddVmDiskVmVolumeParams'
-        index:
-          format: int32
-          type: integer
-        key:
-          format: int32
-          type: integer
-        bus:
-          $ref: '#/components/schemas/Bus'
-        boot:
-          format: int32
-          type: integer
-      required:
-      - boot
-      - bus
-      - vm_volume
-      type: object
     VmAddDiskParams:
       example:
         data:
@@ -167048,11 +166962,11 @@ components:
           max_iops: 6
           vm_disks:
             mount_new_create_disks:
-            - max_bandwidth: 1
+            - max_bandwidth: 4
               vm_volume:
                 path: path
                 resident_in_cache: true
-                size: 5
+                size: 9
                 name: name
                 elf_ec_storage_policy:
                   ec_m: 9
@@ -167061,15 +166975,15 @@ components:
               storage_config:
                 datastore_id: datastore_id
                 storage_cluster_id: storage_cluster_id
-              index: 2
-              max_iops: 5
-              boot: 9
+              index: 0
+              max_iops: 7
+              boot: 5
               key: 7
-            - max_bandwidth: 1
+            - max_bandwidth: 4
               vm_volume:
                 path: path
                 resident_in_cache: true
-                size: 5
+                size: 9
                 name: name
                 elf_ec_storage_policy:
                   ec_m: 9
@@ -167078,9 +166992,9 @@ components:
               storage_config:
                 datastore_id: datastore_id
                 storage_cluster_id: storage_cluster_id
-              index: 2
-              max_iops: 5
-              boot: 9
+              index: 0
+              max_iops: 7
+              boot: 5
               key: 7
             mount_disks:
             - vm_volume_id: vm_volume_id
@@ -374823,11 +374737,11 @@ components:
     VmAddDiskParams_data_vm_disks:
       example:
         mount_new_create_disks:
-        - max_bandwidth: 1
+        - max_bandwidth: 4
           vm_volume:
             path: path
             resident_in_cache: true
-            size: 5
+            size: 9
             name: name
             elf_ec_storage_policy:
               ec_m: 9
@@ -374836,15 +374750,15 @@ components:
           storage_config:
             datastore_id: datastore_id
             storage_cluster_id: storage_cluster_id
-          index: 2
-          max_iops: 5
-          boot: 9
+          index: 0
+          max_iops: 7
+          boot: 5
           key: 7
-        - max_bandwidth: 1
+        - max_bandwidth: 4
           vm_volume:
             path: path
             resident_in_cache: true
-            size: 5
+            size: 9
             name: name
             elf_ec_storage_policy:
               ec_m: 9
@@ -374853,9 +374767,9 @@ components:
           storage_config:
             datastore_id: datastore_id
             storage_cluster_id: storage_cluster_id
-          index: 2
-          max_iops: 5
-          boot: 9
+          index: 0
+          max_iops: 7
+          boot: 5
           key: 7
         mount_disks:
         - vm_volume_id: vm_volume_id
@@ -374877,7 +374791,7 @@ components:
           type: array
         mount_new_create_disks:
           items:
-            $ref: '#/components/schemas/AddVmDiskMountNewCreateDisksParams'
+            $ref: '#/components/schemas/MountNewCreateDisksParams'
           type: array
       type: object
     VmAddDiskParams_data:
@@ -374886,11 +374800,11 @@ components:
         max_iops: 6
         vm_disks:
           mount_new_create_disks:
-          - max_bandwidth: 1
+          - max_bandwidth: 4
             vm_volume:
               path: path
               resident_in_cache: true
-              size: 5
+              size: 9
               name: name
               elf_ec_storage_policy:
                 ec_m: 9
@@ -374899,15 +374813,15 @@ components:
             storage_config:
               datastore_id: datastore_id
               storage_cluster_id: storage_cluster_id
-            index: 2
-            max_iops: 5
-            boot: 9
+            index: 0
+            max_iops: 7
+            boot: 5
             key: 7
-          - max_bandwidth: 1
+          - max_bandwidth: 4
             vm_volume:
               path: path
               resident_in_cache: true
-              size: 5
+              size: 9
               name: name
               elf_ec_storage_policy:
                 ec_m: 9
@@ -374916,9 +374830,9 @@ components:
             storage_config:
               datastore_id: datastore_id
               storage_cluster_id: storage_cluster_id
-            index: 2
-            max_iops: 5
-            boot: 9
+            index: 0
+            max_iops: 7
+            boot: 5
             key: 7
           mount_disks:
           - vm_volume_id: vm_volume_id
